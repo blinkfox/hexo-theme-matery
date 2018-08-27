@@ -1,0 +1,82 @@
+<main class="content">
+
+    <div class="content-heading bf-color">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <h3 class="heading">
+                    <% if (config.description !== undefined && config.description.length > 0) { %>
+                        <%= config.description %>
+                    <% } else { %>
+                        从来没有真正的绝境，只有心灵的迷途
+                    <% } %>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container notice">
+        <div class="card">
+            <div class="card-content">
+                <i class="fa fa-volume-up fa-lg fa-fw bf-text-color"></i>
+                <% if (theme.dream !== undefined && theme.dream.length > 0) { %>
+                    <%= theme.dream %>
+                <% } else { %>
+                    梦想面前做好自信的自己，自信可以改变未来。
+                    每一朵花都有开放的理由，你要始终坚信， 你就是你，一个独一无二的你，任何人都无法替代，不要因为别人的否定就轻易放弃，
+                    活在别人的世界里是一种悲哀，你要活出自己的本色。只要心在，梦就在，成功之前总是会遭受很多的磨砺， 但是只要坚持做好手边的事，
+                    自然会有意外不到的收获。
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+    <!-- 所有文章卡片 -->
+    <article id="articles" class="container articles">
+        <div class="row article-row">
+            <% page.posts.forEach(post => { %>
+            <div class="article col s12 m6 l4" data-aos="fade-up">
+                <div class="card">
+                    <a href="<%- url_for(post.path) %>">
+                        <div class="card-image">
+                            <% if (post.img) { %>
+                            <img src="<%= post.img %>" class="responsive-img" alt="<%- post.title %>">
+                            <% } else { %>
+                            <img src="<%= theme.featureimg %>" class="responsive-img" alt="<%- post.title %>">
+                            <% } %>
+                            <span class="card-title"><%- post.title %></span>
+                        </div>
+
+                        <div class="card-content article-content">
+                            <p><%- post.content.substring(0, 120) %></p>
+                            <ul>
+                                <li>
+                                    <a class="bf-text-gray">
+                                        <i class="fa fa-calendar fa-fw"></i><%= moment(post.date, config.date_format).fromNow() %>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-action article-tags">
+                        <% if(post.tags && post.tags.length) { %>
+                            <% post.tags.forEach(tag => { %>
+                            <a href="<%- url_for('/tags/#' + tag.name) %>" target="_blank">
+                                <span class="chip bf-color"><%= tag.name %></span>
+                            </a>
+                            <% }); %>
+                        <% } %>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </article>
+
+</main>
+
+<% if (page.total > 1) { %>
+    <%- partial('_partial/paging') %>
+<% } %>

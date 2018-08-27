@@ -1,0 +1,30 @@
+
+# html lang
+language: en
+
+# main menu navigation
+menu:
+  首页: /
+  标签: /tags
+  归档: /archives
+  关于我: /about
+
+# Miscelaneous
+favicon: /favicon.png
+logo: /medias/logo.png
+featureimg: /medias/default.jpg
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /libs/awesome/css/font-awesome.min.css
+- /libs/materialize/css/materialize.min.css
+- /libs/aos/aos.css
+- /css/matery.css
+
+# scripts loaded in the end of the body
+scripts:
+- /libs/jquery/jquery-2.2.0.min.js
+- /libs/materialize/js/materialize.min.js
+- /libs/masonry/masonry.pkgd.min.js
+- /libs/aos/aos.js
+- /js/matery.js

@@ -1,0 +1,41 @@
+<main class="content">
+
+    <div id="tags" class="container">
+        
+        <div class="tag-chips">
+            <% site.tags.map(function(tag) {  %>
+            <span class="chip center-align chip-default"><%= tag.name %></span>
+            <% }); %>
+        </div>
+
+        <div class="row tags-posts">
+            <% site.posts.sort('date').reverse().forEach(post => { %>
+            <% 
+                var tagArr = [];
+                if (post.tags && post.tags.length > 0) {
+                    post.tags.forEach(tag => {
+                        tagArr.push(tag.name);
+                    });
+                }
+                var tags = tagArr.join(', ');
+                console.log(tags);
+            %>
+            <div class="tag-post col s12 m6 l4" data-tags="<%- tags %>">
+                <div class="card">
+                    <div class="card-image">
+                        <% if (post.img) { %>
+                        <img src="<%= post.img %>">
+                        <% } else { %>
+                        <img src="<%= theme.featureimg %>">
+                        <% } %>
+                        <span class="card-title"><%- post.title %></span>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+
+    </div>
+
+</main>
+      

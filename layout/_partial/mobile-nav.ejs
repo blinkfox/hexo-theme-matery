@@ -1,0 +1,41 @@
+<div class="side-nav" id="mobile-nav">
+    <div class="mobile-head bf-color">
+        <% if (theme.logo !== undefined && theme.logo.length > 0) { %>
+        <img src="<%= theme.logo %>" class="logo-img circle responsive-img">
+        <% } %>
+        <div class="logo-name"><%- config.title %></div>
+        <div class="logo-desc">
+        <% if (config.description !== undefined && config.description.length > 0) { %>
+            <%= config.description %>
+        <% } else { %>
+            从来没有真正的绝境，只有心灵的迷途
+        <% } %>
+        </div>
+    </div>
+    <ul class="menu-list">
+        <% Object.keys(theme.menu).forEach(function(key) { %>
+        <li>
+            <a href="<%= theme.menu[key] %>" class="waves-effect waves-light">
+                <i class="fa fa-link fa-lg fa-fw"></i><%= key %>
+            </a>
+        </li>
+        <% }); %>
+        <hr>
+        <li>
+            <a id="themeHandle" class="waves-effect waves-light">
+                <i class="fa fa-gear fa-lg fa-fw"></i>主题设置
+            </a>
+        </li>
+    </ul>
+    <div class="social-link">
+        <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+            <i class="fa fa-github fa-lg"></i>
+        </a>
+        <a href="mailto:chenjiayin1990@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+            <i class="fa fa-envelope fa-lg"></i>
+        </a>
+        <a href="#!" class="tooltipped" data-tooltip="QQ号：1181062873" data-position="top" data-delay="50">
+            <i class="fa fa-qq fa-lg"></i>
+        </a>
+    </div>
+</div>

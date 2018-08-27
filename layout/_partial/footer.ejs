@@ -1,0 +1,26 @@
+<footer class="page-footer bf-color">
+    <div class="container row center-align">
+        <div class="col s12 m12 l8 copy-right">
+            本站由&copy;<a href="http://blinkfox.com" target="_blank">Blinkfox</a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 采用
+            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建. 蜀ICP备15029027号
+        </div>
+        <div class="col s12 m12 l4 social-link hide-on-med-and-down">
+            <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+                <i class="fa fa-github fa-lg"></i>
+            </a>
+            <a href="mailto:chenjiayin1990@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+                <i class="fa fa-envelope fa-lg"></i>
+            </a>
+            <a href="#!" class="tooltipped" data-tooltip="QQ: 1181062873" data-position="top" data-delay="50">
+                <i class="fa fa-qq fa-lg"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
+    <% theme.scripts.forEach(function(url) { %>
+    <script src="<%= url %>"></script>
+    <% }); %>
+<% } %>

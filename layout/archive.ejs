@@ -1,0 +1,65 @@
+<%
+var archivesList = {}, lastYear = null, yearArr = [];
+
+site.posts.sort('date').reverse().forEach(function(post) {
+    var year = post.date.year();
+    if (lastYear == null || lastYear != year) {
+        lastYear = year;
+        yearArr.push(lastYear);
+    }
+});
+
+yearArr.forEach(function(year) {
+    if (archivesList[year] == undefined) {
+        archivesList[year] = {};
+    }
+    
+    var monthPosts = {};
+    site.posts.sort('date').reverse().forEach(function(post) {
+        if (year == post.date.year()) {
+            var month = post.date.format('MM');
+            if (monthPosts[month] == undefined) {
+                monthPosts[month] = [];
+            }
+            monthPosts[month].push(post);
+        }
+    });
+
+    archivesList[year] = monthPosts;
+});
+%>
+
+<!-- content srart -->
+<div class="am-g am-g-fixed blog-fixed blog-content">
+    <div class="am-u-sm-12">
+        <h1 class="blog-text-center">-- <%= __('archive_a') %> --</h1>
+        <% Object.keys(archivesList).reverse().forEach(function(year){  %>
+        <div class="timeline-year">
+            <h1><%= year %></h1>
+            <% Object.keys(archivesList[year]).forEach(function(month, abc){  %>
+            <hr>
+            <ul>
+            <h3><%= month %></h3>
+            <hr>
+                <% archivesList[year][month].map(function(post){  %>
+                <li>
+                    <span class="am-u-sm-4 am-u-md-4 timeline-span">
+                        <%= post.date.format(__('date_format')) %>
+                    </span>
+                    <span class="am-u-sm-8 am-u-md-8">
+                        <a href="<%- config.root %><%- post.path %>">
+                            <%- post.title ? post.title : __('untitled') %>
+                        </a>
+                    </span>
+                </li>
+                <% }); %>
+            </ul>
+            <br>
+            <% }); %>
+            <br>
+        </div>
+        <% }); %>
+        <hr>
+    </div>
+</div>
+<!-- content end -->

@@ -1,0 +1,29 @@
+<div class="container paging">
+    <div class="row">
+        <div class="col s6 m4 l4">
+            <% if (page.prev) { %>
+            <a href="<%- url_for(page.prev_link) %>" class="left btn-floating btn-large waves-effect waves-light bf-color">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <% } else { %>
+            <a class="left btn-floating btn-large disabled">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <% } %>
+        </div>
+        <div class="page-info col m4 l4 hide-on-small-only">
+            <div class="center-align b-text-gray">第 <%- page.current %> 页 / 共 <%- page.total %> 页</div>
+        </div>
+        <div class="col s6 m4 l4">
+            <% if (page.next) { %>
+            <a href="<%- url_for(page.next_link) %>" class="right btn-floating btn-large waves-effect waves-light bf-color">
+                <i class="fa fa-angle-right"></i>
+            </a>
+            <% } else { %>
+            <a class="right btn-floating btn-large disabled">
+                <i class="fa fa-angle-right"></i>
+            </a>
+            <% } %>
+        </div>
+    </div>
+</div>

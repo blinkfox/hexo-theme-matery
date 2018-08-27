@@ -1,0 +1,22 @@
+<a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    <% Object.keys(theme.menu).forEach(function(key) { %>
+        <!-- TODO 这里应该设置激活时的颜色效果 -->
+        <% if (url_for(theme.menu[key]) == '/' + path.replace('/index.html', '') || (url_for(theme.menu[key]) == '/' && is_home())) { %>
+        <li class="hide-on-med-and-down">
+            <a href="<%= theme.menu[key] %>" class="waves-effect waves-light"><%= key %></a>
+        </li>
+        <% } else { %>
+        <li class="hide-on-med-and-down">
+            <a href="<%= theme.menu[key] %>" class="waves-effect waves-light"><%= key %></a>
+        </li>
+        <% } %>
+    <% }); %>
+    <li>
+        <a href="#!" id="toggle-search" class="waves-effect waves-light">
+            <i id="searchIcon" class="mdi-action-search"></i>
+        </a>
+    </li>
+</ul>
+
+<%- partial('_partial/mobile-nav') %>

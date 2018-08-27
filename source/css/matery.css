@@ -1,0 +1,655 @@
+/*全局基础样式*/
+/*小屏幕下(手机类)的样式*/
+@media only screen and (max-width: 601px) {
+    .container {
+        width: 95%;
+    }
+}
+
+/*中等屏幕下(平板类)的样式*/
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    .container {
+        width: 85%;
+    }
+}
+
+/*大屏幕下(桌面类)的样式*/
+@media only screen and (min-width: 993px) {
+    .container {
+        width: 80%;
+    }
+}
+
+body {
+    background-color: #e5e5e5;
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.2rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.9rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.7rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+}
+
+h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.4rem;
+}
+
+h6 {
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+hr {
+    margin: 12px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+blockquote {
+    border-left: 5px solid #27ae60;
+    padding: 0.9rem 0.8rem 0.4rem 0.8rem;
+    color: #777;
+    background-color: #f1f8e9;
+}
+
+pre {
+    padding: 1.2em;
+    margin: .5em 0;
+    background: #272822;
+    overflow: auto;
+    border-radius: 0.3em;
+    tab-size: 4;
+}
+
+code {
+    padding: 1px 4px;
+    font-size: 0.92rem;
+    color: #c0341d;
+    background-color: #fcefed;
+    border-radius: 3px;
+}
+
+pre code {
+    padding: 0px;
+    color: #e8eaf6;
+    background-color: #272822;
+}
+
+pre[class*="language-"] {
+    padding: 1.2em;
+    margin: .5em 0;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: #e8eaf6;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: italic;
+}
+
+small {
+    font-size: 85%;
+}
+
+cite {
+    font-style: normal;
+}
+
+mark {
+    background-color: #fcf8e3;
+    padding: .2em;
+}
+
+.container .row {
+    margin-bottom: 0px;
+}
+
+.bf-color {
+    background-color: #3f51b5 !important;
+}
+
+.bf-text-color {
+    color: #3f51b5 !important;
+}
+
+.bf-text-gray {
+    color: #777 !important;
+}
+
+.bf-link {
+    color: #3f51b5 !important;
+}
+
+.none-shadow {
+    box-shadow: none;
+}
+
+.modal.bottom-sheet {
+    max-height: 65%;
+}
+
+/*各主题背景颜色和文字颜色样式*/
+.bf-blue {
+    background-color: #3f51b5 !important;
+}
+
+.bf-text-blue {
+    color: #3f51b5 !important;
+}
+
+.bf-pink {
+    background-color: #e91e63 !important;
+}
+
+.bf-text-pink {
+    color: #e91e63 !important;
+}
+
+.bf-red {
+    background-color: #F44336 !important;
+}
+
+.bf-text-red {
+    color: #F44336 !important;
+}
+
+.bf-orange {
+    background-color: #ff9800 !important;
+}
+
+.bf-text-orange {
+    color: #ff9800 !important;
+}
+
+.bf-green {
+    background-color: #0f9d58 !important;
+}
+
+.bf-text-green {
+    color: #0f9d58 !important;
+}
+
+.bf-purple {
+    background-color: #9c27b0 !important;
+}
+
+.bf-text-purple {
+    color: #9c27b0 !important;
+}
+
+/*头部导航栏样式*/
+@media only screen and (max-width: 600px) {
+    header nav .brand-logo {
+        left: 80px;
+        width: 100px;
+        font-size: 1.6rem;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    header .brand-logo .logo-span {
+        font-size: 1.6rem !important;
+    }
+}
+
+header nav .brand-span {
+    font-size: 1.45rem;
+}
+
+header .brand-logo .logo-img {
+    height: 45px;
+    vertical-align: middle;
+    padding-bottom: 6px;
+}
+
+header .brand-logo .logo-span {
+    font-size: 1.8rem;
+}
+
+header .button-collapse i {
+    font-size: 1.5rem;
+}
+
+header .side-nav .mobile-head {
+    padding: 0 15px;
+}
+
+header .side-nav .mobile-head img {
+    margin-top: 30px;
+    width: 75px;
+    height: 75px;
+}
+
+header .side-nav .mobile-head .logo-name {
+    margin-top: -5px;
+    padding-left: 10px;
+    font-size: 1.5rem;
+}
+
+header .side-nav .mobile-head .logo-desc {
+    margin-top: -15px;
+    padding-left: 10px;
+    padding-bottom: 8px;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+    color: #ccc;
+}
+
+header .side-nav .menu-list a {
+    height: 50px;
+    line-height: 50px;
+}
+
+header .side-nav .menu-list a i {
+    line-height: 16px;
+}
+
+header .side-nav .fa-fw {
+    width: 3.8rem;
+    text-align: left;
+}
+
+header .side-nav .social-link {
+    position: absolute;
+    bottom: 40px;
+    padding-left: 10px;
+}
+
+.social-link a {
+    display: inline;
+    padding: 0 12px;
+}
+
+header .go-back {
+    float: left;
+    position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
+    z-index: 1;
+    height: 56px;
+}
+
+header .go-back i {
+    font-size: 1.6rem;
+    font-weight: 200;
+    line-height: 56px;
+}
+
+/*内容头部样式*/
+.content .content-heading {
+    margin-bottom: -50px;
+    padding-bottom: 50px;
+    color: #fff;
+    z-index: 0;
+    overflow: hidden;
+    transition: background-color .3s cubic-bezier(.4, 0, .2, 1), color .3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.settings-content {
+    margin-top: -10px;
+}
+
+/*精选文章样式*/
+#featureSlider .card {
+    padding-bottom: 10px;
+}
+
+.slider .slides li .caption {
+    top: auto;
+    bottom: 1%;
+    left: 5%;
+    width: 95%
+}
+
+/*文章列表卡片各样式*/
+article a {
+    margin-right: 0px !important;
+    color: #212121;
+    text-transform: none !important;
+}
+
+.articles .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+article .card-image img {
+    height: 230px;
+}
+
+article .article-content ul {
+    padding-bottom: 2px;
+    padding-left: 0;
+    list-style: none;
+}
+
+article .article-content ul li {
+    float: left;
+    display: inline-block;
+    padding-right: 20px !important;
+}
+
+article .article-tags .chip {
+    font-size: 0.8rem;
+    font-weight: 400;
+    height: 22px;
+    line-height: 22px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.paging .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.paging .page-info {
+    font-size: 1.4rem;
+    color: #666;
+    height: 2.4rem;
+    line-height: 2.8rem;
+}
+
+.paging i {
+    font-size: 2.5rem;
+}
+
+.paging .disabled {
+    background-color: #ccc !important;
+}
+
+.paging .disabled i {
+    color: #999 !important;
+}
+
+/*文章详情样式*/
+#artDetail a {
+    margin-right: 0px !important;
+    text-transform: none !important;
+}
+
+#artDetail .article-tag {
+    margin-bottom: 13px;
+}
+
+#artDetail .article-tag .chip {
+    font-size: 1rem;
+    font-weight: 400;
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+    border-radius: 15px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+
+#artDetail .author-info span {
+    margin-right: 30px;
+}
+
+#artDetail .article-card-content {
+    padding: 0px 15px 20px 18px;
+}
+
+@media only screen and (min-width: 600px) {
+    #artDetail .article-card-content {
+        padding: 0px 30px 20px 35px;
+    }
+}
+
+#artDetail .article-share {
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+#artDetail .article-share .jt-share {
+    margin-top: 5px;
+}
+
+.prenext-card .prenext-row {
+    padding: 10px;
+}
+
+.prenext-card .prenext {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.prenext-card .pn-title {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+#articleContent p {
+    margin: 2 2 10px;
+    text-indent: 2.2rem;
+}
+
+#articleContent blockquote p {
+    text-indent: 0.2rem;
+}
+
+#articleContent a {
+    color: #1b69b6 !important;
+}
+
+#articleContent ol,
+ul {
+    display: block;
+    padding-left: 2em;
+}
+
+#articleContent ul li,
+ol li {
+    display: list-item;
+    line-height: 1.74rem;
+    font-size: 1rem;
+}
+
+#articleContent ul li {
+    list-style-type: disc;
+}
+
+#articleContent ul ul li {
+    list-style-type: circle;
+}
+
+#tags .tag-chips {
+    text-align: center;
+    margin-top: 20px; 
+}
+
+#tags .tags-posts {
+    margin-top: 20px; 
+}
+
+#tags .chip-default {
+    color: rgba(0,0,0,0.7);
+    background-color: #D5D5D5;
+}
+
+#tags .chip-active {
+    color: #FFF;
+    background-color: #4CAF50;
+}
+
+#tags .chip {
+    margin: 5px 8px;
+    padding: 0 16px;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+/*尾部样式*/
+footer {
+    padding-bottom: 1px;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer .copy-right {
+    color: #bbb;
+}
+
+/*搜索层样式*/
+#search-mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #673AB7;
+    opacity: 0.96;
+    z-index: 999;
+}
+
+#search-mask a {
+    color: #fff;
+}
+
+#search-mask .search-form {
+    position: fixed;
+    display: table;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#search-mask .search-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+#search-mask .search-close i {
+    font-size: 2.3rem;
+}
+
+#search-mask .search-container {
+    position: fixed;
+    top: 35%;
+}
+
+#search-mask .search-container .search-label label {
+    font: 300 1.2rem Roboto;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+#search-mask .search-container .search-input {
+    padding-bottom: 5px;
+    margin-top: 20px;
+    height: auto;
+    font: 400 2rem Roboto;
+    color: #fff;
+    text-align: center;
+    border: none;
+}
+
+/*主题颜色设置面板样式*/
+#theme-change {
+    position: fixed;
+    padding: 15px;
+    top: 160px;
+    left: -200px;
+    width: 200px;
+    height: auto;
+    background-color: #fff;
+    z-index: 995;
+    border: 1px solid;
+    border-left: none;
+}
+
+#theme-change .theme-change-handle {
+    cursor: pointer;
+    position: absolute;
+    background-color: white;
+    width: auto;
+    height: 45px;
+    top: -1px;
+    right: -47px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid;
+    border-left: none;
+}
+
+#theme-change .theme-change-handle i {
+    font-size: 2.2rem;
+}
+
+#theme-change .theme-change-container ul li {
+    width: 150px;
+    height: 20px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#theme-change .theme-change-container ul li.selected {
+    outline: 2px solid black;
+}
+
+#themeModal .theme-settings div {
+    margin: 7px;
+    width: 72px;
+    height: 72px;
+}
+
+/*回到顶部按钮样式*/
+.top-scroll {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    padding-top: 15px;
+    margin-bottom: 0;
+    z-index: 998;
+}
+
+.top-scroll i {
+    font-size: 2.2rem;
+}
