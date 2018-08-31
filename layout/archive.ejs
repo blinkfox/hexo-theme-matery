@@ -31,80 +31,42 @@ yearArr.forEach(function(year) {
 
 <main class="content">    
     <div id="cd-timeline" class="container">
-        <div class="cd-timeline-block">
-            <div class="cd-timeline-img cd-picture">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-picture.svg" alt="Picture">
-            </div>
-            <div class="cd-timeline-content">
-                <h2>Title of section 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi
-                    placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-                <a href="#0" class="cd-read-more">Read more</a>
-                <span class="cd-date">Jan 14</span>
-            </div>
-        </div>
-        <div class="cd-timeline-block">
-            <div class="cd-timeline-img cd-movie">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-movie.svg" alt="Movie">
-            </div>
-            <div class="cd-timeline-content">
-                <h2>Title of section 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi
-                    placeat iure tempora laudantium ipsa ad debitis unde?</p>
-                <a href="#0" class="cd-read-more">Read more</a>
-                <span class="cd-date">Jan 18</span>
-            </div>
-        </div>
-        <div class="cd-timeline-block">
-            <div class="cd-timeline-img cd-picture">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-picture.svg" alt="Picture">
-            </div>
-            <div class="cd-timeline-content">
-                <h2>Title of section 3</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque
-                    asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque
-                    dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam
-                    provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae
-                    sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut
-                    adipisci.</p>
-                <a href="#0" class="cd-read-more">Read more</a>
-                <span class="cd-date">Jan 24</span>
-            </div>
-        </div>
-    </div>
-</main>
-
-<!-- content srart -->
-<div class="am-g am-g-fixed blog-fixed blog-content">
-    <div class="am-u-sm-12">
-        <h1 class="blog-text-center">-- <%= __('archive_a') %> --</h1>
         <% Object.keys(archivesList).reverse().forEach(function(year){  %>
-        <div class="timeline-year">
-            <h1><%= year %></h1>
-            <% Object.keys(archivesList[year]).forEach(function(month, abc){  %>
-            <hr>
-            <ul>
-            <h3><%= month %></h3>
-            <hr>
-                <% archivesList[year][month].map(function(post){  %>
-                <li>
-                    <span class="am-u-sm-4 am-u-md-4 timeline-span">
-                        <%= post.date.format(__('date_format')) %>
-                    </span>
-                    <span class="am-u-sm-8 am-u-md-8">
-                        <a href="<%- config.root %><%- post.path %>">
-                            <%- post.title ? post.title : __('untitled') %>
-                        </a>
-                    </span>
-                </li>
-                <% }); %>
-            </ul>
-            <br>
-            <% }); %>
-            <br>
+        <div class="cd-timeline-img year bf-color">
+            <span><%= year %></span>
+        </div>
+        <% Object.keys(archivesList[year]).forEach(function(month, abc){  %>
+        <div class="cd-timeline-img month bf-color">
+            <span><%= month %></span>
+        </div>
+        <% archivesList[year][month].map(function(post){  %>
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture">
+                <% if (post.img) { %>
+                <img src="<%= post.img %>" class="responsive-img" alt="<%- post.title %>">
+                <% } else { %>
+                <img src="<%= theme.featureimg %>" class="responsive-img" alt="<%- post.title %>">
+                <% } %>
+            </div>
+            <div class="cd-timeline-content">
+                <a href="<%- config.root %><%- post.path %>">
+                    <div class="article-title"><%- post.title ? post.title : __('untitled') %></div>
+                </a>
+                <div class="tags">
+                    <% if(post.tags && post.tags.length) { %>
+                    <% post.tags.forEach(tag => { %>
+                    <a href="<%- url_for('/tags/#' + tag.name) %>" target="_blank">
+                        <span class="tag bf-color"><%= tag.name %></span>
+                    </a>
+                    <% }); %>
+                    <% } %>
+                    <span class="cd-date"><%= post.date.format(__('date_format')) %></span>
+                </div>
+                
+            </div>
         </div>
         <% }); %>
-        <hr>
+        <% }); %>
+        <% }); %>
     </div>
-</div>
-<!-- content end -->
+</main>

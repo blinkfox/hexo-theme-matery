@@ -496,13 +496,14 @@ ol li {
 }
 
 #tags .chip-default {
-    color: rgba(0,0,0,0.7);
-    background-color: #D5D5D5;
+    color: #777;
+    background-color: #D8D8D8;
 }
 
 #tags .chip-active {
     color: #FFF;
-    background-color: #4CAF50;
+    background-color: #FF1744;
+    box-shadow: 2px 2px 3px #AAA;
 }
 
 #tags .chip {
@@ -519,10 +520,56 @@ ol li {
 }
 
 /* archive page. */
+#cd-timeline .year {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 10px 0px 50px -20px;
+    padding: 22px 11px;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+#cd-timeline .month {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 10px 0px 30px -10px;
+    padding: 17px 18px;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#cd-timeline .article-title {
+    color: #333;
+    font-size: 1.5rem;
+}
+
+#cd-timeline .tags {
+    /* float: right; */
+    margin-top: 5px;
+}
+
+#cd-timeline .tags .tag {
+    margin: 1px 1px;
+    padding: 0 10px;
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 400;
+    height: 22px;
+    line-height: 22px;
+    border-radius: 11px;
+    color: #fff;
+    word-wrap: break-word;
+}
+
 #cd-timeline {
+    width: 90%;
     position: relative;
     padding: 2em 0;
-    margin-top: 2em;
+    margin-top: 1em;
     margin-bottom: 2em;
 }
 
@@ -537,14 +584,22 @@ ol li {
     background: #6a7fe4;
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 900px) {
     #cd-timeline {
-        margin-top: 3em;
-        margin-bottom: 3em;
+        margin-top: 1.2em;
+        margin-bottom: 1.2em;
     }
     #cd-timeline::before {
         left: 50%;
         margin-left: -2px;
+    }
+    #cd-timeline .year {
+        margin: 10px 0px 50px -40px;
+        padding: 22px 11px;
+    }
+    #cd-timeline .month {
+        margin: 10px 0px 30px -30px;
+        padding: 17px 18px;
     }
 }
 
@@ -564,7 +619,7 @@ ol li {
 .cd-timeline-block:last-child {
     margin-bottom: 0;
 }
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 870px) {
     .cd-timeline-block {
         margin: 4em 0;
     }
@@ -587,29 +642,22 @@ ol li {
 }
 .cd-timeline-img img {
     display: block;
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     position: relative;
     left: 50%;
     top: 50%;
-    margin-left: -12px;
-    margin-top: -12px;
+    margin-left: -20px;
+    margin-top: -20px;
 }
-.cd-timeline-img.cd-picture {
-    background: #75ce66;
-}
-.cd-timeline-img.cd-movie {
-    background: #c03b44;
-}
-.cd-timeline-img.cd-location {
-    background: #f0ca45;
-}
-@media only screen and (min-width: 1170px) {
+
+@media only screen and (min-width: 900px) {
     .cd-timeline-img {
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
         left: 50%;
-        margin-left: -30px;
+        margin-left: -20px;
         /* Force Hardware Acceleration in WebKit */
         -webkit-transform: translateZ(0);
         -webkit-backface-visibility: hidden;
@@ -630,7 +678,7 @@ ol li {
     margin-left: 60px;
     background: #ffffff;
     border-radius: 0.25em;
-    padding: 1em;
+    padding: 1em 0.5em 0.3em 0.8em;
     box-shadow: 0 3px 0 #d7e4ed;
 }
 
@@ -674,15 +722,15 @@ ol li {
 }
 
 .cd-timeline-content .cd-date {
-    float: left;
-    padding: .8em 0;
+    float: right;
+    padding: .5em 0;
     opacity: .7;
 }
 
 .cd-timeline-content::before {
     content: '';
     position: absolute;
-    top: 16px;
+    top: 18px !important;
     right: 100%;
     height: 0;
     width: 0;
@@ -706,11 +754,12 @@ ol li {
     }
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 900px) {
     .cd-timeline-content {
         margin-left: 0;
-        padding: 1.6em;
+        padding: 1em;
         width: 45%;
+        margin-top: -6px;
     }
     .cd-timeline-content::before {
         top: 24px;
@@ -724,8 +773,8 @@ ol li {
     .cd-timeline-content .cd-date {
         position: absolute;
         width: 100%;
-        left: 122%;
-        top: 6px;
+        left: 120%;
+        top: 2px;
         font-size: 16px;
         font-size: 1rem;
     }

@@ -83,19 +83,22 @@ function changeTagPost() {
         }
 
         // 获取选中的tag名称，并切换颜色效果.
-        $('#tags .chip-active').removeClass('chip-active').addClass('chip-default');
-        $(this).removeClass('chip-default').addClass('chip-active');
-        var tag = $(this).text();
+        changeTagPostByTag($(this).text());
+    });
+}
 
-        // 获取同样有该标签的帖子，并将其显示出来，其他帖子隐藏.
-        $('#tags .tag-post').each(function(i, ele) {
-            var tagArr = $(this).attr('data-tags').split(', ');
-            if ($.inArray(tag, tagArr) >= 0) {
-                $(this).fadeIn();
-            } else {
-                $(this).hide();
-            }
-        });
+function changeTagPostByTag(tag) {
+    $('#tags .chip-active').removeClass('chip-active').addClass('chip-default');
+    $('#tags .tag-chips span:contains("' + tag + '")').removeClass('chip-default').addClass('chip-active');
+
+    // 获取同样有该标签的帖子，并将其显示出来，其他帖子隐藏.
+    $('#tags .tag-post').each(function(i, ele) {
+        var tagArr = $(this).attr('data-tags').split(', ');
+        if ($.inArray(tag, tagArr) >= 0) {
+            $(this).fadeIn();
+        } else {
+            $(this).hide();
+        }
     });
 }
 
@@ -108,6 +111,10 @@ function fixFooterPosition() {
 
 $(function() {
     /* 切换标签帖子. */
+    var tagAnchor = decodeURI(window.location.hash);
+    if (tagAnchor.indexOf('#') >= 0) {
+        changeTagPostByTag(tagAnchor.split('#')[1]);
+    }
     changeTagPost();
 
     /*菜单切换*/
