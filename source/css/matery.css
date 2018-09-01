@@ -267,6 +267,11 @@ header .side-nav .mobile-head .logo-desc {
     color: #ccc;
 }
 
+header .side-nav .menu-list li {
+    padding: 0;
+    margin-left: -15px; 
+}
+
 header .side-nav .menu-list a {
     height: 50px;
     line-height: 50px;
@@ -277,7 +282,7 @@ header .side-nav .menu-list a i {
 }
 
 header .side-nav .fa-fw {
-    width: 3.8rem;
+    width: 5rem;
     text-align: left;
 }
 
