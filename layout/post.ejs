@@ -26,9 +26,15 @@
                 <% } %>
                 <div class="author-info">
                     <span>
-                        <a class="bf-text-gray">
-                            <i class="fa fa-calendar fa-fw"></i><%- date(page.date, 'YYYY-MM-DD') %>
-                        </a>
+                        <i class="fa fa-calendar fa-fw"></i><%- date(page.date, 'YYYY-MM-DD') %>
+                    </span>
+                    <span>
+                        <i class="fa fa-user fa-fw"></i>
+                        <% if(page.author && page.author.length > 0) { %>
+                            <%= page.author %>
+                        <% } else { %>
+                            <%= config.author %>
+                        <% } %>
                     </span>
                 </div>
             </div>
@@ -60,11 +66,14 @@
             </div>
         </div>
 
+        
+
         <!-- previous page and next page -->
         <div class="prenext-card card">
             <div class="prenext-row row">
                 <div class="prenext col s12 m6 l6">
                     <% if (page.prev) { %>
+                        <% console.log(page.prev); %>
                     <p class="pn-title">上一篇</p>
                     <div><a href="<%- url_for(page.prev.path) %>"><%- page.prev.title %></a></div>
                     <% } %>
