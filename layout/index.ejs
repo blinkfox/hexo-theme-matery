@@ -49,25 +49,32 @@
                         </div>
 
                         <div class="card-content article-content">
-                            <p><%- post.content.substring(0, 120) %></p>
-                            <ul>
-                                <li>
-                                    <a class="bf-text-gray">
-                                        <i class="fa fa-calendar fa-fw"></i><%= moment(post.date, config.date_format).fromNow() %>
-                                    </a>
-                                </li>
-                            </ul>
+                            <div class="summary"><%- post.content.replace(/<[^<>]+?>/g, '').substring(0, 80) %></div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="fa fa-calendar fa-fw"></i><%= date(post.date, config.date_format) %>
+                                </span>
+                                <span class="publish-author">
+                                    <i class="fa fa-user fa-fw"></i>
+                                    <% console.log(post.author); %>
+                                    <% if(post.author && post.author.length > 0) { %>
+                                        <%= post.author %>
+                                    <% } else { %>
+                                        <%= config.author %>
+                                    <% } %>
+                                </span>
+                            </div>
                         </div>
 
-                        <div class="card-action article-tags">
                         <% if(post.tags && post.tags.length) { %>
+                        <div class="card-action article-tags">
                             <% post.tags.forEach(tag => { %>
                             <a href="<%- url_for('/tags/#' + tag.name) %>" target="_blank">
                                 <span class="chip bf-color"><%= tag.name %></span>
                             </a>
                             <% }); %>
-                        <% } %>
                         </div>
+                        <% } %>
                     </a>
                 </div>
             </div>

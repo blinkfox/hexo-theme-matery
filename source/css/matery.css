@@ -327,22 +327,10 @@ header .go-back i {
     margin-top: -10px;
 }
 
-/*精选文章样式*/
-#featureSlider .card {
-    padding-bottom: 10px;
-}
-
-.slider .slides li .caption {
-    top: auto;
-    bottom: 1%;
-    left: 5%;
-    width: 95%
-}
-
 /*文章列表卡片各样式*/
 article a {
     margin-right: 0px !important;
-    color: #34495e;
+    color: #525f7f;
     text-transform: none !important;
 }
 
@@ -351,23 +339,36 @@ article a {
     margin-right: 0;
 }
 
+#articles .card {
+    border-radius: 0.3rem;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+}
+
 article .card-image img {
     height: 230px;
+    border-radius: 0.3rem;
 }
 
-article .article-content ul {
+article .card .card-content {
+    padding: 15px 15px 12px 18px; 
+}
+
+article .article-content .summary {
     padding-bottom: 2px;
     padding-left: 0;
-    list-style: none;
+    margin-bottom: 6px;    
 }
 
-article .article-content ul li {
-    float: left;
-    display: inline-block;
-    padding-right: 20px !important;
+article .article-content .publish-author {
+    float: right;
+}
+
+article .card .card-action {
+    padding: 10px 15px 10px 18px;
 }
 
 article .article-tags .chip {
+    margin: 2px;
     font-size: 0.8rem;
     font-weight: 400;
     height: 22px;
@@ -435,6 +436,16 @@ article .article-tags .chip {
     }
 }
 
+#artDetail .reprint {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#artDetail .reprint a {
+    color: #42b983;
+    font-weight: 500;
+}
+
 #artDetail .article-share {
     margin-top: 10px;
     padding-bottom: 20px;
@@ -468,7 +479,8 @@ article .article-tags .chip {
 }
 
 #articleContent a {
-    color: #1b69b6 !important;
+    color: #0e83cd !important;
+    font-weight: 500;
 }
 
 #articleContent ol,

@@ -38,10 +38,11 @@
                     <%- page.content %>
                 </div>
                 <hr />
-                <br />
-                <p>转载请注明：<a href="<%- config.url %>" class="b-link-green"><%- config.title %></a> &raquo;
-                    <a href="<%- url_for(page.path) %>" class="b-link-green"><%= page.title %></a>
-                </p>
+                <div class="reprint">
+                    <p>转载请注明：<a href="<%- config.url %>" class="b-link-green"><%- config.title %></a> &raquo;
+                        <a href="<%- url_for(page.path) %>" class="b-link-green"><%= page.title %></a>
+                    </p>
+                </div>
                 <div class="article-share">
                     <div>分享到：</div>
                     <!-- JiaThis Button BEGIN -->
