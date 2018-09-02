@@ -1,0 +1,19 @@
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title">搜索文章</span>
+            <input type="search" id="searchInput" name="s" placeholder="搜索文章..." class="search-input" autofocus="">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">      
+    var search_path = "<%= config.search.path %>";
+    if (search_path.length == 0) {
+        search_path = "search.xml";
+    }
+    var path = "<%= config.root %>" + search_path;
+    searchFunc(path, 'searchInput', 'searchResult');
+</script>

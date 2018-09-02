@@ -110,6 +110,7 @@ function fixFooterPosition() {
 }
 
 $(function() {
+    $('#model1').leanModal();
     /* 切换标签帖子. */
     var tagAnchor = decodeURI(window.location.hash);
     if (tagAnchor.indexOf('#') >= 0) {
@@ -155,14 +156,17 @@ $(function() {
     articleInit();
 
     /*显示和隐藏搜索*/
-    $('#searchIcon').click(function() {
-        $('#search-mask').fadeIn(300);
-        $('#searchKey').focus();
-        $('#searchIcon').hide();
-    });
-    $('#search-mask .search-close').click(function() {
-        $('#searchIcon').show();
-        $('#search-mask').fadeOut(300);
+    // $('#searchIcon').click(function() {
+    //     $('#search-mask').fadeIn(300);
+    //     $('#local-search-input').focus();
+    //     $('#searchIcon').hide();
+    // });
+    // $('#search-mask .search-close').click(function() {
+    //     $('#searchIcon').show();
+    //     $('#search-mask').fadeOut(300);
+    // });
+    $('#toggleSearch').click(function() {
+        $('#searchModal').openModal();
     });
 
     /*调色面板显示开关*/

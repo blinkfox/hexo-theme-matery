@@ -23,6 +23,7 @@
 body {
     background-color: #e5e5e5;
     margin: 0;
+    color: #34495e;
 }
 
 h1 {
@@ -341,7 +342,7 @@ header .go-back i {
 /*文章列表卡片各样式*/
 article a {
     margin-right: 0px !important;
-    color: #212121;
+    color: #34495e;
     text-transform: none !important;
 }
 
@@ -548,7 +549,7 @@ ol li {
 }
 
 #cd-timeline .article-title {
-    color: #333;
+    color: #34495e;
     font-size: 1.5rem;
 }
 
@@ -694,7 +695,7 @@ ol li {
 }
 
 .cd-timeline-content h2 {
-    color: #303e49;
+    color: #34495e;
 }
 
 .cd-timeline-content p,
@@ -718,7 +719,7 @@ ol li {
     float: right;
     padding: .8em 1em;
     background: #acb7c0;
-    color: #ffffff;
+    color: #fff;
     border-radius: 0.25em;
 }
 
@@ -826,62 +827,44 @@ footer .copy-right {
 }
 
 /*搜索层样式*/
-#search-mask {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #673AB7;
-    opacity: 0.96;
-    z-index: 999;
+#searchModal {
+    min-height: 500px;
+    width: 80%;
 }
 
-#search-mask a {
-    color: #fff;
+#searchModal .search-header .title {
+    font-size: 1.6rem;
+    color: #333;
 }
 
-#search-mask .search-form {
-    position: fixed;
-    display: table;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+#searchResult {
+    margin: -15px 0px 10px 10px;
 }
 
-#search-mask .search-close {
-    position: absolute;
-    right: 20px;
-    top: 20px;
+#searchResult .search-result-list {
+    margin-left: -8px;
+    padding-left: 0px;
+    color: #666;
 }
 
-#search-mask .search-close i {
-    font-size: 2.3rem;
+.search-result-list .search-result-title {
+    font-size: 1.4rem;
+    color: #009a61;
 }
 
-#search-mask .search-container {
-    position: fixed;
-    top: 35%;
+.search-result-list li {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15px 0px 5px 0px;
 }
 
-#search-mask .search-container .search-label label {
-    font: 300 1.2rem Roboto;
-    color: #fff;
-    text-align: center;
-    letter-spacing: 1px;
-}
-
-#search-mask .search-container .search-input {
-    padding-bottom: 5px;
-    margin-top: 20px;
-    height: auto;
-    font: 400 2rem Roboto;
-    color: #fff;
-    text-align: center;
-    border: none;
+.search-result-list .search-keyword {
+    margin: 0 2px;
+    padding: 1px 5px 1px 4px;
+    border-radius: 2px;
+    background-color: #f2f2f2;
+    color: #e96900;
+    font-size: .9rem;
+    white-space: pre-wrap;
 }
 
 /*主题颜色设置面板样式*/

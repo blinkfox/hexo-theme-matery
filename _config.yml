@@ -27,3 +27,4 @@ scripts:
 - /libs/masonry/masonry.pkgd.min.js
 - /libs/aos/aos.js
 - /js/matery.js
+- /js/search.js
