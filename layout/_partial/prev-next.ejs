@@ -1,0 +1,90 @@
+<article id="articles" class="container prev-next articles">
+    <div class="row article-row">
+        <% if (page.prev) { %>
+        <div class="article col s12 m6 l4">
+            <div class="card">
+                <a href="<%- url_for(page.prev.path) %>">
+                    <div class="card-image">
+                        <% if (page.prev.img) { %>
+                        <img src="<%= page.prev.img %>" class="responsive-img" alt="<%- page.prev.title %>">
+                        <% } else { %>
+                        <img src="<%= theme.featureimg %>" class="responsive-img" alt="<%- page.prev.title %>">
+                        <% } %>
+                        <span class="card-title"><%- page.prev.title %></span>
+                    </div>
+                    <div class="card-content article-content">
+                        <div class="summary">
+                            <%- page.prev.content.replace(/<[^<>]+?>/g, '').substring(0, 80) %>
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-calendar fa-fw"></i><%= date(page.prev.date, config.date_format) %>
+                            </span>
+                            <span class="publish-author">
+                                <i class="fa fa-user fa-fw"></i>
+                                <% if(page.prev.author && page.prev.author.length > 0) { %>
+                                    <%= page.prev.author %>
+                                <% } else { %>
+                                    <%= config.author %>
+                                <% } %>
+                            </span>
+                        </div>
+                    </div>
+                    <% if(page.prev.tags && page.prev.tags.length) { %>
+                    <div class="card-action article-tags">
+                        <% page.prev.tags.forEach(tag => { %>
+                        <a href="<%- url_for('/tags/#' + tag.name) %>" target="_blank">
+                            <span class="chip bf-color"><%= tag.name %></span>
+                        </a>
+                        <% }); %>
+                    </div>
+                    <% } %>
+                </a>
+            </div>
+        </div>
+        <% } %>
+        <% if (page.next) { %>
+        <div class="article col s12 m6 l4">
+            <div class="card">
+                <a href="<%- url_for(page.next.path) %>">
+                    <div class="card-image">
+                        <% if (page.next.img) { %>
+                        <img src="<%= page.next.img %>" class="responsive-img" alt="<%- page.next.title %>">
+                        <% } else { %>
+                        <img src="<%= theme.featureimg %>" class="responsive-img" alt="<%- page.next.title %>">
+                        <% } %>
+                        <span class="card-title"><%- page.next.title %></span>
+                    </div>
+                    <div class="card-content article-content">
+                        <div class="summary">
+                            <%- page.next.content.replace(/<[^<>]+?>/g, '').substring(0, 80) %>
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-calendar fa-fw"></i><%= date(page.next.date, config.date_format) %>
+                            </span>
+                            <span class="publish-author">
+                                <i class="fa fa-user fa-fw"></i>
+                                <% if(page.next.author && page.next.author.length > 0) { %>
+                                    <%= page.next.author %>
+                                <% } else { %>
+                                    <%= config.author %>
+                                <% } %>
+                            </span>
+                        </div>
+                    </div>
+                    <% if(page.next.tags && page.next.tags.length) { %>
+                    <div class="card-action article-tags">
+                        <% page.next.tags.forEach(tag => { %>
+                        <a href="<%- url_for('/tags/#' + tag.name) %>" target="_blank">
+                            <span class="chip bf-color"><%= tag.name %></span>
+                        </a>
+                        <% }); %>
+                    </div>
+                    <% } %>
+                </a>
+            </div>
+        </div>
+        <% } %>
+    </div>
+</article>

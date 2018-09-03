@@ -339,7 +339,7 @@ article a {
     margin-right: 0;
 }
 
-#articles .card {
+article .card {
     border-radius: 0.3rem;
     box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
 }
@@ -375,6 +375,10 @@ article .article-tags .chip {
     line-height: 22px;
     color: #fff;
     border-radius: 10px;
+}
+
+.prev-next {
+    margin-left: -0.75rem;
 }
 
 .paging .row {

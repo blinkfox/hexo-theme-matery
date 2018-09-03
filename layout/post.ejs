@@ -66,26 +66,6 @@
             </div>
         </div>
 
-        
-
-        <!-- previous page and next page -->
-        <div class="prenext-card card">
-            <div class="prenext-row row">
-                <div class="prenext col s12 m6 l6">
-                    <% if (page.prev) { %>
-                        <% console.log(page.prev); %>
-                    <p class="pn-title">上一篇</p>
-                    <div><a href="<%- url_for(page.prev.path) %>"><%- page.prev.title %></a></div>
-                    <% } %>
-                </div>
-                <div class="prenext col s12 m6 l6">
-                    <% if (page.next) { %>
-                    <p class="pn-title">下一篇</p>
-                    <div><a href="<%- url_for(page.next.path) %>"><%- page.next.title %></a></div>
-                    <% } %>
-                </div>
-            </div>
-        </div>
-    <!-- {{> comments}} -->
+        <%- partial('_partial/prev-next') %>
     </div>
 </main>
