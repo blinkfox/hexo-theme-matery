@@ -5,7 +5,7 @@
         <% } %>
         <div class="logo-name"><%- config.title %></div>
         <div class="logo-desc">
-        <% if (config.description !== undefined && config.description.length > 0) { %>
+        <% if (config.description && config.description.length > 0) { %>
             <%= config.description %>
         <% } else { %>
             从来没有真正的绝境，只有心灵的迷途
