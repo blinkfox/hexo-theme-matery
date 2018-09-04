@@ -18,6 +18,7 @@ stylesheets:
 - /libs/awesome/css/font-awesome.min.css
 - /libs/materialize/css/materialize.min.css
 - /libs/aos/aos.css
+- /libs/animate/animate.min.css
 - /css/matery.css
 
 # scripts loaded in the end of the body

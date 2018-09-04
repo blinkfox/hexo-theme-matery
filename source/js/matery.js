@@ -109,8 +109,21 @@ function fixFooterPosition() {
     $('.content').css('min-height', window.innerHeight - 165);
 }
 
+/**
+ * 添加文章卡片hover效果.
+ */
+function articleCardHover() {
+    var animateClass = 'animated pulse';
+    $('#articles .article').hover(function() {
+        $(this).addClass(animateClass);
+    }, function() {
+        $(this).removeClass(animateClass);
+    });
+}
+
 $(function() {
-    $('#model1').leanModal();
+    articleCardHover();
+
     /* 切换标签帖子. */
     var tagAnchor = decodeURI(window.location.hash);
     if (tagAnchor.indexOf('#') >= 0) {

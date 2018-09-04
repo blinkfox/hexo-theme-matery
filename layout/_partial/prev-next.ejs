@@ -1,7 +1,8 @@
 <article id="articles" class="container prev-next articles">
     <div class="row article-row">
         <% if (page.prev) { %>
-        <div class="article col s12 m6 l4" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge">上一篇</div>
             <div class="card">
                 <a href="<%- url_for(page.prev.path) %>">
                     <div class="card-image">
@@ -14,7 +15,7 @@
                     </div>
                     <div class="card-content article-content">
                         <div class="summary">
-                            <%- page.prev.content.replace(/<[^<>]+?>/g, '').substring(0, 60) %>
+                            <%- page.prev.content.replace(/<[^<>]+?>/g, '').substring(0, 80) %>
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
@@ -43,7 +44,8 @@
             </div>
         </div>
         <% } else { %>
-        <div class="article col s12 m6 l4" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge">本篇</div>
             <div class="card">
                 <a href="<%- url_for(page.path) %>">
                     <div class="card-image">
@@ -56,7 +58,7 @@
                     </div>
 
                     <div class="card-content article-content">
-                        <div class="summary"><%- page.content.replace(/<[^<>]+?>/g, '').substring(0, 60) %></div>
+                        <div class="summary"><%- page.content.replace(/<[^<>]+?>/g, '').substring(0, 80) %></div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-calendar fa-fw"></i><%= date(page.date, config.date_format) %>
@@ -86,7 +88,8 @@
         </div>
         <% } %>
         <% if (page.next) { %>
-        <div class="article col s12 m6 l4 offset-l4" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge">下一篇</div>
             <div class="card">
                 <a href="<%- url_for(page.next.path) %>">
                     <div class="card-image">
@@ -99,7 +102,7 @@
                     </div>
                     <div class="card-content article-content">
                         <div class="summary">
-                            <%- page.next.content.replace(/<[^<>]+?>/g, '').substring(0, 60) %>
+                            <%- page.next.content.replace(/<[^<>]+?>/g, '').substring(0, 80) %>
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
@@ -128,7 +131,8 @@
             </div>
         </div>
         <% } else { %>
-        <div class="article col s12 m6 l4 offset-l4" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge">本篇</div>
             <div class="card">
                 <a href="<%- url_for(page.path) %>">
                     <div class="card-image">
@@ -141,7 +145,7 @@
                     </div>
 
                     <div class="card-content article-content">
-                        <div class="summary"><%- page.content.replace(/<[^<>]+?>/g, '').substring(0, 60) %></div>
+                        <div class="summary"><%- page.content.replace(/<[^<>]+?>/g, '').substring(0, 80) %></div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-calendar fa-fw"></i><%= date(page.date, config.date_format) %>

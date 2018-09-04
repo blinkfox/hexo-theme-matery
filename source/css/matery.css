@@ -134,6 +134,10 @@ mark {
     padding: .2em;
 }
 
+.card {
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+}
+
 .container .row {
     margin-bottom: 0px;
 }
@@ -341,7 +345,7 @@ article a {
 
 article .card {
     border-radius: 0.3rem;
-    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+    /* box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important; */
 }
 
 article .card-image img {
@@ -379,6 +383,29 @@ article .article-tags .chip {
 
 .prev-next {
     margin-left: -0.75rem;
+}
+
+.prev-next .article-badge {
+    min-width: 3rem;
+    margin-top: 7px;
+    padding: 3px 10px 3px 8px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: inherit;
+    color: #3f51b5;
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 200;
+    background-color: #fff;
+}
+
+.prev-next .left-badge {
+    border-radius: 0px 5px 5px 0px;
+}
+
+.prev-next .right-badge {
+    border-radius: 5px 0px 0px 5px;
+    right: 10px;
 }
 
 .paging .row {
@@ -860,7 +887,7 @@ footer a {
 }
 
 footer .copy-right {
-    color: #ccc;
+    color: #d5d5d5;
 }
 
 /*搜索层样式*/
