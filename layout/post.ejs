@@ -69,3 +69,12 @@
         <%- partial('_partial/prev-next') %>
     </div>
 </main>
+<div class="progress-bar"></div>
+
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script>
+const progressElement = window.document.querySelector('.progress-bar');
+const progressObserver = new ScrollProgress((x, y) => {
+    progressElement.style.width = y * 105 + '%';
+});
+</script>

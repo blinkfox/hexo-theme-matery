@@ -229,6 +229,14 @@ mark {
     }
 }
 
+.progress-bar {
+    background-color: red;
+    height: 2px;
+    position: fixed;
+    bottom: 0;
+    z-index: 300;
+}
+
 header nav .brand-span {
     font-size: 1.45rem;
 }
@@ -487,20 +495,6 @@ article .article-tags .chip {
     margin-top: 5px;
 }
 
-.prenext-card .prenext-row {
-    /* padding: 10px; */
-}
-
-.prenext-card .prenext {
-    /* padding-left: 20px; */
-    margin-bottom: 15px;
-}
-
-.prenext-card .pn-title {
-    margin-bottom: 10px;
-    font-size: 1.3rem;
-}
-
 #articleContent p {
     margin: 2 2 10px;
     text-indent: 2.2rem;
@@ -566,27 +560,28 @@ table tr:nth-child(2n), thead {
 }
 
 #tags .chip-default {
-    color: #777;
-    background-color: #D8D8D8;
+    color: #34495e;
+    background-color: #fff;
 }
 
 #tags .chip-active {
     color: #FFF;
-    background-color: #FF1744;
+    background-color: #EB355B;
     box-shadow: 2px 2px 3px #AAA;
 }
-
 #tags .chip {
-    margin: 5px 8px;
+    margin: 10px 10px;
     padding: 0 16px;
     display: inline-block;
+    height: 40px;
+    min-width: 80px;
+    line-height: 41px;
     font-size: 1rem;
-    font-weight: 400;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 15px;
+    font-weight: 500;
+    border-radius: 5px;
     word-wrap: break-word;
     cursor: pointer;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .07);
 }
 
 /* archive page. */
@@ -749,7 +744,7 @@ table tr:nth-child(2n), thead {
     background: #ffffff;
     border-radius: 0.25em;
     padding: 1em 0.5em 0.3em 0.8em;
-    box-shadow: 0 3px 0 #d7e4ed;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
 }
 
 .cd-timeline-content::after {
@@ -844,7 +839,7 @@ table tr:nth-child(2n), thead {
         position: absolute;
         width: 100%;
         left: 120%;
-        top: 2px;
+        margin-top: -45px;
         font-size: 16px;
         font-size: 1rem;
     }
@@ -863,7 +858,8 @@ table tr:nth-child(2n), thead {
     }
     .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
         left: auto;
-        right: 122%;
+        right: 120%;
+        margin-top: -40px;
         text-align: right;
     }
     .cssanimations .cd-timeline-content.is-hidden {

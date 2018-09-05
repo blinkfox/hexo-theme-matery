@@ -23,7 +23,6 @@ stylesheets:
 
 # scripts loaded in the end of the body
 scripts:
-- /libs/jquery/jquery-2.2.0.min.js
 - /libs/materialize/js/materialize.min.js
 - /libs/masonry/masonry.pkgd.min.js
 - /libs/aos/aos.js

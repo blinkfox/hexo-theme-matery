@@ -121,8 +121,20 @@ function articleCardHover() {
     });
 }
 
+/**
+ * 滚动进度条效果.
+ */
+function progressBar() {
+    const progressElement = document.querySelector('.progress-bar');
+    const progressObserver = new ScrollProgress((x, y) => {
+        console.log('x:' + x + ', y:' + y);
+        progressElement.style.width = y * 100 + '%';
+    });
+}
+
 $(function() {
     articleCardHover();
+    // progressBar();
 
     /* 切换标签帖子. */
     var tagAnchor = decodeURI(window.location.hash);
@@ -168,16 +180,6 @@ $(function() {
     /*初始化文章内容的一些显示特性*/
     articleInit();
 
-    /*显示和隐藏搜索*/
-    // $('#searchIcon').click(function() {
-    //     $('#search-mask').fadeIn(300);
-    //     $('#local-search-input').focus();
-    //     $('#searchIcon').hide();
-    // });
-    // $('#search-mask .search-close').click(function() {
-    //     $('#searchIcon').show();
-    //     $('#search-mask').fadeOut(300);
-    // });
     $('#toggleSearch').click(function() {
         $('#searchModal').openModal();
     });

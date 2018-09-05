@@ -1,13 +1,10 @@
 <main class="content">
-
     <div id="tags" class="container">
-        
         <div class="tag-chips">
             <% site.tags.map(function(tag) {  %>
             <span class="chip center-align chip-default"><%= tag.name %></span>
             <% }); %>
         </div>
-
         <div class="row tags-posts">
             <% site.posts.sort('date').reverse().forEach(post => { %>
             <% 
@@ -21,19 +18,19 @@
             %>
             <div class="tag-post col s12 m6 l4" data-tags="<%- tags %>">
                 <div class="card">
-                    <div class="card-image">
-                        <% if (post.img) { %>
-                        <img src="<%= post.img %>">
-                        <% } else { %>
-                        <img src="<%= theme.featureimg %>">
-                        <% } %>
-                        <span class="card-title"><%- post.title %></span>
-                    </div>
+                    <a href="<%- url_for(post.path) %>">
+                        <div class="card-image">
+                            <% if (post.img) { %>
+                            <img src="<%= post.img %>">
+                            <% } else { %>
+                            <img src="<%= theme.featureimg %>">
+                            <% } %>
+                            <span class="card-title"><%- post.title %></span>
+                        </div>
+                    </a>
                 </div>
             </div>
             <% }); %>
         </div>
-
     </div>
-
 </main>
