@@ -217,17 +217,16 @@ $(function() {
         /*导航栏位置监听*/
         var nav = $('#headNav');
         if (t < 15) {
-            nav.addClass('none-shadow');
+            nav.addClass('nav-transparent');
         } else {
-            nav.removeClass('none-shadow');
+            nav.removeClass('nav-transparent');
         }
 
         /*回到顶部按钮根据滚动条的位置的显示和隐藏*/
-        var ts = $('.top-scroll');
         if (t < 100) {
-            ts.slideUp(300);
+            $('.top-scroll').slideUp(200);
         } else {
-            ts.slideDown(300);
+            $('.top-scroll').slideDown(200);
         }
     });
 });

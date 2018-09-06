@@ -158,10 +158,6 @@ mark {
     color: #3f51b5 !important;
 }
 
-.none-shadow {
-    box-shadow: none;
-}
-
 .modal.bottom-sheet {
     max-height: 65%;
 }
@@ -235,6 +231,11 @@ mark {
     position: fixed;
     bottom: 0;
     z-index: 300;
+}
+
+header .nav-transparent {
+    background-color: transparent!important;
+    box-shadow: none;
 }
 
 header nav .brand-span {
@@ -325,14 +326,60 @@ header .go-back i {
     line-height: 56px;
 }
 
-/*内容头部样式*/
-.content .content-heading {
-    margin-bottom: -50px;
-    padding-bottom: 50px;
-    color: #fff;
-    z-index: 0;
+/* 背景图效果. */
+
+.bg-cover {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 60vh;
+    margin: 0;
+    padding: 0;
+    border: 0;
     overflow: hidden;
-    transition: background-color .3s cubic-bezier(.4, 0, .2, 1), color .3s cubic-bezier(.4, 0, .2, 1);
+    background-position: center center;
+    background-size: cover;
+    margin-top: -64px;
+}
+
+.bg-cover:after {
+    background: rgba(101, 47, 142, 0.64);
+    background: linear-gradient(45deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
+    background: -moz-linear-gradient(135deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
+}
+.bg-cover:before, .bg-cover:after {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    content: "";
+}
+
+.bg-cover .container {
+    position: relative;
+    color: #fff;
+    z-index: 2;
+}
+
+.bg-cover .title {
+    font-size: 4.2rem;
+    font-weight: 600;
+    line-height: 1.15em;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.bg-cover .description {
+    font-size: 1.313rem;
+    line-height: 1.4em;
+}
+
+.notice {
+    margin-top: -40px;
 }
 
 .settings-content {
@@ -441,6 +488,17 @@ article .article-tags .chip {
 }
 
 /*文章详情样式*/
+#artDetail {
+    margin-top: -60px;
+}
+
+#artDetail .card {
+    border-radius: 5px;
+    box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 
+    0 5px 15px  rgba(0, 0, 0, .07), 
+    0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+}
+
 #artDetail a {
     margin-right: 0px !important;
     text-transform: none !important;
