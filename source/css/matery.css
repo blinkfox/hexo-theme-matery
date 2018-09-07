@@ -347,6 +347,7 @@ header .go-back i {
     background: linear-gradient(45deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
     background: -moz-linear-gradient(135deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
     background: -webkit-linear-gradient(135deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
+    /* background: -webkit-linear-gradient(135deg, rgba(239,83,80, 0.88) 0%, rgba(244,67,54, 0.45) 100%); */
 }
 .bg-cover:before, .bg-cover:after {
     position: absolute;
@@ -404,8 +405,12 @@ article .card {
 }
 
 article .card-image img {
-    height: 230px;
+    height: 220px;
     border-radius: 0.3rem;
+}
+
+article .tag-image img {
+    height: 200px;
 }
 
 article .card .card-content {
@@ -540,7 +545,7 @@ article .article-tags .chip {
 }
 
 #artDetail .reprint a {
-    color: #039be5;
+    color: #42b983;
     font-weight: 500;
 }
 
@@ -624,16 +629,16 @@ table tr:nth-child(2n), thead {
 
 #tags .chip-active {
     color: #FFF;
-    background-color: #EB355B;
+    background-color: #e91e63;
     box-shadow: 2px 2px 3px #AAA;
 }
 #tags .chip {
     margin: 10px 10px;
     padding: 0 16px;
     display: inline-block;
-    height: 40px;
+    height: 38px;
     min-width: 80px;
-    line-height: 41px;
+    line-height: 39px;
     font-size: 1rem;
     font-weight: 500;
     border-radius: 5px;
@@ -967,7 +972,7 @@ footer .copy-right {
 
 .search-result-list .search-result-title {
     font-size: 1.4rem;
-    color: #009a61;
+    color: #42b983;
 }
 
 .search-result-list li {
@@ -1043,6 +1048,10 @@ footer .copy-right {
     padding-top: 15px;
     margin-bottom: 0;
     z-index: 998;
+}
+
+.top-scroll .btn-floating {
+    background-color: #e91e63
 }
 
 .top-scroll i {

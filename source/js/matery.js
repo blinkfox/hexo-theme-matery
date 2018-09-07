@@ -89,7 +89,7 @@ function changeTagPost() {
 
 function changeTagPostByTag(tag) {
     $('#tags .chip-active').removeClass('chip-active').addClass('chip-default');
-    $('#tags .tag-chips span:contains("' + tag + '")').removeClass('chip-default').addClass('chip-active');
+    $('#tags .tag-chips span[data-tagname="' + tag + '"]').removeClass('chip-default').addClass('chip-active');
 
     // 获取同样有该标签的帖子，并将其显示出来，其他帖子隐藏.
     $('#tags .tag-post').each(function(i, ele) {
@@ -114,7 +114,7 @@ function fixFooterPosition() {
  */
 function articleCardHover() {
     var animateClass = 'animated pulse';
-    $('#articles .article').hover(function() {
+    $('#articles .article, #tags .article').hover(function() {
         $(this).addClass(animateClass);
     }, function() {
         $(this).removeClass(animateClass);
@@ -216,7 +216,7 @@ $(function() {
         var t = $(window).scrollTop();
         /*导航栏位置监听*/
         var nav = $('#headNav');
-        if (t < 15) {
+        if (t < 250) {
             nav.addClass('nav-transparent');
         } else {
             nav.removeClass('nav-transparent');
