@@ -32,7 +32,6 @@
                             </div>
                         </a>
                         <div class="card-content article-content">
-                            <div class="summary"><%- post.content.replace(/<[^<>]+?>/g, '').substring(0, 50) %></div>
                             <div class="publish-info">
                                 <span class="publish-date">
                                     <i class="fa fa-calendar fa-fw"></i><%= date(post.date, config.date_format) %>

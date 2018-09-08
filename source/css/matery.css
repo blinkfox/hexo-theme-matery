@@ -21,31 +21,31 @@
 }
 
 body {
-    background-color: #e5e5e5;
+    background-color: #eaeaea;
     margin: 0;
     color: #34495e;
 }
 
 h1 {
-    font-size: 1.8rem;
+    font-size: 1.85rem;
     font-weight: bold;
     line-height: 2.2rem;
 }
 
 h2 {
-    font-size: 1.6rem;
+    font-size: 1.65rem;
     font-weight: bold;
     line-height: 1.9rem;
 }
 
 h3 {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
     font-weight: bold;
     line-height: 1.7rem;
 }
 
 h4 {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: bold;
     line-height: 1.5rem;
 }
@@ -74,8 +74,8 @@ hr {
 
 blockquote {
     border-left: 5px solid #42b983;
-    padding: 0.9rem 0.8rem 0.4rem 0.8rem;
-    color: #777;
+    padding: 0.9rem 0.8rem 0.9rem 0.8rem;
+    color: #666;
     background-color: rgba(66,185,131,.1);
 }
 
@@ -135,7 +135,12 @@ mark {
 }
 
 .card {
+    border-radius: 5px;
     box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+}
+
+.card .card-image img {
+    border-radius: 5px 5px 0 0;
 }
 
 .container .row {
@@ -226,11 +231,12 @@ mark {
 }
 
 .progress-bar {
-    background-color: red;
-    height: 2px;
+    background-color: #0f9d58;
+    height: 4px;
     position: fixed;
     bottom: 0;
     z-index: 300;
+    opacity: 0.8;
 }
 
 header .nav-transparent {
@@ -302,8 +308,8 @@ header .side-nav .fa-fw {
 
 header .side-nav .social-link {
     position: absolute;
-    bottom: 40px;
-    padding-left: 10px;
+    bottom: 45px;
+    padding-left: 15px;
 }
 
 .social-link a {
@@ -476,8 +482,7 @@ article .article-tags .chip {
 .paging .page-info {
     font-size: 1.4rem;
     color: #666;
-    height: 2.4rem;
-    line-height: 2.8rem;
+    padding-top: 1rem;
 }
 
 .paging i {
@@ -498,7 +503,6 @@ article .article-tags .chip {
 }
 
 #artDetail .card {
-    border-radius: 5px;
     box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 
     0 5px 15px  rgba(0, 0, 0, .07), 
     0 2px 5px -5px rgba(0, 0, 0, .1) !important;
@@ -535,7 +539,7 @@ article .article-tags .chip {
 
 @media only screen and (min-width: 600px) {
     #artDetail .article-card-content {
-        padding: 0px 30px 20px 35px;
+        padding: 0px 30px 20px 32px;
     }
 }
 
@@ -560,7 +564,8 @@ article .article-tags .chip {
 
 #articleContent p {
     margin: 2 2 10px;
-    text-indent: 2.2rem;
+    /* text-indent: 2.2rem; */
+    line-height: 1.78rem;
 }
 
 #articleContent blockquote p {
@@ -568,9 +573,15 @@ article .article-tags .chip {
 }
 
 #articleContent a {
-    color: #42b983 !important;
+    padding: 0px 2px;
+    color: #42b983;
     font-weight: 500;
     text-decoration: underline;
+}
+
+#articleContent img {
+    max-width: 100%;
+    height: auto;
 }
 
 #articleContent ol,
@@ -583,7 +594,7 @@ ul {
 #articleContent ul li,
 ol li {
     display: list-item;
-    line-height: 1.74rem;
+    line-height: 1.8rem;
     font-size: 1rem;
 }
 
@@ -696,7 +707,7 @@ table tr:nth-child(2n), thead {
 #cd-timeline {
     width: 90%;
     position: relative;
-    padding: 2em 0;
+    /* padding: 2em 0; */
     margin-top: 1em;
     margin-bottom: 2em;
 }
@@ -709,13 +720,13 @@ table tr:nth-child(2n), thead {
     left: 18px;
     height: 100%;
     width: 4px;
-    background: #6a7fe4;
+    background: #0f9d58;
 }
 
 @media only screen and (min-width: 900px) {
     #cd-timeline {
-        margin-top: 1.2em;
-        margin-bottom: 1.2em;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
     }
     #cd-timeline::before {
         left: 50%;
@@ -733,7 +744,7 @@ table tr:nth-child(2n), thead {
 
 .cd-timeline-block {
     position: relative;
-    margin: 2em 0;
+    margin: 1em 0;
 }
 
 .cd-timeline-block::after {
@@ -749,7 +760,7 @@ table tr:nth-child(2n), thead {
 }
 @media only screen and (min-width: 870px) {
     .cd-timeline-block {
-        margin: 4em 0;
+        margin: 1em 0;
     }
     .cd-timeline-block:first-child {
         margin-top: 0;
@@ -805,7 +816,7 @@ table tr:nth-child(2n), thead {
     position: relative;
     margin-left: 60px;
     background: #ffffff;
-    border-radius: 0.25em;
+    border-radius: 5px;
     padding: 1em 0.5em 0.3em 0.8em;
     box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
 }

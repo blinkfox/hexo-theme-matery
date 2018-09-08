@@ -19,6 +19,7 @@ stylesheets:
 - /libs/materialize/css/materialize.min.css
 - /libs/aos/aos.css
 - /libs/animate/animate.min.css
+- /libs/lightGallery/css/lightgallery.min.css
 - /css/matery.css
 
 # scripts loaded in the end of the body
@@ -28,3 +29,4 @@ scripts:
 - /libs/aos/aos.js
 - /js/matery.js
 - /js/search.js
+- /libs/lightGallery/js/lightgallery-all.min.js

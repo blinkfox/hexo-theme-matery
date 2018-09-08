@@ -40,7 +40,7 @@ yearArr.forEach(function(year) {
             <span><%= month %></span>
         </div>
         <% archivesList[year][month].map(function(post){  %>
-        <div class="cd-timeline-block">
+        <div class="cd-timeline-block" data-aos="fade-up">
             <div class="cd-timeline-img cd-picture">
                 <% if (post.img) { %>
                 <img src="<%= post.img %>" class="responsive-img" alt="<%- post.title %>">

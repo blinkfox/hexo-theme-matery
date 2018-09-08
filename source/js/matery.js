@@ -66,10 +66,15 @@ function setArtWidth() {
 
 /*文章内容详情的一些初始化特性*/
 function articleInit() {
-    $('#articleContent img').addClass('materialboxed').addClass('responsive-img');
-    $('#articleContent a').attr('target', '_blank').addClass('bf-text-color');
-    $('.materialboxed').materialbox();
-    $('.modal-trigger').leanModal();
+    $('#articleContent a').attr('target', '_blank');
+
+    $('#articleContent img').each(function() {
+        var imgPath = $(this).attr('src');
+        $(this).wrap('<div class="img-item" data-src="' + imgPath + '"></div>');
+    });
+    $('#articleContent').lightGallery({
+        selector: '.img-item'
+    });
 }
 
 /**
@@ -121,21 +126,10 @@ function articleCardHover() {
     });
 }
 
-/**
- * 滚动进度条效果.
- */
-function progressBar() {
-    const progressElement = document.querySelector('.progress-bar');
-    const progressObserver = new ScrollProgress((x, y) => {
-        console.log('x:' + x + ', y:' + y);
-        progressElement.style.width = y * 100 + '%';
-    });
-}
 
 $(function() {
     articleCardHover();
-    // progressBar();
-
+    
     /* 切换标签帖子. */
     var tagAnchor = decodeURI(window.location.hash);
     if (tagAnchor.indexOf('#') >= 0) {
@@ -174,7 +168,7 @@ $(function() {
 
     AOS.init({
         easing: 'ease-in-out-sine',
-        delay: 50
+        delay: 30
     });
 
     /*初始化文章内容的一些显示特性*/
@@ -224,9 +218,9 @@ $(function() {
 
         /*回到顶部按钮根据滚动条的位置的显示和隐藏*/
         if (t < 100) {
-            $('.top-scroll').slideUp(200);
+            $('.top-scroll').slideUp(300);
         } else {
-            $('.top-scroll').slideDown(200);
+            $('.top-scroll').slideDown(300);
         }
     });
 });
