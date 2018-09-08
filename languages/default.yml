@@ -1,21 +1,6 @@
-categories: Categories
-search: Search
-tags: Tags
-tagcloud: Tag Cloud
-tweets: Tweets
-prev: Prev
+reprint: Reprint please specify
+curr: Current
+prev: Previous
 next: Next
-comment: Comments
-archive_a: Archives
-archive_b: "Archives: %s"
-page: Page %d
-recent_posts: Recent Posts
-about_me: About Me
-contact_me: Contact ME
-newer: Newer
-older: Older
-share: Share
-powered_by: Powered by
-rss_feed: RSS Feed
-category: Category
-tag: Tag
+search: Search
+searchTip: Please enter a search keyword

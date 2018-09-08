@@ -2,7 +2,7 @@
     <div class="row article-row">
         <% if (page.prev) { %>
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge">上一篇</div>
+            <div class="article-badge left-badge"><%= __('prev') %></div>
             <div class="card">
                 <a href="<%- url_for(page.prev.path) %>">
                     <div class="card-image">
@@ -45,7 +45,7 @@
         </div>
         <% } else { %>
         <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge">本篇</div>
+            <div class="article-badge left-badge"><%= __('curr') %></div>
             <div class="card">
                 <a href="<%- url_for(page.path) %>">
                     <div class="card-image">
@@ -89,7 +89,7 @@
         <% } %>
         <% if (page.next) { %>
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge">下一篇</div>
+            <div class="article-badge right-badge"><%= __('next') %></div>
             <div class="card">
                 <a href="<%- url_for(page.next.path) %>">
                     <div class="card-image">
@@ -132,7 +132,7 @@
         </div>
         <% } else { %>
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge">本篇</div>
+            <div class="article-badge right-badge"><%= __('curr') %></div>
             <div class="card">
                 <a href="<%- url_for(page.path) %>">
                     <div class="card-image">

@@ -1,12 +1,10 @@
-
-# html lang
-language: en
-
 # main menu navigation
 menu:
-  首页: /
-  标签: /tags
-  归档: /archives
+  Index: /
+  Tags: /tags
+  Archives: /archives
+
+dream: The best preparation for tomorrow is doing your best today.
 
 # Miscelaneous
 favicon: /favicon.png

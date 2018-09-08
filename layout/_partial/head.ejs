@@ -9,22 +9,10 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    <%
-        var pageTitle = page.title || config.subtitle || '';
-        if (is_archive()) pageTitle = '归档';
-        if (is_tag()) pageTitle = '标签: ' + page.tag;
-        if (is_category()) pageTitle = '分类: ' + page.category;
-        if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
-        if (is_year()) pageTitle += ': ' + page.year;
-        pageTitle += config.title;
-    %>
-
-    <title><%= pageTitle %></title>
+    <title><%= config.title %></title>
     <link rel="icon" type="image/png" href="<%= theme.favicon %>">
 
     <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
-        <!-- stylesheets list from theme config.yml -->
         <% theme.stylesheets.forEach(function(url) { %>
         <link rel="stylesheet" href="<%= url %>">
         <% }); %>

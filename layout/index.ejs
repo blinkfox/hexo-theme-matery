@@ -1,20 +1,14 @@
 <main class="content">
 
+    <% if (theme.dream !== undefined && theme.dream.length > 0) { %>
     <div class="container notice">
         <div class="card">
             <div class="card-content">
-                <i class="fa fa-volume-up fa-lg fa-fw bf-text-color"></i>
-                <% if (theme.dream !== undefined && theme.dream.length > 0) { %>
-                    <%= theme.dream %>
-                <% } else { %>
-                    梦想面前做好自信的自己，自信可以改变未来。
-                    每一朵花都有开放的理由，你要始终坚信， 你就是你，一个独一无二的你，任何人都无法替代，不要因为别人的否定就轻易放弃，
-                    活在别人的世界里是一种悲哀，你要活出自己的本色。只要心在，梦就在，成功之前总是会遭受很多的磨砺， 但是只要坚持做好手边的事，
-                    自然会有意外不到的收获。
-                <% } %>
+                <i class="fa fa-volume-up fa-lg fa-fw bf-text-color"></i><%= theme.dream %>
             </div>
         </div>
     </div>
+    <% } %>
 
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
