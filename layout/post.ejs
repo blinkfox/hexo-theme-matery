@@ -7,7 +7,7 @@
                 <% if (page.tags && page.tags.length) { %>
                 <div class="article-tag">
                     <% page.tags.each(function(tag) { %>
-                    <a href="<%- url_for(tag.path) %>" target="_blank">
+                    <a href="<%- url_for('/tags/#' + tag.name) %>" target="_blank">
                         <span class="chip bf-color"><%= tag.name %></span>
                     </a>
                     <% }); %>

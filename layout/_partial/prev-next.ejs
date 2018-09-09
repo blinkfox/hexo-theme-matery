@@ -1,3 +1,21 @@
+<%
+var hashCode = function(str) {
+    if (!str && str.length === 0) {
+        return 0;
+    }
+
+    var hash = 0;
+    for (var i = 0, len = str.length; i < len; i++) {
+        hash = ((hash << 5) - hash) + str.charCodeAt(i);
+        hash |= 0;
+    }
+    return hash;
+};
+
+var featureimg = '/medias/featureimages/0.jpg';
+var featureImages = theme.featureImages;
+%>
+
 <article id="articles" class="container prev-next articles">
     <div class="row article-row">
         <% if (page.prev) { %>
@@ -9,13 +27,18 @@
                         <% if (page.prev.img) { %>
                         <img src="<%= page.prev.img %>" class="responsive-img" alt="<%- page.prev.title %>">
                         <% } else { %>
-                        <img src="<%= theme.featureimg %>" class="responsive-img" alt="<%- page.prev.title %>">
+                        <%
+                            var len = featureImages.length;
+                            var num = Math.abs(hashCode(page.prev.title) % len);
+                            featureimg = featureImages[num];
+                        %>
+                        <img src="<%= featureimg %>" class="responsive-img" alt="<%- page.prev.title %>">
                         <% } %>
                         <span class="card-title"><%- page.prev.title %></span>
                     </div>
                     <div class="card-content article-content">
                         <div class="summary">
-                            <%- page.prev.content.replace(/<[^<>]+?>/g, '').substring(0, 80) %>
+                            <%- strip_html(page.prev.content).substring(0, 120) %>
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
@@ -52,13 +75,18 @@
                         <% if (page.img) { %>
                         <img src="<%= page.img %>" class="responsive-img" alt="<%- page.title %>">
                         <% } else { %>
-                        <img src="<%= theme.featureimg %>" class="responsive-img" alt="<%- page.title %>">
+                        <%
+                            var len = featureImages.length;
+                            var num = Math.abs(hashCode(page.title) % len);
+                            featureimg = featureImages[num];
+                        %>
+                        <img src="<%= featureimg %>" class="responsive-img" alt="<%- page.title %>">
                         <% } %>
                         <span class="card-title"><%- page.title %></span>
                     </div>
 
                     <div class="card-content article-content">
-                        <div class="summary"><%- page.content.replace(/<[^<>]+?>/g, '').substring(0, 80) %></div>
+                        <div class="summary"><%- strip_html(page.content).substring(0, 120) %></div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-calendar fa-fw"></i><%= date(page.date, config.date_format) %>
@@ -96,13 +124,18 @@
                         <% if (page.next.img) { %>
                         <img src="<%= page.next.img %>" class="responsive-img" alt="<%- page.next.title %>">
                         <% } else { %>
-                        <img src="<%= theme.featureimg %>" class="responsive-img" alt="<%- page.next.title %>">
+                        <%
+                            var len = featureImages.length;
+                            var num = Math.abs(hashCode(page.next.title) % len);
+                            featureimg = featureImages[num];
+                        %>
+                        <img src="<%= featureimg %>" class="responsive-img" alt="<%- page.next.title %>">
                         <% } %>
                         <span class="card-title"><%- page.next.title %></span>
                     </div>
                     <div class="card-content article-content">
                         <div class="summary">
-                            <%- page.next.content.replace(/<[^<>]+?>/g, '').substring(0, 80) %>
+                            <%- strip_html(page.next.content).substring(0, 120) %>
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
@@ -139,13 +172,18 @@
                         <% if (page.img) { %>
                         <img src="<%= page.img %>" class="responsive-img" alt="<%- page.title %>">
                         <% } else { %>
-                        <img src="<%= theme.featureimg %>" class="responsive-img" alt="<%- page.title %>">
+                        <%
+                            var len = featureImages.length;
+                            var num = Math.abs(hashCode(page.title) % len);
+                            featureimg = featureImages[num];
+                        %>
+                        <img src="<%= featureimg %>" class="responsive-img" alt="<%- page.title %>">
                         <% } %>
                         <span class="card-title"><%- page.title %></span>
                     </div>
 
                     <div class="card-content article-content">
-                        <div class="summary"><%- page.content.replace(/<[^<>]+?>/g, '').substring(0, 80) %></div>
+                        <div class="summary"><%- strip_html(page.content).substring(0, 120) %></div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-calendar fa-fw"></i><%= date(page.date, config.date_format) %>

@@ -7,6 +7,21 @@
         </div>
         <div >
 
+        <%
+            var hashCode = function(str) {
+                if (!str && str.length === 0) {
+                    return 0;
+                }
+            
+                var hash = 0;
+                for (var i = 0, len = str.length; i < len; i++) {
+                    hash = ((hash << 5) - hash) + str.charCodeAt(i);
+                    hash |= 0;
+                }
+                return hash;
+            };
+        %>
+
         <article>
             <div class="row tags-posts">
                 <% site.posts.sort('date').reverse().forEach(post => { %>
@@ -24,9 +39,14 @@
                         <a href="<%- url_for(post.path) %>">
                             <div class="card-image tag-image">
                                 <% if (post.img) { %>
-                                <img src="<%= post.img %>">
+                                <img src="<%= post.img %>" class="responsive-img" alt="<%- post.title %>">
                                 <% } else { %>
-                                <img src="<%= theme.featureimg %>">
+                                <%
+                                    var len = theme.featureImages.length;
+                                    var num = Math.abs(hashCode(post.title) % len);
+                                    var featureimg = theme.featureImages[num];
+                                %>
+                                <img src="<%= featureimg %>" class="responsive-img" alt="<%- post.title %>">
                                 <% } %>
                                 <span class="card-title"><%- post.title %></span>
                             </div>
