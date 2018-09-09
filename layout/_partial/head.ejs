@@ -12,7 +12,7 @@
     <title><%= config.title %></title>
     <link rel="icon" type="image/png" href="<%= theme.favicon %>">
 
-    <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
+    <% if (theme.stylesheets && theme.stylesheets.length > 0) { %>
         <% theme.stylesheets.forEach(function(url) { %>
         <link rel="stylesheet" href="<%= url %>">
         <% }); %>

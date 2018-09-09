@@ -4,22 +4,3 @@ prev: 上一篇
 next: 下一篇
 search: 搜索
 searchTip: 请输入搜索的关键字
-categories: 分类
-tags: 标签
-tagcloud: 标签云
-tweets: 推文
-comment: 留言
-archive_a: 归档
-archive_b: 归档：%s
-page: 第 %d 页
-recent_posts: 最新文章
-about_me: 关于我
-contact_me: 联系我
-date_format: YYYY-MM-DD
-newer: Newer
-older: Older
-share: Share
-powered_by: Powered by
-rss_feed: RSS Feed
-category: Category
-tag: Tag
