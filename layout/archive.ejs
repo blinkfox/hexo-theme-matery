@@ -56,14 +56,18 @@ yearArr.forEach(function(year) {
         <div class="cd-timeline-block" data-aos="fade-up">
             <div class="cd-timeline-img cd-picture">
                 <% if (post.img) { %>
-                <img src="<%= post.img %>" class="responsive-img" alt="<%- post.title %>">
+                <div class="img-item" data-src="<%= post.img %>">
+                    <img src="<%= post.img %>" class="responsive-img" alt="<%- post.title %>"/>
+                </div>
                 <% } else { %>
                 <%
                     var len = theme.featureImages.length;
                     var num = Math.abs(hashCode(post.title) % len);
                     var featureimg = theme.featureImages[num];
                 %>
-                <img src="<%= featureimg %>" class="responsive-img" alt="<%- post.title %>">
+                <div class="img-item" data-src="<%= featureimg %>">
+                    <img src="<%= featureimg %>" class="responsive-img thumbnail-img" alt="<%- post.title %>"/>
+                </div>
                 <% } %>
             </div>
             <div class="cd-timeline-content">
@@ -78,7 +82,7 @@ yearArr.forEach(function(year) {
                     </a>
                     <% }); %>
                     <% } %>
-                    <span class="cd-date"><%= post.date.format(__('date_format')) %></span>
+                    <span class="cd-date"><%= date(post.date, config.date_format) %></span>
                 </div>
                 
             </div>

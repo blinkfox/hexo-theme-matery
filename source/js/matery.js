@@ -21,7 +21,7 @@ function articleInit() {
         var imgPath = $(this).attr('src');
         $(this).wrap('<div class="img-item" data-src="' + imgPath + '"></div>');
     });
-    $('#articleContent').lightGallery({
+    $('#articleContent, #cd-timeline').lightGallery({
         selector: '.img-item'
     });
 }
