@@ -1,0 +1,11 @@
+<link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    <% if (config.language && config.language.indexOf('zh') >= 0) { %>
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    <% } else { %>
+    <div class="social-share" data-disabled="qzone, qq, weibo, douban"></div>
+    <% } %>
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>

@@ -528,27 +528,24 @@ article .article-tags .chip {
 }
 
 #artDetail .reprint {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+#artDetail .reprint .reprint-tip {
+    margin-right: 3px;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
 #artDetail .reprint a {
+    font-size: 1.1rem;
     color: #42b983;
     font-weight: 500;
 }
 
-#artDetail .article-share {
-    margin-top: 10px;
-    padding-bottom: 20px;
-}
-
-#artDetail .article-share .jt-share {
-    margin-top: 5px;
-}
-
 #articleContent p {
     margin: 2 2 10px;
-    /* text-indent: 2.2rem; */
+    font-size: 1.1rem;
     line-height: 1.78rem;
 }
 
@@ -607,6 +604,17 @@ table tr:nth-child(2n), thead {
 
 #articleContent table td {
     min-width: 80px;
+}
+
+#article-share .social-share {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+    #article-share .social-share a {
+        margin-right: 15px !important;
+    }
 }
 
 #tags .tag-chips {
