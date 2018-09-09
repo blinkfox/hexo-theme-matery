@@ -47,11 +47,11 @@ yearArr.forEach(function(year) {
 <main class="content">    
     <div id="cd-timeline" class="container">
         <% Object.keys(archivesList).reverse().forEach(function(year){  %>
-        <div class="cd-timeline-img year bf-color">
+        <div class="cd-timeline-img year bg-color">
             <span><%= year %></span>
         </div>
         <% Object.keys(archivesList[year]).forEach(function(month, abc){  %>
-        <div class="cd-timeline-img month bf-color">
+        <div class="cd-timeline-img month bg-color">
             <span><%= month %></span>
         </div>
         <% archivesList[year][month].map(function(post){  %>
@@ -80,7 +80,7 @@ yearArr.forEach(function(year) {
                     <% if(post.tags && post.tags.length) { %>
                     <% post.tags.forEach(tag => { %>
                     <a href="<%- url_for('/tags/#' + tag.name) %>" target="_blank">
-                        <span class="tag bf-color"><%= tag.name %></span>
+                        <span class="tag bg-color"><%= tag.name %></span>
                     </a>
                     <% }); %>
                     <% } %>

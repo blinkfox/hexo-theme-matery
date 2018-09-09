@@ -147,73 +147,12 @@ mark {
     margin-bottom: 0px;
 }
 
-.bf-color {
-    background-color: #3f51b5 !important;
-}
-
-.bf-text-color {
-    color: #3f51b5 !important;
-}
-
-.bf-text-gray {
-    color: #777 !important;
-}
-
-.bf-link {
-    color: #3f51b5 !important;
-}
-
-.modal.bottom-sheet {
-    max-height: 65%;
-}
-
-/*各主题背景颜色和文字颜色样式*/
-.bf-blue {
-    background-color: #3f51b5 !important;
-}
-
-.bf-text-blue {
-    color: #3f51b5 !important;
-}
-
-.bf-pink {
-    background-color: #e91e63 !important;
-}
-
-.bf-text-pink {
-    color: #e91e63 !important;
-}
-
-.bf-red {
-    background-color: #F44336 !important;
-}
-
-.bf-text-red {
-    color: #F44336 !important;
-}
-
-.bf-orange {
-    background-color: #ff9800 !important;
-}
-
-.bf-text-orange {
-    color: #ff9800 !important;
-}
-
-.bf-green {
+.bg-color {
     background-color: #0f9d58 !important;
 }
 
-.bf-text-green {
+.text-color {
     color: #0f9d58 !important;
-}
-
-.bf-purple {
-    background-color: #9c27b0 !important;
-}
-
-.bf-text-purple {
-    color: #9c27b0 !important;
 }
 
 /*头部导航栏样式*/
@@ -333,12 +272,11 @@ header .go-back i {
 }
 
 /* 背景图效果. */
-
 .bg-cover {
     position: relative;
     display: flex;
     align-items: center;
-    height: 60vh;
+    height: 55vh;
     margin: 0;
     padding: 0;
     margin-top: -64px;

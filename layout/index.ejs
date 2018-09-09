@@ -6,7 +6,7 @@
     <div class="container notice">
         <div class="card">
             <div class="card-content">
-                <i class="fa fa-volume-up fa-lg fa-fw bf-text-color"></i><%= theme.dream %>
+                <i class="fa fa-volume-up fa-lg fa-fw text-color"></i><%= theme.dream %>
             </div>
         </div>
     </div>
@@ -75,7 +75,7 @@
                         <div class="card-action article-tags">
                             <% post.tags.forEach(tag => { %>
                             <a href="<%- url_for('/tags/#' + tag.name) %>" target="_blank">
-                                <span class="chip bf-color"><%= tag.name %></span>
+                                <span class="chip bg-color"><%= tag.name %></span>
                             </a>
                             <% }); %>
                         </div>
