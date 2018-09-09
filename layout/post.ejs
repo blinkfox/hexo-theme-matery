@@ -1,9 +1,11 @@
+<%- partial('_partial/post-cover', {pageType: 'post'}) %>
+
 <main class="content">
 
     <!-- 文章内容详情 -->
     <div id="artDetail" class="container">
         <div class="card">
-            <div class="card-content">
+            <div class="card-content article-info">
                 <% if (page.tags && page.tags.length) { %>
                 <div class="article-tag">
                     <% page.tags.each(function(tag) { %>
@@ -16,14 +18,6 @@
                 <div class="author-info">
                     <span>
                         <i class="fa fa-calendar fa-fw"></i><%- date(page.date, 'YYYY-MM-DD') %>
-                    </span>
-                    <span>
-                        <i class="fa fa-user fa-fw"></i>
-                        <% if(page.author && page.author.length > 0) { %>
-                            <%= page.author %>
-                        <% } else { %>
-                            <%= config.author %>
-                        <% } %>
                     </span>
                 </div>
             </div>

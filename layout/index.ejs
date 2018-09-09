@@ -1,6 +1,8 @@
+<%- partial('_partial/bg-cover') %>
+
 <main class="content">
 
-    <% if (theme.dream !== undefined && theme.dream.length > 0) { %>
+    <% if (theme.dream && theme.dream.length > 0) { %>
     <div class="container notice">
         <div class="card">
             <div class="card-content">
@@ -22,7 +24,7 @@
                 hash |= 0;
             }
             return hash;
-        }
+        };
     %>
 
     <!-- 所有文章卡片 -->
