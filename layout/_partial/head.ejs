@@ -12,11 +12,12 @@
     <title><%= config.title %></title>
     <link rel="icon" type="image/png" href="<%= theme.favicon %>">
 
-    <% if (theme.stylesheets && theme.stylesheets.length > 0) { %>
-        <% theme.stylesheets.forEach(function(url) { %>
-        <link rel="stylesheet" href="<%= url %>">
-        <% }); %>
-    <% } %>
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
 </head>

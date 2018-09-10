@@ -17,6 +17,7 @@
 @media only screen and (min-width: 993px) {
     .container {
         width: 80%;
+        max-width: 1125px;
     }
 }
 
@@ -292,19 +293,19 @@ header .go-back i {
 }
 
 .bg-cover:after {
-    background: rgba(101, 47, 142, 0.78);
-    background: linear-gradient(45deg, rgba(101, 47, 142, 0.78) 0%, rgba(125, 46, 185, 0.45) 100%);
-    background: -moz-linear-gradient(135deg, rgba(101, 47, 142, 0.78) 0%, rgba(125, 46, 185, 0.45) 100%);
-    background: -webkit-linear-gradient(135deg, rgba(101, 47, 142, 0.78) 0%, rgba(125, 46, 185, 0.45) 100%);
-    /* background: -webkit-linear-gradient(135deg, rgba(239,83,80, 0.88) 0%, rgba(244,67,54, 0.45) 100%); */
+    background: rgba(101, 47, 142, 0.75);
+    background: linear-gradient(45deg, rgba(101, 47, 142, 0.75) 0%, rgba(125, 46, 185, 0.45) 100%);
+    background: -moz-linear-gradient(135deg, rgba(101, 47, 142, 0.75) 0%, rgba(125, 46, 185, 0.45) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(101, 47, 142, 0.75) 0%, rgba(125, 46, 185, 0.45) 100%);
+    /* background: -webkit-linear-gradient(135deg, rgba(239,83,80, 0.70) 0%, rgba(244,67,54, 0.4) 100%); */
 }
 
 .post-cover:after {
-    background: rgba(101, 47, 142, 0.2);
-    background: linear-gradient(45deg, rgba(101, 47, 142, 0.2) 0%, rgba(125, 46, 185, 0.15) 100%);
-    background: -moz-linear-gradient(135deg, rgba(101, 47, 142, 0.2) 0%, rgba(125, 46, 185, 0.15) 100%);
-    background: -webkit-linear-gradient(135deg, rgba(101, 47, 142, 0.2) 0%, rgba(125, 46, 185, 0.15) 100%);
-    /* background: -webkit-linear-gradient(135deg, rgba(239,83,80, 0.88) 0%, rgba(244,67,54, 0.45) 100%); */
+    background: rgba(101, 47, 142, 0.8);
+    background: linear-gradient(45deg, rgba(101, 47, 142, 0.8) 0%, rgba(125, 46, 185, 0.6) 100%);
+    background: -moz-linear-gradient(135deg, rgba(101, 47, 142, 0.8) 0%, rgba(125, 46, 185, 0.6) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(101, 47, 142, 0.8) 0%, rgba(125, 46, 185, 0.6) 100%);
+    /* background: -webkit-linear-gradient(135deg, rgba(239,83,80, 0.55) 0%, rgba(244,67,54, 0.45) 100%); */
 }
 
 .bg-cover:before, .bg-cover:after {
@@ -338,11 +339,18 @@ header .go-back i {
 }
 
 .bg-cover .post-title {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
 }
 
 .notice {
     margin-top: -40px;
+}
+
+@media only screen and (min-width: 1418px) {
+    .notice {
+        margin-top: -40px;
+        padding: 0 0.75rem;
+    }
 }
 
 .settings-content {
