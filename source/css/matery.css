@@ -541,19 +541,19 @@ article .article-tags .chip {
 
 #artDetail .reprint .reprint-tip {
     margin-right: 3px;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 500;
 }
 
 #artDetail .reprint a {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: #42b983;
     font-weight: 500;
 }
 
 #articleContent p {
     margin: 2 2 10px;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     line-height: 1.78rem;
 }
 

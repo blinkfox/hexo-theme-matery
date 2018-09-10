@@ -4,11 +4,14 @@ menu:
   Tags: /tags
   Archives: /archives
 
+# index page dream text
 dream: The best preparation for tomorrow is doing your best today.
 
 # Miscelaneous
 favicon: /favicon.png
 logo: /medias/logo.png
+
+# posts feature images
 featureImages: 
 - /medias/featureimages/0.jpg
 - /medias/featureimages/1.jpg
