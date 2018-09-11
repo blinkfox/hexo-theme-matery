@@ -1,6 +1,6 @@
 # hexo-theme-matery
 
-[![HitCount](http://hits.dwyl.io/blinkfox/hexo-theme-matery.svg)](http://hits.dwyl.io/blinkfox/hexo-theme-matery) [![GitHub issues](https://img.shields.io/github/issues/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/issues) [![GitHub license](https://img.shields.io/github/license/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/blob/master/LICENSE) [![GitHub forks](https://img.shields.io/github/forks/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/network) [![GitHub stars](https://img.shields.io/github/stars/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/stargazers)
+[![HitCount](http://hits.dwyl.io/blinkfox/hexo-theme-matery.svg)](http://hits.dwyl.io/blinkfox/hexo-theme-matery) [![GitHub issues](https://img.shields.io/github/issues/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/issues) [![GitHub license](https://img.shields.io/github/license/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/blob/master/LICENSE) [![Hexo Version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io) [![GitHub forks](https://img.shields.io/github/forks/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/network) [![GitHub stars](https://img.shields.io/github/stars/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/stargazers)
 
 > 这是一个采用`Material Design`和响应式设计的 Hexo 博客主题。
 
@@ -83,6 +83,49 @@ search:
   field: post
 ```
 
+### 修改社交链接
+
+在主题文件的`/layout/_partial/footer.ejs`和`/layout/_partial/mobile-nav.ejs`文件中，你可以找到`social-link`的内容，可以在其中添加你需要的链接地址，增加内容如：
+
+```html
+<a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github fa-lg"></i>
+</a>
+```
+
+其中，社交图标（如：`fa-github`）你可以在[Font Awesome](https://fontawesome.com/icons)中搜索找到。以下是常用社交图标的标识，供你参考：
+
+- Facebook: fa-facebook
+- Twitter: fa-twitter
+- Google-plus: fa-google-plus
+- Linkedin: fa-linkedin
+- Tumblr: fa-tumblr
+- Medium: fa-medium
+- Slack: fa-slack
+- 新浪微博: fa-weibo
+- 微信: fa-wechat
+- QQ: fa-qq
+
+> **注意**: 本主题中使用的`Font Awesome`版本为`4.5.0`。
+
+## 文章Front-matter示例
+
+以下为文章`Front-matter`的示例，所有内容均为**非必填**的。但是，仍然建议至少填写`title`的值，当然最好都填写上这些文章信息。
+
+```yml
+---
+title: typora-vue-theme主题介绍
+date: 2018-09-07 09:25:00
+author: 赵奇
+img: /source/images/xxx.jpg # 或者:http://xxx.com/xxx.jpg
+tags:
+  - Typora
+  - Markdown
+---
+```
+
+> **注意**: 如果`img`属性不填写的话，文章特色图会根据文章标题的`hashcode`的值取余，然后选取主题中对应的特色图片，从而达到让所有文章都的特色图**各有特色**。
+
 ## 效果截图
 
 ### 首页
@@ -110,3 +153,56 @@ search:
 ### 归档页
 
 ![归档](http://static.blinkfox.com/hexo-matery-archive.png)
+
+## 自定制修改
+
+在本主题的`_config.yml`中可以修改部分自定义信息，有以下几个部分：
+
+- 菜单
+- 首页的励志名言
+- `favicon` 和 `Logo`
+- 默认特色图的集合。当文章没有设置特色图时，本主题会根据文章标题的`hashcode`值取余，来选择展示对应的特色图
+
+**我认为个人博客应该都有自己的风格和特色**。如果本主题中的诸多功能和主题色彩你不满意，可以在主题中自定义修改，很多更自由的功能和细节点的修改难以在主题的`_config.yml`中完成，需要修改源代码才来完成。以下列出了可能对你有用的地方：
+
+### 修改主题颜色
+
+在主题文件的`/source/css/matery.css`文件中，搜索`.bg-color`来修改背景颜色：
+
+```css
+/* 整体背景颜色，包括导航、移动端的导航、页尾、标签页等的背景颜色. */
+.bg-color {
+    background-color: #0f9d58 !important;
+}
+
+/* 和背景颜色相同的文字颜色，目前仅在首页一个地方使用到，你也可以将此样式应用到其他地方. */
+.text-color {
+    color: #0f9d58 !important;
+}
+
+/* 首页、标签页、归档页的 banner 蒙板层颜色，主题中是紫色和半透明的效果，你可以根据需要来修改蒙板颜色和透明度. */
+.bg-cover:after {
+    background: rgba(101, 47, 142, 0.75);
+    background: linear-gradient(45deg, rgba(101, 47, 142, 0.75) 0%, rgba(125, 46, 185, 0.45) 100%);
+    background: -moz-linear-gradient(135deg, rgba(101, 47, 142, 0.75) 0%, rgba(125, 46, 185, 0.45) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(101, 47, 142, 0.75) 0%, rgba(125, 46, 185, 0.45) 100%);
+}
+
+/* 文章页的 banner 蒙板层颜色，主题中是紫色和半透明的效果，你可以根据需要来修改蒙板颜色和透明度. */
+.post-cover:after {
+    background: rgba(101, 47, 142, 0.8);
+    background: linear-gradient(45deg, rgba(101, 47, 142, 0.8) 0%, rgba(125, 46, 185, 0.6) 100%);
+    background: -moz-linear-gradient(135deg, rgba(101, 47, 142, 0.8) 0%, rgba(125, 46, 185, 0.6) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(101, 47, 142, 0.8) 0%, rgba(125, 46, 185, 0.6) 100%);
+}
+```
+
+### 修改banner图和文章特色图
+
+你可以直接在`/source/medias/banner`文件夹中更换你喜欢的`banner`图片，主题代码中是每天动态切换一张，只需`7`张即可。如果你会`JavaScript`代码，可以修改成你自己喜欢切换逻辑，如：随机切换等，`banner`切换的代码位置在`/layout/_partial/bg-cover.ejs`文件的`<script></script>`代码中：
+
+```javascript
+$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+```
+
+在`/source/medias/featureimages`文件夹中默认有24张特色图片，你可以再增加或者减少，并需要在`_config.yml`做同步修改。

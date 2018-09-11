@@ -31,35 +31,41 @@ h1 {
     font-size: 1.85rem;
     font-weight: bold;
     line-height: 2.2rem;
+    margin-left: -7px; 
 }
 
 h2 {
     font-size: 1.65rem;
     font-weight: bold;
     line-height: 1.9rem;
+    margin-left: -6px;
 }
 
 h3 {
     font-size: 1.45rem;
     font-weight: bold;
     line-height: 1.7rem;
+    margin-left: -5px;
 }
 
 h4 {
     font-size: 1.25rem;
     font-weight: bold;
     line-height: 1.5rem;
+    margin-left: -5px;
 }
 
 h5 {
     font-size: 1.1rem;
     font-weight: bold;
     line-height: 1.4rem;
+    margin-left: -4px;
 }
 
 h6 {
     font-size: 1rem;
     line-height: 1.3rem;
+    margin-left: -4px;
 }
 
 p {
