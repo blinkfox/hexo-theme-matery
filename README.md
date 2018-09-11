@@ -7,6 +7,7 @@
 - 简单漂亮，文章内容美观易读
 - [Material Design](https://material.io/)设计
 - 响应式设计，在桌面端、平板、手机等设备上均能很好的展现
+- 每天动态切换`Banner`图片
 - 瀑布流式的博客文章列表(文章无特色图片时会有`24`张漂亮的图片代替)
 - 时间轴式的归档页
 
@@ -82,4 +83,28 @@ search:
 
 ## 效果截图
 
-待续...
+### 首页
+
+![首页](http://static.blinkfox.com/hexo-matery-index1.png)
+
+![首页文章列表](http://static.blinkfox.com/hexo-matery-index2.png)
+
+### 文章页
+
+![文章](http://static.blinkfox.com/hexo-matery-post1.png)
+
+![文章后续内容](http://static.blinkfox.com/hexo-matery-post2.png)
+
+### 文章内容图片
+
+![文章内容图片](http://static.blinkfox.com/hexo-matery-image.png)
+
+### 标签页
+
+![标签](http://static.blinkfox.com/hexo-matery-tags1.png)
+
+![选中的标签](http://static.blinkfox.com/hexo-matery-tags2.png)
+
+### 归档页
+
+![归档](http://static.blinkfox.com/hexo-matery-archive.png)

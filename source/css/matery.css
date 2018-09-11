@@ -376,7 +376,6 @@ article a {
 
 article .card {
     border-radius: 0.3rem;
-    /* box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important; */
 }
 
 article .card-image img {
@@ -469,6 +468,13 @@ article .article-tags .chip {
 /*文章详情样式*/
 #artDetail {
     margin-top: -60px;
+}
+
+@media only screen and (min-width: 1418px) {
+    #artDetail {
+        margin-top: -60px;
+        padding: 0 0.75rem;
+    }
 }
 
 #artDetail .card {
