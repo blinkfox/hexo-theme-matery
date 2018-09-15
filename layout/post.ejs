@@ -41,6 +41,10 @@
             </div>
         </div>
 
+        <% if (theme.gitment.enable) { %>
+        <%- partial('_partial/gitment') %>
+        <% } %>
+
         <%- partial('_partial/prev-next') %>
     </div>
 </main>

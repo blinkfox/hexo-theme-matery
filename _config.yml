@@ -11,6 +11,15 @@ dream: The best preparation for tomorrow is doing your best today.
 favicon: /favicon.png
 logo: /medias/logo.png
 
+# the gitment config
+gitment:
+  enable: false
+  owner: blinkfox
+  repo: blinkfox.github.io
+  oauth:
+    clientId:
+    clientSecret:
+
 # posts feature images
 featureImages: 
 - /medias/featureimages/0.jpg
