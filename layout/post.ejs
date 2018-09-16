@@ -45,6 +45,10 @@
         <%- partial('_partial/gitment') %>
         <% } %>
 
+        <% if (theme.disqus.enable) { %>
+        <%- partial('_partial/disqus') %>
+        <% } %>
+
         <%- partial('_partial/prev-next') %>
     </div>
 </main>

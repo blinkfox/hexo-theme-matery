@@ -20,6 +20,11 @@ gitment:
     clientId:
     clientSecret:
 
+# disqus config, default disabled
+disqus:
+  enable: false
+  shortname:
+
 # posts feature images
 featureImages: 
 - /medias/featureimages/0.jpg
