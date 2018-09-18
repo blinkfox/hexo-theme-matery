@@ -8,10 +8,11 @@
 
 - 简单漂亮，文章内容美观易读
 - [Material Design](https://material.io/)设计
-- 响应式设计，在桌面端、平板、手机等设备上均能很好的展现
+- 响应式设计，博客在桌面端、平板、手机等设备上均能很好的展现
 - 每天动态切换`Banner`图片
 - 瀑布流式的博客文章列表(文章无特色图片时会有`24`张漂亮的图片代替)
 - 时间轴式的归档页
+- [Gitment](https://imsun.github.io/gitment/)评论模块
 
 ## 下载
 
@@ -83,6 +84,26 @@ search:
   field: post
 ```
 
+### 中文链接转拼音
+
+如果你的文章名称是中文的，那么 Hexo 默认生成的永久链接也会有中文，这样不利于`SEO`，且`gitment`评论对中文链接也不支持。我们可以用[hexo-permalink-pinyin](https://github.com/viko16/hexo-permalink-pinyin) Hexo 插件使在生成文章时生成中文拼音的永久链接。
+
+安装命令如下：
+
+```bash
+npm i hexo-permalink-pinyin --save
+```
+
+在 Hexo 根目录下的`_config.yml`文件中，新增以下的配置项：
+
+```yml
+permalink_pinyin:
+  enable: true
+  separator: '-' # default: '-'
+```
+
+> **注**：除了此插件外，[hexo-abbrlink](https://github.com/rozbo/hexo-abbrlink)插件也可以生成非中文的链接。
+
 ### 修改社交链接
 
 在主题文件的`/layout/_partial/footer.ejs`和`/layout/_partial/mobile-nav.ejs`文件中，你可以找到`social-link`的内容，可以在其中添加你需要的链接地址，增加内容如：
@@ -124,7 +145,10 @@ tags:
 ---
 ```
 
-> **注意**: 如果`img`属性不填写的话，文章特色图会根据文章标题的`hashcode`的值取余，然后选取主题中对应的特色图片，从而达到让所有文章都的特色图**各有特色**。
+> **注意**:
+> 1. 如果`img`属性不填写的话，文章特色图会根据文章标题的`hashcode`的值取余，然后选取主题中对应的特色图片，从而达到让所有文章都的特色图**各有特色**。
+> 2. `date`的值尽量保证每篇文章是唯一的，因为本主题中`Gitment`识别`id`是通过`date`的值来作为唯一标识的。
+
 
 ## 效果截图
 
@@ -161,6 +185,7 @@ tags:
 - 菜单
 - 首页的励志名言
 - `favicon` 和 `Logo`
+- `Gitment`评论配置
 - 默认特色图的集合。当文章没有设置特色图时，本主题会根据文章标题的`hashcode`值取余，来选择展示对应的特色图
 
 **我认为个人博客应该都有自己的风格和特色**。如果本主题中的诸多功能和主题色彩你不满意，可以在主题中自定义修改，很多更自由的功能和细节点的修改难以在主题的`_config.yml`中完成，需要修改源代码才来完成。以下列出了可能对你有用的地方：

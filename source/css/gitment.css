@@ -1,0 +1,321 @@
+#gitment-content {
+    padding: 1px 20px;
+}
+
+.gitment-card {
+    margin-top: 20px;
+}
+
+.gitment-container {
+    color: #34495e !important;
+}
+
+.gitment-container .gitment-header-like-btn {
+    color: #ab47bc;
+}
+
+.gitment-container .gitment-header-like-btn svg {
+    fill: #ab47bc;
+}
+
+.gitment-header-container span {
+    color: #ab47bc;
+}
+
+.gitment-container .gitment-header-issue-link {
+    color: #ab47bc;
+    font-weight: 500;
+}
+
+.gitment-container a.gitment-header-issue-link,
+a.gitment-header-issue-link:visited {
+    color: #ab47bc;
+}
+
+.gitment-container .gitment-comment-main {
+    border: 1px solid #e1bee7;
+    border-radius: 5px;
+}
+
+.gitment-container .gitment-comment-main .gitment-comment-header {
+    background-color: #fff;
+}
+
+.gitment-container .gitment-comment-main .gitment-comment-like-btn {
+    color: #ab47bc;
+}
+
+.gitment-container .gitment-comment-main .gitment-comment-like-btn svg {
+    fill: #ab47bc;
+    stroke: #ab47bc;
+    stroke-width: 2px;
+}
+
+.gitment-editor-container .gitment-editor-avatar .gitment-github-icon {
+    background-color: #ab47bc;
+}
+
+.gitment-editor-container .gitment-editor-main {
+    border: 1px solid #e1bee7;
+    border-radius: 3px;
+}
+
+.gitment-editor-container .gitment-editor-header {
+    border-bottom: 0;
+    border-radius: 3px;
+}
+
+.gitment-editor-main::after,
+.gitment-comment-main::after {
+    border-right-color: #ab47bc !important;
+}
+
+.gitment-editor-main .gitment-editor-tabs {
+    margin-left: 0;
+    padding-left: 10px;
+    background: linear-gradient(60deg, #ab47bc, #7b1fa2);
+}
+
+.gitment-editor-main .gitment-editor-tabs .gitment-editor-tab {
+    color: #fff;
+    border-radius: 3px;
+}
+
+.gitment-editor-main .gitment-editor-tabs .gitment-selected {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 0.3s background-color 0.2s;
+    border: 0 !important;
+    color: #fff !important;
+    font-weight: 500;
+}
+
+.gitment-editor-main .gitment-editor-login {
+    margin-top: -40px;
+    color: #ccc;
+}
+
+.gitment-editor-main .gitment-editor-login .gitment-editor-login-link {
+    color: #fff;
+}
+
+.gitment-comments-init-btn:disabled,
+.gitment-editor-submit:disabled {
+    background-color: #DFDFDF !important;
+    color: #9F9F9F !important;
+    border-radius: 0.2rem;
+    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, 0.14), 0 3px 1px -2px rgba(153, 153, 153, 0.2), 0 1px 5px 0 rgba(153, 153, 153, 0.12) !important;
+}
+
+.gitment-editor-footer .gitment-editor-submit, .gitment-comments-init-btn {
+    color: #fff;
+    background-color: #9c27b0;
+    border-color: #9c27b0;
+    border-radius: 0.2rem;
+    box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
+}
+
+.gitment-footer-container {
+    color: #34495e !important;
+}
+
+.gitment-comments-pagination .gitment-comments-page-item {
+    display: inline-block;
+    cursor: pointer;
+    margin: 4px 5px;
+    padding: .25rem .5rem;
+    background-color: #9c27b0;
+    color: #fff;
+    border: 0;
+    border-radius: 2px !important;
+    box-shadow: 0 4px 5px 0 rgba(156, 39, 176, 0.14), 0 1px 10px 0 rgba(156, 39, 176, 0.12), 0 2px 4px -1px rgba(156, 39, 176, 0.2);
+}
+
+.gitment-footer-container a {
+    padding: 0 2px;
+    color: #ab47bc !important;
+    font-weight: 500;
+}
+
+.gitment-comment-main .gitment-markdown p {
+    color: #34495e;
+}
+
+.gitment-markdown p {
+    margin: 2px 2px 10px;
+    font-size: 1.05rem;
+    line-height: 1.78rem;
+}
+
+.gitment-markdown blockquote p {
+    text-indent: 0.2rem;
+}
+
+.gitment-markdown a {
+    padding: 0 2px;
+    color: #42b983;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.gitment-markdown img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.gitment-markdown ol li {
+    list-style-type: decimal;
+}
+
+.gitment-markdown ol,
+ul {
+    display: block;
+    padding-left: 2em;
+    word-spacing: 0.05rem;
+}
+
+.gitment-markdown ul li,
+ol li {
+    display: list-item;
+    line-height: 1.8rem;
+    font-size: 1rem;
+}
+
+.gitment-markdown ul li {
+    list-style-type: disc;
+}
+
+.gitment-markdown ul ul li {
+    list-style-type: circle;
+}
+
+.gitment-markdown table, th, td {
+    padding: 12px 13px;
+    border: 1px solid #dfe2e5;
+}
+
+.gitment-markdown table, th, td {
+    border: 0;
+}
+
+table tr:nth-child(2n), thead {
+    background-color: #fafafa;
+}
+
+.gitment-markdown table th {
+    background-color: #f2f2f2;
+    min-width: 80px;
+}
+
+.gitment-markdown table td {
+    min-width: 80px;
+}
+
+.gitment-markdown h1 {
+    font-size: 1.85rem;
+    font-weight: bold;
+    line-height: 2.2rem;
+}
+
+.gitment-markdown h2 {
+    font-size: 1.65rem;
+    font-weight: bold;
+    line-height: 1.9rem;
+}
+
+.gitment-markdown h3 {
+    font-size: 1.45rem;
+    font-weight: bold;
+    line-height: 1.7rem;
+}
+
+.gitment-markdown h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+}
+
+.gitment-markdown h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.4rem;
+}
+
+.gitment-markdown h6 {
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
+
+.gitment-markdown p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.gitment-markdown hr {
+    margin: 12px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+.gitment-markdown blockquote {
+    margin: 15px 0;
+    border-left: 5px solid #42b983;
+    padding: 1rem 0.8rem 1rem 0.8rem;
+    color: #666;
+    background-color: rgba(66,185,131,.1);
+}
+
+.gitment-markdown pre {
+    padding: 1.2em;
+    margin: .5em 0;
+    background: #272822;
+    overflow: auto;
+    border-radius: 0.3em;
+    tab-size: 4;
+}
+
+.gitment-markdown code {
+    padding: 1px 1px;
+    font-size: 0.92rem;
+    color: #e96900;
+    background-color: #f8f8f8;
+    border-radius: 2px;
+}
+
+.gitment-markdown pre code {
+    padding: 0;
+    color: #e8eaf6;
+    background-color: #272822;
+}
+
+.gitment-markdown pre[class*="language-"] {
+    padding: 1.2em;
+    margin: .5em 0;
+}
+
+.gitment-markdown code[class*="language-"],
+pre[class*="language-"] {
+    color: #e8eaf6;
+}
+
+.gitment-markdown b,
+strong {
+    font-weight: bold;
+}
+
+.gitment-markdown dfn {
+    font-style: italic;
+}
+
+.gitment-markdown small {
+    font-size: 85%;
+}
+
+.gitment-markdown cite {
+    font-style: normal;
+}
+
+.gitment-markdown mark {
+    background-color: #fcf8e3;
+    padding: .2em;
+}

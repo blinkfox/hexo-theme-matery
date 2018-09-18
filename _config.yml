@@ -11,6 +11,20 @@ dream: The best preparation for tomorrow is doing your best today.
 favicon: /favicon.png
 logo: /medias/logo.png
 
+# the gitment config，default disabled
+gitment:
+  enable: false
+  owner:
+  repo:
+  oauth:
+    clientId:
+    clientSecret:
+
+# disqus config, default disabled
+disqus:
+  enable: false
+  shortname:
+
 # posts feature images
 featureImages: 
 - /medias/featureimages/0.jpg
