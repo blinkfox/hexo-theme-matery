@@ -750,7 +750,7 @@ table tr:nth-child(2n), thead {
     width: 80px;
     height: 80px;
     margin: 10px 0 50px -20px;
-    padding: 22px 11px;
+    padding: 21px 10px;
     color: #fff;
     font-size: 1.8rem;
     font-weight: 600;
@@ -761,15 +761,40 @@ table tr:nth-child(2n), thead {
     width: 60px;
     height: 60px;
     margin: 10px 0 30px -10px;
-    padding: 17px 18px;
+    padding: 14px 16px;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 600;
 }
 
+#cd-timeline .day {
+    position: relative;
+    padding: 8px 10px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#cd-timeline .archive-img {
+    width: 100%;
+    height: 100px;
+    cursor: pointer;
+}
+
 #cd-timeline .article-title {
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#cd-timeline .article-title a {
     color: #34495e;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+}
+
+#cd-timeline .article-title .summary {
+    color: #999;
+    font-size: 1rem;
 }
 
 #cd-timeline .tags {
@@ -827,7 +852,7 @@ table tr:nth-child(2n), thead {
 
     #cd-timeline .month {
         margin: 10px 0 30px -30px;
-        padding: 17px 18px;
+        padding: 14px 16px;
     }
 }
 

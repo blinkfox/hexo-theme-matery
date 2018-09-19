@@ -50,32 +50,38 @@ yearArr.forEach(function(year) {
         <div class="cd-timeline-img year bg-color">
             <span><%= year %></span>
         </div>
-        <% Object.keys(archivesList[year]).forEach(function(month, abc){  %>
+        <% Object.keys(archivesList[year]).forEach(function(month){  %>
         <div class="cd-timeline-img month bg-color">
             <span><%= month %></span>
         </div>
         <% archivesList[year][month].map(function(post){  %>
         <div class="cd-timeline-block" data-aos="fade-up">
-            <div class="cd-timeline-img cd-picture">
-                <% if (post.img) { %>
-                <div class="img-item" data-src="<%= post.img %>">
-                    <img src="<%= post.img %>" class="responsive-img" alt="<%- post.title %>"/>
-                </div>
-                <% } else { %>
-                <%
-                    var len = theme.featureImages.length;
-                    var num = Math.abs(hashCode(post.title) % len);
-                    var featureimg = theme.featureImages[num];
-                %>
-                <div class="img-item" data-src="<%= featureimg %>">
-                    <img src="<%= featureimg %>" class="responsive-img thumbnail-img" alt="<%- post.title %>"/>
-                </div>
-                <% } %>
+            <div class="cd-timeline-img day bg-color">
+                <span><%= date(post.date, 'YYYY-MM-DD').substring(8, 10) %></span>
             </div>
             <div class="cd-timeline-content">
-                <a href="<%- config.root %><%- post.path %>">
-                    <div class="article-title"><%- post.title ? post.title : __('untitled') %></div>
-                </a>
+                <div class="row valign-wrapper">
+                    <div class="col m4 s4">
+                        <% if (post.img) { %>
+                        <div class="img-item" data-src="<%= post.img %>">
+                            <img src="<%= post.img %>" class="archive-img" alt="<%- post.title %>"/>
+                        </div>
+                        <% } else { %>
+                        <%
+                            var len = theme.featureImages.length;
+                            var num = Math.abs(hashCode(post.title) % len);
+                            var featureimg = theme.featureImages[num];
+                        %>
+                        <div class="img-item" data-src="<%= featureimg %>">
+                            <img src="<%= featureimg %>" class="archive-img thumbnail-img" alt="<%- post.title %>"/>
+                        </div>
+                        <% } %>
+                    </div>
+                    <div class="col m8 s8 article-title">
+                        <a href="<%- config.root %><%- post.path %>"><%- post.title ? post.title : __('untitled') %></a>
+                        <div class="summary"><%- strip_html(post.content).substring(0, 80) %></div>
+                    </div>
+                </div>
                 <div class="tags">
                     <% if(post.tags && post.tags.length) { %>
                     <% post.tags.forEach(tag => { %>
@@ -92,5 +98,28 @@ yearArr.forEach(function(year) {
         <% }); %>
         <% }); %>
         <% }); %>
+        <div class="cd-timeline-block" data-aos="fade-up">
+            <div class="cd-timeline-img cd-picture">
+                <div class="img-item" data-src="/medias/featureimages/0.jpg">
+                    <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="图片alt"/>
+                </div>
+            </div>
+            <div class="cd-timeline-content">
+                <div class="row valign-wrapper">
+                    <div class="col m4 s4">
+                        <img src="/medias/featureimages/0.jpg" alt="" class="archive-img">
+                    </div>
+                    <div class="col m8 s8 article-title" style="height: 100px;">
+                        这是一个很长很长标题这是一个很长很长标题这是一个很长很长标题这是一个长标题这是一个长标题这是一个
+                    </div>
+                </div>
+                <div class="tags">
+                    <a href="" target="_blank">
+                        <span class="tag bg-color">这是标签名称</span>
+                    </a>
+                    <span class="cd-date">2019-09-19</span>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
