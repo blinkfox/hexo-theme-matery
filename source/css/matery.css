@@ -798,8 +798,7 @@ table tr:nth-child(2n), thead {
 }
 
 #cd-timeline .tags {
-    /* float: right; */
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 #cd-timeline .tags .tag {
@@ -939,7 +938,7 @@ table tr:nth-child(2n), thead {
     margin-left: 60px;
     background: #ffffff;
     border-radius: 5px;
-    padding: 1em 0.5em 0.3em 0.8em;
+    padding: 1em 1em 0.5em 1em;
     box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
 }
 
@@ -1016,7 +1015,7 @@ table tr:nth-child(2n), thead {
 @media only screen and (min-width: 900px) {
     .cd-timeline-content {
         margin-left: 0;
-        padding: 1em;
+        padding: 0.4rem;
         width: 45%;
         margin-top: -6px;
     }
@@ -1030,14 +1029,6 @@ table tr:nth-child(2n), thead {
 
     .cd-timeline-content .cd-read-more {
         float: left;
-    }
-
-    .cd-timeline-content .cd-date {
-        position: absolute;
-        width: 100%;
-        left: 120%;
-        margin-top: -45px;
-        font-size: 1rem;
     }
 
     .cd-timeline-block:nth-child(even) .cd-timeline-content {
@@ -1054,13 +1045,6 @@ table tr:nth-child(2n), thead {
 
     .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
         float: right;
-    }
-
-    .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
-        left: auto;
-        right: 120%;
-        margin-top: -40px;
-        text-align: right;
     }
 
     .cssanimations .cd-timeline-content.is-hidden {
