@@ -20,7 +20,7 @@
 
 当你看到这里的时候，应该已经有一个自己的[Hexo](https://hexo.io/zh-cn/)博客了，如果还没有的话，不妨使用 Hexo 和[Markdown](https://www.appinn.com/markdown/)来写博客和文章。
 
-点击[这里](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/develop.zip)下载最新稳定版的代码，解压缩后，将`hexo-theme-matery`的文件夹复制到你 Hexo 的`themes`文件夹中即可。当然你也可以在你的`themes`文件夹下使用`Git clone`命令来下载:
+点击[这里](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master)下载`master`分支的最新稳定版的代码，解压缩后，将`hexo-theme-matery`的文件夹复制到你 Hexo 的`themes`文件夹中即可。当然你也可以在你的`themes`文件夹下使用`Git clone`命令来下载:
 
 ```bash
 git clone https://github.com/blinkfox/hexo-theme-matery.git

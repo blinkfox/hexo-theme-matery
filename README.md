@@ -19,7 +19,7 @@
 ## Download
 
 You should have a [Hexo](https://hexo.io/zh-cn/) blog when you see it here.If not,try to use the hexo and [Markdown](https://www.appinn.com/markdown/) to write your blog and post.
-Click[here](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/develop.zip)to download the last stable version of the code.After decompressing,copy the `hexo-theme-matery` folder
+Click[here](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master)to download master branch of the last stable version of the code.After decompressing,copy the `hexo-theme-matery` folder
 to your `themes` folder of your Hexo.Of course,you can uer `Git clone` to download in your `themes` folder.
 
 ```bash
