@@ -284,7 +284,7 @@ header .go-back i {
     position: relative;
     display: flex;
     align-items: center;
-    height: 65vh;
+    height: 60vh;
     padding: 0;
     margin-top: -64px;
     border: 0;
@@ -426,6 +426,16 @@ header .go-back i {
         margin-top: -40px;
         padding: 0 0.75rem;
     }
+}
+
+.archive-calender {
+    margin-top: -60px;
+    max-width: 820px;
+}
+
+#post-calendar {
+    width: 100%;
+    height:225px;
 }
 
 .settings-content {
