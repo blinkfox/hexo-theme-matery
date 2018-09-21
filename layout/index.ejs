@@ -2,11 +2,11 @@
 
 <main class="content">
 
-    <% if (theme.dream && theme.dream.length > 0) { %>
+    <% if (theme.dream.enable) { %>
     <div class="container notice">
         <div class="card">
             <div class="card-content">
-                <i class="fa fa-volume-up fa-lg fa-fw text-color"></i><%= theme.dream %>
+                <i class="fa fa-volume-up fa-lg fa-fw text-color"></i><%= theme.dream.text %>
             </div>
         </div>
     </div>

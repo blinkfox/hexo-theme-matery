@@ -4,8 +4,13 @@ menu:
   Tags: /tags
   Archives: /archives
 
-# index page dream text
-dream: The best preparation for tomorrow is doing your best today.
+# index page dream text,
+dream:
+  enable: true
+  text: The best preparation for tomorrow is doing your best today.
+
+# show post-calendar
+postCalendar: true
 
 # Miscelaneous
 favicon: /favicon.png
