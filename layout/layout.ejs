@@ -1,15 +1,24 @@
 <!DOCTYPE HTML>
-<html lang="<%=config.language%>">
+<html lang="<%= config.language %>">
 <head>
     <%- partial('_partial/head') %>
 </head>
 
 <body>
-    <%- partial('_partial/header') %>
-    <%- body %>
-    <%- partial('_partial/footer') %>
 
-    <%- partial('_partial/search') %>
-    <%- partial('_partial/back-top') %>
+<%- partial('_partial/header') %>
+<%- body %>
+<%- partial('_partial/footer') %>
+
+<%- partial('_partial/search') %>
+<%- partial('_partial/back-top') %>
+
+<script src="/libs/materialize/js/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+<script src="/js/search.js"></script>
 </body>
 </html>

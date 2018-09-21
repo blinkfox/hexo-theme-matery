@@ -13,18 +13,18 @@
     <% } %>
 
     <%
-        var hashCode = function(str) {
-            if (!str && str.length === 0) {
-                return 0;
-            }
+    var hashCode = function (str) {
+        if (!str && str.length === 0) {
+            return 0;
+        }
 
-            var hash = 0;
-            for (var i = 0, len = str.length; i < len; i++) {
-                hash = ((hash << 5) - hash) + str.charCodeAt(i);
-                hash |= 0;
-            }
-            return hash;
-        };
+        var hash = 0;
+        for (var i = 0, len = str.length; i < len; i++) {
+            hash = ((hash << 5) - hash) + str.charCodeAt(i);
+            hash |= 0;
+        }
+        return hash;
+    };
     %>
 
     <!-- 所有文章卡片 -->
@@ -38,7 +38,7 @@
                             <% if (post.img) { %>
                             <img src="<%= post.img %>" class="responsive-img" alt="<%- post.title %>">
                             <% } else { %>
-                                <%
+                            <%
                                 var featureimg = '/medias/featureimages/0.jpg';
                                 var featureImages = theme.featureImages;
                                 if (!featureImages || featureImages.length == 0) {
@@ -48,7 +48,7 @@
                                 var len = featureImages.length;
                                 var num = Math.abs(hashCode(post.title) % len);
                                 featureimg = featureImages[num];
-                                %>
+                            %>
                             <img src="<%- featureimg %>" class="responsive-img" alt="<%- post.title %>">
                             <% } %>
                             <span class="card-title"><%- post.title %></span>
@@ -63,9 +63,9 @@
                                 <span class="publish-author">
                                     <i class="fa fa-user fa-fw"></i>
                                     <% if(post.author && post.author.length > 0) { %>
-                                        <%= post.author %>
+                                    <%= post.author %>
                                     <% } else { %>
-                                        <%= config.author %>
+                                    <%= config.author %>
                                     <% } %>
                                 </span>
                             </div>
@@ -90,5 +90,5 @@
 </main>
 
 <% if (page.total > 1) { %>
-    <%- partial('_partial/paging') %>
+<%- partial('_partial/paging') %>
 <% } %>

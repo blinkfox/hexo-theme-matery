@@ -1,5 +1,5 @@
 <%
-var hashCode = function(str) {
+var hashCode = function (str) {
     if (!str && str.length === 0) {
         return 0;
     }
@@ -14,7 +14,7 @@ var hashCode = function(str) {
 
 var archivesList = {}, lastYear = null, yearArr = [];
 
-site.posts.sort('date').reverse().forEach(function(post) {
+site.posts.sort('date').reverse().forEach(function (post) {
     var year = post.date.year();
     if (lastYear == null || lastYear != year) {
         lastYear = year;
@@ -22,13 +22,13 @@ site.posts.sort('date').reverse().forEach(function(post) {
     }
 });
 
-yearArr.forEach(function(year) {
+yearArr.forEach(function (year) {
     if (archivesList[year] == undefined) {
         archivesList[year] = {};
     }
-    
+
     var monthPosts = {};
-    site.posts.sort('date').reverse().forEach(function(post) {
+    site.posts.sort('date').reverse().forEach(function (post) {
         if (year == post.date.year()) {
             var month = post.date.format('MM');
             if (monthPosts[month] == undefined) {
@@ -41,7 +41,6 @@ yearArr.forEach(function(year) {
     archivesList[year] = monthPosts;
 });
 %>
-
 <%- partial('_partial/bg-cover') %>
 
 <main class="content">
@@ -50,15 +49,15 @@ yearArr.forEach(function(year) {
     <% } %>
 
     <div id="cd-timeline" class="container">
-        <% Object.keys(archivesList).reverse().forEach(function(year){  %>
+        <% Object.keys(archivesList).reverse().forEach(function(year){ %>
         <div class="cd-timeline-img year bg-color">
             <span><%= year %></span>
         </div>
-        <% Object.keys(archivesList[year]).forEach(function(month){  %>
+        <% Object.keys(archivesList[year]).forEach(function(month){ %>
         <div class="cd-timeline-img month bg-color">
             <span><%= month %></span>
         </div>
-        <% archivesList[year][month].map(function(post){  %>
+        <% archivesList[year][month].map(function(post){ %>
         <div class="cd-timeline-block" data-aos="fade-up">
             <div class="cd-timeline-img day bg-color">
                 <span><%= date(post.date, 'YYYY-MM-DD').substring(8, 10) %></span>
@@ -82,7 +81,7 @@ yearArr.forEach(function(year) {
                         <% } %>
                     </div>
                     <div class="col m8 s8 article-title">
-                        <a href="<%- config.root %><%- post.path %>"><%- post.title ? post.title : __('untitled') %></a>
+                        <a href="<%- config.root %> <%- post.path %>"><%- post.title ? post.title : __('untitled') %></a>
                         <div class="summary"><%- strip_html(post.content).substring(0, 80) %></div>
                     </div>
                 </div>
@@ -96,7 +95,7 @@ yearArr.forEach(function(year) {
                     <% } %>
                     <span class="cd-date"><%= date(post.date, config.date_format) %></span>
                 </div>
-                
+
             </div>
         </div>
         <% }); %>

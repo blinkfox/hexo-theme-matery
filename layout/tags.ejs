@@ -3,18 +3,19 @@
 <main class="content">
     <div id="tags" class="container">
         <div class="tag-chips">
-            <% site.tags.map(function(tag) {  %>
-            <span class="chip center-align chip-default waves-effect waves-light" data-tagname="<%= tag.name %>"><%= tag.name %></span>
+            <% site.tags.map(function(tag) { %>
+            <span class="chip center-align chip-default waves-effect waves-light"
+                  data-tagname="<%= tag.name %>"><%= tag.name %></span>
             <% }); %>
         </div>
-        <div >
+        <div>
 
-        <%
-            var hashCode = function(str) {
+            <%
+            var hashCode = function (str) {
                 if (!str && str.length === 0) {
                     return 0;
                 }
-            
+
                 var hash = 0;
                 for (var i = 0, len = str.length; i < len; i++) {
                     hash = ((hash << 5) - hash) + str.charCodeAt(i);
@@ -22,56 +23,56 @@
                 }
                 return hash;
             };
-        %>
+            %>
 
-        <article>
-            <div class="row tags-posts">
-                <% site.posts.sort('date').reverse().forEach(post => { %>
-                <% 
-                    var tagArr = [];
-                    if (post.tags && post.tags.length > 0) {
-                        post.tags.forEach(tag => {
-                            tagArr.push(tag.name);
-                        });
-                    }
-                    var tags = tagArr.join(', ');
-                %>
-                <div class="article tag-post col s12 m6 l4" data-tags="<%- tags %>">
-                    <div class="card">
-                        <a href="<%- url_for(post.path) %>">
-                            <div class="card-image tag-image">
-                                <% if (post.img) { %>
-                                <img src="<%= post.img %>" class="responsive-img" alt="<%- post.title %>">
-                                <% } else { %>
-                                <%
-                                    var len = theme.featureImages.length;
-                                    var num = Math.abs(hashCode(post.title) % len);
-                                    var featureimg = theme.featureImages[num];
-                                %>
-                                <img src="<%= featureimg %>" class="responsive-img" alt="<%- post.title %>">
-                                <% } %>
-                                <span class="card-title"><%- post.title %></span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="publish-info">
+            <article>
+                <div class="row tags-posts">
+                    <% site.posts.sort('date').reverse().forEach(post => { %>
+                    <%
+                        var tagArr = [];
+                        if (post.tags && post.tags.length > 0) {
+                            post.tags.forEach(tag => {
+                                tagArr.push(tag.name);
+                            });
+                        }
+                        var tags = tagArr.join(', ');
+                    %>
+                    <div class="article tag-post col s12 m6 l4" data-tags="<%- tags %>">
+                        <div class="card">
+                            <a href="<%- url_for(post.path) %>">
+                                <div class="card-image tag-image">
+                                    <% if (post.img) { %>
+                                    <img src="<%= post.img %>" class="responsive-img" alt="<%- post.title %>">
+                                    <% } else { %>
+                                    <%
+                                        var len = theme.featureImages.length;
+                                        var num = Math.abs(hashCode(post.title) % len);
+                                        var featureimg = theme.featureImages[num];
+                                    %>
+                                    <img src="<%= featureimg %>" class="responsive-img" alt="<%- post.title %>">
+                                    <% } %>
+                                    <span class="card-title"><%- post.title %></span>
+                                </div>
+                            </a>
+                            <div class="card-content article-content">
+                                <div class="publish-info">
                                 <span class="publish-date">
                                     <i class="fa fa-calendar fa-fw"></i><%= date(post.date, config.date_format) %>
                                 </span>
-                                <span class="publish-author">
+                                    <span class="publish-author">
                                     <i class="fa fa-user fa-fw"></i>
-                                    <% if(post.author && post.author.length > 0) { %>
+                                        <% if(post.author && post.author.length > 0) { %>
                                         <%= post.author %>
-                                    <% } else { %>
+                                        <% } else { %>
                                         <%= config.author %>
-                                    <% } %>
-                                </span>
+                                        <% } %>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <% }); %>
                 </div>
-                <% }); %>
-            </div>
-        </article>
-    </div>
+            </article>
+        </div>
 </main>

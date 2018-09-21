@@ -2,7 +2,8 @@
     <div class="row">
         <div class="col s6 m4 l4">
             <% if (page.prev) { %>
-            <a href="<%- url_for(page.prev_link) %>" class="left btn-floating btn-large waves-effect waves-light bg-color">
+            <a href="<%- url_for(page.prev_link) %>"
+               class="left btn-floating btn-large waves-effect waves-light bg-color">
                 <i class="fa fa-angle-left"></i>
             </a>
             <% } else { %>
@@ -16,7 +17,8 @@
         </div>
         <div class="col s6 m4 l4">
             <% if (page.next) { %>
-            <a href="<%- url_for(page.next_link) %>" class="right btn-floating btn-large waves-effect waves-light bg-color">
+            <a href="<%- url_for(page.next_link) %>"
+               class="right btn-floating btn-large waves-effect waves-light bg-color">
                 <i class="fa fa-angle-right"></i>
             </a>
             <% } else { %>
