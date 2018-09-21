@@ -1027,7 +1027,7 @@ table tr:nth-child(2n), thead {
         margin-left: 0;
         padding: 0.4rem;
         width: 45%;
-        margin-top: -6px;
+        margin-top: -40px;
     }
 
     .cd-timeline-content::before {
