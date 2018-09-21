@@ -81,7 +81,7 @@ yearArr.forEach(function (year) {
                         <% } %>
                     </div>
                     <div class="col m8 s8 article-title">
-                        <a href="<%- config.root %> <%- post.path %>"><%- post.title ? post.title : __('untitled') %></a>
+                        <a href="<%- url_for(post.path) %>"><%- post.title ? post.title : __('untitled') %></a>
                         <div class="summary"><%- strip_html(post.content).substring(0, 80) %></div>
                     </div>
                 </div>
