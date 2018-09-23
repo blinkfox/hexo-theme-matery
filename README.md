@@ -9,7 +9,7 @@
 ## Feature
 
 - Simple and beautiful, and post is Beautiful and readable.
-- [Material Design](https://material.io/)design.
+- [Material Design](https://material.io/).
 - Responsive design,which can be displayed well on desktop, tablet, mobile phone, etc.
 - Changing 'banner' picture dynamically everday.
 - Blog posts list with waterflow(There will be 24 images if the articl dosn't have  featured pictures).
