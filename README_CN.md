@@ -16,6 +16,21 @@
 - 时间轴式的归档页
 - [Gitment](https://imsun.github.io/gitment/)和[Disqus](https://disqus.com/)评论模块
 
+## 后续开发计划
+
+- [ ] 重构标签页为**可分页**
+- [ ] 重构归档页为**可分页**
+- [ ] 增加分类页
+- [ ] 集成[Gitalk](https://gitalk.github.io/)
+- [ ] 右上角实现`fork me on github`
+- [ ] 添加`RSS`
+- [ ] 网站底部加上访问量等统计功能
+- [ ] 首页设计和添加置顶文章
+- [ ] 文章结束后增加**打赏**功能
+- [ ] 为博客添加萌萌的**宠物**或者**成长树**等
+
+> 欢迎贡献!
+
 ## 下载
 
 当你看到这里的时候，应该已经有一个自己的[Hexo](https://hexo.io/zh-cn/)博客了，如果还没有的话，不妨使用 Hexo 和[Markdown](https://www.appinn.com/markdown/)来写博客和文章。

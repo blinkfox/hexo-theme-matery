@@ -14,7 +14,22 @@
 - Changing 'banner' picture dynamically everday.
 - Blog posts list with waterflow(There will be 24 images if the articl dosn't have  featured pictures).
 - Archive page with timeline.
-- Comment module of Gitment and Disqus.
+- Comment module of [Gitment](https://imsun.github.io/gitment/) and [Disqus](https://disqus.com/).
+
+## Next development plans
+
+- [ ] Refactoring tags page as **paginable**
+- [ ] Refactoring Archives page as **paginable**
+- [ ] Add category page
+- [ ] Integrated [Gitalk](https://gitalk.github.io/) comment
+- [ ] Add `fork me on github` in the upper right corner
+- [ ] Add the `RSS` link
+- [ ] At the bottom of the site, add statistics such as traffic
+- [ ] design Index Page and support to add top posts
+- [ ] Add **rewards** function after the posts ends
+- [ ] Add a cute **pet** or **growth tree** for blogs, etc.
+
+> Welcome to contribute!
 
 ## Download
 
