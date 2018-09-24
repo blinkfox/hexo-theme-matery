@@ -719,6 +719,15 @@ table tr:nth-child(2n), thead {
     }
 }
 
+.tag-cloud-container {
+    margin-top: -60px;
+}
+
+#tagCloud {
+    height: 325px;
+    margin: 0 auto;
+}
+
 #tags .tag-chips {
     text-align: center;
     margin-top: 20px;
