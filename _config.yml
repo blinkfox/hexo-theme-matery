@@ -9,6 +9,11 @@ dream:
   enable: true
   text: The best preparation for tomorrow is doing your best today.
 
+# Whether to activate the tag cloud, the default is false,
+# it is recommended to activate the tag when there are many
+tagCloud:
+  enable: false
+
 # show post-calendar
 postCalendar: true
 
