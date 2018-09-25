@@ -88,7 +88,7 @@ yearArr.forEach(function (year) {
                 <div class="tags">
                     <% if(post.tags && post.tags.length) { %>
                     <% post.tags.forEach(tag => { %>
-                    <a href="<%- url_for('/tags/#' + tag.name) %>" target="_blank">
+                    <a href="<%- tag.permalink %>" target="_blank">
                         <span class="tag bg-color"><%= tag.name %></span>
                     </a>
                     <% }); %>

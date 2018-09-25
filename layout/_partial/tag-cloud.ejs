@@ -1,25 +1,43 @@
-<link rel="stylesheet" type="text/css" href="/libs/jqcloud/jqcloud.min.css">
+<%
+var colorArr = ['#F9EBEA', '#F5EEF8', '#D5F5E3', '#E8F8F5', '#FEF9E7',
+    '#F8F9F9', '#82E0AA', '#D7BDE2', '#A3E4D7', '#85C1E9', '#F8C471', '#F9E79F', '#FFF'];
+var colorCount = colorArr.length;
+var hashCode = function (str) {
+    if (!str && str.length === 0) {
+        return 0;
+    }
 
-<div class="container tag-cloud-container">
+    var hash = 0;
+    for (var i = 0, len = str.length; i < len; i++) {
+        hash = ((hash << 5) - hash) + str.charCodeAt(i);
+        hash |= 0;
+    }
+    return hash;
+};
+var i = 0;
+%>
+<div id="tags" class="container tag-tip-container">
     <div class="card">
-        <div id="tagCloud" class="card-content"></div>
+        <div class="card-content">
+            <div class="tag-title center-align">
+                博客标签
+            </div>
+            <div class="tag-chips">
+                <% site.tags.map(function(tag) { %>
+                <%
+                    i++
+                    var color = i >= colorCount ? colorArr[Math.abs(hashCode(tag.name) % colorCount)]
+                            : colorArr[i - 1];
+                    console.log(tag.permalink);
+                %>
+                <a href="<%- tag.permalink %>" title="<%- tag.name %>: <%- tag.length %>">
+                    <span class="chip center-align chip-default waves-effect waves-light"
+                          data-tagname="<%- tag.name %>" style="background-color: <%- color %>;"><%- tag.name %>
+                        <span class="tag-length"> <%- tag.length %></span>
+                    </span>
+                </a>
+                <% }); %>
+            </div>
+        </div>
     </div>
 </div>
-
-<script type="text/javascript" src="/libs/jqcloud/jqcloud.min.js"></script>
-<script type="text/javascript">
-    <%
-        let tagWords = '[';
-        var i = 0;
-        site.tags.map(function(tag) {
-            tagWords = (i === 0 ? tagWords + '{text: "' : tagWords + ', {text: "')
-                    + tag.name + '", weight: ' + tag.length + ', link: "' + tag.permalink + '"}';
-            ++i;
-        });
-        tagWords += ']';
-    %>
-
-    $('#tagCloud').jQCloud(<%- tagWords %>, {
-        autoResize: true
-    });
-</script>
