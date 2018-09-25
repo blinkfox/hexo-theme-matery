@@ -15,6 +15,7 @@ var hashCode = function (str) {
     return hash;
 };
 var i = 0;
+var isTag = page.hasOwnProperty('tag');
 %>
 <div id="tags" class="container tag-tip-container">
     <div class="card">
@@ -28,10 +29,9 @@ var i = 0;
                     i++
                     var color = i >= colorCount ? colorArr[Math.abs(hashCode(tag.name) % colorCount)]
                             : colorArr[i - 1];
-                    console.log(tag.permalink);
                 %>
                 <a href="<%- tag.permalink %>" title="<%- tag.name %>: <%- tag.length %>">
-                    <span class="chip center-align chip-default waves-effect waves-light"
+                    <span class="chip center-align <% if (isTag && tag.name == page.tag) { %> chip-active <% } else { %> chip-default <% } %> waves-effect waves-light"
                           data-tagname="<%- tag.name %>" style="background-color: <%- color %>;"><%- tag.name %>
                         <span class="tag-length"> <%- tag.length %></span>
                     </span>

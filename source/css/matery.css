@@ -752,8 +752,8 @@ table tr:nth-child(2n), thead {
 }
 
 #tags .chip-active {
-    color: #FFF;
-    background-color: #e91e63;
+    color: #FFF !important;
+    background-color: #e91e63 !important;
     box-shadow: 2px 2px 3px #AAA;
 }
 
@@ -773,10 +773,17 @@ table tr:nth-child(2n), thead {
 }
 
 .chip .tag-length {
-    color: #e91e63;
     margin-left: 5px;
     margin-right: -2px;
     font-size: 0.5rem;
+}
+
+.chip-default .tag-length {
+    color: #e91e63;
+}
+
+.chip-active .tag-length {
+    color: #fff;
 }
 
 /* archive page. */
