@@ -1,8 +1,8 @@
 # hexo-theme-matery
 
-[![HitCount](http://hits.dwyl.io/blinkfox/hexo-theme-matery.svg)](http://hits.dwyl.io/blinkfox/hexo-theme-matery) [![Download](https://img.shields.io/badge/downloads-master-green.svg)](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master) [![GitHub issues](https://img.shields.io/github/issues/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/issues) [![GitHub license](https://img.shields.io/github/license/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/blob/master/LICENSE) [![Hexo Version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io) [![GitHub forks](https://img.shields.io/github/forks/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/network) [![GitHub stars](https://img.shields.io/github/stars/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/stargazers)
+[![HitCount](http://hits.dwyl.io/blinkfox/hexo-theme-matery.svg)](http://hits.dwyl.io/blinkfox/hexo-theme-matery) [![GitHub issues](https://img.shields.io/github/issues/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/issues) [![GitHub license](https://img.shields.io/github/license/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/blob/master/LICENSE) [![Download](https://img.shields.io/badge/downloads-master-green.svg)](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master) [![Hexo Version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io) [![GitHub forks](https://img.shields.io/github/forks/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/network) [![GitHub stars](https://img.shields.io/github/stars/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/stargazers)
 
-[English Document](README.md)
+[English Document](README.md) | [演示示例](https://blinkfox.github.io/)
 
 > 这是一个采用`Material Design`和响应式设计的 Hexo 博客主题。
 
@@ -134,16 +134,16 @@ permalink_pinyin:
 
 其中，社交图标（如：`fa-github`）你可以在[Font Awesome](https://fontawesome.com/icons)中搜索找到。以下是常用社交图标的标识，供你参考：
 
-- Facebook: fa-facebook
-- Twitter: fa-twitter
-- Google-plus: fa-google-plus
-- Linkedin: fa-linkedin
-- Tumblr: fa-tumblr
-- Medium: fa-medium
-- Slack: fa-slack
-- 新浪微博: fa-weibo
-- 微信: fa-wechat
-- QQ: fa-qq
+- Facebook: `fa-facebook`
+- Twitter: `fa-twitter`
+- Google-plus: `fa-google-plus`
+- Linkedin: `fa-linkedin`
+- Tumblr: `fa-tumblr`
+- Medium: `fa-medium`
+- Slack: `fa-slack`
+- 新浪微博: `fa-weibo`
+- 微信: `fa-wechat`
+- QQ: `fa-qq`
 
 > **注意**: 本主题中使用的`Font Awesome`版本为`4.5.0`。
 
