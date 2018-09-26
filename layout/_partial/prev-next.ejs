@@ -57,9 +57,7 @@ var featureImages = theme.featureImages;
                     <% if(page.prev.tags && page.prev.tags.length) { %>
                     <div class="card-action article-tags">
                         <% page.prev.tags.forEach(tag => { %>
-                        <a href="<%- url_for('/tags/#' + tag.name) %>" target="_blank">
-                            <span class="chip bg-color"><%= tag.name %></span>
-                        </a>
+                        <a href="<%- tag.permalink %>"><span class="chip bg-color"><%= tag.name %></span></a>
                         <% }); %>
                     </div>
                     <% } %>
@@ -105,9 +103,7 @@ var featureImages = theme.featureImages;
                     <% if(page.tags && page.tags.length) { %>
                     <div class="card-action article-tags">
                         <% page.tags.forEach(tag => { %>
-                        <a href="<%- url_for('/tags/#' + tag.name) %>" target="_blank">
-                            <span class="chip bg-color"><%= tag.name %></span>
-                        </a>
+                        <a href="<%- tag.permalink %>"><span class="chip bg-color"><%= tag.name %></span></a>
                         <% }); %>
                     </div>
                     <% } %>
@@ -154,9 +150,7 @@ var featureImages = theme.featureImages;
                     <% if(page.next.tags && page.next.tags.length) { %>
                     <div class="card-action article-tags">
                         <% page.next.tags.forEach(tag => { %>
-                        <a href="<%- url_for('/tags/#' + tag.name) %>" target="_blank">
-                            <span class="chip bg-color"><%= tag.name %></span>
-                        </a>
+                        <a href="<%- tag.permalink %>"><span class="chip bg-color"><%= tag.name %></span></a>
                         <% }); %>
                     </div>
                     <% } %>
@@ -202,9 +196,7 @@ var featureImages = theme.featureImages;
                     <% if(page.tags && page.tags.length) { %>
                     <div class="card-action article-tags">
                         <% page.tags.forEach(tag => { %>
-                        <a href="<%- url_for('/tags/#' + tag.name) %>" target="_blank">
-                            <span class="chip bg-color"><%= tag.name %></span>
-                        </a>
+                        <a href="<%- tag.permalink %>"><span class="chip bg-color"><%= tag.name %></span></a>
                         <% }); %>
                     </div>
                     <% } %>
