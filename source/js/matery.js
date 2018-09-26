@@ -12,46 +12,6 @@ $(function () {
     };
     articleCardHover();
 
-    /**
-     * 根据标签切换文章.
-     */
-    let changeTagPostByTag = function (tag) {
-        $('#tags .chip-active').removeClass('chip-active').addClass('chip-default');
-        $('#tags .tag-chips span[data-tagname="' + tag + '"]').removeClass('chip-default').addClass('chip-active');
-
-        // 获取同样有该标签的帖子，并将其显示出来，其他帖子隐藏.
-        $('#tags .tag-post').each(function () {
-            let tagArr = $(this).attr('data-tags').split(', ');
-            if ($.inArray(tag, tagArr) >= 0) {
-                $(this).fadeIn();
-            } else {
-                $(this).hide();
-            }
-        });
-    };
-
-    /**
-     * 切换标签时的帖子显示情况.
-     */
-    let changeTagPost = function () {
-        $('#tags .chip').click(function () {
-            // 如果当前标签已经激活了，则直接return.
-            if ($(this).hasClass('chip-active')) {
-                return;
-            }
-
-            // 获取选中的tag名称，并切换颜色效果.
-            changeTagPostByTag($(this).text());
-        });
-    };
-
-    /* 切换标签帖子. */
-    let tagAnchor = decodeURI(window.location.hash);
-    if (tagAnchor.indexOf('#') >= 0) {
-        changeTagPostByTag(tagAnchor.split('#')[1]);
-    }
-    changeTagPost();
-
     /*菜单切换*/
     $('.button-collapse').sideNav();
 

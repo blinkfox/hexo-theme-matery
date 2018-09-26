@@ -20,9 +20,7 @@ var isTag = page.hasOwnProperty('tag');
 <div id="tags" class="container tag-tip-container">
     <div class="card">
         <div class="card-content">
-            <div class="tag-title center-align">
-                博客标签
-            </div>
+            <div class="tag-title center-align"><%= __('postTagTitle') %></div>
             <div class="tag-chips">
                 <% site.tags.map(function(tag) { %>
                 <%
@@ -31,9 +29,10 @@ var isTag = page.hasOwnProperty('tag');
                             : colorArr[i - 1];
                 %>
                 <a href="<%- tag.permalink %>" title="<%- tag.name %>: <%- tag.length %>">
-                    <span class="chip center-align <% if (isTag && tag.name == page.tag) { %> chip-active <% } else { %> chip-default <% } %> waves-effect waves-light"
-                          data-tagname="<%- tag.name %>" style="background-color: <%- color %>;"><%- tag.name %>
-                        <span class="tag-length"> <%- tag.length %></span>
+                    <span class="chip center-align waves-effect waves-light
+                            <% if (isTag && tag.name == page.tag) { %> chip-active <% } else { %> chip-default <% } %>"
+                            data-tagname="<%- tag.name %>" style="background-color: <%- color %>;"><%- tag.name %>
+                        <span class="tag-length"><%- tag.length %></span>
                     </span>
                 </a>
                 <% }); %>
