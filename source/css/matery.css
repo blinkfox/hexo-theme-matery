@@ -708,6 +708,16 @@ table tr:nth-child(2n), thead {
     min-width: 80px;
 }
 
+#articleContent [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: inherit;
+    margin-left: -1.3rem;
+    margin-right: 0.4rem;
+    margin-top: -1px;
+    vertical-align: middle;
+    left: unset;
+    visibility: visible;
+}
+
 #article-share .social-share {
     text-align: center;
     margin-top: 20px;
