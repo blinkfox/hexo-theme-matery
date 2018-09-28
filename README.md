@@ -19,7 +19,7 @@
 ## Next development plans
 
 - [x] Refactoring tags page as **paginable**
-- [ ] Refactoring Archives page as **paginable**
+- [x] Refactoring Archives page as **paginable**
 - [ ] Add category page
 - [ ] Add about me page
 - [ ] Integrated [Gitalk](https://gitalk.github.io/) comment
@@ -47,6 +47,8 @@ git clone https://github.com/blinkfox/hexo-theme-matery.git
 ### Modify theme
 
 Modify the value of `theme` in `_config.yml` of Hexo's root folder: `theme: hexo-theme-matery`.
+
+> **Note**: Please modify the value of ``url` of `_config.yml` in the root directory to your website's main `URL`, which will be useful when generating a permanent link to the tab page. The number of pages per page is recommended to be a multiple of `6', such as `12`, `18`, etc.
 
 ### config tags page
 

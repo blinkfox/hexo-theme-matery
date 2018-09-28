@@ -19,7 +19,7 @@
 ## 后续开发计划
 
 - [x] 重构标签页为**可分页**
-- [ ] 重构归档页为**可分页**
+- [x] 重构归档页为**可分页**
 - [ ] 增加分类页
 - [ ] 增加关于我页面
 - [ ] 集成[Gitalk](https://gitalk.github.io/)
@@ -47,6 +47,8 @@ git clone https://github.com/blinkfox/hexo-theme-matery.git
 ### 切换主题
 
 修改 Hexo 根目录下的`_config.yml`的`theme`的值：`theme: hexo-theme-matery`
+
+> **注意**: 请修改根目录下的`_config.yml`的`url`的值为你的网站主`URL`，生成标签页的永久链接时会有用。每个页面的分页条数建议为`6`的倍数，即`12`、`18`条等。
 
 ### 配置tags页
 
