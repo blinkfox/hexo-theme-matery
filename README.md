@@ -183,6 +183,7 @@ title: typora-vue-theme Theme introduction
 date: 2018-09-07 09:25:00
 author: Qi Zhao
 img: /source/images/xxx.jpg # or:http://xxx.com/xxx.jpg
+categories: Markdown
 tags:
   - Typora
   - Markdown

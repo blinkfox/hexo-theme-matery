@@ -32,7 +32,7 @@
 
     <div id="cd-timeline" class="container">
         <% page.posts.each(function(post) { %>
-        <div class="cd-timeline-block" data-aos="fade-up">
+        <div class="cd-timeline-block">
 
             <%# year. %>
             <% if (date(post.date, 'YYYY') != year) { %>
@@ -92,7 +92,7 @@
                             <% if (post.tags && post.tags.length) { %>
                             <div class="card-action article-tags">
                                 <% post.tags.forEach(tag => { %>
-                                <a href="<%- tag.permalink %>"><span class="chip bg-color"><%= tag.name %></span></a>
+                                <a href="<%- url_for(tag.path) %>"><span class="chip bg-color"><%= tag.name %></span></a>
                                 <% }); %>
                             </div>
                             <% } %>

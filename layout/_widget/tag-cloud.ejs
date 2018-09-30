@@ -29,7 +29,7 @@ var isTag = is_tag();
                     var color = i >= colorCount ? colorArr[Math.abs(hashCode(tag.name) % colorCount)]
                             : colorArr[i - 1];
                 %>
-                <a href="<%- tag.permalink %>" title="<%- tag.name %>: <%- tag.length %>">
+                <a href="<%- url_for(tag.path) %>" title="<%- tag.name %>: <%- tag.length %>">
                     <span class="chip center-align waves-effect waves-light
                             <% if (isTag && tag.name == page.tag) { %> chip-active <% } else { %> chip-default <% } %>"
                             data-tagname="<%- tag.name %>" style="background-color: <%- color %>;"><%- tag.name %>

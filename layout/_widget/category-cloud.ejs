@@ -23,13 +23,14 @@ var isCategory = is_category();
         <div class="card-content">
             <div class="tag-title center-align"><%= __('postCategoryTitle') %></div>
             <div class="tag-chips">
+                <% if (site.categories && site.categories.length > 0) { %>
                 <% site.categories.map(function(category) { %>
                 <%
                     i++;
                     var color = i >= colorCount ? colorArr[Math.abs(hashCode(category.name) % colorCount)]
                             : colorArr[i - 1];
                 %>
-                <a href="<%- category.permalink %>" title="<%- category.name %>: <%- category.length %>">
+                <a href="<%- url_for(category.path) %>" title="<%- category.name %>: <%- category.length %>">
                     <span class="chip center-align waves-effect waves-light
                             <% if (isCategory && category.name == page.category) { %> chip-active <% } else { %> chip-default <% } %>"
                             style="background-color: <%- color %>;"><%- category.name %>
@@ -37,6 +38,9 @@ var isCategory = is_category();
                     </span>
                 </a>
                 <% }); %>
+                <% } else { %>
+                <%= __('categoryEmptyTip') %>
+                <% } %>
             </div>
         </div>
     </div>

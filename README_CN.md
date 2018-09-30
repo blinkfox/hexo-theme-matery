@@ -183,6 +183,7 @@ title: typora-vue-theme主题介绍
 date: 2018-09-07 09:25:00
 author: 赵奇
 img: /source/images/xxx.jpg # 或者:http://xxx.com/xxx.jpg
+categories: Markdown
 tags:
   - Typora
   - Markdown
@@ -192,7 +193,6 @@ tags:
 > **注意**:
 > 1. 如果`img`属性不填写的话，文章特色图会根据文章标题的`hashcode`的值取余，然后选取主题中对应的特色图片，从而达到让所有文章都的特色图**各有特色**。
 > 2. `date`的值尽量保证每篇文章是唯一的，因为本主题中`Gitment`识别`id`是通过`date`的值来作为唯一标识的。
-
 
 ## 效果截图
 

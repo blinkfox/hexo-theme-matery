@@ -6,3 +6,4 @@ search: Search
 searchTip: Please enter a search keyword
 postTagTitle: Post Tags
 postCategoryTitle: Post Categories
+categoryEmptyTip: Your posts has no categories information yet.

@@ -62,7 +62,7 @@
                                 </span>
                                 <span class="publish-author">
                                     <i class="fa fa-user fa-fw"></i>
-                                    <% if(post.author && post.author.length > 0) { %>
+                                    <% if (post.author && post.author.length > 0) { %>
                                     <%= post.author %>
                                     <% } else { %>
                                     <%= config.author %>
@@ -71,10 +71,10 @@
                             </div>
                         </div>
 
-                        <% if(post.tags && post.tags.length) { %>
+                        <% if(post.tags && post.tags.length > 0) { %>
                         <div class="card-action article-tags">
                             <% post.tags.forEach(tag => { %>
-                            <a href="<%- tag.permalink %>" target="_blank">
+                            <a href="<%- url_for(tag.path) %>" target="_blank">
                                 <span class="chip bg-color"><%= tag.name %></span>
                             </a>
                             <% }); %>
