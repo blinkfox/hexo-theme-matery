@@ -733,32 +733,32 @@ table tr:nth-child(2n), thead {
     margin-top: -60px;
 }
 
-#tags .tag-title {
+.chip-container .tag-title {
     margin-bottom: 10px;
     color: #3C4858;
     font-size: 1.75rem;
     font-weight: 400;
 }
 
-#tags .tag-chips {
+.chip-container .tag-chips {
     text-align: center;
 }
 
-#tags .tags-posts {
+.chip-container .tags-posts {
     margin-top: 20px;
 }
 
-#tags .chip-default {
+.chip-container .chip-default {
     color: #34495e;
 }
 
-#tags .chip-active {
+.chip-container .chip-active {
     color: #FFF !important;
     background-color: #e91e63 !important;
     box-shadow: 2px 5px 10px #aaa !important;
 }
 
-#tags .chip {
+.chip-container .chip {
     margin: 10px 10px;
     padding: 0 16px;
     display: inline-block;

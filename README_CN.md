@@ -22,9 +22,12 @@
 - [x] 重构归档页为**可分页**
 - [ ] 增加分类页
 - [ ] 增加关于我页面
+- [ ] 增加`404`页面
+- [ ] 美化滚动条
 - [ ] 集成[Gitalk](https://gitalk.github.io/)
 - [ ] 右上角实现`fork me on github`
 - [ ] 添加`RSS`
+- [ ] 添加文章`TOC`
 - [ ] 网站底部加上访问量等统计功能
 - [ ] 首页设计和添加置顶文章
 - [ ] 文章结束后增加**打赏**功能
@@ -48,9 +51,13 @@ git clone https://github.com/blinkfox/hexo-theme-matery.git
 
 修改 Hexo 根目录下的`_config.yml`的`theme`的值：`theme: hexo-theme-matery`
 
-> **注意**: 请修改根目录下的`_config.yml`的`url`的值为你的网站主`URL`，生成标签页的永久链接时会有用。每个页面的分页条数建议为`6`的倍数，即`12`、`18`条等。
+#### `_config.yml`文件的其它修改建议:
+ 
+- 请修改`_config.yml`的`url`的值为你的网站主`URL`（如：`http://xxx.github.io`）。
+- 建议修改两个`per_page`的分页条数值为`6`的倍数，如：`12`、`18`等，这样文章列表在各个屏幕下都能较好的显示。
+- 如果你是中文用户，则建议修改`language`的值为`zh-CN`。
 
-### 配置tags页
+### 新建 tags 页
 
 `tags`页是用来展示所有标签的页面，如果在你的博客`source`目录下还没有`tags/index.md`文件，那么你就需要新建一个，命令如下：
 
@@ -65,6 +72,23 @@ title: tags
 date: 2018-09-10 18:23:38
 type: "tags"
 layout: "tags"
+```
+
+### 新建 categories 页
+
+`categories`页是用来展示所有分类的页面，如果在你的博客`source`目录下还没有`categories/index.md`文件，那么你就需要新建一个，命令如下：
+
+```bash
+hexo new page "categories"
+```
+
+编辑你刚刚新建的页面文件`/source/tags/index.md`，至少需要以下内容：
+
+```yml
+title: categories
+date: 2018-09-30 17:25:30
+type: "categories"
+layout: "categories"
 ```
 
 ### 代码高亮

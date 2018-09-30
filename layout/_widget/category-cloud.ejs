@@ -15,24 +15,25 @@ var hashCode = function (str) {
     return hash;
 };
 var i = 0;
-var isTag = page.hasOwnProperty('tag');
+var isCategory = is_category();
 %>
-<div id="tags" class="container tag-tip-container">
+
+<div id="category-cloud" class="container tag-tip-container chip-container">
     <div class="card">
         <div class="card-content">
-            <div class="tag-title center-align"><%= __('postTagTitle') %></div>
+            <div class="tag-title center-align"><%= __('postCategoryTitle') %></div>
             <div class="tag-chips">
-                <% site.tags.map(function(tag) { %>
+                <% site.categories.map(function(category) { %>
                 <%
-                    i++
-                    var color = i >= colorCount ? colorArr[Math.abs(hashCode(tag.name) % colorCount)]
+                    i++;
+                    var color = i >= colorCount ? colorArr[Math.abs(hashCode(category.name) % colorCount)]
                             : colorArr[i - 1];
                 %>
-                <a href="<%- tag.permalink %>" title="<%- tag.name %>: <%- tag.length %>">
+                <a href="<%- category.permalink %>" title="<%- category.name %>: <%- category.length %>">
                     <span class="chip center-align waves-effect waves-light
-                            <% if (isTag && tag.name == page.tag) { %> chip-active <% } else { %> chip-default <% } %>"
-                            data-tagname="<%- tag.name %>" style="background-color: <%- color %>;"><%- tag.name %>
-                        <span class="tag-length"><%- tag.length %></span>
+                            <% if (isCategory && category.name == page.category) { %> chip-active <% } else { %> chip-default <% } %>"
+                            style="background-color: <%- color %>;"><%- category.name %>
+                        <span class="tag-length"><%- category.length %></span>
                     </span>
                 </a>
                 <% }); %>
