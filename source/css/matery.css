@@ -28,44 +28,44 @@ body {
 }
 
 h1 {
-    margin: 45px 0 24px -5px;
-    font-size: 1.9rem;
+    margin: 48px 0 22px -5px;
+    font-size: 2.0rem;
     font-weight: bold;
-    line-height: 2.2rem;
+    line-height: 2.0rem;
 }
 
 h2 {
-    margin: 40px 0 20px -5px;
-    font-size: 1.65rem;
+    margin: 42px 0 18px -5px;
+    font-size: 1.8rem;
     font-weight: bold;
-    line-height: 1.9rem;
+    line-height: 1.8rem;
 }
 
 h3 {
-    margin: 35px 0 18px -4px;
-    font-size: 1.45rem;
+    margin: 38px 0 15px -4px;
+    font-size: 1.6rem;
     font-weight: bold;
     line-height: 1.7rem;
 }
 
 h4 {
-    margin: 30px 0 12px -4px;
-    font-size: 1.25rem;
+    margin: 32px 0 12px -4px;
+    font-size: 1.45rem;
     font-weight: bold;
-    line-height: 1.5rem;
+    line-height: 1.45rem;
 }
 
 h5 {
-    margin: 25px 0 8px -4px;
-    font-size: 1.1rem;
+    margin: 28px 0 8px -4px;
+    font-size: 1.2rem;
     font-weight: bold;
-    line-height: 1.4rem;
+    line-height: 1.2rem;
 }
 
 h6 {
-    margin: 20px 0 4px -4px;
-    font-size: 1rem;
-    line-height: 1.3rem;
+    margin: 22px 0 4px -4px;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
 }
 
 p {
@@ -81,7 +81,7 @@ hr {
 
 blockquote {
     border-left: 5px solid #42b983;
-    padding: 1rem 0.8rem 0.1rem 0.8rem;
+    padding: 1rem 0.8rem 0.2rem 0.8rem;
     color: #666;
     background-color: rgba(66, 185, 131, .1);
 }
@@ -484,6 +484,18 @@ article .article-content .summary {
 
 article .article-content .publish-author {
     float: right;
+}
+
+.publish-date .icon-date {
+    padding-right: 5px;
+}
+
+.publish-author .icon-category {
+    padding-left: 10px;
+}
+
+.article-content .publish-author .post-category {
+    padding-left: 5px;
 }
 
 article .card .card-action {

@@ -52,14 +52,22 @@
                         <div class="card-content article-content">
                             <div class="publish-info">
                                 <span class="publish-date">
-                                    <i class="fa fa-calendar fa-fw"></i><%= date(post.date, config.date_format) %>
+                                    <i class="fa fa-clock-o fa-fw icon-date"></i><%= date(post.date, config.date_format) %>
                                 </span>
                                 <span class="publish-author">
+                                    <% if (post.categories && post.categories.length > 0) { %>
+                                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                    <% post.categories.forEach(category => { %>
+                                    <a href="<%- url_for(category.path) %>" class="post-category" target="_blank">
+                                    <%- category.name %>
+                                    </a>
+                                    <% }); %>
+                                    <% } else if (post.author && post.author.length > 0) { %>
                                     <i class="fa fa-user fa-fw"></i>
-                                    <% if(post.author && post.author.length > 0) { %>
-                                    <%= post.author %>
+                                    <%- post.author %>
                                     <% } else { %>
-                                    <%= config.author %>
+                                    <i class="fa fa-user fa-fw"></i>
+                                    <%- config.author %>
                                     <% } %>
                                 </span>
                             </div>
