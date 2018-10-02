@@ -186,6 +186,10 @@ mark {
     opacity: 0.8;
 }
 
+nav, .side-nav {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 7px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
 header .nav-transparent {
     background-color: transparent !important;
     box-shadow: none;

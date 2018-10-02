@@ -90,11 +90,14 @@ $(function () {
     /*监听滚动条位置*/
     $(window).scroll(function () {
         /*回到顶部按钮根据滚动条的位置的显示和隐藏*/
+        let $nav = $('#headNav');
         if ($(window).scrollTop() < 100) {
-            $('#headNav').addClass('nav-transparent');
+            $nav.removeClass('nav-shadow');
+            $nav.addClass('nav-transparent');
             $('.top-scroll').slideUp(300);
         } else {
-            $('#headNav').removeClass('nav-transparent');
+            $nav.removeClass('nav-transparent');
+            $nav.addClass('nav-shadow');
             $('.top-scroll').slideDown(300);
         }
     });
