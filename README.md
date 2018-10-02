@@ -21,7 +21,7 @@
 
 - [x] Refactoring tags page as **paginable**
 - [x] Refactoring Archives page as **paginable**
-- [ ] Add category page
+- [x] Add category page
 - [ ] Add about me page
 - [ ] Add 404 page
 - [ ] Beautify the scroll bar
@@ -265,3 +265,4 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 ```
 
 There are 24 featured pictures in `/source/medias/featureimages`,you can add or delete,and modify it in `_config.yml` at the sametime.
+
