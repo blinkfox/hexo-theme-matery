@@ -6,4 +6,6 @@ search: 搜索
 searchTip: 请输入搜索的关键字
 postTagTitle: 文章标签
 postCategoryTitle: 文章分类
+categoryRadarTitle: 文章分类雷达图
+categoryNumber: 文章分类数量
 categoryEmptyTip: 你目前还没有对文章进行分类.

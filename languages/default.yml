@@ -6,4 +6,6 @@ search: Search
 searchTip: Please enter a search keyword
 postTagTitle: Post Tags
 postCategoryTitle: Post Categories
+categoryRadarTitle: Post Categories Radar Chart
+categoryNumber: Number of Categories
 categoryEmptyTip: Your posts has no categories information yet.

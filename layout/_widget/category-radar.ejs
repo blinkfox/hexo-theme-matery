@@ -1,0 +1,73 @@
+<style type="text/css">
+    #category-radar {
+        width: 100%;
+        height: 360px;
+    }
+</style>
+
+<div class="container">
+    <div class="card">
+        <div id="category-radar" class="card-content"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
+<script type="text/javascript">
+    let radarChart = echarts.init(document.getElementById('category-radar'));
+
+    <%
+        var categories = site.categories;
+
+        // Find the maximum and average values of the post categories.
+        var radarValueArr = [];
+        categories.some(function(category) {
+            radarValueArr.push(category.length);
+        });
+
+        var max = Math.max.apply(null, radarValueArr) + Math.min.apply(null, radarValueArr);
+
+        // Calculate the data needed for the radar chart.
+        var indicatorArr = [];
+        categories.map(function(category) {
+            indicatorArr.push({'name': category.name, 'max': max});
+        });
+
+        var indicatorData = JSON.stringify(indicatorArr);
+        var radarValueData = JSON.stringify(radarValueArr);
+    %>
+
+    let option = {
+        title: {
+            left: 'center',
+            text: '<%= __("categoryRadarTitle")  %>',
+            textStyle: {
+                fontWeight: 500,
+                fontSize: 22
+            }
+        },
+        tooltip: {},
+        radar: {
+            name: {
+                textStyle: {
+                    color: '#3C4858'
+                }
+            },
+            indicator: <%- indicatorData %>,
+            nameGap: 5,
+            center: ['50%','55%'],
+            radius: '66%'
+        },
+        series: [{
+            type: 'radar',
+            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+            data : [
+                {
+                    value : <%- radarValueData %>,
+                    name : '<%= __("categoryNumber") %>'
+                }
+            ]
+        }]
+    };
+
+    radarChart.setOption(option);
+</script>
