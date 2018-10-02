@@ -14,6 +14,7 @@
 - Changing 'banner' picture dynamically everday.
 - Blog posts list with waterflow(There will be 24 images if the articl dosn't have  featured pictures).
 - Archive page with timeline.
+- Tags page of the **word cloud** and categories page of the **radar chart**
 - Comment module of [Gitment](https://imsun.github.io/gitment/) and [Disqus](https://disqus.com/).
 
 ## Next development plans
