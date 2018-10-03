@@ -4,18 +4,25 @@ menu:
   Tags: /tags
   Categories: /categories
   Archives: /archives
+  About: /about
 
 # index page dream text,
 dream:
   enable: true
   text: The best preparation for tomorrow is doing your best today.
 
-# show post-calendar
-postCalendar: true
-
 # Miscelaneous
 favicon: /favicon.png
 logo: /medias/logo.png
+
+# profile in about page
+profile:
+  avatar: /medias/avatar.jpg
+  career: Software Engineer
+  introduction: If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as your brother and hope as your sentry.
+
+# show post-calendar
+postCalendar: true
 
 # the gitment config，default disabled
 gitment:

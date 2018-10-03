@@ -755,7 +755,7 @@ table tr:nth-child(2n), thead {
     }
 }
 
-.tag-tip-container {
+.chip-container {
     margin-top: -60px;
 }
 
@@ -1045,6 +1045,82 @@ table tr:nth-child(2n), thead {
     }
 }
 
+/* about page styles. */
+
+.post-statis {
+    text-align: center;
+}
+
+.post-statis .statis {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    text-align: center;
+    letter-spacing: .03rem;
+}
+
+.post-statis .statis .count {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.post-statis .statis .count a {
+    color: #42b983;
+}
+
+.post-statis .statis .name {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+#aboutme .social-link {
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+#aboutme .social-link a {
+    color: #3C4858;
+}
+
+.profile .avatar-img {
+    max-width: 160px;
+    width: 100%;
+    margin: 0 auto;
+    transform: translate3d(0, -65%, 0);
+}
+
+.profile .author {
+    margin-top: -80px;
+}
+
+.profile .author .post-statis {
+    margin: 0.5rem 0 1.4rem 0;
+}
+
+.profile .author .title {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #3C4858;
+}
+
+.profile .author .career {
+    margin: 8px 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #777;
+}
+
+#aboutme .profile .social-link {
+    margin: 1.5rem 0 0.8rem 0;
+}
+
+#aboutme .introduction {
+    margin: 1.5rem auto 0;
+    max-width: 600px;
+    color: #999;
+}
+
 /*尾部样式*/
 footer {
     padding-bottom: 1px;
@@ -1097,55 +1173,6 @@ footer .copy-right {
     color: #e96900;
     font-size: .9rem;
     white-space: pre-wrap;
-}
-
-/*主题颜色设置面板样式*/
-#theme-change {
-    position: fixed;
-    padding: 15px;
-    top: 160px;
-    left: -200px;
-    width: 200px;
-    height: auto;
-    background-color: #fff;
-    z-index: 995;
-    border: 1px solid;
-    border-left: none;
-}
-
-#theme-change .theme-change-handle {
-    cursor: pointer;
-    position: absolute;
-    background-color: white;
-    width: auto;
-    height: 45px;
-    top: -1px;
-    right: -47px;
-    padding: 10px;
-    text-align: center;
-    border: 1px solid;
-    border-left: none;
-}
-
-#theme-change .theme-change-handle i {
-    font-size: 2.2rem;
-}
-
-#theme-change .theme-change-container ul li {
-    width: 150px;
-    height: 20px;
-    margin-top: 5px;
-    cursor: pointer;
-}
-
-#theme-change .theme-change-container ul li.selected {
-    outline: 2px solid black;
-}
-
-#themeModal .theme-settings div {
-    margin: 7px;
-    width: 72px;
-    height: 72px;
 }
 
 /*回到顶部按钮样式*/
