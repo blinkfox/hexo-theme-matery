@@ -31,6 +31,25 @@ profile:
   career: Software Engineer
   introduction: If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as your brother and hope as your sentry.
 
+# config my projects informations in about page.
+# If you don't want to display this `My Projects` content, you can delete this configuration.
+myProjects:
+  hexo-theme-matery:
+    icon: fa-github
+    iconBackground: 'linear-gradient(to bottom right, #1cf196 0%, #36a6bf 100%)'
+    url: http://github.com/blinkfox/hexo-theme-matery
+    desc: This is a Hexo blog theme with 'Material Design' and responsive design.
+  zealt:
+      icon: fa-code
+      iconBackground: 'linear-gradient(to bottom right, #fc5f3c 0%, #ff55d3 100%)'
+      url: https://github.com/blinkfox/zealot
+      desc: 一个轻量级的SQL和参数动态生成工具库
+  typora-vue-theme:
+      icon: fa-area-chart
+      iconBackground: 'linear-gradient(to bottom right, #32d6fb 0%, #5558ed 100%)'
+      url: https://github.com/blinkfox/typora-vue-theme
+      desc: This is a typora theme inspired by Vue document style.
+
 # show post-calendar
 postCalendar: true
 

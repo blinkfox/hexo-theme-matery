@@ -1110,7 +1110,7 @@ table tr:nth-child(2n), thead {
 }
 
 .profile .author .title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 500;
     color: #3C4858;
 }
@@ -1129,6 +1129,48 @@ table tr:nth-child(2n), thead {
 #aboutme .introduction {
     margin: 1.5rem auto 0;
     max-width: 600px;
+    color: #999;
+}
+
+.my-projects {
+    padding: 5rem 1rem;
+}
+
+.my-projects .title {
+    font-size: 2.25rem;
+}
+
+.my-projects .info {
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 40px 0 30px;
+}
+
+.my-projects .info .icon {
+    display: inline-block;
+    width: 4.75rem;
+    height: 4.75rem;
+    text-align: center;
+    line-height: 4.75rem;
+    color: #fff;
+    font-size: 1.75rem;
+    border-radius: 50%;
+}
+
+.my-projects .info .info-title {
+    margin: 1.15rem 0 0.875rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.my-projects .info .info-title a {
+    color: #34495e;
+}
+
+.my-projects .info .info-desc {
+    margin: 0 0 10px;
+    font-size: 0.9rem;
     color: #999;
 }
 
