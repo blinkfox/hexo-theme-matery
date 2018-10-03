@@ -20,6 +20,14 @@
             </a>
         </li>
         <% }); %>
+        <% if (theme.githubLink.enable) { %>
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="<%= theme.githubLink.link %> %>" class="waves-effect waves-light">
+                <i class="fa  fa fa-github fa-lg fa-fw"></i><%= theme.githubLink.title %>
+            </a>
+        </li>
+        <% } %>
     </ul>
     <div class="social-link">
         <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub"
