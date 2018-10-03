@@ -30,6 +30,13 @@ disqus:
   enable: false
   shortname:
 
+# githubLink config, default disabled
+githubLink:
+  enable: true
+  link: https://github.com/blinkfox/hexo-theme-matery
+  title: fork me on github
+  icon:
+
 # posts feature images
 featureImages: 
 - /medias/featureimages/0.jpg
