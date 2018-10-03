@@ -1,10 +1,20 @@
-# main menu navigation
+# main menu navigation url and icon
 menu:
-  Index: /
-  Tags: /tags
-  Categories: /categories
-  Archives: /archives
-  About: /about
+  Index:
+    url: /
+    icon: fa-home
+  Tags:
+    url: /tags
+    icon: fa-tags
+  Categories:
+    url: /categories
+    icon: fa-bookmark
+  Archives:
+    url: /archives
+    icon: fa-archive
+  About:
+    url: /about
+    icon: fa-user-circle-o
 
 # index page dream text,
 dream:

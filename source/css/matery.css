@@ -1091,7 +1091,7 @@ table tr:nth-child(2n), thead {
     background-color: #42b983;
     font-size: 0.9rem;
     border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .21), 0 2px 3px rgba(0, 0, 0, .1);
 }
 
 .profile .avatar-img {
@@ -1146,6 +1146,10 @@ footer .copy-right {
 }
 
 /*搜索层样式*/
+#searchIcon {
+    font-size: 1.6rem;
+}
+
 #searchModal {
     min-height: 500px;
     width: 80%;

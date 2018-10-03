@@ -17,8 +17,13 @@
     <ul class="menu-list">
         <% Object.keys(theme.menu).forEach(function(key) { %>
         <li>
-            <a href="<%= theme.menu[key] %>" class="waves-effect waves-light">
-                <i class="fa fa-link fa-lg fa-fw"></i><%= key %>
+            <a href="<%- theme.menu[key].url %>" class="waves-effect waves-light">
+                <% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
+                <i class="fa fa-fw <%- theme.menu[key].icon %>"></i>
+                <% } else { %>
+                <i class="fa fa-fw fa-link"></i>
+                <% } %>
+                <%= key %>
             </a>
         </li>
         <% }); %>
