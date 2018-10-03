@@ -264,6 +264,7 @@ header .side-nav .social-link {
 }
 
 .social-link a {
+    font-size: 1.2rem;
     display: inline;
     padding: 0 12px;
 }
@@ -1080,7 +1081,17 @@ table tr:nth-child(2n), thead {
 }
 
 #aboutme .social-link a {
-    color: #3C4858;
+    display: inline-block;
+    width: 2.3rem;
+    height: 2.3rem;
+    line-height: 2.3rem;
+    margin: 0 0.5rem;
+    padding: 0;
+    color: #fff;
+    background-color: #42b983;
+    font-size: 0.9rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
 }
 
 .profile .avatar-img {

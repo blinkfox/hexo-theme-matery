@@ -172,7 +172,7 @@ permalink_pinyin:
 
 ```html
 <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-    <i class="fa fa-github fa-lg"></i>
+    <i class="fa fa-github"></i>
 </a>
 ```
 
