@@ -58,7 +58,24 @@ git clone https://github.com/blinkfox/hexo-theme-matery.git
 - 建议修改两个`per_page`的分页条数值为`6`的倍数，如：`12`、`18`等，这样文章列表在各个屏幕下都能较好的显示。
 - 如果你是中文用户，则建议修改`language`的值为`zh-CN`。
 
-### 新建 tags 页
+### 新建分类 categories 页
+
+`categories`页是用来展示所有分类的页面，如果在你的博客`source`目录下还没有`categories/index.md`文件，那么你就需要新建一个，命令如下：
+
+```bash
+hexo new page "categories"
+```
+
+编辑你刚刚新建的页面文件`/source/categories/index.md`，至少需要以下内容：
+
+```yml
+title: categories
+date: 2018-09-30 17:25:30
+type: "categories"
+layout: "categories"
+```
+
+### 新建标签 tags 页
 
 `tags`页是用来展示所有标签的页面，如果在你的博客`source`目录下还没有`tags/index.md`文件，那么你就需要新建一个，命令如下：
 
@@ -70,26 +87,26 @@ hexo new page "tags"
 
 ```yml
 title: tags
-date: 2018-09-10 18:23:38
+date: 2018-09-30 18:23:38
 type: "tags"
 layout: "tags"
 ```
 
-### 新建 categories 页
+### 新建关于我 about 页
 
-`categories`页是用来展示所有分类的页面，如果在你的博客`source`目录下还没有`categories/index.md`文件，那么你就需要新建一个，命令如下：
+`about`页是用来展示**关于我和我的博客**信息的页面，如果在你的博客`source`目录下还没有`about/index.md`文件，那么你就需要新建一个，命令如下：
 
 ```bash
-hexo new page "categories"
+hexo new page "about"
 ```
 
-编辑你刚刚新建的页面文件`/source/tags/index.md`，至少需要以下内容：
+编辑你刚刚新建的页面文件`/source/about/index.md`，至少需要以下内容：
 
 ```yml
-title: categories
+title: about
 date: 2018-09-30 17:25:30
-type: "categories"
-layout: "categories"
+type: "about"
+layout: "about"
 ```
 
 ### 代码高亮
@@ -151,7 +168,7 @@ permalink_pinyin:
 
 ### 修改社交链接
 
-在主题文件的`/layout/_partial/footer.ejs`和`/layout/_partial/mobile-nav.ejs`文件中，你可以找到`social-link`的内容，可以在其中添加你需要的链接地址，增加内容如：
+在主题文件的`/layout/_partial/social-link.ejs`文件中，你可以修改或添加你需要的社交链接地址，增加链接可参考如下代码：
 
 ```html
 <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
@@ -209,20 +226,6 @@ tags:
 
 ![文章后续内容](http://static.blinkfox.com/hexo-matery-post2.png)
 
-### 文章内容图片
-
-![文章内容图片](http://static.blinkfox.com/hexo-matery-image.png)
-
-### 标签页
-
-![标签](http://static.blinkfox.com/hexo-matery-tags1.png)
-
-![选中的标签](http://static.blinkfox.com/hexo-matery-tags2.png)
-
-### 归档页
-
-![归档](http://static.blinkfox.com/hexo-matery-archive.png)
-
 ## 自定制修改
 
 在本主题的`_config.yml`中可以修改部分自定义信息，有以下几个部分：
@@ -230,7 +233,8 @@ tags:
 - 菜单
 - 首页的励志名言
 - `favicon` 和 `Logo`
-- `Gitment`评论配置
+- 个人信息
+- `Gitment`和`disqus`评论配置
 - 默认特色图的集合。当文章没有设置特色图时，本主题会根据文章标题的`hashcode`值取余，来选择展示对应的特色图
 
 **我认为个人博客应该都有自己的风格和特色**。如果本主题中的诸多功能和主题色彩你不满意，可以在主题中自定义修改，很多更自由的功能和细节点的修改难以在主题的`_config.yml`中完成，需要修改源代码才来完成。以下列出了可能对你有用的地方：

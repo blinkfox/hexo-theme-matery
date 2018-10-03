@@ -58,15 +58,32 @@ Modify the value of `theme` in `_config.yml` of Hexo's root folder: `theme: hexo
 - Recommended modify the value of the two 'per_page` to be a multiple of `6`, such as: `12`, `18`, etc. so that the posts list can be displayed well under each screen.
 - If you are a Chinese user, it is recommended to change the value of `language` to `zh-CN`.
 
+### new categories page
+
+`categories` page is to show all of categories. If the `source` directory of your blog doesn't have `categories/index.md` file, you need to new one like this:
+
+```bash
+hexo new page "categories"
+```
+
+to edit your new page files`/source/categories/index.md`, you need somethings as follows:
+
+```yml
+title: categories
+date: 2018-09-30 17:25:30
+type: "categories"
+layout: "categories"
+```
+
 ### new tags page
 
-`tags`page is to show all of tags. If the `source` directory of your blog doesn't have `tags/index.md` file,you need to new one like this:
+`tags` page is to show all of tags. If the `source` directory of your blog doesn't have `tags/index.md` file,you need to new one like this:
 
 ```bash
 hexo new page "tags"
 ```
 
-to edit your new page files`/source/tags/index.md` ,you need somethings as follows:
+to edit your new page files`/source/tags/index.md`, you need somethings as follows:
 
 ```yml
 title: tags
@@ -75,21 +92,21 @@ type: "tags"
 layout: "tags"
 ```
 
-### new categories page
+### new about page
 
-`categories`page is to show all of categories. If the `source` directory of your blog doesn't have `categories/index.md` file, you need to new one like this:
+`about` page is to show my blog and myself information. If the `source` directory of your blog doesn't have `about/index.md` file, you need to new one like this:
 
 ```bash
-hexo new page "categories"
+hexo new page "about"
 ```
 
-to edit your new page files`/source/tags/index.md` ,you need somethings as follows:
+to edit your new page files`/source/about/index.md`, you need somethings as follows:
 
 ```yml
-title: categories
+title: about
 date: 2018-09-30 17:25:30
-type: "categories"
-layout: "categories"
+type: "about"
+layout: "about"
 ```
 
 ### Code highlight
@@ -151,7 +168,7 @@ permalink_pinyin:
 
 ### Modify social links
 
-You can find the content of `social-link` and add links you need in the `/layout/_partial/footer.ejs` and `/layout/_partial/mobile-nav.ejs` file of theme files as follows:
+In the `/layout/_partial/social-link.ejs` file of the theme, you can modify or add the social link address you need. To add a link, please refer to the following code:
 
 ```html
 <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
@@ -207,20 +224,6 @@ tags:
 
 ![Post's other parts](http://static.blinkfox.com/hexo-matery-post2.png)
 
-### post's contnet picture
-
-![post's contnet picture](http://static.blinkfox.com/hexo-matery-image.png)
-
-### Label page
-
-![Label](http://static.blinkfox.com/hexo-matery-tags1.png)
-
-![Seletec page](http://static.blinkfox.com/hexo-matery-tags2.png)
-
-### Archive page
-
-![Archive](http://static.blinkfox.com/hexo-matery-archive.png)
-
 ## Custom modification
 
 You can modify some custom modification in `_config.yml` as follows:
@@ -228,6 +231,8 @@ You can modify some custom modification in `_config.yml` as follows:
 - Menu
 - Inspirational quotes on Home
 - `favicon` and `Logo`
+- profiles
+- gitment and disqus
 - The map of default featured pictures. The theme will take remainde according to `hashcode` of post title if the post dose not set featured piactures.
 
 **I think everyone should have their own style and feature of blog**。if you are not satisfiled with functions and theme color,you can modify by yourself,and more free functions and deatil need to be modified by modify source code when it is hard to be finished in `_config.yml`.
