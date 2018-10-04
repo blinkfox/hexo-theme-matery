@@ -1,0 +1,147 @@
+<style type="text/css">
+    #posts-chart,
+    #categories-chart,
+    #tags-chart {
+        width: 300px;
+        height: 300px;
+        margin: 0.5rem auto;
+        padding: 0.5rem;
+    }
+</style>
+
+<div id="postCharts" class="post-charts">
+    <div class="title center-align" data-aos="zoom-in-up"><%- __('postCharts') %></div>
+    <div class="row">
+        <div class="chart col s12 m6 l4" data-aos="zoom-in-up">
+            <div id="posts-chart"></div>
+        </div>
+
+        <div class="chart col s12 m6 l4" data-aos="zoom-in-up">
+            <div id="categories-chart"></div>
+        </div>
+
+        <div class="chart col s12 m6 l4" data-aos="zoom-in-up">
+            <div id="tags-chart"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
+<script>
+let postsChart = echarts.init(document.getElementById('posts-chart'));
+let categoriesChart = echarts.init(document.getElementById('categories-chart'));
+let tagsChart = echarts.init(document.getElementById('tags-chart'));
+
+let postsOption = {
+    title: {
+        text: '文章发布统计图',
+        top: -5,
+        x: 'center'
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    xAxis:  {
+        type: 'category',
+        data: ['2017-10', '2017-11', '2017-12', '2018-01', '2018-02', '2018-03', '2018-04', '2018-05', '2018-06', '2018-07', '2018-08', '2018-09', '2018-10']
+    },
+    yAxis: {
+        type: 'value',
+    },
+    series: [
+        {
+            name:'文章篇数',
+            type:'line',
+            data:[1, 4, 2, 5, 0, 2, 3, 4, 2, 1, 6, 4, 2],
+            markPoint: {
+                symbolSize: 45,
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            },
+            markLine : {
+                data : [
+                    {type : 'average', name: '平均值'}
+                ]
+            }
+        }
+    ]
+};
+
+let categoriesOption = {
+    title : {
+        text: '文章分类统计图',
+        top: -4,
+        x:'center'
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    series : [
+        {
+            name: '文章分类',
+            type: 'pie',
+            radius : '50%',
+            data:[
+                {value:335, name:'前端'},
+                {value:310, name:'后端'},
+                {value:234, name:'软件设计'},
+                {value:135, name:'软件工具'},
+                {value:1548, name:'其他'}
+            ],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+
+
+let tagsOption = {
+    title : {
+        text: 'TOP10 标签统计图',
+        top: -5,
+        x: 'center'
+    },
+    tooltip : {},
+    xAxis : [
+        {
+            type : 'category',
+            data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            type:'bar',
+            data:[2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8],
+            markPoint : {
+                symbolSize: 45,
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ],
+            },
+            markLine : {
+                data : [
+                    {type : 'average', name : '平均值'}
+                ]
+            }
+        }
+    ]
+};
+
+postsChart.setOption(postsOption);
+categoriesChart.setOption(categoriesOption);
+tagsChart.setOption(tagsOption);
+</script>

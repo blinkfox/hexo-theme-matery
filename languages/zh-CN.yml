@@ -12,6 +12,7 @@ postCategoryTitle: 文章分类
 categoryRadarTitle: 文章分类雷达图
 categoryNumber: 文章分类数量
 categoryEmptyTip: 你目前还没有对文章进行分类.
+postCharts: 文章统计图
 myProjects: 我的项目
 mySkills: 我的技能
 otherSkills: 其他技能

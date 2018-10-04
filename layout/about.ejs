@@ -9,7 +9,7 @@
 
 <main class="content">
 
-    <div id="aboutme" class="container chip-container">
+    <div id="aboutme" class="container about-container">
         <div class="card">
             <div class="card-content">
                 <div class="row">
@@ -42,6 +42,8 @@
                 </div>
 
                 <div class="introduction center-align" data-aos="fade-up"><%= theme.profile.introduction %></div>
+
+                <%- partial('_widget/post-charts') %>
 
                 <% if (theme.myProjects && theme.myProjects.enable) { %>
                 <%- partial('_widget/my-projects') %>
