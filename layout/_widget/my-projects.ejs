@@ -1,13 +1,13 @@
 <%
 // the projects information of theme _config.yml.
-var myprojects = theme.myProjects;
+var myprojects = theme.myProjects.data;
 %>
 <div class="my-projects">
-    <div class="title center-align"><%- __('myprojects') %></div>
+    <div class="title center-align" data-aos="zoom-in"><%- __('myProjects') %></div>
     <div class="row">
         <% if (myprojects) { %>
         <% Object.keys(myprojects).forEach(function(project) { %>
-        <div class="col s12 m6 l4">
+        <div class="col s12 m6 l4" data-aos="fade-up">
             <div class="info center-align">
                 <a href="<%- myprojects[project].url %>" class="icon"
                    style="background: <%- myprojects[project].iconBackground %>" target="_blank">

@@ -1,0 +1,22 @@
+<%
+// the skills information of theme _config.yml.
+    var mySkills = theme.mySkills.data;
+%>
+<div class="my-skills">
+    <div class="title center-align" data-aos="zoom-in"><%- __('mySkills') %></div>
+    <div class="row">
+        <% if (mySkills) { %>
+        <% Object.keys(mySkills).forEach(function(skill) { %>
+        <div class="col s12 m6 l6" data-aos="fade-up">
+            <div class="skillbar">
+                <div class="skillbar-title"
+                        style="background: <%- mySkills[skill].background%>; width: <%- mySkills[skill].percent %>">
+                    <span><%- skill %></span>
+                </div>
+                <div class="skill-bar-percent"><%- mySkills[skill].percent %></div>
+            </div>
+        </div>
+        <% }); %>
+        <% } %>
+    </div>
+</div>

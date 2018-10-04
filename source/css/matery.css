@@ -768,6 +768,8 @@ table tr:nth-child(2n), thead {
 }
 
 .chip-container .tag-chips {
+    margin: 1rem auto 0.5rem;
+    max-width: 850px;
     text-align: center;
 }
 
@@ -1127,13 +1129,14 @@ table tr:nth-child(2n), thead {
 }
 
 #aboutme .introduction {
-    margin: 1.5rem auto 0;
+    margin: 1.5rem auto 3rem;
     max-width: 600px;
     color: #999;
 }
 
-.my-projects {
-    padding: 5rem 1rem;
+.my-projects,
+.my-skills {
+    padding: 2.5rem 1.5rem 1rem 1.5rem;
 }
 
 .my-projects .title {
@@ -1148,17 +1151,17 @@ table tr:nth-child(2n), thead {
 
 .my-projects .info .icon {
     display: inline-block;
-    width: 4.75rem;
-    height: 4.75rem;
+    width: 76px;
+    height: 76px;
     text-align: center;
-    line-height: 4.75rem;
+    line-height: 76px;
     color: #fff;
     font-size: 1.75rem;
     border-radius: 50%;
 }
 
 .my-projects .info .info-title {
-    margin: 1.15rem 0 0.875rem;
+    margin: 1.25rem 0 0.875rem;
     font-size: 1.25rem;
     font-weight: 500;
     line-height: 1.5em;
@@ -1172,6 +1175,73 @@ table tr:nth-child(2n), thead {
     margin: 0 0 10px;
     font-size: 0.9rem;
     color: #999;
+}
+
+.my-skills .title {
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+}
+
+.my-skills .skillbar {
+    position: relative;
+    display: block;
+    max-width: 360px;
+    margin: 15px auto;
+    background: #eee;
+    height: 30px;
+    border-radius: 35px;
+    -moz-border-radius: 35px;
+    -webkit-border-radius: 35px;
+    -webkit-transition: 0.4s linear;
+    -moz-transition: 0.4s linear;
+    -o-transition: 0.4s linear;
+    transition: 0.4s linear;
+    -webkit-transition-property: width, background-color;
+    -moz-transition-property: width, background-color;
+    -o-transition-property: width, background-color;
+    transition-property: width, background-color;
+}
+
+.skillbar .skillbar-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    border-radius: 35px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+}
+
+.skillbar .skillbar-title span {
+    display: block;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 0 20px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 35px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+}
+
+.skillbar .skillbar-bar {
+    height: 30px;
+    width: 0;
+    border-radius: 35px;
+    -moz-border-radius: 35px;
+    -webkit-border-radius: 35px;
+}
+
+.skillbar .skill-bar-percent {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    color: #ffffff;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 /*尾部样式*/

@@ -42,7 +42,7 @@
             <%# year. %>
             <% if (date(post.date, 'YYYY') != year) { %>
             <% year = date(post.date, 'YYYY'); %>
-            <div class="cd-timeline-img year">
+            <div class="cd-timeline-img year" data-aos="zoom-in-up">
                 <span><%- year %></span>
             </div>
             <% } %>
@@ -50,13 +50,13 @@
             <%# month. %>
             <% if (date(post.date, 'YYYY-MM') != month) { %>
             <% month = date(post.date, 'YYYY-MM'); %>
-            <div class="cd-timeline-img month">
+            <div class="cd-timeline-img month" data-aos="zoom-in-up">
                 <span><%- date(post.date, 'MM') %></span>
             </div>
             <% } %>
 
             <%# every day posts. %>
-            <div class="cd-timeline-img day">
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
                 <span><%- date(post.date, 'YYYY-MM-DD').substring(8, 10) %></span>
             </div>
             <article class="cd-timeline-content" data-aos="fade-up">
