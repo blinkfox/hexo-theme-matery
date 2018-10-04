@@ -1244,6 +1244,30 @@ table tr:nth-child(2n), thead {
     color: rgba(0, 0, 0, 0.5);
 }
 
+.my-skills .other-skills {
+    margin-top: 2rem;
+}
+
+.other-skills .sub-title {
+    font-size: 1.5rem;
+}
+
+.other-skills .tag-chips {
+    max-width: 600px;
+}
+
+.other-skills .chip {
+    background-color: #fff;
+    border: 1px solid #eee;
+}
+
+.other-skills .chip:hover {
+    color: #fff;
+    background-color: #0f9d58;
+    border: 1px solid #0f9d58;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .25)
+}
+
 /*尾部样式*/
 footer {
     padding-bottom: 1px;
