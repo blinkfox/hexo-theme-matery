@@ -65,7 +65,7 @@ $(function () {
             let imgPath = $(this).attr('src');
             $(this).wrap('<div class="img-item" data-src="' + imgPath + '"></div>');
         });
-        $('#articleContent, #cd-timeline').lightGallery({
+        $('#articleContent, #myGallery').lightGallery({
             selector: '.img-item'
         });
 

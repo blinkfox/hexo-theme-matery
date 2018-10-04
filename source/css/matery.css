@@ -1136,7 +1136,7 @@ table tr:nth-child(2n), thead {
 
 .my-projects,
 .my-skills {
-    padding: 2.5rem 1.5rem 1rem 1.5rem;
+    padding: 4rem 1.5rem 1rem 1.5rem;
 }
 
 .my-projects .title {
@@ -1266,6 +1266,28 @@ table tr:nth-child(2n), thead {
     background-color: #0f9d58;
     border: 1px solid #0f9d58;
     box-shadow: 0 5px 5px rgba(0, 0, 0, .25)
+}
+
+.my-gallery {
+    margin: 4.5rem auto 1rem;
+    padding: 0 1.2rem;
+    max-width: 1000px;
+}
+
+.my-gallery .title {
+    margin-bottom: 2rem;
+    font-size: 2.25rem;
+}
+
+.my-gallery .photo {
+    margin: .5rem 0;
+}
+
+.my-gallery .photo img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 /*尾部样式*/

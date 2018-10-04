@@ -1,4 +1,5 @@
 # main menu navigation url and icon
+# 配置菜单导航的名称、路径和图标icon.
 menu:
   Index:
     url: /
@@ -17,15 +18,18 @@ menu:
     icon: fa-user-circle-o
 
 # index page dream text,
+# 配置首页显示"梦想"的语句.
 dream:
   enable: true
   text: The best preparation for tomorrow is doing your best today.
 
-# Miscelaneous
+# Configure website favicon and LOGO
+# 配置网站favicon和网站LOGO
 favicon: /favicon.png
 logo: /medias/logo.png
 
-# profile in about page
+# profile in about page, including avatars, career, and personal introductions.
+# 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
 profile:
   avatar: /medias/avatar.jpg
   career: Software Engineer
@@ -33,6 +37,7 @@ profile:
 
 # config my projects informations in about page.
 # If you don't want to display this `My Projects` content, you can deactivate or delete this configuration.
+# 在“关于”页面配置"我的项目"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 myProjects:
   enable: true
   data:
@@ -54,6 +59,7 @@ myProjects:
 
 # config my skills informations in about page.
 # If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
+# 在“关于”页面配置"我的技能"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 mySkills:
   enable: true
   data:
@@ -76,10 +82,22 @@ mySkills:
       background: '#FFA726'
       percent: 75%
 
-# show post-calendar
+# config gallery of my photos in about page.
+# If you don't want to display this `Gallery` content, you can deactivate or delete this configuration.
+# 在“关于”页面配置"我的相册"图片，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
+myGallery:
+  enable: true
+  data:
+    - /medias/featureimages/0.jpg
+    - /medias/featureimages/1.jpg
+    - /medias/featureimages/2.jpg
+
+# Whether to display post-calender in the `archive` page
+# 设置在归档页面中是否显示'文章日历'控件
 postCalendar: true
 
-# the gitment config，default disabled
+# the Gitment config，default disabled
+# Gitment评论模块的配置，默认为不激活
 gitment:
   enable: false
   owner:
@@ -89,11 +107,13 @@ gitment:
     clientSecret:
 
 # disqus config, default disabled
+# Disqus评论模块的配置，默认为不激活
 disqus:
   enable: false
   shortname:
 
-# posts feature images
+# The post featured images that needs to be displayed when there is no image.
+# 无文章特色图片时需要显示的文章特色图片.
 featureImages: 
 - /medias/featureimages/0.jpg
 - /medias/featureimages/1.jpg

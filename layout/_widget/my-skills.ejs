@@ -4,7 +4,7 @@ var mySkills = theme.mySkills.data;
 var topSkillArr = [];
 %>
 <div class="my-skills">
-    <div class="title center-align" data-aos="zoom-in"><%- __('mySkills') %></div>
+    <div class="title center-align" data-aos="zoom-in-up"><%- __('mySkills') %></div>
     <div class="row">
         <% if (mySkills) { %>
         <% Object.keys(mySkills).forEach(function(skill) { %>
@@ -31,7 +31,6 @@ var topSkillArr = [];
      */
     var isInArray = function (arr, value) {
         for (var i = 0; i < arr.length; i++) {
-            console.log('arr i:' + arr[i])
             if (value == arr[i]) {
                 return true;
             }
