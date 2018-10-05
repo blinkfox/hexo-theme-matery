@@ -1124,6 +1124,7 @@ table tr:nth-child(2n), thead {
 }
 
 .profile .author .title {
+    margin-bottom: 0.1rem;
     font-size: 1.8rem;
     font-weight: 500;
     color: #3C4858;
