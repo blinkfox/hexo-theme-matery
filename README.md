@@ -22,7 +22,7 @@
 - [x] Refactoring tags page as **paginable**
 - [x] Refactoring Archives page as **paginable**
 - [x] Add category page
-- [ ] Add about me page
+- [x] Add about me page
 - [ ] Add 404 page
 - [ ] Beautify the scroll bar
 - [ ] Integrated [Gitalk](https://gitalk.github.io/) comment
