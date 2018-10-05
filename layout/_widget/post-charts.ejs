@@ -79,15 +79,23 @@
             {
                 name: '<%- __("postsNumberName")  %>',
                 type: 'line',
+                color: ['#6772e5'],
                 data: <%- monthValueArr %>,
                 markPoint: {
                     symbolSize: 45,
-                    data: [
-                        {type: 'max', name: '<%- __("maximum")  %>'},
-                        {type: 'min', name: '<%- __("minimum")  %>'}
-                    ]
+                    color: ['#fa755a','#3ecf8e','#82d3f4'],
+                    data: [{
+                        type: 'max',
+                        itemStyle: {color: ['#3ecf8e']},
+                        name: '<%- __("maximum")  %>'
+                    }, {
+                        type: 'min',
+                        itemStyle: {color: ['#fa755a']},
+                        name: '<%- __("minimum")  %>'
+                    }]
                 },
                 markLine: {
+                    itemStyle: {color: ['#ab47bc']},
                     data: [
                         {type: 'average', name: '<%- __("average")  %>'}
                     ]
@@ -121,6 +129,7 @@
                 name: '<%- __("categories")  %>',
                 type: 'pie',
                 radius: '50%',
+                color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
                 data: <%- categoryArrJson %>,
                 itemStyle: {
                     emphasis: {
@@ -175,15 +184,22 @@
         series: [
             {
                 type: 'bar',
+                color: ['#82d3f4'],
                 data: <%- tagCountArrJson %>,
                 markPoint: {
                     symbolSize: 45,
-                    data: [
-                        {type: 'max', name: '<%- __("maximum")  %>'},
-                        {type: 'min', name: '<%- __("minimum")  %>'}
-                    ],
+                    data: [{
+                        type: 'max',
+                        itemStyle: {color: ['#3ecf8e']},
+                        name: '<%- __("maximum")  %>'
+                    }, {
+                        type: 'min',
+                        itemStyle: {color: ['#fa755a']},
+                        name: '<%- __("minimum")  %>'
+                    }],
                 },
                 markLine: {
+                    itemStyle: {color: ['#ab47bc']},
                     data: [
                         {type: 'average', name: '<%- __("average")  %>'}
                     ]

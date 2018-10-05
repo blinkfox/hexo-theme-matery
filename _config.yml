@@ -42,18 +42,18 @@ myProjects:
   enable: true
   data:
     hexo-theme-matery:
-      icon: fa-github
-      iconBackground: 'linear-gradient(to bottom right, #1cf196 0%, #36a6bf 100%)'
+      icon: fa-meetup
+      iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
       url: http://github.com/blinkfox/hexo-theme-matery
       desc: This is a Hexo blog theme with 'Material Design' and responsive design.
     zealt:
-        icon: fa-code
-        iconBackground: 'linear-gradient(to bottom right, #fc5f3c 0%, #ff55d3 100%)'
+        icon: fa-database
+        iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
         url: https://github.com/blinkfox/zealot
         desc: 一个轻量级的SQL和参数动态生成工具库
     typora-vue-theme:
-        icon: fa-area-chart
-        iconBackground: 'linear-gradient(to bottom right, #32d6fb 0%, #5558ed 100%)'
+        icon: fa-file-text-o
+        iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
         url: https://github.com/blinkfox/typora-vue-theme
         desc: This is a typora theme inspired by Vue document style.
 
@@ -64,22 +64,22 @@ mySkills:
   enable: true
   data:
     Java:
-      background: '#EC407A'
+      background: 'linear-gradient(to bottom right, #FF0066 0%, #FF00CC 100%)'
       percent: 85%
     JavaScript:
-      background: '#AB47BC'
+      background: 'linear-gradient(to bottom right, #9900FF 0%, #CC66FF 100%)'
       percent: 80%
     HTML5:
-      background: '#42A5F5'
+      background: 'linear-gradient(to bottom right, #2196F3 0%, #42A5F5 100%)'
       percent: 80%
     CSS:
-      background: '#26C6DA'
+      background: 'linear-gradient(to bottom right, #00BCD4 0%, #80DEEA 100%)'
       percent: 70%
     SQL:
-      background: '#66BB6A'
+      background: 'linear-gradient(to bottom right, #4CAF50 0%, #81C784 100%)'
       percent: 90%
     程序设计:
-      background: '#FFA726'
+      background: 'linear-gradient(to bottom right, #FFEB3B 0%, #FFF176 100%)'
       percent: 75%
 
 # config gallery of my photos in about page.
