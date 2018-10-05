@@ -96,8 +96,19 @@ myGallery:
 # 设置在归档页面中是否显示'文章日历'控件
 postCalendar: true
 
+# the Gitalk config，default disabled
+# Gitalk 评论模块的配置，默认为不激活
+gitalk:
+  enable: false
+  owner:
+  repo:
+  oauth:
+    clientId:
+    clientSecret:
+  admin:
+
 # the Gitment config，default disabled
-# Gitment评论模块的配置，默认为不激活
+# Gitment 评论模块的配置，默认为不激活
 gitment:
   enable: false
   owner:

@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<style>
+    .gitalk-card {
+        margin: 1.25rem auto;
+    }
+
+    .gitalk-card .card-content {
+        padding: 1px 20px;
+    }
+</style>
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '<%- theme.gitalk.oauth.clientId %>',
+        clientSecret: '<%- theme.gitalk.oauth.clientSecret %>',
+        repo: '<%- theme.gitalk.repo %>',
+        owner: '<%- theme.gitalk.owner %>',
+        admin: <%- JSON.stringify(theme.gitalk.admin) %>,
+        id: '<%- date(page.date, 'YYYY-MM-DDTHH-mm-ss') %>',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
