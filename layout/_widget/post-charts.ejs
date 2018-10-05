@@ -2,7 +2,7 @@
     #posts-chart,
     #categories-chart,
     #tags-chart {
-        width: 300px;
+        width: 100%;
         height: 300px;
         margin: 0.5rem auto;
         padding: 0.5rem;
@@ -96,9 +96,19 @@
         ]
     };
 
+    <%
+    /* calculate categoriesOption data. */
+    var categoryArr = [];
+    site.categories.map(function(category) {
+        categoryArr.push({'name': category.name, 'value': category.length})
+    });
+
+    var categoryArrJson = JSON.stringify(categoryArr);
+    %>
+
     let categoriesOption = {
         title: {
-            text: '文章分类统计图',
+            text: '<%- __("categoriesChart")  %>',
             top: -4,
             x: 'center'
         },
@@ -108,16 +118,10 @@
         },
         series: [
             {
-                name: '文章分类',
+                name: '<%- __("categories")  %>',
                 type: 'pie',
                 radius: '50%',
-                data: [
-                    {value: 335, name: '前端'},
-                    {value: 310, name: '后端'},
-                    {value: 234, name: '软件设计'},
-                    {value: 135, name: '软件工具'},
-                    {value: 1548, name: '其他'}
-                ],
+                data: <%- categoryArrJson %>,
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,

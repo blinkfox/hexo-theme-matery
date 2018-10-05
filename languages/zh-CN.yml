@@ -14,6 +14,7 @@ categoryNumber: 文章分类数量
 categoryEmptyTip: 你目前还没有对文章进行分类.
 postCharts: 文章统计图
 postPublishChart: 文章发布统计图
+categoriesChart: 文章分类统计图
 postsNumberName: 文章篇数
 maximum: 最大值
 minimum: 最小值

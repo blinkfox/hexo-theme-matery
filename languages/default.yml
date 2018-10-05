@@ -13,8 +13,9 @@ categoryRadarTitle: Post Categories Radar Chart
 categoryNumber: Number of Categories
 categoryEmptyTip: Your posts has no categories information yet.
 postCharts: Post Charts
-postsNumberName: Number of posts
 postPublishChart: Post Publish Chart
+categoriesChart: Categories Chart
+postsNumberName: Number of posts
 maximum: Maximum
 minimum: Minimum
 average: Average
