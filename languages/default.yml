@@ -15,6 +15,7 @@ categoryEmptyTip: Your posts has no categories information yet.
 postCharts: Post Charts
 postPublishChart: Post Publish Chart
 categoriesChart: Categories Chart
+top10TagsChart: TOP10 Tags Chart
 postsNumberName: Number of posts
 maximum: Maximum
 minimum: Minimum

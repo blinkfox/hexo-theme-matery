@@ -133,10 +133,30 @@
         ]
     };
 
+    <%
+    /* calculate tagsOption data. */
+    // get all tags name and count,then order by length desc.
+    var tagArr = [];
+    site.tags.map(function(tag) {
+        tagArr.push({'name': tag.name, 'value': tag.length});
+    });
+    tagArr.sort((a, b) => {return b.value - a.value});
+
+    // get Top 10 tags name and count.
+    var tagNameArr = [];
+    var tagCountArr = [];
+    for (var i = 0, len = Math.min(tagArr.length, 10); i < len; i++) {
+        tagNameArr.push(tagArr[i].name);
+        tagCountArr.push(tagArr[i].value);
+    }
+
+    var tagNameArrJson = JSON.stringify(tagNameArr);
+    var tagCountArrJson = JSON.stringify(tagCountArr);
+    %>
 
     let tagsOption = {
         title: {
-            text: 'TOP10 标签统计图',
+            text: '<%- __("top10TagsChart")  %>',
             top: -5,
             x: 'center'
         },
@@ -144,7 +164,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月']
+                data: <%- tagNameArrJson %>
             }
         ],
         yAxis: [
@@ -155,23 +175,24 @@
         series: [
             {
                 type: 'bar',
-                data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8],
+                data: <%- tagCountArrJson %>,
                 markPoint: {
                     symbolSize: 45,
                     data: [
-                        {type: 'max', name: '最大值'},
-                        {type: 'min', name: '最小值'}
+                        {type: 'max', name: '<%- __("maximum")  %>'},
+                        {type: 'min', name: '<%- __("minimum")  %>'}
                     ],
                 },
                 markLine: {
                     data: [
-                        {type: 'average', name: '平均值'}
+                        {type: 'average', name: '<%- __("average")  %>'}
                     ]
                 }
             }
         ]
     };
 
+    // render the charts
     postsChart.setOption(postsOption);
     categoriesChart.setOption(categoriesOption);
     tagsChart.setOption(tagsOption);
