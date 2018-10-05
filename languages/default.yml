@@ -13,6 +13,11 @@ categoryRadarTitle: Post Categories Radar Chart
 categoryNumber: Number of Categories
 categoryEmptyTip: Your posts has no categories information yet.
 postCharts: Post Charts
+postsNumberName: Number of posts
+postPublishChart: Post Publish Chart
+maximum: Maximum
+minimum: Minimum
+average: Average
 myProjects: My Projects
 mySkills: My Skills
 otherSkills: Other Skills

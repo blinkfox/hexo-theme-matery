@@ -13,6 +13,11 @@ categoryRadarTitle: 文章分类雷达图
 categoryNumber: 文章分类数量
 categoryEmptyTip: 你目前还没有对文章进行分类.
 postCharts: 文章统计图
+postPublishChart: 文章发布统计图
+postsNumberName: 文章篇数
+maximum: 最大值
+minimum: 最小值
+average: 平均值
 myProjects: 我的项目
 mySkills: 我的技能
 otherSkills: 其他技能
