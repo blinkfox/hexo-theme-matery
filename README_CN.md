@@ -26,7 +26,7 @@
 - [ ] 美化滚动条
 - [x] 集成[Gitalk](https://gitalk.github.io/)
 - [ ] 右上角实现`fork me on github`
-- [ ] 添加`RSS`
+- [x] 添加`RSS`
 - [ ] 添加文章`TOC`
 - [ ] 网站底部加上访问量等统计功能
 - [ ] 首页设计和添加置顶文章
@@ -145,7 +145,7 @@ search:
   field: post
 ```
 
-### 中文链接转拼音
+### 中文链接转拼音（可选的）
 
 如果你的文章名称是中文的，那么 Hexo 默认生成的永久链接也会有中文，这样不利于`SEO`，且`gitment`评论对中文链接也不支持。我们可以用[hexo-permalink-pinyin](https://github.com/viko16/hexo-permalink-pinyin) Hexo 插件使在生成文章时生成中文拼音的永久链接。
 
@@ -164,6 +164,30 @@ permalink_pinyin:
 ```
 
 > **注**：除了此插件外，[hexo-abbrlink](https://github.com/rozbo/hexo-abbrlink)插件也可以生成非中文的链接。
+
+### 添加RSS订阅支持（可选的）
+
+本主题中还使用到了[hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)的 Hexo 插件来做`RSS`，安装命令如下：
+
+```bash
+npm install hexo-generator-feed --save
+```
+
+在 Hexo 根目录下的`_config.yml`文件中，新增以下的配置项：
+
+```yml
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+```
+
+执行 `hexo clean && hexo g`重新生成博客文件，然后在`public`文件夹中即可看到`atom.xml`文件，说明你已经安装成功了。
 
 ### 修改社交链接
 

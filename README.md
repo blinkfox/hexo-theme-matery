@@ -26,7 +26,7 @@
 - [ ] Beautify the scroll bar
 - [x] Integrated [Gitalk](https://gitalk.github.io/) comment
 - [ ] Add `fork me on github` in the upper right corner
-- [ ] Add the `RSS` link
+- [x] Add the `RSS` feed
 - [ ] Add post detatil of `TOC`
 - [ ] At the bottom of the site, add statistics such as traffic
 - [ ] design Index Page and support to add top posts
@@ -145,7 +145,7 @@ search:
   field: post
 ```
 
-### Translate Chinese Link to Pinyin
+### Translate Chinese Link to Pinyin (Optional)
 
 Defualt permalinks of Hexo will include Chinese if your atrticle's title is Chinese.But it's adverse to `SEO`,and `gitment` comments don't suport Chinese Link as well.We can use the [hexo-permalink-pinyin](https://github.com/viko16/hexo-permalink-pinyin) of Hexo plugin to generate permalinks of Chinese Pinyin  when generating posts.
 
@@ -164,6 +164,30 @@ permalink_pinyin:
 ```
 
 > **Note*:[hexo-abbrlink](https://github.com/rozbo/hexo-abbrlink) can genarate non-Chinese link in addtion to this plugin.
+
+### Add RSS feed support (Optional)
+
+The theme uses the Hexo plugin[hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) to support `RSS` feed , and the Installation commands are as follows:
+
+```bash
+npm install hexo-generator-feed --save
+```
+
+Add configuration of `_config.yml` file in Hexo root folder as follows：
+
+```yml
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+```
+
+Execute `hexo clean && hexo g` to regenerate the blog file, and then you can see the `atom.xml` file in the `public` folder, indicating that you have successfully installed.
 
 ### Modify social links
 
