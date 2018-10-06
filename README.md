@@ -15,7 +15,7 @@
 - Blog posts list with waterflow(There will be 24 images if the articl dosn't have  featured pictures).
 - Archive page with timeline.
 - Tags page of the **word cloud** and categories page of the **radar chart**
-- Comment module of [Gitment](https://imsun.github.io/gitment/) and [Disqus](https://disqus.com/).
+- Comment module of [Gitalk](https://gitalk.github.io/), [Gitment](https://imsun.github.io/gitment/) and [Disqus](https://disqus.com/).(Gitalk is recommended)
 
 ## Next development plans
 
@@ -23,9 +23,8 @@
 - [x] Refactoring Archives page as **paginable**
 - [x] Add category page
 - [x] Add about me page
-- [ ] Add 404 page
 - [ ] Beautify the scroll bar
-- [ ] Integrated [Gitalk](https://gitalk.github.io/) comment
+- [x] Integrated [Gitalk](https://gitalk.github.io/) comment
 - [ ] Add `fork me on github` in the upper right corner
 - [ ] Add the `RSS` link
 - [ ] Add post detatil of `TOC`

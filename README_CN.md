@@ -15,7 +15,7 @@
 - 瀑布流式的博客文章列表(文章无特色图片时会有`24`张漂亮的图片代替)
 - 时间轴式的归档页
 - **词云**的标签页和**雷达图**的分类页
-- [Gitment](https://imsun.github.io/gitment/)和[Disqus](https://disqus.com/)评论模块
+- [Gitalk](https://gitalk.github.io/)、[Gitment](https://imsun.github.io/gitment/)和[Disqus](https://disqus.com/)评论模块（推荐使用Gitalk）
 
 ## 后续开发计划
 
@@ -23,9 +23,8 @@
 - [x] 重构归档页为**可分页**
 - [x] 增加分类页
 - [x] 增加关于我页面
-- [ ] 增加`404`页面
 - [ ] 美化滚动条
-- [ ] 集成[Gitalk](https://gitalk.github.io/)
+- [x] 集成[Gitalk](https://gitalk.github.io/)
 - [ ] 右上角实现`fork me on github`
 - [ ] 添加`RSS`
 - [ ] 添加文章`TOC`
