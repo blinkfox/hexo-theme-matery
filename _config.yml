@@ -144,6 +144,13 @@ gitment:
 disqus:
   enable: false
   shortname:
+  
+# githubLink config, default disabled
+githubLink:
+  enable: true
+  link: https://github.com/blinkfox/hexo-theme-matery
+  title: fork me on github
+  icon:
 
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
