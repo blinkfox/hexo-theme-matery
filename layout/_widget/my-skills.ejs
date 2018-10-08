@@ -1,0 +1,57 @@
+<%
+// the skills information of theme _config.yml.
+var mySkills = theme.mySkills.data;
+var topSkillArr = [];
+%>
+<div class="my-skills">
+    <div class="title center-align" data-aos="zoom-in-up"><%- __('mySkills') %></div>
+    <div class="row">
+        <% if (mySkills) { %>
+        <% Object.keys(mySkills).forEach(function(skill) { %>
+        <% topSkillArr.push(skill); %>
+        <div class="col s12 m6 l6" data-aos="fade-up">
+            <div class="skillbar">
+                <div class="skillbar-title"
+                     style="background: <%- mySkills[skill].background %>; width: <%- mySkills[skill].percent %>">
+                    <span><%- skill %></span>
+                </div>
+                <div class="skill-bar-percent"><%- mySkills[skill].percent %></div>
+            </div>
+        </div>
+        <% }); %>
+        <% } %>
+    </div>
+
+    <%
+    /**
+     * Determine if an element is included in the array.
+     *
+     * @param arr array
+     * @param value value
+     */
+    var isInArray = function (arr, value) {
+        for (var i = 0; i < arr.length; i++) {
+            if (value == arr[i]) {
+                return true;
+            }
+        }
+        return false;
+    }
+    %>
+
+    <% if (site.tags) { %>
+    <div class="other-skills chip-container" data-aos="zoom-in-up">
+        <div class="sub-title center-align"><%- __('otherSkills') %></div>
+        <div class="tag-chips center-align">
+            <% site.tags.map(function(tag) { %>
+            <% if (!isInArray(topSkillArr, tag.name)) { %>
+            <a href="<%- url_for(tag.path) %>" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default"><%- tag.name %></span>
+            </a>
+            <% } %>
+            <% }); %>
+        </div>
+    </div>
+    <% } %>
+
+</div>

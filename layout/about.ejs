@@ -1,0 +1,63 @@
+<style type="text/css">
+    /* don't remove. */
+    .about-cover {
+        height: 80vh;
+    }
+</style>
+
+<%- partial('_partial/bg-cover') %>
+
+<main class="content">
+
+    <div id="aboutme" class="container about-container">
+        <div class="card">
+            <div class="card-content">
+                <div class="row">
+                    <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
+                        <%- partial('_partial/post-statis') %>
+                    </div>
+                    <div class="col s12 m12 l4">
+                        <div class="profile center-align">
+                            <div class="avatar">
+                                <img src="<%- theme.profile.avatar %>" alt="<%- config.author %>"
+                                     class="circle responsive-img avatar-img">
+                            </div>
+                            <div class="author">
+                                <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
+                                    <%- partial('_partial/post-statis') %>
+                                </div>
+                                <div class="title"><%- config.author %></div>
+                                <div class="career"><%- theme.profile.career %></div>
+                                <div class="social-link hide-on-large-only" data-aos="zoom-in-left">
+                                    <%- partial('_partial/social-link') %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l4 hide-on-med-and-down" data-aos="zoom-in-left">
+                        <div class="social-link">
+                            <%- partial('_partial/social-link') %>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="introduction center-align" data-aos="fade-up"><%= theme.profile.introduction %></div>
+
+                <%- partial('_widget/post-charts') %>
+
+                <% if (theme.myProjects && theme.myProjects.enable) { %>
+                <%- partial('_widget/my-projects') %>
+                <% } %>
+
+                <% if (theme.mySkills && theme.mySkills.enable) { %>
+                <%- partial('_widget/my-skills') %>
+                <% } %>
+
+                <% if (theme.myGallery && theme.myGallery.enable) { %>
+                <%- partial('_widget/my-gallery') %>
+                <% } %>
+
+            </div>
+        </div>
+    </div>
+</main>

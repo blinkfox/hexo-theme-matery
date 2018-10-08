@@ -1,0 +1,29 @@
+<%
+// the gallery photos of theme _config.yml.
+var gallery = theme.myGallery.data;
+%>
+<div id="myGallery" class="my-gallery">
+    <div class="title center-align" data-aos="zoom-in-up"><%- __('gallery') %></div>
+    <div class="row">
+        <% if (gallery) { %>
+        <% Object.keys(gallery).forEach(function(photo) { %>
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="<%- gallery[photo] %>">
+                <img src="<%- gallery[photo] %>" class="responsive-img">
+            </div>
+        </div>
+        <% }); %>
+        <% } %>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        let animateClass = 'animated pulse';
+        $('#myGallery .photo').hover(function () {
+            $(this).addClass(animateClass);
+        }, function () {
+            $(this).removeClass(animateClass);
+        });
+    });
+</script>

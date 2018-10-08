@@ -1,8 +1,8 @@
 # hexo-theme-matery
 
-[![HitCount](http://hits.dwyl.io/blinkfox/hexo-theme-matery.svg)](http://hits.dwyl.io/blinkfox/hexo-theme-matery) [![GitHub issues](https://img.shields.io/github/issues/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/issues) [![GitHub license](https://img.shields.io/github/license/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/blob/master/LICENSE) [![Hexo Version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io) [![GitHub forks](https://img.shields.io/github/forks/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/network) [![GitHub stars](https://img.shields.io/github/stars/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/stargazers)
+[![HitCount](http://hits.dwyl.io/blinkfox/hexo-theme-matery.svg)](http://hits.dwyl.io/blinkfox/hexo-theme-matery) [![GitHub issues](https://img.shields.io/github/issues/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/issues) [![GitHub license](https://img.shields.io/github/license/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/blob/master/LICENSE) [![Download](https://img.shields.io/badge/downloads-master-green.svg)](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master) [![Hexo Version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io) [![GitHub forks](https://img.shields.io/github/forks/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/network) [![GitHub stars](https://img.shields.io/github/stars/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/stargazers)
 
-[中文文档](README_CN.md)
+[中文说明](README_CN.md) | [DEMO](https://blinkfox.github.io/)
 
 > This is a Hexo blog theme with 'Material Design' and responsive design.
 
@@ -14,16 +14,20 @@
 - Changing 'banner' picture dynamically everday.
 - Blog posts list with waterflow(There will be 24 images if the articl dosn't have  featured pictures).
 - Archive page with timeline.
-- Comment module of [Gitment](https://imsun.github.io/gitment/) and [Disqus](https://disqus.com/).
+- Tags page of the **word cloud** and categories page of the **radar chart**
+- Comment module of [Gitalk](https://gitalk.github.io/), [Gitment](https://imsun.github.io/gitment/) and [Disqus](https://disqus.com/).(Gitalk is recommended)
 
 ## Next development plans
 
-- [ ] Refactoring tags page as **paginable**
-- [ ] Refactoring Archives page as **paginable**
-- [ ] Add category page
-- [ ] Integrated [Gitalk](https://gitalk.github.io/) comment
+- [x] Refactoring tags page as **paginable**
+- [x] Refactoring Archives page as **paginable**
+- [x] Add category page
+- [x] Add about me page
+- [ ] Beautify the scroll bar
+- [x] Integrated [Gitalk](https://gitalk.github.io/) comment
 - [ ] Add `fork me on github` in the upper right corner
-- [ ] Add the `RSS` link
+- [x] Add the `RSS` feed
+- [ ] Add post detatil of `TOC`
 - [ ] At the bottom of the site, add statistics such as traffic
 - [ ] design Index Page and support to add top posts
 - [ ] Add **rewards** function after the posts ends
@@ -34,7 +38,7 @@
 ## Download
 
 You should have a [Hexo](https://hexo.io/zh-cn/) blog when you see it here.If not,try to use the hexo and [Markdown](https://www.appinn.com/markdown/) to write your blog and post.
-Click[here](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master)to download master branch of the last stable version of the code.After decompressing,copy the `hexo-theme-matery` folder
+Click [here](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master) to download master branch of the last stable version of the code.After decompressing,copy the `hexo-theme-matery` folder
 to your `themes` folder of your Hexo.Of course,you can uer `Git clone` to download in your `themes` folder.
 
 ```bash
@@ -47,21 +51,61 @@ git clone https://github.com/blinkfox/hexo-theme-matery.git
 
 Modify the value of `theme` in `_config.yml` of Hexo's root folder: `theme: hexo-theme-matery`.
 
-### config tags page
+#### Suggestions for other changes to the `_config.yml`:
+ 
+- Please modify the value of `url` of `_config.yml` to your website's main `URL` (eg `http://xxx.github.io`).
+- Recommended modify the value of the two 'per_page` to be a multiple of `6`, such as: `12`, `18`, etc. so that the posts list can be displayed well under each screen.
+- If you are a Chinese user, it is recommended to change the value of `language` to `zh-CN`.
 
-`tags`page is to show all of tags.If the `source` directory of your blog doesn't have `tags/index.md` file,you need to new one like this:
+### new categories page
+
+`categories` page is to show all of categories. If the `source` directory of your blog doesn't have `categories/index.md` file, you need to new one like this:
+
+```bash
+hexo new page "categories"
+```
+
+to edit your new page files`/source/categories/index.md`, you need somethings as follows:
+
+```yml
+title: categories
+date: 2018-09-30 17:25:30
+type: "categories"
+layout: "categories"
+```
+
+### new tags page
+
+`tags` page is to show all of tags. If the `source` directory of your blog doesn't have `tags/index.md` file,you need to new one like this:
 
 ```bash
 hexo new page "tags"
 ```
 
-to edit your new page files`/source/tags/index.md` ,you need somethings as follows:
+to edit your new page files`/source/tags/index.md`, you need somethings as follows:
 
 ```yml
 title: tags
 date: 2018-09-10 18:23:38
 type: "tags"
 layout: "tags"
+```
+
+### new about page
+
+`about` page is to show my blog and myself information. If the `source` directory of your blog doesn't have `about/index.md` file, you need to new one like this:
+
+```bash
+hexo new page "about"
+```
+
+to edit your new page files`/source/about/index.md`, you need somethings as follows:
+
+```yml
+title: about
+date: 2018-09-30 17:25:30
+type: "about"
+layout: "about"
 ```
 
 ### Code highlight
@@ -101,7 +145,7 @@ search:
   field: post
 ```
 
-### Translate Chinese Link to Pinyin
+### Translate Chinese Link to Pinyin (Optional)
 
 Defualt permalinks of Hexo will include Chinese if your atrticle's title is Chinese.But it's adverse to `SEO`,and `gitment` comments don't suport Chinese Link as well.We can use the [hexo-permalink-pinyin](https://github.com/viko16/hexo-permalink-pinyin) of Hexo plugin to generate permalinks of Chinese Pinyin  when generating posts.
 
@@ -121,28 +165,52 @@ permalink_pinyin:
 
 > **Note*:[hexo-abbrlink](https://github.com/rozbo/hexo-abbrlink) can genarate non-Chinese link in addtion to this plugin.
 
+### Add RSS feed support (Optional)
+
+The theme uses the Hexo plugin[hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) to support `RSS` feed , and the Installation commands are as follows:
+
+```bash
+npm install hexo-generator-feed --save
+```
+
+Add configuration of `_config.yml` file in Hexo root folder as follows：
+
+```yml
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+```
+
+Execute `hexo clean && hexo g` to regenerate the blog file, and then you can see the `atom.xml` file in the `public` folder, indicating that you have successfully installed.
+
 ### Modify social links
 
-You can find the content of `social-link` and add links you need in the `/layout/_partial/footer.ejs` and `/layout/_partial/mobile-nav.ejs` file of theme files as follows:
+In the `/layout/_partial/social-link.ejs` file of the theme, you can modify or add the social link address you need. To add a link, please refer to the following code:
 
 ```html
 <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-    <i class="fa fa-github fa-lg"></i>
+    <i class="fa fa-github"></i>
 </a>
 ```
 
 You can search social icon such as `fa-github` in [Font Awesome](https://fontawesome.com/icons).There are common social icons you can reference:
 
-- Facebook: fa-facebook
-- Twitter: fa-twitter
-- Google-plus: fa-google-plus
-- Linkedin: fa-linkedin
-- Tumblr: fa-tumblr
-- Medium: fa-medium
-- Slack: fa-slack
-- Sina Weibo: fa-weibo
-- Wechat: fa-wechat
-- QQ: fa-qq
+- Facebook: `fa-facebook`
+- Twitter: `fa-twitter`
+- Google-plus: `fa-google-plus`
+- Linkedin: `fa-linkedin`
+- Tumblr: `fa-tumblr`
+- Medium: `fa-medium`
+- Slack: `fa-slack`
+- Sina Weibo: `fa-weibo`
+- Wechat: `fa-wechat`
+- QQ: `fa-qq`
 
 > **Note**: The version of `Font Awesome` is `4.5.0`.
 
@@ -156,6 +224,7 @@ title: typora-vue-theme Theme introduction
 date: 2018-09-07 09:25:00
 author: Qi Zhao
 img: /source/images/xxx.jpg # or:http://xxx.com/xxx.jpg
+categories: Markdown
 tags:
   - Typora
   - Markdown
@@ -178,20 +247,6 @@ tags:
 
 ![Post's other parts](http://static.blinkfox.com/hexo-matery-post2.png)
 
-### post's contnet picture
-
-![post's contnet picture](http://static.blinkfox.com/hexo-matery-image.png)
-
-### Label page
-
-![Label](http://static.blinkfox.com/hexo-matery-tags1.png)
-
-![Seletec page](http://static.blinkfox.com/hexo-matery-tags2.png)
-
-### Archive page
-
-![Archive](http://static.blinkfox.com/hexo-matery-archive.png)
-
 ## Custom modification
 
 You can modify some custom modification in `_config.yml` as follows:
@@ -199,6 +254,8 @@ You can modify some custom modification in `_config.yml` as follows:
 - Menu
 - Inspirational quotes on Home
 - `favicon` and `Logo`
+- profiles
+- gitment and disqus
 - The map of default featured pictures. The theme will take remainde according to `hashcode` of post title if the post dose not set featured piactures.
 
 **I think everyone should have their own style and feature of blog**。if you are not satisfiled with functions and theme color,you can modify by yourself,and more free functions and deatil need to be modified by modify source code when it is hard to be finished in `_config.yml`.
@@ -236,3 +293,4 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 ```
 
 There are 24 featured pictures in `/source/medias/featureimages`,you can add or delete,and modify it in `_config.yml` at the sametime.
+

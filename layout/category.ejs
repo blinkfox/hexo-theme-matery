@@ -2,15 +2,7 @@
 
 <main class="content">
 
-    <% if (theme.dream.enable) { %>
-    <div class="container notice">
-        <div class="card">
-            <div class="card-content">
-                <i class="fa fa-volume-up fa-lg fa-fw text-color"></i><%= theme.dream.text %>
-            </div>
-        </div>
-    </div>
-    <% } %>
+    <%- partial('_widget/category-cloud') %>
 
     <%
     var hashCode = function (str) {
@@ -27,34 +19,26 @@
     };
     %>
 
-    <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
-        <div class="row article-row">
-            <% page.posts.forEach(post => { %>
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+        <div class="row tags-posts">
+            <% page.posts.sort('date').reverse().forEach(post => { %>
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="<%- url_for(post.path) %>">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             <% if (post.img) { %>
                             <img src="<%= post.img %>" class="responsive-img" alt="<%- post.title %>">
                             <% } else { %>
                             <%
-                                var featureimg = '/medias/featureimages/0.jpg';
-                                var featureImages = theme.featureImages;
-                                if (!featureImages || featureImages.length == 0) {
-                                    return featureimg;
-                                }
-
-                                var len = featureImages.length;
+                                var len = theme.featureImages.length;
                                 var num = Math.abs(hashCode(post.title) % len);
-                                featureimg = featureImages[num];
+                                var featureimg = theme.featureImages[num];
                             %>
-                            <img src="<%- featureimg %>" class="responsive-img" alt="<%- post.title %>">
+                            <img src="<%= featureimg %>" class="responsive-img" alt="<%- post.title %>">
                             <% } %>
                             <span class="card-title"><%- post.title %></span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary"><%- strip_html(post.content).substring(0, 70) %></div>
                         <div class="publish-info">
@@ -80,7 +64,7 @@
                         </div>
                     </div>
 
-                    <% if(post.tags && post.tags.length > 0) { %>
+                    <% if (post.tags && post.tags.length) { %>
                     <div class="card-action article-tags">
                         <% post.tags.forEach(tag => { %>
                         <a href="<%- url_for(tag.path) %>" target="_blank">
@@ -94,7 +78,6 @@
             <% }); %>
         </div>
     </article>
-
 </main>
 
 <% if (page.total > 1) { %>

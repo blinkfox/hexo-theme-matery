@@ -1,0 +1,249 @@
+.gitalk-card {
+    margin: 1.25rem auto;
+}
+
+.gitalk-card .card-content {
+    padding: 1px 20px 20px 20px;
+}
+
+#gitalk-container .gt-no-init a {
+    color: #42b983;
+    text-decoration: underline;
+}
+
+#gitalk-container .gt-container .gt-btn,
+#gitalk-container .gt-btn-login,
+#gitalk-container .gt-container .gt-header-controls .gt-btn {
+    border: 1px solid #4caf50;
+    background-color: #4caf50;
+    box-shadow: 0 2px 2px 0 rgba(76, 175, 80, 0.14), 0 3px 1px -2px rgba(76, 175, 80, 0.2), 0 1px 5px 0 rgba(76, 175, 80, 0.12);
+}
+
+#gitalk-container .gt-container .gt-link {
+    color: #42b983;
+    text-decoration: underline;
+}
+
+#gitalk-container .gt-container .gt-btn-preview {
+    color: #4caf50;
+    background-color: #fff !important;
+    box-shadow: 0 2px 2px 0 rgba(76, 175, 80, 0.14), 0 3px 1px -2px rgba(76, 175, 80, 0.2), 0 1px 5px 0 rgba(76, 175, 80, 0.12);
+}
+
+#gitalk-container .gt-container .gt-header-textarea {
+    background-color: #f6f9fc;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#gitalk-container .gt-container .gt-svg svg {
+    fill: #42b983;
+}
+
+#gitalk-container .gt-container .gt-header-controls-tip,
+#gitalk-container .gt-container a,
+#gitalk-container .gt-container .gt-comment-username {
+    color: #42b983;
+}
+
+#gitalk-container .gt-container .gt-ico-text {
+    margin-left: 0.08rem;
+}
+
+#gitalk-container .gt-container .gt-comment-body {
+    color: #34495e !important;
+}
+
+#gitalk-container .gt-container .gt-header-preview {
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    background-color: #f9f9f9;
+}
+
+.markdown-body p {
+    margin: 2px 2px 10px;
+    font-size: 1.05rem;
+    line-height: 1.78rem;
+}
+
+.markdown-body blockquote p {
+    text-indent: 0.2rem;
+}
+
+.markdown-body a {
+    padding: 0 2px;
+    color: #42b983;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.markdown-body img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.markdown-body ol li {
+    list-style-type: decimal;
+}
+
+.markdown-body ol,
+ul {
+    display: block;
+    padding-left: 2em;
+    word-spacing: 0.05rem;
+}
+
+.markdown-body ul li,
+ol li {
+    display: list-item;
+    line-height: 1.8rem;
+    font-size: 1rem;
+}
+
+.markdown-body ul li {
+    list-style-type: disc;
+}
+
+.markdown-body ul ul li {
+    list-style-type: circle;
+}
+
+.markdown-body table, th, td {
+    padding: 12px 13px;
+    border: 1px solid #dfe2e5;
+}
+
+.markdown-body table, th, td {
+    border: 0;
+}
+
+table tr:nth-child(2n), thead {
+    background-color: #fafafa;
+}
+
+.markdown-body table th {
+    background-color: #f2f2f2;
+    min-width: 80px;
+}
+
+.markdown-body table td {
+    min-width: 80px;
+}
+
+.markdown-body h1 {
+    font-size: 1.85rem;
+    font-weight: bold;
+    line-height: 2.2rem;
+}
+
+.markdown-body h2 {
+    font-size: 1.65rem;
+    font-weight: bold;
+    line-height: 1.9rem;
+}
+
+.markdown-body h3 {
+    font-size: 1.45rem;
+    font-weight: bold;
+    line-height: 1.7rem;
+}
+
+.markdown-body h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+}
+
+.markdown-body h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.4rem;
+}
+
+.markdown-body h6 {
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
+
+.markdown-body p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.markdown-body hr {
+    margin: 12px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+.markdown-body blockquote {
+    margin: 15px 0;
+    border-left: 5px solid #42b983;
+    padding: 1rem 0.8rem 1rem 0.8rem;
+    color: #666;
+    background-color: rgba(66, 185, 131, .1);
+}
+
+.markdown-body pre {
+    padding: 1.2em;
+    margin: .5em 0;
+    background: #272822;
+    overflow: auto;
+    border-radius: 0.3em;
+    tab-size: 4;
+}
+
+.markdown-body code {
+    padding: 1px 1px;
+    font-size: 0.92rem;
+    color: #e96900;
+    background-color: #f8f8f8;
+    border-radius: 2px;
+}
+
+.markdown-body pre code {
+    padding: 0;
+    color: #e8eaf6;
+    background-color: #272822;
+}
+
+.markdown-body pre[class*="language-"] {
+    padding: 1.2em;
+    margin: .5em 0;
+}
+
+.markdown-body code[class*="language-"],
+pre[class*="language-"] {
+    color: #e8eaf6;
+}
+
+.markdown-body [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: inherit;
+    margin-left: -1.3rem;
+    margin-right: 0.4rem;
+    margin-top: -1px;
+    vertical-align: middle;
+    left: unset;
+    visibility: visible;
+}
+
+.markdown-body b,
+strong {
+    font-weight: bold;
+}
+
+.markdown-body dfn {
+    font-style: italic;
+}
+
+.markdown-body small {
+    font-size: 85%;
+}
+
+.markdown-body cite {
+    font-style: normal;
+}
+
+.markdown-body mark {
+    background-color: #fcf8e3;
+    padding: .2em;
+}
