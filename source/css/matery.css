@@ -257,6 +257,10 @@ header .side-nav .menu-list a i {
     line-height: 16px;
 }
 
+.mobile-menu-list a i {
+    font-size: 1.1rem;
+}
+
 header .side-nav .fa-fw {
     width: 5rem;
     text-align: left;

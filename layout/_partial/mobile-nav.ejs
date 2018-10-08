@@ -14,7 +14,7 @@
         </div>
     </div>
 
-    <ul class="menu-list">
+    <ul class="menu-list mobile-menu-list">
         <% Object.keys(theme.menu).forEach(function(key) { %>
         <li>
             <a href="<%- theme.menu[key].url %>" class="waves-effect waves-light">
@@ -27,11 +27,11 @@
             </a>
         </li>
         <% }); %>
-        <% if (theme.githubLink.enable) { %>
+        <% if (theme.githubLink && theme.githubLink.enable) { %>
         <li><div class="divider"></div></li>
         <li>
-            <a href="<%= theme.githubLink.link %> %>" class="waves-effect waves-light">
-                <i class="fa  fa fa-github fa-lg fa-fw"></i>Fork Me
+            <a href="<%- theme.githubLink.url %>" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i><%- theme.githubLink.title %>
             </a>
         </li>
         <% } %>

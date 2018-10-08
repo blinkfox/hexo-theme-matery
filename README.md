@@ -25,7 +25,7 @@
 - [x] Add about me page
 - [ ] Beautify the scroll bar
 - [x] Integrated [Gitalk](https://gitalk.github.io/) comment
-- [ ] Add `fork me on github` in the upper right corner
+- [x] Add `fork me on github` in the upper right corner
 - [x] Add the `RSS` feed
 - [ ] Add post detatil of `TOC`
 - [ ] At the bottom of the site, add statistics such as traffic

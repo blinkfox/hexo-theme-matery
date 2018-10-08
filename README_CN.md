@@ -25,7 +25,7 @@
 - [x] 增加关于我页面
 - [ ] 美化滚动条
 - [x] 集成[Gitalk](https://gitalk.github.io/)
-- [ ] 右上角实现`fork me on github`
+- [x] 右上角实现`fork me on github`
 - [x] 添加`RSS`
 - [ ] 添加文章`TOC`
 - [ ] 网站底部加上访问量等统计功能

@@ -128,12 +128,12 @@ disqus:
   enable: false
   shortname:
 
-# githubLink config, default disabled
+# Whether to display fork me on github icon and link, default false
+# 配置是否在 header 中显示 fork me on github 的图标，默认为false.
 githubLink:
-  enable: true
-  link: https://github.com/blinkfox/hexo-theme-matery
-  title: fork me on github
-  icon:
+  enable: false
+  url: https://github.com/blinkfox/hexo-theme-matery
+  title: Fork Me
 
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.

@@ -13,7 +13,8 @@
                 <%- partial('_partial/navigation') %>
             </div>
         </div>
-        <% if (theme.githubLink.enable) { %>
+
+        <% if (theme.githubLink && theme.githubLink.enable) { %>
         <%- partial('_partial/github-link') %>
         <% } %>
     </nav>
