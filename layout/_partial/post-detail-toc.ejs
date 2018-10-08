@@ -19,11 +19,17 @@
 
     .post-toc a {
         color: #34495e;
+        font-size: 0.96rem;
     }
 
     .post-toc a:hover {
         color: #42b983;
         text-decoration: underline;
+    }
+
+    .post-toc .active {
+        color: #42b983;
+        font-weight: 500;
     }
 </style>
 <div class="row">
@@ -33,9 +39,19 @@
     <div class="col l3 hide-on-med-and-down">
         <div class="toc-widget">
             <h4><%- __('toc') %></h4>
-            <div class="toc">
+            <div id="toc-content">
                 <%- toc(page.content, {class: 'post-toc', list_number: false}) %>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+$(function () {
+    let tocLinks = $('#toc-content a');
+    tocLinks.on('click', function () {
+        tocLinks.removeClass('active');
+        $(this).addClass('active');
+    });
+});
+</script>
