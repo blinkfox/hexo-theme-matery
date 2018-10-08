@@ -1,22 +1,136 @@
-# main menu navigation
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @luokangyuan Sign out
+3
+18 7 blinkfox/hexo-theme-matery
+ Code  Issues 1  Pull requests 0  Projects 0  Wiki  Insights
+hexo-theme-matery/_config.yml
+05cf470  2 hours ago
+@blinkfox blinkfox 新增了基本的TOC功能
+     
+158 lines (145 sloc)  4.99 KB
+# main menu navigation url and icon
+# 配置菜单导航的名称、路径和图标icon.
 menu:
-  Index: /
-  Tags: /tags
-  Archives: /archives
+  Index:
+    url: /
+    icon: fa-home
+  Tags:
+    url: /tags
+    icon: fa-tags
+  Categories:
+    url: /categories
+    icon: fa-bookmark
+  Archives:
+    url: /archives
+    icon: fa-archive
+  About:
+    url: /about
+    icon: fa-user-circle-o
 
 # index page dream text,
+# 配置首页显示"梦想"的语句.
 dream:
   enable: true
   text: The best preparation for tomorrow is doing your best today.
 
-# show post-calendar
-postCalendar: true
-
-# Miscelaneous
+# Configure website favicon and LOGO
+# 配置网站favicon和网站LOGO
 favicon: /favicon.png
 logo: /medias/logo.png
 
-# the gitment config，default disabled
+# Whether to activate the Post TOC.
+# 是否激活文章 TOC 功能.
+toc:
+  enable: false
+
+# profile in about page, including avatars, career, and personal introductions.
+# 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
+profile:
+  avatar: /medias/avatar.jpg
+  career: Software Engineer
+  introduction: If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as your brother and hope as your sentry.
+
+# config my projects informations in about page.
+# If you don't want to display this `My Projects` content, you can deactivate or delete this configuration.
+# 在“关于”页面配置"我的项目"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
+myProjects:
+  enable: true
+  data:
+    hexo-theme-matery:
+      icon: fa-meetup
+      iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
+      url: http://github.com/blinkfox/hexo-theme-matery
+      desc: This is a Hexo blog theme with 'Material Design' and responsive design.
+    zealt:
+        icon: fa-database
+        iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
+        url: https://github.com/blinkfox/zealot
+        desc: 一个轻量级的SQL和参数动态生成工具库
+    typora-vue-theme:
+        icon: fa-file-text-o
+        iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
+        url: https://github.com/blinkfox/typora-vue-theme
+        desc: This is a typora theme inspired by Vue document style.
+
+# config my skills informations in about page.
+# If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
+# 在“关于”页面配置"我的技能"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
+mySkills:
+  enable: true
+  data:
+    Java:
+      background: 'linear-gradient(to bottom right, #FF0066 0%, #FF00CC 100%)'
+      percent: 85%
+    JavaScript:
+      background: 'linear-gradient(to bottom right, #9900FF 0%, #CC66FF 100%)'
+      percent: 80%
+    HTML5:
+      background: 'linear-gradient(to bottom right, #2196F3 0%, #42A5F5 100%)'
+      percent: 80%
+    CSS:
+      background: 'linear-gradient(to bottom right, #00BCD4 0%, #80DEEA 100%)'
+      percent: 70%
+    SQL:
+      background: 'linear-gradient(to bottom right, #4CAF50 0%, #81C784 100%)'
+      percent: 90%
+    程序设计:
+      background: 'linear-gradient(to bottom right, #FFEB3B 0%, #FFF176 100%)'
+      percent: 75%
+
+# config gallery of my photos in about page.
+# If you don't want to display this `Gallery` content, you can deactivate or delete this configuration.
+# 在“关于”页面配置"我的相册"图片，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
+myGallery:
+  enable: true
+  data:
+    - /medias/featureimages/0.jpg
+    - /medias/featureimages/1.jpg
+    - /medias/featureimages/2.jpg
+
+# Whether to display post-calender in the `archive` page
+# 设置在归档页面中是否显示'文章日历'控件
+postCalendar: true
+
+# the Gitalk config，default disabled
+# Gitalk 评论模块的配置，默认为不激活
+gitalk:
+  enable: false
+  owner:
+  repo:
+  oauth:
+    clientId:
+    clientSecret:
+  admin:
+
+# the Gitment config，default disabled
+# Gitment 评论模块的配置，默认为不激活
 gitment:
   enable: false
   owner:
@@ -26,18 +140,13 @@ gitment:
     clientSecret:
 
 # disqus config, default disabled
+# Disqus评论模块的配置，默认为不激活
 disqus:
   enable: false
   shortname:
 
-# githubLink config, default disabled
-githubLink:
-  enable: true
-  link: https://github.com/blinkfox/hexo-theme-matery
-  title: fork me on github
-  icon:
-
-# posts feature images
+# The post featured images that needs to be displayed when there is no image.
+# 无文章特色图片时需要显示的文章特色图片.
 featureImages: 
 - /medias/featureimages/0.jpg
 - /medias/featureimages/1.jpg
@@ -63,3 +172,17 @@ featureImages:
 - /medias/featureimages/21.jpg
 - /medias/featureimages/22.jpg
 - /medias/featureimages/23.jpg
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Press h to open a hovercard with more details.
+Support us  •  Feedback?
