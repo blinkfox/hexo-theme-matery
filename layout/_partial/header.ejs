@@ -10,9 +10,11 @@
                         <span class="logo-span"><%- config.title %></span>
                     </a>
                 </div>
-
                 <%- partial('_partial/navigation') %>
             </div>
         </div>
+        <% if (theme.githubLink.enable) { %>
+        <%- partial('_partial/github-link') %>
+        <% } %>
     </nav>
 </header>

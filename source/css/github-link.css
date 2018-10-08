@@ -1,0 +1,42 @@
+svg {
+    color: #fff;
+    fill: var(--theme-color, #0f9d58);
+    height: 80px;
+    width: 80px;
+    transform: rotate(-45deg);
+}
+
+.nav-transparent .github-corner {
+    display: none !important;
+}
+
+.github-corner {
+    position: absolute;
+    z-index: 10000000;
+    top: 10px;
+    right: -8px;
+    transform: scale(1.1);
+}
+
+.github-corner:hover .octo-arm {
+    animation: a 0.56s ease-in-out;
+}
+
+.github-corner .octo-arm {
+    animation: none;
+}
+
+@keyframes a {
+    0%,
+    to {
+        transform: rotate(0);
+    }
+    20%,
+    60% {
+        transform: rotate(-25deg);
+    }
+    40%,
+    80% {
+        transform: rotate(10deg);
+    }
+}
