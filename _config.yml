@@ -1,20 +1,3 @@
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- @luokangyuan Sign out
-3
-18 7 blinkfox/hexo-theme-matery
- Code  Issues 1  Pull requests 0  Projects 0  Wiki  Insights
-hexo-theme-matery/_config.yml
-05cf470  2 hours ago
-@blinkfox blinkfox 新增了基本的TOC功能
-     
-158 lines (145 sloc)  4.99 KB
 # main menu navigation url and icon
 # 配置菜单导航的名称、路径和图标icon.
 menu:
@@ -144,13 +127,6 @@ gitment:
 disqus:
   enable: false
   shortname:
-  
-# githubLink config, default disabled
-githubLink:
-  enable: true
-  link: https://github.com/blinkfox/hexo-theme-matery
-  title: fork me on github
-  icon:
 
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
@@ -179,17 +155,3 @@ featureImages:
 - /medias/featureimages/21.jpg
 - /medias/featureimages/22.jpg
 - /medias/featureimages/23.jpg
-© 2018 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Press h to open a hovercard with more details.
-Support us  •  Feedback?
