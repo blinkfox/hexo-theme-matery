@@ -1,67 +1,16 @@
 <%- partial('_partial/post-cover') %>
 
-<main class="content">
+<%
+    var isTocEnable = theme.toc && theme.toc.enable;
+    var containerClass = isTocEnable ? 'post-container' : 'container';
+%>
 
-    <!-- 文章内容详情 -->
-    <div id="artDetail" class="container">
-        <div class="card">
-            <div class="card-content article-info">
-                <% if (page.tags && page.tags.length) { %>
-                <div class="article-tag">
-                    <% page.tags.each(function(tag) { %>
-                    <a href="<%- url_for(tag.path) %>" target="_blank"><span class="chip bg-color"><%= tag.name %></span></a>
-                    <% }); %>
-                </div>
-                <% } %>
-                <div class="post-info">
-                    <% if (page.categories && page.categories.length > 0) { %>
-                    <span class="post-cate">
-                    <i class="fa fa-bookmark fa-fw icon-category"></i>
-                        <% page.categories.forEach(category => { %>
-                        <a href="<%- url_for(category.path) %>" class="post-category" target="_blank">
-                        <%- category.name %>
-                        </a>
-                        <% }); %>
-                    </span>
-                    <% } %>
+<main class="<%- containerClass %> content">
 
-                    <span class="post-date">
-                        <i class="fa fa-clock-o fa-fw"></i><%- date(page.date, 'YYYY-MM-DD') %>
-                    </span>
-                </div>
-            </div>
-            <hr>
-            <div class="card-content article-card-content">
-                <div id="articleContent">
-                    <%- page.content %>
-                </div>
-                <hr/>
+    <% if (isTocEnable) { %>
+    <%- partial('_partial/post-detail-toc.ejs') %>
+    <% } else { %>
+    <%- partial('_partial/post-detail.ejs') %>
+    <% } %>
 
-                <%- partial('_partial/share') %>
-
-                <div class="reprint">
-                    <p>
-                        <span class="reprint-tip"><%= __('reprint') %>: </span>
-                        <a href="<%- config.url %>" class="b-link-green"><%- config.title %></a>
-                        <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                        <a href="<%- url_for(page.path) %>" class="b-link-green"><%= page.title %></a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <% if (theme.gitalk && theme.gitalk.enable) { %>
-        <%- partial('_partial/gitalk') %>
-        <% } %>
-
-        <% if (theme.gitment.enable) { %>
-        <%- partial('_partial/gitment') %>
-        <% } %>
-
-        <% if (theme.disqus.enable) { %>
-        <%- partial('_partial/disqus') %>
-        <% } %>
-
-        <%- partial('_partial/prev-next') %>
-    </div>
 </main>

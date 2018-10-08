@@ -1,6 +1,7 @@
 posts: Posts
 categories: Categories
 tags: Tags
+toc: TOC
 reprint: Reprint please specify
 curr: Current
 prev: Previous

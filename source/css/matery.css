@@ -19,6 +19,11 @@
         width: 80%;
         max-width: 1125px;
     }
+    .post-container {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1250px;
+    }
 }
 
 body {
@@ -453,6 +458,16 @@ header .go-back i {
     margin-bottom: 10px;
 }
 
+#artDetail h1,
+#artDetail h2,
+#artDetail h3,
+#artDetail h4,
+#artDetail h5,
+#artDetail h6 {
+    padding-top: 80px;
+    margin-top: -80px;
+}
+
 article a {
     margin-right: 0 !important;
     color: #525f7f;
@@ -852,7 +867,7 @@ table tr:nth-child(2n), thead {
 
 #cd-timeline {
     /*width: 90%;*/
-    max-width: 800px;
+    max-width: 820px;
     position: relative;
     margin-top: 2rem;
     margin-bottom: 2rem;
