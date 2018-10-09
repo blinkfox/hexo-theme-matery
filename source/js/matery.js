@@ -99,10 +99,10 @@ $(function () {
     });
 
     /*监听滚动条位置*/
+    let $nav = $('#headNav');
+    let $backTop = $('.top-scroll');
     $(window).scroll(function () {
-        /*回到顶部按钮根据滚动条的位置的显示和隐藏*/
-        let $nav = $('#headNav');
-        let $backTop = $('.top-scroll');
+        /* 回到顶部按钮根据滚动条的位置的显示和隐藏.*/
         let scroll = $(window).scrollTop();
         if (scroll < 100) {
             $nav.addClass('nav-transparent');
@@ -110,18 +110,6 @@ $(function () {
         } else {
             $nav.removeClass('nav-transparent');
             $backTop.slideDown(300);
-        }
-
-        let $tocWidget = $('.toc-widget');
-        if ($tocWidget.length === 0) {
-            return;
-        }
-
-        /* add post toc fixed. */
-        if (scroll > 240) {
-            $tocWidget.addClass('toc-fixed');
-        } else {
-            $tocWidget.removeClass('toc-fixed');
         }
     });
 });
