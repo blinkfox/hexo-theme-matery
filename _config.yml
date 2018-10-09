@@ -33,6 +33,12 @@ logo: /medias/logo.png
 toc:
   enable: false
 
+# 是否激活文章末尾的打赏功能，目前仍在开发中，默认未激活.
+reward:
+  enable: false
+  wechat: /medias/avatar.jpg
+  alipay: /medias/logo.png
+
 # profile in about page, including avatars, career, and personal introductions.
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
 profile:
