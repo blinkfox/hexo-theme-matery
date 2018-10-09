@@ -1,4 +1,34 @@
 <style>
+    #artDetail h1,
+    #artDetail h2,
+    #artDetail h3,
+    #artDetail h4,
+    #artDetail h5,
+    #artDetail h6 {
+        padding-top: 76px;
+        margin-top: -76px;
+    }
+
+    #artDetail h1 {
+        line-height: 3.3rem;
+    }
+
+    #artDetail h2 {
+        line-height: 3rem;
+    }
+
+    #artDetail h3 {
+        line-height: 2.5rem;
+    }
+
+    #artDetail h4 {
+        line-height: 2.2rem;
+    }
+
+    #artDetail h5 {
+        line-height: 1.9rem;
+    }
+
     .toc-fixed {
         position: fixed;
         top: 64px;
@@ -47,11 +77,11 @@
 </div>
 
 <script>
-$(function () {
-    let tocLinks = $('#toc-content a');
-    tocLinks.on('click', function () {
-        tocLinks.removeClass('active');
-        $(this).addClass('active');
+    $(function () {
+        let tocLinks = $('#toc-content a');
+        tocLinks.on('click', function () {
+            tocLinks.removeClass('active');
+            $(this).addClass('active');
+        });
     });
-});
 </script>

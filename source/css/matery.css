@@ -462,16 +462,6 @@ header .go-back i {
     margin-bottom: 10px;
 }
 
-#artDetail h1,
-#artDetail h2,
-#artDetail h3,
-#artDetail h4,
-#artDetail h5,
-#artDetail h6 {
-    padding-top: 80px;
-    margin-top: -80px;
-}
-
 article a {
     margin-right: 0 !important;
     color: #525f7f;
