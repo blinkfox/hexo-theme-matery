@@ -30,7 +30,7 @@
 - [x] Add post detatil of `TOC`
 - [ ] At the bottom of the site, add statistics such as traffic
 - [ ] design Index Page and support to add top posts
-- [ ] Add **rewards** function after the posts ends
+- [x] Add **rewards** function after the posts ends
 - [ ] Add a cute **pet** or **growth tree** for blogs, etc.
 
 > Welcome to contribute!

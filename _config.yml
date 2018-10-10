@@ -33,11 +33,12 @@ logo: /medias/logo.png
 toc:
   enable: false
 
-# 是否激活文章末尾的打赏功能，目前仍在开发中，默认未激活.
+# 是否激活文章末尾的打赏功能，默认激活（你替换为的你自己的微信、支付宝二维码图片、或者使用网络图片也可以）.
 reward:
-  enable: false
-  wechat: /medias/avatar.jpg
-  alipay: /medias/logo.png
+  enable: true
+  title: 你的赏识是我前进的动力
+  wechat: /medias/reward/wechat.png
+  alipay: /medias/reward/alipay.jpg
 
 # profile in about page, including avatars, career, and personal introductions.
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
