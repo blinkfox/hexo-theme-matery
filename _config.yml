@@ -76,22 +76,22 @@ mySkills:
   enable: true
   data:
     Java:
-      background: 'linear-gradient(to bottom right, #FF0066 0%, #FF00CC 100%)'
+      background: 'linear-gradient(to right, #FF0066 0%, #FF00CC 100%)'
       percent: 85%
     JavaScript:
-      background: 'linear-gradient(to bottom right, #9900FF 0%, #CC66FF 100%)'
+      background: 'linear-gradient(to right, #9900FF 0%, #CC66FF 100%)'
       percent: 80%
     HTML5:
-      background: 'linear-gradient(to bottom right, #2196F3 0%, #42A5F5 100%)'
+      background: 'linear-gradient(to right, #2196F3 0%, #42A5F5 100%)'
       percent: 80%
     CSS:
-      background: 'linear-gradient(to bottom right, #00BCD4 0%, #80DEEA 100%)'
+      background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
       percent: 70%
     SQL:
-      background: 'linear-gradient(to bottom right, #4CAF50 0%, #81C784 100%)'
+      background: 'linear-gradient(to right, #4CAF50 0%, #81C784 100%)'
       percent: 90%
     程序设计:
-      background: 'linear-gradient(to bottom right, #FFEB3B 0%, #FFF176 100%)'
+      background: 'linear-gradient(to right, #FFEB3B 0%, #FFF176 100%)'
       percent: 75%
 
 # config gallery of my photos in about page.
@@ -135,10 +135,10 @@ disqus:
   enable: false
   shortname:
 
-# Whether to display fork me on github icon and link, default false
-# 配置是否在 header 中显示 fork me on github 的图标，默认为false.
+# Whether to display fork me on github icon and link, default true, You can change it to your repo address
+# 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
 githubLink:
-  enable: false
+  enable: true
   url: https://github.com/blinkfox/hexo-theme-matery
   title: Fork Me
 
