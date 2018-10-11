@@ -9,14 +9,14 @@
 /*中等屏幕下(平板类)的样式*/
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .container {
-        width: 85%;
+        width: 90%;
     }
 }
 
 /*大屏幕下(桌面类)的样式*/
 @media only screen and (min-width: 993px) {
     .container {
-        width: 80%;
+        width: 85%;
         max-width: 1125px;
     }
     .post-container {
@@ -429,6 +429,10 @@ header .go-back i {
         background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.5) 0%, rgba(233, 30, 99, 0.4) 100%);
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.5) 0%, rgba(233, 30, 99, 0.4) 100%);
     }
+}
+
+.recommend {
+    margin-top: -80px;
 }
 
 .notice {

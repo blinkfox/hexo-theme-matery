@@ -1,16 +1,15 @@
+<style type="text/css">
+    /* don't remove. */
+    .index-cover {
+        height: 70vh;
+    }
+</style>
+
 <%- partial('_partial/bg-cover') %>
 
 <main class="content">
 
-    <% if (theme.dream.enable) { %>
-    <div class="container notice">
-        <div class="card">
-            <div class="card-content">
-                <i class="fa fa-volume-up fa-lg fa-fw text-color"></i><%= theme.dream.text %>
-            </div>
-        </div>
-    </div>
-    <% } %>
+    <%- partial('_widget/recommend') %>
 
     <%
     var hashCode = function (str) {
