@@ -1,6 +1,8 @@
 posts: Posts
 categories: Categories
 tags: Tags
+recommendedPosts: Recommended Posts
+readMore: Read more
 toc: TOC
 reprint: Reprint please specify
 curr: Current

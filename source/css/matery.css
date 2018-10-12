@@ -435,15 +435,112 @@ header .go-back i {
     margin-top: -80px;
 }
 
-.notice {
-    margin-top: -40px;
-}
-
 @media only screen and (min-width: 1418px) {
-    .notice {
-        margin-top: -40px;
+    .recommend {
+        margin-top: -80px;
         padding: 0 0.75rem;
     }
+}
+
+.recommend .card .card-content {
+    padding: 5px 40px;
+}
+
+.recommend .row .col {
+    padding: 0 1.25rem;
+}
+
+.recommend .title {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.8rem;
+}
+
+.recommend .post-card:before {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    content: "";
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 10px;
+}
+
+.recommend .post-card {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    max-height: 300px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-align: center;
+    border: 0;
+    border-radius: 10px;
+    color: rgba(0, 0, 0, .87);
+    background: #fff 50%;
+    background-size: cover;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
+}
+
+.recommend .post-card .post-body {
+    position: relative;
+    margin: 0 auto;
+    padding: 1.8rem 1.25rem;
+    z-index: 2;
+}
+
+.recommend .post-card .post-categories {
+    margin: 10px auto;
+}
+
+.recommend .post-card .post-categories .category {
+    padding: 0 8px;
+    color: hsla(0, 0%, 100%, .7) !important;
+    font-size: .75rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.recommend .post-card a {
+    color: #fff;
+}
+
+.recommend .post-card .post-title {
+    height: 48px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.recommend .post-card .post-description {
+    margin: 20px auto;
+    height: 65px;
+    max-height: 65px;
+    font-size: 14px;
+    color: hsla(0, 0%, 100%, .7) !important;
+}
+
+.recommend .post-card .read-more {
+    height: 40px;
+    margin: .6rem 1px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 40px;
+    color: #fff;
+    background-color: #f44336;
+    border-color: #f44336;
+    border-radius: 30px;
+    box-shadow: 0 2px 2px 0 rgba(244, 67, 54, .14), 0 3px 1px -2px rgba(244, 67, 54, .2), 0 1px 5px 0 rgba(244, 67, 54, .12);
+}
+
+.recommend .post-card .read-more .icon {
+    font-size: 1.05rem;
+    padding-right: 10px;
 }
 
 .archive-calendar {
