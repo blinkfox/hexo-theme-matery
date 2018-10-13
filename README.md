@@ -29,7 +29,7 @@
 - [x] Add the `RSS` feed
 - [x] Add post detatil of `TOC`
 - [ ] At the bottom of the site, add statistics such as traffic
-- [ ] design Index Page and support to add top posts
+- [x] design Index Page and support to add top posts
 - [x] Add **rewards** function after the posts ends
 - [ ] Add a cute **pet** or **growth tree** for blogs, etc.
 
@@ -224,6 +224,7 @@ title: typora-vue-theme Theme introduction
 date: 2018-09-07 09:25:00
 author: Qi Zhao
 img: /source/images/xxx.jpg # or:http://xxx.com/xxx.jpg
+top: true # If top value is true, it will be the homepage recommendation post
 categories: Markdown
 tags:
   - Typora

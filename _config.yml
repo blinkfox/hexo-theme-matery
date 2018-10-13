@@ -23,6 +23,11 @@ dream:
   enable: true
   text: The best preparation for tomorrow is doing your best today.
 
+# Whether to display the title of the recommended posts
+# 是否显示推荐文章的标题
+recommend:
+  showTitle: true
+
 # Configure website favicon and LOGO
 # 配置网站favicon和网站LOGO
 favicon: /favicon.png

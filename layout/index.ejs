@@ -9,7 +9,19 @@
 
 <main class="content">
 
+    <% if (theme.dream.enable) { %>
+    <div class="container notice">
+        <div class="card">
+            <div class="card-content">
+                <i class="fa fa-volume-up fa-lg fa-fw text-color"></i><%= theme.dream.text %>
+            </div>
+        </div>
+    </div>
+    <% } %>
+
+    <% if (page.current === 1) { %>
     <%- partial('_widget/recommend') %>
+    <% } %>
 
     <%
     var hashCode = function (str) {
@@ -96,6 +108,7 @@
 
 </main>
 
+<%console.log(page)%>
 <% if (page.total > 1) { %>
 <%- partial('_partial/paging') %>
 <% } %>

@@ -32,7 +32,9 @@
 <div class="container recommend">
     <div class="card">
         <div class="card-content">
+            <% if (theme.recommend.showTitle) { %>
             <div class="title"><%- __('recommendedPosts') %></div>
+            <% } %>
             <div class="row">
                 <% if (topPostsCount % 2 === 0) { %>
                 <% for (var i = 0; i < topPostsCount; i++) { %>
@@ -41,7 +43,7 @@
                     var featureImg = post.img ? post.img : featureImages[Math.abs(hashCode(post.title) % imgCount)];
                     var bgColor = bgColorArr[i % colorCount];
                 %>
-                <div class="col s12 m6">
+                <div class="col s12 m6" <% if (i > 1) { %>data-aos="zoom-in-up"<% } %>>
                     <div class="post-card" style="background-image: url('<%- featureImg %>')">
                         <div class="post-body">
                             <div class="post-categories">
@@ -71,7 +73,7 @@
                     var featureImg = post.img ? post.img : featureImages[Math.abs(hashCode(post.title) % imgCount)];
                     var bgColor = bgColorArr[i % colorCount];
                 %>
-                <div class="col <%- grid %>">
+                <div class="col <%- grid %>" <% if (i > 0) { %>data-aos="zoom-in-up"<% } %>>
                     <div class="post-card" style="background-image: url('<%- featureImg %>')">
                         <div class="post-body">
                             <div class="post-categories">

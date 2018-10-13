@@ -29,7 +29,7 @@
 - [x] 添加`RSS`
 - [x] 添加文章`TOC`
 - [ ] 网站底部加上访问量等统计功能
-- [ ] 首页设计和添加置顶文章
+- [x] 首页设计和添加置顶文章
 - [x] 文章结束后增加**打赏**功能
 - [ ] 为博客添加萌萌的**宠物**或者**成长树**等
 
@@ -228,6 +228,7 @@ title: typora-vue-theme主题介绍
 date: 2018-09-07 09:25:00
 author: 赵奇
 img: /source/images/xxx.jpg # 或者:http://xxx.com/xxx.jpg
+top: true # 如果top值为true，则会是首页推荐文章
 categories: Markdown
 tags:
   - Typora
