@@ -147,7 +147,7 @@ mark {
 }
 
 .card {
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
 }
 
@@ -278,6 +278,18 @@ header .side-nav .social-link {
     padding: 0 12px;
 }
 
+.cover-social-link {
+    position: relative;
+    top: 40px;
+    text-align: center;
+}
+
+.cover-social-link a {
+    padding: 0 15px;
+    font-size: 1.35rem;
+    color: #fff;
+}
+
 header .go-back {
     float: left;
     position: relative;
@@ -336,15 +348,17 @@ header .go-back i {
 
 .bg-cover .title {
     font-size: 4rem;
-    font-weight: 600;
-    line-height: 1.15em;
+    font-weight: 700;
+    line-height: 1.85em;
     margin-bottom: 20px;
     position: relative;
 }
 
 .bg-cover .description {
-    font-size: 1.313rem;
+    font-size: 1.25rem;
+    font-weight: 300;
     line-height: 1.4em;
+    color: #eee;
 }
 
 .bg-cover .post-title {
