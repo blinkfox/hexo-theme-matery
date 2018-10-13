@@ -443,7 +443,7 @@ header .go-back i {
 }
 
 .recommend .card .card-content {
-    padding: 5px 40px;
+    padding: 10px 40px;
 }
 
 .recommend .row .col {
@@ -503,7 +503,6 @@ header .go-back i {
     padding: 0 8px;
     color: hsla(0, 0%, 100%, .7) !important;
     font-size: .75rem;
-    text-transform: uppercase;
     font-weight: 500;
 }
 
@@ -519,6 +518,7 @@ header .go-back i {
 
 .recommend .post-card .post-description {
     margin: 20px auto;
+    max-width: 500px;
     height: 65px;
     max-height: 65px;
     font-size: 14px;
@@ -532,8 +532,6 @@ header .go-back i {
     font-weight: 400;
     line-height: 40px;
     color: #fff;
-    background-color: #f44336;
-    border-color: #f44336;
     border-radius: 30px;
     box-shadow: 0 2px 2px 0 rgba(244, 67, 54, .14), 0 3px 1px -2px rgba(244, 67, 54, .2), 0 1px 5px 0 rgba(244, 67, 54, .12);
 }

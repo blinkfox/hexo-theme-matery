@@ -26,6 +26,8 @@
 
     var featureImages = theme.featureImages;
     var imgCount = featureImages.length;
+    var bgColorArr = ['#f44336', '#9c27b0', '#1769ff', '#ff9800', '#4caf50', '#0976b4'];
+    var colorCount = bgColorArr.length;
 %>
 <div class="container recommend">
     <div class="card">
@@ -37,6 +39,7 @@
                 <%
                     var post = topPosts[i];
                     var featureImg = post.img ? post.img : featureImages[Math.abs(hashCode(post.title) % imgCount)];
+                    var bgColor = bgColorArr[i % colorCount];
                 %>
                 <div class="col s12 m6">
                     <div class="post-card" style="background-image: url('<%- featureImg %>')">
@@ -50,7 +53,8 @@
                                 <h3 class="post-title"><%- post.title %></h3>
                             </a>
                             <p class="post-description"><%- strip_html(post.content).substring(0, 60) %></p>
-                            <a href="<%- url_for(post.path) %>" class="read-more btn waves-effect waves-light" target="_blank">
+                            <a href="<%- url_for(post.path) %>" target="_blank"
+                                    class="read-more btn waves-effect waves-light" style="background-color: <%- bgColor %>">
                                 <i class="icon fa fa-eye fa-fw"></i><%- __('readMore') %>
                             </a>
                         </div>
@@ -65,6 +69,7 @@
                     var description = (i % 3 === 0) ? strip_html(post.content).substring(0, 120)
                             : strip_html(post.content).substring(0, 70);
                     var featureImg = post.img ? post.img : featureImages[Math.abs(hashCode(post.title) % imgCount)];
+                    var bgColor = bgColorArr[i % colorCount];
                 %>
                 <div class="col <%- grid %>">
                     <div class="post-card" style="background-image: url('<%- featureImg %>')">
@@ -78,7 +83,8 @@
                                 <h3 class="post-title"><%- post.title %></h3>
                             </a>
                             <p class="post-description"><%- description %></p>
-                            <a href="<%- url_for(post.path) %>" class="read-more btn waves-effect waves-light" target="_blank">
+                            <a href="<%- url_for(post.path) %>" target="_blank"
+                                    class="read-more btn waves-effect waves-light" style="background-color: <%- bgColor %>">
                                 <i class="icon fa fa-eye fa-fw"></i><%- __('readMore') %>
                             </a>
                         </div>
