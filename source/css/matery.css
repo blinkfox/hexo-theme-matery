@@ -280,7 +280,7 @@ header .side-nav .social-link {
 
 .cover-social-link {
     position: relative;
-    top: 40px;
+    top: 20vh;
     text-align: center;
 }
 
@@ -453,6 +453,14 @@ header .go-back i {
     margin-top: -40px;
 }
 
+.notice .card {
+    border-radius: 5px;
+}
+
+.recommend .card .card-content {
+    padding: 20px 40px;
+}
+
 @media only screen and (min-width: 1418px) {
     .notice {
         margin-top: 30px;
@@ -465,8 +473,17 @@ header .go-back i {
     }
 }
 
-.recommend .card .card-content {
-    padding: 20px 40px;
+@media only screen and (max-width: 601px) {
+    .recommend .card .card-content {
+        padding: 10px 10px;
+    }
+}
+
+/*中等屏幕下(平板类)的样式*/
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    .recommend .card .card-content {
+        padding: 20px 20px;
+    }
 }
 
 .recommend .row .col {
