@@ -977,6 +977,10 @@ table tr:nth-child(2n), thead {
     font-weight: 600;
 }
 
+#cd-timeline .year a {
+    color: #fff;
+}
+
 #cd-timeline .month {
     position: relative;
     width: 60px;
@@ -987,6 +991,10 @@ table tr:nth-child(2n), thead {
     color: #fff;
     font-size: 1.7rem;
     font-weight: 600;
+}
+
+#cd-timeline .month a {
+    color: #fff;
 }
 
 #cd-timeline .day {

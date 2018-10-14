@@ -1,6 +1,10 @@
 posts: Posts
+category: Category
 categories: Categories
+tag: Tag
 tags: Tags
+archives: Archives
+about: About
 recommendedPosts: Recommended Posts
 readMore: Read more
 toc: TOC
