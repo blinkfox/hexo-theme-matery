@@ -32,8 +32,11 @@
     keyWords = title ? title  + ', ' + keyWords : keyWords;
 
     // description.
-    var description = config.description ? config.description : config.title;
-    description = title ? title  + ', ' + description : description;
+    var description = null;
+    if (page.hasOwnProperty('__post') && page.__post) {
+        description = strip_html(page.content).substring(0, 120);
+    }
+    description = description ? description : pageTitle;
 %>
 
 <head>

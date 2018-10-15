@@ -28,10 +28,10 @@
 - [x] Add `fork me on github` in the upper right corner
 - [x] Add the `RSS` feed
 - [x] Add post detatil of `TOC`
-- [ ] At the bottom of the site, add statistics such as traffic
+- ~~At the bottom of the site, add statistics such as traffic~~(Theme users can implement based on Google Analytics, Baidu Statistics, LeanCloud, etc.)
 - [x] design Index Page and support to add top posts
 - [x] Add **rewards** function after the posts ends
-- [ ] Add a cute **pet** or **growth tree** for blogs, etc.
+- ~~Add a cute **pet** or **growth tree** for blogs, etc.~~（Can be implemented using the [hexo-helper-live2d](https://github.com/EYHN/hexo-helper-live2d) plugin）
 
 > Welcome to contribute!
 
