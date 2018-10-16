@@ -20,7 +20,7 @@ menu:
 # index page dream text,
 # 配置首页显示"梦想"的语句.
 dream:
-  enable: true
+  enable: false
   text: The best preparation for tomorrow is doing your best today.
 
 # Whether to display the title of the recommended posts
