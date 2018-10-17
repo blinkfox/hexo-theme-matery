@@ -160,7 +160,8 @@ mark {
 }
 
 .bg-color {
-    background-color: #0f9d58 !important;
+    /*background-color: #0f9d58 !important;*/
+    background-image: linear-gradient(to right, #4caf50 0%, #0f9d58 100%);
 }
 
 .text-color {
@@ -197,6 +198,7 @@ nav, .side-nav {
 
 header .nav-transparent {
     background-color: transparent !important;
+    background-image: none;
     box-shadow: none;
 }
 
