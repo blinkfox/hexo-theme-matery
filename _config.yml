@@ -33,6 +33,15 @@ recommend:
 favicon: /favicon.png
 logo: /medias/logo.png
 
+# The configuration of the second button in the home banner,
+# including the display name of the button, the font awesome icon, and the hyperlink to the button.
+# 首页 banner 中的第二个按钮的配置，包括按钮的显示名称、font awesome图标和按钮的超链接.
+indexbtn:
+  enable: true
+  name: Github
+  icon: fa-github-alt
+  url: https://github.com/blinkfox/hexo-theme-matery
+
 # Whether to activate the Post TOC.
 # 是否激活文章 TOC 功能.
 toc:

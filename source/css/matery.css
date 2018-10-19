@@ -160,8 +160,7 @@ mark {
 }
 
 .bg-color {
-    /*background-color: #0f9d58 !important;*/
-    background-image: linear-gradient(to right, #4caf50 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
 }
 
 .text-color {
@@ -184,11 +183,11 @@ mark {
 }
 
 .progress-bar {
-    background-color: #0f9d58;
     height: 4px;
     position: fixed;
     bottom: 0;
     z-index: 300;
+    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
     opacity: 0.8;
 }
 
@@ -242,7 +241,7 @@ header .side-nav .mobile-head .logo-desc {
     padding-bottom: 10px;
     font-size: 0.8rem;
     line-height: 1.3rem;
-    color: #ccc;
+    color: #e3e3e3;
 }
 
 header .side-nav .menu-list li {
@@ -280,9 +279,39 @@ header .side-nav .social-link {
     padding: 0 12px;
 }
 
+.cover-btns {
+    position: relative;
+    top: 10vh;
+    text-align: center;
+}
+
+.cover-btns a {
+    margin: 10px 15px;
+    padding: 0 35px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 1rem;
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+    border-radius: 30px;
+    box-shadow: none;
+}
+
+.cover-btns a:hover {
+    border: 1px solid #f44336;
+    background-color: #f44336;
+    box-shadow: 0 14px 26px -12px rgba(233, 30, 99, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(233, 30, 99, 0.2);
+}
+
+.cover-btns a i {
+    font-size: 1.1rem;
+    padding-right: 5px;
+}
+
 .cover-social-link {
     position: relative;
-    top: 20vh;
+    top: 18vh;
     text-align: center;
 }
 
@@ -459,6 +488,11 @@ header .go-back i {
     border-radius: 5px;
 }
 
+#recommend-sections {
+    margin-top: -30px;
+    padding-top: 30px;
+}
+
 .recommend .card .card-content {
     padding: 20px 40px;
 }
@@ -609,13 +643,19 @@ article a {
     text-transform: none !important;
 }
 
+article a:hover {
+    font-weight: bold;
+    color: #42b983;
+    text-decoration: underline;
+}
+
 .articles .row {
     margin-left: 0;
     margin-right: 0;
 }
 
 article .card {
-    border-radius: 0.3rem;
+    border-radius: 10px;
 }
 
 article .card-image img {
@@ -772,6 +812,12 @@ article .article-tags .chip {
 #artDetail .post-info .post-category {
     padding-right: 4px;
     color: #525f7f;
+}
+
+#artDetail .post-info .post-category:hover {
+    font-weight: bold;
+    color: #42b983;
+    text-decoration: underline;
 }
 
 #artDetail .post-info .post-date {
@@ -933,7 +979,7 @@ table tr:nth-child(2n), thead {
 
 .chip-container .chip-active {
     color: #FFF !important;
-    background-color: #e91e63 !important;
+    background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%) !important;
     box-shadow: 2px 5px 10px #aaa !important;
 }
 
@@ -950,6 +996,11 @@ table tr:nth-child(2n), thead {
     word-wrap: break-word;
     cursor: pointer;
     box-shadow: 0 3px 5px rgba(0, 0, 0, .12);
+}
+
+.chip-container .chip:hover {
+    color: #fff;
+    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%) !important;
 }
 
 .chip .tag-length {
@@ -1260,7 +1311,7 @@ table tr:nth-child(2n), thead {
     margin: 0 0.5rem;
     padding: 0;
     color: #fff;
-    background-color: #42b983;
+    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
     font-size: 0.9rem;
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .21), 0 2px 3px rgba(0, 0, 0, .1);
@@ -1435,8 +1486,8 @@ table tr:nth-child(2n), thead {
 
 .other-skills .chip:hover {
     color: #fff;
-    background-color: #0f9d58;
-    border: 1px solid #0f9d58;
+    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);;
+    border: 1px solid #4cbf30;
     box-shadow: 0 5px 5px rgba(0, 0, 0, .25)
 }
 
@@ -1527,9 +1578,12 @@ footer .copy-right {
 }
 
 .top-scroll .btn-floating {
-    background-color: #e91e63
+    background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%);
+    width: 48px;
+    height: 48px;
 }
 
-.top-scroll i {
-    font-size: 2.2rem;
+.top-scroll .btn-floating i {
+    line-height: 48px;
+    font-size: 1.8rem;
 }
