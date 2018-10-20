@@ -19,6 +19,7 @@
         width: 85%;
         max-width: 1125px;
     }
+
     .post-container {
         width: 90%;
         margin: 0 auto;
@@ -1307,11 +1308,12 @@ table tr:nth-child(2n), thead {
     display: inline-block;
     width: 2.3rem;
     height: 2.3rem;
-    line-height: 2.3rem;
+    line-height: 2.2rem;
     margin: 0 0.5rem;
     padding: 0;
     color: #fff;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    border: 1px solid #0f9d58;
+    background: radial-gradient(#4cbf30, #0f9d58);;
     font-size: 0.9rem;
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .21), 0 2px 3px rgba(0, 0, 0, .1);
