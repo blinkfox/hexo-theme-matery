@@ -64,5 +64,9 @@
         <%- partial('_partial/disqus') %>
     <% } %>
 
+    <% if (theme.livere && theme.livere.enable) { %>
+    <%- partial('_partial/livere') %>
+    <% } %>
+
     <%- partial('_partial/prev-next') %>
 </div>
