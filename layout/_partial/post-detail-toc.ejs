@@ -1,32 +1,41 @@
+<link rel="stylesheet" href="/libs/tocbot/tocbot.css">
 <style>
-    #artDetail h1,
-    #artDetail h2,
-    #artDetail h3,
-    #artDetail h4,
-    #artDetail h5,
-    #artDetail h6 {
+    #articleContent h1,
+    #articleContent h2,
+    #articleContent h3,
+    #articleContent h4,
+    #articleContent h5,
+    #articleContent h6 {
         padding-top: 76px;
         margin-top: -76px;
     }
 
-    #artDetail h1 {
-        line-height: 3.3rem;
+    #articleContent h1 {
+        line-height: 3.5rem;
     }
 
-    #artDetail h2 {
-        line-height: 3rem;
+    #articleContent h2 {
+        line-height: 3.2rem;
     }
 
-    #artDetail h3 {
+    #articleContent h3 {
+        line-height: 2.8rem;
+    }
+
+    #articleContent h4 {
         line-height: 2.5rem;
     }
 
-    #artDetail h4 {
+    #articleContent h5 {
         line-height: 2.2rem;
     }
 
-    #artDetail h5 {
+    #articleContent h6 {
         line-height: 1.9rem;
+    }
+
+    #articleContent :focus {
+        outline: none;
     }
 
     .toc-fixed {
@@ -38,28 +47,40 @@
         padding-left: 20px;
     }
 
+    .toc-widget .toc-title {
+        margin: 35px 0 15px -2px;
+        padding-left: 15px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
     .toc-widget ol {
         padding: 0;
         list-style: none;
     }
 
-    .post-toc ol {
-        padding-left: 20px;
+    #toc-content ol {
+        padding-left: 15px;
     }
 
-    .post-toc a {
-        color: #34495e;
-        font-size: 0.96rem;
-    }
-
-    .post-toc a:hover {
+    #toc-content .toc-link:hover {
         color: #42b983;
+        font-weight: 700;
         text-decoration: underline;
     }
 
-    .post-toc .active {
+    #toc-content .toc-link::before {
+        background-color: #eaeaea;
+        max-height: 26px;
+    }
+
+    #toc-content .is-active-link {
         color: #42b983;
-        font-weight: 500;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
     }
 </style>
 <div class="row">
@@ -68,69 +89,46 @@
     </div>
     <div class="col l3 hide-on-med-and-down">
         <div class="toc-widget">
-            <h4><%- __('toc') %></h4>
+            <div class="toc-title"><%- __('toc') %></div>
             <div id="toc-content">
-                <%- toc(page.content, {class: 'post-toc', list_number: false}) %>
+
             </div>
         </div>
     </div>
 </div>
 
+<script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
     $(function () {
-        let tocLinks = $('#toc-content a');
-        let setTocLinkActive = function (jqObj) {
-            tocLinks.removeClass('active');
-            jqObj.addClass('active');
-        };
-
-        // 监听点击TOC目录.
-        tocLinks.on('click', function () {
-            setTocLinkActive($(this));
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingSelector: '<%- theme.toc.heading %>'
         });
 
-        let titleTopArr = [];
-        $('#articleContent').find('h1, h2, h3, h4, h5, h6').each(function () {
-            titleTopArr.push({'id': $(this).attr('id'), 'top': Math.round($(this).offset().top)});
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
         });
-        let titleLen = titleTopArr.length;
 
-        /* 监听滚动条.*/
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('<%- theme.toc.heading %>').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
         let $tocWidget = $('.toc-widget');
         $(window).scroll(function () {
             let scroll = $(window).scrollTop();
-
             /* add post toc fixed. */
-            if (scroll > 240) {
+            if (scroll > tocHeight) {
                 $tocWidget.addClass('toc-fixed');
             } else {
                 $tocWidget.removeClass('toc-fixed');
-            }
-
-            /** 以下代码为动态设置TOC激活高亮的目录. */
-            if (titleLen === 0) {
-                return;
-            }
-
-            let firstTitleObj = titleTopArr[0];
-            if (firstTitleObj.top > scroll) {
-                return;
-            } else if (firstTitleObj.top === scroll) {
-                setTocLinkActive($('#toc-content a[href="#' + firstTitleObj.id + '"]'));
-                return;
-            }
-
-            let lastTitleObj = titleTopArr[titleLen - 1];
-            if (lastTitleObj.top <= scroll) {
-                setTocLinkActive($('#toc-content a[href="#' + lastTitleObj.id + '"]'));
-                return;
-            }
-
-            for (let i = 0; i < titleLen; i++) {
-                if (titleTopArr[i].top > scroll) {
-                    setTocLinkActive($('#toc-content a[href="#' + titleTopArr[i - 1].id + '"]'));
-                    break;
-                }
             }
         });
     });

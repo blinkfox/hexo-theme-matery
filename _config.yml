@@ -42,10 +42,11 @@ indexbtn:
   icon: fa-github-alt
   url: https://github.com/blinkfox/hexo-theme-matery
 
-# Whether to activate the Post TOC.
-# 是否激活文章 TOC 功能.
+# Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
+# 是否激活文章 TOC 功能，并配置TOC支持选中哪些标题类型.
 toc:
   enable: false
+  heading: h2, h3, h4
 
 # 是否激活文章末尾的打赏功能，默认激活（你替换为的你自己的微信、支付宝二维码图片、或者使用网络图片也可以）.
 reward:
