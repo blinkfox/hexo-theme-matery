@@ -15,6 +15,7 @@
 - 瀑布流式的博客文章列表(文章无特色图片时会有`24`张漂亮的图片代替)
 - 时间轴式的归档页
 - **词云**的标签页和**雷达图**的分类页
+- TOC目录
 - [Gitalk](https://gitalk.github.io/)、[Gitment](https://imsun.github.io/gitment/)和[Disqus](https://disqus.com/)评论模块（推荐使用Gitalk）
 
 ## 后续开发计划
@@ -278,7 +279,7 @@ tags:
 ```css
 /* 整体背景颜色，包括导航、移动端的导航、页尾、标签页等的背景颜色. */
 .bg-color {
-    background-color: #0f9d58 !important;
+    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
 }
 
 /* 和背景颜色相同的文字颜色，目前仅在首页一个地方使用到，你也可以将此样式应用到其他地方. */

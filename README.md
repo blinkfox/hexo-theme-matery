@@ -15,6 +15,7 @@
 - Blog posts list with waterflow(There will be 24 images if the articl dosn't have  featured pictures).
 - Archive page with timeline.
 - Tags page of the **word cloud** and categories page of the **radar chart**
+- TOC
 - Comment module of [Gitalk](https://gitalk.github.io/), [Gitment](https://imsun.github.io/gitment/) and [Disqus](https://disqus.com/).(Gitalk is recommended)
 
 ## Next development plans
@@ -272,7 +273,7 @@ Search `.bg-color` to modify background color in `/source/css/matery.css` in the
 ```css
 /* The overall background color, including navigation, mobile navigation, footer, tab, etc.. */
 .bg-color {
-    background-color: #0f9d58 !important;
+    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
 }
 
 /* The color of the text with the same background color is only used in one place on the front page. You can also apply it to other places.*/
