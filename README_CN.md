@@ -69,10 +69,12 @@ hexo new page "categories"
 编辑你刚刚新建的页面文件`/source/categories/index.md`，至少需要以下内容：
 
 ```yml
+---
 title: categories
 date: 2018-09-30 17:25:30
 type: "categories"
 layout: "categories"
+---
 ```
 
 ### 新建标签 tags 页
@@ -86,10 +88,12 @@ hexo new page "tags"
 编辑你刚刚新建的页面文件`/source/tags/index.md`，至少需要以下内容：
 
 ```yml
+---
 title: tags
 date: 2018-09-30 18:23:38
 type: "tags"
 layout: "tags"
+---
 ```
 
 ### 新建关于我 about 页
@@ -103,10 +107,12 @@ hexo new page "about"
 编辑你刚刚新建的页面文件`/source/about/index.md`，至少需要以下内容：
 
 ```yml
+---
 title: about
 date: 2018-09-30 17:25:30
 type: "about"
 layout: "about"
+---
 ```
 
 ### 代码高亮

@@ -69,10 +69,12 @@ hexo new page "categories"
 to edit your new page files`/source/categories/index.md`, you need somethings as follows:
 
 ```yml
+---
 title: categories
 date: 2018-09-30 17:25:30
 type: "categories"
 layout: "categories"
+---
 ```
 
 ### new tags page
@@ -86,10 +88,12 @@ hexo new page "tags"
 to edit your new page files`/source/tags/index.md`, you need somethings as follows:
 
 ```yml
+---
 title: tags
 date: 2018-09-10 18:23:38
 type: "tags"
 layout: "tags"
+---
 ```
 
 ### new about page
@@ -103,10 +107,12 @@ hexo new page "about"
 to edit your new page files`/source/about/index.md`, you need somethings as follows:
 
 ```yml
+---
 title: about
 date: 2018-09-30 17:25:30
 type: "about"
 layout: "about"
+---
 ```
 
 ### Code highlight
