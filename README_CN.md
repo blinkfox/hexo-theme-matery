@@ -68,7 +68,7 @@ hexo new page "categories"
 
 编辑你刚刚新建的页面文件`/source/categories/index.md`，至少需要以下内容：
 
-```yml
+```yaml
 ---
 title: categories
 date: 2018-09-30 17:25:30
@@ -87,7 +87,7 @@ hexo new page "tags"
 
 编辑你刚刚新建的页面文件`/source/tags/index.md`，至少需要以下内容：
 
-```yml
+```yaml
 ---
 title: tags
 date: 2018-09-30 18:23:38
@@ -106,7 +106,7 @@ hexo new page "about"
 
 编辑你刚刚新建的页面文件`/source/about/index.md`，至少需要以下内容：
 
-```yml
+```yaml
 ---
 title: about
 date: 2018-09-30 17:25:30
@@ -125,7 +125,7 @@ npm i -S hexo-prism-plugin
 
 然后，修改 Hexo 根目录下`_config.yml`文件中`highlight.enable`的值为`false`，并新增`prism`插件相关的配置，主要配置如下：
 
-```yml
+```yaml
 highlight:
   enable: false
 
@@ -146,7 +146,7 @@ npm install hexo-generator-search --save
 
 在 Hexo 根目录下的`_config.yml`文件中，新增以下的配置项：
 
-```yml
+```yaml
 search:
   path: search.xml
   field: post
@@ -164,7 +164,7 @@ npm i hexo-permalink-pinyin --save
 
 在 Hexo 根目录下的`_config.yml`文件中，新增以下的配置项：
 
-```yml
+```yaml
 permalink_pinyin:
   enable: true
   separator: '-' # default: '-'
@@ -182,7 +182,7 @@ npm install hexo-generator-feed --save
 
 在 Hexo 根目录下的`_config.yml`文件中，新增以下的配置项：
 
-```yml
+```yaml
 feed:
   type: atom
   path: atom.xml
@@ -229,7 +229,7 @@ feed:
 
 以下为文章`Front-matter`的示例，所有内容均为**非必填**的。但是，仍然建议至少填写`title`的值，当然最好都填写上这些文章信息。
 
-```yml
+```yaml
 ---
 title: typora-vue-theme主题介绍
 date: 2018-09-07 09:25:00

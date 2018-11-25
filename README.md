@@ -68,7 +68,7 @@ hexo new page "categories"
 
 to edit your new page files`/source/categories/index.md`, you need somethings as follows:
 
-```yml
+```yaml
 ---
 title: categories
 date: 2018-09-30 17:25:30
@@ -87,7 +87,7 @@ hexo new page "tags"
 
 to edit your new page files`/source/tags/index.md`, you need somethings as follows:
 
-```yml
+```yaml
 ---
 title: tags
 date: 2018-09-10 18:23:38
@@ -106,7 +106,7 @@ hexo new page "about"
 
 to edit your new page files`/source/about/index.md`, you need somethings as follows:
 
-```yml
+```yaml
 ---
 title: about
 date: 2018-09-30 17:25:30
@@ -125,7 +125,7 @@ npm i -S hexo-prism-plugin
 
 Then,modify the value of `highlight.enable` to `false` in `_config.yml` file of Hexo root folder，and add the configuration of `prism` plugin as follows:
 
-```yml
+```yaml
 highlight:
   enable: false
 
@@ -146,7 +146,7 @@ npm install hexo-generator-search --save
 
 Add configuration of `_config.yml` file in Hexo root folder as follows：
 
-```yml
+```yaml
 search:
   path: search.xml
   field: post
@@ -164,7 +164,7 @@ npm i hexo-permalink-pinyin --save
 
 Add such configurations in `_config.yml` file of  Hexo:
 
-```yml
+```yaml
 permalink_pinyin:
   enable: true
   separator: '-' # default: '-'
@@ -182,7 +182,7 @@ npm install hexo-generator-feed --save
 
 Add configuration of `_config.yml` file in Hexo root folder as follows：
 
-```yml
+```yaml
 feed:
   type: atom
   path: atom.xml
@@ -225,7 +225,7 @@ You can search social icon such as `fa-github` in [Font Awesome](https://fontawe
 
 The following are post `Front-matter` example,and all content is **not required**.But we still suggest you write the value of `title`.Of course ,you'd better write all of these information.
 
-```yml
+```yaml
 ---
 title: typora-vue-theme Theme introduction
 date: 2018-09-07 09:25:00
