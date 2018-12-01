@@ -16,7 +16,7 @@
 - Archive page with timeline.
 - Tags page of the **word cloud** and categories page of the **radar chart**
 - TOC
-- Comment module of [Gitalk](https://gitalk.github.io/), [Gitment](https://imsun.github.io/gitment/) and [Disqus](https://disqus.com/).(Gitalk is recommended)
+- Comment module of [Gitalk](https://gitalk.github.io/), [Gitment](https://imsun.github.io/gitment/), [Valine](https://valine.js.org/) and [Disqus](https://disqus.com/).(Gitalk is recommended)
 
 ## Next development plans
 
@@ -267,7 +267,7 @@ You can modify some custom modification in `_config.yml` as follows:
 - My Projects
 - My Skills
 - My Gallery
-- Gitalk, Gitment and Disqus
+- Gitalk, Gitment, Valine and Disqus
 - The map of default featured pictures. The theme will take remainde according to `hashcode` of post title if the post dose not set featured piactures.
 
 **I think everyone should have their own style and feature of blog**。if you are not satisfiled with functions and theme color,you can modify by yourself,and more free functions and deatil need to be modified by modify source code when it is hard to be finished in `_config.yml`.
