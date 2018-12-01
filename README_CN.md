@@ -320,4 +320,4 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 ## 主题QQ交流群
 
-[QQ交流群](http://static.blinkfox.com/matery-qq.jpeg)
+![QQ交流群](http://static.blinkfox.com/matery-qq.jpeg)
