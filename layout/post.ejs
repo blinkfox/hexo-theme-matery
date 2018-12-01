@@ -1,3 +1,18 @@
+<% if (theme.verifyPassword.enable) { %>
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '<%- page.password %>';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('<%- theme.verifyPassword.promptMessage %>')).toString(CryptoJS.enc.Hex)) {
+                alert('<%- theme.verifyPassword.errorMessage %>');
+                location.href = '<%- url_for("/")  %>';
+            }
+        }
+    })();
+</script>
+<% } %>
+
 <%- partial('_partial/post-cover') %>
 
 <%
