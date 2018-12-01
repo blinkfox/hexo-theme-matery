@@ -2,7 +2,7 @@
 
 [![HitCount](http://hits.dwyl.io/blinkfox/hexo-theme-matery.svg)](http://hits.dwyl.io/blinkfox/hexo-theme-matery) [![GitHub issues](https://img.shields.io/github/issues/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/issues) [![GitHub license](https://img.shields.io/github/license/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/blob/master/LICENSE) [![Download](https://img.shields.io/badge/downloads-master-green.svg)](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master) [![Hexo Version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io) [![GitHub forks](https://img.shields.io/github/forks/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/network) [![GitHub stars](https://img.shields.io/github/stars/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/stargazers)
 
-[English Document](README.md) | [演示示例](https://blinkfox.github.io/)
+[English Document](README.md) | [演示示例](https://blinkfox.github.io/) | QQ交流群:`926552981`
 
 > 这是一个采用`Material Design`和响应式设计的 Hexo 博客主题。
 
@@ -15,7 +15,9 @@
 - 瀑布流式的博客文章列表(文章无特色图片时会有`24`张漂亮的图片代替)
 - 时间轴式的归档页
 - **词云**的标签页和**雷达图**的分类页
-- TOC目录
+- 丰富的关于我页面（包括关于我、文章统计图、我的项目、我的技能、相册等）
+- TOC 目录
+- 可设置阅读文章时做密码验证
 - [Gitalk](https://gitalk.github.io/)、[Gitment](https://imsun.github.io/gitment/)、[Valine](https://valine.js.org/)和[Disqus](https://disqus.com/)评论模块（推荐使用Gitalk）
 
 ## 后续开发计划
@@ -24,7 +26,7 @@
 - [x] 重构归档页为**可分页**
 - [x] 增加分类页
 - [x] 增加关于我页面
-- [ ] 美化滚动条
+- [x] 阅读文章验证密码
 - [x] 集成[Gitalk](https://gitalk.github.io/)
 - [x] 右上角实现`fork me on github`
 - [x] 添加`RSS`
@@ -33,6 +35,7 @@
 - [x] 首页设计和添加置顶文章
 - [x] 文章结束后增加**打赏**功能
 - ~~为博客添加萌萌的**宠物**或者**成长树**等~~（可以使用[hexo-helper-live2d](https://github.com/EYHN/hexo-helper-live2d)插件来实现）
+- [ ] 制作一个LOGO
 
 > 欢迎贡献!
 
@@ -236,6 +239,8 @@ date: 2018-09-07 09:25:00
 author: 赵奇
 img: /source/images/xxx.jpg # 或者:http://xxx.com/xxx.jpg
 top: true # 如果top值为true，则会是首页推荐文章
+# 如果要对文章设置阅读验证密码的话，就可以在设置password的值，该值必须是用SHA256加密后的密码，防止被他人识破
+password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92 
 categories: Markdown
 tags:
   - Typora
@@ -245,7 +250,8 @@ tags:
 
 > **注意**:
 > 1. 如果`img`属性不填写的话，文章特色图会根据文章标题的`hashcode`的值取余，然后选取主题中对应的特色图片，从而达到让所有文章都的特色图**各有特色**。
-> 2. `date`的值尽量保证每篇文章是唯一的，因为本主题中`Gitment`识别`id`是通过`date`的值来作为唯一标识的。
+> 2. `date`的值尽量保证每篇文章是唯一的，因为本主题中`Gitalk`和`Gitment`识别`id`是通过`date`的值来作为唯一标识的。
+> 3. 如果要对文章设置阅读验证密码的功能，不仅要在Front-matter中设置采用了SHA256加密的password的值，还需要在主题的`_config.yml`中激活了配置。有些在线的 SHA256 加密的地址，可供你使用：[开源中国在线工具](http://tool.oschina.net/encrypt?type=2)、[chahuo](http://encode.chahuo.com/)、[站长工具](http://tool.chinaz.com/tools/hash.aspx)。
 
 ## 效果截图
 
@@ -311,3 +317,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 ```
 
 在`/source/medias/featureimages`文件夹中默认有24张特色图片，你可以再增加或者减少，并需要在`_config.yml`做同步修改。
+
+## 主题QQ交流群
+
+[QQ交流群](http://static.blinkfox.com/matery-qq.jpeg)

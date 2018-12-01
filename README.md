@@ -6,7 +6,7 @@
 
 > This is a Hexo blog theme with 'Material Design' and responsive design.
 
-## Feature
+## Features
 
 - Simple and beautiful, and post is Beautiful and readable.
 - [Material Design](https://material.io/).
@@ -15,7 +15,9 @@
 - Blog posts list with waterflow(There will be 24 images if the articl dosn't have  featured pictures).
 - Archive page with timeline.
 - Tags page of the **word cloud** and categories page of the **radar chart**
+- Rich 'About' page (including about me, posts charts, my projects, my skills, gallery etc.)
 - TOC
+- Can be set to do password verification when reading a post
 - Comment module of [Gitalk](https://gitalk.github.io/), [Gitment](https://imsun.github.io/gitment/), [Valine](https://valine.js.org/) and [Disqus](https://disqus.com/).(Gitalk is recommended)
 
 ## Next development plans
@@ -24,7 +26,7 @@
 - [x] Refactoring Archives page as **paginable**
 - [x] Add category page
 - [x] Add about me page
-- [ ] Beautify the scroll bar
+- [x] Read the post verification password
 - [x] Integrated [Gitalk](https://gitalk.github.io/) comment
 - [x] Add `fork me on github` in the upper right corner
 - [x] Add the `RSS` feed
@@ -33,6 +35,7 @@
 - [x] design Index Page and support to add top posts
 - [x] Add **rewards** function after the posts ends
 - ~~Add a cute **pet** or **growth tree** for blogs, etc.~~（Can be implemented using the [hexo-helper-live2d](https://github.com/EYHN/hexo-helper-live2d) plugin）
+- [ ] Make a LOGO
 
 > Welcome to contribute!
 
@@ -232,6 +235,9 @@ date: 2018-09-07 09:25:00
 author: Qi Zhao
 img: /source/images/xxx.jpg # or:http://xxx.com/xxx.jpg
 top: true # If top value is true, it will be the homepage recommendation post
+# If you want to set the reading verification password for the post, 
+# you can set the password value, which must be encrypted with SHA256 to prevent others from seeing it.
+password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
 categories: Markdown
 tags:
   - Typora
@@ -239,7 +245,10 @@ tags:
 ---
 ```
 
-> **Note**: post's featured piature will take remainder if not writing the `img` property,and chose the featured picture of theme to let all of post's picture **have their own characteristics**.
+> **Note**: 
+> 1. post's featured piature will take remainder if not writing the `img` property,and chose the featured picture of theme to let all of post's picture **have their own characteristics**.
+> 2. The value of `date` should try to ensure that each article is unique, because `Gitalk` and `Gitment` recognize `id` in this topic are uniquely identified by the value of `date`.
+> 3. If you want to set the ability to read the verification password for the article, you should not only set the value of the password with SHA256 encryption in Front-matter, but also activate the configuration in the theme `_config.yml`.
 
 ## Screenshot
 
@@ -305,4 +314,3 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 ```
 
 There are 24 featured pictures in `/source/medias/featureimages`,you can add or delete,and modify it in `_config.yml` at the sametime.
-
