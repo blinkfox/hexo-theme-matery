@@ -16,6 +16,7 @@
 - 时间轴式的归档页
 - **词云**的标签页和**雷达图**的分类页
 - 丰富的关于我页面（包括关于我、文章统计图、我的项目、我的技能、相册等）
+- 支持文章打赏
 - TOC 目录
 - 可设置阅读文章时做密码验证
 - [Gitalk](https://gitalk.github.io/)、[Gitment](https://imsun.github.io/gitment/)、[Valine](https://valine.js.org/)和[Disqus](https://disqus.com/)评论模块（推荐使用Gitalk）
@@ -36,6 +37,7 @@
 - [x] 文章结束后增加**打赏**功能
 - ~~为博客添加萌萌的**宠物**或者**成长树**等~~（可以使用[hexo-helper-live2d](https://github.com/EYHN/hexo-helper-live2d)插件来实现）
 - [ ] 制作一个LOGO
+- [ ] 增加友情链接页面
 
 > 欢迎贡献!
 

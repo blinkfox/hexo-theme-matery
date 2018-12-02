@@ -16,6 +16,7 @@
 - Archive page with timeline.
 - Tags page of the **word cloud** and categories page of the **radar chart**
 - Rich 'About' page (including about me, posts charts, my projects, my skills, gallery etc.)
+- Support post rewards
 - TOC
 - Can be set to do password verification when reading a post
 - Comment module of [Gitalk](https://gitalk.github.io/), [Gitment](https://imsun.github.io/gitment/), [Valine](https://valine.js.org/) and [Disqus](https://disqus.com/).(Gitalk is recommended)
