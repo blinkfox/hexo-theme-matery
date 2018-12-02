@@ -1,6 +1,6 @@
 # hexo-theme-matery
 
-[![HitCount](http://hits.dwyl.io/blinkfox/hexo-theme-matery.svg)](http://hits.dwyl.io/blinkfox/hexo-theme-matery) [![GitHub issues](https://img.shields.io/github/issues/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/issues) [![GitHub license](https://img.shields.io/github/license/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/blob/master/LICENSE) [![Download](https://img.shields.io/badge/downloads-master-green.svg)](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master) [![Hexo Version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io) [![GitHub forks](https://img.shields.io/github/forks/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/network) [![GitHub stars](https://img.shields.io/github/stars/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/stargazers)
+[![HitCount](http://hits.dwyl.io/blinkfox/hexo-theme-matery.svg)](http://hits.dwyl.io/blinkfox/hexo-theme-matery) [![Gitter](https://img.shields.io/gitter/room/blinkfox/hexo-theme-matery.svg)](https://gitter.im/hexo-theme-matery/Lobby?utm_source=badge) [![GitHub issues](https://img.shields.io/github/issues/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/issues) [![GitHub license](https://img.shields.io/github/license/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/blob/master/LICENSE) [![Download](https://img.shields.io/badge/downloads-master-green.svg)](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master) [![Hexo Version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io) [![GitHub forks](https://img.shields.io/github/forks/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/network) [![GitHub stars](https://img.shields.io/github/stars/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/stargazers)
 
 [English Document](README.md) | [演示示例](https://blinkfox.github.io/) | QQ交流群:`926552981`
 
@@ -16,10 +16,10 @@
 - 时间轴式的归档页
 - **词云**的标签页和**雷达图**的分类页
 - 丰富的关于我页面（包括关于我、文章统计图、我的项目、我的技能、相册等）
-- 支持文章打赏
-- TOC 目录
+- 支持文章置顶和文章打赏
+- `TOC`目录
 - 可设置阅读文章时做密码验证
-- [Gitalk](https://gitalk.github.io/)、[Gitment](https://imsun.github.io/gitment/)、[Valine](https://valine.js.org/)和[Disqus](https://disqus.com/)评论模块（推荐使用Gitalk）
+- [Gitalk](https://gitalk.github.io/)、[Gitment](https://imsun.github.io/gitment/)、[Valine](https://valine.js.org/)和[Disqus](https://disqus.com/)评论模块（推荐使用`Gitalk`）
 
 ## 后续开发计划
 
@@ -36,6 +36,8 @@
 - [x] 首页设计和添加置顶文章
 - [x] 文章结束后增加**打赏**功能
 - ~~为博客添加萌萌的**宠物**或者**成长树**等~~（可以使用[hexo-helper-live2d](https://github.com/EYHN/hexo-helper-live2d)插件来实现）
+- [x] 集成[Valine](https://valine.js.org/)
+- [x] 增加阅读文章验证密码的功能
 - [ ] 制作一个LOGO
 - [ ] 增加友情链接页面
 
@@ -257,17 +259,15 @@ tags:
 
 ## 效果截图
 
-### 首页
+![首页](http://static.blinkfox.com/matery-20181202-1.png)
 
-![首页](http://static.blinkfox.com/hexo-matery-index1.png)
+![首页推荐文章](http://static.blinkfox.com/matery-20181202-2.png)
 
-![首页文章列表](http://static.blinkfox.com/hexo-matery-index2.png)
+![首页文章列表](http://static.blinkfox.com/matery-20181202-3.png)
 
-### 文章页
+![首页文章列表](http://static.blinkfox.com/matery-20181202-7.png)
 
-![文章](http://static.blinkfox.com/hexo-matery-post1.png)
-
-![文章后续内容](http://static.blinkfox.com/hexo-matery-post2.png)
+![首页文章列表](http://static.blinkfox.com/matery-20181202-8.png)
 
 ## 自定制修改
 
@@ -275,9 +275,11 @@ tags:
 
 - 菜单
 - 首页的励志名言
+- 是否显示推荐文章名称和按钮配置
 - `favicon` 和 `Logo`
 - 个人信息
 - TOC目录
+- 文章打赏信息
 - 我的项目
 - 我的技能
 - 我的相册
@@ -319,7 +321,3 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 ```
 
 在`/source/medias/featureimages`文件夹中默认有24张特色图片，你可以再增加或者减少，并需要在`_config.yml`做同步修改。
-
-## 主题QQ交流群
-
-![QQ交流群](http://static.blinkfox.com/matery-qq.jpeg)
