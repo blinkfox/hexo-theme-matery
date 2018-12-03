@@ -29,3 +29,12 @@
     <% } %>
 
 </main>
+
+<% if (theme.mathjax.enable && page.mathjax) { %>
+<script src="<%- theme.mathjax.cdn %>"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+<% } %>
