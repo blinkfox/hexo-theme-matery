@@ -17,6 +17,7 @@
 - Tags page of the **word cloud** and categories page of the **radar chart**
 - Rich 'About' page (including about me, posts charts, my projects, my skills, gallery etc.)
 - Support post topping and rewards
+- Support `MathJax`
 - TOC
 - Can be set to do password verification when reading a post
 - Comment module of [Gitalk](https://gitalk.github.io/), [Gitment](https://imsun.github.io/gitment/), [Valine](https://valine.js.org/) and [Disqus](https://disqus.com/).(Gitalk is recommended)
@@ -38,6 +39,7 @@
 - ~~Add a cute **pet** or **growth tree** for blogs, etc.~~（Can be implemented using the [hexo-helper-live2d](https://github.com/EYHN/hexo-helper-live2d) plugin）
 - [x] Integrated [Valine](https://valine.js.org/)
 - [x] add the ability to read the post verification password
+- [x] added support for `MathJax`
 - [ ] Make a LOGO
 - [ ] Add a friendship link page
 
@@ -242,6 +244,8 @@ top: true # If top value is true, it will be the homepage recommendation post
 # If you want to set the reading verification password for the post, 
 # you can set the password value, which must be encrypted with SHA256 to prevent others from seeing it.
 password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
+# Does this post open mathjax, Need to be activated in the theme's _config.yml.
+mathjax: false
 categories: Markdown
 tags:
   - Typora

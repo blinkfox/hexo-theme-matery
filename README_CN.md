@@ -17,6 +17,7 @@
 - **词云**的标签页和**雷达图**的分类页
 - 丰富的关于我页面（包括关于我、文章统计图、我的项目、我的技能、相册等）
 - 支持文章置顶和文章打赏
+- 支持`MathJax`
 - `TOC`目录
 - 可设置阅读文章时做密码验证
 - [Gitalk](https://gitalk.github.io/)、[Gitment](https://imsun.github.io/gitment/)、[Valine](https://valine.js.org/)和[Disqus](https://disqus.com/)评论模块（推荐使用`Gitalk`）
@@ -38,6 +39,7 @@
 - ~~为博客添加萌萌的**宠物**或者**成长树**等~~（可以使用[hexo-helper-live2d](https://github.com/EYHN/hexo-helper-live2d)插件来实现）
 - [x] 集成[Valine](https://valine.js.org/)
 - [x] 增加阅读文章验证密码的功能
+- [x] 增加了对`MathJax`的支持
 - [ ] 制作一个LOGO
 - [ ] 增加友情链接页面
 
@@ -244,7 +246,9 @@ author: 赵奇
 img: /source/images/xxx.jpg # 或者:http://xxx.com/xxx.jpg
 top: true # 如果top值为true，则会是首页推荐文章
 # 如果要对文章设置阅读验证密码的话，就可以在设置password的值，该值必须是用SHA256加密后的密码，防止被他人识破
-password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92 
+password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
+# 本文章是否开启mathjax，且需要在主题的_config.yml文件中也需要开启才行
+mathjax: false
 categories: Markdown
 tags:
   - Typora
