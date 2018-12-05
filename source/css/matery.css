@@ -6,6 +6,13 @@
     }
 }
 
+/* 特例修改小屏幕下文章详情table样式*/
+@media only screen and (max-width: 533px) {
+    #articleContent table{
+        table-layout: fixed;
+    }
+}
+
 /*中等屏幕下(平板类)的样式*/
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .container {
