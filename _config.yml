@@ -197,10 +197,11 @@ verifyPassword:
   promptMessage: 请输入访问本文章的密码
   errorMessage: 密码错误，将返回主页！
 
-# 添加google_analytics
-google_analytics:
+# Add google analytics configuration
+# 添加 Google Analytics 配置
+googleAnalytics:
   enable: false
-  ID:
+  id:
 
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.

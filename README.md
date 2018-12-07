@@ -21,6 +21,7 @@
 - TOC
 - Can be set to do password verification when reading a post
 - Comment module of [Gitalk](https://gitalk.github.io/), [Gitment](https://imsun.github.io/gitment/), [Valine](https://valine.js.org/) and [Disqus](https://disqus.com/).(Gitalk is recommended)
+- Integrated Google Analytics
 
 ## Next development plans
 
@@ -287,6 +288,7 @@ You can modify some custom modification in `_config.yml` as follows:
 - My Skills
 - My Gallery
 - Gitalk, Gitment, Valine and Disqus
+- Google Analytics
 - The map of default featured pictures. The theme will take remainde according to `hashcode` of post title if the post dose not set featured piactures.
 
 **I think everyone should have their own style and feature of blog**。if you are not satisfiled with functions and theme color,you can modify by yourself,and more free functions and deatil need to be modified by modify source code when it is hard to be finished in `_config.yml`.
