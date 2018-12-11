@@ -186,70 +186,24 @@
         <div class="container friends-container">
             <article>
                 <div class="row tags-posts friend-all">
+                        <% for (var item in site.data.friends.friends){ %>
                     <div class=" col s12 m6 l4">
                         <div class="card frind-card1">
                             <div class="frind-ship">
                                 <div class="title">
-                                    <img src="http://image.luokangyuan.com/1_qq_27922023.jpg" alt="img">
+                                    <img src="<%=site.data.friends.friends[item].headSculpture %>" alt="img">
                                     <div>
-                                        <h1 class="friend-name">码酱</h1>
-                                        <p>我不是大佬，只是在追寻大佬的脚步</p>
+                                        <h1 class="friend-name"><%=site.data.friends.friends[item].name %></h1>
+                                        <p><%=site.data.friends.friends[item].introduction %></p>
                                     </div>
                                 </div>
                                 <div class="friend-button">
-                                    <a href="#'" target="_blank" class="button button-glow button-rounded button-caution">前去学习</a>
+                                    <a href="<%=site.data.friends.friends[item].href %>" target="_blank" class="button button-glow button-rounded button-caution"><%=site.data.friends.friends[item].hrefTitle %></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="  col s12 m6 l4">
-                        <div class="card frind-card1">
-                            <div class="frind-ship">
-                                <div class="title">
-                                    <img src="http://image.luokangyuan.com/1_qq_27922023.jpg" alt="img">
-                                    <div>
-                                        <h1 class="friend-name">码酱</h1>
-                                        <p>我不是大佬，只是在追寻大佬的脚步</p>
-                                    </div>
-                                </div>
-                                <div class="friend-button">
-                                    <a href="#'" target="_blank" class="button button-glow button-rounded button-caution">前去学习</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="  col s12 m6 l4">
-                        <div class="card frind-card1">
-                            <div class="frind-ship">
-                                <div class="title">
-                                    <img src="http://image.luokangyuan.com/1_qq_27922023.jpg" alt="img">
-                                    <div>
-                                        <h1 class="friend-name">码酱</h1>
-                                        <p>我不是大佬，只是在追寻大佬的脚步</p>
-                                    </div>
-                                </div>
-                                <div class="friend-button">
-                                    <a href="#'" target="_blank" class="button button-glow button-rounded button-caution">前去学习</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="  col s12 m6 l4">
-                        <div class="card frind-card1">
-                            <div class="frind-ship">
-                                <div class="title">
-                                    <img src="http://image.luokangyuan.com/1_qq_27922023.jpg" alt="img">
-                                    <div>
-                                        <h1 class="friend-name">码酱</h1>
-                                        <p>我不是大佬，只是在追寻大佬的脚步</p>
-                                    </div>
-                                </div>
-                                <div class="friend-button">
-                                    <a href="#'" target="_blank" class="button button-glow button-rounded button-caution">前去学习</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <% } %>
                 </div>
             </article>
     </main>
