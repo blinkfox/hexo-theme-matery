@@ -188,7 +188,7 @@
                 <div class="row tags-posts friend-all">
                         <% for (var item in site.data.friends.friends){ %>
                     <div class=" col s12 m6 l4">
-                        <div class="card frind-card1">
+                        <div class="card frind-card<%=((item % 10) +1) %>">
                             <div class="frind-ship">
                                 <div class="title">
                                     <img src="<%=site.data.friends.friends[item].headSculpture %>" alt="img">
