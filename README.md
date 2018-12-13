@@ -155,13 +155,13 @@ Also, create a new `_data` directory in your blog's `source` directory and a new
 	"introduction": "I am not a master, just looking for the master's footsteps.",
 	"url": "http://luokangyuan.com/",
 	"title": "Read More"
-},{
+}, {
 	"avatar": "http://image.luokangyuan.com/4027734.jpeg",
 	"name": "Blinkfox",
 	"introduction": "Hello, I'm blinkfox, I like programming.",
 	"url": "https://blinkfox.github.io/",
 	"title": "Visit Blog"
-},{
+}, {
 	"avatar": "http://image.luokangyuan.com/avatar.jpg",
 	"name": "ja_rome",
 	"introduction": "Ordinary steps can also go out of the great journey.",

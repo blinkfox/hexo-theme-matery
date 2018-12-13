@@ -154,13 +154,13 @@ layout: "friends"
 	"introduction": "我不是大佬，只是在追寻大佬的脚步",
 	"url": "http://luokangyuan.com/",
 	"title": "前去学习"
-}{
+}, {
 	"avatar": "http://image.luokangyuan.com/4027734.jpeg",
 	"name": "闪烁之狐",
 	"introduction": "编程界大佬，技术牛，人还特别好，不懂的都可以请教大佬",
 	"url": "https://blinkfox.github.io/",
 	"title": "前去学习"
-},{
+}, {
 	"avatar": "http://image.luokangyuan.com/avatar.jpg",
 	"name": "ja_rome",
 	"introduction": "平凡的脚步也可以走出伟大的行程",
