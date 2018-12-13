@@ -1,0 +1,209 @@
+<%- partial('_partial/bg-cover') %>
+<style>
+    .friends-container {
+        margin-top: -100px;
+    }
+
+    .frind-ship img {
+        border-radius: 50%;
+    }
+
+    /* 一下是按钮样式 */
+
+    .frind-ship {
+        padding: 10px 20px;
+    }
+
+    .frind-ship .title {
+        display: flex;
+        align-items: center;
+    }
+
+    .frind-ship .title div {
+        color: #fff;
+        padding-left: 10px;
+    }
+
+    .frind-ship .title img {
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
+    }
+
+    .frind-ship .title h1 {
+        line-height: 0.8rem;
+        padding-bottom: 16px;
+        border-bottom: 2px solid #fff;
+    }
+
+    .friend-button {
+        display: flex;
+        justify-content: center;
+        margin-bottom: -27px;
+    }
+
+    .friend-button a {
+        border-radius: 40px;
+    }
+
+    .friend-all .tag-post {
+        margin-bottom: 30px;
+    }
+
+    .button-caution {
+        background-color: #FF4351;
+        border-color: #FF4351;
+        color: #FFF;
+    }
+
+    .button {
+        font-weight: 300;
+        font-size: 16px;
+        font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        text-decoration: none;
+        text-align: center;
+        line-height: 40px;
+        height: 40px;
+        padding: 0 40px;
+        margin: 0;
+        display: inline-block;
+        appearance: none;
+        cursor: pointer;
+        border: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: .3s;
+        transition-duration: .3s;
+    }
+
+    .title {
+        margin-bottom: 0rem !important;
+    }
+
+    .card {
+        margin: 3rem 0 1rem 0 !important;
+    }
+
+    .button-glow.button-caution {
+        -webkit-animation-name: glowing-caution;
+        animation-name: glowing-caution;
+    }
+
+    @-webkit-keyframes glowing-caution {
+        from {
+            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+        }
+
+        50% {
+            -webkit-box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
+            box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
+        }
+
+        to {
+            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+        }
+    }
+
+    @keyframes glowing-caution {
+        from {
+            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+        }
+
+        50% {
+            -webkit-box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
+            box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
+        }
+
+        to {
+            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+        }
+    }
+
+    .button-caution:hover {
+        background-color: #ff7680;
+        border-color: #ff7680;
+        color: #FFF;
+        text-decoration: none;
+    }
+
+    .frind-card1 {
+        background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    }
+
+    .frind-card2 {
+        background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .frind-card3 {
+        background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+    }
+
+    .frind-card4 {
+        background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    }
+
+    .frind-card5 {
+        background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+    }
+
+    .frind-card6 {
+        background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+    }
+
+    .frind-card7 {
+        background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    }
+
+    .frind-card8 {
+        background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+    }
+
+    .frind-card9 {
+        background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+    }
+
+    .frind-card10 {
+        background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+    }
+</style>
+
+<main class="content">
+    <div class="container friends-container">
+        <article>
+            <% if (site.data && site.data.friends) { %>
+            <% var friends = site.data.friends; %>
+            <div class="row tags-posts friend-all">
+                <% for (var i = 0, len = friends.length; i < len; i++) { %>
+                <% var friend = friends[i]; %>
+                <div class=" col s12 m6 l4" data-aos="zoom-in-up">
+                    <div class="card frind-card<%- ((i % 10) +1) %>">
+                        <div class="frind-ship">
+                            <div class="title">
+                                <img src="<%- friend.avatar %>" alt="img">
+                                <div>
+                                    <h1 class="friend-name"><%- friend.name %></h1>
+                                    <p><%- friend.introduction %></p>
+                                </div>
+                            </div>
+                            <div class="friend-button">
+                                <a href="<%- friend.url %>" target="_blank" 
+                                    class="button button-glow button-rounded button-caution">
+                                    <%- friend.title %>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+            <% } %>
+        </article>
+    </div>
+</main>

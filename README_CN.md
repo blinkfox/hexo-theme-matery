@@ -42,7 +42,7 @@
 - [x] 增加阅读文章验证密码的功能
 - [x] 增加了对`MathJax`的支持
 - [ ] 制作一个LOGO
-- [ ] 增加友情链接页面
+- [x] 增加友情链接页面
 
 > 欢迎贡献!
 
@@ -123,6 +123,55 @@ date: 2018-09-30 17:25:30
 type: "about"
 layout: "about"
 ---
+```
+
+### 新建友情连接 friends 页
+
+`friends`页是用来展示**友情连接**信息的页面，如果在你的博客`source`目录下还没有`friends/index.md`文件，那么你就需要新建一个，命令如下：
+
+```bash
+hexo new page "friends"
+```
+
+编辑你刚刚新建的页面文件`/source/friends/index.md`，至少需要以下内容：
+
+```yaml
+---
+title: friends
+date: 2018-12-12 21:25:30
+type: "friends"
+layout: "friends"
+---
+```
+
+同时，在你的博客`source`目录下新建`_data`目录，在`_data`目录中新建`friends.json`文件，文件内容如下所示：
+
+```json
+[{
+	"avatar": "http://image.luokangyuan.com/1_qq_27922023.jpg",
+	"name": "码酱",
+	"introduction": "我不是大佬，只是在追寻大佬的脚步",
+	"url": "http://luokangyuan.com/",
+	"title": "前去学习"
+},{
+	"avatar": "http://image.luokangyuan.com/timjie-tu-20180731223952.png",
+	"name": "杉木",
+	"introduction": "前端大佬，PS大佬，不仅会写代码，还弹的一手好吉他",
+	"url": "http://w3more.cn/",
+	"title": "前去学习"
+},{
+	"avatar": "http://image.luokangyuan.com/4027734.jpeg",
+	"name": "闪烁之狐",
+	"introduction": "编程界大佬，技术牛，人还特别好，不懂的都可以请教大佬",
+	"url": "https://blinkfox.github.io/",
+	"title": "前去学习"
+},{
+	"avatar": "http://image.luokangyuan.com/avatar.jpg",
+	"name": "ja_rome",
+	"introduction": "平凡的脚步也可以走出伟大的行程",
+	"url": "ttps://me.csdn.net/jlh912008548",
+	"title": "前去学习"
+}]
 ```
 
 ### 代码高亮
