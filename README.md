@@ -134,7 +134,6 @@ The `friends` page is a page for displaying **Friendly Links** information. If y
 hexo new page "friends"
 ```
 
-编辑你刚刚新建的页面文件`/source/friends/index.md`，至少需要以下内容：
 Edit the file `/source/friends/index.md` you just created, at least you need the following:
 
 ```yaml
