@@ -58,6 +58,11 @@ reward:
   wechat: /medias/reward/wechat.png
   alipay: /medias/reward/alipay.jpg
 
+# 是否激活复制文章时追加博客和作者的版权信息.
+copyright:
+  enable: false
+  minCharNumber: 120 #至少多少个字符就追加版权信息.
+
 # Whether to activate the mathjax, this is a global configuration, but the post still does not open the mathjax rendering.
 # Considering that the mathjax loading is time consuming,
 # you also need to add `mathjax: true` to the Front-matter of the post that needs to be rendered.

@@ -44,6 +44,7 @@
 - [x] added support for `MathJax`
 - [ ] Make a LOGO
 - [x] Add a friendship link page
+- [ ] Append blog copyright information when copy post content 
 
 > Welcome to contribute!
 

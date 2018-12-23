@@ -74,3 +74,41 @@
 
     <%- partial('_partial/prev-next') %>
 </div>
+
+<% if (theme.copyright.enable) { %>
+<script>
+    $('#articleContent').on('copy', function (e) {
+        if (theme.copyright.enable) {
+
+        }
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < 30) return;
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        newdiv.innerHTML += '<br /><br />Read more at: <a href="' +
+            document.location.href + '">' +
+            document.location.href + '</a> &copy; MySite.com';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+<% } %>
