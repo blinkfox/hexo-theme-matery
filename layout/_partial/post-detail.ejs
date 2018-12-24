@@ -78,16 +78,14 @@
 <% if (theme.copyright.enable) { %>
 <script>
     $('#articleContent').on('copy', function (e) {
-        if (theme.copyright.enable) {
-
-        }
         // IE8 or earlier browser is 'undefined'
         if (typeof window.getSelection === 'undefined') return;
 
         var selection = window.getSelection();
-
         // if the selection is short let's not annoy our users.
-        if (('' + selection).length < 30) return;
+        if (('' + selection).length < Number.parseInt('<%- theme.copyright.minCharNumber %>')) {
+            return;
+        }
 
         // create a div outside of the visible area and fill it with the selected text.
         var bodyElement = document.getElementsByTagName('body')[0];
@@ -103,9 +101,12 @@
             newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
         }
 
-        newdiv.innerHTML += '<br /><br />Read more at: <a href="' +
-            document.location.href + '">' +
-            document.location.href + '</a> &copy; MySite.com';
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '<%- __("from")  %>: <%- config.title %><br />'
+            + '<%- __("author")  %>: <%- config.author %><br />'
+            + '<%- __("link")  %>: <a href="' + url + '">' + url + '</a><br />'
+            + '<%- theme.copyright.description %>';
 
         selection.selectAllChildren(newdiv);
         window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);

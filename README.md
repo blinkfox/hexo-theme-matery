@@ -20,6 +20,7 @@
 - Support post topping and rewards
 - Support `MathJax`
 - TOC
+- Can be set append the copyright information when copying the content of the post
 - Can be set to do password verification when reading a post
 - Comment module of [Gitalk](https://gitalk.github.io/), [Gitment](https://imsun.github.io/gitment/), [Valine](https://valine.js.org/) and [Disqus](https://disqus.com/).(Gitalk is recommended)
 - Integrated Google Analytics
@@ -44,7 +45,7 @@
 - [x] added support for `MathJax`
 - [ ] Make a LOGO
 - [x] Add a friendship link page
-- [ ] Append blog copyright information when copy post content 
+- [x] Append blog copyright information when copy post content 
 
 > Welcome to contribute!
 
@@ -329,6 +330,8 @@ You can modify some custom modification in `_config.yml` as follows:
 - profiles
 - TOC
 - post rewards
+- Append copyright information when copying article content
+- MathJax
 - My Projects
 - My Skills
 - My Gallery
