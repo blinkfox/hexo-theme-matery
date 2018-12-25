@@ -45,7 +45,8 @@
 - [x] added support for `MathJax`
 - [ ] Make a LOGO
 - [x] Add a friendship link page
-- [x] Append blog copyright information when copy post content 
+- [x] Append blog copyright information when copy post content
+- [x] Add the 'love' effect of the click page
 
 > Welcome to contribute!
 
@@ -332,6 +333,7 @@ You can modify some custom modification in `_config.yml` as follows:
 - post rewards
 - Append copyright information when copying article content
 - MathJax
+- the 'love' effect of clicking on the page
 - My Projects
 - My Skills
 - My Gallery
