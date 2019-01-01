@@ -57,6 +57,10 @@ reward:
   title: 你的赏识是我前进的动力
   wechat: /medias/reward/wechat.png
   alipay: /medias/reward/alipay.jpg
+  
+# 开启网站统计，这里引入不蒜子作为统计插件
+statistics:
+ enable: true
 
 # Whether to activate the copyright information of the blog and author when copying the post content.
 # minCharNumber: Approve copyright information by copying at least how many characters.
