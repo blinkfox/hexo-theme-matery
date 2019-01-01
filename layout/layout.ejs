@@ -18,10 +18,15 @@
 <script src="/libs/aos/aos.js"></script>
 <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
 <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-<% if (theme.clicklove.enable) { %>
-<script src="/libs/others/clicklove.js"></script>
-<% } %>
 <script src="/js/matery.js"></script>
+
 <%- partial('_partial/google-analytics') %>
+<% if (theme.clicklove.enable) { %>
+    <script src="/libs/others/clicklove.js"></script>
+<% } %>
+<% if (theme.busuanziStatistics && theme.busuanziStatistics.enable) { %>
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+<% } %>
+
 </body>
 </html>

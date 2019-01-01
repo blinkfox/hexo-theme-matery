@@ -833,6 +833,11 @@ article .article-tags .chip {
     color: #525f7f;
 }
 
+#artDetail .post-info .post-read {
+    margin-left: 15px;
+    color: #525f7f;
+}
+
 #artDetail .article-card-content {
     padding: 0 15px 20px 18px;
 }
@@ -1523,12 +1528,16 @@ footer {
     padding-bottom: 1px;
 }
 
+footer .social-statis {
+    margin-top: 10px;
+}
+
 footer a {
     color: #fff;
 }
 
 footer .copy-right {
-    color: #d5d5d5;
+    color: #d9d9d9;
 }
 
 /*搜索层样式*/
