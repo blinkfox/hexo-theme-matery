@@ -14,6 +14,16 @@
         </div>
     </div>
 
+    <%
+        var menuMap = new Map();
+        menuMap.set("Index", "首页");
+        menuMap.set("Tags", "标签");
+        menuMap.set("Categories", "分类");
+        menuMap.set("Archives", "归档");
+        menuMap.set("About", "关于");
+        menuMap.set("Friends", "友情链接");
+    %>
+
     <ul class="menu-list mobile-menu-list">
         <% Object.keys(theme.menu).forEach(function(key) { %>
         <li>
@@ -23,7 +33,7 @@
                 <% } else { %>
                 <i class="fa fa-fw fa-link"></i>
                 <% } %>
-                <%= key %>
+                <%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %>
             </a>
         </li>
         <% }); %>

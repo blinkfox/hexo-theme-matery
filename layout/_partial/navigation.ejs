@@ -1,3 +1,13 @@
+<%
+    var menuMap = new Map();
+    menuMap.set("Index", "首页");
+    menuMap.set("Tags", "标签");
+    menuMap.set("Categories", "分类");
+    menuMap.set("Archives", "归档");
+    menuMap.set("About", "关于");
+    menuMap.set("Friends", "友情链接");
+%>
+
 <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
 <ul class="right">
     <% Object.keys(theme.menu).forEach(function(key) { %>
@@ -6,7 +16,7 @@
             <% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
             <i class="fa <%- theme.menu[key].icon %>"></i>
             <% } %>
-            <span><%- key %></span>
+            <span><%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %></span>
         </a>
     </li>
     <% }); %>

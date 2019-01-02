@@ -23,7 +23,7 @@
 - 可设置复制文章内容时追加版权信息
 - 可设置阅读文章时做密码验证
 - [Gitalk](https://gitalk.github.io/)、[Gitment](https://imsun.github.io/gitment/)、[Valine](https://valine.js.org/)和[Disqus](https://disqus.com/)评论模块（推荐使用`Gitalk`）
-- 集成了谷歌分析(`Google Analytics`)
+- 集成了[不蒜子统计](http://busuanzi.ibruce.info/)和谷歌分析(`Google Analytics`)
 
 ## 后续开发计划
 
@@ -343,7 +343,7 @@ tags:
 - 我的技能
 - 我的相册
 - `Gitalk`、`Gitment`、`Valine`和`disqus`评论配置
-- 谷歌分析(`Google Analytics`)
+- [不蒜子统计](http://busuanzi.ibruce.info/)和谷歌分析(`Google Analytics`)
 - 默认特色图的集合。当文章没有设置特色图时，本主题会根据文章标题的`hashcode`值取余，来选择展示对应的特色图
 
 **我认为个人博客应该都有自己的风格和特色**。如果本主题中的诸多功能和主题色彩你不满意，可以在主题中自定义修改，很多更自由的功能和细节点的修改难以在主题的`_config.yml`中完成，需要修改源代码才来完成。以下列出了可能对你有用的地方：
