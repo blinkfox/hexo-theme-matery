@@ -16,15 +16,15 @@ menu:
   About:
     url: /about
     icon: fa-user-circle-o
-  Friends:
-    url: /friends
-    icon: fa-address-book
+  # Friends:
+  #   url: /friends
+  #   icon: fa-address-book
 
 # index page dream text,
 # 配置首页显示"梦想"的语句.
 dream:
   enable: false
-  text: The best preparation for tomorrow is doing your best today.
+  text: 简单生活，快乐工作.
 
 # Whether to display the title of the recommended posts
 # 是否显示推荐文章的标题
@@ -48,8 +48,8 @@ indexbtn:
 # Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
 # 是否激活文章 TOC 功能，并配置TOC支持选中哪些标题类型.
 toc:
-  enable: false
-  heading: h2, h3, h4
+  enable: true
+  heading: h1, h2, h3, h4
 
 # 是否激活文章末尾的打赏功能，默认激活（你替换为的你自己的微信、支付宝二维码图片、或者使用网络图片也可以）.
 reward:
@@ -83,7 +83,7 @@ clicklove:
 # profile in about page, including avatars, career, and personal introductions.
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
 profile:
-  avatar: /medias/avatar.jpg
+  avatar: /medias/avatar.png
   career: Software Engineer
   introduction: If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as your brother and hope as your sentry.
 
@@ -143,6 +143,9 @@ myGallery:
     - /medias/featureimages/0.jpg
     - /medias/featureimages/1.jpg
     - /medias/featureimages/2.jpg
+    - /medias/featureimages/3.jpg
+    - /medias/featureimages/4.jpg
+    - /medias/featureimages/5.jpg
 
 # Whether to display post-calender in the `archive` page
 # 设置在归档页面中是否显示'文章日历'控件
@@ -199,7 +202,7 @@ valine:
 # 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
 githubLink:
   enable: true
-  url: https://github.com/blinkfox/hexo-theme-matery
+  url: https://github.com/AlanWangBit
   title: Fork Me
 
 # The password verification feature of read post. To use this feature,
