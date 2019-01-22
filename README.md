@@ -279,20 +279,23 @@ You can search social icon such as `fa-github` in [Font Awesome](https://fontawe
 
 ## Post Front-matter example
 
-The following are post `Front-matter` example,and all content is **not required**.But we still suggest you write the value of `title`.Of course ,you'd better write all of these information.
+The following is an example and description of the article `Front-matter`, and all content is **not required**.But we still suggest you write the value of `title` and `date`.
 
 ```yaml
 ---
 title: typora-vue-theme Theme introduction
 date: 2018-09-07 09:25:00
 author: Qi Zhao
-img: /source/images/xxx.jpg # or:http://xxx.com/xxx.jpg
-top: true # If top value is true, it will be the homepage recommendation post
+# or: http://xxx.com/xxx.jpg
+img: /source/images/xxx.jpg
+# If top value is true, it will be the homepage recommendation post
+top: true
 # If you want to set the reading verification password for the post, 
 # you can set the password value, which must be encrypted with SHA256 to prevent others from seeing it.
 password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
 # Does this post open mathjax, Need to be activated in the theme's _config.yml.
 mathjax: false
+summary: This is the content of your custom post summary. If there is a value for this attribute, the post card summary will display the text, otherwise the program will automatically intercept part of the post content as a summary.
 categories: Markdown
 tags:
   - Typora

@@ -283,19 +283,22 @@ feed:
 
 ## 文章Front-matter示例
 
-以下为文章`Front-matter`的示例，所有内容均为**非必填**的。但是，仍然建议至少填写`title`的值，当然最好都填写上这些文章信息。
+以下为文章`Front-matter`的示例和说明，所有内容均为**非必填**的。但我仍然建议至少填写`title`和`date`的值。
 
 ```yaml
 ---
 title: typora-vue-theme主题介绍
 date: 2018-09-07 09:25:00
 author: 赵奇
-img: /source/images/xxx.jpg # 或者:http://xxx.com/xxx.jpg
-top: true # 如果top值为true，则会是首页推荐文章
+ # 图片推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如:http://xxx.com/xxx.jpg
+img: /source/images/xxx.jpg
+# 如果top值为true，则会是首页推荐文章
+top: true
 # 如果要对文章设置阅读验证密码的话，就可以在设置password的值，该值必须是用SHA256加密后的密码，防止被他人识破
 password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
 # 本文章是否开启mathjax，且需要在主题的_config.yml文件中也需要开启才行
 mathjax: false
+summary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
 categories: Markdown
 tags:
   - Typora
