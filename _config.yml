@@ -75,6 +75,17 @@ mathjax:
   enable: false
   cdn: https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
+# Post word count, reading duration, site total word count.
+# Before you activate, please confirm that you have installed the hexo-wordcount plugin,
+# install the plugin command: `npm i --save hexo-wordcount`.
+# 文章字数统计、阅读时长、总字数统计
+# 激活前请确认你已经安装了 hexo-wordcount 插件，安装命令: `npm i --save hexo-wordcount`
+wordCount:
+  enable: false
+  postWordCount: true
+  min2read: true
+  totalCount: true
+
 # Whether to activate the 'love' effect of clicking on the page.
 # 是否激活点击页面的'爱心'效果，默认激活.
 clicklove:

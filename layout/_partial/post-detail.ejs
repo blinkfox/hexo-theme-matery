@@ -2,35 +2,59 @@
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
-            <% if (page.tags && page.tags.length) { %>
-            <div class="article-tag">
-                <% page.tags.each(function(tag) { %>
-                <a href="<%- url_for(tag.path) %>" target="_blank">
-                    <span class="chip bg-color"><%= tag.name %></span>
-                </a>
-                <% }); %>
+            <div class="row tag-cate">
+                <div class="col s6">
+                    <% if (page.tags && page.tags.length) { %>
+                    <div class="article-tag">
+                        <% page.tags.each(function(tag) { %>
+                            <a href="<%- url_for(tag.path) %>" target="_blank">
+                                <span class="chip bg-color"><%= tag.name %></span>
+                            </a>
+                        <% }); %>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="col s6 right-align">
+                    <% if (page.categories && page.categories.length > 0) { %>
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        <% page.categories.forEach(category => { %>
+                            <a href="<%- url_for(category.path) %>" class="post-category" target="_blank">
+                                <%- category.name %>
+                            </a>
+                        <% }); %>
+                    </div>
+                    <% } %>
+                </div>
             </div>
-            <% } %>
-            <div class="post-info">
-                <% if (page.categories && page.categories.length > 0) { %>
-                <span class="post-cate">
-                <!--<span class="post-cate" style="margin-right: 0px">-->
-                    <i class="fa fa-bookmark fa-fw icon-category"></i>
-                    <% page.categories.forEach(category => { %>
-                    <a href="<%- url_for(category.path) %>" class="post-category" target="_blank">
-                        <%- category.name %>
-                    </a>
-                    <% }); %>
-                </span>
-                <% } %>
 
+            <div class="post-info">
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i><%- date(page.date, 'YYYY-MM-DD') %>
+                    <i class="fa fa-calendar-minus-o fa-fw"></i><%- __('publishDate') %>:&nbsp;&nbsp;
+                    <%- date(page.date, 'YYYY-MM-DD') %>
                 </span>
+
+                <% if (theme.wordCount.enable) { %>
+                    <% if (theme.wordCount.postWordCount) { %>
+                    <span class="post-word-count">
+                        <i class="fa fa-file-word-o fa-fw"></i><%- __('wordCount') %>:&nbsp;&nbsp;
+                        <%= wordcount(page.content) %>
+                    </span>
+                    <% } %>
+
+                    <% if (theme.wordCount.min2read) { %>
+                    <span class="post-word-count">
+                        <i class="fa fa-clock-o fa-fw"></i><%- __('readTimes') %>:&nbsp;&nbsp;
+                        <%= min2read(page.content) %> <%= __('Minutes') %>
+                    </span>
+                    <% } %>
+                <% } %>
 				
 				<% if (theme.busuanziStatistics && theme.busuanziStatistics.enable) { %>
                     <span id="busuanzi_container_page_pv" class="post-read">
-                    <i class="fa fa-eye fa-fw"></i><%= __('read') %> <span id="busuanzi_value_page_pv"></span>
+                        <i class="fa fa-eye fa-fw"></i><%- __('readCount') %>:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
 				<% } %>
             </div>
         </div>

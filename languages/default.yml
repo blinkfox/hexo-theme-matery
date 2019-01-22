@@ -7,7 +7,11 @@ archives: Archives
 about: About
 friends: Friends
 recommendedPosts: Recommended Posts
-read: Read
+publishDate: Publish Date
+readCount: Read Count
+wordCount: Word Count
+readTimes: Read Times
+Minutes: Min
 readMore: Read more
 toc: TOC
 reprint: Reprint please specify

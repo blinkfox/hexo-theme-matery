@@ -6,7 +6,11 @@ tags: 标签
 archives: 归档
 about: 关于
 recommendedPosts: 推荐文章
-read: 阅读
+publishDate: 发布日期
+readCount: 阅读次数
+wordCount: 文章字数
+readTimes: 阅读时长
+Minutes: 分
 readMore: 阅读更多
 toc: 目录
 reprint: 转载请注明
