@@ -169,6 +169,10 @@ mark {
     color: #0f9d58 !important;
 }
 
+.white-color {
+    color: #fff;
+}
+
 /*头部导航栏样式*/
 @media only screen and (max-width: 600px) {
     header nav .brand-logo {
