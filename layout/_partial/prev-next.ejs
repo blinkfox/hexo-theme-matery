@@ -20,7 +20,8 @@ var featureImages = theme.featureImages;
     <div class="row article-row">
         <% if (page.prev) { %>
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color"><%= __('prev') %></div>
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;<%= __('prev') %></div>
             <div class="card">
                 <a href="<%- url_for(page.prev.path) %>">
                     <div class="card-image">
@@ -74,7 +75,9 @@ var featureImages = theme.featureImages;
         </div>
         <% } else { %>
         <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color"><%= __('curr') %></div>
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-dot-circle-o"></i>&nbsp;<%= __('curr') %>
+            </div>
             <div class="card">
                 <a href="<%- url_for(page.path) %>">
                     <div class="card-image">
@@ -130,7 +133,9 @@ var featureImages = theme.featureImages;
         <% } %>
         <% if (page.next) { %>
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color"><%= __('next') %></div>
+            <div class="article-badge right-badge text-color">
+                <%= __('next') %>&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="<%- url_for(page.next.path) %>">
                     <div class="card-image">
@@ -184,7 +189,9 @@ var featureImages = theme.featureImages;
         </div>
         <% } else { %>
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color"><%= __('curr') %></div>
+            <div class="article-badge right-badge text-color">
+                <%= __('curr') %>&nbsp;<i class="fa fa-dot-circle-o"></i>
+            </div>
             <div class="card">
                 <a href="<%- url_for(page.path) %>">
                     <div class="card-image">

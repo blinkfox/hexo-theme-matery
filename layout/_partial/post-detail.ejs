@@ -73,7 +73,9 @@
 
             <div class="reprint">
                 <p>
-                    <span class="reprint-tip"><%= __('reprint') %>: </span>
+                    <span class="reprint-tip">
+                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;<%= __('reprint') %>:
+                    </span>
                     <a href="<%- config.url %>" class="b-link-green"><%- config.title %></a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
                     <a href="<%- url_for(page.path) %>" class="b-link-green"><%= page.title %></a>
