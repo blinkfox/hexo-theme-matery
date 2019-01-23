@@ -3,7 +3,9 @@
 var myprojects = theme.myProjects.data;
 %>
 <div class="my-projects">
-    <div class="title center-align" data-aos="zoom-in-up"><%- __('myProjects') %></div>
+    <div class="title center-align" data-aos="zoom-in-up">
+        <i class="fa fa-gift"></i>&nbsp;&nbsp;<%- __('myProjects') %>
+    </div>
     <div class="row">
         <% if (myprojects) { %>
         <% Object.keys(myprojects).forEach(function(project) { %>

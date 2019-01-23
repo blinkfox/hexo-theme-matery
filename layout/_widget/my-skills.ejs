@@ -4,7 +4,9 @@ var mySkills = theme.mySkills.data;
 var topSkillArr = [];
 %>
 <div class="my-skills">
-    <div class="title center-align" data-aos="zoom-in-up"><%- __('mySkills') %></div>
+    <div class="title center-align" data-aos="zoom-in-up">
+        <i class="fa fa-wrench"></i>&nbsp;&nbsp;<%- __('mySkills') %>
+    </div>
     <div class="row">
         <% if (mySkills) { %>
         <% Object.keys(mySkills).forEach(function(skill) { %>
@@ -41,7 +43,7 @@ var topSkillArr = [];
 
     <% if (site.tags) { %>
     <div class="other-skills chip-container" data-aos="zoom-in-up">
-        <div class="sub-title center-align"><%- __('otherSkills') %></div>
+        <div class="sub-title center-align"><i class="fa fa-book"></i>&nbsp;&nbsp;<%- __('otherSkills') %></div>
         <div class="tag-chips center-align">
             <% site.tags.map(function(tag) { %>
             <% if (!isInArray(topSkillArr, tag.name)) { %>
