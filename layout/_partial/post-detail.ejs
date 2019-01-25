@@ -3,7 +3,7 @@
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
-                <div class="col s6">
+                <div class="col s7">
                     <% if (page.tags && page.tags.length) { %>
                     <div class="article-tag">
                         <% page.tags.each(function(tag) { %>
@@ -12,9 +12,13 @@
                             </a>
                         <% }); %>
                     </div>
+                    <% } else { %>
+                          <div class="article-tag">
+                            <span class="chip bg-color"><%- __("notag")  %></span>
+                          </div>
                     <% } %>
                 </div>
-                <div class="col s6 right-align">
+                <div class="col s5 right-align">
                     <% if (page.categories && page.categories.length > 0) { %>
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
