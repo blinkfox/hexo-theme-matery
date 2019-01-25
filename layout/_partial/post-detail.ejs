@@ -29,36 +29,36 @@
             </div>
 
             <div class="post-info">
-                <span class="post-date">
+                <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i><%- __('publishDate') %>:&nbsp;&nbsp;
                     <%- date(page.date, 'YYYY-MM-DD') %>
-                </span>
+                </div>
 
                 <% if (theme.wordCount.enable) { %>
                     <% if (theme.wordCount.postWordCount) { %>
-                    <span class="post-word-count">
+                    <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i><%- __('wordCount') %>:&nbsp;&nbsp;
                         <%= wordcount(page.content) %>
-                    </span>
+                    </div>
                     <% } %>
 
                     <% if (theme.wordCount.min2read) { %>
-                    <span class="post-word-count">
+                    <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i><%- __('readTimes') %>:&nbsp;&nbsp;
                         <%= min2read(page.content) %> <%= __('Minutes') %>
-                    </span>
+                    </div>
                     <% } %>
                 <% } %>
 				
 				<% if (theme.busuanziStatistics && theme.busuanziStatistics.enable) { %>
-                    <span id="busuanzi_container_page_pv" class="post-read">
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
                         <i class="fa fa-eye fa-fw"></i><%- __('readCount') %>:&nbsp;&nbsp;
                         <span id="busuanzi_value_page_pv"></span>
-                    </span>
+                    </div>
 				<% } %>
             </div>
         </div>
-        <hr>
+        <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <%- page.content %>
