@@ -1558,6 +1558,7 @@ footer {
 
 footer .social-statis {
     margin-top: 10px;
+    position: relative;
 }
 
 footer a {
