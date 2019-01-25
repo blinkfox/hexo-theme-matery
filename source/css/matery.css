@@ -103,6 +103,7 @@ pre {
 
 code {
     padding: 1px 5px;
+    font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
     font-size: 0.91rem;
     color: #e96900;
     background-color: #f8f8f8;
@@ -919,6 +920,7 @@ article .article-tags .chip {
     color: #42b983;
     font-weight: 500;
     text-decoration: underline;
+    word-wrap:break-word;
 }
 
 #articleContent img {
@@ -1663,4 +1665,23 @@ footer .copy-right {
 
 .clearfix {
     clear: left;
+}
+
+.img_shadow {
+  box-shadow: 0px 0px 14px 1px #666
+}
+
+.img_margin {
+  margin: 25px auto 15px auto;
+}
+
+.center-caption {
+  color: #5f5f5f;
+  padding: 10px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.caption {
+  text-align: center;
+  margin: 0 auto 15px auto;
 }
