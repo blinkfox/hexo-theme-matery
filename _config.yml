@@ -45,6 +45,14 @@ indexbtn:
   icon: fa-github-alt
   url: https://github.com/blinkfox/hexo-theme-matery
 
+# The configurations of the second line of home banner
+# icon/button will not show up if you leave the corresponding socialLink empty
+# 首页 banner 中的第二行个人信息配置，留空即不启用
+socialLink:
+  qq: 123123123
+  github:
+  email: xxx@xx.xx
+
 # Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
 # 是否激活文章 TOC 功能，并配置TOC支持选中哪些标题类型.
 toc:
