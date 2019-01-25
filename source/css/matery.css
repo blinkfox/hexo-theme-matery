@@ -1628,3 +1628,7 @@ footer .copy-right {
     line-height: 48px;
     font-size: 1.8rem;
 }
+
+code {
+    font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
+}
