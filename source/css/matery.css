@@ -919,6 +919,7 @@ article .article-tags .chip {
     color: #42b983;
     font-weight: 500;
     text-decoration: underline;
+    word-wrap:break-word;
 }
 
 #articleContent img {
