@@ -483,8 +483,12 @@ header .go-back i {
     }
 }
 
-.recommend {
-    margin-top: 20px;
+.index-card {
+    margin-top: -40px;
+}
+
+.music {
+    margin-bottom: 30px !important;
 }
 
 .notice {
@@ -500,7 +504,7 @@ header .go-back i {
     padding-top: 30px;
 }
 
-.recommend .card .card-content {
+.index-card .card .card-content {
     padding: 20px 40px;
 }
 
@@ -517,14 +521,14 @@ header .go-back i {
 }
 
 @media only screen and (max-width: 601px) {
-    .recommend .card .card-content {
+    .index-card .card .card-content {
         padding: 10px 10px;
     }
 }
 
 /*中等屏幕下(平板类)的样式*/
 @media only screen and (min-width: 600px) and (max-width: 992px) {
-    .recommend .card .card-content {
+    .index-card .card .card-content {
         padding: 20px 20px;
     }
 }

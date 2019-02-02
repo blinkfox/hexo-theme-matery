@@ -9,21 +9,23 @@
 
 <main class="content">
 
-    <% if (theme.dream.enable) { %>
-    <div class="container notice">
-        <div class="card">
-            <div class="card-content">
-                <i class="fa fa-volume-up fa-lg fa-fw text-color"></i><%= theme.dream.text %>
+    <% if (page.current === 1) { %>
+    <div class="index-card">
+        <div class="container ">
+            <div class="card">
+                <div class="card-content">
+                    <% if (theme.music.enable && site.data && site.data.musics) { %>
+                        <%- partial('_widget/music') %>
+                    <% } %>
+
+                    <div id="recommend-sections" class="recommend">
+                        <%- partial('_widget/recommend') %>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <% } %>
-
-    <div id="recommend-sections">
-    <% if (page.current === 1) { %>
-    <%- partial('_widget/recommend') %>
-    <% } %>
-    </div>
 
     <%
     var hashCode = function (str) {
