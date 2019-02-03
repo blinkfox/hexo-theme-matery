@@ -24,6 +24,7 @@
 - 可设置阅读文章时做密码验证
 - [Gitalk](https://gitalk.github.io/)、[Gitment](https://imsun.github.io/gitment/)、[Valine](https://valine.js.org/)和[Disqus](https://disqus.com/)评论模块（推荐使用`Gitalk`）
 - 集成了[不蒜子统计](http://busuanzi.ibruce.info/)、谷歌分析(`Google Analytics`)和文章字数统计等功能
+- 支持音乐播放器
 
 ## 下载
 
@@ -281,6 +282,52 @@ feed:
 
 在主题文件的`source/medias/reward`文件中，你可以替换成你的的微信和支付宝的打赏二维码图片。
 
+### 配置音乐播放器（可选的）
+
+要支持音乐播放，就必须开启音乐的播放配置和音乐数据的文件。
+
+首先，在你的博客`source`目录下的`_data`目录(没有的话就新建一个)中新建`musics.json`文件，文件内容如下所示：
+
+```json
+[{
+	"name": "五月雨变奏电音",
+	"artist": "AnimeVibe",
+	"url": "http://xxx.com/music1.mp3",
+	"cover": "http://xxx.com/music-cover1.png"
+}, {
+	"name": "Take me hand",
+	"artist": "DAISHI DANCE,Cecile Corbel",
+	"url": "/medias/music/music2.mp3",
+	"cover": "/medias/music/cover2.png"
+}, {
+	"name": "Shape of You",
+	"artist": "J.Fla",
+	"url": "http://xxx.com/music3.mp3",
+	"cover": "http://xxx.com/music-cover3.png"
+}]
+```
+
+> **注**：以上JSON中的属性：`name`、`artist`、`url`、`cover`分别表示音乐的名称、作者、音乐文件地址、音乐封面。
+
+然后，在主题的`_config.yml`配置文件中激活配置即可：
+
+```yaml
+# 是否在首页显示音乐.
+music:
+  enable: true
+  showTitle: false
+  title: 听听音乐
+  fixed: false # 是否开启吸底模式
+  autoplay: false # 是否自动播放
+  theme: '#42b983'
+  loop: 'all' # 音频循环播放, 可选值: 'all', 'one', 'none'
+  order: 'list' # 音频循环顺序, 可选值: 'list', 'random'
+  preload: 'auto' # 预加载，可选值: 'none', 'metadata', 'auto'
+  volume: 0.7 # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+  listFolded: false # 列表默认折叠
+  listMaxHeight: # 列表最大高度
+```
+
 ## 文章Front-matter示例
 
 以下为文章`Front-matter`的示例和说明，所有内容均为**非必填**的。但我仍然建议至少填写`title`和`date`的值。
@@ -328,7 +375,7 @@ tags:
 在本主题的`_config.yml`中可以修改部分自定义信息，有以下几个部分：
 
 - 菜单
-- 首页的励志名言
+- 首页的音乐播放器
 - 是否显示推荐文章名称和按钮配置
 - `favicon` 和 `Logo`
 - 个人信息

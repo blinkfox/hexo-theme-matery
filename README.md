@@ -24,6 +24,7 @@
 - Can be set to do password verification when reading a post
 - Comment module of [Gitalk](https://gitalk.github.io/), [Gitment](https://imsun.github.io/gitment/), [Valine](https://valine.js.org/) and [Disqus](https://disqus.com/).(Gitalk is recommended)
 - Integrated [Busuanzi Statistics](http://busuanzi.ibruce.info/), `Google Analytics` and post word count statistics.
+- Support for playing music
 
 ## Download
 
@@ -277,6 +278,52 @@ You can search social icon such as `fa-github` in [Font Awesome](https://fontawe
 
 > **Note**: The version of `Font Awesome` is `4.5.0`.
 
+### Configure music player (optional)
+
+To support music playing, you must activate the file of music playing configuration and music data.
+
+First, create a new `musics.json` file in the `_data` directory (new if you don't have one) of your blog's `source` directory. The contents of the file are as follows:
+
+```json
+[{
+	"name": "五月雨变奏电音",
+	"artist": "AnimeVibe",
+	"url": "http://xxx.com/music1.mp3",
+	"cover": "http://xxx.com/music-cover1.png"
+}, {
+	"name": "Take me hand",
+	"artist": "DAISHI DANCE,Cecile Corbel",
+	"url": "/medias/music/music2.mp3",
+	"cover": "/medias/music/cover2.png"
+}, {
+	"name": "Shape of You",
+	"artist": "J.Fla",
+	"url": "http://xxx.com/music3.mp3",
+	"cover": "http://xxx.com/music-cover3.png"
+}]
+```
+
+> **Note**: The properties in the above JSON: `name`, `artist`, `url`, `cover` indicate the name of the music, the author, the music file address, and the music cover, respectively.
+
+Then, activate the configuration in the theme's `_config.yml` configuration file:
+
+```yaml
+# Whether to display the musics.
+music:
+  enable: true
+  showTitle: false
+  title: Listen to music
+  fixed: false # enable fixed mode
+  autoplay: false # audio autoplay
+  theme: '#42b983'
+  loop: 'all' # player loop play, values: 'all', 'one', 'none'
+  order: 'list' # player play order, values: 'list', 'random'
+  preload: 'auto' # values: 'none', 'metadata', 'auto'
+  volume: 0.7 # default volume, notice that player will remember user setting, default volume will not work after user set volume themselves
+  listFolded: false # indicate whether list should folded at first
+  listMaxHeight: # list max height
+```
+
 ## Post Front-matter example
 
 The following is an example and description of the article `Front-matter`, and all content is **not required**.But we still suggest you write the value of `title` and `date`.
@@ -327,7 +374,7 @@ tags:
 You can modify some custom modification in `_config.yml` as follows:
 
 - Menu
-- Inspirational quotes on Home
+- Home music player
 - Whether to display the title of the recommended posts
 - `favicon` and `Logo`
 - profiles
