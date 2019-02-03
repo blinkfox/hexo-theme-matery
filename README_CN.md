@@ -255,7 +255,7 @@ feed:
 
 ### 修改社交链接
 
-在主题文件的`/layout/_partial/social-link.ejs`文件中，你可以修改或添加你需要的社交链接地址，增加链接可参考如下代码：
+在主题的`_config.yml`文件中，默认支持`QQ`、`GitHub`和邮箱的配置，你可以在主题文件的`/layout/_partial/social-link.ejs`文件中，新增、修改你需要的社交链接地址，增加链接可参考如下代码：
 
 ```html
 <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
@@ -276,7 +276,7 @@ feed:
 - 微信: `fa-wechat`
 - QQ: `fa-qq`
 
-> **注意**: 本主题中使用的`Font Awesome`版本为`4.5.0`。
+> **注意**: 本主题中使用的`Font Awesome`版本为`4.7.0`。
 
 ### 修改打赏的二维码图片
 

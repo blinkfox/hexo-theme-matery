@@ -255,7 +255,7 @@ Website footer may need to be customized, and it is not convenient to make confi
 
 ### Modify social links
 
-In the `/layout/_partial/social-link.ejs` file of the theme, you can modify or add the social link address you need. To add a link, please refer to the following code:
+In the theme `_config.yml` file, the configuration of `QQ`, `GitHub` and mailbox is supported by default. In the `/layout/_partial/social-link.ejs` file of the theme, you can add or modify the social link address as you need. To add a link, please refer to the following code:
 
 ```html
 <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
@@ -276,7 +276,7 @@ You can search social icon such as `fa-github` in [Font Awesome](https://fontawe
 - Wechat: `fa-wechat`
 - QQ: `fa-qq`
 
-> **Note**: The version of `Font Awesome` is `4.5.0`.
+> **Note**: The version of `Font Awesome` is `4.7.0`.
 
 ### Configure music player (optional)
 
