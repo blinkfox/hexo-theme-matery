@@ -681,6 +681,7 @@ article .article-content .summary {
     padding-bottom: 2px;
     padding-left: 0;
     margin-bottom: 6px;
+    word-break: break-all;
 }
 
 article .article-content .publish-author {
