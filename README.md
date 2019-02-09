@@ -374,6 +374,7 @@ tags:
 You can modify some custom modification in `_config.yml` as follows:
 
 - Menu
+- My dream
 - Home music player
 - Whether to display the title of the recommended posts
 - `favicon` and `Logo`
