@@ -1698,3 +1698,8 @@ footer .copy-right {
   text-align: center;
   margin: 0 auto 15px auto;
 }
+
+.lg-sub-html .center-caption {
+    color: #fff !important;
+    border-bottom: none;
+}
