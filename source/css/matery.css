@@ -672,9 +672,14 @@ article .card {
     border-radius: 10px;
 }
 
+article .card-image {
+    background-color: #222;
+}
+
 article .card-image img {
     height: 220px;
     border-radius: 0.3rem;
+    opacity: .7;
 }
 
 article .tag-image img {
