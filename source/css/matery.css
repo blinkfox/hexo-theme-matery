@@ -1686,22 +1686,22 @@ footer .copy-right {
 }
 
 .img-shadow {
-  box-shadow: 0 0 30px 1px #999;
+    box-shadow: 0 5px 25px 0 rgba(0,0,0,.2), 0 10px 30px -11px rgba(0,0,0,.6)
 }
 
 .img-margin {
-  margin: 25px auto 15px auto;
-}
-
-.center-caption {
-  color: #5f5f5f;
-  padding: 10px;
-  border-bottom: 1px solid #d9d9d9;
+    margin: 25px auto 10px auto;
 }
 
 .caption {
-  text-align: center;
-  margin: 0 auto 15px auto;
+    text-align: center;
+    margin: 0 auto 15px auto;
+}
+
+.center-caption {
+    color: #525f7f;
+    padding: 5px;
+    border-bottom: 1px solid #d9d9d9;
 }
 
 .lg-sub-html .center-caption {
