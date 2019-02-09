@@ -487,16 +487,24 @@ header .go-back i {
     margin-top: -40px;
 }
 
-.music {
-    margin-bottom: 30px !important;
+.dream {
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
-.notice {
-    margin-top: -40px;
+.dream .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-.notice .card {
-    border-radius: 5px;
+.dream .text {
+    opacity: .6;
+    font-size: 1.1rem;
+}
+
+.music-player {
+    margin-top: 10px;
+    margin-bottom: 60px;
 }
 
 #recommend-sections {
@@ -509,11 +517,6 @@ header .go-back i {
 }
 
 @media only screen and (min-width: 1418px) {
-    .notice {
-        margin-top: 30px;
-        padding: 0 0.75rem;
-    }
-
     .recommend {
         margin-top: 20px;
         padding: 0 0.75rem;

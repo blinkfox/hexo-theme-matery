@@ -18,6 +18,10 @@
                         <%- partial('_widget/music') %>
                     <% } %>
 
+                    <% if (theme.dream.enable) { %>
+                        <%- partial('_widget/dream') %>
+                    <% } %>
+
                     <div id="recommend-sections" class="recommend">
                         <%- partial('_widget/recommend') %>
                     </div>
