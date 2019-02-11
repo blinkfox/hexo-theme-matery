@@ -946,6 +946,13 @@ article .article-tags .chip {
     cursor: pointer;
 }
 
+#articleContent video {
+    display: block;
+    margin: 30px auto;
+    box-shadow: 0 5px 35px 0 rgba(0,0,0,.2), 0 10px 35px -11px rgba(0,0,0,.6);
+    cursor: pointer;
+}
+
 #articleContent ol,
 ul {
     display: block;
