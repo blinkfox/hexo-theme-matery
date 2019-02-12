@@ -492,9 +492,12 @@ header .go-back i {
     margin-bottom: 40px;
 }
 
-.dream .title {
-    font-size: 2rem;
+.dream .title,
+.music-player .title,
+.video-player .title {
     margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 .dream .text {
@@ -502,9 +505,15 @@ header .go-back i {
     font-size: 1.1rem;
 }
 
-.music-player {
+.music-player,
+.video-player {
     margin-top: 10px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
+}
+
+.music,
+.dplayer-video {
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,.2), 0 10px 20px -12px rgba(0,0,0,.5) !important;
 }
 
 #recommend-sections {

@@ -44,6 +44,22 @@ music:
   listFolded: false # 列表默认折叠
   listMaxHeight: #列表最大高度
 
+# Whether to display the videos.
+# 是否在首页显示视频.
+video:
+  enable: false
+  showTitle: true
+  title: 精彩视频
+  url: # 必填
+  pic:
+  thumbnails:
+  height: # 如：400
+  autoplay: false # 是否自动播放
+  theme: '#42b983'
+  loop: false # 是否循环播放
+  preload: 'auto' # 预加载，可选值: 'none', 'metadata', 'auto'
+  volume: 0.7
+
 # Whether to display the title of the recommended posts
 # 是否显示推荐文章的标题
 recommend:

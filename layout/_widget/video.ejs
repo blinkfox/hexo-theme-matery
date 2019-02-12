@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/libs/dplayer/DPlayer.min.css">
+<div class="video-player">
+    <% if (theme.video.showTitle) { %>
+    <div class="title center-align">
+        <i class="fa fa-video-camera"></i>&nbsp;&nbsp;<%- theme.video.title %>
+    </div>
+    <% } %>
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="dplayer" class="dplayer-video"
+                    <% if (theme.video.height) { %> style="height: <%- theme.video.height %>px;"<% } %>></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/dplayer/DPlayer.min.js"></script>
+<script>
+    $(function () {
+        new DPlayer({
+            container: document.getElementById('dplayer'),
+            autoplay: '<%- theme.video.autoplay %>' === 'true',
+            theme: '<%- theme.video.theme %>',
+            loop: '<%- theme.video.loop %>' === 'true',
+            lang: '<%- config.language %>' === 'zh-CN' ? 'zh-cn' : 'en',
+            preload: '<%- theme.video.preload %>',
+            volume: Number('<%- theme.video.volume %>'),
+            video: {
+                url: '<%- theme.video.url %>',
+                pic: '<%- theme.video.pic %>',
+                thumbnails: '<%- theme.video.thumbnails %>'
+            }
+        });
+    });
+</script>
