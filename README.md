@@ -24,7 +24,7 @@
 - Can be set to do password verification when reading a post
 - Comment module of [Gitalk](https://gitalk.github.io/), [Gitment](https://imsun.github.io/gitment/), [Valine](https://valine.js.org/) and [Disqus](https://disqus.com/).(Gitalk is recommended)
 - Integrated [Busuanzi Statistics](http://busuanzi.ibruce.info/), `Google Analytics` and post word count statistics.
-- Support for playing music
+- Support music playback and video playback on the homepage
 
 ## Download
 
@@ -375,7 +375,7 @@ You can modify some custom modification in `_config.yml` as follows:
 
 - Menu
 - My dream
-- Home music player
+- Home music player and video player configuration
 - Whether to display the title of the recommended posts
 - `favicon` and `Logo`
 - profiles

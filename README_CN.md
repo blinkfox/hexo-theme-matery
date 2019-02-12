@@ -24,7 +24,7 @@
 - 可设置阅读文章时做密码验证
 - [Gitalk](https://gitalk.github.io/)、[Gitment](https://imsun.github.io/gitment/)、[Valine](https://valine.js.org/)和[Disqus](https://disqus.com/)评论模块（推荐使用`Gitalk`）
 - 集成了[不蒜子统计](http://busuanzi.ibruce.info/)、谷歌分析(`Google Analytics`)和文章字数统计等功能
-- 支持音乐播放器
+- 支持在首页的音乐播放和视频播放功能
 
 ## 下载
 
@@ -376,7 +376,7 @@ tags:
 
 - 菜单
 - 我的梦想
-- 首页的音乐播放器
+- 首页的音乐播放器和视频播放器配置
 - 是否显示推荐文章名称和按钮配置
 - `favicon` 和 `Logo`
 - 个人信息
