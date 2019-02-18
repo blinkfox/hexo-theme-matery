@@ -289,10 +289,10 @@ googleAnalytics:
 # 使用到的前端库，可按需替换成对应的CDN地址，但需要在文件中查看到对应的版本.
 libs:
   css:
-    fontAwesome: /libs/awesome/css/font-awesome.min.css
+    fontAwesome: /libs/awesome/css/font-awesome.min.css # V4.7.0
     aos: /libs/aos/aos.css
-    animate: /libs/animate/animate.min.css
-    lightgallery: /libs/lightGallery/css/lightgallery.min.css
+    animate: /libs/animate/animate.min.css # V3.5.1
+    lightgallery: /libs/lightGallery/css/lightgallery.min.css # V1.6.11
     aplayer: /libs/aplayer/APlayer.min.css
     dplayer: /libs/dplayer/DPlayer.min.css
     gitalk: /libs/gitalk/gitalk.css
@@ -300,10 +300,10 @@ libs:
     tocbot: /libs/tocbot/tocbot.css
   js:
     jquery: /libs/jquery/jquery-2.2.0.min.js
-    masonry: /libs/masonry/masonry.pkgd.min.js
+    masonry: /libs/masonry/masonry.pkgd.min.js # v4.0.0
     aos: /libs/aos/aos.js
     scrollProgress: /libs/scrollprogress/scrollProgress.min.js
-    lightgallery: /libs/lightGallery/js/lightgallery-all.min.js
+    lightgallery: /libs/lightGallery/js/lightgallery-all.min.js # V1.6.11
     clicklove: /libs/others/clicklove.js
     busuanzi: /libs/others/busuanzi.pure.mini.js
     aplayer: /libs/aplayer/APlayer.min.js
