@@ -117,7 +117,9 @@ $(function () {
     articleInit();
 
     $('#toggleSearch').click(function () {
+        let scrollTop = $(document).scrollTop();
         $('#searchModal').openModal();
+        $(document).scrollTop(scrollTop);
     });
 
     /*回到顶部*/
