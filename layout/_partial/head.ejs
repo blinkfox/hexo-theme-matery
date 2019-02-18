@@ -71,11 +71,11 @@
     <title><%= pageTitle %></title>
     <link rel="icon" type="<%= iconType %>" href="<%- theme.favicon %>">
 
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="<%- theme.libs.css.fontAwesome %>">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="<%- theme.libs.css.aos %>">
+    <link rel="stylesheet" type="text/css" href="<%- theme.libs.css.animate %>">
+    <link rel="stylesheet" type="text/css" href="<%- theme.libs.css.lightgallery %>">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
     <style type="text/css">
@@ -86,5 +86,5 @@
         <% } %>
     </style>
 
-    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script src="<%- theme.libs.js.jquery %>"></script>
 </head>

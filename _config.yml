@@ -284,6 +284,36 @@ googleAnalytics:
   enable: false
   id:
 
+# The used front-end library can be replaced with the corresponding CDN address as needed,
+# but the corresponding version needs to be viewed in the file.
+# 使用到的前端库，可按需替换成对应的CDN地址，但需要在文件中查看到对应的版本.
+libs:
+  css:
+    fontAwesome: /libs/awesome/css/font-awesome.min.css
+    aos: /libs/aos/aos.css
+    animate: /libs/animate/animate.min.css
+    lightgallery: /libs/lightGallery/css/lightgallery.min.css
+    aplayer: /libs/aplayer/APlayer.min.css
+    dplayer: /libs/dplayer/DPlayer.min.css
+    gitalk: /libs/gitalk/gitalk.css
+    jqcloud: /libs/jqcloud/jqcloud.css
+    tocbot: /libs/tocbot/tocbot.css
+  js:
+    jquery: /libs/jquery/jquery-2.2.0.min.js
+    masonry: /libs/masonry/masonry.pkgd.min.js
+    aos: /libs/aos/aos.js
+    scrollProgress: /libs/scrollprogress/scrollProgress.min.js
+    lightgallery: /libs/lightGallery/js/lightgallery-all.min.js
+    clicklove: /libs/others/clicklove.js
+    busuanzi: /libs/others/busuanzi.pure.mini.js
+    aplayer: /libs/aplayer/APlayer.min.js
+    dplayer: /libs/dplayer/DPlayer.min.js
+    crypto: /libs/cryptojs/crypto-js.min.js
+    echarts: /libs/echarts/echarts.min.js
+    gitalk: /libs/gitalk/gitalk.min.js
+    jqcloud: /libs/jqcloud/jqcloud-1.0.4.min.js
+    tocbot: /libs/tocbot/tocbot.min.js
+
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
 featureImages: 
