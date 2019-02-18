@@ -93,6 +93,11 @@ toc:
   enable: false
   heading: h2, h3, h4
 
+# Whether the code is broken.
+# 代码是否折行
+code:
+  break: true
+
 # 是否激活文章末尾的打赏功能，默认激活（你替换为的你自己的微信、支付宝二维码图片、或者使用网络图片也可以）.
 reward:
   enable: true
