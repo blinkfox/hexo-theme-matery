@@ -324,9 +324,27 @@ music:
   listMaxHeight: # list max height
 ```
 
-## Post Front-matter example
+## Post Front-matter
 
-The following is an example and description of the article `Front-matter`, and all content is **not required**.But we still suggest you write the value of `title` and `date`.
+### Detailed Front-matter options
+
+Everything in the Front-matter option is **not required**. But I still recommend at least filling in the values of `title` and `date`.
+
+| Options   | Defaults              | Description                                             |
+| ---------- | --------------------------- | ------------------------------------------------------------ |
+| title      | Markdown's file title | Post title, it is highly recommended to fill in this option |
+| date       | Date and time when the file created | Publish time, it is highly recommended to fill in this option, and it is best to ensure that it is globally unique |
+| author     | `author` in root `_config.yml` | Post author                                    |
+| img        | a value in `featureImages` | Post feature image，For exampl: `http://xxx.com/xxx.jpg` |
+| top        | `true`                      | Recommended post (whether the post is topped), if the `top` value is `true`, it will be recommended as a homepage post. |
+| password   | 无                          | The post read the password. If you want to set the reading verification password for the article, you can set the value of `password`, which must be encrypted with `SHA256` to prevent others from seeing it. The premise is that the `verifyPassword` option is activated in the theme's `config.yml` |
+| toc        | `true`                      | Whether TOC is turned on or not, you can turn off the TOC function for an article. The premise is that the `toc` option is activated in the theme's `config.yml` |
+| mathjax    | `false`                     | Whether to enable math formula support, whether this article starts `mathjax`, and you need to open it in the theme `_config.yml` file. |
+| summary    | 无                          | Post summary, custom post summary content, if the attribute has a value, the post card summary will display the text, otherwise the program will automatically intercept part of the article as a summary |
+| categories | 无                          | Article classification, the classification of this topic represents a macroscopically large classification, only one article is recommended for one classification. |
+| tags       | 无                          | Post label, a post can have multiple labels |
+
+The following is an example.
 
 ```yaml
 ---
