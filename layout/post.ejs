@@ -16,7 +16,7 @@
 <%- partial('_partial/post-cover') %>
 
 <%
-    var isTocEnable = theme.toc && theme.toc.enable;
+    var isTocEnable = theme.toc.enable && String(page.toc) !== 'false';
     var containerClass = isTocEnable ? 'post-container' : 'container';
 %>
 

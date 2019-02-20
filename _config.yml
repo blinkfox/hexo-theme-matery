@@ -88,9 +88,11 @@ socialLink:
   email: xxx@xx.xx
 
 # Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
-# 是否激活文章 TOC 功能，并配置TOC支持选中哪些标题类型.
+# You can add `toc: false` to the Front-matter of a post to turn off the TOC.
+# 是否激活文章 TOC 功能，并配置TOC支持选中哪些标题类型，这是全局配置。
+# 可以在某篇文章的 Front-matter 中再加上`toc: false`，使该篇文章关闭TOC目录功能
 toc:
-  enable: false
+  enable: true
   heading: h2, h3, h4
 
 # Whether the code is broken.
