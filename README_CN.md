@@ -430,3 +430,15 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 ```
 
 在 `/source/medias/featureimages` 文件夹中默认有 24 张特色图片，你可以再增加或者减少，并需要在 `_config.yml` 做同步修改。
+
+## 版本记录
+
+- v1.0.0
+  - 新增了所有基础功能；
+- v1.0.1
+  - 调整 `css`、`js` 的文件请求路径在主题的`_config.yml`中配置，便于你更快捷的配置自己的 CDN；
+  - 新增代码是否折行为可配置，默认为折行；
+  - 默认激活 `TOC` 功能，并新增为某篇文章关闭 `TOC` 的 `Front-matter` 配置选项；
+  - 修复文章滚动时，高亮的目录选项不准确的问题；
+  - `IOS`下移除搜索框自动获得焦点属性，防止自动获得焦点后导致视图上移；
+  
