@@ -344,21 +344,33 @@ Everything in the Front-matter option is **not required**. But I still recommend
 | categories | 无                          | Article classification, the classification of this topic represents a macroscopically large classification, only one article is recommended for one classification. |
 | tags       | 无                          | Post label, a post can have multiple labels |
 
-The following is an example.
+> **Note**: 
+> 1. post's featured piature will take remainder if not writing the `img` property,and chose the featured picture of theme to let all of post's picture **have their own characteristics**.
+> 2. The value of `date` should try to ensure that each article is unique, because `Gitalk` and `Gitment` recognize `id` in this topic are uniquely identified by the value of `date`.
+> 3. If you want to set the ability to read the verification password for the article, you should not only set the value of the password with SHA256 encryption in Front-matter, but also activate the configuration in the theme `_config.yml`.
+
+The following are examples of the post's `Front-matter`.
+
+### The simplest example
+
+```yaml
+---
+title: typora-vue-theme Theme introduction
+date: 2018-09-07 09:25:00
+---
+```
+
+### The most comprehensive example
 
 ```yaml
 ---
 title: typora-vue-theme Theme introduction
 date: 2018-09-07 09:25:00
 author: Qi Zhao
-# or: http://xxx.com/xxx.jpg
 img: /source/images/xxx.jpg
-# If top value is true, it will be the homepage recommendation post
 top: true
-# If you want to set the reading verification password for the post, 
-# you can set the password value, which must be encrypted with SHA256 to prevent others from seeing it.
 password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
-# Does this post open mathjax, Need to be activated in the theme's _config.yml.
+toc: false
 mathjax: false
 summary: This is the content of your custom post summary. If there is a value for this attribute, the post card summary will display the text, otherwise the program will automatically intercept part of the post content as a summary.
 categories: Markdown
@@ -367,11 +379,6 @@ tags:
   - Markdown
 ---
 ```
-
-> **Note**: 
-> 1. post's featured piature will take remainder if not writing the `img` property,and chose the featured picture of theme to let all of post's picture **have their own characteristics**.
-> 2. The value of `date` should try to ensure that each article is unique, because `Gitalk` and `Gitment` recognize `id` in this topic are uniquely identified by the value of `date`.
-> 3. If you want to set the ability to read the verification password for the article, you should not only set the value of the password with SHA256 encryption in Front-matter, but also activate the configuration in the theme `_config.yml`.
 
 ## Screenshot
 
