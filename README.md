@@ -456,10 +456,10 @@ There are 24 featured pictures in `/source/medias/featureimages`,you can add or 
 ## Changelog
 
 - v1.0.0
-   - Added all the basic features;
+  - Added all the basic features;
 - v1.0.1
-   - Adjust the file request path of `css` and `js` in the `_config.yml` of the theme, so that you can quickly configure their own CDN;
-   - Whether the new code is configurable or not, the default is a line break;
-   - The `TOC` function is activated by default, and the `Front-matter` configuration option for `TOC` is turned off for a post;
-   - Fixed an issue where the highlighted directory option was inaccurate when scrolling through the post;
-   - Remove the search box under `IOS` to automatically get the focus attribute, preventing the view from moving up after automatically getting the focus;
+  - Adjust the file request path of `css` and `js` in the `_config.yml` of the theme, so that you can quickly configure their own CDN;
+  - Whether the new code is configurable or not, the default is a line break;
+  - The `TOC` function is activated by default, and the `Front-matter` configuration option for `TOC` is turned off for a post;
+  - Fixed an issue where the highlighted directory option was inaccurate when scrolling through the post;
+  - Remove the search box under `IOS` to automatically get the focus attribute, preventing the view from moving up after automatically getting the focus;
