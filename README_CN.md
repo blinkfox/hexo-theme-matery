@@ -330,22 +330,53 @@ music:
   listMaxHeight: # 列表最大高度
 ```
 
-## 文章 Front-matter 示例
+## 文章 Front-matter 介绍
 
-以下为文章 `Front-matter` 的示例和说明，所有内容均为**非必填**的。但我仍然建议至少填写 `title` 和 `date` 的值。
+### Front-matter 选项详解
+
+`Front-matter` 选项中的所有内容均为**非必填**的。但我仍然建议至少填写 `title` 和 `date` 的值。
+
+| 配置选项   | 默认值                      | 描述                                                         |
+| ---------- | --------------------------- | ------------------------------------------------------------ |
+| title      | `Markdown` 的文件标题        | 文章标题，强烈建议填写此选项                                 |
+| date       | 文件创建时的日期时间          | 发布时间，强烈建议填写此选项，且最好保证全局唯一             |
+| author     | 根 `_config.yml` 中的 `author` | 文章作者                                                     |
+| img        | `featureImages` 中的某个值   | 文章特征图，推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如: `http://xxx.com/xxx.jpg` |
+| top        | `true`                      | 推荐文章（文章是否置顶），如果 `top` 值为 `true`，则会作为首页推荐文章 |
+| password   | 无                          | 文章阅读密码，如果要对文章设置阅读验证密码的话，就可以设置 `password` 的值，该值必须是用 `SHA256` 加密后的密码，防止被他人识破。前提是在主题的 `config.yml` 中激活了 `verifyPassword` 选项 |
+| toc        | `true`                      | 是否开启 TOC，可以针对某篇文章单独关闭 TOC 的功能。前提是在主题的 `config.yml` 中激活了 `toc` 选项 |
+| mathjax    | `false`                     | 是否开启数学公式支持 ，本文章是否开启 `mathjax`，且需要在主题的 `_config.yml` 文件中也需要开启才行 |
+| summary    | 无                          | 文章摘要，自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要 |
+| categories | 无                          | 文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类 |
+| tags       | 无                          | 文章标签，一篇文章可以多个标签                              |
+
+> **注意**:
+> 1. 如果 `img` 属性不填写的话，文章特色图会根据文章标题的 `hashcode` 的值取余，然后选取主题中对应的特色图片，从而达到让所有文章都的特色图**各有特色**。
+> 2. `date` 的值尽量保证每篇文章是唯一的，因为本主题中 `Gitalk` 和 `Gitment` 识别 `id` 是通过 `date` 的值来作为唯一标识的。
+> 3. 如果要对文章设置阅读验证密码的功能，不仅要在 Front-matter 中设置采用了 SHA256 加密的 password 的值，还需要在主题的 `_config.yml` 中激活了配置。有些在线的 SHA256 加密的地址，可供你使用：[开源中国在线工具](http://tool.oschina.net/encrypt?type=2)、[chahuo](http://encode.chahuo.com/)、[站长工具](http://tool.chinaz.com/tools/hash.aspx)。
+
+以下为文章的 `Front-matter` 示例。
+
+### 最简示例
+
+```yaml
+---
+title: typora-vue-theme主题介绍
+date: 2018-09-07 09:25:00
+---
+```
+
+### 最全示例
 
 ```yaml
 ---
 title: typora-vue-theme主题介绍
 date: 2018-09-07 09:25:00
 author: 赵奇
- # 图片推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如:http://xxx.com/xxx.jpg
 img: /source/images/xxx.jpg
-# 如果top值为true，则会是首页推荐文章
 top: true
-# 如果要对文章设置阅读验证密码的话，就可以在设置password的值，该值必须是用SHA256加密后的密码，防止被他人识破
 password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
-# 本文章是否开启mathjax，且需要在主题的_config.yml文件中也需要开启才行
+toc: false
 mathjax: false
 summary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
 categories: Markdown
@@ -354,11 +385,6 @@ tags:
   - Markdown
 ---
 ```
-
-> **注意**:
-> 1. 如果 `img` 属性不填写的话，文章特色图会根据文章标题的 `hashcode` 的值取余，然后选取主题中对应的特色图片，从而达到让所有文章都的特色图**各有特色**。
-> 2. `date` 的值尽量保证每篇文章是唯一的，因为本主题中 `Gitalk` 和 `Gitment` 识别 `id` 是通过 `date` 的值来作为唯一标识的。
-> 3. 如果要对文章设置阅读验证密码的功能，不仅要在 Front-matter 中设置采用了 SHA256 加密的 password 的值，还需要在主题的 `_config.yml` 中激活了配置。有些在线的 SHA256 加密的地址，可供你使用：[开源中国在线工具](http://tool.oschina.net/encrypt?type=2)、[chahuo](http://encode.chahuo.com/)、[站长工具](http://tool.chinaz.com/tools/hash.aspx)。
 
 ## 效果截图
 
@@ -430,3 +456,15 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 ```
 
 在 `/source/medias/featureimages` 文件夹中默认有 24 张特色图片，你可以再增加或者减少，并需要在 `_config.yml` 做同步修改。
+
+## 版本记录
+
+- v1.0.0
+  - 新增了所有基础功能；
+- v1.0.1
+  - 调整 `css`、`js` 的文件请求路径在主题的`_config.yml`中配置，便于你更快捷的配置自己的 CDN；
+  - 新增代码是否折行为可配置，默认为折行；
+  - 默认激活 `TOC` 功能，并新增为某篇文章关闭 `TOC` 的 `Front-matter` 配置选项；
+  - 修复文章滚动时，高亮的目录选项不准确的问题；
+  - `IOS`下移除搜索框自动获得焦点属性，防止自动获得焦点后导致视图上移；
+  
