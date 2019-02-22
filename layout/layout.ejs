@@ -12,18 +12,18 @@
 <%- partial('_partial/back-top') %>
 
 <script src="/libs/materialize/js/materialize.min.js"></script>
-<script src="/libs/masonry/masonry.pkgd.min.js"></script>
-<script src="/libs/aos/aos.js"></script>
-<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="<%- theme.libs.js.masonry %>"></script>
+<script src="<%- theme.libs.js.aos %>"></script>
+<script src="<%- theme.libs.js.scrollProgress %>"></script>
+<script src="<%- theme.libs.js.lightgallery %>"></script>
 <script src="/js/matery.js"></script>
 
 <%- partial('_partial/google-analytics') %>
 <% if (theme.clicklove.enable) { %>
-    <script src="/libs/others/clicklove.js"></script>
+    <script src="<%- theme.libs.js.clicklove %>"></script>
 <% } %>
 <% if (theme.busuanziStatistics && theme.busuanziStatistics.enable) { %>
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    <script async src="<%- theme.libs.js.busuanzi %>"></script>
 <% } %>
 
 </body>

@@ -2,7 +2,7 @@
 var audiosJson = JSON.stringify(site.data.musics);
 %>
 
-<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<link rel="stylesheet" href="<%- theme.libs.css.aplayer %>">
 <div class="music-player">
     <% if (theme.music.showTitle) { %>
     <div class="title center-align">
@@ -16,7 +16,7 @@ var audiosJson = JSON.stringify(site.data.musics);
     </div>
 </div>
 
-<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="<%- theme.libs.js.aplayer %>"></script>
 <script>
 $(function () {
     new APlayer({

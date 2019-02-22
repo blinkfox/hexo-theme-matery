@@ -324,23 +324,53 @@ music:
   listMaxHeight: # list max height
 ```
 
-## Post Front-matter example
+## Post Front-matter
 
-The following is an example and description of the article `Front-matter`, and all content is **not required**.But we still suggest you write the value of `title` and `date`.
+### Detailed Front-matter options
+
+Everything in the Front-matter option is **not required**. But I still recommend at least filling in the values of `title` and `date`.
+
+| Options   | Defaults              | Description                                             |
+| ---------- | --------------------------- | ------------------------------------------------------------ |
+| title      | Markdown's file title | Post title, it is highly recommended to fill in this option |
+| date       | Date and time when the file created | Publish time, it is highly recommended to fill in this option, and it is best to ensure that it is globally unique |
+| author     | `author` in root `_config.yml` | Post author                                    |
+| img        | a value in `featureImages` | Post feature image，For exampl: `http://xxx.com/xxx.jpg` |
+| top        | `true`                      | Recommended post (whether the post is topped), if the `top` value is `true`, it will be recommended as a homepage post. |
+| password   | 无                          | The post read the password. If you want to set the reading verification password for the article, you can set the value of `password`, which must be encrypted with `SHA256` to prevent others from seeing it. The premise is that the `verifyPassword` option is activated in the theme's `config.yml` |
+| toc        | `true`                      | Whether TOC is turned on or not, you can turn off the TOC function for an article. The premise is that the `toc` option is activated in the theme's `config.yml` |
+| mathjax    | `false`                     | Whether to enable math formula support, whether this article starts `mathjax`, and you need to open it in the theme `_config.yml` file. |
+| summary    | 无                          | Post summary, custom post summary content, if the attribute has a value, the post card summary will display the text, otherwise the program will automatically intercept part of the article as a summary |
+| categories | 无                          | Article classification, the classification of this topic represents a macroscopically large classification, only one article is recommended for one classification. |
+| tags       | 无                          | Post label, a post can have multiple labels |
+
+> **Note**: 
+> 1. post's featured piature will take remainder if not writing the `img` property,and chose the featured picture of theme to let all of post's picture **have their own characteristics**.
+> 2. The value of `date` should try to ensure that each article is unique, because `Gitalk` and `Gitment` recognize `id` in this topic are uniquely identified by the value of `date`.
+> 3. If you want to set the ability to read the verification password for the article, you should not only set the value of the password with SHA256 encryption in Front-matter, but also activate the configuration in the theme `_config.yml`.
+
+The following are examples of the post's `Front-matter`.
+
+### The simplest example
+
+```yaml
+---
+title: typora-vue-theme Theme introduction
+date: 2018-09-07 09:25:00
+---
+```
+
+### The most comprehensive example
 
 ```yaml
 ---
 title: typora-vue-theme Theme introduction
 date: 2018-09-07 09:25:00
 author: Qi Zhao
-# or: http://xxx.com/xxx.jpg
 img: /source/images/xxx.jpg
-# If top value is true, it will be the homepage recommendation post
 top: true
-# If you want to set the reading verification password for the post, 
-# you can set the password value, which must be encrypted with SHA256 to prevent others from seeing it.
 password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
-# Does this post open mathjax, Need to be activated in the theme's _config.yml.
+toc: false
 mathjax: false
 summary: This is the content of your custom post summary. If there is a value for this attribute, the post card summary will display the text, otherwise the program will automatically intercept part of the post content as a summary.
 categories: Markdown
@@ -349,11 +379,6 @@ tags:
   - Markdown
 ---
 ```
-
-> **Note**: 
-> 1. post's featured piature will take remainder if not writing the `img` property,and chose the featured picture of theme to let all of post's picture **have their own characteristics**.
-> 2. The value of `date` should try to ensure that each article is unique, because `Gitalk` and `Gitment` recognize `id` in this topic are uniquely identified by the value of `date`.
-> 3. If you want to set the ability to read the verification password for the article, you should not only set the value of the password with SHA256 encryption in Front-matter, but also activate the configuration in the theme `_config.yml`.
 
 ## Screenshot
 
@@ -427,3 +452,14 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 ```
 
 There are 24 featured pictures in `/source/medias/featureimages`,you can add or delete,and modify it in `_config.yml` at the sametime.
+
+## Changelog
+
+- v1.0.0
+  - Added all the basic features;
+- v1.0.1
+  - Adjust the file request path of `css` and `js` in the `_config.yml` of the theme, so that you can quickly configure their own CDN;
+  - Whether the new code is configurable or not, the default is a line break;
+  - The `TOC` function is activated by default, and the `Front-matter` configuration option for `TOC` is turned off for a post;
+  - Fixed an issue where the highlighted directory option was inaccurate when scrolling through the post;
+  - Remove the search box under `IOS` to automatically get the focus attribute, preventing the view from moving up after automatically getting the focus;
