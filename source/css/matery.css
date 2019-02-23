@@ -758,6 +758,10 @@ article .article-tags .chip {
     right: 10px;
 }
 
+.paging {
+    margin-bottom: 15px;
+}
+
 .paging .row {
     margin-left: 0;
     margin-right: 0;
@@ -1051,7 +1055,7 @@ table tr:nth-child(2n), thead {
 
 .chip-container .chip {
     margin: 10px 10px;
-    padding: 0 16px;
+    padding: 0 14px;
     display: inline-block;
     height: 38px;
     min-width: 80px;
