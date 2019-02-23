@@ -984,7 +984,7 @@ article .article-tags .chip {
 #articleContent ol,
 ul {
     display: block;
-    padding-left: 2em;
+    padding-left: 2em !important;
     word-spacing: 0.05rem;
 }
 
