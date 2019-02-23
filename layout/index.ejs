@@ -1,16 +1,13 @@
-<style type="text/css">
-    /* don't remove. */
-    .index-cover {
-        height: 100vh;
-    }
-</style>
-
-<%- partial('_partial/bg-cover') %>
+<% if (is_home() && page.current === 1) { %>
+<%- partial('_partial/index-cover') %>
+<% } else { %>
+    <%- partial('_partial/bg-cover') %>
+<% } %>
 
 <main class="content">
 
     <% if (page.current === 1) { %>
-    <div class="index-card">
+    <div id="indexCard" class="index-card">
         <div class="container ">
             <div class="card">
                 <div class="card-content">

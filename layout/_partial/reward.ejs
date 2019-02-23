@@ -55,6 +55,17 @@
         padding-left: 0;
     }
 
+    @media only screen and (min-width: 993px) {
+
+    }
+
+    .reward-tabs .tabs .tab {
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+    }
+
     .reward-tabs .tabs .tab {
         height: 38px;
         line-height: 38px;
@@ -96,9 +107,9 @@
             <h4 class="reward-title"><%- theme.reward.title %></h4>
             <div class="reward-content">
                 <div class="reward-tabs">
-                    <ul class="tabs">
-                        <li class="tab alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
                         <img src="<%- theme.reward.alipay %>" class="reward-img" alt="支付宝打赏二维码">
