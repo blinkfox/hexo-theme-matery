@@ -36,6 +36,14 @@
         cursor: pointer;
     }
 
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
     #rewardModal .reward-tabs {
         margin: 0 auto;
         width: 210px;
@@ -58,17 +66,18 @@
     }
 
     .reward-tabs .tab a:hover {
+        background-color: #ccc;
         color: #fff;
     }
 
     .reward-tabs .wechat-tab .active {
-        color: #fff;
-        background-color: #22AB38;
+        color: #fff !important;
+        background-color: #22AB38 !important;
     }
 
     .reward-tabs .alipay-tab .active {
-        color: #fff;
-        background-color: #019FE8;
+        color: #fff !important;
+        background-color: #019FE8 !important;
     }
 
     .reward-tabs .reward-img {
@@ -78,24 +87,24 @@
 </style>
 
 <div id="reward">
-    <a class="reward-link btn-floating btn-large waves-effect waves-light red">赏</a>
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
 
     <!-- Modal Structure -->
     <div id="rewardModal" class="modal">
         <div class="modal-content">
-            <a class="close"><i class="fa fa-close"></i></a>
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
             <h4 class="reward-title"><%- theme.reward.title %></h4>
             <div class="reward-content">
                 <div class="reward-tabs">
                     <ul class="tabs">
-                        <li class="tab wechat-tab waves-effect waves-light"><a class="active" href="#wechat">微信</a></li>
                         <li class="tab alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
-                    <div id="wechat">
-                        <img src="<%- theme.reward.wechat %>" class="reward-img" alt="微信打赏二维码">
-                    </div>
                     <div id="alipay">
                         <img src="<%- theme.reward.alipay %>" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="<%- theme.reward.wechat %>" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -105,12 +114,6 @@
 
 <script>
     $(function () {
-        $('#reward .reward-link').on('click', function () {
-            $('#rewardModal').openModal();
-        });
-
-        $('#rewardModal .close').on('click', function () {
-            $('#rewardModal').closeModal();
-        });
+        $('.tabs').tabs();
     });
 </script>

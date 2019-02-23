@@ -1,21 +1,20 @@
 <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="container">
-            <div class="nav-wrapper">
-                <div class="brand-logo">
-                    <a href="<%- url_for() %>" class="waves-effect waves-light">
-                        <% if (theme.logo !== undefined && theme.logo.length > 0) { %>
-                        <img src="<%= theme.logo %>" class="logo-img hide-on-small-only">
-                        <% } %>
-                        <span class="logo-span"><%- config.title %></span>
-                    </a>
-                </div>
-                <%- partial('_partial/navigation') %>
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="<%- url_for() %>" class="waves-effect waves-light">
+                    <% if (theme.logo !== undefined && theme.logo.length > 0) { %>
+                    <img src="<%= theme.logo %>" class="logo-img" alt="LOGO">
+                    <% } %>
+                    <span class="logo-span"><%- config.title %></span>
+                </a>
             </div>
+            <%- partial('_partial/navigation') %>
         </div>
 
         <% if (theme.githubLink && theme.githubLink.enable) { %>
-        <%- partial('_partial/github-link') %>
+            <%- partial('_partial/github-link') %>
         <% } %>
     </nav>
+
 </header>

@@ -13,7 +13,7 @@ $(function () {
     articleCardHover();
 
     /*菜单切换*/
-    $('.button-collapse').sideNav();
+    $('.sidenav').sidenav();
 
     /* 修复文章卡片 div 的宽度. */
     let fixPostCardWidth = function (srcId, targetId) {
@@ -116,10 +116,7 @@ $(function () {
     };
     articleInit();
 
-    $('#toggleSearch').click(function () {
-        $('#searchModal').openModal();
-        $('#searchInput').focus();
-    });
+    $('.modal').modal();
 
     /*回到顶部*/
     $('#backTop').click(function () {

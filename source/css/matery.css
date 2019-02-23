@@ -174,21 +174,6 @@ mark {
     color: #fff;
 }
 
-/*头部导航栏样式*/
-@media only screen and (max-width: 600px) {
-    header nav .brand-logo {
-        left: 80px;
-        width: 100px;
-        font-size: 1.6rem;
-        -webkit-transform: translateX(-50%);
-        transform: translateX(-50%);
-    }
-
-    header .brand-logo .logo-span {
-        font-size: 1.6rem !important;
-    }
-}
-
 .progress-bar {
     height: 4px;
     position: fixed;
@@ -198,7 +183,17 @@ mark {
     opacity: 0.8;
 }
 
-nav, .side-nav {
+.sidenav-overlay {
+    z-index: 500;
+}
+
+header .side-nav {
+    width: 240px;
+    z-index: 999;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 7px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+nav {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 7px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -259,18 +254,17 @@ header .side-nav .menu-list li {
 header .side-nav .menu-list a {
     height: 50px;
     line-height: 50px;
-}
-
-header .side-nav .menu-list a i {
-    line-height: 16px;
+    color: #34495e !important;
 }
 
 .mobile-menu-list a i {
-    font-size: 1.1rem;
+    margin-left: 8px !important;
+    font-size: 1.16rem;
+    color: #34495e !important;
 }
 
 header .side-nav .fa-fw {
-    width: 5rem;
+    width: 3.3rem;
     text-align: left;
 }
 
@@ -678,7 +672,7 @@ article a:hover {
 }
 
 article .card {
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 article .card-image {
@@ -724,6 +718,7 @@ article .article-content .publish-author {
 
 article .card .card-action {
     padding: 10px 15px 10px 18px;
+    border-radius: 0 0 8px 8px !important;
 }
 
 article .article-tags .chip {
@@ -1600,7 +1595,7 @@ footer .copy-right {
 
 /*搜索层样式*/
 #searchIcon {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 }
 
 #searchModal {
