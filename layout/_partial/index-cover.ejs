@@ -1,4 +1,54 @@
+<style>
+    .carousel-control {
+        width: 45px;
+        height: 45px;
+        line-height: 55px;
+        border-radius: 45px;
+        background: transparent;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    #prev-cover {
+        position: absolute;
+        top: 48%;
+        left: 8px;
+    }
+
+    #next-cover {
+        position: absolute;
+        top: 48%;
+        right: 8px;;
+    }
+
+    #prev-cover i {
+        margin-right: 3px;
+    }
+
+    #next-cover i {
+        margin-left: 3px;
+    }
+
+    .carousel-control:hover {
+        background-color:rgba(0, 0, 0, .4);
+    }
+
+    .carousel-control i {
+        color: #fff;
+        font-size: 2.4rem;
+    }
+</style>
+
 <div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
+    <% if (theme.cover.showPrevNext) { %>
+    <div id="prev-cover" class="left waves-effect carousel-control">
+        <i class="icon fa fa-angle-left"></i>
+    </div>
+    <div id="next-cover" class="right waves-effect carousel-control">
+        <i class="icon fa fa-angle-right"></i>
+    </div>
+    <% } %>
+
     <div class="carousel-item red white-text bg-cover about-cover">
         <div class="container">
             <%- partial('_partial/bg-cover-content') %>
@@ -86,10 +136,28 @@
 
 <script>
 $(function () {
-    $('.carousel.carousel-slider').carousel({
-        duration: 120,
+    let coverSlider = $('.carousel');
+    coverSlider.carousel({
+        duration: Number('<%- theme.cover.duration %>'),
         fullWidth: true,
-        indicators: true
+        indicators: '<%- theme.cover.showIndicators %>' === 'true'
     });
+
+    <% if (theme.cover.showPrevNext) { %>
+    // prev and next cover post.
+    $('#prev-cover').click(function () {
+        coverSlider.carousel('prev');
+    });
+    $('#next-cover').click(function () {
+        coverSlider.carousel('next');
+    });
+    <% } %>
+
+    <% if (theme.cover.autoLoop) { %>
+    // Loop to call the next cover article picture.
+    setInterval(function () {
+        coverSlider.carousel('next');
+    }, <%- theme.cover.intervalTime %>);
+    <% } %>
 });
 </script>
