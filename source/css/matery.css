@@ -982,14 +982,14 @@ article .article-tags .chip {
 }
 
 #articleContent ol,
-ul {
+#articleContent ul {
     display: block;
     padding-left: 2em !important;
     word-spacing: 0.05rem;
 }
 
 #articleContent ul li,
-ol li {
+#articleContent ol li {
     display: list-item;
     line-height: 1.8rem;
     font-size: 1rem;

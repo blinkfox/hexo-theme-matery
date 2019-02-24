@@ -143,21 +143,34 @@ $(function () {
         indicators: '<%- theme.cover.showIndicators %>' === 'true'
     });
 
+    let carouselIntervalId;
+    <% if (theme.cover.autoLoop) { %>
+    // Loop to call the next cover article picture.
+    let autoCarousel = function() {
+        carouselIntervalId = setInterval(function () {
+            coverSlider.carousel('next');
+        }, <%- theme.cover.intervalTime %>);
+    };
+    autoCarousel();
+    <% } %>
+
+    let restartPlay = function () {
+        <% if (theme.cover.autoLoop) { %>
+        clearInterval(carouselIntervalId);
+        autoCarousel();
+        <% } %>
+    };
+
     <% if (theme.cover.showPrevNext) { %>
     // prev and next cover post.
     $('#prev-cover').click(function () {
         coverSlider.carousel('prev');
+        restartPlay();
     });
     $('#next-cover').click(function () {
         coverSlider.carousel('next');
+        restartPlay();
     });
-    <% } %>
-
-    <% if (theme.cover.autoLoop) { %>
-    // Loop to call the next cover article picture.
-    setInterval(function () {
-        coverSlider.carousel('next');
-    }, <%- theme.cover.intervalTime %>);
     <% } %>
 });
 </script>
