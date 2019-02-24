@@ -11,7 +11,7 @@
 - 简单漂亮，文章内容美观易读
 - [Material Design](https://material.io/) 设计
 - 响应式设计，博客在桌面端、平板、手机等设备上均能很好的展现
-- 每天动态切换 `Banner` 图片
+- 首页轮播文章及每天动态切换 `Banner` 图片
 - 瀑布流式的博客文章列表（文章无特色图片时会有 `24` 张漂亮的图片代替）
 - 时间轴式的归档页
 - **词云**的标签页和**雷达图**的分类页
@@ -343,6 +343,8 @@ music:
 | author     | 根 `_config.yml` 中的 `author` | 文章作者                                                     |
 | img        | `featureImages` 中的某个值   | 文章特征图，推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如: `http://xxx.com/xxx.jpg` |
 | top        | `true`                      | 推荐文章（文章是否置顶），如果 `top` 值为 `true`，则会作为首页推荐文章 |
+| cover      | `false`                     | `v1.0.2`版本新增，表示该文章是否需要加入到首页轮播封面中 |
+| coverImg   | 无                          | `v1.0.2`版本新增，表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片 |
 | password   | 无                          | 文章阅读密码，如果要对文章设置阅读验证密码的话，就可以设置 `password` 的值，该值必须是用 `SHA256` 加密后的密码，防止被他人识破。前提是在主题的 `config.yml` 中激活了 `verifyPassword` 选项 |
 | toc        | `true`                      | 是否开启 TOC，可以针对某篇文章单独关闭 TOC 的功能。前提是在主题的 `config.yml` 中激活了 `toc` 选项 |
 | mathjax    | `false`                     | 是否开启数学公式支持 ，本文章是否开启 `mathjax`，且需要在主题的 `_config.yml` 文件中也需要开启才行 |
@@ -375,6 +377,8 @@ date: 2018-09-07 09:25:00
 author: 赵奇
 img: /source/images/xxx.jpg
 top: true
+cover: true
+coverImg: /images/1.jpg
 password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
 toc: false
 mathjax: false
@@ -433,11 +437,6 @@ tags:
     background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
 }
 
-/* 和背景颜色相同的文字颜色，目前仅在首页一个地方使用到，你也可以将此样式应用到其他地方. */
-.text-color {
-    color: #0f9d58 !important;
-}
-
 @-webkit-keyframes rainbow {
    /* 动态切换背景颜色. */
 }
@@ -449,7 +448,7 @@ tags:
 
 ### 修改 banner 图和文章特色图
 
-你可以直接在 `/source/medias/banner` 文件夹中更换你喜欢的 `banner` 图片，主题代码中是每天动态切换一张，只需 `7` 张即可。如果你会 `JavaScript` 代码，可以修改成你自己喜欢切换逻辑，如：随机切换等，`banner` 切换的代码位置在 `/layout/_partial/bg-cover.ejs` 文件的 `<script></script>` 代码中：
+你可以直接在 `/source/medias/banner` 文件夹中更换你喜欢的 `banner` 图片，主题代码中是每天动态切换一张，只需 `7` 张即可。如果你会 `JavaScript` 代码，可以修改成你自己喜欢切换逻辑，如：随机切换等，`banner` 切换的代码位置在 `/layout/_partial/bg-cover-content.ejs` 文件的 `<script></script>` 代码中：
 
 ```javascript
 $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
@@ -467,4 +466,10 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
   - 默认激活 `TOC` 功能，并新增为某篇文章关闭 `TOC` 的 `Front-matter` 配置选项；
   - 修复文章滚动时，高亮的目录选项不准确的问题；
   - `IOS`下移除搜索框自动获得焦点属性，防止自动获得焦点后导致视图上移；
-  
+- v1.0.2
+  - 升级了 [Materialize](https://materializecss.com/) 框架版本为`1.0.0`，重构和修改了升级过程中的部分文件或问题；
+  - 新增了首页封面的全屏轮播特效，可以将更重要的文章设置到首页轮播中；
+  - 修复首页第一个按钮是中文的问题
+  - 修复了 iPhone 上点击搜索输入获取焦点的问题；
+  - 修复了 iPhone 上输入框获取焦点后页面放大的问题；
+  - 修复一些文章或 UI 显示问题；
