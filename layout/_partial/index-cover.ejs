@@ -39,8 +39,19 @@
     }
 </style>
 
+<%
+// get all cover posts.
+var coverPosts = [];
+site.posts.forEach(function (post) {
+    if (post.cover) {
+        coverPosts.push(post);
+    }
+});
+var coverPostsCount = coverPosts.length;
+%>
+
 <div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
-    <% if (theme.cover.showPrevNext) { %>
+    <% if (coverPostsCount > 0 && theme.cover.showPrevNext) { %>
     <div id="prev-cover" class="left waves-effect carousel-control">
         <i class="icon fa fa-angle-left"></i>
     </div>
@@ -71,17 +82,6 @@
             <div class="cover-social-link"><%- partial('_partial/social-link') %></div>
         </div>
     </div>
-
-    <%
-    // get all cover posts.
-    var coverPosts = [];
-    site.posts.forEach(function (post) {
-        if (post.cover) {
-            coverPosts.push(post);
-        }
-    });
-    var coverPostsCount = coverPosts.length;
-    %>
 
     <% if (coverPostsCount > 0) { %>
     <%
