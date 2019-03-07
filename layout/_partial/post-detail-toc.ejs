@@ -65,17 +65,44 @@
     #toc-content .is-active-link::before {
         background-color: #42b983;
     }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 85px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%);
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
 </style>
 <div class="row">
-    <div class="col s12 m12 l9">
+    <div id="main-content" class="col s12 m12 l9">
         <%- partial('_partial/post-detail.ejs') %>
     </div>
-    <div class="col l3 hide-on-med-and-down">
+    <div id="toc-aside" class="col l3 hide-on-med-and-down">
         <div class="toc-widget">
             <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;<%- __('toc') %></div>
             <div id="toc-content"></div>
         </div>
     </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+<div id="floating-toc-btn">
+    <a class="btn-floating btn-large red">
+        <i class="fa fa-list"></i>
+    </a>
 </div>
 
 <script src="<%- theme.libs.js.tocbot %>"></script>
@@ -113,6 +140,11 @@
             } else {
                 $tocWidget.removeClass('toc-fixed');
             }
+        });
+
+        $('#floating-toc-btn .btn-floating').click(function () {
+            $('#toc-aside').addClass('').hide();
+            $('#main-content').removeClass('l9');
         });
     });
 </script>
