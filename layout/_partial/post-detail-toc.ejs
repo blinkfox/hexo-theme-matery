@@ -69,14 +69,13 @@
     #floating-toc-btn {
         position: fixed;
         right: 20px;
-        bottom: 85px;
+        bottom: 76px;
         padding-top: 15px;
         margin-bottom: 0;
         z-index: 998;
     }
 
     #floating-toc-btn .btn-floating {
-        background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%);
         width: 48px;
         height: 48px;
     }
@@ -90,7 +89,7 @@
     <div id="main-content" class="col s12 m12 l9">
         <%- partial('_partial/post-detail.ejs') %>
     </div>
-    <div id="toc-aside" class="col l3 hide-on-med-and-down">
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget">
             <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;<%- __('toc') %></div>
             <div id="toc-content"></div>
@@ -100,7 +99,7 @@
 
 <!-- TOC 悬浮按钮. -->
 <div id="floating-toc-btn">
-    <a class="btn-floating btn-large red">
+    <a class="btn-floating btn-large bg-color">
         <i class="fa fa-list"></i>
     </a>
 </div>
@@ -142,9 +141,39 @@
             }
         });
 
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
         $('#floating-toc-btn .btn-floating').click(function () {
-            $('#toc-aside').addClass('').hide();
-            $('#main-content').removeClass('l9');
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
         });
     });
 </script>
