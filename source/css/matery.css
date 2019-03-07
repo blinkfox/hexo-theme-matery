@@ -762,7 +762,7 @@ article .article-tags .chip {
     text-align: center;
     font-size: 1rem;
     line-height: inherit;
-    position: relative;
+    position: absolute;
     box-sizing: border-box;
     z-index: 200;
     background-color: #fff;
@@ -771,12 +771,11 @@ article .article-tags .chip {
 
 .prev-next .left-badge {
     border-radius: 0 5px 5px 0;
-    float: left;
 }
 
 .prev-next .right-badge {
     border-radius: 5px 0 0 5px;
-    float: right;
+    right: 10px;
 }
 
 .paging {
