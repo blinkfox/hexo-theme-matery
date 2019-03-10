@@ -454,14 +454,8 @@ There are 24 featured pictures in `/source/medias/featureimages`,you can add or 
 
 ## Changelog
 
-- v1.0.0
-  - Added all the basic features;
-- v1.0.1
-  - Adjust the file request path of `css` and `js` in the `_config.yml` of the theme, so that you can quickly configure their own CDN;
-  - Whether the new code is configurable or not, the default is a line break;
-  - The `TOC` function is activated by default, and the `Front-matter` configuration option for `TOC` is turned off for a post;
-  - Fixed an issue where the highlighted directory option was inaccurate when scrolling through the post;
-  - Remove the search box under `IOS` to automatically get the focus attribute, preventing the view from moving up after automatically getting the focus;
+- v1.0.3
+  - Added 'TOC` expansion, shrink button and related configuration, this button is displayed by default;
 - v1.0.2
   - Upgraded the [Materialize](https://materializecss.com/) framework version to `1.0.0`, refactoring and modifying some files or problems during the upgrade process;
   - Added a full-screen carousel effect on the front cover of the home page to set more important posts to the home page carousel;
@@ -469,3 +463,11 @@ There are 24 featured pictures in `/source/medias/featureimages`,you can add or 
   - Fixed an issue where clicking search input on the iPhone to get focus;
   - Fixed an issue where the page was enlarged after the input box on the iPhone got focus;
   - Fix some posts or UI display issues;
+- v1.0.1
+  - Adjust the file request path of `css` and `js` in the `_config.yml` of the theme, so that you can quickly configure their own CDN;
+  - Whether the new code is configurable or not, the default is a line break;
+  - The `TOC` function is activated by default, and the `Front-matter` configuration option for `TOC` is turned off for a post;
+  - Fixed an issue where the highlighted directory option was inaccurate when scrolling through the post;
+  - Remove the search box under `IOS` to automatically get the focus attribute, preventing the view from moving up after automatically getting the focus;
+- v1.0.0
+  - Added all the basic features;
