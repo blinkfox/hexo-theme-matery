@@ -455,7 +455,7 @@ There are 24 featured pictures in `/source/medias/featureimages`,you can add or 
 ## Changelog
 
 - v1.0.3
-  - Added 'TOC` expansion, shrink button and related configuration, this button is displayed by default;
+  - Added `TOC` expansion, shrink button and related configuration, this button is displayed by default;
 - v1.0.2
   - Upgraded the [Materialize](https://materializecss.com/) framework version to `1.0.0`, refactoring and modifying some files or problems during the upgrade process;
   - Added a full-screen carousel effect on the front cover of the home page to set more important posts to the home page carousel;
