@@ -103,6 +103,7 @@ socialLink:
 toc:
   enable: true
   heading: h2, h3, h4
+  showToggleBtn: true # 是否显示切换TOC目录展开收缩的按钮
 
 # Whether the code is broken.
 # 代码是否折行

@@ -98,11 +98,13 @@
 </div>
 
 <!-- TOC 悬浮按钮. -->
+<% if (theme.toc.enable && theme.toc.showToggleBtn) { %>
 <div id="floating-toc-btn" class="hide-on-med-and-down">
     <a class="btn-floating btn-large bg-color">
         <i class="fa fa-list"></i>
     </a>
 </div>
+<% } %>
 
 <script src="<%- theme.libs.js.tocbot %>"></script>
 <script>
@@ -141,6 +143,7 @@
             }
         });
 
+        <% if (theme.toc.enable && theme.toc.showToggleBtn) { %>
         /* 修复文章卡片 div 的宽度. */
         let fixPostCardWidth = function (srcId, targetId) {
             let srcDiv = $('#' + srcId);
@@ -175,5 +178,6 @@
             }
             fixPostCardWidth('artDetail', 'prenext-posts');
         });
+        <% } %>
     });
 </script>
