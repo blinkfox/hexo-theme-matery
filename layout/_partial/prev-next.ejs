@@ -19,7 +19,7 @@ var featureImages = theme.featureImages;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         <% if (page.prev) { %>
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;<%= __('prev') %></div>
             <div class="card">
@@ -74,7 +74,7 @@ var featureImages = theme.featureImages;
             </div>
         </div>
         <% } else { %>
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-dot-circle-o"></i>&nbsp;<%= __('curr') %>
             </div>
@@ -132,7 +132,7 @@ var featureImages = theme.featureImages;
         </div>
         <% } %>
         <% if (page.next) { %>
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
                 <%= __('next') %>&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
@@ -188,7 +188,7 @@ var featureImages = theme.featureImages;
             </div>
         </div>
         <% } else { %>
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
                 <%= __('curr') %>&nbsp;<i class="fa fa-dot-circle-o"></i>
             </div>
