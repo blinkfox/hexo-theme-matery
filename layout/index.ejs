@@ -51,7 +51,7 @@
     <article id="articles" class="container articles">
         <div class="row article-row">
             <% page.posts.forEach(post => { %>
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            <div class="article col s12 m6 l4 overflow-policy" data-aos="zoom-in">
                 <div class="card">
                     <a href="<%- url_for(post.path) %>">
                         <div class="card-image">
