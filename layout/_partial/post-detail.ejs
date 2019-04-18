@@ -6,7 +6,7 @@
                 <div class="col s7">
                     <% if (page.tags && page.tags.length) { %>
                     <div class="article-tag">
-                        <% page.tags.each(function(tag) { %>
+                        <% page.tags.forEach(function(tag) { %>
                             <a href="<%- url_for(tag.path) %>" target="_blank">
                                 <span class="chip bg-color"><%= tag.name %></span>
                             </a>
