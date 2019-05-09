@@ -935,8 +935,8 @@ article .article-tags .chip {
 }
 
 #artDetail .reprint .reprint-tip {
-    margin-right: 3px;
-    font-size: 1.05rem;
+    margin: 0 3px 22px 0;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
