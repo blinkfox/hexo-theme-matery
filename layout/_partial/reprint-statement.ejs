@@ -1,0 +1,165 @@
+<%
+let reprintPolicyEnabled = theme.reprint && theme.reprint.enable
+let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
+%>
+<% if (reprintPolicyEnabled) { %>
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fas fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span><%= __('reprint') %></span>
+        </p>
+        <% if (reprintPolicy === 'cc_by') { %>
+            <div class="center-align">
+                <a rel="license" href="<%= __('cc_by_url') %>">
+                    <img alt=""
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+                </a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">
+                    《<%= page.title %>》
+                </span> <%= __('by') %>
+            <a xmlns:cc="http://creativecommons.org/ns#" href="<%- url_for(page.path) %>" property="cc:attributionName"
+               rel="cc:attributionURL">
+                <%- page.author || config.author %>
+            </a> <%= __('under') %>
+            <a rel="license" href="<%= __('cc_by_url') %>">
+                <%= __('cc_by_name') %>
+            </a><%= __('licensed') %>
+        <% } else if (reprintPolicy === 'cc_by_nd') { %>
+            <div class="center-align">
+                <a rel="license" href="<%= __('cc_by_nd_url') %>">
+                    <img alt="<%= __('cc') %>"
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
+                </a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">
+                    《<%= page.title %>》
+                </span> <%= __('by') %>
+            <a xmlns:cc="http://creativecommons.org/ns#" href="<%- url_for(page.path) %>" property="cc:attributionName"
+               rel="cc:attributionURL">
+                <%- page.author || config.author %>
+            </a> <%= __('under') %>
+            <a rel="license"
+               href="<%= __('cc_by_nd_url') %>">
+                <%= __('cc_by_nd_name') %>
+            </a><%= __('licensed') %>
+        <% } else if (reprintPolicy === 'cc_by_sa') { %>
+            <div class="center-align">
+                <a rel="license" href="<%= __('cc_by_sa_url') %>">
+                    <img alt="<%= __('cc') %>"
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/>
+                </a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">
+                《<%= page.title %>》
+            </span> <%= __('by') %>
+            <a xmlns:cc="http://creativecommons.org/ns#" href="<%- url_for(page.path) %>" property="cc:attributionName"
+               rel="cc:attributionURL">
+                <%- page.author || config.author %>
+            </a> <%= __('under') %>
+            <a rel="license"
+               href="<%= __('cc_by_sa_url') %>">
+                <%= __('cc_by_sa_name') %>
+            </a><%= __('licensed') %>
+        <% } else if (reprintPolicy === 'cc_by_nc') { %>
+            <div class="center-align">
+                <a rel="license" href="<%= __('cc_by_nc_url') %>">
+                    <img alt="<%= __('cc') %>"
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"/></a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">《<%= page.title %>》</span> <%= __('by') %> <a
+                    xmlns:cc="http://creativecommons.org/ns#" href="<%- url_for(page.path) %>"
+                    property="cc:attributionName"
+                    rel="cc:attributionURL"><%- page.author || config.author %></a> <%= __('under') %>
+            <a rel="license" href="<%= __('cc_by_nc_url') %>">
+                <%= __('cc_by_nc_name') %>
+            </a>
+            <%= __('licensed') %>
+        <% } else if (reprintPolicy === 'cc_by_nc_nd') { %>
+            <div class="center-align">
+                <a rel="license" href="<%= __('cc_by_nc_nd_url') %>">
+                    <img alt="<%= __('cc') %>"
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png"/></a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">《<%= page.title %>》</span> <%= __('by') %> <a
+                    xmlns:cc="http://creativecommons.org/ns#" href="<%- url_for(page.path) %>"
+                    property="cc:attributionName"
+                    rel="cc:attributionURL"><%- page.author || config.author %></a> <%= __('under') %>
+            <a rel="license" href="<%= __('cc_by_nc_nd_url') %>">
+                <%= __('cc_by_nc_nd_name') %>
+            </a><%= __('licensed') %>
+        <% } else if (reprintPolicy === 'cc_by_nc_sa') { %>
+            <div class="center-align">
+                <a rel="license" href="<%= __('cc_by_nc_sa_url') %>">
+                    <img alt="<%= __('cc') %>"
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
+            </div>
+            <br/><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                       property="dct:title" rel="dct:type">《<%= page.title %>》</span> <%= __('by') %>
+            <a xmlns:cc="http://creativecommons.org/ns#" href="<%- url_for(page.path) %>"
+               property="cc:attributionName" rel="cc:attributionURL"><%- page.author || config.author %>
+            </a> <%= __('under') %>
+            <a rel="license" href="<%= __('cc_by_nc_sa_url') %>">
+                <%= __('cc_by_nc_sa_name') %>
+            </a><%= __('licensed') %>
+        <% } else if (reprintPolicy === 'cc0') { %>
+            <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
+            <div class="center-align">
+                <a rel="license"
+                   href="<%= __('cc_0_url') %>">
+                    <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0"/>
+                </a>
+            </div>
+            <br/>
+            <%= __('toTheExtentPossibleUnderLaw') %>
+            <a rel="dct:publisher"
+               href="<%- url_for(page.path) %>">
+                <span property="dct:title"><%- page.author || config.author %></span></a>
+            <%= __('hasWaivedAllCopyrightAndRelatedOrNeighboringRightsTo') %>
+            <span property="dct:title">《<%= page.title %>》</span>
+            <%= __('workPublishedFrom') %>
+            <span property="vcard:Country" datatype="dct:ISO3166"
+                  content="<%= __('cc_0_content') %>" about="<%- url_for(page.path) %>">
+                    <%= __('cc_0_country') %>
+                </span>
+            </p>
+        <% } else if (reprintPolicy === 'noreprint') { %>
+            <span>
+                <%= __('noreprint') %>
+            </span>
+        <% } else if (reprintPolicy === 'pay') { %>
+            <span>
+                <%= __('payreprint') %>
+            </span>
+        <% } %>
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        console.log(e.clipboardData)
+        let toastHTML = '<span><%= __('pleaseFollowReprintPolicy') %></span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller"><%= __('checkPolicy') %></a>';
+        M.toast({html: toastHTML})
+
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+<% } %>

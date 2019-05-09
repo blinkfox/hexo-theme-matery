@@ -15,7 +15,7 @@ readTimes: 阅读时长
 Minutes: 分
 readMore: 阅读更多
 toc: 目录
-reprint: 转载请注明
+reprint: 转载规则
 curr: 本篇
 prev: 上一篇
 next: 下一篇
@@ -42,3 +42,29 @@ from: 来源
 author: 作者
 link: 链接
 notag: 无标签
+cc: 知识共享许可协议
+by: 由
+under: 采用
+licensed: 进行许可。
+cc_by_url: https://creativecommons.org/licenses/by/4.0/deed.zh
+cc_by_name: 知识共享署名 4.0 国际许可协议
+cc_by_nd_url: https://creativecommons.org/licenses/by-nd/4.0/deed.zh
+cc_by_nd_name: 知识共享署名-禁止演绎 4.0 国际许可协议
+cc_by_sa_url: https://creativecommons.org/licenses/by-sa/4.0/deed.zh
+cc_by_sa_name: 知识共享署名-相同方式共享 4.0 国际许可协议
+cc_by_nc_url: https://creativecommons.org/licenses/by-nc/4.0/deed.zh
+cc_by_nc_name: 知识共享署名-非商业性使用 4.0 国际许可协议
+cc_by_nc_nd_url: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh
+cc_by_nc_nd_name: 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议
+cc_by_nc_sa_url: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh
+cc_by_nc_sa_name: 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议
+cc_0_url: https://creativecommons.org/publicdomain/zero/1.0/deed.zh
+toTheExtentPossibleUnderLaw: 在法律允许的范围内，
+hasWaivedAllCopyrightAndRelatedOrNeighboringRightsTo: 已放弃此作品的所有版权、相关或相邻的权利
+workPublishedFrom: 。此作品发布在：
+cc_0_country: 中国大陆。
+cc_0_content: CN
+noreprint: 本文不允许转载。
+payreprint: 请联系作者付费转载。
+pleaseFollowReprintPolicy: 复制成功，请遵循本文的转载规则
+checkPolicy: 查看

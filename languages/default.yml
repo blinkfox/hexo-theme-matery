@@ -15,7 +15,7 @@ readTimes: Read Times
 Minutes: Min
 readMore: Read more
 toc: TOC
-reprint: Reprint please specify
+reprint: Reprint policy
 curr: Current
 prev: Previous
 next: Next
@@ -42,3 +42,29 @@ from: From
 author: Author
 link: Link
 notag: No tag
+cc: Creative Commons License
+by: by
+under: is licensed under a
+licensed: " "
+cc_by_url: https://creativecommons.org/licenses/by/4.0/
+cc_by_name: Creative Commons Attribution 4.0 International License
+cc_by_nd_url: https://creativecommons.org/licenses/by-nd/4.0/
+cc_by_nd_name: Creative Commons Attribution-NoDerivatives 4.0 International License
+cc_by_sa_url: https://creativecommons.org/licenses/by-sa/4.0/
+cc_by_sa_name: Creative Commons Attribution-ShareAlike 4.0 International License
+cc_by_nc_url: https://creativecommons.org/licenses/by-nc/4.0/
+cc_by_nc_name: c
+cc_by_nc_nd_url: http://creativecommons.org/licenses/by-nc-nd/4.0/
+cc_by_nc_nd_name: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License
+cc_by_nc_sa_url: http://creativecommons.org/licenses/by-nc-sa/4.0/
+cc_by_nc_sa_name: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+cc_0_url: https://creativecommons.org/publicdomain/zero/1.0/
+toTheExtentPossibleUnderLaw: To the extent possible under law,
+hasWaivedAllCopyrightAndRelatedOrNeighboringRightsTo: has waived all copyright and related or neighboring rights to
+workPublishedFrom: ". This work is published from:"
+cc_0_country: United States.
+cc_0_content: US
+noreprint: This article is not allowed to reprint.
+payreprint: Please contact the author to pay for reprinting.
+pleaseFollowReprintPolicy: Copied successfully, please follow the reprint policy of this article
+checkPolicy: more
