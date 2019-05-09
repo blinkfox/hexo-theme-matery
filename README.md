@@ -8,7 +8,7 @@
 
 ## Contributor
 
-Thanks to these contributors, without whom, hexo-theme-matery can't be this perfect.
+Thanks to these contributors, without whom, hexo-theme-matery won't be this perfect.
 
 - [@HarborZeng](https://github.com/HarborZeng)
 
