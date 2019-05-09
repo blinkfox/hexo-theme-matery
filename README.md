@@ -6,6 +6,12 @@
 
 > This is a Hexo blog theme with 'Material Design' and responsive design.
 
+## Contributor
+
+Thanks to these contributors, without whom, hexo-theme-matery can't be this perfect.
+
+- [@HarborZeng](https://github.com/HarborZeng)
+
 ## Features
 
 - Simple and beautiful, and post is Beautiful and readable.
