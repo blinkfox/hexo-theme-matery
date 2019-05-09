@@ -152,10 +152,8 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
 
     <script async defer>
       document.addEventListener("copy", function (e) {
-        console.log(e.clipboardData)
         let toastHTML = '<span><%= __('pleaseFollowReprintPolicy') %></span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller"><%= __('checkPolicy') %></a>';
         M.toast({html: toastHTML})
-
       });
 
       function navToReprintStatement() {

@@ -6,6 +6,12 @@
 
 > This is a Hexo blog theme with 'Material Design' and responsive design.
 
+## Contributor
+
+Thanks to these contributors, without whom, hexo-theme-matery won't be this perfect.
+
+- [@HarborZeng](https://github.com/HarborZeng)
+
 ## Features
 
 - Simple and beautiful, and post is Beautiful and readable.
@@ -345,11 +351,13 @@ Everything in the Front-matter option is **not required**. But I still recommend
 | summary    | null                        | Post summary, custom post summary content, if the attribute has a value, the post card summary will display the text, otherwise the program will automatically intercept part of the article as a summary |
 | categories | null                        | Article classification, the classification of this topic represents a macroscopically large classification, only one article is recommended for one classification. |
 | tags       | null                        | Post label, a post can have multiple labels |
+| reprintPolicy       | cc_by                        | Post reprint policy, value could be one of cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint and pay |
 
 > **Note**: 
 > 1. post's featured piature will take remainder if not writing the `img` property,and chose the featured picture of theme to let all of post's picture **have their own characteristics**.
 > 2. The value of `date` should try to ensure that each article is unique, because `Gitalk` and `Gitment` recognize `id` in this topic are uniquely identified by the value of `date`.
 > 3. If you want to set the ability to read the verification password for the article, you should not only set the value of the password with SHA256 encryption in Front-matter, but also activate the configuration in the theme `_config.yml`.
+> 4. you can define reprint policy for a single article in the front-matter of the specific md file using this key: reprintPolicy
 
 The following are examples of the post's `Front-matter`.
 
