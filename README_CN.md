@@ -6,6 +6,12 @@
 
 > 这是一个采用 `Material Design` 和响应式设计的 Hexo 博客主题。
 
+## 贡献者
+
+感谢下面列出的贡献者，没有他们，hexo-theme-matery不会这么完美。
+
+- [@HarborZeng](https://github.com/HarborZeng)
+
 ## 特性
 
 - 简单漂亮，文章内容美观易读
