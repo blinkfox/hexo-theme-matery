@@ -2,6 +2,7 @@
 <style>
     .friends-container {
         margin-top: -100px;
+        margin-bottom: 30px;
     }
 
     .frind-ship img {
@@ -176,13 +177,13 @@
 
 <main class="content">
     <div class="container friends-container">
-        <article>
+        <article id="friends-link">
             <% if (site.data && site.data.friends) { %>
             <% var friends = site.data.friends; %>
             <div class="row tags-posts friend-all">
                 <% for (var i = 0, len = friends.length; i < len; i++) { %>
                 <% var friend = friends[i]; %>
-                <div class=" col s12 m6 l4" data-aos="zoom-in-up">
+                <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
                     <div class="card frind-card<%- ((i % 10) +1) %>">
                         <div class="frind-ship">
                             <div class="title">
@@ -207,3 +208,11 @@
         </article>
     </div>
 </main>
+
+<script>
+$(function () {
+    $('#friends-link').masonry({
+        itemSelector: '.friend-div'
+    });
+});
+</script>
