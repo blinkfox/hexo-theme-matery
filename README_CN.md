@@ -6,12 +6,6 @@
 
 > 这是一个采用 `Material Design` 和响应式设计的 Hexo 博客主题。
 
-## 贡献者
-
-感谢下面列出的贡献者，没有他们，hexo-theme-matery不会这么完美。
-
-- [@HarborZeng](https://github.com/HarborZeng)
-
 ## 特性
 
 - 简单漂亮，文章内容美观易读
@@ -31,6 +25,12 @@
 - [Gitalk](https://gitalk.github.io/)、[Gitment](https://imsun.github.io/gitment/)、[Valine](https://valine.js.org/) 和 [Disqus](https://disqus.com/) 评论模块（推荐使用 `Gitalk`）
 - 集成了[不蒜子统计](http://busuanzi.ibruce.info/)、谷歌分析（`Google Analytics`）和文章字数统计等功能
 - 支持在首页的音乐播放和视频播放功能
+
+## 贡献者
+
+感谢下面列出的贡献者，没有他们，hexo-theme-matery 不会这么完美。
+
+- [@HarborZeng](https://github.com/HarborZeng)
 
 ## 下载
 
@@ -466,6 +466,11 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 ## 版本记录
 
+- v1.0.4
+  - 新增了能为每篇文章都自定义转载规则的功能；
+  - 修复上一页、下一页的自定义 `summary` 不显示的问题；
+  - 修复了友情链接显示错位的问题，改为了瀑布流的布局方式；
+  - 其他小细节 bug 的修改；
 - v1.0.3
   - 新增了`TOC`展开、收缩的按钮和相关配置，默认显示此按钮；
 - v1.0.2

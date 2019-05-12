@@ -6,12 +6,6 @@
 
 > This is a Hexo blog theme with 'Material Design' and responsive design.
 
-## Contributor
-
-Thanks to these contributors, without whom, hexo-theme-matery won't be this perfect.
-
-- [@HarborZeng](https://github.com/HarborZeng)
-
 ## Features
 
 - Simple and beautiful, and post is Beautiful and readable.
@@ -31,6 +25,12 @@ Thanks to these contributors, without whom, hexo-theme-matery won't be this perf
 - Comment module of [Gitalk](https://gitalk.github.io/), [Gitment](https://imsun.github.io/gitment/), [Valine](https://valine.js.org/) and [Disqus](https://disqus.com/).(Gitalk is recommended)
 - Integrated [Busuanzi Statistics](http://busuanzi.ibruce.info/), `Google Analytics` and post word count statistics.
 - Support music playback and video playback on the homepage
+
+## Contributor
+
+Thanks to these contributors, without whom, hexo-theme-matery won't be this perfect.
+
+- [@HarborZeng](https://github.com/HarborZeng)
 
 ## Download
 
@@ -462,6 +462,11 @@ There are 24 featured pictures in `/source/medias/featureimages`,you can add or 
 
 ## Changelog
 
+- v1.0.4
+  - Added the ability to customize the reprint rules for each post;
+  - Fix the problem that the custom summary of the previous page and the next page does not display;
+  - Fixed the problem that the link of the friends link was misplaced and changed to the layout of the waterfall stream;
+  - Other minor bugs fixes;
 - v1.0.3
   - Added `TOC` expansion, shrink button and related configuration, this button is displayed by default;
 - v1.0.2
