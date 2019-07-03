@@ -211,7 +211,7 @@ permalink_pinyin:
 
 > **Note*:[hexo-abbrlink](https://github.com/rozbo/hexo-abbrlink) can genarate non-Chinese link in addtion to this plugin.
 
-### Post word count statistics plugin（Optional）
+### Post word count statistics plugin (Optional)
 
 If you want to display the post word count and reading time information in the post detail page, you can install the [hexo-wordcount](https://github.com/willin/hexo-wordcount) plugin.
 
