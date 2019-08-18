@@ -156,6 +156,28 @@ Also, create a new `_data` directory in your blog's `source` directory and a new
 }]
 ```
 
+### Add emoji support (Optional)
+
+This theme adds support for the `emoji` emoticon, using the Hexo plugin for [hexo-filter-github-emojis] (https://npm.taobao.org/package/hexo-filter-github-emojis) to support The generation of the `emoji` expression, the corresponding `markdown emoji` syntax (`::`, for example: `:smile:`) is converted into a `emoji` expression that jumps. The installation command is as follows:
+
+```bash
+npm install hexo-filter-github-emojis --save
+```
+
+Add configuration of `_config.yml` file in Hexo root folder as follows：
+
+```yaml
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
+```
+
+Execute `hexo clean && hexo g` to regenerate the blog file, and then  you can see the expression you wrote in the `emoji` grammar in the corresponding position in the article.
+
+
 ### Code highlight
 
 Hexo theme uses Hexo's plugin[hexo-prism-plugin](https://github.com/ele828/hexo-prism-plugin) to show the code highlight instead of its own theme.The Installation commands are as follows:
@@ -232,28 +254,6 @@ wordCount:
   min2read: true
   totalCount: true
 ```
-
-### Add emoji support (Optional)
-
-This theme adds support for the `emoji` emoticon, using the Hexo plugin for [hexo-filter-github-emojis] (https://npm.taobao.org/package/hexo-filter-github-emojis) to support The generation of the `emoji` expression, the corresponding `markdown emoji` syntax (`::`, for example: `:smile:`) is converted into a `emoji` expression that jumps. The installation command is as follows:
-
-```bash
-npm install hexo-filter-github-emojis --save
-```
-
-Add configuration of `_config.yml` file in Hexo root folder as follows：
-
-```yaml
-githubEmojis:
-  enable: true
-  className: github-emoji
-  inject: true
-  styles:
-  customEmojis:
-```
-
-Execute `hexo clean && hexo g` to regenerate the blog file, and then  you can see the expression you wrote in the `emoji` grammar in the corresponding position in the article.
-
 
 ### Add RSS feed support (Optional)
 
