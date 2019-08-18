@@ -25,12 +25,14 @@
 - Comment module of [Gitalk](https://gitalk.github.io/), [Gitment](https://imsun.github.io/gitment/), [Valine](https://valine.js.org/) and [Disqus](https://disqus.com/).(Gitalk is recommended)
 - Integrated [Busuanzi Statistics](http://busuanzi.ibruce.info/), `Google Analytics` and post word count statistics.
 - Support music playback and video playback on the homepage
+- Support the `emoji` emoticon and use the `markdown emoji` grammar to directly generate the corresponding emoticon.
 
 ## Contributor
 
 Thanks to these contributors, without whom, hexo-theme-matery won't be this perfect.
 
 - [@HarborZeng](https://github.com/HarborZeng)
+- [@shw2018](https://github.com/shw2018)
 
 ## Download
 
@@ -153,6 +155,28 @@ Also, create a new `_data` directory in your blog's `source` directory and a new
     "title": "Read More"
 }]
 ```
+
+### Add emoji support (Optional)
+
+This theme adds support for the `emoji` emoticon, using the Hexo plugin for [hexo-filter-github-emojis] (https://npm.taobao.org/package/hexo-filter-github-emojis) to support The generation of the `emoji` expression, the corresponding `markdown emoji` syntax (`::`, for example: `:smile:`) is converted into a `emoji` expression that jumps. The installation command is as follows:
+
+```bash
+npm install hexo-filter-github-emojis --save
+```
+
+Add configuration of `_config.yml` file in Hexo root folder as follows：
+
+```yaml
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
+```
+
+Execute `hexo clean && hexo g` to regenerate the blog file, and then  you can see the expression you wrote in the `emoji` grammar in the corresponding position in the article.
+
 
 ### Code highlight
 
