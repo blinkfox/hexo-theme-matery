@@ -25,12 +25,14 @@
 - [Gitalk](https://gitalk.github.io/)、[Gitment](https://imsun.github.io/gitment/)、[Valine](https://valine.js.org/) 和 [Disqus](https://disqus.com/) 评论模块（推荐使用 `Gitalk`）
 - 集成了[不蒜子统计](http://busuanzi.ibruce.info/)、谷歌分析（`Google Analytics`）和文章字数统计等功能
 - 支持在首页的音乐播放和视频播放功能
+- 支持`emoji`表情，用`markdown emoji`语法书写直接生成对应的能**跳跃**的表情。
 
 ## 贡献者
 
 感谢下面列出的贡献者，没有他们，hexo-theme-matery 不会这么完美。
 
 - [@HarborZeng](https://github.com/HarborZeng)
+- [@shw2018](https://github.com/shw2018)
 
 ## 下载
 
@@ -155,6 +157,26 @@ layout: "friends"
     "title": "前去学习"
 }]
 ```
+### 添加emoji表情支持（可选的）
+
+本主题新增了对`emoji`表情的支持，使用到了 [hexo-filter-github-emojis](https://npm.taobao.org/package/hexo-filter-github-emojis) 的 Hexo 插件来支持 `emoji`表情的生成，把对应的`markdown emoji`语法（`::`,例如：`:smile:`）转变成会跳跃的`emoji`表情，安装命令如下：
+
+```bash
+npm install hexo-filter-github-emojis --save
+```
+
+在 Hexo 根目录下的 `_config.yml` 文件中，新增以下的配置项：
+
+```yaml
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
+```
+
+执行 `hexo clean && hexo g` 重新生成博客文件，然后就可以在文章中对应位置看到你用`emoji`语法写的表情了。
 
 ### 代码高亮
 
