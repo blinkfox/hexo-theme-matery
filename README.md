@@ -257,7 +257,7 @@ Execute `hexo clean && hexo g` to regenerate the blog file, and then you can see
 
 ### Modify website footer
 
-Website footer may need to be customized, and it is not convenient to make configuration information, So need to modify and process it by yourself. The changes are in the `/layout/_partial/footer.ejs` file, including the site, the theme used, the amount of traffic, site running time and so on.
+Website footer may need to be customized, and it is not convenient to make configuration information, So need to modify and process it by yourself. The changes are in the `/layout/_partial/footer.ejs` file, including the site, the theme used, the amount of traffic and so on.
 
 ### Modify social links
 
