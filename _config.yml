@@ -20,6 +20,10 @@ menu:
     url: /friends
     icon: fa-address-book
 
+# Website start time.
+# 站点运行开始时间.
+time: 06/28/2019 00:00:00 # 格式为:月/日/年 时:分:秒. format: month/day/year hour:minute:second.
+
 # Index cover carousel configuration.
 # 首页封面轮播图的相关配置.
 cover:
