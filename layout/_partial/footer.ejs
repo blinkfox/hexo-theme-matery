@@ -29,7 +29,7 @@
                 var now = new Date();
 
                 function createtime() {
-                    var grt = new Date("06/28/2019 00:00:00"); //在此处修改你的建站时间，格式：月/日/年
+                    var grt = new Date("<%- theme.time %>");
                     now.setTime(now.getTime() + 250);
                     days = (now - grt) / 1000 / 60 / 60 / 24;
                     dnum = Math.floor(days);
