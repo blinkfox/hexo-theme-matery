@@ -149,7 +149,7 @@ Also, create a new `_data` directory in your blog's `source` directory and a new
     "avatar": "http://image.luokangyuan.com/avatar.jpg",
     "name": "ja_rome",
     "introduction": "Ordinary steps can also go out of the great journey.",
-    "url": "ttps://me.csdn.net/jlh912008548",
+    "url": "https://me.csdn.net/jlh912008548",
     "title": "Read More"
 }]
 ```
