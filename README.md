@@ -113,6 +113,25 @@ layout: "about"
 ---
 ```
 
+### new contact page
+
+`contact` page is to show contact information. If the `source` directory of your blog doesn't have `contact/index.md` file, you need to new one like this:
+
+```bash
+hexo new page "contact"
+```
+
+to edit your new page files`/source/contact/index.md`, you need somethings as follows:
+
+```yaml
+---
+title: contact
+date: 2018-09-30 17:25:30
+type: "contact"
+layout: "contact"
+---
+```
+
 ### new friends link page (Optional)
 
 The `friends` page is a page for displaying **Friendly Links** information. If you don't have a `friends/index.md` file in your blog's `source` directory, then you need to create a new one. The command is as follows:
