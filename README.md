@@ -113,6 +113,25 @@ layout: "about"
 ---
 ```
 
+### new contact page
+
+`contact` page is to show contact information. If the `source` directory of your blog doesn't have `contact/index.md` file, you need to new one like this:
+
+```bash
+hexo new page "contact"
+```
+
+to edit your new page files`/source/contact/index.md`, you need somethings as follows:
+
+```yaml
+---
+title: contact
+date: 2018-09-30 17:25:30
+type: "contact"
+layout: "contact"
+---
+```
+
 ### new friends link page (Optional)
 
 The `friends` page is a page for displaying **Friendly Links** information. If you don't have a `friends/index.md` file in your blog's `source` directory, then you need to create a new one. The command is as follows:
@@ -151,7 +170,7 @@ Also, create a new `_data` directory in your blog's `source` directory and a new
     "avatar": "http://image.luokangyuan.com/avatar.jpg",
     "name": "ja_rome",
     "introduction": "Ordinary steps can also go out of the great journey.",
-    "url": "ttps://me.csdn.net/jlh912008548",
+    "url": "https://me.csdn.net/jlh912008548",
     "title": "Read More"
 }]
 ```
@@ -281,7 +300,7 @@ Execute `hexo clean && hexo g` to regenerate the blog file, and then you can see
 
 ### Modify website footer
 
-Website footer may need to be customized, and it is not convenient to make configuration information, So need to modify and process it by yourself. The changes are in the `/layout/_partial/footer.ejs` file, including the site, the theme used, the amount of traffic, and so on.
+Website footer may need to be customized, and it is not convenient to make configuration information, So need to modify and process it by yourself. The changes are in the `/layout/_partial/footer.ejs` file, including the site, the theme used, the amount of traffic and so on.
 
 ### Modify social links
 

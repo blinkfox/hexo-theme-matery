@@ -10,9 +10,33 @@
     </a>
 <% } %>
 
+<% if (theme.socialLink.facebook) { %>
+    <a href="<%= theme.socialLink.facebook %>" data-tooltip="关注我的Facebook: <%= theme.socialLink.facebook %>" data-position="top" data-delay="50">
+        <i class="fa fa-facebook"></i>
+    </a>
+<% } %>
+
+<% if (theme.socialLink.twitter) { %>
+    <a href="<%= theme.socialLink.twitter %>" class="tooltipped" data-tooltip="关注我的Twitter: <%= theme.socialLink.twitter %>" data-position="top" data-delay="50">
+        <i class="fa fa-twitter"></i>
+    </a>
+<% } %>
+
 <% if (theme.socialLink.qq) { %>
     <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=<%= theme.socialLink.qq %>" class="tooltipped" data-tooltip="QQ联系我: <%= theme.socialLink.qq %>" data-position="top" data-delay="50">
         <i class="fa fa-qq"></i>
+    </a>
+<% } %>
+
+<% if (theme.socialLink.weibo) { %>
+    <a href="<%= theme.socialLink.weibo %>" data-tooltip="关注我的微博: <%= theme.socialLink.weibo %>" data-position="top" data-delay="50">
+        <i class="fa fa-weibo"></i>
+    </a>
+<% } %>
+
+<% if (theme.socialLink.zhihu) { %>
+    <a href="<%= theme.socialLink.zhihu %>" data-tooltip="关注我的知乎: <%= theme.socialLink.zhihu %>" data-position="top" data-delay="50">
+        <i class="fa fa-inverse">知</i>
     </a>
 <% } %>
 

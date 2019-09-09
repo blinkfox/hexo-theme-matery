@@ -1,0 +1,38 @@
+<%- partial('_partial/bg-cover') %>
+
+<main class="content">
+    <div id="aboutme" class="container contact-container">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-content article-card-content">
+                    <div id="articleContent" data-aos="fade-up">
+                        <%- page.content %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+
+            <% if (theme.gitalk && theme.gitalk.enable) { %>
+            <%- partial('_partial/gitalk') %>
+            <% } %>
+
+            <% if (theme.gitment.enable) { %>
+            <%- partial('_partial/gitment') %>
+            <% } %>
+
+            <% if (theme.disqus.enable) { %>
+            <%- partial('_partial/disqus') %>
+            <% } %>
+
+            <% if (theme.livere && theme.livere.enable) { %>
+            <%- partial('_partial/livere') %>
+            <% } %>
+
+            <% if (theme.valine && theme.valine.enable) { %>
+            <%- partial('_partial/valine') %>
+            <% } %>
+
+        </div>
+    </div>
+</main>

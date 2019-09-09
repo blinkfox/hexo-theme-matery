@@ -115,6 +115,24 @@ layout: "about"
 ---
 ```
 
+### 新建留言板 contact 页
+
+`contact` 页是用来展示**留言板**信息的页面，如果在你的博客 `source` 目录下还没有 `contact/index.md` 文件，那么你就需要新建一个，命令如下：
+
+```bash
+hexo new page "contact"
+```
+编辑你刚刚新建的页面文件 `/source/contact/index.md`，至少需要以下内容：
+
+```yaml
+---
+title: contact
+date: 2018-09-30 17:25:30
+type: "contact"
+layout: "contact"
+---
+```
+
 ### 新建友情连接 friends 页（可选的）
 
 `friends` 页是用来展示**友情连接**信息的页面，如果在你的博客 `source` 目录下还没有 `friends/index.md` 文件，那么你就需要新建一个，命令如下：
@@ -153,7 +171,7 @@ layout: "friends"
     "avatar": "http://image.luokangyuan.com/avatar.jpg",
     "name": "ja_rome",
     "introduction": "平凡的脚步也可以走出伟大的行程",
-    "url": "ttps://me.csdn.net/jlh912008548",
+    "url": "https://me.csdn.net/jlh912008548",
     "title": "前去学习"
 }]
 ```
