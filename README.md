@@ -509,11 +509,11 @@ There are 24 featured pictures in `/source/medias/featureimages`,you can add or 
 
 - v1.1.0
   - Added support for `emoji`;
-  - Added site run time statistics and configuration;
-  - Added the function of message board, it is not enabled by default;
-  - Added `Twitter`, `Facebook`, and `zhihu` social links;
-  - Updated the version of `Valine` to the latest version;
-  - modification of other minor details;
+  - Added site run time statistics and configuration;
+  - Added the function of message board, it is not enabled by default;
+  - Added `Twitter`, `Facebook`, and `zhihu` social links;
+  - Updated the version of `Valine` to the latest version;
+  - modification of other minor details;
 - v1.0.4
   - Added the ability to customize the reprint rules for each post;
   - Fix the problem that the custom summary of the previous page and the next page does not display;
