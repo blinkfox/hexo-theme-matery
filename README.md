@@ -113,7 +113,7 @@ layout: "about"
 ---
 ```
 
-### new contact page
+### new contact page (Optional)
 
 `contact` page is to show contact information. If the `source` directory of your blog doesn't have `contact/index.md` file, you need to new one like this:
 
@@ -131,6 +131,8 @@ type: "contact"
 layout: "contact"
 ---
 ```
+
+> **Note**：The message board depends on a third-party comment system, please **activate** your comment system to be effective. And in the theme `_config.yml` file, the "**menu**" of the `19` to `21` line is configured, and the comment about the message board cloud be canceled.
 
 ### new friends link page (Optional)
 

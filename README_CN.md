@@ -115,13 +115,14 @@ layout: "about"
 ---
 ```
 
-### 新建留言板 contact 页
+### 新建留言板 contact 页（可选的）
 
 `contact` 页是用来展示**留言板**信息的页面，如果在你的博客 `source` 目录下还没有 `contact/index.md` 文件，那么你就需要新建一个，命令如下：
 
 ```bash
 hexo new page "contact"
 ```
+
 编辑你刚刚新建的页面文件 `/source/contact/index.md`，至少需要以下内容：
 
 ```yaml
@@ -132,6 +133,8 @@ type: "contact"
 layout: "contact"
 ---
 ```
+
+> **注**：本留言板功能依赖于第三方评论系统，请**激活**你的评论系统才有效果。并且在主题的 `_config.yml` 文件中，第 `19` 至 `21` 行的“**菜单**”配置，取消关于留言板的注释即可。
 
 ### 新建友情连接 friends 页（可选的）
 
@@ -175,6 +178,7 @@ layout: "friends"
     "title": "前去学习"
 }]
 ```
+
 ### 添加emoji表情支持（可选的）
 
 本主题新增了对`emoji`表情的支持，使用到了 [hexo-filter-github-emojis](https://npm.taobao.org/package/hexo-filter-github-emojis) 的 Hexo 插件来支持 `emoji`表情的生成，把对应的`markdown emoji`语法（`::`,例如：`:smile:`）转变成会跳跃的`emoji`表情，安装命令如下：
