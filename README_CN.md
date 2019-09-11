@@ -510,6 +510,13 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 ## 版本记录
 
+- v1.1.0
+  - 新增了 `emoji` 的支持；
+  - 新增了站点运行时间统计及配置；
+  - 新增了留言板的功能,默认未开启；
+  - 新增了 `Twitter`、`Facebook`、知乎的社交链接；
+  - 更新了 `Valine` 的版本为最新版；
+  - 其他小细节的修改；
 - v1.0.4
   - 新增了能为每篇文章都自定义转载规则的功能；
   - 修复上一页、下一页的自定义 `summary` 不显示的问题；
