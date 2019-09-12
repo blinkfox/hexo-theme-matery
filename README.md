@@ -26,6 +26,7 @@
 - Integrated [Busuanzi Statistics](http://busuanzi.ibruce.info/), `Google Analytics` and post word count statistics.
 - Support music playback and video playback on the homepage
 - Support the `emoji` emoticon and use the `markdown emoji` grammar to directly generate the corresponding emoticon.
+- Support [DaoVoice](http://www.daovoice.io/) online chat.
 
 ## Contributor
 
@@ -297,6 +298,10 @@ feed:
 ```
 
 Execute `hexo clean && hexo g` to regenerate the blog file, and then you can see the `atom.xml` file in the `public` folder, indicating that you have successfully installed.
+
+### [DaoVoice](http://www.daovoice.io/) online chat (Optional)
+
+Go to the official website of [DaoVoice](http://www.daovoice.io/), register and get the `app_id`. Fill the `app_id` into the the theme `_config.yml` file.
 
 ### Modify website footer
 
