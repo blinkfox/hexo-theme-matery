@@ -114,7 +114,7 @@ layout: "about"
 ---
 ```
 
-### new contact page
+### new contact page (Optional)
 
 `contact` page is to show contact information. If the `source` directory of your blog doesn't have `contact/index.md` file, you need to new one like this:
 
@@ -132,6 +132,8 @@ type: "contact"
 layout: "contact"
 ---
 ```
+
+> **Note**：The message board depends on a third-party comment system, please **activate** your comment system to be effective. And in the theme `_config.yml` file, the "**menu**" of the `19` to `21` line is configured, and the comment about the message board cloud be canceled.
 
 ### new friends link page (Optional)
 
@@ -510,6 +512,13 @@ There are 24 featured pictures in `/source/medias/featureimages`,you can add or 
 
 ## Changelog
 
+- v1.1.0
+  - Added support for `emoji`;
+  - Added site run time statistics and configuration;
+  - Added the function of message board, it is not enabled by default;
+  - Added `Twitter`, `Facebook`, and `zhihu` social links;
+  - Updated the version of `Valine` to the latest version;
+  - modification of other minor details;
 - v1.0.4
   - Added the ability to customize the reprint rules for each post;
   - Fix the problem that the custom summary of the previous page and the next page does not display;
