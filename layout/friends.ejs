@@ -176,7 +176,15 @@
 </style>
 
 <main class="content">
-    <div class="container friends-container">
+    <div class="container chip-container">
+        <div class="card">
+            <div class="card-content">
+                <div class="tag-title center-align">
+                    <i class="fa fa-address-book"></i>&nbsp;&nbsp;<%= __('friends') %>
+                </div>
+                <%- page.content %>
+            </div>
+        </div>
         <article id="friends-link">
             <% if (site.data && site.data.friends) { %>
             <% var friends = site.data.friends; %>
@@ -206,6 +214,29 @@
             </div>
             <% } %>
         </article>
+        <div class="card">
+
+            <% if (theme.gitalk && theme.gitalk.enable) { %>
+            <%- partial('_partial/gitalk') %>
+            <% } %>
+
+            <% if (theme.gitment.enable) { %>
+            <%- partial('_partial/gitment') %>
+            <% } %>
+
+            <% if (theme.disqus.enable) { %>
+            <%- partial('_partial/disqus') %>
+            <% } %>
+
+            <% if (theme.livere && theme.livere.enable) { %>
+            <%- partial('_partial/livere') %>
+            <% } %>
+
+            <% if (theme.valine && theme.valine.enable) { %>
+            <%- partial('_partial/valine') %>
+            <% } %>
+
+        </div>
     </div>
 </main>
 
