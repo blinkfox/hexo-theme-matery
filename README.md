@@ -305,6 +305,10 @@ Execute `hexo clean && hexo g` to regenerate the blog file, and then you can see
 
 Go to the official website of [DaoVoice](http://www.daovoice.io/), register and get the `app_id`. Fill the `app_id` into the the theme `_config.yml` file.
 
+### [Tidio](https://www.tidio.com/) online chat (Optional)
+
+Go to the official website of [Tidio](https://www.tidio.com/), register and get the `Public Key`. Fill the `Public Key` into the the theme `_config.yml` file.
+
 ### Modify website footer
 
 Website footer may need to be customized, and it is not convenient to make configuration information, So need to modify and process it by yourself. The changes are in the `/layout/_partial/footer.ejs` file, including the site, the theme used, the amount of traffic and so on.
