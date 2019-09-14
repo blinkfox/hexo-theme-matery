@@ -189,36 +189,36 @@
                 <div class="tag-title center-align">
                     <i class="fa fa-address-book"></i>&nbsp;&nbsp;<%= __('friends') %>
                 </div>
-            </div>
-            <article id="friends-link">
-                <% if (site.data && site.data.friends) { %>
-                <% var friends = site.data.friends; %>
-                <div class="row tags-posts friend-all">
-                    <% for (var i = 0, len = friends.length; i < len; i++) { %>
-                    <% var friend = friends[i]; %>
-                    <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                        <div class="card frind-card<%- ((i % 10) +1) %>">
-                            <div class="frind-ship">
-                                <div class="title">
-                                    <img src="<%- friend.avatar %>" alt="img">
-                                    <div>
-                                        <h1 class="friend-name"><%- friend.name %></h1>
-                                        <p><%- friend.introduction %></p>
+                <article id="friends-link">
+                    <% if (site.data && site.data.friends) { %>
+                    <% var friends = site.data.friends; %>
+                    <div class="row tags-posts friend-all">
+                        <% for (var i = 0, len = friends.length; i < len; i++) { %>
+                        <% var friend = friends[i]; %>
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card<%- ((i % 10) +1) %>">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="<%- friend.avatar %>" alt="img">
+                                        <div>
+                                            <h1 class="friend-name"><%- friend.name %></h1>
+                                            <p><%- friend.introduction %></p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="friend-button">
-                                    <a href="<%- friend.url %>" target="_blank"
-                                        class="button button-glow button-rounded button-caution">
-                                        <%- friend.title %>
-                                    </a>
+                                    <div class="friend-button">
+                                        <a href="<%- friend.url %>" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            <%- friend.title %>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <% } %>
                     </div>
                     <% } %>
-                </div>
-                <% } %>
-            </article>
+                </article>
+            </div>
         </div>
         <div class="card">
             <div class="card-content">
