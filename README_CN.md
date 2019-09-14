@@ -304,7 +304,11 @@ feed:
 
 ### 添加 [DaoVoice](http://www.daovoice.io/) 在线聊天功能（可选的）
 
-前往 [DaoVoice](http://www.daovoice.io/) 官网注册并且获取 `app_id`，并将 `app_id` 填入 `_config.yml` 文件中。
+前往 [DaoVoice](http://www.daovoice.io/) 官网注册并且获取 `app_id`，并将 `app_id` 填入主题的 `_config.yml` 文件中。
+
+### 添加 [Tidio](https://www.tidio.com/) 在线聊天功能（可选的）
+
+前往 [Tidio](https://www.tidio.com/) 官网注册并且获取 `Public Key`，并将 `Public Key` 填入主题的 `_config.yml` 文件中。
 
 ### 修改页脚
 
