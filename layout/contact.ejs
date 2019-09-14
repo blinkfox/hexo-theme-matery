@@ -1,14 +1,13 @@
 <%- partial('_partial/bg-cover') %>
 
 <main class="content">
-    <div id="contact" class="container contact-container">
+    <div id="contact" class="container chip-container">
         <div class="card">
             <div class="card-content">
-                <div class="card-content article-card-content">
-                    <div id="articleContent" data-aos="fade-up">
-                        <%- page.content %>
-                    </div>
+                <div class="tag-title center-align">
+                    <i class="fa fa-comments"></i>&nbsp;&nbsp;<%= __('contact') %>
                 </div>
+                <%- page.content %>
             </div>
         </div>
         <div class="card">

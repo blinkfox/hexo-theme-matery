@@ -26,6 +26,7 @@
 - 集成了[不蒜子统计](http://busuanzi.ibruce.info/)、谷歌分析（`Google Analytics`）和文章字数统计等功能
 - 支持在首页的音乐播放和视频播放功能
 - 支持`emoji`表情，用`markdown emoji`语法书写直接生成对应的能**跳跃**的表情。
+- 支持 [DaoVoice](http://www.daovoice.io/) 在线聊天功能。
 
 ## 贡献者
 
@@ -300,6 +301,14 @@ feed:
 ```
 
 执行 `hexo clean && hexo g` 重新生成博客文件，然后在 `public` 文件夹中即可看到 `atom.xml` 文件，说明你已经安装成功了。
+
+### 添加 [DaoVoice](http://www.daovoice.io/) 在线聊天功能（可选的）
+
+前往 [DaoVoice](http://www.daovoice.io/) 官网注册并且获取 `app_id`，并将 `app_id` 填入主题的 `_config.yml` 文件中。
+
+### 添加 [Tidio](https://www.tidio.com/) 在线聊天功能（可选的）
+
+前往 [Tidio](https://www.tidio.com/) 官网注册并且获取 `Public Key`，并将 `Public Key` 填入主题的 `_config.yml` 文件中。
 
 ### 修改页脚
 

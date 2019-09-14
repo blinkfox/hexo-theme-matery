@@ -5,6 +5,13 @@
         margin-bottom: 30px;
     }
 
+    .friends-container .tag-title {
+        margin-bottom: 10px;
+        color: #3C4858;
+        font-size: 1.75rem;
+        font-weight: 400;
+    }
+
     .frind-ship img {
         border-radius: 50%;
     }
@@ -177,42 +184,77 @@
 
 <main class="content">
     <div class="container friends-container">
-        <article id="friends-link">
-            <% if (site.data && site.data.friends) { %>
-            <% var friends = site.data.friends; %>
-            <div class="row tags-posts friend-all">
-                <% for (var i = 0, len = friends.length; i < len; i++) { %>
-                <% var friend = friends[i]; %>
-                <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                    <div class="card frind-card<%- ((i % 10) +1) %>">
-                        <div class="frind-ship">
-                            <div class="title">
-                                <img src="<%- friend.avatar %>" alt="img">
-                                <div>
-                                    <h1 class="friend-name"><%- friend.name %></h1>
-                                    <p><%- friend.introduction %></p>
+        <div class="card">
+            <div class="card-content">
+                <div class="tag-title center-align">
+                    <i class="fa fa-address-book"></i>&nbsp;&nbsp;<%= __('friends') %>
+                </div>
+                <article id="friends-link">
+                    <% if (site.data && site.data.friends) { %>
+                    <% var friends = site.data.friends; %>
+                    <div class="row tags-posts friend-all">
+                        <% for (var i = 0, len = friends.length; i < len; i++) { %>
+                        <% var friend = friends[i]; %>
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card<%- ((i % 10) +1) %>">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="<%- friend.avatar %>" alt="img">
+                                        <div>
+                                            <h1 class="friend-name"><%- friend.name %></h1>
+                                            <p><%- friend.introduction %></p>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="<%- friend.url %>" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            <%- friend.title %>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="friend-button">
-                                <a href="<%- friend.url %>" target="_blank" 
-                                    class="button button-glow button-rounded button-caution">
-                                    <%- friend.title %>
-                                </a>
-                            </div>
                         </div>
+                        <% } %>
                     </div>
-                </div>
-                <% } %>
+                    <% } %>
+                </article>
             </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <%- page.content %>
+            </div>
+        </div>
+        <div class="card">
+
+            <% if (theme.gitalk && theme.gitalk.enable) { %>
+            <%- partial('_partial/gitalk') %>
             <% } %>
-        </article>
+
+            <% if (theme.gitment.enable) { %>
+            <%- partial('_partial/gitment') %>
+            <% } %>
+
+            <% if (theme.disqus.enable) { %>
+            <%- partial('_partial/disqus') %>
+            <% } %>
+
+            <% if (theme.livere && theme.livere.enable) { %>
+            <%- partial('_partial/livere') %>
+            <% } %>
+
+            <% if (theme.valine && theme.valine.enable) { %>
+            <%- partial('_partial/valine') %>
+            <% } %>
+
+        </div>
     </div>
 </main>
 
 <script>
-$(function () {
-    $('#friends-link').masonry({
-        itemSelector: '.friend-div'
+    $(function () {
+        $('#friends-link').masonry({
+            itemSelector: '.friend-div'
+        });
     });
-});
 </script>
