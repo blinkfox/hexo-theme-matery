@@ -37,7 +37,7 @@
                 if (tidio.css("display") == "block" && tidio.css("bottom") == "0px" && $(window).width() >
                     690 || parseInt(tidio.css("height")) < 230) {
                     document.getElementById("tidio-chat-iframe").style.bottom = ($("div.toc-title").length && $(
-                        window).width() > 690) > 0 ? "100px" : "<%- theme.tidio.bottom %>"; //更改bottom为100px 自定义
+                        window).width() > 690) > 0 ? "<%if(theme.toc.showToggleBtn){%>85px<%}else{%><%- theme.tidio.bottom %><%}%>" : "<%- theme.tidio.bottom %>"; //更改bottom为100px 自定义
                     document.getElementById("tidio-chat-iframe").style.height = parseInt(tidio.css("height")) >=
                         520 ? "520px" : tidio.css("height");
                     document.getElementById("tidio-chat-iframe").style.right = "<%- theme.tidio.right %>";
