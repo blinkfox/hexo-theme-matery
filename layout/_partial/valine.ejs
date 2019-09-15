@@ -7,11 +7,9 @@
         padding: 20px 20px 5px 20px;
     }
 
-    #vcomments input[type=text],
-    #vcomments input[type=email],
-    #vcomments input[type=url],
     #vcomments textarea {
         box-sizing: border-box;
+        background: url("<%- theme.valine.background %>") 100% 100% no-repeat;
     }
 
     #vcomments p {
@@ -241,7 +239,7 @@
 </div>
 
 <script src="/libs/valine/av-min.js"></script>
-<script src="<%- theme.libs.css.valine %>"></script>
+<script src="<%- theme.libs.libs.valine %>"></script>
 <script>
     new Valine({
         el: '#vcomments',

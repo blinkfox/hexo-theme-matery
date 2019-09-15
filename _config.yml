@@ -275,6 +275,7 @@ valine:
   avatar: 'mm' # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
   pageSize: 10
   placeholder: 'just go go' # Comment Box placeholder
+  background: /medias/comment_bg.png
 
 # Whether to display fork me on github icon and link, default true, You can change it to your repo address
 # 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
@@ -312,7 +313,6 @@ googleAnalytics:
 # 使用到的前端库，可按需替换成对应的CDN地址，如果下面未指定具体的版本号，使用最新的版本即可.
 libs:
   css:
-    valine: /libs/valine/Valine.min.js # 1.3.10  若想保持最新版，请替换为 //unpkg.com/valine/dist/Valine.min.js  默认为 /libs/valine/Valine.min.js
     fontAwesome: /libs/awesome/css/font-awesome.min.css # V4.7.0
     materialize: /libs/materialize/materialize.min.css # 1.0.0
     aos: /libs/aos/aos.css
@@ -337,8 +337,12 @@ libs:
     crypto: /libs/cryptojs/crypto-js.min.js
     echarts: /libs/echarts/echarts.min.js
     gitalk: /libs/gitalk/gitalk.min.js
+    valine: https://unpkg.com/valine@1.3.10/dist/Valine.min.js # 1.3.10  若想保持最新版，请替换为 https://unpkg.com/valine@1.3.10/dist/Valine.min.js  默认为 /libs/valine/Valine.min.js
     jqcloud: /libs/jqcloud/jqcloud-1.0.4.min.js
     tocbot: /libs/tocbot/tocbot.min.js
+    canvas_nest: /libs/background/canvas-nest.js
+    ribbon: /libs/background/ribbon.min.js
+    ribbon_dynamic: /libs/background/ribbon-dynamic.js
 
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
@@ -402,3 +406,24 @@ tidio:
   public_key: 
   right: -10px #距离右侧的距离
   bottom: 30px #距离底部的距离
+ 
+#背景canvas-nest
+canvas_nest:
+  enable: true
+  color: 0,0,255 #线条颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
+  pointColor: 0,0,255 #交点颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
+  opacity: 0.7 # 线条透明度（0~1）, 默认: 0.5
+  zIndex: -1 # 背景的z-index属性，css属性用于控制所在层的位置, 默认: -1
+  count: 99 # 线条的总数量, 默认: 99
+
+#背景静止彩带
+ribbon:
+  enable: false
+  size: 150 #彩带大小, 默认: 90
+  alpha: 0.6 #彩带透明度 (0 ~ 1), 默认: 0.6
+  zIndex: -1 #背景的z-index属性，css属性用于控制所在层的位置, 默认: -1
+  click_to_change: false  #设置是否每次点击都更换彩带
+
+#背景动态彩带
+ribbon_dynamic:
+  enable: true 
