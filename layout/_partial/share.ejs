@@ -1,11 +1,15 @@
 <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
 
 <div id="article-share">
-    <% if (config.language && config.language.indexOf('zh') >= 0) { %>
-    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
-    <% } else { %>
-    <div class="social-share" data-disabled="qzone, qq, weibo, douban"></div>
+    
+    <% if (theme.sharejs.enable) { %>
+    <div class="social-share" data-sites="<%- theme.sharejs.sites %>" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
     <% } %>
-</div>
 
-<script src="/libs/share/js/social-share.min.js"></script>
+    <% if (theme.addthis.enable) { %>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<%- theme.addthis.pubid %>"></script>
+    <div class="addthis_inline_share_toolbox"></div>
+    <% } %>
+
+</div>

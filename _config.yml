@@ -426,4 +426,14 @@ ribbon:
 
 #背景动态彩带
 ribbon_dynamic:
-  enable: true 
+  enable: true
+
+#sharejs文章分享模块
+sharejs:
+  enable: true
+  sites: twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin  #支持顺序，可选项目为twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin
+
+#addthis文章分享模块 
+addthis:
+  enable: false
+  pubid:  #前往https://www.addthis.com/获取
