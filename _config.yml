@@ -426,4 +426,7 @@ ribbon:
 
 #背景动态彩带
 ribbon_dynamic:
-  enable: true 
+  enable: true
+
+#文章分享模块
+share: twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin  #支持顺序，可选项目为twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin
