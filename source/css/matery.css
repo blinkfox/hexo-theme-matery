@@ -299,14 +299,13 @@ header .side-nav .social-link {
     color: #fff;
     border: 1px solid #fff;
     background-color: transparent;
-    border-radius: 30px;
     box-shadow: none;
 }
 
 .cover-btns a:hover {
-    border: 1px solid #f44336;
-    background-color: #f44336;
-    box-shadow: 0 14px 26px -12px rgba(233, 30, 99, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(233, 30, 99, 0.2);
+    border: transparent;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 .cover-btns a i {
@@ -316,7 +315,7 @@ header .side-nav .social-link {
 
 .cover-social-link {
     position: relative;
-    top: 18vh;
+    top: 34vh;
     text-align: center;
 }
 
@@ -489,7 +488,7 @@ header .go-back i {
 }
 
 .index-card {
-    margin-top: -50px;
+    margin-top: -10px;
     padding-top: 20px;
 }
 
