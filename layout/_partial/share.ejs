@@ -1,9 +1,15 @@
 <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
 
 <div id="article-share">
-  
-    <div class="social-share" data-sites="<%- theme.share %>" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    
+    <% if (theme.sharejs.enable) { %>
+    <div class="social-share" data-sites="<%- theme.sharejs.sites %>" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    <% } %>
+
+    <% if (theme.addthis.enable) { %>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<%- theme.addthis.pubid %>"></script>
+    <div class="addthis_inline_share_toolbox"></div>
+    <% } %>
 
 </div>
-
-<script src="/libs/share/js/social-share.min.js"></script>
