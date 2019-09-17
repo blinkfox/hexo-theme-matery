@@ -1,0 +1,54 @@
+<%
+    var menuMap = new Map();
+    menuMap.set("Index", "首页");
+    menuMap.set("Tags", "标签");
+    menuMap.set("Categories", "分类");
+    menuMap.set("Archives", "归档");
+    menuMap.set("About", "关于");
+    menuMap.set("Contact", "留言板");
+    menuMap.set("Friends", "友情链接");
+%>
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right nav-menu">
+    <% Object.keys(theme.menu).forEach(function(key) { %>
+	<li class="hide-on-med-and-down nav-item" >
+		<% if(!theme.menu[key].children) { %>
+					  <a href="<%- theme.menu[key].url %>" class="waves-effect waves-light">
+						<% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
+						<i class="fa <%- theme.menu[key].icon %>"></i>
+						<% } %>
+						<span><%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %></span>
+					</a>
+          <% } else { %>
+			<a href="<%- theme.menu[key].url %>" class="waves-effect waves-light">
+			
+			             <% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
+						     <i class="fa <%- theme.menu[key].icon %>"></i>
+						<% } %>
+						<span><%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %></span>
+						<i class="fa fa-chevron-down" aria-hidden="true"></i>
+			</a>
+            <ul class="sub-nav menus_item_child ">
+              <% for(let childrenLink of theme.menu[key].children){ %>
+                <li> 
+                  <a href="<%- url_for(childrenLink.url)%>" >
+				       <% if (childrenLink.icon && childrenLink.icon.length > 0) { %>
+						<i class="fa <%- childrenLink.icon %>" style="margin-top: -20px;"></i>
+				   <% } %>
+				   <span><%- childrenLink.name %></span>
+                  </a>
+                </li>
+              <% } %> 
+            </ul>
+          <% } %>
+        </li>
+    <% }); %>
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="<%= __('search') %>"></i>
+        </a>
+    </li>
+</ul>
+
+<%- partial('_partial/mobile-nav') %>
