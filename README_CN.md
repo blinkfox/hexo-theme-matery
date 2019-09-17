@@ -26,6 +26,7 @@
 - 集成了[不蒜子统计](http://busuanzi.ibruce.info/)、谷歌分析（`Google Analytics`）和文章字数统计等功能
 - 支持在首页的音乐播放和视频播放功能
 - 支持`emoji`表情，用`markdown emoji`语法书写直接生成对应的能**跳跃**的表情。
+- 支持 [二级目录]() 的创建。
 
 ## 贡献者
 
@@ -33,6 +34,7 @@
 
 - [@HarborZeng](https://github.com/HarborZeng)
 - [@shw2018](https://github.com/shw2018)
+- [@Five](https://github.com/Five-great)
 
 ## 下载
 
@@ -178,7 +180,68 @@ layout: "friends"
     "title": "前去学习"
 }]
 ```
+### 菜单导航配置
 
+#### 配置基本菜单导航的名称、路径url和图标icon.
+1.菜单导航名称可以是中文也可以是英文(如：`Index`或`主页`)       
+2.图标icon 可以在[Font Awesome](https://fontawesome.com/icons) 中查找   
+```
+menu:
+  Index:
+    url: /
+    icon: fa-home
+  Tags:
+    url: /tags
+    icon: fa-tags
+  Categories:
+    url: /categories
+    icon: fa-bookmark
+  Archives:
+    url: /archives
+    icon: fa-archive
+  About:
+    url: /about
+    icon: fa-user-circle-o
+  Friends:
+    url: /friends
+    icon: fa-address-book
+```
+#### 二级菜单配置方法
+如果你需要二级菜单则可以在原基本菜单导航的基础上如下操作     
+1.在需要添加二级菜单的一级菜单下添加`children`关键字(如:`About`菜单下添加`children`)     
+2.在`children`下创建二级菜单的 名称name,路径url和图标icon.      
+3.注意每个二级菜单模块前要加 `-`.     
+4.注意缩进格式     
+```
+menu:
+  Index:
+    url: /
+    icon: fa-home
+  Tags:
+    url: /tags
+    icon: fa-tags
+  Categories:
+    url: /categories
+    icon: fa-bookmark
+  Archives:
+    url: /archives
+    icon: fa-archive
+  About:
+    url: /about
+    icon: fa-user-circle-o
+    children:
+        -
+          name: 自我介绍
+          url: /about
+          icon: fa-user-circle-o
+        -
+          name: Github
+          url: https://github.com/XXXXX
+          icon: fa-github
+  Friends:
+    url: /friends
+    icon: fa-address-book
+```
 ### 添加emoji表情支持（可选的）
 
 本主题新增了对`emoji`表情的支持，使用到了 [hexo-filter-github-emojis](https://npm.taobao.org/package/hexo-filter-github-emojis) 的 Hexo 插件来支持 `emoji`表情的生成，把对应的`markdown emoji`语法（`::`,例如：`:smile:`）转变成会跳跃的`emoji`表情，安装命令如下：
@@ -511,6 +574,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 ## 版本记录
 
 - v1.1.0
+  - 新增了 `二级菜单` 的支持；
   - 新增了 `emoji` 的支持；
   - 新增了站点运行时间统计及配置；
   - 新增了留言板的功能,默认未开启；
