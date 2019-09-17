@@ -387,7 +387,6 @@ header .go-back i {
 
 .bg-cover .title {
     font-size: 4rem;
-    font-weight: 700;
     line-height: 1.85em;
     margin-bottom: 20px;
     position: relative;
@@ -489,7 +488,7 @@ header .go-back i {
 }
 
 .index-card {
-    margin-top: -50px;
+    margin-top: -10px;
     padding-top: 20px;
 }
 
