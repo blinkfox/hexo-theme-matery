@@ -20,6 +20,12 @@
         max-width: 1125px;
     }
 
+    .head-container {
+    	position: absolute;
+        padding: 0px 30px;
+        width: 100%;
+    }
+	
     .post-container {
         width: 90%;
         margin: 0 auto;
