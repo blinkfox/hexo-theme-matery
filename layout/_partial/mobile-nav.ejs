@@ -1,0 +1,73 @@
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        <% if (theme.logo !== undefined && theme.logo.length > 0) { %>
+        <img src="<%= theme.logo %>" class="logo-img circle responsive-img">
+        <% } %>
+        <div class="logo-name"><%- config.title %></div>
+        <div class="logo-desc">
+            <% if (config.description && config.description.length > 0) { %>
+            <%= config.description %>
+            <% } else { %>
+            Never really desperate, only the lost of the soul.
+            <% } %>
+        </div>
+    </div>
+
+    <%
+        var menuMap = new Map();
+        menuMap.set("Index", "首页");
+        menuMap.set("Tags", "标签");
+        menuMap.set("Categories", "分类");
+        menuMap.set("Archives", "归档");
+        menuMap.set("About", "关于");
+        menuMap.set("Friends", "友情链接");
+    %>
+
+    <ul class="menu-list mobile-menu-list">
+        <% Object.keys(theme.menu).forEach(function(key) { %>
+        <li class="m-nav-item">
+	  <% if(!theme.menu[key].children) { %>
+		<a href="<%- theme.menu[key].url %>" class="waves-effect waves-light">
+			<% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
+			    <i class="fa fa-fw <%- theme.menu[key].icon %>"></i>
+			<% } else { %>
+				<i class="fa fa-fw fa-link"></i>
+			<% } %>
+			<%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %>
+		</a>
+          <% } else { %>
+		<a href="javascript:;">
+			<% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
+				<i class="fa fa-fw <%- theme.menu[key].icon %>"></i>
+			<% } else { %>
+				<i class="fa fa-fw fa-link"></i>
+			<% } %>
+			<%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %>
+			<span class="m-icon"><i class="fa fa-chevron-right"></span>
+		</a>
+            <ul>
+              <% for(let childrenLink of theme.menu[key].children){ %>
+                <li> 
+                  <a href="<%- url_for(childrenLink.url)%>" >
+		        <% if (childrenLink.icon && childrenLink.icon.length > 0) { %>
+				<i class="fa <%- childrenLink.icon %>" style="left: 18px; position: absolute;"></i>
+			<% } %>
+		          <span><%- childrenLink.name %></span>
+                  </a>
+                </li>
+              <% } %> 
+            </ul>
+          <% } %>
+        </li>
+        <% }); %>
+        <% if (theme.githubLink && theme.githubLink.enable) { %>
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="<%- theme.githubLink.url %>" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i><%- theme.githubLink.title %>
+            </a>
+        </li>
+        <% } %>
+    </ul>
+</div>
