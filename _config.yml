@@ -405,8 +405,6 @@ daovoice:
 tidio:
   enable: false
   public_key: 
-  right: -10px #距离右侧的距离
-  bottom: 30px #距离底部的距离
  
 #背景canvas-nest
 canvas_nest:
