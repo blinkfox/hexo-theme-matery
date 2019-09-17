@@ -409,31 +409,32 @@ tidio:
  
 #背景canvas-nest
 canvas_nest:
-  enable: true
-  color: 0,0,255 #线条颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
-  pointColor: 0,0,255 #交点颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
+  enable: false
+  color: 0,0,255 # 线条颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
+  pointColor: 0,0,255 # 交点颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
   opacity: 0.7 # 线条透明度（0~1）, 默认: 0.5
-  zIndex: -1 # 背景的z-index属性，css属性用于控制所在层的位置, 默认: -1
+  zIndex: -1 # 背景的 z-index 属性，css 属性用于控制所在层的位置, 默认: -1.
   count: 99 # 线条的总数量, 默认: 99
 
-#背景静止彩带
+# 背景静止彩带.
 ribbon:
   enable: false
-  size: 150 #彩带大小, 默认: 90
-  alpha: 0.6 #彩带透明度 (0 ~ 1), 默认: 0.6
-  zIndex: -1 #背景的z-index属性，css属性用于控制所在层的位置, 默认: -1
-  click_to_change: false  #设置是否每次点击都更换彩带
+  size: 150 # 彩带大小, 默认: 90.
+  alpha: 0.6 # 彩带透明度 (0 ~ 1), 默认: 0.6.
+  zIndex: -1 # 背景的z-index属性，css属性用于控制所在层的位置, 默认: -1.
+  click_to_change: false  # 设置是否每次点击都更换彩带.
 
-#背景动态彩带
+# 背景动态彩带.
 ribbon_dynamic:
   enable: true
 
-#sharejs文章分享模块
+# sharejs文章分享模块.
+# 支持顺序，可选项目为twitter, facebook, google, qq, qzone, wechat, weibo, douban, linkedin.
 sharejs:
   enable: true
-  sites: twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin  #支持顺序，可选项目为twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin
+  sites: twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin
 
-#addthis文章分享模块 
+# addthis文章分享模块.
 addthis:
   enable: false
   pubid:  #前往https://www.addthis.com/获取

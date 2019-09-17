@@ -20,7 +20,7 @@
 
     <%- partial('_partial/google-analytics') %>
     <% if (theme.clicklove.enable) { %>
-    <script src="<%- theme.libs.js.clicklove %>"></script>
+    <script src="<%- theme.libs.js.clicklove %>" async="async"></script>
     <% } %>
     <% if (theme.busuanziStatistics && theme.busuanziStatistics.enable) { %>
     <script async src="<%- theme.libs.js.busuanzi %>"></script>
@@ -78,17 +78,17 @@
     <% if (theme.canvas_nest.enable) { %>
     <script type="text/javascript" color="<%- theme.canvas_nest.color %>"
         pointColor="<%- theme.canvas_nest.pointColor %>" opacity='<%- theme.canvas_nest.opacity %>'
-        zIndex="-<%- theme.canvas_nest.zIndex %>" count="<%- theme.canvas_nest.count %>"
-        src="<%- theme.libs.js.canvas_nest %>"></script>
+        zIndex="<%- theme.canvas_nest.zIndex %>" count="<%- theme.canvas_nest.count %>"
+        src="<%- theme.libs.js.canvas_nest %>" async="async"></script>
     <% } %>
 
     <% if (theme.ribbon.enable) { %>
     <script type="text/javascript" size="<%- theme.ribbon.size %>" alpha='<%- theme.ribbon.alpha %>'
-        zIndex="<%- theme.ribbon.zIndex %>" src="<%- theme.libs.js.ribbon %>"></script>
+        zIndex="<%- theme.ribbon.zIndex %>" src="<%- theme.libs.js.ribbon %>" async="async"></script>
     <% } %>
 
     <% if (theme.ribbon_dynamic.enable) { %>
-    <script type="text/javascript" src="<%- theme.libs.js.ribbon_dynamic %>"></script>
+    <script type="text/javascript" src="<%- theme.libs.js.ribbon_dynamic %>" async="async"></script>
     <% } %>
 
 </body>
