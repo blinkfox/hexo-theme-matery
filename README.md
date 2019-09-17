@@ -26,14 +26,14 @@
 - Integrated [Busuanzi Statistics](http://busuanzi.ibruce.info/), `Google Analytics` and post word count statistics.
 - Support music playback and video playback on the homepage
 - Support the `emoji` emoticon and use the `markdown emoji` grammar to directly generate the corresponding emoticon.
-
+- Support for the creation of [secondary directory]().
 ## Contributor
 
 Thanks to these contributors, without whom, hexo-theme-matery won't be this perfect.
 
 - [@HarborZeng](https://github.com/HarborZeng)
 - [@shw2018](https://github.com/shw2018)
-
+- [@Five](https://github.com/Five-great)
 ## Download
 
 You should have a [Hexo](https://hexo.io/zh-cn/) blog when you see it here.If not,try to use the hexo and [Markdown](https://www.appinn.com/markdown/) to write your blog and post.
@@ -175,6 +175,67 @@ Also, create a new `_data` directory in your blog's `source` directory and a new
     "url": "https://me.csdn.net/jlh912008548",
     "title": "Read More"
 }]
+```
+### Menu navigation configuration
+#### Configure the name of the basic menu navigation, path url and icon icon.
+1. The menu navigation name can be Chinese or English (eg: `Index` or `Home`)
+2. Icon icon can be found in [Font Awesome] (https://fontawesome.com/icons)
+```
+menu:
+  Index:
+    url: /
+    icon: fa-home
+  Tags:
+    url: /tags
+    icon: fa-tags
+  Categories:
+    url: /categories
+    icon: fa-bookmark
+  Archives:
+    url: /archives
+    icon: fa-archive
+  About:
+    url: /about
+    icon: fa-user-circle-o
+  Friends:
+    url: /friends
+    icon: fa-address-book
+```
+#### Secondary menu configuration method
+If you need a secondary menu, you can do the following on the basis of the original basic menu navigation.
+1. Add the `children` keyword to the first level menu that needs to add a secondary menu (eg: add `children` under the `About` menu)
+2. Create a secondary menu name, path url and icon icon under `children`.
+3. Note that each secondary menu module must be preceded by `-`.
+4. Note the indentation format.
+```
+menu:
+  Index:
+    url: /
+    icon: fa-home
+  Tags:
+    url: /tags
+    icon: fa-tags
+  Categories:
+    url: /categories
+    icon: fa-bookmark
+  Archives:
+    url: /archives
+    icon: fa-archive
+  About:
+    url: /about
+    icon: fa-user-circle-o
+    children:
+        -
+          name: 自我介绍
+          url: /about
+          icon: fa-user-circle-o
+        -
+          name: Github
+          url: https://github.com/XXXXX
+          icon: fa-github
+  Friends:
+    url: /friends
+    icon: fa-address-book
 ```
 
 ### Add emoji support (Optional)
@@ -508,6 +569,7 @@ There are 24 featured pictures in `/source/medias/featureimages`,you can add or 
 ## Changelog
 
 - v1.1.0
+  - Added support for `second level menu';
   - Added support for `emoji`;
   - Added site run time statistics and configuration;
   - Added the function of message board, it is not enabled by default;
