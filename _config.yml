@@ -439,3 +439,9 @@ sharejs:
 addthis:
   enable: false
   pubid:  #前往https://www.addthis.com/获取
+  
+# 打字效果副标题.
+subtitle: 
+  enable: true
+  sub1: 从来没有真正的绝境，只有心灵的迷途
+  sub2: Never really desperate, only the lost of the soul # 如果有 ‘ ，请在 ’ 前面加上 \
