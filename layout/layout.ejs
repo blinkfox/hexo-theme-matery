@@ -99,6 +99,10 @@
     <% if (theme.ribbon_dynamic.enable) { %>
     <script type="text/javascript" src="<%- theme.libs.js.ribbon_dynamic %>" async="async"></script>
     <% } %>
+    
+    <% if (theme.instantpage.enable) { %>
+    <script src="<%- theme.libs.js.instantpage %>" type="module"></script>
+    <% } %>
 
 </body>
 
