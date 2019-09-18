@@ -10,7 +10,7 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
         </p>
         <% if (reprintPolicy === 'cc_by') { %>
             <div class="center-align">
-                <a rel="license" href="<%= __('cc_by_url') %>">
+                <a rel="license" href="<%= __('cc_by_url') %>" target="_blank">
                     <img alt=""
                          style="border-width:0"
                          src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
@@ -25,12 +25,12 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
                rel="cc:attributionURL">
                 <%- page.author || config.author %>
             </a> <%= __('under') %>
-            <a rel="license" href="<%= __('cc_by_url') %>">
+            <a rel="license" href="<%= __('cc_by_url') %>" target="_blank">
                 <%= __('cc_by_name') %>
             </a><%= __('licensed') %>
         <% } else if (reprintPolicy === 'cc_by_nd') { %>
             <div class="center-align">
-                <a rel="license" href="<%= __('cc_by_nd_url') %>">
+                <a rel="license" href="<%= __('cc_by_nd_url') %>" target="_blank">
                     <img alt="<%= __('cc') %>"
                          style="border-width:0"
                          src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
@@ -46,12 +46,12 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
                 <%- page.author || config.author %>
             </a> <%= __('under') %>
             <a rel="license"
-               href="<%= __('cc_by_nd_url') %>">
+               href="<%= __('cc_by_nd_url') %>" target="_blank">
                 <%= __('cc_by_nd_name') %>
             </a><%= __('licensed') %>
         <% } else if (reprintPolicy === 'cc_by_sa') { %>
             <div class="center-align">
-                <a rel="license" href="<%= __('cc_by_sa_url') %>">
+                <a rel="license" href="<%= __('cc_by_sa_url') %>" target="_blank">
                     <img alt="<%= __('cc') %>"
                          style="border-width:0"
                          src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/>
@@ -67,12 +67,12 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
                 <%- page.author || config.author %>
             </a> <%= __('under') %>
             <a rel="license"
-               href="<%= __('cc_by_sa_url') %>">
+               href="<%= __('cc_by_sa_url') %>" target="_blank">
                 <%= __('cc_by_sa_name') %>
             </a><%= __('licensed') %>
         <% } else if (reprintPolicy === 'cc_by_nc') { %>
             <div class="center-align">
-                <a rel="license" href="<%= __('cc_by_nc_url') %>">
+                <a rel="license" href="<%= __('cc_by_nc_url') %>" target="_blank">
                     <img alt="<%= __('cc') %>"
                          style="border-width:0"
                          src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"/></a>
@@ -83,13 +83,13 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
                     xmlns:cc="http://creativecommons.org/ns#" href="<%- url_for(page.path) %>"
                     property="cc:attributionName"
                     rel="cc:attributionURL"><%- page.author || config.author %></a> <%= __('under') %>
-            <a rel="license" href="<%= __('cc_by_nc_url') %>">
+            <a rel="license" href="<%= __('cc_by_nc_url') %>" target="_blank">
                 <%= __('cc_by_nc_name') %>
             </a>
             <%= __('licensed') %>
         <% } else if (reprintPolicy === 'cc_by_nc_nd') { %>
             <div class="center-align">
-                <a rel="license" href="<%= __('cc_by_nc_nd_url') %>">
+                <a rel="license" href="<%= __('cc_by_nc_nd_url') %>" target="_blank">
                     <img alt="<%= __('cc') %>"
                          style="border-width:0"
                          src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png"/></a>
@@ -100,12 +100,12 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
                     xmlns:cc="http://creativecommons.org/ns#" href="<%- url_for(page.path) %>"
                     property="cc:attributionName"
                     rel="cc:attributionURL"><%- page.author || config.author %></a> <%= __('under') %>
-            <a rel="license" href="<%= __('cc_by_nc_nd_url') %>">
+            <a rel="license" href="<%= __('cc_by_nc_nd_url') %>" target="_blank">
                 <%= __('cc_by_nc_nd_name') %>
             </a><%= __('licensed') %>
         <% } else if (reprintPolicy === 'cc_by_nc_sa') { %>
             <div class="center-align">
-                <a rel="license" href="<%= __('cc_by_nc_sa_url') %>">
+                <a rel="license" href="<%= __('cc_by_nc_sa_url') %>" target="_blank">
                     <img alt="<%= __('cc') %>"
                          style="border-width:0"
                          src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
@@ -115,14 +115,14 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
             <a xmlns:cc="http://creativecommons.org/ns#" href="<%- url_for(page.path) %>"
                property="cc:attributionName" rel="cc:attributionURL"><%- page.author || config.author %>
             </a> <%= __('under') %>
-            <a rel="license" href="<%= __('cc_by_nc_sa_url') %>">
+            <a rel="license" href="<%= __('cc_by_nc_sa_url') %>" target="_blank">
                 <%= __('cc_by_nc_sa_name') %>
             </a><%= __('licensed') %>
         <% } else if (reprintPolicy === 'cc0') { %>
             <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
             <div class="center-align">
                 <a rel="license"
-                   href="<%= __('cc_0_url') %>">
+                   href="<%= __('cc_0_url') %>" target="_blank">
                     <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0"/>
                 </a>
             </div>
