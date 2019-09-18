@@ -47,7 +47,7 @@ var topSkillArr = [];
         <div class="tag-chips center-align">
             <% site.tags.map(function(tag) { %>
             <% if (!isInArray(topSkillArr, tag.name)) { %>
-            <a href="<%- url_for(tag.path) %>" target="_blank">
+            <a href="<%- url_for(tag.path) %>">
                 <span class="chip center-align waves-effect waves-light chip-default"><%- tag.name %></span>
             </a>
             <% } %>
