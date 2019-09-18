@@ -151,10 +151,10 @@ $(function () {
     $('.m-nav-item>a').on('click',function(){
             if ($(this).next('ul').css('display') == "none") {
                 $('.m-nav-item').children('ul').slideUp(300);
-                $(this).next('ul').slideDown(300);
+                $(this).next('ul').slideDown(100);
                 $(this).parent('li').addClass('m-nav-show').siblings('li').removeClass('m-nav-show');
             }else{
-                $(this).next('ul').slideUp(300);
+                $(this).next('ul').slideUp(100);
                 $('.m-nav-item.m-nav-show').removeClass('m-nav-show');
             }
     });

@@ -1853,10 +1853,10 @@ footer .copy-right {
 	 border-style:solid;
 	 border-color:transparent transparent rgba(255,255,255,.8)
 }
-.m-nav-item{position: relative;left: 45px}
-.m-nav-item ul{display: none;background: rgba(255,255,255,.1);}
+.m-nav-item{position: relative;}
+.m-nav-item ul{display: none;}
 .m-nav-item ul li{	
- width:245px;
+ width:255px;
  height:50px;
  line-height: 50px;
  text-align: center;
@@ -1877,7 +1877,7 @@ footer .copy-right {
 .m-nav-show>a:before,.m-nav-item>a:hover:before{opacity:1;}
 .m-nav-item .m-icon{
 	 position:absolute; 
-	 right:65px;
+	 right:15px;
 	 height:50px;
 	 padding:0px;
 	 margin:0px;
