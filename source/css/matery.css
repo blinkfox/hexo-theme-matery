@@ -697,7 +697,6 @@ article a:hover {
 
 article .card {
     border-radius: 8px;
-    overflow: hidden;
 }
 
 article .card-image {
