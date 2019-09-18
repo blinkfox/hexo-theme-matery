@@ -44,7 +44,7 @@
 						<i class="fa fa-fw fa-link"></i>
 						<% } %>
 						<%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %>
-			        <span class="m-icon"><i class="fa fa-chevron-right"></i></span>
+            <span class="m-icon"><i class="fa fa-chevron-right"></i></span>
 				</a>
             <ul>
               <% for(let childrenLink of theme.menu[key].children){ %>
