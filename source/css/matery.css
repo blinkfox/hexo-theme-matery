@@ -405,7 +405,7 @@ header .go-back i {
 }
 
 .bg-cover .post-title {
-    font-size: 1.9rem;
+    font-size: 3rem;
 }
 
 @-webkit-keyframes rainbow {
@@ -1670,7 +1670,7 @@ footer .copy-right {
 .top-scroll {
     display: none;
     position: fixed;
-    right: 20px;
+    right: 15px;
     bottom: 15px;
     padding-top: 15px;
     margin-bottom: 0;

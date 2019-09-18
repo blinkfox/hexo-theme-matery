@@ -344,6 +344,7 @@ libs:
     canvas_nest: /libs/background/canvas-nest.js
     ribbon: /libs/background/ribbon.min.js
     ribbon_dynamic: /libs/background/ribbon-dynamic.js
+    instantpage: /libs/instantpage/instantpage.js
 
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
@@ -443,3 +444,11 @@ subtitle:
   enable: true
   sub1: 从来没有真正的绝境，只有心灵的迷途
   sub2: Never really desperate, only the lost of the soul # 如果有 ‘ ，请在 ’ 前面加上 \
+  
+# 手机二级菜单.
+navMenu:
+  mleft: false # 二级侧栏子菜单是否对齐左边
+  bgColor: " " # 二级侧栏子菜单背景颜色,留空即为全局背景色
+
+# 网页预加载.
+instantpage: true  

@@ -39,7 +39,7 @@
                             .css("display") == "none" && $(window).width() > 977) > 0 ? "-40px" : ($(
                             "div.toc-title").length && $(window).width() > 977) > 0 ?
                         "<%if(theme.toc.showToggleBtn){%>85px<%}else{%>25px<%}%>" : "20px";
-                    document.getElementById("tidio-chat-iframe").style.right = "-10px";
+                    document.getElementById("tidio-chat-iframe").style.right = "-15px";
                     document.getElementById("tidio-chat-iframe").style.height = parseInt(tidio.css("height")) >=
                         520 ? "520px" : tidio.css("height");
                     document.getElementById("tidio-chat-iframe").style.zIndex = "997";
@@ -47,12 +47,12 @@
                     992) {
                     document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll")
                         .css("display") == "none" && 601 < $(window).width() < 992) > 0 ? "-40px" : "20px";
-                    document.getElementById("tidio-chat-iframe").style.right = "-10px";
+                    document.getElementById("tidio-chat-iframe").style.right = "-15px";
                     document.getElementById("tidio-chat-iframe").style.zIndex = "997";
                 } else if (tidio.css("display") == "block" && $(window).width() < 601 && parseInt(tidio.css(
                         "height")) < 230) {
                     document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll")
-                        .css("display") == "none" && $(window).width() < 601) > 0 ? "-10px" : "45px";
+                        .css("display") == "none" && $(window).width() < 601) > 0 ? "-15px" : "45px";
                     document.getElementById("tidio-chat-iframe").style.zIndex = "997";
                 }
                 if (tidio.css("display") == "block" && $(window).width() < 601 && parseInt(tidio.css(
@@ -98,6 +98,10 @@
 
     <% if (theme.ribbon_dynamic.enable) { %>
     <script type="text/javascript" src="<%- theme.libs.js.ribbon_dynamic %>" async="async"></script>
+    <% } %>
+    
+    <% if (theme.instantpage.enable) { %>
+    <script src="<%- theme.libs.js.instantpage %>" type="module"></script>
     <% } %>
 
 </body>

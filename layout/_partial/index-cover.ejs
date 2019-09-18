@@ -37,6 +37,16 @@
         color: #fff;
         font-size: 2.4rem;
     }
+    
+    html, body {
+        height:100%;
+    }
+
+    #page {
+        height:100%;
+        min-height: 100%;
+        width:100%;
+    }
 </style>
 
 <%
@@ -50,7 +60,7 @@ site.posts.forEach(function (post) {
 var coverPostsCount = coverPosts.length;
 %>
 
-<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
+<div id="page" class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
     <% if (coverPostsCount > 0 && theme.cover.showPrevNext) { %>
     <div id="prev-cover" class="left waves-effect carousel-control">
         <i class="icon fa fa-angle-left"></i>
@@ -61,7 +71,7 @@ var coverPostsCount = coverPosts.length;
     <% } %>
 
     <div class="carousel-item red white-text bg-cover about-cover">
-        <div class="container">
+        <div class="container" style="right: 0px;left: 0px;">
             <%- partial('_partial/bg-cover-content') %>
 
             <div class="cover-btns">
@@ -110,7 +120,7 @@ var coverPostsCount = coverPosts.length;
     %>
     <div class="carousel-item amber white-text carousel-post bg-cover"
             style="background-image: url('<%- coverImg %>');">
-        <div class="container">
+        <div class="container" style="right: 0px;left: 0px;">
             <div class="row">
                 <div class="col s10 offset-s1">
                     <div class="title center-align"><%- post.title %></div>
