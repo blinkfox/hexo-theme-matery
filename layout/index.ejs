@@ -109,7 +109,7 @@
                     <% if(post.tags && post.tags.length > 0) { %>
                     <div class="card-action article-tags">
                         <% post.tags.forEach(tag => { %>
-                        <a href="<%- url_for(tag.path) %>" target="_blank">
+                        <a href="<%- url_for(tag.path) %>">
                             <span class="chip bg-color"><%= tag.name %></span>
                         </a>
                         <% }); %>
