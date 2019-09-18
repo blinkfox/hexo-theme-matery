@@ -3,23 +3,33 @@
         <div class="brand">
             <div class="title center-align">
                 <% if (config.subtitle && config.subtitle.length > 0) { %>
-                    <%= config.subtitle %>
+                <%= config.subtitle %>
                 <% } else { %>
-                    subtitle
+                subtitle
                 <% } %>
             </div>
 
             <div class="description center-align">
-                <% if (config.description && config.description.length > 0) { %>
-                    <%= config.description %>
+                <% if (theme.subtitle.enable) { %>
+                <span id="typed"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+                <script>
+                    var typed = new Typed("#typed", {
+                        strings: ['<%= theme.subtitle.sub1 %>', '<%= theme.subtitle.sub2 %>'],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50
+                    });
+                </script>
                 <% } else { %>
-                    This is your root _config.yml 'description' value.
+                <%= config.description %>
                 <% } %>
             </div>
         </div>
     </div>
 </div>
 <script>
-// 每天切换 banner 图.  Switch banner image every day.
-$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+    // 每天切换 banner 图.  Switch banner image every day.
+    $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
 </script>

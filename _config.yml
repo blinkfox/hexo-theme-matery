@@ -106,6 +106,7 @@ socialLink:
   qq: 
   weibo: 
   zhihu: 
+  rss: true
 
 # Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
 # You can add `toc: false` to the Front-matter of a post to turn off the TOC.
@@ -404,7 +405,6 @@ daovoice:
 tidio:
   enable: false
   public_key: 
-
  
 #背景canvas-nest
 canvas_nest:
@@ -437,3 +437,9 @@ sharejs:
 addthis:
   enable: false
   pubid:  #前往https://www.addthis.com/获取
+  
+# 打字效果副标题.
+subtitle: 
+  enable: true
+  sub1: 从来没有真正的绝境，只有心灵的迷途
+  sub2: Never really desperate, only the lost of the soul # 如果有 ‘ ，请在 ’ 前面加上 \
