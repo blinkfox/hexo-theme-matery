@@ -7,7 +7,7 @@
                     <% if (page.tags && page.tags.length) { %>
                     <div class="article-tag">
                         <% page.tags.forEach(function(tag) { %>
-                            <a href="<%- url_for(tag.path) %>" target="_blank">
+                            <a href="<%- url_for(tag.path) %>">
                                 <span class="chip bg-color"><%= tag.name %></span>
                             </a>
                         <% }); %>
@@ -23,7 +23,7 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         <% page.categories.forEach(category => { %>
-                            <a href="<%- url_for(category.path) %>" class="post-category" target="_blank">
+                            <a href="<%- url_for(category.path) %>" class="post-category">
                                 <%- category.name %>
                             </a>
                         <% }); %>
