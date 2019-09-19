@@ -66,7 +66,7 @@
                         <%- strip_html(post.content).substring(0, 70) %>
                     <% } %>
                 </p>
-                <a href="<%- url_for(post.path) %>" class="read-more btn waves-effect waves-light" style="background: <%- bgColor %>">
+                <a href="<%- url_for(post.path) %>" class="read-more btn waves-effect waves-light" style="background: <%- bgColor %>" target="_blank">
                     <i class="icon fa fa-eye fa-fw"></i><%- __('readMore') %>
                 </a>
             </div>
@@ -98,7 +98,7 @@
                     <h3 class="post-title"><%- post.title %></h3>
                 </a>
                 <p class="post-description"><%- description %></p>
-                <a href="<%- url_for(post.path) %>" class="read-more btn waves-effect waves-light" style="background: <%- bgColor %>">
+                <a href="<%- url_for(post.path) %>" class="read-more btn waves-effect waves-light" style="background: <%- bgColor %>" target="_blank">
                     <i class="icon fa fa-eye fa-fw"></i><%- __('readMore') %>
                 </a>
             </div>
