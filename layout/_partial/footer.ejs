@@ -1,9 +1,18 @@
 <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            本站由&nbsp;&copy;<a href="<%- config.url %>" target="_blank"><%- config.author %></a>&nbsp;基于
-            <a href="https://hexo.io/" target="_blank">Hexo</a>&nbsp;的
-            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>&nbsp;主题搭建
+            <script>
+                function year() {
+                    var year = now.getFullYear();
+                    document.getElementById("year").innerHTML = year;
+                }
+                setInterval("year()", 250);
+            </script>
+            Copyright&nbsp;&copy;
+            <span id="year">年份</span>
+            <a href="<%- config.url %>" target="_blank"><%- config.author %></a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             <% if (theme.wordCount.enable && theme.wordCount.totalCount) { %>
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;<span
