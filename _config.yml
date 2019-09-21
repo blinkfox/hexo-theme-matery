@@ -462,3 +462,9 @@ instantpage: true
 # banner 是否每日切换.
 # 若为 false, 则 banner 默认为 /medias/banner/0.jpg
 banner: true
+
+#ICP备案信息尾部显示
+icp:
+  enable: false
+  url: 
+  text: 
