@@ -775,11 +775,11 @@ article .article-tags .chip {
 }
 
 .prev-next .left-badge {
-    border-radius: 0 5px 5px 0;
+    border-radius: 5px 5px 5px 0;
 }
 
 .prev-next .right-badge {
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px 5px 0 5px;
     right: 10px;
 }
 
