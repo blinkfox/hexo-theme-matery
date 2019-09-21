@@ -446,7 +446,7 @@ addthis:
   pubid:  #前往https://www.addthis.com/获取
   
 # 打字效果副标题.
-# 如果有撇 ‘ ，请在 ’ 前面加上 \
+# 如果有符号 ‘ ，请在 ’ 前面加上 \
 subtitle: 
   enable: true
   sub1: 从来没有真正的绝境, 只有心灵的迷途
