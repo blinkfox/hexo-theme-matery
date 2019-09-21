@@ -446,13 +446,11 @@ addthis:
   pubid:  #前往https://www.addthis.com/获取
   
 # 打字效果副标题.
-# 如果有逗号“，”，请使用转义字符 &#44
 # 如果有撇 ‘ ，请在 ’ 前面加上 \
 subtitle: 
   enable: true
-  sub:
-    - 从来没有真正的绝境&#44 只有心灵的迷途
-    - Never really desperate&#44 only the lost of the soul
+  sub1: 从来没有真正的绝境, 只有心灵的迷途
+  sub2: Never really desperate, only the lost of the soul
   
 # 手机二级菜单.
 navMenu:
