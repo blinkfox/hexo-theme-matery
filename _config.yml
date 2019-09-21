@@ -15,7 +15,7 @@ menu:
     icon: fa-archive
   About:
     url: /about
-    icon: fa-user-circle-o
+    icon: fa-user-circle
   #Contact:
     #url: /contact
     #icon: fa-comments
@@ -176,7 +176,7 @@ myProjects:
   enable: true
   data:
     hexo-theme-matery:
-      icon: fa-meetup
+      icon: fa-file-alt
       iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
       url: http://github.com/blinkfox/hexo-theme-matery
       desc: This is a Hexo blog theme with 'Material Design' and responsive design.
@@ -186,7 +186,7 @@ myProjects:
         url: https://github.com/blinkfox/zealot
         desc: 一个轻量级的SQL和参数动态生成工具库
     typora-vue-theme:
-        icon: fa-file-text-o
+        icon: fa-file-alt
         iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
         url: https://github.com/blinkfox/typora-vue-theme
         desc: This is a typora theme inspired by Vue document style.
@@ -314,7 +314,7 @@ googleAnalytics:
 # 使用到的前端库，可按需替换成对应的CDN地址，如果下面未指定具体的版本号，使用最新的版本即可.
 libs:
   css:
-    fontAwesome: /libs/awesome/css/font-awesome.min.css # V4.7.0
+    fontAwesome: /libs/awesome/css/all.min.css # V4.7.0
     materialize: /libs/materialize/materialize.min.css # 1.0.0
     aos: /libs/aos/aos.css
     animate: /libs/animate/animate.min.css # V3.5.1
