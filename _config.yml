@@ -451,8 +451,8 @@ addthis:
 subtitle: 
   enable: true
   sub:
-    - 从来没有真正的绝境，只有心灵的迷途
-    - Never really desperate, only the lost of the soul
+    - 从来没有真正的绝境&#44 只有心灵的迷途
+    - Never really desperate&#44 only the lost of the soul
   
 # 手机二级菜单.
 navMenu:
