@@ -29,7 +29,8 @@
             <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
             <script>
                 var now = new Date();
-                var year = now.getFullYear();
+                var nowyear = now.getFullYear();
+                var startyear = "<%- theme.time %>".replace(/.*?(\d{4}).*/,"$1");
 
                 function createtime() {
                     var grt = new Date("<%- theme.time %>");
@@ -51,7 +52,11 @@
                     if (String(snum).length == 1) {
                         snum = "0" + snum;
                     }
-                    document.getElementById("year").innerHTML = year;
+                    if (nowyear == startyear){
+                        document.getElementById("year").innerHTML = nowyear;
+                    }else{
+                        document.getElementById("year").innerHTML = startyear + " - " + nowyear;
+                    } 
                     document.getElementById("timeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
                     document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
                 }
