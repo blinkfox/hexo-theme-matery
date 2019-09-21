@@ -48,7 +48,7 @@ var featureImages = theme.featureImages;
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i><%= date(page.prev.date, config.date_format) %>
+                            <i class="fa fa-clock fa-fw icon-date"></i><%= date(page.prev.date, config.date_format) %>
                         </span>
                         <span class="publish-author">
                             <% if (page.prev.categories && page.prev.categories.length > 0) { %>
@@ -82,7 +82,7 @@ var featureImages = theme.featureImages;
         <% } else { %>
         <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;<%= __('curr') %>
+                <i class="fa fa-dot-circle"></i>&nbsp;<%= __('curr') %>
             </div>
             <div class="card">
                 <a href="<%- url_for(page.path) %>">
@@ -110,7 +110,7 @@ var featureImages = theme.featureImages;
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i><%= date(page.date, config.date_format) %>
+                                <i class="fa fa-clock fa-fw icon-date"></i><%= date(page.date, config.date_format) %>
                             </span>
                         <span class="publish-author">
                             <% if (page.categories && page.categories.length > 0) { %>
@@ -174,7 +174,7 @@ var featureImages = theme.featureImages;
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i><%= date(page.next.date, config.date_format) %>
+                                <i class="fa fa-clock fa-fw icon-date"></i><%= date(page.next.date, config.date_format) %>
                             </span>
                         <span class="publish-author">
                             <% if (page.next.categories && page.next.categories.length > 0) { %>
@@ -208,7 +208,7 @@ var featureImages = theme.featureImages;
         <% } else { %>
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                <%= __('curr') %>&nbsp;<i class="fa fa-dot-circle-o"></i>
+                <%= __('curr') %>&nbsp;<i class="fa fa-dot-circle"></i>
             </div>
             <div class="card">
                 <a href="<%- url_for(page.path) %>">
@@ -236,7 +236,7 @@ var featureImages = theme.featureImages;
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i><%= date(page.date, config.date_format) %>
+                                <i class="fa fa-clock fa-fw icon-date"></i><%= date(page.date, config.date_format) %>
                             </span>
                         <span class="publish-author">
                             <% if (page.categories && page.categories.length > 0) { %>

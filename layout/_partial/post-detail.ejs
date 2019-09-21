@@ -34,21 +34,21 @@
 
             <div class="post-info">
                 <div class="post-date info-break-policy">
-                    <i class="fa fa-calendar-minus-o fa-fw"></i><%- __('publishDate') %>:&nbsp;&nbsp;
+                    <i class="fa fa-calendar-minus fa-fw"></i><%- __('publishDate') %>:&nbsp;&nbsp;
                     <%- date(page.date, 'YYYY-MM-DD') %>
                 </div>
 
                 <% if (theme.wordCount.enable) { %>
                     <% if (theme.wordCount.postWordCount) { %>
                     <div class="info-break-policy">
-                        <i class="fa fa-file-word-o fa-fw"></i><%- __('wordCount') %>:&nbsp;&nbsp;
+                        <i class="fa fa-file-word fa-fw"></i><%- __('wordCount') %>:&nbsp;&nbsp;
                         <%= wordcount(page.content) %>
                     </div>
                     <% } %>
 
                     <% if (theme.wordCount.min2read) { %>
                     <div class="info-break-policy">
-                        <i class="fa fa-clock-o fa-fw"></i><%- __('readTimes') %>:&nbsp;&nbsp;
+                        <i class="fa fa-clock fa-fw"></i><%- __('readTimes') %>:&nbsp;&nbsp;
                         <%= min2read(page.content) %> <%= __('Minutes') %>
                     </div>
                     <% } %>
