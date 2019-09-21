@@ -25,7 +25,13 @@ menu:
 
 # Website start time.
 # 站点运行开始时间.
-time: 06/28/2019 00:00:00 # 格式为:月/日/年 时:分:秒. format: month/day/year hour:minute:second.
+time:
+  year: 2019 # 年份
+  month: 06 # 月份
+  date: 28 # 日期
+  hour: 00 # 小时
+  minute: 00 # 分钟
+  second: 00 # 秒
 
 # Index cover carousel configuration.
 # 首页封面轮播图的相关配置.
@@ -440,10 +446,11 @@ addthis:
   pubid:  #前往https://www.addthis.com/获取
   
 # 打字效果副标题.
+# 如果有符号 ‘ ，请在 ’ 前面加上 \
 subtitle: 
   enable: true
-  sub1: 从来没有真正的绝境，只有心灵的迷途
-  sub2: Never really desperate, only the lost of the soul # 如果有 ‘ ，请在 ’ 前面加上 \
+  sub1: 从来没有真正的绝境, 只有心灵的迷途
+  sub2: Never really desperate, only the lost of the soul
   
 # 手机二级菜单.
 navMenu:
@@ -456,3 +463,9 @@ instantpage: true
 # banner 是否每日切换.
 # 若为 false, 则 banner 默认为 /medias/banner/0.jpg
 banner: true
+
+#ICP备案信息尾部显示
+icp:
+  enable: false
+  url: # 备案链接
+  text: # 备案信息
