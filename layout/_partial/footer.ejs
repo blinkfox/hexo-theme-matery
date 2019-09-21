@@ -1,13 +1,6 @@
 <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            <script>
-                function year() {
-                    var year = now.getFullYear();
-                    document.getElementById("year").innerHTML = year;
-                }
-                setInterval("year()", 250);
-            </script>
             Copyright&nbsp;&copy;
             <span id="year">年份</span>
             <a href="<%- config.url %>" target="_blank"><%- config.author %></a>
@@ -36,11 +29,11 @@
             <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
             <script>
                 var now = new Date();
+                var year = now.getFullYear();
 
                 function createtime() {
                     var grt = new Date("<%- theme.time %>");
                     now.setTime(now.getTime() + 250);
-                    year = now.getFullYear();
                     days = (now - grt) / 1000 / 60 / 60 / 24;
                     dnum = Math.floor(days);
                     hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
@@ -58,6 +51,7 @@
                     if (String(snum).length == 1) {
                         snum = "0" + snum;
                     }
+                    document.getElementById("year").innerHTML = year;
                     document.getElementById("timeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
                     document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
                 }
