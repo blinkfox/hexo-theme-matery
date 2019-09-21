@@ -466,5 +466,5 @@ banner: true
 #ICP备案信息尾部显示
 icp:
   enable: false
-  url: 
-  text: 
+  url: # 备案链接
+  text: # 备案信息
