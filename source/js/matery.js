@@ -46,7 +46,7 @@ $(function () {
      * 修复样式.
      */
     let fixStyles = function () {
-        fixPostCardWidth('navContainer', 'articles');
+        fixPostCardWidth('navContainer');
         fixPostCardWidth('artDetail', 'prenext-posts');
         fixFooterPosition();
     };
