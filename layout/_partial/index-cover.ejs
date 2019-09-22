@@ -63,10 +63,10 @@ var coverPostsCount = coverPosts.length;
 <div id="page" class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
     <% if (coverPostsCount > 0 && theme.cover.showPrevNext) { %>
     <div id="prev-cover" class="left waves-effect carousel-control">
-        <i class="icon fa fa-angle-left"></i>
+        <i class="icon fas fa-angle-left"></i>
     </div>
     <div id="next-cover" class="right waves-effect carousel-control">
-        <i class="icon fa fa-angle-right"></i>
+        <i class="icon fas fa-angle-right"></i>
     </div>
     <% } %>
 
@@ -76,16 +76,16 @@ var coverPostsCount = coverPosts.length;
 
             <div class="cover-btns">
                 <a href="#indexCard" class="waves-effect waves-light btn">
-                    <i class="fa fa-angle-double-down"></i><%- __('startRead') %>
+                    <i class="fas fa-angle-double-down"></i><%- __('startRead') %>
                 </a>
 
                 <% if (theme.indexbtn && theme.indexbtn.enable) { %>
                 <a href="<%- theme.indexbtn.url %>" class="waves-effect waves-light btn" target="_blank">
-                    <i class="fa <%- theme.indexbtn.icon %>"></i><%- theme.indexbtn.name %>
+                    <i class="<%- theme.indexbtn.icon %>"></i><%- theme.indexbtn.name %>
                 </a>
                 <% } else if (theme.githubLink.enable) { %>
                 <a href="<%- theme.githubLink.url %>" class="waves-effect waves-light btn" target="_blank">
-                    <i class="fa fa-github %>"></i><%- theme.githubLink.title %>
+                    <i class="fab fa-github %>"></i><%- theme.githubLink.title %>
                 </a>
                 <% } %>
             </div>
@@ -133,7 +133,7 @@ var coverPostsCount = coverPosts.length;
                     </div>
                     <div class="cover-btns">
                         <a href="<%- url_for(post.path) %>" class="waves-effect waves-light btn" target="_blank">
-                            <i class="icon fa fa-eye fa-fw"></i><%- __('readMore') %>
+                            <i class="icon far fa-eye fa-fw"></i><%- __('readMore') %>
                         </a>
                     </div>
                 </div>

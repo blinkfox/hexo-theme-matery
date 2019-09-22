@@ -9,46 +9,45 @@
     menuMap.set("Friends", "友情链接");
 %>
 
-<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
 <ul class="right nav-menu">
-    <% Object.keys(theme.menu).forEach(function(key) { %>
-    <li class="hide-on-med-and-down nav-item" >
-		<% if(!theme.menu[key].children) { %>
-					  <a href="<%- theme.menu[key].url %>" class="waves-effect waves-light">
-						<% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
-						<i class="fa <%- theme.menu[key].icon %>"></i>
-						<% } %>
-						<span><%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %></span>
-					</a>
-          <% } else { %>
-			<a href="<%- theme.menu[key].url %>" class="waves-effect waves-light">
-			
-			             <% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
-						     <i class="fa <%- theme.menu[key].icon %>"></i>
-						<% } %>
-						<span><%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %></span>
-						<i class="fa fa-chevron-down" aria-hidden="true"></i>
-			</a>
-            <ul class="sub-nav menus_item_child ">
-              <% for(let childrenLink of theme.menu[key].children){ %>
-                <li> 
-                  <a href="<%- url_for(childrenLink.url)%>" >
-				       <% if (childrenLink.icon && childrenLink.icon.length > 0) { %>
-						<i class="fa <%- childrenLink.icon %>" style="margin-top: -20px;"></i>
-				   <% } %>
-				   <span><%- childrenLink.name %></span>
-                  </a>
-                </li>
-              <% } %> 
-            </ul>
+  <% Object.keys(theme.menu).forEach(function(key) { %>
+  <li class="hide-on-med-and-down nav-item">
+    <% if(!theme.menu[key].children) { %>
+    <a href="<%- theme.menu[key].url %>" class="waves-effect waves-light">
+      <% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
+      <i class="<%- theme.menu[key].icon %>" style="zoom: 0.6;"></i>
+      <% } %>
+      <span><%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %></span>
+    </a>
+    <% } else { %>
+    <a href="<%- theme.menu[key].url %>" class="waves-effect waves-light">
+      <% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
+      <i class="<%- theme.menu[key].icon %>" style="zoom: 0.6;"></i>
+      <% } %>
+      <span><%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %></span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      <% for(let childrenLink of theme.menu[key].children){ %>
+      <li>
+        <a href="<%- url_for(childrenLink.url)%>">
+          <% if (childrenLink.icon && childrenLink.icon.length > 0) { %>
+          <i class="<%- childrenLink.icon %>" style="margin-top: -20px; zoom: 0.6;"></i>
           <% } %>
-        </li>
-    <% }); %>
-    <li>
-        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-            <i id="searchIcon" class="fa fa-search" title="<%= __('search') %>"></i>
+          <span><%- childrenLink.name %></span>
         </a>
-    </li>
+      </li>
+      <% } %>
+    </ul>
+    <% } %>
+  </li>
+  <% }); %>
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="<%= __('search') %>" style="zoom: 0.85;"></i>
+    </a>
+  </li>
 </ul>
 
 <%- partial('_partial/mobile-nav') %>

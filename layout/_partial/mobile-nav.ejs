@@ -30,28 +30,28 @@
 			<% if(!theme.menu[key].children) { %>
 				<a href="<%- theme.menu[key].url %>" class="waves-effect waves-light">
 					<% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
-					<i class="fa fa-fw <%- theme.menu[key].icon %>"></i>
+					<i class="fa-fw <%- theme.menu[key].icon %>"></i>
 					<% } else { %>
-					<i class="fa fa-fw fa-link"></i>
+					<i class="fas fa-fw fa-link"></i>
 					<% } %>
 					<%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %>
 				</a>
           <% } else { %>
 				<a href="javascript:;">
 						<% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
-						<i class="fa fa-fw <%- theme.menu[key].icon %>"></i>
+						<i class="fa-fw <%- theme.menu[key].icon %>"></i>
 						<% } else { %>
-						<i class="fa fa-fw fa-link"></i>
+						<i class="fas fa-fw fa-link"></i>
 						<% } %>
 						<%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %>
-            <span class="m-icon"><i class="fa fa-chevron-right"></i></span>
+            <span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 				</a>
             <ul>
               <% for(let childrenLink of theme.menu[key].children){ %>
                 <li> 
                   <a href="<%- url_for(childrenLink.url)%>" >
 				       <% if (childrenLink.icon && childrenLink.icon.length > 0) { %>
-						<i class="fa <%- childrenLink.icon %>" style="left: 18px; position: absolute;"></i>
+						<i class="<%- childrenLink.icon %>" style="left: 18px; position: absolute;"></i>
 				   <% } %>
 				   <span><%- childrenLink.name %></span>
                   </a>
@@ -65,7 +65,7 @@
         <li><div class="divider"></div></li>
         <li>
             <a href="<%- theme.githubLink.url %>" class="waves-effect waves-light" target="_blank">
-                <i class="fa fa-github-square fa-fw"></i><%- theme.githubLink.title %>
+                <i class="fab fa-github-square fa-fw"></i><%- theme.githubLink.title %>
             </a>
         </li>
         <% } %>

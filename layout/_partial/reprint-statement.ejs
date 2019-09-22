@@ -5,7 +5,7 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
 <% if (reprintPolicyEnabled) { %>
     <div class="reprint" id="reprint-statement">
         <p class="reprint-tip">
-            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <i class="fas fa-exclamation-triangle"></i>&nbsp;&nbsp;
             <span><%= __('reprint') %></span>
         </p>
         <% if (reprintPolicy === 'cc_by') { %>

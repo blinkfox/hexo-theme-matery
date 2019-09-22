@@ -38,7 +38,7 @@
 %>
 
 <% if (theme.recommend.showTitle) { %>
-<div class="title"><i class="fa fa-thumbs-up"></i>&nbsp;&nbsp;<%- __('recommendedPosts') %></div>
+<div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;<%- __('recommendedPosts') %></div>
 <% } %>
 <div class="row">
 <% if (topPostsCount % 2 === 0) { %>
@@ -67,7 +67,7 @@
                     <% } %>
                 </p>
                 <a href="<%- url_for(post.path) %>" class="read-more btn waves-effect waves-light" style="background: <%- bgColor %>" target="_blank">
-                    <i class="icon fa fa-eye fa-fw"></i><%- __('readMore') %>
+                    <i class="icon far fa-eye fa-fw"></i><%- __('readMore') %>
                 </a>
             </div>
         </div>
@@ -99,7 +99,7 @@
                 </a>
                 <p class="post-description"><%- description %></p>
                 <a href="<%- url_for(post.path) %>" class="read-more btn waves-effect waves-light" style="background: <%- bgColor %>" target="_blank">
-                    <i class="icon fa fa-eye fa-fw"></i><%- __('readMore') %>
+                    <i class="icon far fa-eye fa-fw"></i><%- __('readMore') %>
                 </a>
             </div>
         </div>

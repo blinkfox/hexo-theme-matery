@@ -21,7 +21,7 @@ var featureImages = theme.featureImages;
         <% if (page.prev) { %>
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;<%= __('prev') %></div>
+                <i class="fas fa-chevron-left"></i>&nbsp;<%= __('prev') %></div>
             <div class="card">
                 <a href="<%- url_for(page.prev.path) %>">
                     <div class="card-image">
@@ -48,21 +48,21 @@ var featureImages = theme.featureImages;
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock fa-fw icon-date"></i><%= date(page.prev.date, config.date_format) %>
+                            <i class="far fa-clock fa-fw icon-date"></i><%= date(page.prev.date, config.date_format) %>
                         </span>
                         <span class="publish-author">
                             <% if (page.prev.categories && page.prev.categories.length > 0) { %>
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
                             <% page.prev.categories.forEach(category => { %>
                             <a href="<%- url_for(category.path) %>" class="post-category">
                                     <%- category.name %>
                                 </a>
                             <% }); %>
                             <% } else if (page.prev.author && page.prev.author.length > 0) { %>
-                            <i class="fa fa-user fa-fw"></i>
+                            <i class="fas fa-user fa-fw"></i>
                             <%- page.prev.author %>
                             <% } else { %>
-                            <i class="fa fa-user fa-fw"></i>
+                            <i class="fas fa-user fa-fw"></i>
                             <%- config.author %>
                             <% } %>
                         </span>
@@ -82,7 +82,7 @@ var featureImages = theme.featureImages;
         <% } else { %>
         <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle"></i>&nbsp;<%= __('curr') %>
+                <i class="far fa-dot-circle"></i>&nbsp;<%= __('curr') %>
             </div>
             <div class="card">
                 <a href="<%- url_for(page.path) %>">
@@ -110,21 +110,21 @@ var featureImages = theme.featureImages;
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock fa-fw icon-date"></i><%= date(page.date, config.date_format) %>
+                                <i class="far fa-clock fa-fw icon-date"></i><%= date(page.date, config.date_format) %>
                             </span>
                         <span class="publish-author">
                             <% if (page.categories && page.categories.length > 0) { %>
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
                             <% page.categories.forEach(category => { %>
                             <a href="<%- url_for(category.path) %>" class="post-category">
                                     <%- category.name %>
                                 </a>
                             <% }); %>
                             <% } else if (page.author && page.author.length > 0) { %>
-                            <i class="fa fa-user fa-fw"></i>
+                            <i class="fas fa-user fa-fw"></i>
                             <%- page.author %>
                             <% } else { %>
-                            <i class="fa fa-user fa-fw"></i>
+                            <i class="fas fa-user fa-fw"></i>
                             <%- config.author %>
                             <% } %>
                         </span>
@@ -146,7 +146,7 @@ var featureImages = theme.featureImages;
         <% if (page.next) { %>
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                <%= __('next') %>&nbsp;<i class="fa fa-chevron-right"></i>
+                <%= __('next') %>&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="<%- url_for(page.next.path) %>">
@@ -174,21 +174,21 @@ var featureImages = theme.featureImages;
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock fa-fw icon-date"></i><%= date(page.next.date, config.date_format) %>
+                                <i class="far fa-clock fa-fw icon-date"></i><%= date(page.next.date, config.date_format) %>
                             </span>
                         <span class="publish-author">
                             <% if (page.next.categories && page.next.categories.length > 0) { %>
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
                             <% page.next.categories.forEach(category => { %>
                             <a href="<%- url_for(category.path) %>" class="post-category">
                                     <%- category.name %>
                                 </a>
                             <% }); %>
                             <% } else if (page.next.author && page.next.author.length > 0) { %>
-                            <i class="fa fa-user fa-fw"></i>
+                            <i class="fas fa-user fa-fw"></i>
                             <%- page.next.author %>
                             <% } else { %>
-                            <i class="fa fa-user fa-fw"></i>
+                            <i class="fas fa-user fa-fw"></i>
                             <%- config.author %>
                             <% } %>
                         </span>
@@ -208,7 +208,7 @@ var featureImages = theme.featureImages;
         <% } else { %>
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                <%= __('curr') %>&nbsp;<i class="fa fa-dot-circle"></i>
+                <%= __('curr') %>&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
                 <a href="<%- url_for(page.path) %>">
@@ -236,21 +236,21 @@ var featureImages = theme.featureImages;
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock fa-fw icon-date"></i><%= date(page.date, config.date_format) %>
+                                <i class="far fa-clock fa-fw icon-date"></i><%= date(page.date, config.date_format) %>
                             </span>
                         <span class="publish-author">
                             <% if (page.categories && page.categories.length > 0) { %>
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
                             <% page.categories.forEach(category => { %>
                             <a href="<%- url_for(category.path) %>" class="post-category">
                                     <%- category.name %>
                                 </a>
                             <% }); %>
                             <% } else if (page.author && page.author.length > 0) { %>
-                            <i class="fa fa-user fa-fw"></i>
+                            <i class="fas fa-user fa-fw"></i>
                             <%- page.author %>
                             <% } else { %>
-                            <i class="fa fa-user fa-fw"></i>
+                            <i class="fas fa-user fa-fw"></i>
                             <%- config.author %>
                             <% } %>
                         </span>

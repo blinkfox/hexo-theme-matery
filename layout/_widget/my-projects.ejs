@@ -4,7 +4,7 @@ var myprojects = theme.myProjects.data;
 %>
 <div class="my-projects">
     <div class="title center-align" data-aos="zoom-in-up">
-        <i class="fa fa-gift"></i>&nbsp;&nbsp;<%- __('myProjects') %>
+        <i class="fas fa-gift"></i>&nbsp;&nbsp;<%- __('myProjects') %>
     </div>
     <div class="row">
         <% if (myprojects) { %>
@@ -13,7 +13,7 @@ var myprojects = theme.myProjects.data;
             <div class="info center-align">
                 <a href="<%- myprojects[project].url %>" class="icon"
                    style="background: <%- myprojects[project].iconBackground %>" target="_blank">
-                    <i class="fa <%- myprojects[project].icon %>"></i>
+                    <i class="<%- myprojects[project].icon %>"></i>
                 </a>
                 <div class="info-title">
                     <a href="<%- myprojects[project].url %>" target="_blank"><%- project %></a>
