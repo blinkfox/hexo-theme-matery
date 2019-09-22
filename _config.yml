@@ -3,25 +3,25 @@
 menu:
   Index:
     url: /
-    icon: fa-home
+    icon: fas fa-home
   Tags:
     url: /tags
-    icon: fa-tags
+    icon: fas fa-tags
   Categories:
     url: /categories
-    icon: fa-bookmark
+    icon: fas fa-bookmark
   Archives:
     url: /archives
-    icon: fa-archive
+    icon: fas fa-archive
   About:
     url: /about
-    icon: fa-user-circle
+    icon: fas fa-user-circle
   #Contact:
     #url: /contact
-    #icon: fa-comments
+    #icon: fas fa-comments
   Friends:
     url: /friends
-    icon: fa-address-book
+    icon: fas fa-address-book
 
 # Website start time.
 # 站点运行开始时间.
@@ -98,7 +98,7 @@ logo: /medias/logo.png
 indexbtn:
   enable: true
   name: Github
-  icon: fa-github-alt
+  icon: fab fa-github-alt
   url: https://github.com/blinkfox/hexo-theme-matery
 
 # The configurations of the second line of home banner
@@ -182,17 +182,17 @@ myProjects:
   enable: true
   data:
     hexo-theme-matery:
-      icon: fa-file-alt
+      icon: fas fa-file-alt
       iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
       url: http://github.com/blinkfox/hexo-theme-matery
       desc: This is a Hexo blog theme with 'Material Design' and responsive design.
     zealt:
-        icon: fa-database
+        icon: fas fa-database
         iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
         url: https://github.com/blinkfox/zealot
         desc: 一个轻量级的SQL和参数动态生成工具库
     typora-vue-theme:
-        icon: fa-file-alt
+        icon: fas fa-file-alt
         iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
         url: https://github.com/blinkfox/typora-vue-theme
         desc: This is a typora theme inspired by Vue document style.
@@ -320,7 +320,7 @@ googleAnalytics:
 # 使用到的前端库，可按需替换成对应的CDN地址，如果下面未指定具体的版本号，使用最新的版本即可.
 libs:
   css:
-    fontAwesome: /libs/awesome/css/all.min.css # V4.7.0
+    fontAwesome: /libs/awesome/css/all.css # V5.11.1
     materialize: /libs/materialize/materialize.min.css # 1.0.0
     aos: /libs/aos/aos.css
     animate: /libs/animate/animate.min.css # V3.5.1

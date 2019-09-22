@@ -90,21 +90,21 @@
                             </div>
                             <div class="publish-info">
                                 <span class="publish-date">
-                                    <i class="fa fa-clock fa-fw icon-date"></i><%= date(post.date, config.date_format) %>
+                                    <i class="far fa-clock fa-fw icon-date"></i><%= date(post.date, config.date_format) %>
                                 </span>
                                 <span class="publish-author">
                                     <% if (post.categories && post.categories.length > 0) { %>
-                                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
                                     <% post.categories.forEach(category => { %>
                                     <a href="<%- url_for(category.path) %>" class="post-category">
                                     <%- category.name %>
                                     </a>
                                     <% }); %>
                                     <% } else if (post.author && post.author.length > 0) { %>
-                                    <i class="fa fa-user fa-fw"></i>
+                                    <i class="fas fa-user fa-fw"></i>
                                     <%- post.author %>
                                     <% } else { %>
-                                    <i class="fa fa-user fa-fw"></i>
+                                    <i class="fas fa-user fa-fw"></i>
                                     <%- config.author %>
                                     <% } %>
                                 </span>
