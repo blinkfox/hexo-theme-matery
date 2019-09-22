@@ -320,7 +320,7 @@ googleAnalytics:
 # 使用到的前端库，可按需替换成对应的CDN地址，如果下面未指定具体的版本号，使用最新的版本即可.
 libs:
   css:
-    fontAwesome: /libs/awesome/css/all.min.css # V4.7.0
+    fontAwesome: /libs/awesome/css/all.css # V5.11.1
     materialize: /libs/materialize/materialize.min.css # 1.0.0
     aos: /libs/aos/aos.css
     animate: /libs/animate/animate.min.css # V3.5.1
