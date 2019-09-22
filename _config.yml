@@ -13,9 +13,6 @@ menu:
   Archives:
     url: /archives
     icon: fas fa-archive
-    children:
-      - name: 123
-        icon: fas fa-archive
   About:
     url: /about
     icon: fas fa-user-circle
@@ -108,13 +105,13 @@ indexbtn:
 # icon/button will not show up if you leave the corresponding socialLink empty
 # 首页 banner 中的第二行个人信息配置，留空即不启用
 socialLink:
-  github: 123
-  email: 132
-  facebook: 123
-  twitter: 123
-  qq: 123
-  weibo: 123
-  zhihu: 123
+  github: 
+  email: 
+  facebook: 
+  twitter: 
+  qq: 
+  weibo: 
+  zhihu: 
   rss: true
 
 # Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
