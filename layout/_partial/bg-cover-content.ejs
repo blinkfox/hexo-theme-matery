@@ -16,10 +16,11 @@
                 <script>
                     var typed = new Typed("#typed", {
                         strings: ['<%= theme.subtitle.sub1 %>', '<%= theme.subtitle.sub2 %>'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50
+                        startDelay: <%= theme.subtitle.startDelay %>,
+                        typeSpeed: <%= theme.subtitle.typeSpeed %>,
+                        loop: <%= theme.subtitle.loop %>,
+                        backSpeed: <%= theme.subtitle.backSpeed %>,
+                        showCursor: <%= theme.subtitle.showCursor %>
                     });
                 </script>
                 <% } else { %>
