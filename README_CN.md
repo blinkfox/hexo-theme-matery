@@ -34,6 +34,8 @@
 
 - [@HarborZeng](https://github.com/HarborZeng)
 - [@shw2018](https://github.com/shw2018)
+- [@L1cardo](https://github.com/L1cardo)
+- [@Five-great](https://github.com/Five-great)
 
 ## 下载
 
