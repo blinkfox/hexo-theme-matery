@@ -34,6 +34,8 @@ Thanks to these contributors, without whom, hexo-theme-matery won't be this perf
 
 - [@HarborZeng](https://github.com/HarborZeng)
 - [@shw2018](https://github.com/shw2018)
+- [@L1cardo](https://github.com/L1cardo)
+- [@Five-great](https://github.com/Five-great)
 
 ## Download
 

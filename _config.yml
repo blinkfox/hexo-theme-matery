@@ -320,6 +320,9 @@ googleAnalytics:
 baiduAnalytics:
   enable: false
   id: 
+  
+# 百度搜索资源平台提交链接
+baiduPush: true
 
 # The used front-end library can be replaced with the corresponding CDN address as needed,
 # If the specific version is not specified below, you can use the latest version.
@@ -455,6 +458,11 @@ addthis:
 # 如果有符号 ‘ ，请在 ’ 前面加上 \
 subtitle: 
   enable: true
+  loop: true # 是否循环
+  showCursor: true # 是否显示光标
+  startDelay: 300 # 开始延迟
+  typeSpeed: 100 # 打字速度
+  backSpeed: 50 # 删除速度
   sub1: 从来没有真正的绝境, 只有心灵的迷途
   sub2: Never really desperate, only the lost of the soul
   
