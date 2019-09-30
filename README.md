@@ -317,7 +317,7 @@ Website footer may need to be customized, and it is not convenient to make confi
 
 ### Modify social links
 
-In the theme `_config.yml` file, the configuration of `QQ`, `GitHub` and mailbox is supported by default. In the `/layout/_partial/social-link.ejs` file of the theme, you can add or modify the social link address as you need. To add a link, please refer to the following code:
+In the theme `_config.yml` file, the configurations of `QQ`, `GitHub` and mailbox and more are supported by default. In the `/layout/_partial/social-link.ejs` file of the theme, you can add or modify the social link address as you need. To add a link, please refer to the following code:
 
 ```html
 <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
@@ -325,20 +325,21 @@ In the theme `_config.yml` file, the configuration of `QQ`, `GitHub` and mailbox
 </a>
 ```
 
-You can search social icon such as `fa-github` in [Font Awesome](https://fontawesome.com/icons).There are common social icons you can reference:
+You can search social icon such as `fab fa-github` in [Font Awesome](https://fontawesome.com/icons).There are common social icons you can reference:
 
-- Facebook: `fa-facebook`
-- Twitter: `fa-twitter`
-- Google-plus: `fa-google-plus`
-- Linkedin: `fa-linkedin`
-- Tumblr: `fa-tumblr`
-- Medium: `fa-medium`
-- Slack: `fa-slack`
-- Sina Weibo: `fa-weibo`
-- Wechat: `fa-wechat`
-- QQ: `fa-qq`
+- Facebook: `fab fa-facebook`
+- Twitter: `fab fa-twitter`
+- Google-plus: `fab fa-google-plus`
+- Linkedin: `fab fa-linkedin`
+- Tumblr: `fab fa-tumblr`
+- Medium: `fab fa-medium`
+- Slack: `fab fa-slack`
+- Sina Weibo: `fab fa-weibo`
+- Wechat: `fab fa-weixin`
+- QQ: `fab fa-qq`
+- Zhihu: `fab fa-zhihu`
 
-> **Note**: The version of `Font Awesome` is `4.7.0`.
+> **Note**: The version of `Font Awesome` is `5.11.0`.
 
 ### Configure music player (optional)
 
