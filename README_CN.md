@@ -205,7 +205,7 @@ menu:
     icon: fas fa-archive
   About:
     url: /about
-    icon: fas fa-user-circle-o
+    icon: fas fa-user-circle
   Friends:
     url: /friends
     icon: fas fa-address-book
