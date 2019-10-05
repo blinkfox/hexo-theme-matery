@@ -185,7 +185,7 @@ Also, create a new `_data` directory in your blog's `source` directory and a new
 #### Configure the name of the basic menu navigation, path url and icon icon.
 
 1. The menu navigation name can be Chinese or English (eg: `Index` or `Home`)
-2. Icon icon can be found in [Font Awesome] (https://fontawesome.com/icons)
+2. Icon icon can be found in [Font Awesome](https://fontawesome.com/icons)
 
 ```yaml
 menu:
