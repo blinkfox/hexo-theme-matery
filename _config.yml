@@ -16,16 +16,33 @@ menu:
   About:
     url: /about
     icon: fas fa-user-circle
-  #Contact:
-    #url: /contact
-    #icon: fas fa-comments
+  Contact:
+    url: /contact
+    icon: fas fa-comments
   Friends:
     url: /friends
     icon: fas fa-address-book
+  # 二级菜单写法如下
+  #Medias:
+  #  icon: fas fa-list
+  #  children:
+  #    - name: Musics
+  #      url: /musics
+  #      icon: fas fa-music
+  #    - name: Movies
+  #      url: /movies
+  #      icon: fas fa-film
+  #    - name: Books
+  #      url: /books
+  #      icon: fas fa-book
+  #    - name: Galleries
+  #      url: /galleries
+  #      icon: fas fa-image
 
 # Website start time.
 # 站点运行开始时间.
 time:
+  enable: true
   year: 2019 # 年份
   month: 06 # 月份
   date: 28 # 日期
