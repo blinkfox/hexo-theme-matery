@@ -26,34 +26,35 @@
 
     <ul class="menu-list mobile-menu-list">
         <% Object.keys(theme.menu).forEach(function(key) { %>
-<li class="m-nav-item">
-			<% if(!theme.menu[key].children) { %>
-				<a href="<%- theme.menu[key].url %>" class="waves-effect waves-light">
-					<% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
-					<i class="fa-fw <%- theme.menu[key].icon %>"></i>
-					<% } else { %>
-					<i class="fas fa-fw fa-link"></i>
-					<% } %>
-					<%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %>
-				</a>
+        <li class="m-nav-item">
+	  <% if(!theme.menu[key].children) { %>
+		<a href="<%- theme.menu[key].url %>" class="waves-effect waves-light">
+			<% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
+			    <i class="fa fa-fw <%- theme.menu[key].icon %>"></i>
+			<% } else { %>
+				<i class="fa fa-fw fa-link"></i>
+			<% } %>
+			<%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %>
+		</a>
           <% } else { %>
-				<a href="javascript:;">
-						<% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
-						<i class="fa-fw <%- theme.menu[key].icon %>"></i>
-						<% } else { %>
-						<i class="fas fa-fw fa-link"></i>
-						<% } %>
-						<%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %>
-            <span class="m-icon"><i class="fas fa-chevron-right"></i></span>
-				</a>
-            <ul>
+		<a href="javascript:;">
+			<% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
+				<i class="fa fa-fw <%- theme.menu[key].icon %>"></i>
+			<% } else { %>
+				<i class="fa fa-fw fa-link"></i>
+			<% } %>
+			<%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %>
+			<span class="m-icon"><i class="fa fa-chevron-right"></i></span>
+		</a>
+            <ul <%if(theme.navMenu&&theme.navMenu.bgColor){%> style="background: <%-theme.navMenu.bgColor%>;"<%}%> >
               <% for(let childrenLink of theme.menu[key].children){ %>
-                <li> 
-                  <a href="<%- url_for(childrenLink.url)%>" >
-				       <% if (childrenLink.icon && childrenLink.icon.length > 0) { %>
-						<i class="<%- childrenLink.icon %>" style="left: 18px; position: absolute;"></i>
-				   <% } %>
-				   <span><%- childrenLink.name %></span>
+                <li>   
+				
+                  <a href="<%- url_for(childrenLink.url)%> " style="margin-left:<%if(theme.navMenu&&theme.navMenu.mleft){%>50px<%}else{%>75px<%}%>";>
+				  <% if (childrenLink.icon && childrenLink.icon.length > 0) { %>
+				   <i class="fa <%- childrenLink.icon %>" style="position: absolute;left:<%if(theme.navMenu&&theme.navMenu.mleft){%>28px<%}else{%>50px<%}%>" ></i>
+			      <% } %>
+		          <span><%- childrenLink.name %></span>
                   </a>
                 </li>
               <% } %> 
@@ -65,7 +66,7 @@
         <li><div class="divider"></div></li>
         <li>
             <a href="<%- theme.githubLink.url %>" class="waves-effect waves-light" target="_blank">
-                <i class="fab fa-github-square fa-fw"></i><%- theme.githubLink.title %>
+                <i class="fa fa-github-square fa-fw"></i><%- theme.githubLink.title %>
             </a>
         </li>
         <% } %>
