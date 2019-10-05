@@ -203,7 +203,7 @@ menu:
     icon: fas fa-archive
   About:
     url: /about
-    icon: fas fa-user-circle-o
+    icon: fas fa-user-circle
   Friends:
     url: /friends
     icon: fas fa-address-book
@@ -222,22 +222,22 @@ If you need a secondary menu, you can do the following on the basis of the origi
 menu:
   Index:
     url: /
-    icon: fa-home
+    icon: fas fa-home
   Tags:
     url: /tags
-    icon: fa-tags
+    icon: fas fa-tags
   Categories:
     url: /categories
-    icon: fa-bookmark
+    icon: fas fa-bookmark
   Archives:
     url: /archives
-    icon: fa-archive
+    icon: fas fa-archive
   About:
     url: /about
-    icon: fa-user-circle-o
+    icon: fas fa-user-circle
   Friends:
     url: /friends
-    icon: fa-address-book
+    icon: fas fa-address-book
   Medias:
     icon: fas fa-list
     children:
