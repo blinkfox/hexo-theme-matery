@@ -180,6 +180,81 @@ Also, create a new `_data` directory in your blog's `source` directory and a new
 }]
 ```
 
+### Menu navigation configuration
+
+#### Configure the name of the basic menu navigation, path url and icon icon.
+
+1. The menu navigation name can be Chinese or English (eg: `Index` or `Home`)
+2. Icon icon can be found in [Font Awesome](https://fontawesome.com/icons)
+
+```yaml
+menu:
+  Index:
+    url: /
+    icon: fas fa-home
+  Tags:
+    url: /tags
+    icon: fas fa-tags
+  Categories:
+    url: /categories
+    icon: fas fa-bookmark
+  Archives:
+    url: /archives
+    icon: fas fa-archive
+  About:
+    url: /about
+    icon: fas fa-user-circle
+  Friends:
+    url: /friends
+    icon: fas fa-address-book
+```
+
+#### Secondary menu configuration method
+
+If you need a secondary menu, you can do the following on the basis of the original basic menu navigation.
+
+1. Add the `children` keyword to the first level menu that needs to add a secondary menu (eg: add `children` under the `About` menu)
+2. Create a secondary menu name, path url and icon icon under `children`.
+3. Note that each secondary menu module must be preceded by `-`.
+4. Note the indentation format.
+
+```yaml
+menu:
+  Index:
+    url: /
+    icon: fas fa-home
+  Tags:
+    url: /tags
+    icon: fas fa-tags
+  Categories:
+    url: /categories
+    icon: fas fa-bookmark
+  Archives:
+    url: /archives
+    icon: fas fa-archive
+  About:
+    url: /about
+    icon: fas fa-user-circle
+  Friends:
+    url: /friends
+    icon: fas fa-address-book
+  Medias:
+    icon: fas fa-list
+    children:
+      - name: Musics
+        url: /musics
+        icon: fas fa-music
+      - name: Movies
+        url: /movies
+        icon: fas fa-film
+      - name: Books
+        url: /books
+        icon: fas fa-book
+      - name: Galleries
+        url: /galleries
+        icon: fas fa-image
+```
+
 ### Add emoji support (Optional)
 
 This theme adds support for the `emoji` emoticon, using the Hexo plugin for [hexo-filter-github-emojis] (https://npm.taobao.org/package/hexo-filter-github-emojis) to support The generation of the `emoji` expression, the corresponding `markdown emoji` syntax (`::`, for example: `:smile:`) is converted into a `emoji` expression that jumps. The installation command is as follows:
