@@ -99,7 +99,7 @@ blockquote {
 }
 
 pre {
-    padding: 1.5rem !important;
+    padding: 1.5rem 1.5rem 1.5rem 3.3rem !important;
     margin: 1rem 0 !important;
     background: #272822;
     overflow: auto;
@@ -1664,7 +1664,7 @@ footer .copy-right {
     border-radius: 2px;
     background-color: #f2f2f2;
     color: #e96900;
-    font-size: .9rem;
+    font-style: normal;
     white-space: pre-wrap;
 }
 
