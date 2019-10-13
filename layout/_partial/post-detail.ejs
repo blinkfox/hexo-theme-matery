@@ -148,6 +148,11 @@
 <script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
 <% } %>
 
+<!-- 代码块收缩 -->
+<% if (theme.code.shrink) { %>
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+<% } %>
+
 <!-- 代码块折行 -->
 <style type="text/css">
 <% if (!theme.code.break) { %>
