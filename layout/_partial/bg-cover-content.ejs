@@ -31,7 +31,7 @@
     </div>
 </div>
 
-<% if (theme.banner) { %>
+<% if (theme.banner.enable) { %>
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
     $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
