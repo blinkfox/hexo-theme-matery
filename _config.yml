@@ -140,10 +140,11 @@ toc:
   heading: h2, h3, h4
   showToggleBtn: true # 是否显示切换TOC目录展开收缩的按钮
 
-# Whether the code is broken.
-# 代码是否折行
+# 代码块相关
 code:
-  break: true
+  break: false # 代码是否折行
+  copy: true # 代码块是否可复制
+  shrink: true # 代码块是否可以收缩
 
 # 是否激活文章末尾的打赏功能，默认激活（你替换为的你自己的微信、支付宝二维码图片、或者使用网络图片也可以）.
 reward:
@@ -377,6 +378,7 @@ libs:
     ribbon: /libs/background/ribbon.min.js
     ribbon_dynamic: /libs/background/ribbon-dynamic.js
     instantpage: /libs/instantpage/instantpage.js
+    clipboard: /libs/codeBlock/clipboard.min.js
 
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
@@ -489,11 +491,13 @@ navMenu:
   bgColor: " " # 二级侧栏子菜单背景颜色,留空即为全局背景色
 
 # 网页预加载.
-instantpage: true
+instantpage: 
+  enable: true
 
 # banner 是否每日切换.
 # 若为 false, 则 banner 默认为 /medias/banner/0.jpg
-banner: true
+banner: 
+  enable: true
 
 #ICP备案信息尾部显示
 icp:

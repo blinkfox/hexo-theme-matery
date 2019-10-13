@@ -140,3 +140,24 @@
     });
 </script>
 <% } %>
+
+<!-- 代码块复制功能 -->
+<% if (theme.code.copy) { %>
+<script type="text/javascript" src="<%- theme.libs.js.clipboard %>"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+<% } %>
+
+<!-- 代码块收缩 -->
+<% if (theme.code.shrink) { %>
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+<% } %>
+
+<!-- 代码块折行 -->
+<style type="text/css">
+<% if (!theme.code.break) { %>
+code[class*="language-"], pre[class*="language-"] {
+    white-space: pre !important;
+}
+<% } %>
+</style>
