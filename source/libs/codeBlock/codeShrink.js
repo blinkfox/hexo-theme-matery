@@ -2,12 +2,9 @@ $(function () {
    /**
    * 代碼收縮
    */
-  var highlight_shrink = true
-  if (highlight_shrink == 'true') {
-    var $code_expand = $('<i class="fas fa-angle-up code-expand code-closed" aria-hidden="true"></i>')
-  } else {
-    var $code_expand = $('<i class="fas fa-angle-up code-expand" aria-hidden="true"></i>')
-  }
+
+  var $code_expand = $('<i class="fas fa-angle-up code-expand" aria-hidden="true"></i>')
+ 
   $('.code-area').prepend($code_expand)
   $('.code-expand').on('click', function () {
     if ($(this).hasClass('code-closed')) {
