@@ -138,41 +138,7 @@ $(function () {
             $backTop.slideDown(300);
         }
     });
-    
-    /**
-     * 代码复制按钮
-     * Add copy icon
-     */
-    $('.line-numbers').wrap('<div class="code-area" style="position: relative"></div>')
-    var $copyIcon = $('<i class="fas fa-copy" title="复制代码" style="position: absolute; top: 0.7rem; right: 10px; z-index: 1; filter: invert(50%); cursor: pointer;" aria-hidden="true"></i>')
-    $('.code-area').prepend($copyIcon)
-    new ClipboardJS('.fa-copy', {
-        target: function(trigger) {
-            return trigger.nextElementSibling;
-        }
-    })
-
-    /**
-   * 代码框语言识别
-   */
-    var $highlight_lang = $('<div class="code_lang" style="position: absolute; top: 0.4rem; right: 30px; font-weight: bold; z-index: 1; filter: invert(50%); cursor: pointer;"></div>')
-    $('pre').after($highlight_lang)
-    var lang_name_index
-    var lang_name
-    $('pre').each(function () {
-      lang_name_index = lang_name = $('pre code').attr('class').split('-')[1];
-      if (lang_name_index == 'js')
-        lang_name = 'javascript'
-      if (lang_name_index == 'md')
-        lang_name = 'markdown'
-      if (lang_name_index == 'plain')
-        lang_name = 'code'
-      if (lang_name_index == 'py')
-        lang_name = 'python'
-
-      $('pre').siblings(".code_lang").text(lang_name)
-    })
-
+    	
 	$(".nav-menu>li").hover(function(){
 		$(this).children('ul').stop(true,true).show();
 		 $(this).addClass('nav-show').siblings('li').removeClass('nav-show');
@@ -183,13 +149,13 @@ $(function () {
 	})
 	
     $('.m-nav-item>a').on('click',function(){
-        if ($(this).next('ul').css('display') == "none") {
-            $('.m-nav-item').children('ul').slideUp(300);
-            $(this).next('ul').slideDown(100);
-            $(this).parent('li').addClass('m-nav-show').siblings('li').removeClass('m-nav-show');
-        }else{
-            $(this).next('ul').slideUp(100);
-            $('.m-nav-item.m-nav-show').removeClass('m-nav-show');
-        }
+            if ($(this).next('ul').css('display') == "none") {
+                $('.m-nav-item').children('ul').slideUp(300);
+                $(this).next('ul').slideDown(100);
+                $(this).parent('li').addClass('m-nav-show').siblings('li').removeClass('m-nav-show');
+            }else{
+                $(this).next('ul').slideUp(100);
+                $('.m-nav-item.m-nav-show').removeClass('m-nav-show');
+            }
     });
 });
