@@ -1,17 +1,14 @@
 $(function () {
     /**
-   * 代码框语言识别
-   */
-  var $highlight_lang = $('<div class="code_lang" title="代码语言"></div>')
-  $('pre').before($highlight_lang)
-  var lang_name
-  $('pre').each(function () {
-    lang_name = $('code').attr('class').split('-')[1];
-
-    // 首字母大写
-    lang_name = lang_name.slice(0, 1).toUpperCase() + lang_name.slice(1);
-
-    $('pre').siblings(".code_lang").text(lang_name)
-  })
-
+     * 代码复制按钮
+     * Add copy icon
+     */
+    $('.line-numbers').wrap('<div class="code-area" style="position: relative"></div>')
+    var $copyIcon = $('<i class="fas fa-copy code_copy" title="复制代码" aria-hidden="true"></i>')
+    $('.code-area').prepend($copyIcon)
+    new ClipboardJS('.fa-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling;
+        }
+    })
 });
