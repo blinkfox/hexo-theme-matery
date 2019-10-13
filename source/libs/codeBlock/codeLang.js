@@ -1,5 +1,5 @@
 $(function () {
-    /**
+  /**
    * 代码框语言识别
    */
   var $highlight_lang = $('<div class="code_lang" title="代码语言"></div>')
@@ -13,5 +13,4 @@ $(function () {
 
     $('pre').siblings(".code_lang").text(lang_name)
   })
-
 });
