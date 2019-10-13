@@ -107,6 +107,27 @@ pre {
     tab-size: 4;
 }
 
+pre::before {
+    content: "";
+    height: 16px;
+    margin-bottom: 0;
+    display: block;
+}
+
+pre::after {
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+
 code {
     padding: 1px 5px;
     font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
