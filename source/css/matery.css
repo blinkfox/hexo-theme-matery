@@ -137,6 +137,42 @@ code {
     border-radius: 2px;
 }
 
+.code_copy {
+    position: absolute;
+    top: 0.7rem;
+    right: 10px;
+    z-index: 1;
+    filter: invert(50%);
+    cursor: pointer;
+}
+
+.code_lang {
+    position: absolute;
+    top: 0.35rem;
+    right: 30px;
+    font-weight: bold;
+    z-index: 1;
+    filter: invert(50%);
+    cursor: pointer;
+} 
+
+.code-expand {
+    position: absolute;
+    top: 5px;
+    right: 50px;
+    filter: invert(50%);
+    padding: 7px 10px;
+    z-index: 1;
+    cursor: pointer;
+    transition: all .3s;
+    transform: rotate(0deg);
+}
+
+.code-closed {
+    transform: rotate(-180deg) !important;
+    transition: all .3s;
+}
+
 pre code {
     padding: 0;
     color: #e8eaf6;
