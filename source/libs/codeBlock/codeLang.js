@@ -17,6 +17,6 @@ $(function () {
     if (lang_name_index == 'py')
       lang_name = 'python'
 
-    $('pre').siblings(".code_lang").text(lang_name)
+    $('pre').siblings(".code_lang").text(lang_name.toUpperCase())
   })
 });
