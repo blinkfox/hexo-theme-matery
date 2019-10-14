@@ -3,7 +3,7 @@
 $(function () {
   var $highlight_lang = $('<div class="code_lang" title="代码语言"></div>')
 
-  $('pre').before($highlight_lang)
+  $('pre').after($highlight_lang)
   $('pre').each(function () {
     var lang_name = $('pre code').attr('class').split('-')[1];
 
