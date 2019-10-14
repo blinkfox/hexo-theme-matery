@@ -140,7 +140,7 @@ code {
 .code_copy {
     position: absolute;
     top: 0.7rem;
-    right: 10px;
+    right: 25px;
     z-index: 1;
     filter: invert(50%);
     cursor: pointer;
@@ -149,7 +149,7 @@ code {
 .code_lang {
     position: absolute;
     top: 0.35rem;
-    right: 30px;
+    right: 46px;
     font-weight: bold;
     z-index: 1;
     filter: invert(50%);
@@ -158,8 +158,8 @@ code {
 
 .code-expand {
     position: absolute;
-    top: 5px;
-    right: 50px;
+    top: 4px;
+    right: 0px;
     filter: invert(50%);
     padding: 7px 10px;
     z-index: 1;
