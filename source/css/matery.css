@@ -102,8 +102,17 @@ blockquote {
     border-right-width: 0px !important;
 }
 
-pre {
+.line-numbers {
     padding: 1.5rem 1.5rem 1.5rem 3.3rem !important;
+    margin: 1rem 0 !important;
+    background: #272822;
+    overflow: auto;
+    border-radius: 0.35rem;
+    tab-size: 4;
+}
+
+pre {
+    padding: 1.5rem !important;
     margin: 1rem 0 !important;
     background: #272822;
     overflow: auto;
