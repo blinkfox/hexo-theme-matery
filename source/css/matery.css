@@ -161,8 +161,9 @@ code {
 
 .code_lang {
     position: absolute;
-    top: 0.35rem;
+    top: 1.2rem;
     right: 46px;
+    line-height: 0;
     font-weight: bold;
     font-family: normal;
     z-index: 1;
