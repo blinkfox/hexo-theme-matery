@@ -141,11 +141,20 @@
 </script>
 <% } %>
 
-<!-- 代码块复制功能 -->
-<% if (theme.code.copy) { %>
-<script type="text/javascript" src="<%- theme.libs.js.clipboard %>"></script>
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<!-- 代码块功能依赖 -->
+<% if (theme.code.lang || theme.code.copy || theme.code.shrink) { %>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<% } %>
+
+<!-- 代码语言 -->
+<% if (theme.code.lang) { %>
 <script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+<% } %>
+    
+<!-- 代码块复制 -->
+<% if (theme.code.copy) { %>
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="<%- theme.libs.js.clipboard %>"></script>
 <% } %>
 
 <!-- 代码块收缩 -->
@@ -154,10 +163,8 @@
 <% } %>
 
 <!-- 代码块折行 -->
-<style type="text/css">
 <% if (!theme.code.break) { %>
-code[class*="language-"], pre[class*="language-"] {
-    white-space: pre !important;
-}
-<% } %>
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
 </style>
+<% } %>
