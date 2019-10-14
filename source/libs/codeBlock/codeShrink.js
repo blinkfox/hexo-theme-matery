@@ -1,9 +1,9 @@
-// 代码框收缩
+// 代码块收缩
 
 $(function () {
-  var $code_expand = $('<i class="fas fa-angle-up code-expand" aria-hidden="true"></i>')
+  var $code_expand = $('<i class="fas fa-angle-up code-expand" aria-hidden="true"></i>');
 
-  $('.code-area').prepend($code_expand)
+  $('.code-area').prepend($code_expand);
   $('.code-expand').on('click', function () {
     if ($(this).parent().hasClass('code-closed')) {
       $(this).siblings('pre').find('code').show();
@@ -12,5 +12,5 @@ $(function () {
       $(this).siblings('pre').find('code').hide();
       $(this).parent().addClass('code-closed');
     }
-  })
+  });
 });
