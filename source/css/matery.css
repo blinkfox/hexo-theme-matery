@@ -164,6 +164,7 @@ code {
     top: 0.35rem;
     right: 46px;
     font-weight: bold;
+    font-family: normal;
     z-index: 1;
     filter: invert(50%);
     cursor: pointer;
