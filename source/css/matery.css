@@ -168,9 +168,13 @@ code {
     transform: rotate(0deg);
 }
 
-.code-closed {
+.code-closed .code-expand {
     transform: rotate(-180deg) !important;
     transition: all .3s;
+}
+
+.code-closed pre::before {
+    height: 0px;
 }
 
 pre code {
