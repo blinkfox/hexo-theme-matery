@@ -9,7 +9,7 @@ $(function () {
 
     if (!code_language) {
       return true;
-    }
+    };
     var lang_name = code_language.replace("line-numbers", "").trim().replace("language-", "").trim();
 
     // 首字母大写
