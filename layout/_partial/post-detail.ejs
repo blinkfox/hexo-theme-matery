@@ -69,13 +69,31 @@
             </div>
             <hr/>
 
-            <% if (theme.reward && theme.reward.enable) { %>
-            <%- partial('_partial/reward') %>
-            <% } %>
-
-            <%- partial('_partial/share') %>
-
             <%- partial('_partial/reprint-statement') %>
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    <% if (page.tags && page.tags.length) { %>
+                        <div class="article-tag">
+                            <% page.tags.forEach(function(tag) { %>
+                                <a href="<%- url_for(tag.path) %>">
+                                    <span class="chip bg-color"><%= tag.name %></span>
+                                </a>
+                            <% }); %>
+                        </div>
+                    <% } else { %>
+                        <div class="article-tag">
+                            <span class="chip bg-color"><%- __("notag")  %></span>
+                        </div>
+                    <% } %>
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <%- partial('_partial/share') %>
+                </div>
+            </div>
+            <% if (theme.reward && theme.reward.enable) { %>
+                <%- partial('_partial/reward') %>
+            <% } %>
         </div>
     </div>
 
