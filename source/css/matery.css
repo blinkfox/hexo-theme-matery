@@ -926,15 +926,11 @@ article .article-tags .chip {
     margin-bottom: -5px;
 }
 
-#artDetail .article-tag {
-    float: left;
-}
-
 #artDetail .article-tag .chip {
     font-size: 1rem;
     font-weight: 400;
     height: 25px;
-    line-height: 25px;
+    line-height: 24px;
     color: #fff;
     border-radius: 15px;
     margin-right: 5px;
@@ -1014,6 +1010,10 @@ article .article-tags .chip {
 
 #artDetail .reprint {
     margin: 15px 0 5px 0;
+    margin-bottom: 0.4rem;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid #eee;
+    line-height: 2;
 }
 
 #artDetail .reprint .reprint-tip {
@@ -1113,14 +1113,9 @@ table tr:nth-child(2n), thead {
     visibility: visible;
 }
 
-#article-share .social-share {
-    text-align: center;
-    margin: 30px 0;
-}
-
 @media only screen and (min-width: 600px) {
     #article-share .social-share a {
-        margin-right: 15px !important;
+        margin-left: 15px !important;
     }
 }
 

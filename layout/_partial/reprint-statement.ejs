@@ -1,163 +1,188 @@
-<%
-let reprintPolicyEnabled = theme.reprint && theme.reprint.enable
-let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
-%>
-<% if (reprintPolicyEnabled) { %>
-    <div class="reprint" id="reprint-statement">
-        <p class="reprint-tip">
-            <i class="fas fa-exclamation-triangle"></i>&nbsp;&nbsp;
-            <span><%= __('reprint') %></span>
-        </p>
-        <% if (reprintPolicy === 'cc_by') { %>
-            <div class="center-align">
-                <a rel="license" href="<%= __('cc_by_url') %>" target="_blank">
-                    <img alt=""
-                         style="border-width:0"
-                         src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
-                </a>
+<!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    <% if (page.tags && page.tags.length) { %>
+                    <div class="article-tag">
+                        <% page.tags.forEach(function(tag) { %>
+                            <a href="<%- url_for(tag.path) %>">
+                                <span class="chip bg-color"><%= tag.name %></span>
+                            </a>
+                        <% }); %>
+                    </div>
+                    <% } else { %>
+                          <div class="article-tag">
+                            <span class="chip bg-color"><%- __("notag")  %></span>
+                          </div>
+                    <% } %>
+                </div>
+                <div class="col s5 right-align">
+                    <% if (page.categories && page.categories.length > 0) { %>
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        <% page.categories.forEach(category => { %>
+                            <a href="<%- url_for(category.path) %>" class="post-category">
+                                <%- category.name %>
+                            </a>
+                        <% }); %>
+                    </div>
+                    <% } %>
+                </div>
             </div>
-            <br/>
-            <a  href="<%- url_for(page.path) %>">
-                    《<%= page.title %>》
-            </a> <%= __('by') %>
-            <a href="<%- config.url %>">
-                <%- page.author || config.author %>
-            </a> <%= __('under') %>
-            <a rel="license" href="<%= __('cc_by_url') %>" target="_blank">
-                <%= __('cc_by_name') %>
-            </a><%= __('licensed') %>
-        <% } else if (reprintPolicy === 'cc_by_nd') { %>
-            <div class="center-align">
-                <a rel="license" href="<%= __('cc_by_nd_url') %>" target="_blank">
-                    <img alt="<%= __('cc') %>"
-                         style="border-width:0"
-                         src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png"/>
-                </a>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i><%- __('publishDate') %>:&nbsp;&nbsp;
+                    <%- date(page.date, 'YYYY-MM-DD') %>
+                </div>
+
+                <% if (theme.wordCount.enable) { %>
+                    <% if (theme.wordCount.postWordCount) { %>
+                    <div class="info-break-policy">
+                        <i class="far fa-file-word fa-fw"></i><%- __('wordCount') %>:&nbsp;&nbsp;
+                        <%= wordcount(page.content) %>
+                    </div>
+                    <% } %>
+
+                    <% if (theme.wordCount.min2read) { %>
+                    <div class="info-break-policy">
+                        <i class="far fa-clock fa-fw"></i><%- __('readTimes') %>:&nbsp;&nbsp;
+                        <%= min2read(page.content) %> <%= __('Minutes') %>
+                    </div>
+                    <% } %>
+                <% } %>
+				
+				<% if (theme.busuanziStatistics && theme.busuanziStatistics.enable) { %>
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i><%- __('readCount') %>:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				<% } %>
             </div>
-            <br/>
-            <a  href="<%- url_for(page.path) %>">
-                《<%= page.title %>》
-            </a> <%= __('by') %>
-            <a href="<%- config.url %>">
-                <%- page.author || config.author %>
-            </a> <%= __('under') %>
-            <a rel="license" href="<%= __('cc_by_url') %>" target="_blank">
-                <%= __('cc_by_name') %>
-            </a><%= __('licensed') %>
-        <% } else if (reprintPolicy === 'cc_by_sa') { %>
-            <div class="center-align">
-                <a rel="license" href="<%= __('cc_by_sa_url') %>" target="_blank">
-                    <img alt="<%= __('cc') %>"
-                         style="border-width:0"
-                         src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/>
-                </a>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <%- page.content %>
             </div>
-            <br/>
-            <a  href="<%- url_for(page.path) %>">
-                《<%= page.title %>》
-            </a> <%= __('by') %>
-            <a href="<%- config.url %>">
-                <%- page.author || config.author %>
-            </a> <%= __('under') %>
-            <a rel="license" href="<%= __('cc_by_url') %>" target="_blank">
-                <%= __('cc_by_name') %>
-            </a><%= __('licensed') %>
-        <% } else if (reprintPolicy === 'cc_by_nc') { %>
-            <div class="center-align">
-                <a rel="license" href="<%= __('cc_by_nc_url') %>" target="_blank">
-                    <img alt="<%= __('cc') %>"
-                         style="border-width:0"
-                         src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"/>
-                </a>
+            <hr/>
+
+            <%- partial('_partial/reprint-statement') %>
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    <% if (page.tags && page.tags.length) { %>
+                        <div class="article-tag">
+                            <% page.tags.forEach(function(tag) { %>
+                                <a href="<%- url_for(tag.path) %>">
+                                    <span class="chip bg-color" style="color: #71bbb6; background: #fff; border: 1px solid;"><%= tag.name %></span>
+                                </a>
+                            <% }); %>
+                        </div>
+                    <% } else { %>
+                        <div class="article-tag">
+                            <span class="chip bg-color" style="color: #71bbb6; background: #fff; border: 1px solid;><%- __("notag")  %></span>
+                        </div>
+                    <% } %>
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <%- partial('_partial/share') %>
+                </div>
             </div>
-            <br/>
-            <a  href="<%- url_for(page.path) %>">
-                《<%= page.title %>》
-            </a> <%= __('by') %>
-            <a href="<%- config.url %>">
-                <%- page.author || config.author %>
-            </a> <%= __('under') %>
-            <a rel="license" href="<%= __('cc_by_url') %>" target="_blank">
-                <%= __('cc_by_name') %>
-            </a><%= __('licensed') %>
-        <% } else if (reprintPolicy === 'cc_by_nc_nd') { %>
-            <div class="center-align">
-                <a rel="license" href="<%= __('cc_by_nc_nd_url') %>" target="_blank">
-                    <img alt="<%= __('cc') %>"
-                         style="border-width:0"
-                         src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png"/>
-                </a>
-            </div>
-            <br/>
-            <a  href="<%- url_for(page.path) %>">
-                《<%= page.title %>》
-            </a> <%= __('by') %>
-            <a href="<%- config.url %>">
-                <%- page.author || config.author %>
-            </a> <%= __('under') %>
-            <a rel="license" href="<%= __('cc_by_url') %>" target="_blank">
-                <%= __('cc_by_name') %>
-            </a><%= __('licensed') %>
-        <% } else if (reprintPolicy === 'cc_by_nc_sa') { %>
-            <div class="center-align">
-                <a rel="license" href="<%= __('cc_by_nc_sa_url') %>" target="_blank">
-                    <img alt="<%= __('cc') %>"
-                         style="border-width:0"
-                         src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/>
-                </a>
-            </div>
-            <br/>
-            <a  href="<%- url_for(page.path) %>">
-                《<%= page.title %>》
-            </a> <%= __('by') %>
-            <a href="<%- config.url %>">
-                <%- page.author || config.author %>
-            </a> <%= __('under') %>
-            <a rel="license" href="<%= __('cc_by_url') %>" target="_blank">
-                <%= __('cc_by_name') %>
-            </a><%= __('licensed') %>
-        <% } else if (reprintPolicy === 'cc0') { %>
-            <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
-            <div class="center-align">
-                <a rel="license"
-                   href="<%= __('cc_0_url') %>" target="_blank">
-                    <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0"/>
-                </a>
-            </div>
-            <br/>
-            <%= __('toTheExtentPossibleUnderLaw') %>
-            <a href="<%- config.url %>">
-                <%- page.author || config.author %>
-            </a>
-            <%= __('hasWaivedAllCopyrightAndRelatedOrNeighboringRightsTo') %>
-            <a  href="<%- url_for(page.path) %>">
-                《<%= page.title %>》
-            </a>
-            <%= __('workPublishedFrom') %>
-            <span property="vcard:Country" datatype="dct:ISO3166"
-                  content="<%= __('cc_0_content') %>" about="<%- url_for(page.path) %>">
-                    <%= __('cc_0_country') %>
-            </span>
-            </p>
-        <% } else if (reprintPolicy === 'noreprint') { %>
-            <span>
-                <%= __('noreprint') %>
-            </span>
-        <% } else if (reprintPolicy === 'pay') { %>
-            <span>
-                <%= __('payreprint') %>
-            </span>
-        <% } %>
+            <% if (theme.reward && theme.reward.enable) { %>
+                <%- partial('_partial/reward') %>
+            <% } %>
+        </div>
     </div>
 
-    <script async defer>
-      document.addEventListener("copy", function (e) {
-        let toastHTML = '<span><%= __('pleaseFollowReprintPolicy') %></span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller"><%= __('checkPolicy') %></a>';
-        M.toast({html: toastHTML})
-      });
+    <% if (theme.gitalk && theme.gitalk.enable) { %>
+        <%- partial('_partial/gitalk') %>
+    <% } %>
 
-      function navToReprintStatement() {
-        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
-      }
-    </script>
+    <% if (theme.gitment.enable) { %>
+        <%- partial('_partial/gitment') %>
+    <% } %>
+
+    <% if (theme.disqus.enable) { %>
+        <%- partial('_partial/disqus') %>
+    <% } %>
+
+    <% if (theme.livere && theme.livere.enable) { %>
+    <%- partial('_partial/livere') %>
+    <% } %>
+
+    <% if (theme.valine && theme.valine.enable) { %>
+        <%- partial('_partial/valine') %>
+    <% } %>
+
+    <%- partial('_partial/prev-next') %>
+</div>
+
+<% if (theme.copyright.enable) { %>
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('<%- theme.copyright.minCharNumber %>')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '<%- __("from")  %>: <%- config.title %><br />'
+            + '<%- __("author")  %>: <%- config.author %><br />'
+            + '<%- __("link")  %>: <a href="' + url + '">' + url + '</a><br />'
+            + '<%- theme.copyright.description %>';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+<% } %>
+
+<!-- 代码块功能依赖 -->
+<% if (theme.code.lang || theme.code.copy || theme.code.shrink) { %>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<% } %>
+
+<!-- 代码语言 -->
+<% if (theme.code.lang) { %>
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+<% } %>
+    
+<!-- 代码块复制 -->
+<% if (theme.code.copy) { %>
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="<%- theme.libs.js.clipboard %>"></script>
+<% } %>
+
+<!-- 代码块收缩 -->
+<% if (theme.code.shrink) { %>
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+<% } %>
+
+<!-- 代码块折行 -->
+<% if (!theme.code.break) { %>
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
 <% } %>

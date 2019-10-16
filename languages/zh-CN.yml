@@ -16,7 +16,6 @@ readTimes: 阅读时长
 Minutes: 分
 readMore: 阅读更多
 toc: 目录
-reprint: 转载规则
 curr: 本篇
 prev: 上一篇
 next: 下一篇
@@ -39,26 +38,25 @@ myProjects: 我的项目
 mySkills: 我的技能
 otherSkills: 其他技能
 gallery: 相册
-from: 来源
-author: 作者
-link: 链接
 notag: 无标签
-cc: 知识共享许可协议
-by: 由
-under: 采用
-licensed: 进行许可。
+from: 来源
+reprint: 版权声明
+author: 文章作者
+link: 文章链接
+use: 本博客所有文章除特別声明外，均采用
+licensed: 许可协议。转载请注明来源
 cc_by_url: https://creativecommons.org/licenses/by/4.0/deed.zh
-cc_by_name: 知识共享署名 4.0 国际许可协议
+cc_by_name: CC BY 4.0
 cc_by_nd_url: https://creativecommons.org/licenses/by-nd/4.0/deed.zh
-cc_by_nd_name: 知识共享署名-禁止演绎 4.0 国际许可协议
+cc_by_nd_name: CC BY-ND 4.0
 cc_by_sa_url: https://creativecommons.org/licenses/by-sa/4.0/deed.zh
-cc_by_sa_name: 知识共享署名-相同方式共享 4.0 国际许可协议
+cc_by_sa_name: CC BY-SA 4.0
 cc_by_nc_url: https://creativecommons.org/licenses/by-nc/4.0/deed.zh
-cc_by_nc_name: 知识共享署名-非商业性使用 4.0 国际许可协议
+cc_by_nc_name: CC BY-NC 4.0
 cc_by_nc_nd_url: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh
-cc_by_nc_nd_name: 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议
+cc_by_nc_nd_name: CC BY-NC-ND 4.0
 cc_by_nc_sa_url: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh
-cc_by_nc_sa_name: 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议
+cc_by_nc_sa_name: CC BY-NC-SA 4.0
 cc_0_url: https://creativecommons.org/publicdomain/zero/1.0/deed.zh
 toTheExtentPossibleUnderLaw: 在法律允许的范围内，
 hasWaivedAllCopyrightAndRelatedOrNeighboringRightsTo: 已放弃此作品的所有版权、相关或相邻的权利
