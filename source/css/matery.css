@@ -1013,6 +1013,7 @@ article .article-tags .chip {
     margin-bottom: 0.4rem;
     padding: 0.5rem 0.8rem;
     border: 1px solid #eee;
+    line-height: 2;
 }
 
 #artDetail .reprint .reprint-tip {
