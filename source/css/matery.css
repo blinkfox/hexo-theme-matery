@@ -1033,6 +1033,11 @@ article .article-tags .chip {
     padding: 0.5rem 0.8rem;
     border: 1px solid #eee;
     line-height: 2;
+    transition: box-shadow 0.3s ease-in-out
+}
+
+#artDetail .reprint:hover {
+    box-shadow: 0 0 10px 0 rgba(232, 237, 250, .6), 0 4px 8px 0 rgba(232, 237, 250, .5)
 }
 
 #artDetail .reprint .reprint-tip {
