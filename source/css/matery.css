@@ -937,6 +937,25 @@ article .article-tags .chip {
     margin-bottom: 2px;
 }
 
+#artDetail .tag_share .article-tag .chip {
+    font-size: 1rem;
+    font-weight: 400;
+    height: 25px;
+    line-height: 23px;
+    border-radius: 15px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    color: #42b983;
+    background: #fff;
+    border: 1px solid;
+    transition: all 0.6s ease-in-out;
+}
+
+#artDetail .tag_share .article-tag .chip:hover {
+    color: #fff;
+    background: #42b983;
+}
+
 #artDetail .post-cate {
     float: right;
     color: #42b983;
@@ -1014,6 +1033,11 @@ article .article-tags .chip {
     padding: 0.5rem 0.8rem;
     border: 1px solid #eee;
     line-height: 2;
+    transition: box-shadow 0.3s ease-in-out
+}
+
+#artDetail .reprint:hover {
+    box-shadow: 0 0 10px 0 rgba(232, 237, 250, .6), 0 4px 8px 0 rgba(232, 237, 250, .5)
 }
 
 #artDetail .reprint .reprint-tip {
