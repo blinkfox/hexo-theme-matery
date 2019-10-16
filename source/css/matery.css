@@ -937,6 +937,25 @@ article .article-tags .chip {
     margin-bottom: 2px;
 }
 
+#artDetail .tag_share .article-tag .chip {
+    font-size: 1rem;
+    font-weight: 400;
+    height: 25px;
+    line-height: 24px;
+    border-radius: 15px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    color: #71bbb6;
+    background: #fff;
+    border: 1px solid;
+    transition: all 0.6s ease-in-out;
+}
+
+#artDetail .tag_share .article-tag .chip:hover {
+    color: #fff;
+    background: #71bbb6;
+}
+
 #artDetail .post-cate {
     float: right;
     color: #42b983;
