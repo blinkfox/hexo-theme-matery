@@ -64,6 +64,7 @@ workPublishedFrom: ". This work is published from:"
 cc_0_country: United States.
 cc_0_content: US
 noreprint: This article is not allowed to reprint.
-payreprint: Please contact the author to pay for reprinting.
+paycontact: Please contact the author
+payreprint: to pay for reprinting.
 pleaseFollowReprintPolicy: Copied successfully, please follow the reprint policy of this article
 checkPolicy: more
