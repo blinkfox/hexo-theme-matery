@@ -7,7 +7,9 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
         <% if (reprintPolicy === 'cc_by') { %>
             <div class="reprint__author">
                 <span class="reprint-meta" style="font-weight: bold;">
-                    <%= __('author') %>:
+                    <i class="fas fa-user">
+                        <%= __('author') %>:
+                    </i>
                 </span>
                 <span class="reprint-info">
                     <a href="<%- config.url %>" rel="external nofollow noreferrer"><%- page.author || config.author %></a>
@@ -15,7 +17,9 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
             </div>
             <div class="reprint__type">
                 <span class="reprint-meta" style="font-weight: bold;">
-                    <%= __('link') %>:
+                    <i class="fas fa-link">
+                        <%= __('link') %>:
+                    </i>
                 </span>
                 <span class="reprint-info">
                     <a href="<%- config.url %><%- url_for(page.path) %>"><%- config.url %><%- url_for(page.path) %></a>
@@ -23,7 +27,9 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
             </div>
             <div class="reprint__notice">
                 <span class="reprint-meta" style="font-weight: bold;">
-                    <%= __('reprint') %>:
+                    <i class="fas fa-copyright">
+                        <%= __('reprint') %>:
+                    </i>
                 </span>
                 <span class="reprint-info">
                     <%= __('use') %>
@@ -36,7 +42,9 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
         <% } else if (reprintPolicy === 'cc_by_nd') { %>
             <div class="reprint__author">
                 <span class="reprint-meta" style="font-weight: bold;">
-                    <%= __('author') %>:
+                    <i class="fas fa-user">
+                        <%= __('author') %>:
+                    </i>
                 </span>
                 <span class="reprint-info">
                     <a href="<%- config.url %>" rel="external nofollow noreferrer"><%- page.author || config.author %></a>
@@ -44,7 +52,9 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
             </div>
             <div class="reprint__type">
                 <span class="reprint-meta" style="font-weight: bold;">
-                    <%= __('link') %>:
+                    <i class="fas fa-link">
+                        <%= __('link') %>:
+                    </i>
                 </span>
                 <span class="reprint-info">
                     <a href="<%- config.url %><%- url_for(page.path) %>"><%- config.url %><%- url_for(page.path) %></a>
@@ -52,7 +62,9 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
             </div>
             <div class="reprint__notice">
                 <span class="reprint-meta" style="font-weight: bold;">
-                    <%= __('reprint') %>:
+                    <i class="fas fa-copyright">
+                        <%= __('reprint') %>:
+                    </i>
                 </span>
                 <span class="reprint-info">
                     <%= __('use') %>
@@ -65,7 +77,9 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
         <% } else if (reprintPolicy === 'cc_by_sa') { %>
             <div class="reprint__author">
                 <span class="reprint-meta" style="font-weight: bold;">
-                    <%= __('author') %>:
+                    <i class="fas fa-user">
+                        <%= __('author') %>:
+                    </i>
                 </span>
                 <span class="reprint-info">
                     <a href="<%- config.url %>" rel="external nofollow noreferrer"><%- page.author || config.author %></a>
@@ -73,7 +87,9 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
             </div>
             <div class="reprint__type">
                 <span class="reprint-meta" style="font-weight: bold;">
-                <%= __('link') %>:
+                    <i class="fas fa-link">
+                        <%= __('link') %>:
+                    </i>
                 </span>
                 <span class="reprint-info">
                     <a href="<%- config.url %><%- url_for(page.path) %>"><%- config.url %><%- url_for(page.path) %></a>
@@ -81,7 +97,9 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
             </div>
             <div class="reprint__notice">
                 <span class="reprint-meta" style="font-weight: bold;">
-                    <%= __('reprint') %>:
+                    <i class="fas fa-copyright">
+                        <%= __('reprint') %>:
+                    </i>
                 </span>
                 <span class="reprint-info">
                     <%= __('use') %>
@@ -94,7 +112,9 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
         <% } else if (reprintPolicy === 'cc_by_nc') { %>
             <div class="reprint__author">
                 <span class="reprint-meta" style="font-weight: bold;">
-                    <%= __('author') %>:
+                    <i class="fas fa-user">
+                        <%= __('author') %>:
+                    </i>
                 </span>
                 <span class="reprint-info">
                     <a href="<%- config.url %>" rel="external nofollow noreferrer"><%- page.author || config.author %></a>
@@ -102,7 +122,9 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
             </div>
             <div class="reprint__type">
                 <span class="reprint-meta" style="font-weight: bold;">
-                    <%= __('link') %>:
+                    <i class="fas fa-link">
+                        <%= __('link') %>:
+                    </i>
                 </span>
                 <span class="reprint-info">
                     <a href="<%- config.url %><%- url_for(page.path) %>"><%- config.url %><%- url_for(page.path) %></a>
@@ -110,7 +132,9 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
             </div>
             <div class="reprint__notice">
                 <span class="reprint-meta" style="font-weight: bold;">
-                    <%= __('reprint') %>:
+                    <i class="fas fa-copyright">
+                        <%= __('reprint') %>:
+                    </i>
                 </span>
                 <span class="reprint-info">
                     <%= __('use') %>
@@ -123,7 +147,9 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
         <% } else if (reprintPolicy === 'cc_by_nc_nd') { %>
             <div class="reprint__author">
                 <span class="reprint-meta" style="font-weight: bold;">
-                    <%= __('author') %>:
+                    <i class="fas fa-user">
+                        <%= __('author') %>:
+                    </i>
                 </span>
                 <span class="reprint-info">
                     <a href="<%- config.url %>" rel="external nofollow noreferrer"><%- page.author || config.author %></a>
@@ -131,7 +157,9 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
             </div>
             <div class="reprint__type">
                 <span class="reprint-meta" style="font-weight: bold;">
-                    <%= __('link') %>:
+                    <i class="fas fa-link">
+                        <%= __('link') %>:
+                    </i>
                     </span>
                 <span class="reprint-info">
                     <a href="<%- config.url %><%- url_for(page.path) %>"><%- config.url %><%- url_for(page.path) %></a>
@@ -139,7 +167,9 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
             </div>
             <div class="reprint__notice">
                 <span class="reprint-meta" style="font-weight: bold;">
-                    <%= __('reprint') %>:
+                    <i class="fas fa-copyright">
+                        <%= __('reprint') %>:
+                    </i>
                 </span>
                 <span class="reprint-info">
                     <%= __('use') %>
@@ -152,7 +182,9 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
         <% } else if (reprintPolicy === 'cc_by_nc_sa') { %>
             <div class="reprint__author">
                 <span class="reprint-meta" style="font-weight: bold;">
-                    <%= __('author') %>:
+                    <i class="fas fa-user">
+                        <%= __('author') %>:
+                    </i>
                 </span>
                 <span class="reprint-info">
                     <a href="<%- config.url %>" rel="external nofollow noreferrer"><%- page.author || config.author %></a>
@@ -160,7 +192,9 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
             </div>
             <div class="reprint__type">
                 <span class="reprint-meta" style="font-weight: bold;">
-                    <%= __('link') %>:
+                    <i class="fas fa-link">
+                        <%= __('link') %>:
+                    </i>
                 </span>
                 <span class="reprint-info">
                     <a href="<%- config.url %><%- url_for(page.path) %>"><%- config.url %><%- url_for(page.path) %></a>
@@ -168,7 +202,9 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
             </div>
             <div class="reprint__notice">
                 <span class="reprint-meta" style="font-weight: bold;">
-                    <%= __('reprint') %>:
+                    <i class="fas fa-copyright">
+                        <%= __('reprint') %>:
+                    </i>
                 </span>
                 <span class="reprint-info">
                     <%= __('use') %>
@@ -179,6 +215,7 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
                 </span>
             </div>
         <% } else if (reprintPolicy === 'cc0') { %>
+            <i class="fas fa-exclamation-circle"></i>
             <%= __('toTheExtentPossibleUnderLaw') %>
             <a href="<%- config.url %>">
                 <%- page.author || config.author %>
@@ -194,13 +231,17 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
             </span>
             </p>
         <% } else if (reprintPolicy === 'noreprint') { %>
+            <i class="fas fa-exclamation-circle"></i>
             <span>
                 <%= __('noreprint') %>
             </span>
         <% } else if (reprintPolicy === 'pay') { %>
-            <span>
-                <%= __('payreprint') %>
+            <i class="fas fa-exclamation-circle"></i>
+            <%= __('paycontact') %>
+            <span class="reprint-info">
+                <a href="<%- config.url %>" rel="external nofollow noreferrer"><%- page.author || config.author %></a>
             </span>
+            <%= __('payreprint') %>
         <% } %>
     </div>
 
