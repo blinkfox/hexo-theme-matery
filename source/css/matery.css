@@ -159,6 +159,15 @@ code {
     cursor: pointer;
 }
 
+.codecopy_notice {
+    position: absolute;
+    top: 0.7rem;
+    right: 6px;
+    z-index: 1;
+    filter: invert(50%);
+    opacity: 0;
+}
+
 .code_lang {
     position: absolute;
     top: 1.2rem;
