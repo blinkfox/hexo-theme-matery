@@ -120,14 +120,7 @@ pre {
     tab-size: 4;
 }
 
-pre::before {
-    content: "";
-    height: 16px;
-    margin-bottom: 0;
-    display: block;
-}
-
-pre::after {
+.code-area::after {
     content: " ";
     position: absolute;
     border-radius: 50%;
@@ -143,6 +136,7 @@ pre::after {
 
 code {
     padding: 1px 5px;
+    top: 13px !important;
     font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
     font-size: 0.91rem;
     color: #e96900;
