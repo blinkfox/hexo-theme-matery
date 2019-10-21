@@ -1,11 +1,15 @@
 <%
     // get all top posts.
     var topPosts = [];
-    site.posts.forEach(function (post) {
-        if (post.top) {
-            topPosts.push(post);
-        }
-    });
+    if (theme.recommend.useConfig) {
+        topPosts = site.data.recommends;
+    } else {
+        site.posts.forEach(function (post) {
+            if (post.top) {
+                topPosts.push(post);
+            }
+        });
+    }
     var topPostsCount = topPosts.length;
 %>
 
@@ -52,9 +56,13 @@
         <div class="post-card" style="background-image: url('<%- featureImg %>')">
             <div class="post-body">
                 <div class="post-categories">
-                    <% post.categories.forEach(category => { %>
-                    <a href="<%- url_for(category.path) %>" class="category"><%- category.name %></a>
-                    <% }); %>
+                    <% if (theme.recommend.useConfig) { %>
+                        <a href="<%- post.categoryPath %>" class="category"><%- post.categoryName %></a>
+                    <% } else { %>
+                        <% post.categories.forEach(category => { %>
+                            <a href="<%- url_for(category.path) %>" class="category"><%- category.name %></a>
+                        <% }); %>
+                    <% } %>
                 </div>
                 <a href="<%- url_for(post.path) %>">
                     <h3 class="post-title"><%- post.title %></h3>
@@ -90,9 +98,13 @@
         <div class="post-card" style="background-image: url('<%- featureImg %>')">
             <div class="post-body">
                 <div class="post-categories">
-                    <% post.categories.forEach(category => { %>
-                    <a href="<%- url_for(category.path) %>" class="category"><%- category.name %></a>
-                    <% }); %>
+                    <% if (theme.recommend.useConfig) { %>
+                        <a href="<%- post.categoryPath %>" class="category"><%- post.categoryName %></a>
+                    <% } else { %>
+                        <% post.categories.forEach(category => { %>
+                            <a href="<%- url_for(category.path) %>" class="category"><%- category.name %></a>
+                        <% }); %>
+                    <% } %>
                 </div>
                 <a href="<%- url_for(post.path) %>">
                     <h3 class="post-title"><%- post.title %></h3>

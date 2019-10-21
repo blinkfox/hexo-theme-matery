@@ -1,0 +1,18 @@
+[
+  {
+    "title": "推荐阅读1",
+    "path": "https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md",
+    "img": "https://res.cloudinary.com/liuzhihang/image/upload/v1568885685/feature/2019-09-07-nt6X1A_krvmnd.jpg",
+    "summary": "matery主题使用说明书, 读完之后, 更好的使用主题~~",
+    "categoryPath": "",
+    "categoryName": ""
+  },
+  {
+    "title": "推荐阅读2",
+    "path": "/404.html",
+    "img": "https://res.cloudinary.com/liuzhihang/image/upload/v1571114928/feature/188206_hfdfvm.jpg",
+    "summary": "在业余时间, 上下班地铁时间, 给自己充充电...",
+    "categoryPath": "/categories/分类路径/",
+    "categoryName": "分类名称(可以留空)"
+  }
+]

@@ -52,11 +52,15 @@
 <%
 // get all cover posts.
 var coverPosts = [];
-site.posts.forEach(function (post) {
-    if (post.cover) {
-        coverPosts.push(post);
-    }
-});
+if (theme.cover.useConfig) {
+    coverPosts = site.data.covers;
+} else {
+    site.posts.forEach(function (post) {
+        if (post.cover) {
+            coverPosts.push(post);
+        }
+    });
+}
 var coverPostsCount = coverPosts.length;
 %>
 

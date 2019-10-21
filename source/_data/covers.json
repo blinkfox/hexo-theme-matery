@@ -1,0 +1,20 @@
+[
+  {
+    "title": "轮播文章1",
+    "path": "https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md",
+    "coverImg": "https://res.cloudinary.com/liuzhihang/image/upload/v1568885685/feature/2019-09-07-nt6X1A_krvmnd.jpg",
+    "summary": "path可以使用绝对路径也可以使用相对路径"
+  },
+  {
+    "title": "轮播文章2",
+    "path": "https://liuzhihang.com",
+    "coverImg": "https://res.cloudinary.com/liuzhihang/image/upload/v1568873774/feature/cyber-security.jpg",
+    "summary": "A thousand journey is started by taking the first step."
+  },
+  {
+    "title": "轮播文章3",
+    "path": "/index.html",
+    "coverImg": "https://liuzhihang.com/oss/image/2019-09-11-wallhaven-nk7ypq.jpg",
+    "summary": "这里是轮播文章3的介绍"
+  }
+]
