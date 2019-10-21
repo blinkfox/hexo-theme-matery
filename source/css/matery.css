@@ -1178,18 +1178,15 @@ table tr:nth-child(2n), thead {
 }
 
 .chip-container .chip {
-    margin: 10px 10px;
-    padding: 0 14px;
-    display: inline-block;
-    height: 38px;
-    min-width: 80px;
-    line-height: 39px;
-    font-size: 1rem;
-    font-weight: 500;
-    border-radius: 5px;
-    word-wrap: break-word;
-    cursor: pointer;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, .12);
+  margin: 10px 10px;
+  padding: 19px 14px;
+  display: inline-flex;
+  line-height: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .12);
 }
 
 .chip-container .chip:hover {
