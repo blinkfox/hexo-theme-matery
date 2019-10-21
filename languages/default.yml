@@ -1,51 +1,51 @@
-posts: 文章
-category: 分类
-categories: 分类
-tag: 标签
-tags: 标签
-archives: 归档
-about: 关于
-contact: 留言板
-friends: 友情链接
-startRead: 开始阅读
-recommendedPosts: 推荐文章
-publishDate: 发布日期
-publishDate: 更新日期
-readCount: 阅读次数
-wordCount: 文章字数
-readTimes: 阅读时长
-Minutes: 分
-readMore: 阅读更多
-toc: 目录
-curr: 本篇
-prev: 上一篇
-next: 下一篇
-search: 搜索
-searchTip: 请输入搜索的关键字
-postTagTitle: 文章标签
-postCategoryTitle: 文章分类
-categoryRadarTitle: 文章分类雷达图
-categoryNumber: 文章分类数量
-categoryEmptyTip: 你目前还没有对文章进行分类.
-postCharts: 文章统计图
-postPublishChart: 文章发布统计图
-categoriesChart: 文章分类统计图
-top10TagsChart: TOP10 标签统计图
-postsNumberName: 文章篇数
-maximum: 最大值
-minimum: 最小值
-average: 平均值
-myProjects: 我的项目
-mySkills: 我的技能
-otherSkills: 其他技能
-gallery: 相册
-notag: 无标签
-from: 来源
-reprint: 版权声明
-author: 文章作者
-link: 文章链接
-use: 本博客所有文章除特別声明外，均采用
-licensed: 许可协议。转载请注明来源
+posts: Posts
+category: Category
+categories: Categories
+tag: Tag
+tags: Tags
+archives: Archives
+about: About
+contact: Contact
+friends: Friends
+startRead: Start
+recommendedPosts: Recommended Posts
+publishDate: Publish Date
+updateDate: Update Date
+readCount: Read Count
+wordCount: Word Count
+readTimes: Read Times
+Minutes: Min
+readMore: Read more
+toc: TOC
+curr: Current
+prev: Previous
+next: Next
+search: Search
+searchTip: Please enter a search keyword
+postTagTitle: Post Tags
+postCategoryTitle: Post Categories
+categoryRadarTitle: Post Categories Radar Chart
+categoryNumber: Number of Categories
+categoryEmptyTip: Your posts has no categories information yet.
+postCharts: Post Charts
+postPublishChart: Post Publish Chart
+categoriesChart: Categories Chart
+top10TagsChart: TOP10 Tags Chart
+postsNumberName: Number of posts
+maximum: Maximum
+minimum: Minimum
+average: Average
+myProjects: My Projects
+mySkills: My Skills
+otherSkills: Other Skills
+gallery: Gallery
+notag: No tag
+from: From
+reprint: Reprint policy
+author: Author
+link: Link
+use: All articles in this blog are used except for special statements
+licensed: reprint polocy. If reproduced, please indicate source
 cc_by_url: https://creativecommons.org/licenses/by/4.0/deed.zh
 cc_by_name: CC BY 4.0
 cc_by_nd_url: https://creativecommons.org/licenses/by-nd/4.0/deed.zh
@@ -58,14 +58,14 @@ cc_by_nc_nd_url: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh
 cc_by_nc_nd_name: CC BY-NC-ND 4.0
 cc_by_nc_sa_url: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh
 cc_by_nc_sa_name: CC BY-NC-SA 4.0
-cc_0_url: https://creativecommons.org/publicdomain/zero/1.0/deed.zh
-toTheExtentPossibleUnderLaw: 在法律允许的范围内，
-hasWaivedAllCopyrightAndRelatedOrNeighboringRightsTo: 已放弃此作品的所有版权、相关或相邻的权利
-workPublishedFrom: 。此作品发布在：
-cc_0_country: 中国大陆。
-cc_0_content: CN
-noreprint: 本文不允许转载。
-paycontact: 请联系作者
-payreprint: 付费转载。
-pleaseFollowReprintPolicy: 复制成功，请遵循本文的转载规则
-checkPolicy: 查看
+cc_0_url: https://creativecommons.org/publicdomain/zero/1.0/
+toTheExtentPossibleUnderLaw: To the extent possible under law,
+hasWaivedAllCopyrightAndRelatedOrNeighboringRightsTo: has waived all copyright and related or neighboring rights to
+workPublishedFrom: ". This work is published from:"
+cc_0_country: United States.
+cc_0_content: US
+noreprint: This article is not allowed to reprint.
+paycontact: Please contact the author
+payreprint: to pay for reprinting.
+pleaseFollowReprintPolicy: Copied successfully, please follow the reprint policy of this article
+checkPolicy: more
