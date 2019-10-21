@@ -37,6 +37,13 @@
                     <i class="far fa-calendar-minus fa-fw"></i><%- __('publishDate') %>:&nbsp;&nbsp;
                     <%- date(page.date, 'YYYY-MM-DD') %>
                 </div>
+                
+                <% if (date(page.updated, 'YYYY-MM-DD') != date(page.date, 'YYYY-MM-DD')) { %>
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i><%- __('updateDate') %>:&nbsp;&nbsp;
+                    <%- date(page.updated, 'YYYY-MM-DD') %>
+                </div>
+                <% } %>
 
                 <% if (theme.wordCount.enable) { %>
                     <% if (theme.wordCount.postWordCount) { %>

@@ -1201,6 +1201,8 @@ table tr:nth-child(2n), thead {
     margin-left: 5px;
     margin-right: -2px;
     font-size: 0.5rem;
+    position: relative;
+    top: 1px;
 }
 
 .chip-default .tag-length {
