@@ -170,10 +170,10 @@
         let $mainContent = $('#main-content');
         $('#floating-toc-btn .btn-floating').click(function () {
             if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).slideUp(500);
+                $tocAside.removeClass(expandedClass).hide();
                 $mainContent.removeClass('l9');
             } else {
-                $tocAside.addClass(expandedClass).slideDown(500);
+                $tocAside.addClass(expandedClass).show();
                 $mainContent.addClass('l9');
             }
             fixPostCardWidth('artDetail', 'prenext-posts');

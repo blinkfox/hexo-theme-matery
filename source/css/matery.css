@@ -16,7 +16,7 @@
 /*大屏幕下(桌面类)的样式*/
 @media only screen and (min-width: 993px) {
     .container {
-        width: 85%;
+        width: 90%;
         max-width: 1125px;
     }
 
@@ -382,16 +382,15 @@ header .side-nav .social-link {
     line-height: 45px;
     font-size: 1rem;
     color: #fff;
-    border: 1px solid #fff;
     background-color: transparent;
     border-radius: 30px;
     box-shadow: none;
 }
 
 .cover-btns a:hover {
-    border: 1px solid #f44336;
-    background-color: #f44336;
-    box-shadow: 0 14px 26px -12px rgba(233, 30, 99, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(233, 30, 99, 0.2);
+    border: transparent;
+    background-color: transparent;
+    box-shadow: transparent;
 }
 
 .cover-btns a i {
@@ -399,9 +398,111 @@ header .side-nav .social-link {
     padding-right: 5px;
 }
 
+.scroll-down {
+    background: #333;
+    margin: 100px auto;
+    -webkit-animation: scroll-down 1.5s infinite;
+    -moz-animation: scroll-down 1.5s infinite;
+    -o-animation: scroll-down 1.5s infinite;
+    -ms-animation: scroll-down1.5s infinite;
+    animation: scroll-down 1.5s infinite;
+}
+
+@-moz-keyframes scroll-down {
+    0% {
+        opacity: 0.4;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+        filter: alpha(opacity=40);
+        top: 0;
+    }
+
+    50% {
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+        top: -16px;
+    }
+
+    100% {
+        opacity: 0.4;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+        filter: alpha(opacity=40);
+        top: 0;
+    }
+}
+
+@-webkit-keyframes scroll-down {
+    0% {
+        opacity: 0.4;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+        filter: alpha(opacity=40);
+        top: 0;
+    }
+
+    50% {
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+        top: -16px;
+    }
+
+    100% {
+        opacity: 0.4;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+        filter: alpha(opacity=40);
+        top: 0;
+    }
+}
+
+@-o-keyframes scroll-down {
+    0% {
+        opacity: 0.4;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+        filter: alpha(opacity=40);
+        top: 0;
+    }
+
+    50% {
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+        top: -16px;
+    }
+
+    100% {
+        opacity: 0.4;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+        filter: alpha(opacity=40);
+        top: 0;
+    }
+}
+
+@keyframes scroll-down {
+    0% {
+        opacity: 0.4;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+        filter: alpha(opacity=40);
+        top: 0;
+    }
+
+    50% {
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+        top: -16px;
+    }
+
+    100% {
+        opacity: 0.4;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+        filter: alpha(opacity=40);
+        top: 0;
+    }
+}
+
 .cover-social-link {
-    position: relative;
-    top: 18vh;
+    bottom: 0;
+    width: 100%;
     text-align: center;
 }
 
@@ -453,7 +554,8 @@ header .go-back i {
     animation: rainbow 60s infinite;
 }
 
-.bg-cover:before, .bg-cover:after {
+.bg-cover:before,
+.bg-cover:after {
     position: absolute;
     z-index: 1;
     width: 100%;
@@ -465,19 +567,23 @@ header .go-back i {
 }
 
 .bg-cover .container {
-    position: relative;
+    position: absolute;
+    top: 25%;
     color: #fff;
     z-index: 2;
+    left: 0;
+    right: 0;
 }
 
 .bg-cover .title {
     font-size: 4rem;
     line-height: 1.85em;
-    margin-bottom: 20px;
+    margin-bottom: -20px;
     position: relative;
 }
 
 .bg-cover .description {
+    padding: 5px;
     font-size: 1.25rem;
     line-height: 1.4em;
     color: #eee;
@@ -488,6 +594,7 @@ header .go-back i {
 }
 
 @-webkit-keyframes rainbow {
+
     0%,
     100% {
         background: rgba(156, 39, 176, 0.75);
@@ -495,30 +602,35 @@ header .go-back i {
         background: -moz-linear-gradient(135deg, rgba(156, 39, 176, 0.75) 0%, rgba(156, 39, 176, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(156, 39, 176, 0.75) 0%, rgba(156, 39, 176, 0.65) 100%);
     }
+
     16% {
         background: rgba(132, 13, 121, 0.75);
         background: linear-gradient(45deg, rgba(132, 13, 121, 0.75) 0%, rgba(132, 13, 121, 0.65) 100%);
         background: -moz-linear-gradient(135deg, rgba(132, 13, 121, 0.75) 0%, rgba(132, 13, 121, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(132, 13, 121, 0.75) 0%, rgba(132, 13, 121, 0.65) 100%);
     }
+
     32% {
         background: rgba(239, 83, 80, 0.75);
         background: linear-gradient(45deg, rgba(239, 83, 80, 0.75) 0%, rgba(239, 83, 80, 0.65) 100%);
         background: -moz-linear-gradient(135deg, rgba(239, 83, 80, 0.75) 0%, rgba(239, 83, 80, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(239, 83, 80, 0.75) 0%, rgba(239, 83, 80, 0.65) 100%);
     }
+
     48% {
         background: rgba(255, 87, 34, 0.75);
         background: linear-gradient(45deg, rgba(255, 87, 34, 0.75) 0%, rgba(255, 87, 34, 0.65) 100%);
         background: -moz-linear-gradient(135deg, rgba(255, 87, 34, 0.75) 0%, rgba(255, 87, 34, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(255, 87, 34, 0.75) 0%, rgba(255, 87, 34, 0.65) 100%);
     }
+
     64% {
         background: rgba(255, 160, 0, 0.75);
         background: linear-gradient(45deg, rgba(255, 160, 0, 0.75) 0%, rgba(255, 160, 0, 0.65) 100%);
         background: -moz-linear-gradient(135deg, rgba(255, 160, 0, 0.75) 0%, rgba(255, 112, 66, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(255, 160, 0, 0.75) 0%, rgba(255, 160, 0, 0.65) 100%);
     }
+
     80% {
         background: rgba(233, 30, 99, 0.75);
         background: linear-gradient(45deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
@@ -528,6 +640,7 @@ header .go-back i {
 }
 
 @keyframes rainbow {
+
     0%,
     100% {
         background: rgba(156, 39, 176, 0.75);
@@ -535,30 +648,35 @@ header .go-back i {
         background: -moz-linear-gradient(135deg, rgba(156, 39, 176, 0.75) 0%, rgba(156, 39, 176, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(156, 39, 176, 0.75) 0%, rgba(156, 39, 176, 0.65) 100%);
     }
+
     16% {
         background: rgba(132, 13, 121, 0.75);
         background: linear-gradient(45deg, rgba(132, 13, 121, 0.75) 0%, rgba(132, 13, 121, 0.65) 100%);
         background: -moz-linear-gradient(135deg, rgba(132, 13, 121, 0.75) 0%, rgba(132, 13, 121, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(132, 13, 121, 0.75) 0%, rgba(132, 13, 121, 0.65) 100%);
     }
+
     32% {
         background: rgba(239, 83, 80, 0.75);
         background: linear-gradient(45deg, rgba(239, 83, 80, 0.75) 0%, rgba(239, 83, 80, 0.65) 100%);
         background: -moz-linear-gradient(135deg, rgba(239, 83, 80, 0.75) 0%, rgba(239, 83, 80, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(239, 83, 80, 0.75) 0%, rgba(239, 83, 80, 0.65) 100%);
     }
+
     48% {
         background: rgba(255, 87, 34, 0.75);
         background: linear-gradient(45deg, rgba(255, 87, 34, 0.75) 0%, rgba(255, 87, 34, 0.65) 100%);
         background: -moz-linear-gradient(135deg, rgba(255, 87, 34, 0.75) 0%, rgba(255, 87, 34, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(255, 87, 34, 0.75) 0%, rgba(255, 87, 34, 0.65) 100%);
     }
+
     64% {
         background: rgba(255, 160, 0, 0.75);
         background: linear-gradient(45deg, rgba(255, 160, 0, 0.75) 0%, rgba(255, 160, 0, 0.65) 100%);
         background: -moz-linear-gradient(135deg, rgba(255, 160, 0, 0.75) 0%, rgba(255, 112, 66, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(255, 160, 0, 0.75) 0%, rgba(255, 160, 0, 0.65) 100%);
     }
+
     80% {
         background: rgba(233, 30, 99, 0.75);
         background: linear-gradient(45deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
@@ -568,7 +686,7 @@ header .go-back i {
 }
 
 .carousel .indicators {
-    padding-bottom: 10px !important;
+    bottom: 40px;
 }
 
 .index-card {
@@ -578,10 +696,6 @@ header .go-back i {
 
 .carousel-post .title {
     font-size: 2.6rem;
-}
-
-.carousel-post .cover-btns a {
-    margin-top: -30px;
 }
 
 .dream {
@@ -911,8 +1025,8 @@ article .article-tags .chip {
 
 #artDetail .card {
     box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15),
-    0 5px 15px rgba(0, 0, 0, .07),
-    0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+        0 5px 15px rgba(0, 0, 0, .07),
+        0 2px 5px -5px rgba(0, 0, 0, .1) !important;
 }
 
 #artDetail .tag-cate {
@@ -1043,12 +1157,6 @@ article .article-tags .chip {
     box-shadow: 0 0 10px 0 rgba(232, 237, 250, .6), 0 4px 8px 0 rgba(232, 237, 250, .5)
 }
 
-#artDetail .reprint .reprint-tip {
-    margin: 0 3px 22px 0;
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
 #artDetail .reprint a {
     font-size: 1.05rem;
     color: #42b983;
@@ -1112,12 +1220,15 @@ article .article-tags .chip {
     list-style-type: circle;
 }
 
-#articleContent table, th, td {
+#articleContent table,
+th,
+td {
     padding: 12px 13px;
     border: 1px solid #dfe2e5;
 }
 
-table tr:nth-child(2n), thead {
+table tr:nth-child(2n),
+thead {
     background-color: #fafafa;
 }
 
@@ -1130,7 +1241,8 @@ table tr:nth-child(2n), thead {
     min-width: 80px;
 }
 
-#articleContent [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+#articleContent [type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
     position: inherit;
     margin-left: -1.3rem;
     margin-right: 0.4rem;
@@ -1179,15 +1291,12 @@ table tr:nth-child(2n), thead {
 
 .chip-container .chip {
     margin: 10px 10px;
-    padding: 0 14px;
-    display: inline-block;
-    height: 38px;
-    min-width: 80px;
-    line-height: 39px;
+    padding: 19px 14px;
+    display: inline-flex;
+    line-height: 0;
     font-size: 1rem;
     font-weight: 500;
     border-radius: 5px;
-    word-wrap: break-word;
     cursor: pointer;
     box-shadow: 0 3px 5px rgba(0, 0, 0, .12);
 }
@@ -1201,12 +1310,11 @@ table tr:nth-child(2n), thead {
     margin-left: 5px;
     margin-right: -2px;
     font-size: 0.5rem;
-    position: relative;
-    top: 1px;
 }
 
 .chip-default .tag-length {
     color: #e91e63;
+    margin-top: 1px;
 }
 
 .chip-active .tag-length {
@@ -1508,7 +1616,7 @@ table tr:nth-child(2n), thead {
     padding: 0;
     color: #fff;
     border: 1px solid #0f9d58;
-    background: radial-gradient(#4cbf30, #0f9d58);;
+    background: radial-gradient(#4cbf30, #0f9d58);
     font-size: 0.9rem;
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .21), 0 2px 3px rgba(0, 0, 0, .1);
@@ -1560,7 +1668,8 @@ table tr:nth-child(2n), thead {
     padding: 3.8rem 1.5rem 0.8rem 1.5rem;
 }
 
-.post-charts, .title,
+.post-charts,
+.title,
 .my-projects .title,
 .my-skills .title,
 .my-gallery .title {
@@ -1683,7 +1792,7 @@ table tr:nth-child(2n), thead {
 
 .other-skills .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);;
+    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
     border: 1px solid #4cbf30;
     box-shadow: 0 5px 5px rgba(0, 0, 0, .25)
 }
@@ -1898,7 +2007,6 @@ footer .copy-right {
     background: white;
 }
 
-
 /*二级菜单*/
 
 .nav-menu {
@@ -1978,11 +2086,10 @@ footer .copy-right {
 
 .m-nav-item ul {
     display: none;
-    background: rgba(255, 255, 255, .1);
 }
 
 .m-nav-item ul li {
-    width: 245px;
+    width: 255px;
     height: 50px;
     line-height: 50px;
     text-align: center;
@@ -2001,19 +2108,21 @@ footer .copy-right {
     transition: all .3s;
 }
 
-.m-nav-show, .m-nav-item > a:hover {
+.m-nav-show,
+.m-nav-item > a:hover {
     color: #FFF;
     background: rgba(255, 255, 255, .8);
 }
 
-.m-nav-show > a:before, .m-nav-item > a:hover:before {
+.m-nav-show > a:before,
+.m-nav-item > a:hover:before {
     opacity: 1;
 }
 
 .m-nav-item .m-icon {
     position: absolute;
-    right: 65px;
+    right: 15px;
     height: 50px;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
 }
