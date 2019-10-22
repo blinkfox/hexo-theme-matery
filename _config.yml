@@ -58,6 +58,8 @@ cover:
   autoLoop: true # 是否自动轮播. Whether it is automatically rotated.
   duration: 120 # 切换延迟时间. Switching delay time.
   intervalTime: 5000 # 自动切换下一张的间隔时间. Automatically switch the interval of the next one.
+  useConfig: false # 是否使用配置文件, 在 _data/covers.json 下配置推荐文章, false则使用主题在文章中的配置 cover coverImg
+  # useConfig 使用方式: 将主题 hexo-theme-matery/source/_data/covers.json 移动到 my-blog/source/_data/下修改配置即可
 
 # index page dream text,
 # 配置首页显示"梦想"的语句.
@@ -103,6 +105,9 @@ video:
 # 是否显示推荐文章的标题
 recommend:
   showTitle: true
+  useConfig: false # 是否使用配置文件, 在 _data/recommends.json 下配置推荐文章, false则会走主题配置的 top 属性
+  # useConfig 使用方式: 将主题 hexo-theme-matery/source/_data/recommends.json 移动到 my-blog/source/_data/下修改配置即可
+
 
 # Configure website favicon and LOGO
 # 配置网站favicon和网站LOGO
@@ -178,9 +183,14 @@ mathjax:
 # 激活前请确认你已经安装了 hexo-wordcount 插件，安装命令: `npm i --save hexo-wordcount`
 wordCount:
   enable: false
-  postWordCount: true
-  min2read: true
-  totalCount: true
+
+# 文章信息--需要 hexo-wordcount 插件
+postInfo:
+  date: true # 发布日期
+  update: false # 更新日期
+  wordCount: true # 文章字数统计
+  min2read: true # 文章阅读时长
+  readCount: true # 文章阅读次数
 
 # Whether to activate the 'love' effect of clicking on the page.
 # 是否激活点击页面的'爱心'效果，默认激活.
@@ -433,7 +443,7 @@ reprint:
   
 # DaoVoice online contact 
 daovoice: 
-  enable: true
+  enable: false
   app_id:
   
 # Tidio online contact 
@@ -471,7 +481,7 @@ sharejs:
 # addthis文章分享模块.
 addthis:
   enable: false
-  pubid:  #前往https://www.addthis.com/获取
+  pubid:  # 前往https://www.addthis.com/获取
   
 # 打字效果副标题.
 # 如果有符号 ‘ ，请在 ’ 前面加上 \
