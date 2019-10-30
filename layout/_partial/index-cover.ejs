@@ -52,11 +52,15 @@
 <%
 // get all cover posts.
 var coverPosts = [];
-site.posts.forEach(function (post) {
-    if (post.cover) {
-        coverPosts.push(post);
-    }
-});
+if (theme.cover.useConfig) {
+    coverPosts = site.data.covers;
+} else {
+    site.posts.forEach(function (post) {
+        if (post.cover) {
+            coverPosts.push(post);
+        }
+    });
+}
 var coverPostsCount = coverPosts.length;
 %>
 
@@ -73,12 +77,7 @@ var coverPostsCount = coverPosts.length;
     <div class="carousel-item red white-text bg-cover about-cover">
         <div class="container" style="right: 0px;left: 0px;">
             <%- partial('_partial/bg-cover-content') %>
-
             <div class="cover-btns">
-                <a href="#indexCard" class="waves-effect waves-light btn">
-                    <i class="fas fa-angle-double-down"></i><%- __('startRead') %>
-                </a>
-
                 <% if (theme.indexbtn && theme.indexbtn.enable) { %>
                 <a href="<%- theme.indexbtn.url %>" class="waves-effect waves-light btn" target="_blank">
                     <i class="<%- theme.indexbtn.icon %>"></i><%- theme.indexbtn.name %>
@@ -90,6 +89,13 @@ var coverPostsCount = coverPosts.length;
                 <% } %>
             </div>
             <div class="cover-social-link"><%- partial('_partial/social-link') %></div>
+        </div>
+        <div class="container" style="bottom: 0; position: absolute; top: unset; height: 45px;">
+            <div class="cover-btns" style="top: unset;">
+                <a href="#indexCard" class="waves-effect waves-light btn scroll-down">
+                    <i class="fas fa-angle-double-down"></i><%- __('startRead') %>
+                </a>
+            </div>
         </div>
     </div>
 

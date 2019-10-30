@@ -11,11 +11,11 @@
 
             <div class="description center-align">
                 <% if (theme.subtitle.enable) { %>
-                <span id="typed"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+                <span id="subtitle"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
                 <script>
-                    var typed = new Typed("#typed", {
-                        strings: ['<%= theme.subtitle.sub1 %>', '<%= theme.subtitle.sub2 %>'],
+                    var typed = new Typed("#subtitle", {
+                        strings: ['<%= theme.subtitle.sub1 %>','<%= theme.subtitle.sub2 %>'],
                         startDelay: <%= theme.subtitle.startDelay %>,
                         typeSpeed: <%= theme.subtitle.typeSpeed %>,
                         loop: <%= theme.subtitle.loop %>,
