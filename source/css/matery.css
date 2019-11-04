@@ -179,8 +179,8 @@ code {
     top: 4px;
     right: 0px;
     filter: invert(50%);
-    padding: 7px 10px;
-    z-index: 1;
+    padding: 7px;
+    z-index: 999 !important;
     cursor: pointer;
     transition: all .3s;
     transform: rotate(0deg);
