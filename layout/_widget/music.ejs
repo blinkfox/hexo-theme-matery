@@ -30,7 +30,7 @@ $(function () {
         volume: Number('<%- theme.music.volume %>'),
         listFolded: '<%- theme.music.listFolded %>' === 'true',
         listMaxHeight: '<%- theme.music.listMaxHeight %>',
-        audio: JSON.parse('<%- audiosJson %>')
+        audio: eval(<%- audiosJson %>)
     });
 });
 </script>
