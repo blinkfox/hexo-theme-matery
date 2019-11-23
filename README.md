@@ -596,6 +596,21 @@ There are 24 featured pictures in `/source/medias/featureimages`,you can add or 
 
 ## Changelog
 
+- v1.2.0
+  - Added online chat function of [DaoVoice](http://www.daovoice.io/) and [Tidio](https://www.tidio.com/);
+  - Added the ability to have two levels of menus;
+  - Added a subtitle for typing effects;
+  - Added the ability to preload web content;
+  - Added the configuration function of the home banner whether to switch daily;
+  - Added the ability to display ICP filing information, which is not enabled by default;
+  - Added configuration for Baidu analysis;
+  - Added language display, one-click copy, display line number and other functions of the code block;
+  - Added the ability to customize the configuration of the home page car map and recommended articles;
+  - Added article page to display update date;
+  - Added an icon for the reload rule;
+  - Modified the layout and display of the sharing;
+  - Upgraded and updated versions of some dependent libraries;
+  - other details to modify and optimize;
 - v1.1.0
   - Added support for `emoji`;
   - Added site run time statistics and configuration;

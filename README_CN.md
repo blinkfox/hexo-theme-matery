@@ -2,7 +2,7 @@
 
 [![HitCount](http://hits.dwyl.io/blinkfox/hexo-theme-matery.svg)](http://hits.dwyl.io/blinkfox/hexo-theme-matery) [![Gitter](https://img.shields.io/gitter/room/blinkfox/hexo-theme-matery.svg)](https://gitter.im/hexo-theme-matery/Lobby?utm_source=badge) [![GitHub issues](https://img.shields.io/github/issues/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/issues) [![GitHub license](https://img.shields.io/github/license/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/blob/master/LICENSE) [![Download](https://img.shields.io/badge/downloads-master-green.svg)](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master) [![Hexo Version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io) [![GitHub forks](https://img.shields.io/github/forks/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/network) [![GitHub stars](https://img.shields.io/github/stars/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/stargazers)
 
-[🇺🇸English Document](README.md) | [演示示例](https://blinkfox.github.io/) | QQ 交流群: [`926552981`](https://jq.qq.com/?_wv=1027&k=5zMDYHT)
+[🇺🇸English Document](README.md) | [演示示例](https://blinkfox.github.io/) | QQ 交流群1（已满）: [`926552981`](https://jq.qq.com/?_wv=1027&k=5zMDYHT) | QQ 交流群2（推荐）: [`971887688`](https://jq.qq.com/?_wv=1027&k=53q2Ayp)
 
 > 这是一个采用 `Material Design` 和响应式设计的 Hexo 博客主题。
 
@@ -597,6 +597,21 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 ## 版本记录
 
+- v1.2.0
+  - 新增了 [DaoVoice](http://www.daovoice.io/)、[Tidio](https://www.tidio.com/) 的在线聊天功能；
+  - 新增了两级菜单的功能；
+  - 新增了打字效果的副标题；
+  - 新增了网页内容预加载的功能；
+  - 新增了首页 banner 是否每日切换的配置功能；
+  - 新增了显示 ICP 备案信息的功能，默认未开启；
+  - 新增了百度分析的配置；
+  - 新增了代码块的语言显示、一键复制、显示行号等功能；
+  - 新增了首页轮播图和推荐文章可自定义配置的功能；
+  - 新增了文章页面显示更新日期；
+  - 新增了转载规则的图标；
+  - 修改了分享的布局和显示方式；
+  - 升级更新了部分依赖库的版本；
+  - 其他细节修改和优化；
 - v1.1.0
   - 新增了 `emoji` 的支持；
   - 新增了站点运行时间统计及配置；
