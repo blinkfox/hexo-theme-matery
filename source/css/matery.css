@@ -382,6 +382,7 @@ header .side-nav .social-link {
     line-height: 45px;
     font-size: 1rem;
     color: #fff;
+    border: 1px solid #fff;
     background-color: transparent;
     border-radius: 30px;
     box-shadow: none;
