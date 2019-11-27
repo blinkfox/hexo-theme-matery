@@ -37,156 +37,140 @@
         color: #fff;
         font-size: 2.4rem;
     }
-    
-    html, body {
-        height:100%;
-    }
-
-    #page {
-        height:100%;
-        min-height: 100%;
-        width:100%;
-    }
 </style>
 
 <%
 // get all cover posts.
 var coverPosts = [];
-if (theme.cover.useConfig) {
-    coverPosts = site.data.covers;
-} else {
-    site.posts.forEach(function (post) {
-        if (post.cover) {
-            coverPosts.push(post);
-        }
-    });
-}
+site.posts.forEach(function (post) {
+    if (post.cover) {
+        coverPosts.push(post);
+    }
+});
 var coverPostsCount = coverPosts.length;
 %>
 
-<div id="page" class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
+<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
     <% if (coverPostsCount > 0 && theme.cover.showPrevNext) { %>
-    <div id="prev-cover" class="left waves-effect carousel-control">
-        <i class="icon fas fa-angle-left"></i>
-    </div>
-    <div id="next-cover" class="right waves-effect carousel-control">
-        <i class="icon fas fa-angle-right"></i>
-    </div>
+        <div id="prev-cover" class="left waves-effect carousel-control">
+            <i class="icon fa fa-angle-left"></i>
+        </div>
+        <div id="next-cover" class="right waves-effect carousel-control">
+            <i class="icon fa fa-angle-right"></i>
+        </div>
     <% } %>
 
     <div class="carousel-item red white-text bg-cover about-cover">
-        <div class="container" style="right: 0px;left: 0px;">
+        <div class="container">
             <%- partial('_partial/bg-cover-content') %>
+
             <div class="cover-btns">
+                <a href="#indexCard" class="waves-effect waves-light btn">
+                    <i class="fa fa-angle-double-down"></i><%- __('startRead') %>
+                </a>
+
                 <% if (theme.indexbtn && theme.indexbtn.enable) { %>
-                <a href="<%- theme.indexbtn.url %>" class="waves-effect waves-light btn" target="_blank">
-                    <i class="<%- theme.indexbtn.icon %>"></i><%- theme.indexbtn.name %>
-                </a>
+                    <a href="<%- theme.indexbtn.url %>" class="waves-effect waves-light btn" target="_blank">
+                        <i class="<%- theme.indexbtn.icon %>"></i><%- theme.indexbtn.name %>
+                    </a>
                 <% } else if (theme.githubLink.enable) { %>
-                <a href="<%- theme.githubLink.url %>" class="waves-effect waves-light btn" target="_blank">
-                    <i class="fab fa-github %>"></i><%- theme.githubLink.title %>
-                </a>
+                    <a href="<%- theme.githubLink.url %>" class="waves-effect waves-light btn" target="_blank">
+                        <i class="fab fa-github %>"></i><%- theme.githubLink.title %>
+                    </a>
                 <% } %>
             </div>
             <div class="cover-social-link"><%- partial('_partial/social-link') %></div>
         </div>
-        <div class="container" style="bottom: 0; position: absolute; top: unset; height: 45px;">
-            <div class="cover-btns" style="top: unset;">
-                <a href="#indexCard" class="waves-effect waves-light btn scroll-down">
-                    <i class="fas fa-angle-double-down"></i><%- __('startRead') %>
-                </a>
-            </div>
-        </div>
     </div>
 
     <% if (coverPostsCount > 0) { %>
-    <%
-        var hashCode = function (str) {
-            if (!str && str.length === 0) {
-                return 0;
-            }
+        <%
+            var hashCode = function (str) {
+                if (!str && str.length === 0) {
+                    return 0;
+                }
 
-            var hash = 0;
-            for (var i = 0, len = str.length; i < len; i++) {
-                hash = ((hash << 5) - hash) + str.charCodeAt(i);
-                hash |= 0;
-            }
-            return hash;
-        };
+                var hash = 0;
+                for (var i = 0, len = str.length; i < len; i++) {
+                    hash = ((hash << 5) - hash) + str.charCodeAt(i);
+                    hash |= 0;
+                }
+                return hash;
+            };
 
-        var featureImages = theme.featureImages;
-        var imgCount = featureImages.length;
-    %>
+            var featureImages = theme.featureImages;
+            var imgCount = featureImages.length;
+        %>
 
-    <% for (var i = 0; i < coverPostsCount; i++) { %>
-    <%
-        var post = coverPosts[i];
-        var coverImg = post.coverImg ? post.coverImg
-                : (post.img ? post.img : featureImages[Math.abs(hashCode(post.title) % imgCount)]);
-    %>
-    <div class="carousel-item amber white-text carousel-post bg-cover"
-            style="background-image: url('<%- coverImg %>');">
-        <div class="container" style="right: 0px;left: 0px;">
-            <div class="row">
-                <div class="col s10 offset-s1">
-                    <div class="title center-align"><%- post.title %></div>
-                    <div class="description center-align">
-                    <% if (post.summary && post.summary.length > 0) { %>
-                        <%- post.summary %>
-                    <% } else { %>
-                        <%- strip_html(post.content).substring(0, 120) %>
-                    <% } %>
-                    </div>
-                    <div class="cover-btns">
-                        <a href="<%- url_for(post.path) %>" class="waves-effect waves-light btn" target="_blank">
-                            <i class="icon far fa-eye fa-fw"></i><%- __('readMore') %>
-                        </a>
+        <% for (var i = 0; i < coverPostsCount; i++) { %>
+            <%
+                var post = coverPosts[i];
+                var coverImg = post.coverImg ? post.coverImg
+                        : (post.img ? post.img : featureImages[Math.abs(hashCode(post.title) % imgCount)]);
+            %>
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('<%- coverImg %>');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align"><%- post.title %></div>
+                            <div class="description center-align">
+                                <% if (post.summary && post.summary.length > 0) { %>
+                                    <%- post.summary %>
+                                <% } else { %>
+                                    <%- strip_html(post.content).substring(0, 120) %>
+                                <% } %>
+                            </div>
+                            <div class="cover-btns">
+                                <a href="<%- url_for(post.path) %>" class="waves-effect waves-light btn" target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i><%- __('readMore') %>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <% } %>
+        <% } %>
     <% } %>
 </div>
 
 <script>
-$(function () {
-    let coverSlider = $('.carousel');
-    coverSlider.carousel({
-        duration: Number('<%- theme.cover.duration %>'),
-        fullWidth: true,
-        indicators: '<%- theme.cover.showIndicators %>' === 'true'
-    });
+    $(function () {
+        let coverSlider = $('.carousel');
+        coverSlider.carousel({
+            duration: Number('<%- theme.cover.duration %>'),
+            fullWidth: true,
+            indicators: '<%- theme.cover.showIndicators %>' === 'true'
+        });
 
-    let carouselIntervalId;
-    <% if (theme.cover.autoLoop) { %>
-    // Loop to call the next cover article picture.
-    let autoCarousel = function() {
-        carouselIntervalId = setInterval(function () {
-            coverSlider.carousel('next');
-        }, <%- theme.cover.intervalTime %>);
-    };
-    autoCarousel();
-    <% } %>
-
-    let restartPlay = function () {
+        let carouselIntervalId;
         <% if (theme.cover.autoLoop) { %>
-        clearInterval(carouselIntervalId);
+        // Loop to call the next cover article picture.
+        let autoCarousel = function() {
+            carouselIntervalId = setInterval(function () {
+                coverSlider.carousel('next');
+            }, <%- theme.cover.intervalTime %>);
+        };
         autoCarousel();
         <% } %>
-    };
 
-    <% if (theme.cover.showPrevNext) { %>
-    // prev and next cover post.
-    $('#prev-cover').click(function () {
-        coverSlider.carousel('prev');
-        restartPlay();
+        let restartPlay = function () {
+            <% if (theme.cover.autoLoop) { %>
+            clearInterval(carouselIntervalId);
+            autoCarousel();
+            <% } %>
+        };
+
+        <% if (theme.cover.showPrevNext) { %>
+        // prev and next cover post.
+        $('#prev-cover').click(function () {
+            coverSlider.carousel('prev');
+            restartPlay();
+        });
+        $('#next-cover').click(function () {
+            coverSlider.carousel('next');
+            restartPlay();
+        });
+        <% } %>
     });
-    $('#next-cover').click(function () {
-        coverSlider.carousel('next');
-        restartPlay();
-    });
-    <% } %>
-});
 </script>
