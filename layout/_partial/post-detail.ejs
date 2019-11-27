@@ -47,7 +47,7 @@
                 </div>
                 <% } %>
 
-                <% if (theme.wordCount.enable && theme.postInfo.wordCount) { %>
+                <% if (theme.postInfo.wordCount) { %>
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i><%- __('wordCount') %>:&nbsp;&nbsp;
                     <%= wordcount(page.content) %>

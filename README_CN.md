@@ -346,11 +346,13 @@ npm i --save hexo-wordcount
 然后只需在本主题下的 `_config.yml` 文件中，激活以下配置项即可：
 
 ```yaml
-wordCount:
-  enable: false # 将这个值设置为 true 即可.
-  postWordCount: true
+postInfo:
+  date: true
+  update: false
+  wordCount: false # 设置文章字数统计为 true.
+  totalCount: false # 设置站点文章总字数统计为 true.
   min2read: true
-  totalCount: true
+  readCount: true
 ```
 
 ### 添加 RSS 订阅支持（可选的）

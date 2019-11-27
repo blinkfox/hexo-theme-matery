@@ -347,11 +347,13 @@ npm i --save hexo-wordcount
 Then just activate the following configuration items in the theme `_config.yml` file:
 
 ```yaml
-wordCount:
-  enable: false # Set this value to true.
-  postWordCount: true
+postInfo:
+  date: true
+  update: false
+  wordCount: false # set true.
+  totalCount: false # set true.
   min2read: true
-  totalCount: true
+  readCount: true
 ```
 
 ### Add RSS feed support (Optional)

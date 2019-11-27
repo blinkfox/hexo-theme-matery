@@ -127,11 +127,11 @@ indexbtn:
 # icon/button will not show up if you leave the corresponding socialLink empty
 # 首页 banner 中的第二行个人信息配置，留空即不启用
 socialLink:
-  github:  # https://github.com/xxx
-  email: # xxx@xxx.com
+  github:  https://github.com/blinkfox
+  email: 1181062873@qq.com
   facebook: # https://www.facebook.com/xxx
   twitter: # https://twitter.com/xxx
-  qq: # 123456789
+  qq: 1181062873
   weibo: # https://weibo.com/xxx
   zhihu: # https://www.zhihu.com/xxx
   rss: true # true、false
@@ -179,16 +179,13 @@ mathjax:
 # Post word count, reading duration, site total word count.
 # Before you activate, please confirm that you have installed the hexo-wordcount plugin,
 # install the plugin command: `npm i --save hexo-wordcount`.
-# 文章字数统计、阅读时长、总字数统计
-# 激活前请确认你已经安装了 hexo-wordcount 插件，安装命令: `npm i --save hexo-wordcount`
-wordCount:
-  enable: false
-
-# 文章信息--需要 hexo-wordcount 插件
+# 文章字数统计、阅读时长、总字数统计等
+# 文章信息--若要开启文章字数统计，需要安装 hexo-wordcount 插件，安装命令: `npm i --save hexo-wordcount`
 postInfo:
   date: true # 发布日期
   update: false # 更新日期
-  wordCount: true # 文章字数统计
+  wordCount: false # 文章字数统计
+  totalCount: false # 站点总文章字数
   min2read: true # 文章阅读时长
   readCount: true # 文章阅读次数
 
@@ -349,7 +346,7 @@ googleAnalytics:
 baiduAnalytics:
   enable: false
   id: 
-  
+
 # 百度搜索资源平台提交链接
 baiduPush: true
 
@@ -440,12 +437,12 @@ featureImages:
 reprint:
   enable: true # whether enable reprint section 是否启用“转载规则限定模块”
   default: cc_by
-  
+
 # DaoVoice online contact 
 daovoice: 
   enable: false
   app_id:
-  
+
 # Tidio online contact 
 tidio:
   enable: false
@@ -482,7 +479,7 @@ sharejs:
 addthis:
   enable: false
   pubid:  # 前往https://www.addthis.com/获取
-  
+
 # 打字效果副标题.
 # 如果有符号 ‘ ，请在 ’ 前面加上 \
 subtitle: 
@@ -494,7 +491,7 @@ subtitle:
   backSpeed: 50 # 删除速度
   sub1: 从来没有真正的绝境, 只有心灵的迷途
   sub2: Never really desperate, only the lost of the soul
-  
+
 # 手机二级菜单.
 navMenu:
   mleft: false # 二级侧栏子菜单是否对齐左边
