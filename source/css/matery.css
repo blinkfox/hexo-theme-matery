@@ -579,12 +579,12 @@ header .go-back i {
 .bg-cover .title {
     font-size: 4rem;
     line-height: 1.85em;
-    margin-bottom: -20px;
+    margin-bottom: 20px;
     position: relative;
 }
 
 .bg-cover .description {
-    padding: 5px;
+    font-weight: 300;
     font-size: 1.25rem;
     line-height: 1.4em;
     color: #eee;
