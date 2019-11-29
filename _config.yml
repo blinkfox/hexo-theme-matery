@@ -144,6 +144,7 @@ socialLink:
 toc:
   enable: true
   heading: h2, h3, h4
+  collapseDepth: 0 # 目录默认展开层级
   showToggleBtn: true # 是否显示切换TOC目录展开收缩的按钮
 
 # 代码块相关
@@ -346,7 +347,7 @@ googleAnalytics:
 # 添加 baidu Analytics 配置
 baiduAnalytics:
   enable: false
-  id: 
+  id:
 
 # 百度搜索资源平台提交链接
 baiduPush: true
@@ -390,7 +391,7 @@ libs:
 
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
-featureImages: 
+featureImages:
 - /medias/featureimages/0.jpg
 - /medias/featureimages/1.jpg
 - /medias/featureimages/2.jpg
@@ -439,16 +440,16 @@ reprint:
   enable: true # whether enable reprint section 是否启用“转载规则限定模块”
   default: cc_by
 
-# DaoVoice online contact 
-daovoice: 
+# DaoVoice online contact
+daovoice:
   enable: false
   app_id:
 
-# Tidio online contact 
+# Tidio online contact
 tidio:
   enable: false
-  public_key: 
- 
+  public_key:
+
 #背景canvas-nest
 canvas_nest:
   enable: false
@@ -483,7 +484,7 @@ addthis:
 
 # 打字效果副标题.
 # 如果有符号 ‘ ，请在 ’ 前面加上 \
-subtitle: 
+subtitle:
   enable: true
   loop: true # 是否循环
   showCursor: true # 是否显示光标
@@ -499,12 +500,12 @@ navMenu:
   bgColor: " " # 二级侧栏子菜单背景颜色,留空即为全局背景色
 
 # 网页预加载.
-instantpage: 
+instantpage:
   enable: true
 
 # banner 是否每日切换.
 # 若为 false, 则 banner 默认为 /medias/banner/0.jpg
-banner: 
+banner:
   enable: true
 
 #ICP备案信息尾部显示
