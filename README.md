@@ -598,6 +598,14 @@ There are 24 featured pictures in `/source/medias/featureimages`,you can add or 
 
 ## Changelog
 
+- v1.2.1
+  - Added TOC's expand directory level settings and scroll bar function to prevent directory overflow when there are many directories;
+  - Modified the display mode of the homepage to the previous mode;
+  - Fixed the problem that the home button has no border;
+  - Fixed an issue where the homepage card was still generated when the music and bottom suction modes, videos, recommended articles, etc. were not activated;
+  - Fixed the problem that wordCount plugin is not installed, and modified some configurations;
+  - Fixed the issue that the page does not display music when there are single quotes in the JSON configuration of the music;
+  - Fixed the problem of tag cloud link failure under Hexo4.0;
 - v1.2.0
   - Added online chat function of [DaoVoice](http://www.daovoice.io/) and [Tidio](https://www.tidio.com/);
   - Added the ability to have two levels of menus;

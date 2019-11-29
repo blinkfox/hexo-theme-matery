@@ -599,6 +599,14 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 ## 版本记录
 
+- v1.2.1
+  - 新增了 TOC 的展开目录层级设置和滚动条功能，防止目录较多的时候目录溢出；
+  - 修改了首页的展示方式为以前的模式；
+  - 修复首页按钮没有边框的问题；
+  - 修复了音乐及吸底模式、视频、推荐文章等不激活时仍然生成首页卡片的问题；
+  - 修复 wordCount 插件未安装的问题，修改了部分配置；
+  - 修复音乐的 JSON 配置中有单引号的情况页面不显示的音乐的问题
+  - 修复标签云在Hexo4.0下链接失效的问题；
 - v1.2.0
   - 新增了 [DaoVoice](http://www.daovoice.io/)、[Tidio](https://www.tidio.com/) 的在线聊天功能；
   - 新增了两级菜单的功能；
