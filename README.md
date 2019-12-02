@@ -486,6 +486,7 @@ Everything in the Front-matter option is **not required**. But I still recommend
 | summary    | null                        | Post summary, custom post summary content, if the attribute has a value, the post card summary will display the text, otherwise the program will automatically intercept part of the article as a summary |
 | categories | null                        | Article classification, the classification of this topic represents a macroscopically large classification, only one article is recommended for one classification. |
 | tags       | null                        | Post label, a post can have multiple labels |
+| keywords   | Post Title                  | Post key Words With SEO                               |
 | reprintPolicy       | cc_by                        | Post reprint policy, value could be one of cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint and pay |
 
 > **Note**: 
