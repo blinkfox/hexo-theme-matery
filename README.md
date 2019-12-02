@@ -255,28 +255,6 @@ menu:
         icon: fas fa-image
 ```
 
-### Add emoji support (Optional)
-
-This theme adds support for the `emoji` emoticon, using the Hexo plugin for [hexo-filter-github-emojis] (https://npm.taobao.org/package/hexo-filter-github-emojis) to support The generation of the `emoji` expression, the corresponding `markdown emoji` syntax (`::`, for example: `:smile:`) is converted into a `emoji` expression that jumps. The installation command is as follows:
-
-```bash
-npm install hexo-filter-github-emojis --save
-```
-
-Add configuration of `_config.yml` file in Hexo root folder as follows：
-
-```yaml
-githubEmojis:
-  enable: true
-  className: github-emoji
-  inject: true
-  styles:
-  customEmojis:
-```
-
-Execute `hexo clean && hexo g` to regenerate the blog file, and then  you can see the expression you wrote in the `emoji` grammar in the corresponding position in the article.
-
-
 ### Code highlight
 
 Hexo theme uses Hexo's plugin[hexo-prism-plugin](https://github.com/ele828/hexo-prism-plugin) to show the code highlight instead of its own theme.The Installation commands are as follows:
@@ -314,7 +292,7 @@ search:
   field: post
 ```
 
-### Translate Chinese Link to Pinyin (Optional)
+### Translate Chinese Link to Pinyin (Recommend)
 
 Defualt permalinks of Hexo will include Chinese if your atrticle's title is Chinese.But it's adverse to `SEO`,and `gitment` comments don't suport Chinese Link as well.We can use the [hexo-permalink-pinyin](https://github.com/viko16/hexo-permalink-pinyin) of Hexo plugin to generate permalinks of Chinese Pinyin  when generating posts.
 
@@ -334,7 +312,7 @@ permalink_pinyin:
 
 > **Note*:[hexo-abbrlink](https://github.com/rozbo/hexo-abbrlink) can genarate non-Chinese link in addtion to this plugin.
 
-### Post word count statistics plugin (Optional)
+### Post word count statistics plugin (Recommend)
 
 If you want to display the post word count and reading time information in the post detail page, you can install the [hexo-wordcount](https://github.com/willin/hexo-wordcount) plugin.
 
@@ -352,9 +330,30 @@ postInfo:
   update: false
   wordCount: false # set true.
   totalCount: false # set true.
-  min2read: true
-  readCount: true
+  min2read: false # set true.
+  readCount: false # set true.
 ```
+
+### Add emoji support (Optional)
+
+This theme adds support for the `emoji` emoticon, using the Hexo plugin for [hexo-filter-github-emojis] (https://npm.taobao.org/package/hexo-filter-github-emojis) to support The generation of the `emoji` expression, the corresponding `markdown emoji` syntax (`::`, for example: `:smile:`) is converted into a `emoji` expression that jumps. The installation command is as follows:
+
+```bash
+npm install hexo-filter-github-emojis --save
+```
+
+Add configuration of `_config.yml` file in Hexo root folder as follows：
+
+```yaml
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
+```
+
+Execute `hexo clean && hexo g` to regenerate the blog file, and then  you can see the expression you wrote in the `emoji` grammar in the corresponding position in the article.
 
 ### Add RSS feed support (Optional)
 
