@@ -109,7 +109,6 @@ recommend:
   useConfig: false # 是否使用配置文件, 在 _data/recommends.json 下配置推荐文章, false则会走主题配置的 top 属性
   # useConfig 使用方式: 将主题 hexo-theme-matery/source/_data/recommends.json 移动到 my-blog/source/_data/下修改配置即可
 
-
 # Configure website favicon and LOGO
 # 配置网站favicon和网站LOGO
 favicon: /favicon.png
@@ -188,8 +187,8 @@ postInfo:
   update: false # 更新日期
   wordCount: false # 文章字数统计
   totalCount: false # 站点总文章字数
-  min2read: true # 文章阅读时长
-  readCount: true # 文章阅读次数
+  min2read: false # 文章阅读时长
+  readCount: false # 文章阅读次数
 
 # Whether to activate the 'love' effect of clicking on the page.
 # 是否激活点击页面的'爱心'效果，默认激活.
@@ -214,11 +213,11 @@ myProjects:
       iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
       url: http://github.com/blinkfox/hexo-theme-matery
       desc: This is a Hexo blog theme with 'Material Design' and responsive design.
-    zealt:
+    Fenix:
         icon: fas fa-database
         iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
-        url: https://github.com/blinkfox/zealot
-        desc: 一个轻量级的SQL和参数动态生成工具库
+        url: https://github.com/blinkfox/fenix
+        desc: 这是 Spring Data JPA 复杂或动态 SQL 查询的扩展库。
     typora-vue-theme:
         icon: fas fa-file-alt
         iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
