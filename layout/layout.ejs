@@ -87,8 +87,9 @@
     <% } %>
 
     <% if (theme.ribbon.enable) { %>
+    <% var ribbonSrc = theme.ribbon.clickChange ? theme.libs.js.ribbon : theme.libs.js.ribbonRefresh; %>
     <script type="text/javascript" size="<%- theme.ribbon.size %>" alpha='<%- theme.ribbon.alpha %>'
-        zIndex="<%- theme.ribbon.zIndex %>" src="<%- theme.libs.js.ribbon %>" async="async"></script>
+        zIndex="<%- theme.ribbon.zIndex %>" src="<%- ribbonSrc %>" async="async"></script>
     <% } %>
 
     <% if (theme.ribbon_dynamic.enable) { %>
