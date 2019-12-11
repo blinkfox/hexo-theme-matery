@@ -42,7 +42,7 @@ menu:
 # Website start time.
 # 站点运行开始时间.
 time:
-  enable: true
+  enable: false
   year: 2019 # 年份
   month: 06 # 月份
   date: 28 # 日期
