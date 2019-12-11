@@ -37,7 +37,9 @@
 
     // description.
     var description = null;
-    if (page.hasOwnProperty('__post') && page.__post) {
+    if (page.summary) {
+        description = page.summary;
+    } else if (page.hasOwnProperty('__post') && page.__post) {
         description = strip_html(page.content).substring(0, 120);
     }
     description = description ? description : pageTitle;
