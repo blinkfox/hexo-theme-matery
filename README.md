@@ -487,7 +487,7 @@ Everything in the Front-matter option is **not required**. But I still recommend
 | categories | null                        | Article classification, the classification of this topic represents a macroscopically large classification, only one article is recommended for one classification. |
 | tags       | null                        | Post label, a post can have multiple labels |
 | keywords   | Post Title                  | Post key Words With SEO                               |
-| reprintPolicy       | cc_by                        | Post reprint policy, value could be one of cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint and pay |
+| reprintPolicy       | cc_by              | Post reprint policy, value could be one of cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint and pay |
 
 > **Note**: 
 > 1. post's featured piature will take remainder if not writing the `img` property,and chose the featured picture of theme to let all of post's picture **have their own characteristics**.
@@ -598,6 +598,14 @@ There are 24 featured pictures in `/source/medias/featureimages`,you can add or 
 
 ## Changelog
 
+- v1.2.2
+  - Add the function of customizing post `keywords`;
+  - Add the function and configuration of static ribbon click switch;
+  - Set the word count, ribbon and site running time as `false` by default;
+  - Modify the meta attribute of the post's `description` to read the post's `summary` attribute first;
+  - Modified HTML tag of article title from `div` to` h1` title;
+  - Fixed the problem of incorrect footer `year` display;
+  - Removed redundant `setTimeout` js code from site runtime;
 - v1.2.1
   - Added TOC's expand directory level settings and scroll bar function to prevent directory overflow when there are many directories;
   - Modified the display mode of the homepage to the previous mode;
