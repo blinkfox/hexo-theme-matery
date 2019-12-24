@@ -60,7 +60,7 @@
                     <%= min2read(page.content) %> <%= __('Minutes') %>
                 </div>
                 <% } %>
-				
+
                 <% if (theme.postInfo.readCount && theme.busuanziStatistics && theme.busuanziStatistics.enable) { %>
                     <div id="busuanzi_container_page_pv" class="info-break-policy">
                         <i class="far fa-eye fa-fw"></i><%- __('readCount') %>:&nbsp;&nbsp;
@@ -68,7 +68,7 @@
                     </div>
 				<% } %>
             </div>
-            
+
         </div>
         <hr class="clearfix">
         <div class="card-content article-card-content">
@@ -156,8 +156,8 @@
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + '<%- __("from")  %>: <%- config.title %><br />'
-            + '<%- __("author")  %>: <%- config.author %><br />'
+            + '<%- __("from")  %>: <%= config.title %><br />'
+            + '<%- __("author")  %>: <%= config.author %><br />'
             + '<%- __("link")  %>: <a href="' + url + '">' + url + '</a><br />'
             + '<%- theme.copyright.description %>';
 
@@ -174,7 +174,7 @@
 <% if (theme.code.lang) { %>
 <script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
 <% } %>
-    
+
 <!-- 代码块复制 -->
 <% if (theme.code.copy) { %>
 <script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
