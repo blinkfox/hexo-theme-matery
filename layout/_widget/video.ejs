@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<%- theme.libs.css.dplayer %>">
+<link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- theme.libs.css.dplayer %>">
 <div class="video-player">
     <% if (theme.video.showTitle) { %>
     <div class="title center-align">
@@ -13,7 +13,7 @@
     </div>
 </div>
 
-<script src="<%- theme.libs.js.dplayer %>"></script>
+<script src="<%- theme.jsDelivr.url %><%- theme.libs.js.dplayer %>"></script>
 <script>
     $(function () {
         new DPlayer({

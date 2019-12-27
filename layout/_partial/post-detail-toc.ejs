@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<%- theme.libs.css.tocbot %>">
+<link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- theme.libs.css.tocbot %>">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -112,7 +112,7 @@
 </div>
 <% } %>
 
-<script src="<%- theme.libs.js.tocbot %>"></script>
+<script src="<%- theme.jsDelivr.url %><%- theme.libs.js.tocbot %>"></script>
 <script>
     $(function () {
         tocbot.init({

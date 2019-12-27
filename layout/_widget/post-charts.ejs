@@ -28,7 +28,7 @@
     </div>
 </div>
 
-<script type="text/javascript" src="<%- theme.libs.js.echarts %>"></script>
+<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- theme.libs.js.echarts %>"></script>
 <script>
     let postsChart = echarts.init(document.getElementById('posts-chart'));
     let categoriesChart = echarts.init(document.getElementById('categories-chart'));
