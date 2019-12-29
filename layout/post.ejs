@@ -1,5 +1,5 @@
 <% if (theme.verifyPassword.enable) { %>
-<script src="<%- theme.libs.js.crypto %>"></script>
+<script src="<%- theme.jsDelivr.url %><%- theme.libs.js.crypto %>"></script>
 <script>
     (function() {
         let pwd = '<%- page.password %>';

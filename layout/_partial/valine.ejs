@@ -243,8 +243,8 @@
     </div>
 </div>
 
-<script src="/libs/valine/av-min.js"></script>
-<script src="<%- theme.libs.js.valine %>"></script>
+<script src="<%- theme.jsDelivr.url %>/libs/valine/av-min.js"></script>
+<script src="<%- theme.jsDelivr.url %><%- theme.libs.js.valine %>"></script>
 <script>
     new Valine({
         el: '#vcomments',

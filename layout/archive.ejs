@@ -68,14 +68,14 @@
                         <a href="<%- url_for(post.path) %>">
                             <div class="card-image">
                                 <% if (post.img) { %>
-                                <img src="<%= post.img %>" class="responsive-img" alt="<%- post.title %>">
+                                <img src="<%- theme.jsDelivr.url %><%= post.img %>" class="responsive-img" alt="<%- post.title %>">
                                 <% } else { %>
                                 <%
                                     var len = featureImages.length;
                                     var num = Math.abs(hashCode(post.title) % len);
                                     featureimg = featureImages[num];
                                 %>
-                                <img src="<%= featureimg %>" class="responsive-img" alt="<%- post.title %>">
+                                <img src="<%- theme.jsDelivr.url %><%= featureimg %>" class="responsive-img" alt="<%- post.title %>">
                                 <% } %>
                                 <span class="card-title"><%- post.title %></span>
                             </div>

@@ -11,7 +11,7 @@ var gallery = theme.myGallery.data;
         <% Object.keys(gallery).forEach(function(photo) { %>
         <div class="photo col s12 m6 l4" data-aos="fade-up">
             <div class="img-item" data-src="<%- gallery[photo] %>">
-                <img src="<%- gallery[photo] %>" class="responsive-img">
+                <img src="<%- theme.jsDelivr.url %><%- gallery[photo] %>" class="responsive-img">
             </div>
         </div>
         <% }); %>

@@ -2,7 +2,7 @@
 
     <div class="mobile-head bg-color">
         <% if (theme.logo !== undefined && theme.logo.length > 0) { %>
-        <img src="<%= theme.logo %>" class="logo-img circle responsive-img">
+        <img src="<%- theme.jsDelivr.url %><%= theme.logo %>" class="logo-img circle responsive-img">
         <% } %>
         <div class="logo-name"><%- config.title %></div>
         <div class="logo-desc">
@@ -21,6 +21,7 @@
         menuMap.set("Categories", "分类");
         menuMap.set("Archives", "归档");
         menuMap.set("About", "关于");
+        menuMap.set("Contact", "留言板");
         menuMap.set("Friends", "友情链接");
     %>
 

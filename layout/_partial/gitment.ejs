@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="/libs/gitment/gitment-default.css">
-<link rel="stylesheet" href="/css/gitment.css">
+<link rel="stylesheet" href="<%- theme.jsDelivr.url %>/libs/gitment/gitment-default.css">
+<link rel="stylesheet" href="<%- theme.jsDelivr.url %>/css/gitment.css">
 
 <div class="gitment-card card" data-aos="fade-up">
     <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
@@ -9,7 +9,7 @@
     <div id="gitment-content" class="card-content"></div>
 </div>
 
-<script src="/libs/gitment/gitment.js"></script>
+<script src="<%- theme.jsDelivr.url %>/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
     id: '<%= page.date %>',

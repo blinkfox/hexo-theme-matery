@@ -1,10 +1,10 @@
-<link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<link rel="stylesheet" type="text/css" href="<%- theme.jsDelivr.url %>/libs/share/css/share.min.css">
 
 <div id="article-share">
     
     <% if (theme.sharejs.enable) { %>
     <div class="social-share" data-sites="<%- theme.sharejs.sites %>" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/libs/share/js/social-share.min.js"></script>
+    <script src="<%- theme.jsDelivr.url %>/libs/share/js/social-share.min.js"></script>
     <% } %>
 
     <% if (theme.addthis.enable) { %>
