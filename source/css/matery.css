@@ -1298,6 +1298,7 @@ thead {
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 0 3px 5px rgba(0, 0, 0, .12);
+    z-index: 0;
 }
 
 .chip-container .chip:hover {
