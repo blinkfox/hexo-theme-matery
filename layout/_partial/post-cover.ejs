@@ -18,11 +18,11 @@ if (page.img) {
 
     var len = theme.featureImages.length;
     var num = Math.abs(hashCode(page.title) % len);
-    featureimg = theme.featureImages[num];
+    featureimg = theme.jsDelivr.url + theme.featureImages[num];
 }
 %>
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('<%- theme.jsDelivr.url %><%- featureimg %>')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('<%- featureimg %>')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
