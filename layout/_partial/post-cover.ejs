@@ -18,7 +18,7 @@ if (page.img) {
 
     var len = theme.featureImages.length;
     var num = Math.abs(hashCode(page.title) % len);
-    featureimg = theme.jsDelivr.url + theme.featureImages[num];
+    featureimg = theme.jsDelivr.url? theme.jsDelivr.url+ theme.featureImages[num]:theme.featureImages[num];
 }
 %>
 
