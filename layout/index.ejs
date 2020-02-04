@@ -76,7 +76,7 @@
 
                                 var len = featureImages.length;
                                 var num = Math.abs(hashCode(post.title) % len);
-                                featureimg = theme.jsDelivr.url + featureImages[num];
+                                featureimg = featureImages[num];
                             %>
                             <img src="<%- theme.jsDelivr.url %><%- featureimg %>" class="responsive-img" alt="<%- post.title %>">
                             <% } %>
