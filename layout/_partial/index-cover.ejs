@@ -135,13 +135,35 @@ var coverPostsCount = coverPosts.length;
 </div>
 
 <script>
+    // TODO 此处的轮播尚需优化，PC/Mobile 在触摸切换时都感觉相当不灵活
     $(function () {
         let coverSlider = $('.carousel');
+
+        //用户触摸轮播自动 restartPlay 是否生效
+        let initUserPressedOrDraggedActive = false
+
+        //用户触摸轮播自动 restartPlay
+        function initUserPressedOrDragged(instance) {
+            setInterval(() => {
+                if (instance.pressed || instance.dragged) {
+                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
+                    restartPlay()
+                }
+            }, 1000)
+        }
+
         coverSlider.carousel({
             duration: Number('<%- theme.cover.duration %>'),
             fullWidth: true,
-            indicators: '<%- theme.cover.showIndicators %>' === 'true'
-        });
+            indicators: '<%- theme.cover.showIndicators %>' === 'true',
+            onCycleTo() {
+                if (!initUserPressedOrDraggedActive) {
+                    // console.log('initUserPressedOrDraggedActive')
+                    initUserPressedOrDragged(this)
+                    initUserPressedOrDraggedActive = true
+                }
+            },
+        })
 
         let carouselIntervalId;
         <% if (theme.cover.autoLoop) { %>
@@ -154,7 +176,7 @@ var coverPostsCount = coverPosts.length;
         autoCarousel();
         <% } %>
 
-        let restartPlay = function () {
+        function restartPlay() {
             <% if (theme.cover.autoLoop) { %>
             clearInterval(carouselIntervalId);
             autoCarousel();
