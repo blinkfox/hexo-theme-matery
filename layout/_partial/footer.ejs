@@ -1,4 +1,7 @@
 <footer class="page-footer bg-color">
+    <%if(theme.music.enable&&theme.music.fixed){ %>
+        <%- partial('_widget/music') %>
+    <% } %>
     <div class="container row center-align" style="margin-bottom: <% if (theme.time.enable) { %>15<% } else { %>0<% } %>px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
