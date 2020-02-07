@@ -26,7 +26,7 @@
 - Integrated [Busuanzi Statistics](http://busuanzi.ibruce.info/), `Google Analytics` and post word count statistics.
 - Support music playback and video playback on the homepage
 - Support the `emoji` emoticon and use the `markdown emoji` grammar to directly generate the corresponding emoticon.
-- Support [DaoVoice](http://www.daovoice.io/)、[Tidio](https://www.tidio.com/) online chat.
+- Support [DaoVoice](http://www.daovoice.io/), [Tidio](https://www.tidio.com/) online chat.
 
 ## Contributor
 
@@ -56,7 +56,7 @@ Modify the value of `theme` in `_config.yml` of Hexo's root folder: `theme: hexo
 #### Suggestions for other changes to the `_config.yml`:
  
 - Please modify the value of `url` of `_config.yml` to your website's main `URL` (eg `http://xxx.github.io`).
-- Recommended modify the value of the two 'per_page` to be a multiple of `6`, such as: `12`, `18`, etc. so that the posts list can be displayed well under each screen.
+- Recommended modify the value of the two `per_page` to be a multiple of `6`, such as: `12`, `18`, etc. so that the posts list can be displayed well under each screen.
 - If you are a Chinese user, it is recommended to change the value of `language` to `zh-CN`.
 
 ### new categories page
@@ -257,13 +257,13 @@ menu:
 
 ### Code highlight
 
-Hexo theme uses Hexo's plugin[hexo-prism-plugin](https://github.com/ele828/hexo-prism-plugin) to show the code highlight instead of its own theme.The Installation commands are as follows:
+Hexo theme uses Hexo's plugin [hexo-prism-plugin](https://github.com/ele828/hexo-prism-plugin) to show the code highlight instead of its own theme.The Installation commands are as follows:
 
 ```bash
 npm i -S hexo-prism-plugin
 ```
 
-Then,modify the value of `highlight.enable` to `false` in `_config.yml` file of Hexo root folder，and add the configuration of `prism` plugin as follows:
+Then,modify the value of `highlight.enable` to `false` in `_config.yml` file of Hexo root folder, and add the configuration of `prism` plugin as follows:
 
 ```yaml
 highlight:
@@ -278,7 +278,7 @@ prism_plugin:
 
 ### Search
 
-The theme uses the Hexo plugin[hexo-generator-search](https://github.com/wzpan/hexo-generator-search) to search the content,and the Installation commands are as follows:
+The theme uses the Hexo plugin [hexo-generator-search](https://github.com/wzpan/hexo-generator-search) to search the content,and the Installation commands are as follows:
 
 ```bash
 npm install hexo-generator-search --save
@@ -294,7 +294,7 @@ search:
 
 ### Translate Chinese Link to Pinyin (Recommend)
 
-Defualt permalinks of Hexo will include Chinese if your atrticle's title is Chinese.But it's adverse to `SEO`,and `gitment` comments don't suport Chinese Link as well.We can use the [hexo-permalink-pinyin](https://github.com/viko16/hexo-permalink-pinyin) of Hexo plugin to generate permalinks of Chinese Pinyin  when generating posts.
+Defualt permalinks of Hexo will include Chinese if your atrticle's title is Chinese. But it's adverse to `SEO`, and `gitment` comments don't suport Chinese Link as well. We can use the [hexo-permalink-pinyin](https://github.com/viko16/hexo-permalink-pinyin) of Hexo plugin to generate permalinks of Chinese Pinyin when generating posts.
 
 Installation commands are as follows：
 
@@ -302,7 +302,7 @@ Installation commands are as follows：
 npm i hexo-permalink-pinyin --save
 ```
 
-Add such configurations in `_config.yml` file of  Hexo:
+Add such configurations in `_config.yml` file of Hexo:
 
 ```yaml
 permalink_pinyin:
@@ -310,7 +310,7 @@ permalink_pinyin:
   separator: '-' # default: '-'
 ```
 
-> **Note*:[hexo-abbrlink](https://github.com/rozbo/hexo-abbrlink) can genarate non-Chinese link in addtion to this plugin.
+> **Note**: [hexo-abbrlink](https://github.com/rozbo/hexo-abbrlink) can genarate non-Chinese link in addtion to this plugin.
 
 ### Post word count statistics plugin (Recommend)
 
@@ -336,7 +336,7 @@ postInfo:
 
 ### Add emoji support (Optional)
 
-This theme adds support for the `emoji` emoticon, using the Hexo plugin for [hexo-filter-github-emojis] (https://npm.taobao.org/package/hexo-filter-github-emojis) to support The generation of the `emoji` expression, the corresponding `markdown emoji` syntax (`::`, for example: `:smile:`) is converted into a `emoji` expression that jumps. The installation command is as follows:
+This theme adds support for the `emoji` emoticon, using the Hexo plugin for [hexo-filter-github-emojis](https://npm.taobao.org/package/hexo-filter-github-emojis) to support the generation of the `emoji` expression, the corresponding `markdown emoji` syntax (`::`, for example: `:smile:`) is converted into a `emoji` expression that jumps. The installation command is as follows:
 
 ```bash
 npm install hexo-filter-github-emojis --save
@@ -353,11 +353,11 @@ githubEmojis:
   customEmojis:
 ```
 
-Execute `hexo clean && hexo g` to regenerate the blog file, and then  you can see the expression you wrote in the `emoji` grammar in the corresponding position in the article.
+Execute `hexo clean && hexo g` to regenerate the blog file, and then you can see the expression you wrote in the `emoji` grammar in the corresponding position in the article.
 
 ### Add RSS feed support (Optional)
 
-The theme uses the Hexo plugin[hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) to support `RSS` feed , and the Installation commands are as follows:
+The theme uses the Hexo plugin [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) to support `RSS` feed , and the Installation commands are as follows:
 
 ```bash
 npm install hexo-generator-feed --save
@@ -403,7 +403,7 @@ In the theme `_config.yml` file, the configurations of `QQ`, `GitHub` and mailbo
 <% } %>
 ```
 
-You can search social icon such as `fab fa-github` in [Font Awesome](https://fontawesome.com/icons).There are common social icons you can reference:
+You can search social icon such as `fab fa-github` in [Font Awesome](https://fontawesome.com/icons). There are common social icons you can reference:
 
 - Facebook: `fab fa-facebook`
 - Twitter: `fab fa-twitter`
