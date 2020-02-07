@@ -1,36 +1,27 @@
-<%
-var audiosJson = JSON.stringify(site.data.musics);
-%>
-
 <link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- theme.libs.css.aplayer %>">
-<div class="<% if (theme.music.enable && !theme.music.fixed) { %>music-player<% } %>">
-    <% if (theme.music.showTitle) { %>
-    <div class="title center-align">
-        <i class="fas fa-music"></i>&nbsp;&nbsp;<%- theme.music.title %>
-    </div>
-    <% } %>
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s12">
-            <div id="aplayer" class="music"></div>
+<div class="<% if(!theme.music.fixed) { %>music-player<% } %>">
+    <% if (!theme.music.fixed && theme.music.title.enable) { %>
+        <div class="title center-align">
+            <i class="fas fa-music"></i>&nbsp;&nbsp;<%- theme.music.title.show %>
         </div>
+    <% } %> x
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="<%- theme.music.server%>"
+                   type="<%- theme.music.type%>"
+                   id="<%- theme.music.id%>"
+                   fixed='<%- theme.music.fixed ? 'true':'false' %>'
+                   autoplay='<%- theme.music.autoplay === 'true' %>'
+                   theme:='<%- theme.music.theme %>'
+                   loop='<%- theme.music.loop %>'
+                   order='<%- theme.music.order %>'
+                   preload='<%- theme.music.preload %>'
+                   volume='<%- Number(theme.music.volume) %>'
+                   list-folded='<%- theme.music.listFolded? 'true':'false' %>'
+        >
+        </meting-js>
     </div>
 </div>
 
 <script src="<%- theme.jsDelivr.url %><%- theme.libs.js.aplayer %>"></script>
-<script>
-$(function () {
-    new APlayer({
-        container: document.getElementById('aplayer'),
-        fixed: '<%- theme.music.fixed %>' === 'true',
-        autoplay: '<%- theme.music.autoplay %>' === 'true',
-        theme: '<%- theme.music.theme %>',
-        loop: '<%- theme.music.loop %>',
-        order: '<%- theme.music.order %>',
-        preload: '<%- theme.music.preload %>',
-        volume: Number('<%- theme.music.volume %>'),
-        listFolded: '<%- theme.music.listFolded %>' === 'true',
-        listMaxHeight: '<%- theme.music.listMaxHeight %>',
-        audio: eval(<%- audiosJson %>)
-    });
-});
-</script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>

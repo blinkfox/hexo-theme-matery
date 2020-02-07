@@ -7,8 +7,8 @@
 <main class="content">
 
     <% if (page.current === 1
-            && (theme.dream.enable || (theme.music.enable && !theme.music.fixed))
-                    || theme.video.enable || theme.recommend.enable) { %>
+            && ((theme.dream.enable || theme.music.enable)
+                    || theme.video.enable || theme.recommend.enable)) { %>
     <div id="indexCard" class="index-card">
         <div class="container ">
             <div class="card">
@@ -17,9 +17,9 @@
                         <%- partial('_widget/dream') %>
                     <% } %>
 
-                    <% if (theme.music.enable && site.data && site.data.musics && !theme.music.fixed) { %>
+                    <% if (theme.music.enable && !theme.music.fixed) { %>
                         <%- partial('_widget/music') %>
-                    <% } %>
+                        <% } %>
 
                     <% if (theme.video.enable) { %>
                         <%- partial('_widget/video') %>
@@ -34,12 +34,7 @@
             </div>
         </div>
     </div>
-    <% } %>
-
-    <% if (page.current === 1 && theme.music.enable
-            && site.data && site.data.musics && theme.music.fixed) { %>
-        <%- partial('_widget/music') %>
-    <% } %>
+    <% }%>
 
     <%
     var hashCode = function (str) {
