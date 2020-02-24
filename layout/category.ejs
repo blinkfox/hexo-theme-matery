@@ -27,7 +27,7 @@
                     <a href="<%- url_for(post.path) %>">
                         <div class="card-image tag-image">
                             <% if (post.img) { %>
-                            <img src="<%- theme.jsDelivr.url %><%= post.img %>" class="responsive-img" alt="<%- post.title %>">
+                            <img src="<%= post.img %>" class="responsive-img" alt="<%- post.title %>">
                             <% } else { %>
                             <%
                                 var len = theme.featureImages.length;
