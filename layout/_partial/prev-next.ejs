@@ -26,7 +26,7 @@ var featureImages = theme.featureImages;
                 <a href="<%- url_for(page.prev.path) %>">
                     <div class="card-image">
                         <% if (page.prev.img) { %>
-                        <img src="<%- theme.jsDelivr.url %><%= page.prev.img %>" class="responsive-img" alt="<%- page.prev.title %>">
+                        <img src="<%= page.prev.img %>" class="responsive-img" alt="<%- page.prev.title %>">
                         <% } else { %>
                         <%
                             var len = featureImages.length;
@@ -88,7 +88,7 @@ var featureImages = theme.featureImages;
                 <a href="<%- url_for(page.path) %>">
                     <div class="card-image">
                         <% if (page.img) { %>
-                        <img src="<%- theme.jsDelivr.url %><%= page.img %>" class="responsive-img" alt="<%- page.title %>">
+                        <img src="<%= page.img %>" class="responsive-img" alt="<%- page.title %>">
                         <% } else { %>
                         <%
                             var len = featureImages.length;
@@ -152,7 +152,7 @@ var featureImages = theme.featureImages;
                 <a href="<%- url_for(page.next.path) %>">
                     <div class="card-image">
                         <% if (page.next.img) { %>
-                        <img src="<%- theme.jsDelivr.url %><%= page.next.img %>" class="responsive-img" alt="<%- page.next.title %>">
+                        <img src="<%= page.next.img %>" class="responsive-img" alt="<%- page.next.title %>">
                         <% } else { %>
                         <%
                             var len = featureImages.length;
@@ -214,7 +214,7 @@ var featureImages = theme.featureImages;
                 <a href="<%- url_for(page.path) %>">
                     <div class="card-image">
                         <% if (page.img) { %>
-                        <img src="<%- theme.jsDelivr.url %><%= page.img %>" class="responsive-img" alt="<%- page.title %>">
+                        <img src="<%= page.img %>" class="responsive-img" alt="<%- page.title %>">
                         <% } else { %>
                         <%
                             var len = featureImages.length;
