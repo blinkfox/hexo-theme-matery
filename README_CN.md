@@ -141,7 +141,7 @@ layout: "contact"
 
 ### 新建友情链接 friends 页（可选的）
 
-`friends` 页是用来展示**友情连接**信息的页面，如果在你的博客 `source` 目录下还没有 `friends/index.md` 文件，那么你就需要新建一个，命令如下：
+`friends` 页是用来展示**友情链接**信息的页面，如果在你的博客 `source` 目录下还没有 `friends/index.md` 文件，那么你就需要新建一个，命令如下：
 
 ```bash
 hexo new page "friends"
