@@ -54,7 +54,7 @@ git clone https://github.com/blinkfox/hexo-theme-matery.git
 Modify the value of `theme` in `_config.yml` of Hexo's root folder: `theme: hexo-theme-matery`.
 
 #### Suggestions for other changes to the `_config.yml`:
- 
+
 - Please modify the value of `url` of `_config.yml` to your website's main `URL` (eg `http://xxx.github.io`).
 - Recommended modify the value of the two `per_page` to be a multiple of `6`, such as: `12`, `18`, etc. so that the posts list can be displayed well under each screen.
 - If you are a Chinese user, it is recommended to change the value of `language` to `zh-CN`.
@@ -421,49 +421,37 @@ You can search social icon such as `fab fa-github` in [Font Awesome](https://fon
 
 ### Configure music player (optional)
 
-To support music playing, you must activate the file of music playing configuration and music data.
-
-First, create a new `musics.json` file in the `_data` directory (new if you don't have one) of your blog's `source` directory. The contents of the file are as follows:
-
-```json
-[{
-	"name": "五月雨变奏电音",
-	"artist": "AnimeVibe",
-	"url": "http://xxx.com/music1.mp3",
-	"cover": "http://xxx.com/music-cover1.png"
-}, {
-	"name": "Take me hand",
-	"artist": "DAISHI DANCE,Cecile Corbel",
-	"url": "/medias/music/music2.mp3",
-	"cover": "/medias/music/cover2.png"
-}, {
-	"name": "Shape of You",
-	"artist": "J.Fla",
-	"url": "http://xxx.com/music3.mp3",
-	"cover": "http://xxx.com/music-cover3.png"
-}]
-```
-
-> **Note**: The properties in the above JSON: `name`, `artist`, `url`, `cover` indicate the name of the music, the author, the music file address, and the music cover, respectively.
-
-Then, activate the configuration in the theme's `_config.yml` configuration file:
+To support music playing, you just need activate the `_config.yml` file of music playing configuration.
 
 ```yaml
-# Whether to display the musics.
+# Whether to display the musics
 music:
   enable: true
-  showTitle: false
-  title: Listen to music
-  fixed: false # enable fixed mode
-  autoplay: false # audio autoplay
+  title: 		   # non-fixed mode works
+    enable: true
+    show: Listen to music
+  server: netease   # require music platform: netease, tencent, kugou, xiami, baidu
+  type: playlist    # require song, playlist, album, search, artist
+  id: 503838841     # require song id / playlist id / album id / search keyword
+  fixed: false      # enable fixed mode
+  autoplay: false   # audio atuoplay
   theme: '#42b983'
-  loop: 'all' # player loop play, values: 'all', 'one', 'none'
-  order: 'list' # player play order, values: 'list', 'random'
-  preload: 'auto' # values: 'none', 'metadata', 'auto'
-  volume: 0.7 # default volume, notice that player will remember user setting, default volume will not work after user set volume themselves
-  listFolded: false # indicate whether list should folded at first
-  listMaxHeight: # list max height
+  loop: 'all'       # player loop play, values: 'all', 'one', 'none'
+  order: 'random'   # player play order, values: 'list', 'random'
+  preload: 'auto'   # values: 'none', 'metadata', 'auto'
+  volume: 0.7       # default volume, notice that player will remember user setting, default volume will not work after user set volume themselves
+  listFolded: true  # indicate whether list should folded at first
 ```
+
+>`server` values :  `netease` (NetEase  cloud music) , `tencent` (QQMusic) , `kugou` (KuGouMusic) , `xiami` 
+>
+>(XiamMusic) , `baidu` (BaiduMusic)
+>
+>`type` values : `song`  ,   `playlist` , `album` , `search` , `artist` 
+>
+>For example to get the `id`:open NetEase cloud music in the browser , click the playlist of my love , there will a string of 
+>
+>numbers ,  the `playlist`\`s `id` just is the number.
 
 ## Post Front-matter
 
