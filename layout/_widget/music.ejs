@@ -7,17 +7,17 @@
     <% } %>
     <div class="row">
         <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="<%- theme.music.server%>"
-                   type="<%- theme.music.type%>"
-                   id="<%- theme.music.id%>"
-                   fixed='<%- theme.music.fixed ? 'true':'false' %>'
+                   server="<%- theme.music.server %>"
+                   type="<%- theme.music.type %>"
+                   id="<%- theme.music.id %>"
+                   fixed='<%- theme.music.fixed ? 'true' : 'false' %>'
                    autoplay='<%- theme.music.autoplay === true %>'
-                   theme:='<%- theme.music.theme %>'
+                   theme='<%- theme.music.theme %>'
                    loop='<%- theme.music.loop %>'
                    order='<%- theme.music.order %>'
                    preload='<%- theme.music.preload %>'
                    volume='<%- Number(theme.music.volume) %>'
-                   list-folded='<%- theme.music.listFolded? 'true':'false' %>'
+                   list-folded='<%- theme.music.listFolded ? 'true' : 'false' %>'
         >
         </meting-js>
     </div>
