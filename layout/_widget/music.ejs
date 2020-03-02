@@ -11,6 +11,7 @@
         color: <%- theme.music.theme %>;
     }
 
+    <%if(theme.music.autoHide){%>
     .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
         left: -66px !important;
     }
@@ -18,6 +19,8 @@
     .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
         left: 0px !important;
     }
+
+    <%}%>
 </style>
 <div class="<% if(!theme.music.fixed) { %>music-player<% } %>">
     <% if (!theme.music.fixed && theme.music.title.enable) { %>

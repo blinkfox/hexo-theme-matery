@@ -76,8 +76,9 @@ music:
   title: #非吸底模式有效
     enable: true
     show: 听听音乐
+  autoHide: true    # hide automaticaly
   server: netease   #require	music platform: netease, tencent, kugou, xiami, baidu
-  type: playlist	#require song, playlist, album, search, artist
+  type: playlist    #require song, playlist, album, search, artist
   id: 503838841     #require	song id / playlist id / album id / search keyword
   fixed: true       # 开启吸底模式
   autoplay: false   # 是否自动播放
