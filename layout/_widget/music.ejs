@@ -1,4 +1,24 @@
 <link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- theme.libs.css.aplayer %>">
+<style>
+    .aplayer .aplayer-lrc p {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        font-size: 15px;
+        color: <%- theme.music.theme %>;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+</style>
 <div class="<% if(!theme.music.fixed) { %>music-player<% } %>">
     <% if (!theme.music.fixed && theme.music.title.enable) { %>
         <div class="title center-align">
