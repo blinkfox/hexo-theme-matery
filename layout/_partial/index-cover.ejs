@@ -30,7 +30,7 @@
     }
 
     .carousel-control:hover {
-        background-color:rgba(0, 0, 0, .4);
+        background-color: rgba(0, 0, 0, .4);
     }
 
     .carousel-control i {
@@ -105,8 +105,14 @@ var coverPostsCount = coverPosts.length;
         <% for (var i = 0; i < coverPostsCount; i++) { %>
             <%
                 var post = coverPosts[i];
-                var coverImg = post.coverImg ? post.coverImg
-                        : (post.img ? post.img : featureImages[Math.abs(hashCode(post.title) % imgCount)]);
+                var featureImage = featureImages[Math.abs(hashCode(post.title) % imgCount)];
+                var coverImg = post.coverImg ?
+                        post.coverImg : (post.img ?
+                                        post.img : (theme.jsDelivr.url ?
+                                                        theme.jsDelivr.url + featureImage : featureImage
+                                        )
+                        )
+                ;
             %>
             <div class="carousel-item amber white-text carousel-post bg-cover"
                  style="background-image: url('<%- coverImg %>');">
@@ -122,7 +128,8 @@ var coverPostsCount = coverPosts.length;
                                 <% } %>
                             </div>
                             <div class="cover-btns">
-                                <a href="<%- url_for(post.path) %>" class="waves-effect waves-light btn" target="_blank">
+                                <a href="<%- url_for(post.path) %>" class="waves-effect waves-light btn"
+                                   target="_blank">
                                     <i class="icon fa fa-eye fa-fw"></i><%- __('readMore') %>
                                 </a>
                             </div>
@@ -168,7 +175,7 @@ var coverPostsCount = coverPosts.length;
         let carouselIntervalId;
         <% if (theme.cover.autoLoop) { %>
         // Loop to call the next cover article picture.
-        let autoCarousel = function() {
+        let autoCarousel = function () {
             carouselIntervalId = setInterval(function () {
                 coverSlider.carousel('next');
             }, <%- theme.cover.intervalTime %>);
