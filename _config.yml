@@ -76,8 +76,9 @@ music:
   title: #非吸底模式有效
     enable: true
     show: 听听音乐
+  autoHide: true    # hide automaticaly
   server: netease   #require	music platform: netease, tencent, kugou, xiami, baidu
-  type: playlist	#require song, playlist, album, search, artist
+  type: playlist    #require song, playlist, album, search, artist
   id: 503838841     #require	song id / playlist id / album id / search keyword
   fixed: true       # 开启吸底模式
   autoplay: false   # 是否自动播放
@@ -518,8 +519,8 @@ icp:
   text: # 备案信息
 
 # CDN访问加速 
-# 第一次使用本功能，一定要先配置url，再`hexo cl&&hexo g&&hexo d`部署到GitHub的仓库，注意！必须是GitHub的仓库！
-# 如果必须要使用国内的coding或者gittee，可以采用双部署，同时将网站部署到两个仓库（其中一个必须是GitHub的仓库）
+# 第一次使用本功能，一定要先配置url，再`hexo cl && hexo g && hexo d`部署到GitHub的仓库，注意！必须是GitHub的仓库！
+# 如果必须要使用国内的coding或者gitee，可以采用双部署，同时将网站部署到两个仓库（其中一个必须是GitHub的仓库）
 # URL配置规则（例子如下）： https://cdn.jsdelivr.net/gh/你的GitHub用户名/你的仓库名
 # 如果想关闭此功能，将 url地址 注释或删除即可！
 #
