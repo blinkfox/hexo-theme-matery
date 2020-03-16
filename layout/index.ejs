@@ -68,10 +68,14 @@
                                 if (!featureImages || featureImages.length == 0) {
                                     return featureimg;
                                 }
-
                                 var len = featureImages.length;
                                 var num = Math.abs(hashCode(post.title) % len);
-                                featureimg = theme.jsDelivr.url? theme.jsDelivr.url+ theme.featureImages[num]:theme.featureImages[num];
+                                var num = Math.abs(hashCode(post.title) % len);
+                                if (theme.jsDelivr.url !== '') { 
+                                    featureimg = featureImages[num] ;
+                                } else if (config.root == ''|| config.root == '/') { 
+                                    featureimg =  config.root + featureImages[num];
+                                } 
                             %>
                             <img src="<%- theme.jsDelivr.url %><%- featureimg %>" class="responsive-img" alt="<%- post.title %>">
                             <% } %>
