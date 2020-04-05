@@ -1,0 +1,32 @@
+<style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="<%- theme.libs.js.minivaline %>"></script>
+<script>
+	new MiniValine({
+		el: '#vcomments',
+		appId: '<%- theme.minivaline.appId %>',
+		appKey: '<%- theme.minivaline.appKey %>',
+		placeholder: '<%= theme.minivaline.placeholder %>',
+		lang: '<%= theme.minivaline.lang %>',
+		adminEmailMd5: '<%= theme.minivaline.adminEmailMd5 %>',
+		math: <%= theme.minivaline.math %>,
+		md: <%= theme.minivaline.md %>,
+   });
+</script>
