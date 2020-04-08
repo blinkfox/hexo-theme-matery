@@ -2,7 +2,7 @@
 
     <div class="mobile-head bg-color">
         <% if (theme.logo !== undefined && theme.logo.length > 0) { %>
-        <img src="<%- theme.jsDelivr.url %><%= theme.logo %>" class="logo-img circle responsive-img">
+        <img src="<%- theme.jsDelivr.url %><%- config.root %><%- theme.logo %>" class="logo-img circle responsive-img">
         <% } %>
         <div class="logo-name"><%- config.title %></div>
         <div class="logo-desc">

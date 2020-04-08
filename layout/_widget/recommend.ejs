@@ -50,7 +50,15 @@
     <%
         var post = topPosts[i];
         var num = Math.abs(hashCode(post.title) % imgCount);
-        var featureImg = post.img ? post.img : (config.root ? config.root + featureImages[num] : featureImages[num]);
+        var featureImg = featureImages[0];
+        var img = post.img;
+        if (img) {
+            featureImg = img.startsWith('http://') || img.startsWith('https://') || img.startsWith('//')
+                    ? img
+                    : config.root + img;
+        } else {
+             featureImg = config.root + featureImages[num];
+        }
         var bgColor = bgColorArr[i % colorCount];
     %>
     <div class="col s12 m6" <% if (i > 1) { %>data-aos="zoom-in-up"<% } %>>
@@ -93,7 +101,15 @@
             description = post.summary;
         }
         var num = Math.abs(hashCode(post.title) % imgCount);
-        var featureImg = post.img ? post.img : (config.root ? config.root + featureImages[num] : featureImages[num]);
+        var featureImg = featureImages[0];
+        var img = post.img;
+        if (img) {
+            featureImg = img.startsWith('http://') || img.startsWith('https://') || img.startsWith('//')
+                    ? img
+                    : config.root + img;
+        } else {
+             featureImg = config.root + featureImages[num];
+        }
         var bgColor = bgColorArr[i % colorCount];
     %>
     <div class="col <%- grid %>" <% if (i > 0) { %>data-aos="zoom-in-up"<% } %>>

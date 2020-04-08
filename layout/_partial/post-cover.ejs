@@ -1,7 +1,10 @@
 <%
-var featureimg = '/medias/bg.jpg';
+var featureimg = config.root + '/medias/bg.jpg';
 if (page.img) {
-    featureimg = page.img;
+    var img = page.img;
+    featureimg = img.startsWith('http://') || img.startsWith('https://') || img.startsWith('//')
+            ? img
+            : config.root + img;
 } else {
     var hashCode = function (str) {
         if (!str && str.length === 0) {
@@ -18,7 +21,10 @@ if (page.img) {
 
     var len = theme.featureImages.length;
     var num = Math.abs(hashCode(page.title) % len);
-    featureimg = theme.jsDelivr.url? theme.jsDelivr.url+ theme.featureImages[num]:theme.featureImages[num];
+
+    featureimg = theme.jsDelivr.url
+            ? theme.jsDelivr.url + config.root + theme.featureImages[num]
+            : config.root + theme.featureImages[num];
 }
 %>
 

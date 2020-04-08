@@ -11,20 +11,20 @@
     <%- partial('_partial/search') %>
     <%- partial('_partial/back-top') %>
 
-    <script src="<%- theme.jsDelivr.url %><%- theme.libs.js.materialize %>"></script>
-    <script src="<%- theme.jsDelivr.url %><%- theme.libs.js.masonry %>"></script>
-    <script src="<%- theme.jsDelivr.url %><%- theme.libs.js.aos %>"></script>
-    <script src="<%- theme.jsDelivr.url %><%- theme.libs.js.scrollProgress %>"></script>
-    <script src="<%- theme.jsDelivr.url %><%- theme.libs.js.lightgallery %>"></script>
-    <script src="<%- theme.jsDelivr.url %>/js/matery.js"></script>
+    <script src="<%- theme.jsDelivr.url %><%- config.root %><%- theme.libs.js.materialize %>"></script>
+    <script src="<%- theme.jsDelivr.url %><%- config.root %><%- theme.libs.js.masonry %>"></script>
+    <script src="<%- theme.jsDelivr.url %><%- config.root %><%- theme.libs.js.aos %>"></script>
+    <script src="<%- theme.jsDelivr.url %><%- config.root %><%- theme.libs.js.scrollProgress %>"></script>
+    <script src="<%- theme.jsDelivr.url %><%- config.root %><%- theme.libs.js.lightgallery %>"></script>
+    <script src="<%- theme.jsDelivr.url %><%- config.root %>/js/matery.js"></script>
 
     <%- partial('_partial/baidu-analytics') %>
     <%- partial('_partial/baidu-push') %>
     <% if (theme.clicklove.enable) { %>
-    <script src="<%- theme.jsDelivr.url %><%- theme.libs.js.clicklove %>" async="async"></script>
+    <script src="<%- theme.jsDelivr.url %><%- config.root %><%- theme.libs.js.clicklove %>" async="async"></script>
     <% } %>
     <% if (theme.busuanziStatistics && theme.busuanziStatistics.enable) { %>
-    <script async src="<%- theme.jsDelivr.url %><%- theme.libs.js.busuanzi %>"></script>
+    <script async src="<%- theme.jsDelivr.url %><%- config.root %><%- theme.libs.js.busuanzi %>"></script>
     <% } %>
 
     <% if (theme.tidio.enable) { %>
@@ -82,21 +82,21 @@
     <script type="text/javascript" color="<%- theme.canvas_nest.color %>"
         pointColor="<%- theme.canvas_nest.pointColor %>" opacity='<%- theme.canvas_nest.opacity %>'
         zIndex="<%- theme.canvas_nest.zIndex %>" count="<%- theme.canvas_nest.count %>"
-        src="<%- theme.jsDelivr.url %><%- theme.libs.js.canvas_nest %>"></script>
+        src="<%- theme.jsDelivr.url %><%- config.root %><%- theme.libs.js.canvas_nest %>"></script>
     <% } %>
 
     <% if (theme.ribbon.enable) { %>
     <% var ribbonSrc = theme.ribbon.clickChange ? theme.libs.js.ribbon : theme.libs.js.ribbonRefresh; %>
     <script type="text/javascript" size="<%- theme.ribbon.size %>" alpha='<%- theme.ribbon.alpha %>'
-        zIndex="<%- theme.ribbon.zIndex %>" src="<%- theme.jsDelivr.url %><%- ribbonSrc %>" async="async"></script>
+        zIndex="<%- theme.ribbon.zIndex %>" src="<%- theme.jsDelivr.url %><%- config.root %><%- ribbonSrc %>" async="async"></script>
     <% } %>
 
     <% if (theme.ribbon_dynamic.enable) { %>
-    <script type="text/javascript" src="<%- theme.jsDelivr.url %><%- theme.libs.js.ribbon_dynamic %>" async="async"></script>
+    <script type="text/javascript" src="<%- theme.jsDelivr.url %><%- config.root %><%- theme.libs.js.ribbon_dynamic %>" async="async"></script>
     <% } %>
     
     <% if (theme.instantpage.enable) { %>
-    <script src="<%- theme.jsDelivr.url %><%- theme.libs.js.instantpage %>" type="module"></script>
+    <script src="<%- theme.jsDelivr.url %><%- config.root %><%- theme.libs.js.instantpage %>" type="module"></script>
     <% } %>
 
 </body>

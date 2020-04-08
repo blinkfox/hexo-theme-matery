@@ -75,7 +75,7 @@
                                     var num = Math.abs(hashCode(post.title) % len);
                                     featureimg = featureImages[num];
                                 %>
-                                <img src="<%- theme.jsDelivr.url %><%= featureimg %>" class="responsive-img" alt="<%- post.title %>">
+                                <img src="<%- theme.jsDelivr.url %><%- config.root %><%= featureimg %>" class="responsive-img" alt="<%- post.title %>">
                                 <% } %>
                                 <span class="card-title"><%- post.title %></span>
                             </div>

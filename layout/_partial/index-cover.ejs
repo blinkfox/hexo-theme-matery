@@ -113,6 +113,22 @@ var coverPostsCount = coverPosts.length;
                                         )
                         )
                 ;
+
+                var coverImg = post.coverImg;
+                if (coverImg) {
+                    coverImg = coverImg.startsWith('http://') || coverImg.startsWith('https://') || coverImg.startsWith('//')
+                           ? coverImg
+                           : config.root + coverImg;
+                } else if (post.img) {
+                    var img = post.img;
+                    coverImg = img.startsWith('http://') || img.startsWith('https://') || img.startsWith('//')
+                           ? img
+                           : config.root + img;
+                } else if (theme.jsDelivr.url) {
+                    coverImg = theme.jsDelivr.url + featureImage;
+                } else {
+                    coverImg = config.root + featureImage;
+                }
             %>
             <div class="carousel-item amber white-text carousel-post bg-cover"
                  style="background-image: url('<%- coverImg %>');">
