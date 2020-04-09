@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- config.root %><%- theme.libs.css.gitalk %>">
-<link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- config.root %>/css/my-gitalk.css">
+<link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.gitalk) %>">
+<link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- url_for('/css/my-gitalk.css') %>">
 
 <div class="card gitalk-card" data-aos="fade-up">
     <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
@@ -9,7 +9,7 @@
     <div id="gitalk-container" class="card-content"></div>
 </div>
 
-<script src="<%- theme.jsDelivr.url %><%- config.root %><%- theme.libs.js.gitalk %>"></script>
+<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.gitalk) %>"></script>
 <script>
     let gitalk = new Gitalk({
         clientID: '<%- theme.gitalk.oauth.clientId %>',

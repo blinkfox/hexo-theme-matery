@@ -70,12 +70,12 @@ var coverPostsCount = coverPosts.length;
                 </a>
 
                 <% if (theme.indexbtn && theme.indexbtn.enable) { %>
-                    <a href="<%- theme.indexbtn.url %>" class="waves-effect waves-light btn" target="_blank">
-                        <i class="<%- theme.indexbtn.icon %>"></i><%- theme.indexbtn.name %>
+                    <a href="<%- url_for(theme.indexbtn.url) %>" class="waves-effect waves-light btn" target="_blank">
+                        <i class="<%- theme.indexbtn.icon %>"></i><%= theme.indexbtn.name %>
                     </a>
                 <% } else if (theme.githubLink.enable) { %>
                     <a href="<%- theme.githubLink.url %>" class="waves-effect waves-light btn" target="_blank">
-                        <i class="fab fa-github %>"></i><%- theme.githubLink.title %>
+                        <i class="fab fa-github %>"></i><%= theme.githubLink.title %>
                     </a>
                 <% } %>
             </div>
@@ -106,36 +106,22 @@ var coverPostsCount = coverPosts.length;
             <%
                 var post = coverPosts[i];
                 var featureImage = featureImages[Math.abs(hashCode(post.title) % imgCount)];
-                var coverImg = post.coverImg ?
-                        post.coverImg : (post.img ?
-                                        post.img : (theme.jsDelivr.url ?
-                                                        theme.jsDelivr.url + featureImage : featureImage
-                                        )
-                        )
-                ;
 
-                var coverImg = post.coverImg;
-                if (coverImg) {
-                    coverImg = coverImg.startsWith('http://') || coverImg.startsWith('https://') || coverImg.startsWith('//')
-                           ? coverImg
-                           : config.root + coverImg;
+                var coverImg;
+                if (post.coverImg) {
+                    coverImg = post.coverImg;
                 } else if (post.img) {
-                    var img = post.img;
-                    coverImg = img.startsWith('http://') || img.startsWith('https://') || img.startsWith('//')
-                           ? img
-                           : config.root + img;
-                } else if (theme.jsDelivr.url) {
-                    coverImg = theme.jsDelivr.url + featureImage;
+                    coverImg = post.img;
                 } else {
-                    coverImg = config.root + featureImage;
+                    coverImg = featureImage;
                 }
             %>
             <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('<%- coverImg %>');">
+                 style="background-image: url('<%- theme.jsDelivr.url %><%- url_for(coverImg) %>');">
                 <div class="container">
                     <div class="row">
                         <div class="col s10 offset-s1">
-                            <div class="title center-align"><%- post.title %></div>
+                            <div class="title center-align"><%= post.title %></div>
                             <div class="description center-align">
                                 <% if (post.summary && post.summary.length > 0) { %>
                                     <%- post.summary %>
@@ -158,7 +144,6 @@ var coverPostsCount = coverPosts.length;
 </div>
 
 <script>
-    // TODO 此处的轮播尚需优化，PC/Mobile 在触摸切换时都感觉相当不灵活
     $(function () {
         let coverSlider = $('.carousel');
 

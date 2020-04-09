@@ -29,7 +29,8 @@ var isCategory = is_category();
                 <% site.categories.map(function(category) { %>
                 <%
                     i++;
-                    var color = i >= colorCount ? colorArr[Math.abs(hashCode(category.name) % colorCount)]
+                    var color = i >= colorCount
+                            ? colorArr[Math.abs(hashCode(category.name) % colorCount)]
                             : colorArr[i - 1];
                 %>
                 <a href="<%- url_for(category.path) %>" title="<%- category.name %>: <%- category.length %>">

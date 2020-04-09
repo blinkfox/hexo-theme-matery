@@ -8,8 +8,8 @@
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = '<%- config.url %>/<%- page.path %>';
-        this.page.identifier = '/<%- page.path %>';
+        this.page.url = '<%- full_url_for(page.path) %>';
+        this.page.identifier = '<%- url_for(page.path) %>';
         this.page.title = '<%= page.title %>';
     };
     let disqus_shortname = '<%= theme.disqus.shortname %>';
@@ -18,7 +18,7 @@
         let d = document, s = d.createElement('script');
         // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
         s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
+        s.setAttribute('data-timestamp', new Date());
         (d.head || d.body).appendChild(s);
     })();
 </script>

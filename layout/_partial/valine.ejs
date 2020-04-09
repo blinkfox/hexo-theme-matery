@@ -9,7 +9,7 @@
 
     #vcomments textarea {
         box-sizing: border-box;
-        background: url("<%- theme.valine.background %>") 100% 100% no-repeat;
+        background: url("<%- url_for(theme.valine.background) %>") 100% 100% no-repeat;
     }
 
     #vcomments p {
@@ -243,8 +243,8 @@
     </div>
 </div>
 
-<script src="<%- theme.jsDelivr.url %><%- config.root %>/libs/valine/av-min.js"></script>
-<script src="<%- theme.jsDelivr.url %><%- config.root %><%- theme.libs.js.valine %>"></script>
+<script src="<%- theme.jsDelivr.url %><%- url_for('/libs/valine/av-min.js') %>"></script>
+<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.valine) %>"></script>
 <script>
     new Valine({
         el: '#vcomments',

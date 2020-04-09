@@ -68,7 +68,6 @@
                     </div>
 				<% } %>
             </div>
-
         </div>
         <hr class="clearfix">
         <div class="card-content article-card-content">
@@ -124,7 +123,7 @@
     <% if (theme.valine && theme.valine.enable) { %>
         <%- partial('_partial/valine') %>
     <% } %>
-	
+
     <% if (theme.minivaline && theme.minivaline.enable) { %>
         <%- partial('_partial/minivaline') %>
     <% } %>
@@ -172,21 +171,21 @@
 <% } %>
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- config.root %>/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for('/libs/codeBlock/codeBlockFuction.js') %>"></script>
 
 <!-- 代码语言 -->
 <% if (theme.code.lang) { %>
-<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- config.root %>/libs/codeBlock/codeLang.js"></script>
+<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for('/libs/codeBlock/codeLang.js') %>"></script>
 <% } %>
 
 <!-- 代码块复制 -->
 <% if (theme.code.copy) { %>
-<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- config.root %>/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for('/libs/codeBlock/codeCopy.js') %>"></script>
 <% } %>
 
 <!-- 代码块收缩 -->
 <% if (theme.code.shrink) { %>
-<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- config.root %>/libs/codeBlock/codeShrink.js"></script>
+<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for('/libs/codeBlock/codeShrink.js') %>"></script>
 <% } %>
 
 <!-- 代码块折行 -->

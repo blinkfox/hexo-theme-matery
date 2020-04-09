@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- config.root %><%- theme.libs.css.tocbot %>">
+<link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.tocbot) %>">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -62,7 +62,7 @@
     #toc-content .toc-link::before {
         background-color: transparent;
         max-height: 25px;
-        
+
         position: absolute;
         right: 23.5vw;
         display: block;
@@ -120,7 +120,7 @@
 </div>
 <% } %>
 
-<script src="<%- theme.jsDelivr.url %><%- config.root %><%- theme.libs.js.tocbot %>"></script>
+<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.tocbot) %>"></script>
 <script>
     $(function () {
         tocbot.init({

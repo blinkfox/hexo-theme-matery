@@ -49,16 +49,7 @@
     <% for (var i = 0; i < topPostsCount; i++) { %>
     <%
         var post = topPosts[i];
-        var num = Math.abs(hashCode(post.title) % imgCount);
-        var featureImg = featureImages[0];
-        var img = post.img;
-        if (img) {
-            featureImg = img.startsWith('http://') || img.startsWith('https://') || img.startsWith('//')
-                    ? img
-                    : config.root + img;
-        } else {
-             featureImg = config.root + featureImages[num];
-        }
+        var featureImg = post.img ? url_for(post.img) : url_for(featureImages[Math.abs(hashCode(post.title) % imgCount)]);
         var bgColor = bgColorArr[i % colorCount];
     %>
     <div class="col s12 m6" <% if (i > 1) { %>data-aos="zoom-in-up"<% } %>>
@@ -66,15 +57,15 @@
             <div class="post-body">
                 <div class="post-categories">
                     <% if (theme.recommend.useConfig) { %>
-                        <a href="<%- post.categoryPath %>" class="category"><%- post.categoryName %></a>
+                        <a href="<%- url_for(post.categoryPath) %>" class="category"><%= post.categoryName %></a>
                     <% } else { %>
                         <% post.categories.forEach(category => { %>
-                            <a href="<%- url_for(category.path) %>" class="category"><%- category.name %></a>
+                            <a href="<%- url_for(category.path) %>" class="category"><%= category.name %></a>
                         <% }); %>
                     <% } %>
                 </div>
                 <a href="<%- url_for(post.path) %>">
-                    <h3 class="post-title"><%- post.title %></h3>
+                    <h3 class="post-title"><%= post.title %></h3>
                 </a>
                 <p class="post-description">
                     <% if (post.summary && post.summary.length > 0) { %>
@@ -100,16 +91,8 @@
         if (post.summary && post.summary.length > 0) {
             description = post.summary;
         }
-        var num = Math.abs(hashCode(post.title) % imgCount);
-        var featureImg = featureImages[0];
-        var img = post.img;
-        if (img) {
-            featureImg = img.startsWith('http://') || img.startsWith('https://') || img.startsWith('//')
-                    ? img
-                    : config.root + img;
-        } else {
-             featureImg = config.root + featureImages[num];
-        }
+
+        var featureImg = post.img ? url_for(post.img) : url_for(featureImages[Math.abs(hashCode(post.title) % imgCount)]);
         var bgColor = bgColorArr[i % colorCount];
     %>
     <div class="col <%- grid %>" <% if (i > 0) { %>data-aos="zoom-in-up"<% } %>>
@@ -117,17 +100,17 @@
             <div class="post-body">
                 <div class="post-categories">
                     <% if (theme.recommend.useConfig) { %>
-                        <a href="<%- post.categoryPath %>" class="category"><%- post.categoryName %></a>
+                        <a href="<%- url_for(post.categoryPath) %>" class="category"><%= post.categoryName %></a>
                     <% } else { %>
                         <% post.categories.forEach(category => { %>
-                            <a href="<%- url_for(category.path) %>" class="category"><%- category.name %></a>
+                            <a href="<%- url_for(category.path) %>" class="category"><%= category.name %></a>
                         <% }); %>
                     <% } %>
                 </div>
                 <a href="<%- url_for(post.path) %>">
-                    <h3 class="post-title"><%- post.title %></h3>
+                    <h3 class="post-title"><%= post.title %></h3>
                 </a>
-                <p class="post-description"><%- description %></p>
+                <p class="post-description"><%= description %></p>
                 <a href="<%- url_for(post.path) %>" class="read-more btn waves-effect waves-light" style="background: <%- bgColor %>" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i><%- __('readMore') %>
                 </a>

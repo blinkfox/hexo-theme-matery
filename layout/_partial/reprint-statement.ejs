@@ -1,6 +1,6 @@
 <%
-let reprintPolicyEnabled = theme.reprint && theme.reprint.enable
-let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by'
+let reprintPolicyEnabled = theme.reprint && theme.reprint.enable;
+let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by';
 %>
 <% if (reprintPolicyEnabled) { %>
     <div class="reprint" id="reprint-statement">
