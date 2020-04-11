@@ -586,6 +586,11 @@ There are 24 featured pictures in `/source/medias/featureimages`,you can add or 
 
 ## Changelog
 
+- v1.3.0
+  - new supporting subdirectory deployment（eg: `Gitee`）；
+  - new `MiniValine` comment system；
+  - new `jsdelivr` supported；
+  - Fixed many bugs；
 - v1.2.2
   - Add the function of customizing post `keywords`;
   - Add the function and configuration of static ribbon click switch;

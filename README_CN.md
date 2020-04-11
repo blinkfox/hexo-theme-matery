@@ -588,6 +588,11 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 ## 版本记录
 
+- v1.3.0
+  - 新增了支持子目录部署的功能（如：`Gitee`）；
+  - 新增了 `MiniValine` 评论系统；
+  - 新增了 `jsdelivr` 的支持；
+  - 修复了诸多发现的 bug；
 - v1.2.2
   - 新增了自定义文章 `keywords` 的功能；
   - 新增静态彩带点击切换的功能和配置；
