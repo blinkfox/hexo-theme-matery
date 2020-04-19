@@ -12,7 +12,7 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by';
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="<%- config.url %>" rel="external nofollow noreferrer"><%- page.author || config.author %></a>
+                    <a href="/about" rel="external nofollow noreferrer"><%- page.author || config.author %></a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -22,7 +22,7 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by';
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="<%- config.url %><%- url_for(page.path) %>"><%- config.url %><%- url_for(page.path) %></a>
+                    <a href="<%- url_for(page.path) %>"><%- config.url %><%- url_for(page.path) %></a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -35,7 +35,7 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by';
                     <%= __('use') %>
                     <a href="<%= __('cc_by_url') %>" rel="external nofollow noreferrer" target="_blank"><%= __('cc_by_name') %></a>
                     <%= __('licensed') %>
-                    <a href="<%- config.url %>" target="_blank"><%- page.author || config.author %></a>
+                    <a href="/about" target="_blank"><%- page.author || config.author %></a>
                     !
                 </span>
             </div>
@@ -47,7 +47,7 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by';
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="<%- config.url %>" rel="external nofollow noreferrer"><%- page.author || config.author %></a>
+                    <a href="about" rel="external nofollow noreferrer"><%- page.author || config.author %></a>
                 </span>
             </div>
             <div class="reprint__type">
