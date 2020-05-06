@@ -212,6 +212,27 @@ pre[class*="language-"] {
     white-space: pre-wrap !important;
 }
 
+/* 键盘 kbd 标签样式 */
+kbd {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    border-style: outset;
+    font-family: 'Menlo';
+    border: 1.5px solid #d6d9db;
+    border-top: 1px solid #aeb3b8;
+    border-bottom: 2px solid #aeb3b8;
+    background: white;
+    color: #3b3d3f;
+    padding: 4px 7px 4px 7px;
+    margin: 0px 0px 0px 0px;
+    vertical-align: baseline;
+    line-height: 1.8em;
+    white-space: nowrap;
+}
+
 b,
 strong {
     font-weight: bold;
