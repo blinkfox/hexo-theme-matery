@@ -212,6 +212,22 @@ pre[class*="language-"] {
     white-space: pre-wrap !important;
 }
 
+/* 键盘 kbd 标签样式 */
+kbd {
+    margin: 0 3px;
+    padding: 3px 5px;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 2px 1px 0 rgba(255, 255, 255, 0.6) inset;
+    font-family: 'Menlo';
+    font-size: 0.9rem;
+    font-weight: 600;
+    background-color: #f8f8f8;
+    color: #34495e;
+    line-height: 1.8rem;
+    white-space: nowrap;
+}
+
 b,
 strong {
     font-weight: bold;
