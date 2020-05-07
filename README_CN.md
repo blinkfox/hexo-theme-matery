@@ -458,11 +458,11 @@ music:
 
 ### 配置萌萌哒看板娘
 
-需要首先更新看板娘模型库
+首先更新看板娘模型库
 
 ```bash
-cd themes/hexo-theme-matery/source/
-git clone https://github.com/stevenjoezhang/live2d-widget.git
+git submodule init
+git submodule update
 ```
 
 主题配置文件配置如下

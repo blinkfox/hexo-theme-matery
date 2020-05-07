@@ -456,11 +456,11 @@ music:
 
 ### Live2d
 
-Clone live2d model repo
+Sync live2d model repo
 
 ```bash
-cd themes/hexo-theme-matery/source/
-git clone https://github.com/stevenjoezhang/live2d-widget.git
+git submodule init
+git submodule update
 ```
 
 Set live2d properties in themes _config.yml
