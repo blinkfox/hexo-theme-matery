@@ -1,12 +1,18 @@
 <link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.aplayer) %>">
 <style>
     .aplayer .aplayer-lrc p {
+        <%if(theme.music.hideLrc){%>
+        display: none;
+        <%}%>
         font-size: 12px;
         font-weight: 700;
         line-height: 16px !important;
     }
 
     .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        <%if(theme.music.hideLrc){%>
+        display: none;
+        <%}%>
         font-size: 15px;
         color: <%- theme.music.theme %>;
     }
