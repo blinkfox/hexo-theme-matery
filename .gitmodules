@@ -1,0 +1,3 @@
+[submodule "source/live2d-widget"]
+	path = source/live2d-widget
+	url = https://github.com/stevenjoezhang/live2d-widget.git

@@ -441,6 +441,7 @@ music:
   preload: 'auto'   # values: 'none', 'metadata', 'auto'
   volume: 0.7       # default volume, notice that player will remember user setting, default volume will not work after user set volume themselves
   listFolded: true  # indicate whether list should folded at first
+  hideLrc: false    # hide lrc
 ```
 
 >`server` values :  `netease` (NetEase  cloud music) , `tencent` (QQMusic) , `kugou` (KuGouMusic) , `xiami` 
@@ -452,6 +453,23 @@ music:
 >For example to get the `id`:open NetEase cloud music in the browser , click the playlist of my love , there will a string of 
 >
 >numbers ,  the `playlist`\`s `id` just is the number.
+
+### Live2d
+
+Clone live2d model repo
+
+```bash
+cd themes/hexo-theme-matery/source/
+git clone https://github.com/stevenjoezhang/live2d-widget.git
+```
+
+Set live2d properties in themes _config.yml
+
+```yaml
+# Live2d
+live2d:
+  enable: true
+```
 
 ## Post Front-matter
 

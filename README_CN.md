@@ -445,6 +445,7 @@ music:
   preload: 'auto'   # 预加载，可选值: 'none', 'metadata', 'auto'
   volume: 0.7       # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
   listFolded: true  # 列表默认折叠
+  hideLrc: false    # 隐藏歌词
 ```
 
 > `server`可选`netease`（网易云音乐），`tencent`（QQ音乐），`kugou`（酷狗音乐），`xiami`（虾米音乐），
@@ -455,7 +456,22 @@ music:
 >
 > `id`获取示例: 浏览器打开网易云音乐，点击我喜欢的音乐歌单，地址栏有一串数字，`playlist`的`id`即为这串数字。
 
+### 配置萌萌哒看板娘
 
+需要首先更新看板娘模型库
+
+```bash
+cd themes/hexo-theme-matery/source/
+git clone https://github.com/stevenjoezhang/live2d-widget.git
+```
+
+主题配置文件配置如下
+
+```yaml
+# Live2d 看板娘
+live2d:
+  enable: true
+```
 
 ## 文章 Front-matter 介绍
 
