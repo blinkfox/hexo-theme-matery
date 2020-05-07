@@ -1,19 +1,19 @@
-/*全局基础样式*/
-/*小屏幕下(手机类)的样式*/
+/* 全局基础样式 */
+/* 小屏幕下(手机类)的样式 */
 @media only screen and (max-width: 601px) {
     .container {
         width: 95%;
     }
 }
 
-/*中等屏幕下(平板类)的样式*/
+/* 中等屏幕下(平板类)的样式 */
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .container {
         width: 90%;
     }
 }
 
-/*大屏幕下(桌面类)的样式*/
+/* 大屏幕下(桌面类)的样式 */
 @media only screen and (min-width: 993px) {
     .container {
         width: 90%;
@@ -92,10 +92,10 @@ hr {
 }
 
 blockquote {
-    border-left: 5px solid #42b983;
+    border-left: 5px solid #2a5298;
     padding: 1rem 0.8rem 0.2rem 0.8rem;
     color: #666;
-    background-color: rgba(66, 185, 131, .1);
+    background-color: rgba(42, 82, 152, .1);
 }
 
 .line-numbers-rows {
@@ -172,7 +172,7 @@ code {
     z-index: 1;
     filter: invert(50%);
     cursor: pointer;
-}
+} 
 
 .code-expand {
     position: absolute;
@@ -212,7 +212,7 @@ pre[class*="language-"] {
     white-space: pre-wrap !important;
 }
 
-/* 键盘 kbd 标签样式 */
+/*  自定义键盘 kbd 样式  */
 kbd {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -262,8 +262,6 @@ mark {
 
 .card .card-image img {
     border-radius: 8px 8px 0 0;
-    /* 修改文章列表图片填充样式为 cover 以覆盖整个区域而不会被缩放 */
-    object-fit: cover;
 }
 
 .container .row {
@@ -271,11 +269,11 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, #1e3c72 0%, #2a5298 100%);
 }
 
 .text-color {
-    color: #0f9d58 !important;
+    color: #2a5298 !important;
 }
 
 .white-color {
@@ -287,7 +285,7 @@ mark {
     position: fixed;
     bottom: 0;
     z-index: 300;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background: linear-gradient(to right, #1e3c72 0%, #2a5298 100%);
     opacity: 0.8;
 }
 
@@ -327,11 +325,6 @@ header .brand-logo .logo-img {
 
 header .brand-logo .logo-span {
     font-size: 2rem;
-}
-
-/*修改顶部 logo 的文字垂直对齐为 top，避免默认 middle 看起来偏下*/
-header .brand-logo .waves-effect {
-    vertical-align: top;
 }
 
 header .button-collapse i {
@@ -559,7 +552,7 @@ header .go-back i {
     line-height: 56px;
 }
 
-/* 背景图效果. */
+/*  背景图效果.  */
 .bg-cover {
     position: relative;
     display: flex;
@@ -776,7 +769,7 @@ header .go-back i {
     }
 }
 
-/*中等屏幕下(平板类)的样式*/
+/* 中等屏幕下(平板类)的样式 */
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .index-card .card .card-content {
         padding: 20px 20px;
@@ -892,7 +885,7 @@ header .go-back i {
     margin-top: -10px;
 }
 
-/*文章列表卡片各样式*/
+/* 文章列表卡片各样式 */
 #articles {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -906,7 +899,7 @@ article a {
 
 article a:hover {
     font-weight: bold;
-    color: #42b983;
+    color: #2a5298;
     text-decoration: underline;
 }
 
@@ -1031,12 +1024,12 @@ article .article-tags .chip {
     color: #999 !important;
 }
 
-/*文章详情样式*/
+/* 文章详情样式 */
 #artDetail {
     margin-top: -60px;
 }
 
-/* 修改小屏幕下文章详情table样式. */
+/*  修改小屏幕下文章详情table样式.  */
 @media only screen and (max-width: 550px) {
     #articleContent table {
         table-layout: fixed;
@@ -1089,7 +1082,7 @@ article .article-tags .chip {
     border-radius: 15px;
     margin-right: 5px;
     margin-bottom: 2px;
-    color: #42b983;
+    color: #2a5298;
     background: #fff;
     border: 1px solid;
     transition: all 0.6s ease-in-out;
@@ -1097,17 +1090,17 @@ article .article-tags .chip {
 
 #artDetail .tag_share .article-tag .chip:hover {
     color: #fff;
-    background: #42b983;
+    background: #2a5298;
 }
 
 #artDetail .post-cate {
     float: right;
-    color: #42b983;
+    color: #2a5298;
 }
 
 #artDetail .post-cate a {
     padding-right: 5px;
-    color: #42b983;
+    color: #2a5298;
     font-weight: 500;
 }
 
@@ -1126,7 +1119,7 @@ article .article-tags .chip {
 
 #artDetail .post-info .post-category:hover {
     font-weight: bold;
-    color: #42b983;
+    color: #525f7f;
     text-decoration: underline;
 }
 
@@ -1186,7 +1179,7 @@ article .article-tags .chip {
 
 #artDetail .reprint a {
     font-size: 1.05rem;
-    color: #42b983;
+    color: #2a5298;
     font-weight: 500;
 }
 
@@ -1202,9 +1195,9 @@ article .article-tags .chip {
 
 #articleContent a {
     padding: 0 2px;
-    color: #42b983;
+    color: #2a5298;
     font-weight: 500;
-    text-decoration: underline;
+    text-decoration: none;
     word-wrap: break-word;
 }
 
@@ -1326,12 +1319,11 @@ thead {
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 0 3px 5px rgba(0, 0, 0, .12);
-    z-index: 0;
 }
 
 .chip-container .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%) !important;
+    background: linear-gradient(to right, #1e3c72 0%, #2a5298 100%) !important;
 }
 
 .chip .tag-length {
@@ -1349,7 +1341,7 @@ thead {
     color: #fff;
 }
 
-/* archive page. */
+/*  archive page.  */
 #cd-timeline .year {
     position: relative;
     width: 80px;
@@ -1392,7 +1384,7 @@ thead {
 }
 
 #cd-timeline {
-    /*width: 90%;*/
+    /* width: 90%; */
     max-width: 820px;
     position: relative;
     margin-top: 2rem;
@@ -1400,14 +1392,14 @@ thead {
 }
 
 #cd-timeline::before {
-    /* this is the vertical line */
+    /*  this is the vertical line  */
     content: '';
     position: absolute;
     top: 0;
     left: 18px;
     height: 100%;
     width: 4px;
-    background: #0f9d58;
+    background: #2a5298;
 }
 
 @media only screen and (min-width: 900px) {
@@ -1481,7 +1473,7 @@ thead {
         height: 40px;
         left: 50%;
         margin-left: -20px;
-        /* Force Hardware Acceleration in WebKit */
+        /*  Force Hardware Acceleration in WebKit  */
         -webkit-transform: translateZ(0);
         -webkit-backface-visibility: hidden;
     }
@@ -1589,7 +1581,7 @@ thead {
     }
 }
 
-/* about page styles. */
+/*  about page styles.  */
 
 .about-container {
     width: 90%;
@@ -1622,7 +1614,7 @@ thead {
 }
 
 .post-statis .statis .count a {
-    color: #42b983;
+    color: #2a5298;
 }
 
 .post-statis .statis .name {
@@ -1643,8 +1635,8 @@ thead {
     margin: 0 0.5rem;
     padding: 0;
     color: #fff;
-    border: 1px solid #0f9d58;
-    background: radial-gradient(#4cbf30, #0f9d58);
+    border: 1px solid #2a5298;
+    background: radial-gradient(#1e3c72, #2a5298);
     font-size: 0.9rem;
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .21), 0 2px 3px rgba(0, 0, 0, .1);
@@ -1820,8 +1812,8 @@ thead {
 
 .other-skills .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
-    border: 1px solid #4cbf30;
+    background: linear-gradient(to right, #1e3c72 0%, #2a5298 100%);
+    border: 1px solid #2a5298;
     box-shadow: 0 5px 5px rgba(0, 0, 0, .25)
 }
 
@@ -1842,7 +1834,7 @@ thead {
     cursor: pointer;
 }
 
-/*尾部样式*/
+/* 尾部样式 */
 footer {
     padding-bottom: 1px;
 }
@@ -1860,7 +1852,7 @@ footer .copy-right {
     color: #dbdbdb;
 }
 
-/*搜索层样式*/
+/* 搜索层样式 */
 #searchIcon {
     font-size: 1.2rem;
 }
@@ -1887,7 +1879,7 @@ footer .copy-right {
 
 .search-result-list .search-result-title {
     font-size: 1.4rem;
-    color: #42b983;
+    color: #2a5298;
 }
 
 .search-result-list li {
@@ -1905,7 +1897,7 @@ footer .copy-right {
     white-space: pre-wrap;
 }
 
-/*回到顶部按钮样式*/
+/* 回到顶部按钮样式 */
 .top-scroll {
     display: none;
     position: fixed;
@@ -1963,8 +1955,10 @@ footer .copy-right {
     clear: left;
 }
 
+/* 文章图片阴影 */
 .img-shadow {
-    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .2), 0 10px 30px -11px rgba(0, 0, 0, .6)
+    /* box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .2), 0 10px 30px -11px rgba(0, 0, 0, .6); */
+    box-shadow: none;
 }
 
 .img-margin {
@@ -1991,52 +1985,51 @@ footer .copy-right {
     overflow: hidden;
 }
 
-/* styles for '...' */
+/*  styles for '...'  */
 .block-with-text {
-    /* hide text if it more than N lines  */
+    /*  hide text if it more than N lines   */
     overflow: hidden;
-    /* for set '...' in absolute position */
+    /*  for set '...' in absolute position  */
     position: relative;
-    /* use this value to count block height */
+    /*  use this value to count block height  */
     line-height: 1.5em;
-    /* max-height = line-height (1.2) * lines max number (3) */
+    /*  max-height = line-height (1.2) * lines max number (3)  */
     max-height: 4.5em;
-    /* fix problem when last visible word doesn't adjoin right side  */
+    /*  fix problem when last visible word doesn't adjoin right side   */
     text-align: justify;
-    /* place for '...' */
+    /*  place for '...'  */
     margin-right: -1em;
     padding-right: 1em;
 }
 
-/* create the ... style */
+/*  create the ... style  */
 .block-with-text:before {
-    /* points in the end */
+    /*  points in the end  */
     content: '...';
-    /* absolute position */
+    /*  absolute position  */
     position: absolute;
-    /* set position to right bottom corner of block */
-    right: 0.2em;
+    /*  set position to right bottom corner of block  */
+    right: 0;
     bottom: 0;
 }
 
-/* hide ... if we have text, which is less than or equal to max lines */
+/*  hide ... if we have text, which is less than or equal to max lines  */
 .block-with-text:after {
-    /* points in the end */
+    /*  points in the end  */
     content: '';
-    /* absolute position */
+    /*  absolute position  */
     position: absolute;
-    /* set position to right bottom corner of text */
+    /*  set position to right bottom corner of text  */
     right: 0;
-    /* set width and height */
+    /*  set width and height  */
     width: 1em;
     height: 1em;
-    /* fix the problem of hidden failure */
-    margin-top: 0.4em;
-    /* bg color = bg color under block */
+    margin-top: 0.2em;
+    /*  bg color = bg color under block  */
     background: white;
 }
 
-/*二级菜单*/
+/* 二级菜单 */
 
 .nav-menu {
 }
