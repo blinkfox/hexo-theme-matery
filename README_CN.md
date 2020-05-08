@@ -458,13 +458,6 @@ music:
 
 ### 配置萌萌哒看板娘
 
-首先更新看板娘模型库
-
-```bash
-git submodule init
-git submodule update
-```
-
 主题配置文件配置如下
 
 ```yaml

@@ -456,13 +456,6 @@ music:
 
 ### Live2d
 
-Sync live2d model repo
-
-```bash
-git submodule init
-git submodule update
-```
-
 Set live2d properties in themes _config.yml
 
 ```yaml
