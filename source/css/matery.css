@@ -1167,12 +1167,15 @@ article .article-tags .chip {
 }
 
 #artDetail .reprint {
-    margin: 15px 0 5px 0;
-    margin-bottom: 0.4rem;
+    margin: 15px 0 0.4rem;
     padding: 0.5rem 0.8rem;
     border: 1px solid #eee;
     line-height: 2;
     transition: box-shadow 0.3s ease-in-out
+}
+
+#artDetail .reprint-info {
+    word-break: break-word;
 }
 
 #artDetail .reprint:hover {
