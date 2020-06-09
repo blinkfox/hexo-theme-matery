@@ -586,6 +586,13 @@ There are 24 featured pictures in `/source/medias/featureimages`,you can add or 
 
 ## Changelog
 
+- v1.3.1
+  - Added `kbd` style;
+  - Fixed an issue with incorrect links in the word cloud when deploying subdirectories;
+  - Removed vertical lines in TOC;
+  - Fixed the problem that the `tooltip` in the home icon is not displayed;
+  - Fixed the issue that switching banners every day does not take effect when generating static files;
+  - Updated some configurations in `miniValine`;
 - v1.3.0
   - new supporting subdirectory deployment（eg: `Gitee`）；
   - new `MiniValine` comment system；

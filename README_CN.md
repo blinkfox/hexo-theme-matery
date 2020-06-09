@@ -588,6 +588,13 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 ## 版本记录
 
+- v1.3.1
+  - 新增了 `kbd` 样式；
+  - 修复了子目录部署时词云中链接有误的问题；
+  - 移除了 TOC 中的竖线；
+  - 修复了首页 icon 图标中的 tooltip 不显示的问题；
+  - 修复生成静态文件时，每天切换 banner 不生效的问题；
+  - 更新了 `miniValine` 中的一些配置；
 - v1.3.0
   - 新增了支持子目录部署的功能（如：`Gitee`）；
   - 新增了 `MiniValine` 评论系统；
