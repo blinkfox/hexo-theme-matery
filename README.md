@@ -179,6 +179,21 @@ Also, create a new `_data` directory in your blog's `source` directory and a new
     "title": "Read More"
 }]
 ```
+### new 404 page
+
+If the `source` directory of your blog doesn't have `404.md` file, you need to new one
+
+to edit your new page files`/source/404.md`, you need somethings as follows:
+
+```yaml
+---
+title: 404
+date: 2020-05-30 00:00:00
+type: "404"
+layout: "404"
+description: "Cannot find the page you want :("
+---
+```
 
 ### Menu navigation configuration
 
