@@ -1245,12 +1245,22 @@ article .article-tags .chip {
     list-style-type: circle;
 }
 
+#articleContent table {
+	width: 100%;
+    display: block;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow: auto;
+}
+
+/**
 #articleContent table,
 th,
 td {
     padding: 12px 13px;
     border: 1px solid #dfe2e5;
 }
+**/
 
 table tr:nth-child(2n),
 thead {
@@ -1260,10 +1270,14 @@ thead {
 #articleContent table th {
     background-color: #f2f2f2;
     min-width: 80px;
+	border: 1px solid #dfe2e5;
+	padding: 6px 6px;
 }
 
 #articleContent table td {
     min-width: 80px;
+	border: 1px solid #dfe2e5;
+	padding: 6px 6px;
 }
 
 #articleContent [type="checkbox"]:not(:checked),
