@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- theme.libs.css.tocbot %>">
+<link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.tocbot) %>">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -62,14 +62,14 @@
     #toc-content .toc-link::before {
         background-color: transparent;
         max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
     }
 
     #toc-content .is-active-link {
         color: #42b983;
-    }
-
-    #toc-content .is-active-link::before {
-        background-color: #42b983;
     }
 
     #floating-toc-btn {
@@ -112,7 +112,7 @@
 </div>
 <% } %>
 
-<script src="<%- theme.jsDelivr.url %><%- theme.libs.js.tocbot %>"></script>
+<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.tocbot) %>"></script>
 <script>
     $(function () {
         tocbot.init({

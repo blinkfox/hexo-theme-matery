@@ -1,8 +1,8 @@
-<link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- theme.libs.css.dplayer %>">
+<link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.dplayer) %>">
 <div class="video-player">
     <% if (theme.video.showTitle) { %>
     <div class="title center-align">
-        <i class="fas fa-video-camera"></i>&nbsp;&nbsp;<%- theme.video.title %>
+        <i class="fas fa-video-camera"></i>&nbsp;&nbsp;<%= theme.video.title %>
     </div>
     <% } %>
     <div class="row">
@@ -13,7 +13,7 @@
     </div>
 </div>
 
-<script src="<%- theme.jsDelivr.url %><%- theme.libs.js.dplayer %>"></script>
+<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.dplayer) %>"></script>
 <script>
     $(function () {
         new DPlayer({
@@ -25,9 +25,9 @@
             preload: '<%- theme.video.preload %>',
             volume: Number('<%- theme.video.volume %>'),
             video: {
-                url: '<%- theme.video.url %>',
-                pic: '<%- theme.video.pic %>',
-                thumbnails: '<%- theme.video.thumbnails %>'
+                url: '<% if (theme.video.url) { %><%- url_for(theme.video.url) %><% } %>',
+                pic: '<% if (theme.video.pic) { %><%- url_for(theme.video.pic) %><% } %>',
+                thumbnails: '<% if (theme.video.thumbnails) { %><%- url_for(theme.video.thumbnails) %><% } %>'
             }
         });
     });

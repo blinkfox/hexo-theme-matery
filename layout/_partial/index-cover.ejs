@@ -30,7 +30,7 @@
     }
 
     .carousel-control:hover {
-        background-color:rgba(0, 0, 0, .4);
+        background-color: rgba(0, 0, 0, .4);
     }
 
     .carousel-control i {
@@ -70,12 +70,12 @@ var coverPostsCount = coverPosts.length;
                 </a>
 
                 <% if (theme.indexbtn && theme.indexbtn.enable) { %>
-                    <a href="<%- theme.indexbtn.url %>" class="waves-effect waves-light btn" target="_blank">
-                        <i class="<%- theme.indexbtn.icon %>"></i><%- theme.indexbtn.name %>
+                    <a href="<%- url_for(theme.indexbtn.url) %>" class="waves-effect waves-light btn" target="_blank">
+                        <i class="<%- theme.indexbtn.icon %>"></i><%= theme.indexbtn.name %>
                     </a>
                 <% } else if (theme.githubLink.enable) { %>
                     <a href="<%- theme.githubLink.url %>" class="waves-effect waves-light btn" target="_blank">
-                        <i class="fab fa-github %>"></i><%- theme.githubLink.title %>
+                        <i class="fab fa-github %>"></i><%= theme.githubLink.title %>
                     </a>
                 <% } %>
             </div>
@@ -105,15 +105,23 @@ var coverPostsCount = coverPosts.length;
         <% for (var i = 0; i < coverPostsCount; i++) { %>
             <%
                 var post = coverPosts[i];
-                var coverImg = post.coverImg ? post.coverImg
-                        : (post.img ? post.img : featureImages[Math.abs(hashCode(post.title) % imgCount)]);
+                var featureImage = featureImages[Math.abs(hashCode(post.title) % imgCount)];
+
+                var coverImg;
+                if (post.coverImg) {
+                    coverImg = post.coverImg;
+                } else if (post.img) {
+                    coverImg = post.img;
+                } else {
+                    coverImg = featureImage;
+                }
             %>
             <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('<%- coverImg %>');">
+                 style="background-image: url('<%- theme.jsDelivr.url %><%- url_for(coverImg) %>');">
                 <div class="container">
                     <div class="row">
                         <div class="col s10 offset-s1">
-                            <div class="title center-align"><%- post.title %></div>
+                            <div class="title center-align"><%= post.title %></div>
                             <div class="description center-align">
                                 <% if (post.summary && post.summary.length > 0) { %>
                                     <%- post.summary %>
@@ -122,7 +130,8 @@ var coverPostsCount = coverPosts.length;
                                 <% } %>
                             </div>
                             <div class="cover-btns">
-                                <a href="<%- url_for(post.path) %>" class="waves-effect waves-light btn" target="_blank">
+                                <a href="<%- url_for(post.path) %>" class="waves-effect waves-light btn"
+                                   target="_blank">
                                     <i class="icon fa fa-eye fa-fw"></i><%- __('readMore') %>
                                 </a>
                             </div>
@@ -135,7 +144,6 @@ var coverPostsCount = coverPosts.length;
 </div>
 
 <script>
-    // TODO 此处的轮播尚需优化，PC/Mobile 在触摸切换时都感觉相当不灵活
     $(function () {
         let coverSlider = $('.carousel');
 
@@ -168,7 +176,7 @@ var coverPostsCount = coverPosts.length;
         let carouselIntervalId;
         <% if (theme.cover.autoLoop) { %>
         // Loop to call the next cover article picture.
-        let autoCarousel = function() {
+        let autoCarousel = function () {
             carouselIntervalId = setInterval(function () {
                 coverSlider.carousel('next');
             }, <%- theme.cover.intervalTime %>);

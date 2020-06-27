@@ -1,7 +1,7 @@
 <%
-var featureimg = '/medias/bg.jpg';
+var featureimg = url_for('/medias/bg.jpg');
 if (page.img) {
-    featureimg = page.img;
+    featureimg = url_for(page.img);
 } else {
     var hashCode = function (str) {
         if (!str && str.length === 0) {
@@ -18,7 +18,10 @@ if (page.img) {
 
     var len = theme.featureImages.length;
     var num = Math.abs(hashCode(page.title) % len);
-    featureimg = theme.jsDelivr.url? theme.jsDelivr.url+ theme.featureImages[num]:theme.featureImages[num];
+
+    featureimg = theme.jsDelivr.url
+            ? theme.jsDelivr.url + url_for(theme.featureImages[num])
+            : url_for(theme.featureImages[num]);
 }
 %>
 

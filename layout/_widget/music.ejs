@@ -1,4 +1,33 @@
-<link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- theme.libs.css.aplayer %>">
+<link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.aplayer) %>">
+<style>
+    .aplayer .aplayer-lrc p {
+        <%if(theme.music.hideLrc){%>
+        display: none;
+        <%}%>
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        <%if(theme.music.hideLrc){%>
+        display: none;
+        <%}%>
+        font-size: 15px;
+        color: <%- theme.music.theme %>;
+    }
+
+    <%if(theme.music.autoHide){%>
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    <%}%>
+</style>
 <div class="<% if(!theme.music.fixed) { %>music-player<% } %>">
     <% if (!theme.music.fixed && theme.music.title.enable) { %>
         <div class="title center-align">
@@ -7,21 +36,21 @@
     <% } %>
     <div class="row">
         <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="<%- theme.music.server%>"
-                   type="<%- theme.music.type%>"
-                   id="<%- theme.music.id%>"
-                   fixed='<%- theme.music.fixed ? 'true':'false' %>'
+                   server="<%- theme.music.server %>"
+                   type="<%- theme.music.type %>"
+                   id="<%- theme.music.id %>"
+                   fixed='<%- theme.music.fixed ? 'true' : 'false' %>'
                    autoplay='<%- theme.music.autoplay === true %>'
-                   theme:='<%- theme.music.theme %>'
+                   theme='<%- theme.music.theme %>'
                    loop='<%- theme.music.loop %>'
                    order='<%- theme.music.order %>'
                    preload='<%- theme.music.preload %>'
                    volume='<%- Number(theme.music.volume) %>'
-                   list-folded='<%- theme.music.listFolded? 'true':'false' %>'
+                   list-folded='<%- theme.music.listFolded ? 'true' : 'false' %>'
         >
         </meting-js>
     </div>
 </div>
 
-<script src="<%- theme.jsDelivr.url %><%- theme.libs.js.aplayer %>"></script>
+<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.aplayer) %>"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>

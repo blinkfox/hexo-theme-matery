@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="<%- theme.jsDelivr.url %><%- theme.libs.css.jqcloud %>">
+<link rel="stylesheet" type="text/css" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.jqcloud) %>">
 <style type="text/css">
     #tag-wordcloud {
         width: 100%;
@@ -12,12 +12,12 @@
     </div>
 </div>
 
-<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- theme.libs.js.jqcloud %>"></script>
+<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.jqcloud) %>"></script>
 <script type="text/javascript">
     <%
     let tagWordArr = [];
     site.tags.map(function(tag) {
-        tagWordArr.push({'text': tag.name, 'weight': tag.length, 'link': decodeURI(tag.permalink)});
+        tagWordArr.push({'text': tag.name, 'weight': tag.length, 'link': decodeURI(url_for(tag.path))});
     });
 
     let tagWords = JSON.stringify(tagWordArr);

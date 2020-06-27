@@ -1,0 +1,44 @@
+<style>
+    .mvaline-card {
+        margin: 1.5rem auto;
+    }
+
+    .mvaline-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+</style>
+
+<div class="card mvaline-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="mvcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.minivaline) %>"></script>
+<script>
+    new MiniValine({
+        el: '#mvcomments',
+        appId: '<%- theme.minivaline.appId %>',
+        appKey: '<%- theme.minivaline.appKey %>',
+        mode: '<%- theme.minivaline.mode %>',
+        placeholder: '<%- theme.minivaline.placeholder %>',
+        pathname: window.location.pathname,
+        lang: '<%- theme.minivaline.lang %>',
+        adminEmailMd5: '<%- theme.minivaline.adminEmailMd5 %>',
+        tagMeta: <%- '["' + theme.minivaline.tagMeta.join('", "') + '"]' %>,
+        master: <%- '["' + theme.minivaline.master.join('", "') + '"]' %>,
+        friends: <%- '["' + theme.minivaline.friends.join('", "') + '"]' %>,
+        math: <%- theme.minivaline.math %>,
+        md: <%- theme.minivaline.md %>,
+        enableQQ: <%- theme.minivaline.enableQQ %>,
+        NoRecordIP: <%- theme.minivaline.NoRecordIP %>,
+        visitor: <%- theme.minivaline.visitor %>,
+        maxNest: <%- theme.minivaline.maxNest %>,
+        pageSize: <%- theme.minivaline.pageSize %>,
+        serverURLs: '<%- theme.minivaline.serverURLs %>',
+        emoticonUrl: <%- '["' + theme.minivaline.emoticonUrl.join('", "') + '"]' %>,
+    });
+</script>

@@ -2,7 +2,7 @@
 
 [![HitCount](http://hits.dwyl.io/blinkfox/hexo-theme-matery.svg)](http://hits.dwyl.io/blinkfox/hexo-theme-matery) [![Gitter](https://img.shields.io/gitter/room/blinkfox/hexo-theme-matery.svg)](https://gitter.im/hexo-theme-matery/Lobby?utm_source=badge) [![GitHub issues](https://img.shields.io/github/issues/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/issues) [![GitHub license](https://img.shields.io/github/license/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/blob/master/LICENSE) [![Download](https://img.shields.io/badge/downloads-master-green.svg)](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master) [![Hexo Version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io) [![GitHub forks](https://img.shields.io/github/forks/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/network) [![GitHub stars](https://img.shields.io/github/stars/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/stargazers)
 
-[🇨🇳中文说明](README_CN.md) | [DEMO](https://blinkfox.github.io/)
+[🇨🇳中文说明](README_CN.md) | [国内访问示例(http://blinkfox.com)](http://blinkfox.com) | [Github Deploy Demo(https://blinkfox.github.io)](https://blinkfox.github.io)
 
 > This is a Hexo blog theme with 'Material Design' and responsive design.
 
@@ -178,6 +178,21 @@ Also, create a new `_data` directory in your blog's `source` directory and a new
     "url": "https://me.csdn.net/jlh912008548",
     "title": "Read More"
 }]
+```
+### new 404 page
+
+If the `source` directory of your blog doesn't have `404.md` file, you need to new one
+
+to edit your new page files`/source/404.md`, you need somethings as follows:
+
+```yaml
+---
+title: 404
+date: 2020-05-30 00:00:00
+type: "404"
+layout: "404"
+description: "Cannot find the page you want :("
+---
 ```
 
 ### Menu navigation configuration
@@ -588,6 +603,18 @@ There are 24 featured pictures in `/source/medias/featureimages`,you can add or 
 
 ## Changelog
 
+- v1.3.1
+  - Added `kbd` style;
+  - Fixed an issue with incorrect links in the word cloud when deploying subdirectories;
+  - Removed vertical lines in TOC;
+  - Fixed the problem that the `tooltip` in the home icon is not displayed;
+  - Fixed the issue that switching banners every day does not take effect when generating static files;
+  - Updated some configurations in `miniValine`;
+- v1.3.0
+  - new supporting subdirectory deployment（eg: `Gitee`）；
+  - new `MiniValine` comment system；
+  - new `jsdelivr` supported；
+  - Fixed many bugs；
 - v1.2.2
   - Add the function of customizing post `keywords`;
   - Add the function and configuration of static ribbon click switch;

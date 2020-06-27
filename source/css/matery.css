@@ -212,6 +212,22 @@ pre[class*="language-"] {
     white-space: pre-wrap !important;
 }
 
+/* 键盘 kbd 标签样式 */
+kbd {
+    margin: 0 3px;
+    padding: 3px 5px;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 2px 1px 0 rgba(255, 255, 255, 0.6) inset;
+    font-family: 'Menlo';
+    font-size: 0.9rem;
+    font-weight: 600;
+    background-color: #f8f8f8;
+    color: #34495e;
+    line-height: 1.8rem;
+    white-space: nowrap;
+}
+
 b,
 strong {
     font-weight: bold;
@@ -1151,12 +1167,15 @@ article .article-tags .chip {
 }
 
 #artDetail .reprint {
-    margin: 15px 0 5px 0;
-    margin-bottom: 0.4rem;
+    margin: 15px 0 0.4rem;
     padding: 0.5rem 0.8rem;
     border: 1px solid #eee;
     line-height: 2;
     transition: box-shadow 0.3s ease-in-out
+}
+
+#artDetail .reprint-info {
+    word-break: break-word;
 }
 
 #artDetail .reprint:hover {
@@ -1226,12 +1245,22 @@ article .article-tags .chip {
     list-style-type: circle;
 }
 
+#articleContent table {
+	width: 100%;
+    display: block;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow: auto;
+}
+
+/**
 #articleContent table,
 th,
 td {
     padding: 12px 13px;
     border: 1px solid #dfe2e5;
 }
+**/
 
 table tr:nth-child(2n),
 thead {
@@ -1241,10 +1270,14 @@ thead {
 #articleContent table th {
     background-color: #f2f2f2;
     min-width: 80px;
+	border: 1px solid #dfe2e5;
+	padding: 6px 6px;
 }
 
 #articleContent table td {
     min-width: 80px;
+	border: 1px solid #dfe2e5;
+	padding: 6px 6px;
 }
 
 #articleContent [type="checkbox"]:not(:checked),
@@ -1994,7 +2027,7 @@ footer .copy-right {
     /* absolute position */
     position: absolute;
     /* set position to right bottom corner of block */
-    right: 0;
+    right: 0.2em;
     bottom: 0;
 }
 
@@ -2009,7 +2042,8 @@ footer .copy-right {
     /* set width and height */
     width: 1em;
     height: 1em;
-    margin-top: 0.2em;
+    /* fix the problem of hidden failure */
+    margin-top: 0.4em;
     /* bg color = bg color under block */
     background: white;
 }

@@ -76,8 +76,9 @@ music:
   title: #非吸底模式有效
     enable: true
     show: 听听音乐
+  autoHide: true    # hide automaticaly
   server: netease   #require	music platform: netease, tencent, kugou, xiami, baidu
-  type: playlist	#require song, playlist, album, search, artist
+  type: playlist    #require song, playlist, album, search, artist
   id: 503838841     #require	song id / playlist id / album id / search keyword
   fixed: true       # 开启吸底模式
   autoplay: false   # 是否自动播放
@@ -87,6 +88,7 @@ music:
   preload: 'auto'   # 预加载，可选值: 'none', 'metadata', 'auto'
   volume: 0.7       # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
   listFolded: true  # 列表默认折叠
+  hideLrc: true     # 隐藏歌词
 
 # Whether to display the videos.
 # 是否在首页显示视频.
@@ -314,6 +316,50 @@ valine:
   placeholder: 'just go go' # Comment Box placeholder
   background: /medias/comment_bg.png
 
+# The configuration of the MiniValine comment module is not activated by default.
+# To use it, activate the configuration item and set appId and appKey.
+# MiniValine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
+# See: https://github.com/MiniValine/MiniValine
+minivaline:
+  enable: false
+  appId: zhM0AOiqle17oPoE84CoYw1e-gzGzoHsz # Your leancloud application appid
+  appKey: itmzT1JbXfAjVwMqDhGPzU45 # Your leancloud application appkey
+  mode: DesertsP # DesertsP or xCss
+  placeholder: Write a Comment # Comment box placeholder
+  math: true # Support MathJax.
+  md: true # Support Markdown.
+  enableQQ: false # Enable QQ avatar API.
+  NoRecordIP: false # Do not record commenter IP.
+  visitor: true # Article reading statistics.
+  maxNest: 6 # Sub-comment maximum nesting depth.
+  pageSize: 6 # Pagination size.
+  adminEmailMd5: de8a7aa53d07e6b6bceb45c64027763d # The MD5 of Admin Email to show Admin Flag.[Just Only DesertsP Style mode]
+  tagMeta: # The String Array of Words to show Flag.[Just Only xCss Style mode]
+    - 管理员
+    - 小伙伴
+    - 访客
+  master: # The MD5 String Array of master Email to show master Flag.[Just Only xCss Style mode]
+    - de8a7aa53d07e6b6bceb45c64027763d
+  friends: # The MD5 String Array of friends Email to show friends Flag.[Just Only xCss Style mode]
+    - b5bd5d836c7a0091aa8473e79ed4c25e
+    - adb7d1cd192658a55c0ad22a3309cecf
+    - 3ce1e6c77b4910f1871106cb30dc62b0
+    - cfce8dc43725cc14ffcd9fb4892d5bfc
+  # MiniValine's display language depends on user's browser or system environment
+  # If you want everyone visiting your site to see a uniform language, you can set a force language value
+  # Available values: en  | zh-CN | (and many more)
+  # More i18n info: https://github.com/MiniValine/minivaline-i18n
+  lang:
+  # Expression Url.
+  # https://github.com/MiniValine/MiniValine/blob/master/.github/FAQ.md#how-to-customize-emoticons
+  emoticonUrl:
+    - https://cdn.jsdelivr.net/npm/alus@latest
+    - https://cdn.jsdelivr.net/gh/MiniValine/qq@latest
+    - https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest
+    - https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest
+    - https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest
+    - https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest
+
 # Whether to display fork me on github icon and link, default true, You can change it to your repo address
 # 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
 githubLink:
@@ -384,6 +430,7 @@ libs:
     echarts: /libs/echarts/echarts.min.js
     gitalk: /libs/gitalk/gitalk.min.js
     valine: /libs/valine/Valine.min.js # 若想保持最新版，请替换为 https://unpkg.com/valine/dist/Valine.min.js  默认为 /libs/valine/Valine.min.js
+    minivaline: https://cdn.jsdelivr.net/npm/minivaline/dist/MiniValine.min.js
     jqcloud: /libs/jqcloud/jqcloud-1.0.4.min.js
     tocbot: /libs/tocbot/tocbot.min.js
     canvas_nest: /libs/background/canvas-nest.js

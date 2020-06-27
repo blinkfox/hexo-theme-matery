@@ -1,10 +1,14 @@
+<%
+var configRoot = config.root
+configRoot = (configRoot === null || configRoot === undefined || configRoot === '/') ? '' : configRoot;
+%>
 <div id="mobile-nav" class="side-nav sidenav">
 
     <div class="mobile-head bg-color">
         <% if (theme.logo !== undefined && theme.logo.length > 0) { %>
-        <img src="<%- theme.jsDelivr.url %><%= theme.logo %>" class="logo-img circle responsive-img">
+        <img src="<%- theme.jsDelivr.url %><%- url_for(theme.logo) %>" class="logo-img circle responsive-img">
         <% } %>
-        <div class="logo-name"><%- config.title %></div>
+        <div class="logo-name"><%= config.title %></div>
         <div class="logo-desc">
             <% if (config.description && config.description.length > 0) { %>
             <%= config.description %>
@@ -29,7 +33,7 @@
         <% Object.keys(theme.menu).forEach(function(key) { %>
         <li class="m-nav-item">
 	  <% if(!theme.menu[key].children) { %>
-		<a href="<%- theme.menu[key].url %>" class="waves-effect waves-light">
+		<a href="<%- url_for(theme.menu[key].url) %>" class="waves-effect waves-light">
 			<% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
 			    <i class="fa-fw <%- theme.menu[key].icon %>"></i>
 			<% } else { %>
@@ -49,16 +53,16 @@
 		</a>
             <ul <%if(theme.navMenu&&theme.navMenu.bgColor){%> style="background: <%-theme.navMenu.bgColor%>;"<%}%> >
               <% for(let childrenLink of theme.menu[key].children){ %>
-                <li>   
-				
-                  <a href="<%- url_for(childrenLink.url)%> " style="margin-left:<%if(theme.navMenu&&theme.navMenu.mleft){%>50px<%}else{%>75px<%}%>";>
+                <li>
+
+                  <a href="<%- url_for(childrenLink.url)%> " style="margin-left:<% if (theme.navMenu && theme.navMenu.mleft) {%>50px<%}else{%>75px<%}%>">
 				  <% if (childrenLink.icon && childrenLink.icon.length > 0) { %>
 				   <i class="fa <%- childrenLink.icon %>" style="position: absolute;left:<%if(theme.navMenu&&theme.navMenu.mleft){%>28px<%}else{%>50px<%}%>" ></i>
 			      <% } %>
 		          <span><%- childrenLink.name %></span>
                   </a>
                 </li>
-              <% } %> 
+              <% } %>
             </ul>
           <% } %>
         </li>

@@ -16,9 +16,9 @@ var myprojects = theme.myProjects.data;
                     <i class="<%- myprojects[project].icon %>"></i>
                 </a>
                 <div class="info-title">
-                    <a href="<%- myprojects[project].url %>" target="_blank"><%- project %></a>
+                    <a href="<%- url_for(myprojects[project].url) %>" target="_blank"><%- project %></a>
                 </div>
-                <div class="info-desc"><%- myprojects[project].desc %></div>
+                <div class="info-desc"><%= myprojects[project].desc %></div>
             </div>
         </div>
         <% }); %>

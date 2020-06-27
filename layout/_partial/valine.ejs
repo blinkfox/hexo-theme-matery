@@ -9,7 +9,7 @@
 
     #vcomments textarea {
         box-sizing: border-box;
-        background: url("<%- theme.valine.background %>") 100% 100% no-repeat;
+        background: url("<%- url_for(theme.valine.background) %>") 100% 100% no-repeat;
     }
 
     #vcomments p {
@@ -235,7 +235,7 @@
 </style>
 
 <div class="card valine-card" data-aos="fade-up">
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
         <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
         <span>评论</span>
     </div>
@@ -243,8 +243,8 @@
     </div>
 </div>
 
-<script src="<%- theme.jsDelivr.url %>/libs/valine/av-min.js"></script>
-<script src="<%- theme.jsDelivr.url %><%- theme.libs.js.valine %>"></script>
+<script src="<%- theme.jsDelivr.url %><%- url_for('/libs/valine/av-min.js') %>"></script>
+<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.valine) %>"></script>
 <script>
     new Valine({
         el: '#vcomments',
