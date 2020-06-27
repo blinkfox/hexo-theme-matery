@@ -466,7 +466,9 @@ music:
 >
 >For example to get the `id`:open NetEase cloud music in the browser , click the playlist of my love , there will a string of 
 >
->numbers ,  the `playlist`\`s `id` just is the number.
+>numbers  in the browser\`s address bar  ,  the `playlist`\`s `id` just is the string of numbers.
+
+
 
 ## Post Front-matter
 

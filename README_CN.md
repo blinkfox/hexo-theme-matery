@@ -446,12 +446,12 @@ feed:
 # 是否在首页显示音乐
 music:
   enable: true
-  title:     	    #非吸底模式有效
+  title:     	    # 非吸底模式有效
     enable: true
     show: 听听音乐
-  server: netease   #require music platform: netease, tencent, kugou, xiami, baidu
-  type: playlist    #require song, playlist, album, search, artist
-  id: 503838841     #require song id / playlist id / album id / search keyword
+  server: netease   # require music platform: netease, tencent, kugou, xiami, baidu
+  type: playlist    # require song, playlist, album, search, artist
+  id: 503838841     # require song id / playlist id / album id / search keyword
   fixed: false      # 开启吸底模式
   autoplay: false   # 是否自动播放
   theme: '#42b983'
@@ -468,7 +468,9 @@ music:
 >
 > `type`可选`song`（歌曲），`playlist`（歌单），`album`（专辑），`search`（搜索关键字），`artist`（歌手）
 >
-> `id`获取示例: 浏览器打开网易云音乐，点击我喜欢的音乐歌单，地址栏有一串数字，`playlist`的`id`即为这串数字。
+> `id`获取方法示例: 浏览器打开网易云音乐，点击我喜欢的音乐歌单，浏览器地址栏后面会有一串数字，`playlist`的`id`
+>
+> 即为这串数字。
 
 
 
