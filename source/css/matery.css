@@ -37,6 +37,8 @@ body {
     background-color: #eaeaea;
     margin: 0;
     color: #34495e;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 h1 {
