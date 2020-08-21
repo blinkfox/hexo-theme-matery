@@ -1,0 +1,71 @@
+posts: 文章
+category: 分類
+categories: 分類
+tag: 標籤
+tags: 標籤
+archives: 歸檔
+about: 關於
+contact: 留言板
+friends: 友情連結
+startRead: 開始閱讀
+recommendedPosts: 推薦文章
+publishDate: 發布日期
+updateDate: 更新日期
+readCount: 閱讀次數
+wordCount: 文章字數
+readTimes: 閱讀時長
+Minutes: 分
+readMore: 閱讀更多
+toc: 目錄
+curr: 本篇
+prev: 上一篇
+next: 下一篇
+search: 搜索
+searchTip: 請輸入搜索的關鍵字
+postTagTitle: 文章標籤
+postCategoryTitle: 文章分類
+categoryRadarTitle: 文章分類雷達圖
+categoryNumber: 文章分類數量
+categoryEmptyTip: 你目前還沒有對文章進行分類.
+postCharts: 文章統計圖
+postPublishChart: 文章發布統計圖
+categoriesChart: 文章分類統計圖
+top10TagsChart: TOP10 標籤統計圖
+postsNumberName: 文章篇數
+maximum: 最大值
+minimum: 最小值
+average: 平均值
+myProjects: 我的項目
+mySkills: 我的技能
+otherSkills: 其他技能
+gallery: 相冊
+notag: 無標籤
+from: 來源
+reprint: 版權聲明
+author: 文章作者
+link: 文章連結
+use: 本部落格所有文章除特別聲明外，均採用
+licensed: 許可協議。轉載請註明來源
+cc_by_url: https://creativecommons.org/licenses/by/4.0/deed.zh
+cc_by_name: CC BY 4.0
+cc_by_nd_url: https://creativecommons.org/licenses/by-nd/4.0/deed.zh
+cc_by_nd_name: CC BY-ND 4.0
+cc_by_sa_url: https://creativecommons.org/licenses/by-sa/4.0/deed.zh
+cc_by_sa_name: CC BY-SA 4.0
+cc_by_nc_url: https://creativecommons.org/licenses/by-nc/4.0/deed.zh
+cc_by_nc_name: CC BY-NC 4.0
+cc_by_nc_nd_url: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh
+cc_by_nc_nd_name: CC BY-NC-ND 4.0
+cc_by_nc_sa_url: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh
+cc_by_nc_sa_name: CC BY-NC-SA 4.0
+cc_0_url: https://creativecommons.org/publicdomain/zero/1.0/deed.zh
+toTheExtentPossibleUnderLaw: 在法律允許的範圍內，
+hasWaivedAllCopyrightAndRelatedOrNeighboringRightsTo: 已放棄此作品的所有版權、相關或相鄰的權利
+workPublishedFrom: 。此作品發布在：
+cc_0_country: 香港。
+cc_0_content: HK
+noreprint: 本文不允許轉載。
+paycontact: 請聯絡作者
+payreprint: 付費轉載。
+pleaseFollowReprintPolicy: 複製成功，請遵循本文的轉載規則
+checkPolicy: 查看
