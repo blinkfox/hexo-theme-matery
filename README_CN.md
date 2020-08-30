@@ -605,6 +605,10 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 ## 版本记录
 
+- v1.3.2
+  - 新增了繁体字的支持；
+  - 新增了 404 页面；
+  - 其他小问题修改；
 - v1.3.1
   - 新增了 `kbd` 样式；
   - 修复了子目录部署时词云中链接有误的问题；

@@ -603,6 +603,10 @@ There are 24 featured pictures in `/source/medias/featureimages`,you can add or 
 
 ## Changelog
 
+- v1.3.2
+  - Added support for traditional characters;
+  - Added 404 page;
+  - Fixed other minor issues；
 - v1.3.1
   - Added `kbd` style;
   - Fixed an issue with incorrect links in the word cloud when deploying subdirectories;
