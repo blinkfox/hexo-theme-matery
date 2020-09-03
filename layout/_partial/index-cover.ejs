@@ -65,7 +65,10 @@ var coverPostsCount = coverPosts.length;
             <%- partial('_partial/bg-cover-content') %>
 
             <div class="cover-btns">
-                <a href="#indexCard" class="waves-effect waves-light btn">
+                <a href="<%=
+                        [theme.dream, theme.music, theme.video, theme.recommend]
+                                .every(i=>i.enable)? "#indexCard": "#articles"
+                        %>" class="waves-effect waves-light btn">
                     <i class="fa fa-angle-double-down"></i><%- __('startRead') %>
                 </a>
 
