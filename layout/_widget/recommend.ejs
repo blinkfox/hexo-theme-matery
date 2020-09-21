@@ -53,7 +53,11 @@
         var bgColor = bgColorArr[i % colorCount];
     %>
     <div class="col s12 m6" <% if (i > 1) { %>data-aos="zoom-in-up"<% } %>>
-        <div class="post-card" style="background-image: url('<%- theme.jsDelivr.url %><%- featureImg %>')">
+        <% if (post.img) {%>
+             <div class="post-card" style="background-image: url('<%- featureImg %>')">
+        <%}else{%>
+            <div class="post-card" style="background-image: url('<%- theme.jsDelivr.url %><%- featureImg %>')">
+            <% } %>
             <div class="post-body">
                 <div class="post-categories">
                     <% if (theme.recommend.useConfig) { %>
@@ -96,7 +100,11 @@
         var bgColor = bgColorArr[i % colorCount];
     %>
     <div class="col <%- grid %>" <% if (i > 0) { %>data-aos="zoom-in-up"<% } %>>
-        <div class="post-card" style="background-image: url('<%- theme.jsDelivr.url %><%- featureImg %>')">
+        <% if (post.img) {%>
+             <div class="post-card" style="background-image: url('<%- featureImg %>')">
+        <%}else{%>
+            <div class="post-card" style="background-image: url('<%- theme.jsDelivr.url %><%- featureImg %>')">
+            <% } %>
             <div class="post-body">
                 <div class="post-categories">
                     <% if (theme.recommend.useConfig) { %>
