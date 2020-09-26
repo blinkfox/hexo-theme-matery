@@ -80,8 +80,10 @@
                         <div class="summary block-with-text">
                             <% if (post.summary && post.summary.length > 0) { %>
                                 <%- post.summary %>
-                            <% } else { %>
+                            <% } else if (post.excerpt && post.excerpt.length > 0) { %>
                                 <%- strip_html(post.excerpt).substring(0, 120) %>
+                            <% } else if (post.content && post.content.length > 0) { %>
+                                <%- strip_html(post.content).substring(0, 120) %>
                             <% } %>
                         </div>
                         <div class="publish-info">
