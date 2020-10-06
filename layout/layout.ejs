@@ -2,6 +2,10 @@
 <html lang="<%= config.language %>">
 <%- partial('_partial/head') %>
 
+<% if (theme.background.enable) { %>
+   <%- partial('_partial/background') %>
+<% } %>
+
 <body>
     <%- partial('_partial/header') %>
     <%- body %>
