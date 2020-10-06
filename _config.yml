@@ -582,6 +582,6 @@ background:
 
 # 说说 https://artitalk.js.org/
 artitalk:
-  enable: true
+  enable: false
   appId: xxxxx
   appKey: xxxxxx
