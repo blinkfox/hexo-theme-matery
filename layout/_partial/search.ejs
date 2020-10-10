@@ -13,6 +13,6 @@
 <script src="<%- theme.jsDelivr.url %><%- url_for('/js/search.js') %>"></script>
 <script type="text/javascript">
 $(function () {
-    searchFunc("<%- url_for('search.xml') %>", 'searchInput', 'searchResult');
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
 });
 </script>
