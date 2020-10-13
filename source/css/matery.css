@@ -323,7 +323,7 @@ header .brand-logo .logo-img {
 }
 
 header .brand-logo .logo-span {
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 /*修改顶部 logo 的文字垂直对齐为 top，避免默认 middle 看起来偏下*/
@@ -603,7 +603,7 @@ header .go-back i {
 
 .bg-cover .title {
     font-size: 4rem;
-    line-height: 1.85em;
+    line-height: 1.2em;
     margin-bottom: 20px;
     position: relative;
 }
