@@ -406,7 +406,7 @@ baiduPush: true
 libs:
   css:
     matery: /css/matery.css
-    search: /js/search.js
+    mycss: /css/my.css
     fontAwesome: /libs/awesome/css/all.css # V5.11.1
     materialize: /libs/materialize/materialize.min.css # 1.0.0
     aos: /libs/aos/aos.css
