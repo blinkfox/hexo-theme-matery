@@ -403,8 +403,11 @@ baiduPush: true
 # The used front-end library can be replaced with the corresponding CDN address as needed,
 # If the specific version is not specified below, you can use the latest version.
 # 使用到的前端库，可按需替换成对应的CDN地址，如果下面未指定具体的版本号，使用最新的版本即可.
+# 注：jsdelivr可以自动帮你生成.min版的js和css，所以你在设置js及css路径中可以直接写.min.xxx
 libs:
   css:
+    matery: /css/matery.css
+    mycss: /css/my.css
     fontAwesome: /libs/awesome/css/all.css # V5.11.1
     materialize: /libs/materialize/materialize.min.css # 1.0.0
     aos: /libs/aos/aos.css
@@ -416,6 +419,8 @@ libs:
     jqcloud: /libs/jqcloud/jqcloud.css
     tocbot: /libs/tocbot/tocbot.css
   js:
+    matery: /js/matery.js
+    search: /js/search.js
     jquery: /libs/jquery/jquery.min.js
     materialize: /libs/materialize/materialize.min.js # 1.0.0
     masonry: /libs/masonry/masonry.pkgd.min.js # v4.0.0
@@ -572,6 +577,7 @@ icp:
 #
 # 注：配置了此项，就代表着本地调试的时候，网站依然会去GitHub请求资源（原来的资源），本地调试的时候记得将 此项配置 注释或者删除掉
 # 更多关于访问速度优化，请查看：https://blog.sky03.cn/posts/42790.html
+# 注：jsdelivr可以自动帮你生成.min版的js和css，所以你在上面设置js及css路径中可以直接写.min.xxx
 jsDelivr:
   url: # https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io
   
