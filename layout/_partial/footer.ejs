@@ -5,6 +5,11 @@
     <div class="container row center-align" style="margin-bottom: <% if (theme.time.enable) { %>15<% } else { %>0<% } %>px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
+            <% if (theme.time.year !== new Date().getFullYear()) { %>
+                <span id="year"><%- theme.time.year %>-<%- new Date().getFullYear() %></span>
+            <% } else { %>
+                <span id="year"><%- theme.time.year %></span>
+            <% } %>
             <span id="year"><%- theme.time.year %></span>
             <a href="<%- url_for('/about') %>" target="_blank"><%- config.author %></a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
