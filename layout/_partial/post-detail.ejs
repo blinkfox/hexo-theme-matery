@@ -128,6 +128,10 @@
         <%- partial('_partial/minivaline') %>
     <% } %>
 
+    <% if (theme.changyan && theme.changyan.enable) { %>
+        <%- partial('_partial/changyan') %>
+    <% } %>
+
     <%- partial('_partial/prev-next') %>
 </div>
 
