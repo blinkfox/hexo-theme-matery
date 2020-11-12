@@ -509,6 +509,10 @@ tidio:
   enable: false
   public_key:
 
+# 腾讯兔小巢，见https://txc.qq.com/
+tuxiaochao:
+  enable: false
+  productId:
 #背景canvas-nest
 canvas_nest:
   enable: false
