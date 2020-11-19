@@ -10,9 +10,9 @@
 
 - Simple and beautiful, and post is Beautiful and readable.
 - [Material Design](https://material.io/).
-- Responsive design,which can be displayed well on desktop, tablet, mobile phone, etc.
-- Home page carousel posts and changing 'banner' picture dynamically everday.
-- Blog posts list with waterflow(There will be 24 images if the articl dosn't have  featured pictures).
+- Responsive design, which can be displayed well on desktop, tablet, mobile phone, etc.
+- Home page carousel posts and changing 'banner' picture dynamically everyday.
+- Blog posts list with waterflow (There will be 24 images if the article doesn't have featured pictures).
 - Archive page with timeline.
 - Tags page of the **word cloud** and categories page of the **radar chart**
 - Rich 'About' page (including about me, posts charts, my projects, my skills, gallery etc.)
@@ -39,9 +39,11 @@ Thanks to these contributors, without whom, hexo-theme-matery won't be this perf
 
 ## Download
 
-You should have a [Hexo](https://hexo.io/zh-cn/) blog when you see it here.If not,try to use the hexo and [Markdown](https://www.appinn.com/markdown/) to write your blog and post.
-Click [here](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master) to download master branch of the last stable version of the code.After decompressing,copy the `hexo-theme-matery` folder
-to your `themes` folder of your Hexo.Of course,you can uer `Git clone` to download in your `themes` folder.
+You should have a [Hexo](https://hexo.io/zh-cn/) blog when you see it here. If not, try to use the hexo and [Markdown](https://www.appinn.com/markdown/) to write your blog and post.
+Click [here](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master) to download master branch of the last stable version of the code.After decompressing, copy the `hexo-theme-matery` folder
+to your `themes` folder of your Hexo blog project.
+
+ Of course, you can use `git clone` to download in your `themes` folder.
 
 ```bash
 git clone https://github.com/blinkfox/hexo-theme-matery.git
@@ -55,19 +57,19 @@ Modify the value of `theme` in `_config.yml` of Hexo's root folder: `theme: hexo
 
 #### Suggestions for other changes to the `_config.yml`:
 
-- Please modify the value of `url` of `_config.yml` to your website's main `URL` (eg `http://xxx.github.io`).
-- Recommended modify the value of the two `per_page` to be a multiple of `6`, such as: `12`, `18`, etc. so that the posts list can be displayed well under each screen.
+- Please modify the value of `url` of `_config.yml` to your website's main `URL` (e.g. `http://xxx.github.io`).
+- It's recommended to modify the value of the two `per_page` to be a multiple of `6`, such as: `12`, `18`, etc. so that the posts list can be displayed well under each screen.
 - If you are a Chinese user, it is recommended to change the value of `language` to `zh-CN`.
 
 ### new categories page
 
-`categories` page is to show all of categories. If the `source` directory of your blog doesn't have `categories/index.md` file, you need to new one like this:
+`categories` page is to show all of categories. If the `source` directory of your blog doesn't have `categories/index.md` file, you need to create a new one like this:
 
 ```bash
 hexo new page "categories"
 ```
 
-to edit your new page files`/source/categories/index.md`, you need somethings as follows:
+when editing your new page file `/source/categories/index.md`, you need something like:
 
 ```yaml
 ---
@@ -80,13 +82,13 @@ layout: "categories"
 
 ### new tags page
 
-`tags` page is to show all of tags. If the `source` directory of your blog doesn't have `tags/index.md` file,you need to new one like this:
+`tags` page is to show all of tags. If the `source` directory of your blog doesn't have `tags/index.md` file, you need to create a new one like this:
 
 ```bash
 hexo new page "tags"
 ```
 
-to edit your new page files`/source/tags/index.md`, you need somethings as follows:
+and put the following in your new page file `/source/tags/index.md`,
 
 ```yaml
 ---
@@ -99,13 +101,13 @@ layout: "tags"
 
 ### new about page
 
-`about` page is to show my blog and myself information. If the `source` directory of your blog doesn't have `about/index.md` file, you need to new one like this:
+`about` page is to show my blog and myself information. If the `source` directory of your blog doesn't have `about/index.md` file, create a new one like this:
 
 ```bash
 hexo new page "about"
 ```
 
-to edit your new page files`/source/about/index.md`, you need somethings as follows:
+and edit your new page file `/source/about/index.md` to include:
 
 ```yaml
 ---
@@ -124,7 +126,7 @@ layout: "about"
 hexo new page "contact"
 ```
 
-to edit your new page files`/source/contact/index.md`, you need somethings as follows:
+when editing your new page file `/source/contact/index.md`, include the following at the beginning:
 
 ```yaml
 ---
@@ -135,7 +137,7 @@ layout: "contact"
 ---
 ```
 
-> **Note**：The message board depends on a third-party comment system, please **activate** your comment system to be effective. And in the theme `_config.yml` file, the "**menu**" of the `19` to `21` line is configured, and the comment about the message board cloud be canceled.
+> **Note**：The message board depends on a third-party comment system, please **activate** your comment system to be effective. And in the theme's `_config.yml` file, the "**menu**" of the `19` to `21` line is configured, and the comment about the message board could be canceled.
 
 ### new friends link page (Optional)
 
@@ -156,7 +158,7 @@ layout: "friends"
 ---
 ```
 
-Also, create a new `_data` directory in your blog's `source` directory and a new `friends.json` file in the `_data` directory. The contents of the file are as follows:
+Also, create a new `_data` directory in your blog's `source` directory and a new `friends.json` file in the `_data` directory. The contents of the file is as follows:
 
 ```json
 [{
@@ -181,9 +183,13 @@ Also, create a new `_data` directory in your blog's `source` directory and a new
 ```
 ### new 404 page
 
-If the `source` directory of your blog doesn't have `404.md` file, you need to new one
+If the `source` directory of your blog doesn't have `404.md` file, you need create a new one using:
 
-to edit your new page files`/source/404.md`, you need somethings as follows:
+```bash
+hexo new page 404
+```
+
+when editing your new page file `/source/404/index.md`, you need something as follows:
 
 ```yaml
 ---
@@ -199,7 +205,7 @@ description: "Cannot find the page you want :("
 
 #### Configure the name of the basic menu navigation, path url and icon icon.
 
-1. The menu navigation name can be Chinese or English (eg: `Index` or `Home`)
+1. The menu navigation name can be Chinese or English (e.g.: `Index` or `主页`)
 2. Icon icon can be found in [Font Awesome](https://fontawesome.com/icons)
 
 ```yaml
@@ -228,7 +234,7 @@ menu:
 
 If you need a secondary menu, you can do the following on the basis of the original basic menu navigation.
 
-1. Add the `children` keyword to the first level menu that needs to add a secondary menu (eg: add `children` under the `About` menu)
+1. Add the `children` keyword to the first level menu that needs to add a secondary menu (e.g.: add `children` under the `About` menu)
 2. Create a secondary menu name, path url and icon icon under `children`.
 3. Note that each secondary menu module must be preceded by `-`.
 4. Note the indentation format.
@@ -256,8 +262,8 @@ menu:
   Medias:
     icon: fas fa-list
     children:
-      - name: Musics
-        url: /musics
+      - name: Music
+        url: /music
         icon: fas fa-music
       - name: Movies
         url: /movies
@@ -272,13 +278,13 @@ menu:
 
 ### Code highlight
 
-Hexo theme uses Hexo's plugin [hexo-prism-plugin](https://github.com/ele828/hexo-prism-plugin) to show the code highlight instead of its own theme.The Installation commands are as follows:
+Matery uses the Hexo plugin [hexo-prism-plugin](https://github.com/ele828/hexo-prism-plugin) to show the code highlight instead of the hexo default. The Installation command is as follows:
 
 ```bash
 npm i -S hexo-prism-plugin
 ```
 
-Then,modify the value of `highlight.enable` to `false` in `_config.yml` file of Hexo root folder, and add the configuration of `prism` plugin as follows:
+Then, modify the value of `highlight.enable` to `false` in `_config.yml` at the root your hexo project, and add the configuration of `prism` plugin as follows:
 
 ```yaml
 highlight:
@@ -293,13 +299,13 @@ prism_plugin:
 
 ### Search
 
-The theme uses the Hexo plugin [hexo-generator-search](https://github.com/wzpan/hexo-generator-search) to search the content,and the Installation commands are as follows:
+The theme uses the Hexo plugin [hexo-generator-search](https://github.com/wzpan/hexo-generator-search) to search the content, and the Installation command is as follows:
 
 ```bash
 npm install hexo-generator-search --save
 ```
 
-Add configuration of `_config.yml` file in Hexo root folder as follows：
+Add the following content in `_config.yml` at the root of your hexo project:
 
 ```yaml
 search:
@@ -307,11 +313,11 @@ search:
   field: post
 ```
 
-### Translate Chinese Link to Pinyin (Recommend)
+### Translate Chinese Link to Pinyin (Recommended)
 
-Defualt permalinks of Hexo will include Chinese if your atrticle's title is Chinese. But it's adverse to `SEO`, and `gitment` comments don't suport Chinese Link as well. We can use the [hexo-permalink-pinyin](https://github.com/viko16/hexo-permalink-pinyin) of Hexo plugin to generate permalinks of Chinese Pinyin when generating posts.
+Default permalinks of Hexo will include Chinese if your article's title is Chinese. But it's adverse to `SEO`, and `gitment` comments don't support Chinese Link as well. We can use the [hexo-permalink-pinyin](https://github.com/viko16/hexo-permalink-pinyin) Hexo plugin to generate permalinks in Chinese Pinyin when generating posts.
 
-Installation commands are as follows：
+Installation command is as follows：
 
 ```bash
 npm i hexo-permalink-pinyin --save
@@ -325,13 +331,13 @@ permalink_pinyin:
   separator: '-' # default: '-'
 ```
 
-> **Note**: [hexo-abbrlink](https://github.com/rozbo/hexo-abbrlink) can genarate non-Chinese link in addtion to this plugin.
+> **Note**: [hexo-abbrlink](https://github.com/rozbo/hexo-abbrlink) can generate non-Chinese link in addition to this plugin.
 
-### Post word count statistics plugin (Recommend)
+### Post word count statistics plugin (Recommended)
 
 If you want to display the post word count and reading time information in the post detail page, you can install the [hexo-wordcount](https://github.com/willin/hexo-wordcount) plugin.
 
-Installation commands are as follows：
+Installation command is as follows：
 
 ```bash
 npm i --save hexo-wordcount
@@ -351,13 +357,13 @@ postInfo:
 
 ### Add emoji support (Optional)
 
-This theme adds support for the `emoji` emoticon, using the Hexo plugin for [hexo-filter-github-emojis](https://npm.taobao.org/package/hexo-filter-github-emojis) to support the generation of the `emoji` expression, the corresponding `markdown emoji` syntax (`::`, for example: `:smile:`) is converted into a `emoji` expression that jumps. The installation command is as follows:
+This theme adds support for the `emoji` emoticon, using the Hexo plugin [hexo-filter-github-emojis](https://npm.taobao.org/package/hexo-filter-github-emojis) to support the generation of the `emoji` expression. The corresponding `markdown emoji` syntax (`::`, for example: `:smile:`) is converted into a `emoji` expression that jumps. The installation command is as follows:
 
 ```bash
 npm install hexo-filter-github-emojis --save
 ```
 
-Add configuration of `_config.yml` file in Hexo root folder as follows：
+Add the following configuration into the `_config.yml` file in your hexo project root folder：
 
 ```yaml
 githubEmojis:
@@ -372,13 +378,13 @@ Execute `hexo clean && hexo g` to regenerate the blog file, and then you can see
 
 ### Add RSS feed support (Optional)
 
-The theme uses the Hexo plugin [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) to support `RSS` feed , and the Installation commands are as follows:
+The theme uses the Hexo plugin [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) to support `RSS` feed , and the Installation command is as follows:
 
 ```bash
 npm install hexo-generator-feed --save
 ```
 
-Add configuration of `_config.yml` file in Hexo root folder as follows：
+Add the following configuration into the `_config.yml` file in your hexo project root folder：
 
 ```yaml
 feed:
@@ -404,11 +410,11 @@ Go to the official website of [Tidio](https://www.tidio.com/), register and get 
 
 ### Modify website footer
 
-Website footer may need to be customized, and it is not convenient to make configuration information, So need to modify and process it by yourself. The changes are in the `/layout/_partial/footer.ejs` file, including the site, the theme used, the amount of traffic and so on.
+Website footer may need to be customized, and it is not convenient to make it part of the configuration, So you need to modify and process it by yourself. Changes could be made in the theme's `/layout/_partial/footer.ejs` file, including the site information, the theme used, the amount of traffic and so on.
 
 ### Modify social links
 
-In the theme `_config.yml` file, the configurations of `QQ`, `GitHub` and mailbox and more are supported by default. In the `/layout/_partial/social-link.ejs` file of the theme, you can add or modify the social link address as you need. To add a link, please refer to the following code:
+In the theme `_config.yml` file, the configurations of `QQ`, `GitHub` and mailbox and more are supported by default. In the `/layout/_partial/social-link.ejs` file of the theme, you can add or modify social link addresses as you need. To add a link, please refer to the following code:
 
 ```html
 <% if (theme.socialLink.github) { %>
@@ -418,7 +424,7 @@ In the theme `_config.yml` file, the configurations of `QQ`, `GitHub` and mailbo
 <% } %>
 ```
 
-You can search social icon such as `fab fa-github` in [Font Awesome](https://fontawesome.com/icons). There are common social icons you can reference:
+You can search social icons such as `fab fa-github` in [Font Awesome](https://fontawesome.com/icons). There are common social icons you can reference:
 
 - Facebook: `fab fa-facebook`
 - Twitter: `fab fa-twitter`
@@ -432,14 +438,14 @@ You can search social icon such as `fab fa-github` in [Font Awesome](https://fon
 - QQ: `fab fa-qq`
 - Zhihu: `fab fa-zhihu`
 
-> **Note**: The version of `Font Awesome` is `5.11.0`.
+> **Note**: The version of `Font Awesome` used by matery is `5.11.0`.
 
 ### Configure music player (optional)
 
-To support music playing, you just need activate the `_config.yml` file of music playing configuration.
+To support music playing, you just need to activate music playing configuration in the theme's `_config.yml` file.
 
 ```yaml
-# Whether to display the musics
+# Whether to display the music
 music:
   enable: true
   title: 		   # non-fixed mode works
@@ -458,14 +464,10 @@ music:
   listFolded: true  # indicate whether list should folded at first
 ```
 
->`server` values :  `netease` (NetEase  cloud music) , `tencent` (QQMusic) , `kugou` (KuGouMusic) , `xiami` 
->
->(XiamMusic) , `baidu` (BaiduMusic)
->
->`type` values : `song`  ,   `playlist` , `album` , `search` , `artist` 
->
->For example to get the `id`:open NetEase cloud music in the browser , click the playlist of my love , there will a string of 
->
+>`server` values :  `netease` (NetEase  cloud music) , `tencent` (QQMusic) , `kugou` (KuGouMusic) , `xiami`  
+>(XiamMusic) , `baidu` (BaiduMusic)  
+>`type` values : `song`  ,   `playlist` , `album` , `search` , `artist`  
+>For example to get the `id`:open NetEase cloud music in the browser , click the playlist of my love , there will a string of  
 >numbers  in the browser\`s address bar  ,  the `playlist`\`s `id` just is the string of numbers.
 
 
@@ -481,7 +483,7 @@ Everything in the Front-matter option is **not required**. But I still recommend
 | title      | Markdown's file title | Post title, it is highly recommended to fill in this option |
 | date       | Date and time when the file created | Publish time, it is highly recommended to fill in this option, and it is best to ensure that it is globally unique |
 | author     | `author` in root `_config.yml` | Post author                                    |
-| img        | a value in `featureImages`  | Post feature image，For exampl: `http://xxx.com/xxx.jpg` |
+| img        | a value in `featureImages`  | Post feature image，For example: `http://xxx.com/xxx.jpg` |
 | top        | `true`                      | Recommended post (whether the post is topped), if the `top` value is `true`, it will be recommended as a homepage post. |
 | cover      | `false`                     | The `v1.0.2` version is added to indicate whether the post needs to be added to the homepage carousel cover. |
 | coverImg   | null                        | The new version of `v1.0.2` indicates that the post needs to display the image path on the cover of the homepage. If not, the default image of the post is used by default. |
@@ -495,7 +497,7 @@ Everything in the Front-matter option is **not required**. But I still recommend
 | reprintPolicy       | cc_by              | Post reprint policy, value could be one of cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint and pay |
 
 > **Note**: 
-> 1. post's featured piature will take remainder if not writing the `img` property,and chose the featured picture of theme to let all of post's picture **have their own characteristics**.
+> 1. post's featured picture will take remainder if not writing the `img` property, and choose the featured picture of theme to let all of post's picture **have their own characteristics**.
 > 2. The value of `date` should try to ensure that each article is unique, because `Gitalk` and `Gitment` recognize `id` in this topic are uniquely identified by the value of `date`.
 > 3. If you want to set the ability to read the verification password for the article, you should not only set the value of the password with SHA256 encryption in Front-matter, but also activate the configuration in the theme `_config.yml`.
 > 4. you can define reprint policy for a single article in the front-matter of the specific md file using this key: reprintPolicy
@@ -568,11 +570,12 @@ You can modify some custom modification in `_config.yml` as follows:
 - My Gallery
 - Gitalk, Gitment, Valine and Disqus
 - [Busuanzi Statistics](http://busuanzi.ibruce.info/) And Google Analytics
-- The map of default featured pictures. The theme will take remainde according to `hashcode` of post title if the post dose not set featured piactures.
+- The map of default featured pictures. The theme will take remainder according to `hashcode` of the post title if the post does not set featured pictures.
 
-**I think everyone should have their own style and feature of blog**。if you are not satisfiled with functions and theme color,you can modify by yourself,and more free functions and deatil need to be modified by modify source code when it is hard to be finished in `_config.yml`.
+**I think everyone should have their own style and feature for their blogs**. If you are not satisfied with the theme's functions and color, you can modify them by yourself,
+and more free functions and details could be changed by modifying source code when it is hard to achieve by modifying the theme's `_config.yml`.
 
-### modeing theme color
+### Customizing theme color
 
 Search `.bg-color` to modify background color in `/source/css/matery.css` in theme file：
 
@@ -593,13 +596,13 @@ Search `.bg-color` to modify background color in `/source/css/matery.css` in the
 
 ### Modify banner picture and post's featured pictures
 
-You can change `banner` pictures in `/source/medias/banner` as you like .Theme code can switch  dynamically every day and just need 7 pictures.If you master `JavaScript`,you can change it to your favorite swithing logic,such as Random switching.The code of switching `banner`is in `<script></script>` of `/layout/_partial/bg-cover-content.ejs`file.
+You can change `banner` pictures in `/source/medias/banner` as you like .Theme code can switch dynamically every day and just need 7 pictures.If you master `JavaScript`, you can change it to your favorite switching logic, such as Random switching. The code for switching `banner`is in `<script></script>` of `/layout/_partial/bg-cover-content.ejs`file.
 
 ```javascript
 $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
 ```
 
-There are 24 featured pictures in `/source/medias/featureimages`,you can add or delete,and modify it in `_config.yml` at the sametime.
+There are 24 featured pictures in `/source/medias/featureimages`, you can add or delete some, and modify corresponding settings in the theme's `_config.yml`.
 
 ## Changelog
 
@@ -609,13 +612,13 @@ There are 24 featured pictures in `/source/medias/featureimages`,you can add or 
   - Fixed other minor issues；
 - v1.3.1
   - Added `kbd` style;
-  - Fixed an issue with incorrect links in the word cloud when deploying subdirectories;
+  - Fixed an issue with incorrect links in the word cloud when deploying sub directories;
   - Removed vertical lines in TOC;
   - Fixed the problem that the `tooltip` in the home icon is not displayed;
   - Fixed the issue that switching banners every day does not take effect when generating static files;
   - Updated some configurations in `miniValine`;
 - v1.3.0
-  - new supporting subdirectory deployment（eg: `Gitee`）；
+  - new supporting sub directory deployment（e.g.: `Gitee`）；
   - new `MiniValine` comment system；
   - new `jsdelivr` supported；
   - Fixed many bugs；
