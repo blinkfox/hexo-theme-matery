@@ -43,7 +43,7 @@
 
 点击 [这里](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master) 下载 `master` 分支的最新稳定版的代码，解压缩后，将 `hexo-theme-matery` 的文件夹复制到你 Hexo 的 `themes` 文件夹中即可。
 
-当然你也可以在你的 `themes` 文件夹下使用 `Git clone` 命令来下载:
+当然你也可以在你的 `themes` 文件夹下使用 `git clone` 命令来下载:
 
 ```bash
 git clone https://github.com/blinkfox/hexo-theme-matery.git
@@ -185,7 +185,11 @@ layout: "friends"
 
 如果在你的博客 `source` 目录下还没有 `404.md` 文件，那么你就需要新建一个
 
-编辑你刚刚新建的页面文件 `/source/404.md`，至少需要以下内容：
+```bash
+hexo new page 404
+```
+
+编辑你刚刚新建的页面文件 `/source/404/index.md`，至少需要以下内容：
 
 ```yaml
 ---
@@ -256,8 +260,8 @@ menu:
   Medias:
     icon: fas fa-list
     children:
-      - name: Musics
-        url: /musics
+      - name: Music
+        url: /music
         icon: fas fa-music
       - name: Movies
         url: /movies
