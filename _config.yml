@@ -604,6 +604,12 @@ artitalk:
 ## 关注公众号 "黑石哔哔"，发送: //bindCurrentUser:你的APPID,你的MASTERKEY,你的RESTAPI 
 ## 可用leancloud国际版，国际版api为 https://appid前八位.api.lncldglobal.com 
 bbtime:
+ enable: false
  appId: 你的appId
  appKey: 你的appKey
  serverURLs: https://你的api
+
+# 教程:https://xaoxuu.com/blog/2020-08-23-issues-api/
+# 注意:本教程使用volantis主题。但除了配置文件的处理略有不同外没什么差别。
+lssue:
+ enable: false
