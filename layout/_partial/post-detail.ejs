@@ -73,6 +73,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <%- page.content %>
+<% if (theme.bbtime.enable) { %>
 <% if (page.layout == 'bb') { %>
 <style>
     @font-face {
@@ -216,6 +217,7 @@
         window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
     });
 </script>
+<% } %>
 <% } %>
 
 <!-- 代码块功能依赖 -->
