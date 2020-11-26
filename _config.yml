@@ -434,6 +434,7 @@ libs:
     gitalk: /libs/gitalk/gitalk.css
     jqcloud: /libs/jqcloud/jqcloud.css
     tocbot: /libs/tocbot/tocbot.css
+    prism: /libs/prism/prism.css
   js:
     matery: /js/matery.js
     jquery: /libs/jquery/jquery.min.js

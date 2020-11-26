@@ -22,7 +22,7 @@
 
     .head-container {
         position: absolute;
-        padding: 0px 30px;
+        padding: 0 30px;
         width: 100%;
     }
 
@@ -100,24 +100,8 @@ blockquote {
     background-color: rgba(66, 185, 131, .1);
 }
 
-.line-numbers-rows {
-    border-right-width: 0px !important;
-}
-
-.line-numbers {
-    padding: 1.5rem 1.5rem 1.5rem 3.5rem !important;
-    margin: 1rem 0 !important;
-    background: #272822;
-    overflow: auto;
-    border-radius: 0.35rem;
-    tab-size: 4;
-}
-
 pre {
-    padding: 2.5rem 1.5rem 1.5rem 1.5rem !important;
-    margin: 1rem 0 !important;
-    background: #272822;
-    overflow: auto;
+    padding: 2rem 1rem 1rem 1rem !important;
     border-radius: 0.35rem;
     tab-size: 4;
 }
@@ -170,7 +154,7 @@ code {
     right: 46px;
     line-height: 0;
     font-weight: bold;
-    font-family: normal;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     z-index: 1;
     filter: invert(50%);
     cursor: pointer;
@@ -179,7 +163,7 @@ code {
 .code-expand {
     position: absolute;
     top: 4px;
-    right: 0px;
+    right: 0;
     filter: invert(50%);
     padding: 7px;
     z-index: 999 !important;
@@ -194,24 +178,13 @@ code {
 }
 
 .code-closed pre::before {
-    height: 0px;
+    height: 0;
 }
 
 pre code {
     padding: 0;
     color: #e8eaf6;
     background-color: #272822;
-}
-
-pre[class*="language-"] {
-    padding: 1.2em;
-    margin: .5em 0;
-}
-
-code[class*="language-"],
-pre[class*="language-"] {
-    color: #e8eaf6;
-    white-space: pre-wrap !important;
 }
 
 /* 键盘 kbd 标签样式 */
@@ -221,7 +194,7 @@ kbd {
     border-radius: 3px;
     border: 1px solid #b4b4b4;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 2px 1px 0 rgba(255, 255, 255, 0.6) inset;
-    font-family: 'Menlo';
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     font-size: 0.9rem;
     font-weight: 600;
     background-color: #f8f8f8;
@@ -417,8 +390,8 @@ header .side-nav .social-link {
     border: 1px solid #f44336;
     background-color: #f44336;
     box-shadow: 0 14px 26px -12px rgba(233, 30, 99, 0.42),
-            0 4px 23px 0 rgba(0, 0, 0, 0.12),
-            0 8px 10px -5px rgba(233, 30, 99, 0.2);
+    0 4px 23px 0 rgba(0, 0, 0, 0.12),
+    0 8px 10px -5px rgba(233, 30, 99, 0.2);
 }
 
 .cover-btns a i {
@@ -432,7 +405,6 @@ header .side-nav .social-link {
     -webkit-animation: scroll-down 1.5s infinite;
     -moz-animation: scroll-down 1.5s infinite;
     -o-animation: scroll-down 1.5s infinite;
-    -ms-animation: scroll-down1.5s infinite;
     animation: scroll-down 1.5s infinite;
 }
 
@@ -1049,8 +1021,8 @@ article .article-tags .chip {
 
 #artDetail .card {
     box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15),
-        0 5px 15px rgba(0, 0, 0, .07),
-        0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    0 5px 15px rgba(0, 0, 0, .07),
+    0 2px 5px -5px rgba(0, 0, 0, .1) !important;
 }
 
 #artDetail .tag-cate {
@@ -1248,7 +1220,7 @@ article .article-tags .chip {
 }
 
 #articleContent table {
-	width: 100%;
+    width: 100%;
     display: block;
     border-collapse: collapse;
     border-spacing: 0;
@@ -1272,14 +1244,14 @@ thead {
 #articleContent table th {
     background-color: #f2f2f2;
     min-width: 80px;
-	border: 1px solid #dfe2e5;
-	padding: 6px 6px;
+    border: 1px solid #dfe2e5;
+    padding: 6px 6px;
 }
 
 #articleContent table td {
     min-width: 80px;
-	border: 1px solid #dfe2e5;
-	padding: 6px 6px;
+    border: 1px solid #dfe2e5;
+    padding: 6px 6px;
 }
 
 #articleContent [type="checkbox"]:not(:checked),
@@ -2076,7 +2048,7 @@ footer .copy-right {
     height: 34px;
     line-height: 34px;
     width: 138px;
-    padding: 0px;
+    padding: 0;
     display: inline-block;
     border-radius: 5px;
     color: #000;
@@ -2091,7 +2063,6 @@ footer .copy-right {
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     -o-transition: all .3s;
-    -ms-transition: all .3s;
     transition: all .3s;
 }
 
@@ -2108,7 +2079,6 @@ footer .copy-right {
     -webkit-animation: sub_menus .3s .1s ease both;
     -moz-animation: sub_menus .3s .1s ease both;
     -o-animation: sub_menus .3s .1s ease both;
-    -ms-animation: sub_menus .3s .1s ease both;
     animation: sub_menus .3s .1s ease both;
 }
 
@@ -2147,7 +2117,6 @@ footer .copy-right {
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     -o-transition: all .3s;
-    -ms-transition: all .3s;
     transition: all .3s;
 }
 
@@ -2166,6 +2135,6 @@ footer .copy-right {
     position: absolute;
     right: 15px;
     height: 50px;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }

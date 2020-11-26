@@ -70,6 +70,15 @@
             </div>
         </div>
         <hr class="clearfix">
+
+        <link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.prism) %>">
+        <!-- 代码块折行 -->
+        <% if (theme.code.break) { %>
+            <style type="text/css">
+                code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+            </style>
+        <% } %>
+
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <%- page.content %>
@@ -235,11 +244,4 @@
 <!-- 代码块收缩 -->
 <% if (theme.code.shrink) { %>
 <script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for('/libs/codeBlock/codeShrink.js') %>"></script>
-<% } %>
-
-<!-- 代码块折行 -->
-<% if (!theme.code.break) { %>
-<style type="text/css">
-code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
-</style>
 <% } %>
