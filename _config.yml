@@ -612,22 +612,22 @@ artitalk:
   appId: xxxxx
   appKey: xxxxxx
 
-## 哔哔功能配置
-## 登陆leancloud创建应用。进入应用后，点击创建 Class，将「 Class 名称」命名为 content 
-## 点击刚刚创建的content Class，点击添加列并创建名称为content的列，类型为String，注意列注释也要填写（随意填）
-## 记录appid，masterkey，api域名
-## 输入:hexo new page bb
-## hexo就在source文件夹下创建了bb/index.md。
-修改index.md的frontmater下的layout为bb：
----
-title: 黑石说
-layout: bb
----
-## 里面的文字可以自己随意加，会显示在哔哔的上方。
-## 关注公众号 "黑石哔哔"，发送: //bindCurrentUser:你的APPID,你的MASTERKEY,你的RESTAPI 
-## 可用leancloud国际版，国际版api为 https://appid前八位.api.lncldglobal.com 
+# 哔哔功能配置
+# 登陆leancloud创建应用。进入应用后，点击创建 Class，将「 Class 名称」命名为 content
+# 点击刚刚创建的content Class，点击添加列并创建名称为content的列，类型为String，注意列注释也要填写（随意填）
+# 记录appid，masterkey，api域名
+# 输入:hexo new page bb
+# hexo就在source文件夹下创建了bb/index.md。
+# 修改index.md的frontmater下的layout为bb：
+# ---
+# title: 黑石说
+# layout: bb
+# ---
+# 里面的文字可以自己随意加，会显示在哔哔的上方。
+# 关注公众号 "黑石哔哔"，发送: //bindCurrentUser:你的APPID,你的MASTERKEY,你的RESTAPI
+# 可用leancloud国际版，国际版api为 https://appid前八位.api.lncldglobal.com
 bbtime:
  enable: false
- appId: 你的appId
- appKey: 你的appKey
- serverURLs: https://你的api
+ appId: # 你的appId
+ appKey: # 你的appKey
+ serverURLs: # https://你的api
