@@ -436,7 +436,6 @@ libs:
     tocbot: /libs/tocbot/tocbot.css
   js:
     matery: /js/matery.js
-    search: /js/search.js
     jquery: /libs/jquery/jquery.min.js
     materialize: /libs/materialize/materialize.min.js # 1.0.0
     masonry: /libs/masonry/masonry.pkgd.min.js # v4.0.0
