@@ -1,0 +1,253 @@
+<% if (theme.bbtime.enable) { %>
+<% if (theme.verifyPassword.enable) { %>
+<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.crypto) %>"></script>
+<script>
+    (function () {
+        let pwd = '<%- page.password %>';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('<%- theme.verifyPassword.promptMessage %>')).toString(CryptoJS.enc.Hex)) {
+                alert('<%- theme.verifyPassword.errorMessage %>');
+                location.href = '<%- url_for("/") %>';
+             }
+        }
+    })();
+</script>
+
+<% } %>
+
+<%- partial('_partial/post-cover') %>
+
+<%
+       var isTocEnable = theme.toc.enable && String(page.toc) !== 'false';
+       var containerClass = isTocEnable ? 'post-container' : 'container';
+%>
+
+<main class="<%- containerClass %> content">
+
+     <%- partial('_partial/post-detail.ejs') %>
+
+</main>
+<script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.5.3/dist/av-min.js"></script>
+
+<script type="text/javascript">
+var {
+    Query
+} = AV;
+AV.init({
+    appId: "<%= theme.bbtime.appId %>",
+    appKey: "<%= theme.bbtime.appKey %>",
+    serverURLs: '<%= theme.bbtime.serverURLs %>'
+});
+
+var query = new AV.Query('content');
+
+var app = new Vue({
+   el: '#app',
+    data: {
+        page: 0,
+        count: 0,
+        contents: []
+},
+methods: {
+    loadMore: function (event) {
+         getData(++this.page);
+    }
+ }
+})
+
+function urlToLink(str) {
+    //增加发图片功能
+    var re = /\bhttps?:\/\/(?!\S+(?:jpe?g|png|bmp|gif|webp|gif))\S+/g;
+    var re_forpic = /\bhttps?:\/\/.*?(\.gif|\.jpeg|\.png|\.jpg|\.bmp|\.webp)/g;
+    str = str.replace(re, function (website) {
+        return "<a href='" + website + "' target='_blank'> <i class='iconfont icon-lianjie-copy'></i>链接 </a>";
+});
+str = str.replace(re_forpic, function (imgurl) {
+    return "<img src='" + imgurl + "' /> ";
+});
+return str;
+}
+//友好地显示时间
+function timeago(dateTimeStamp) {
+    var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示。
+    var hour = minute * 60;
+    var day = hour * 24; 
+    var week = day * 7;
+    var month = day * 30;
+    var now = new Date().getTime(); //获取当前时间毫秒 
+    var diffValue = now - dateTimeStamp; //时间差 
+    if (diffValue < 0) {
+         return;
+}
+   var minC = diffValue / minute; //计算时间差的分，时，天，周，月 
+   var hourC = diffValue / hour;
+   var dayC = diffValue / day;
+   var weekC = diffValue / week;
+   var monthC = diffValue / month;
+   if (monthC >= 1 && monthC <= 3) {
+        result = " " + parseInt(monthC) + " 月前"
+} else if (weekC >= 1 && weekC <= 3) {
+        result = " " + parseInt(weekC) + " 周前"
+} else if (dayC >= 1 && dayC <= 6) {
+        result = " " + parseInt(dayC) + " 天前"
+} else if (hourC >= 1 && hourC <= 23) {
+        result = " " + parseInt(hourC) + " 小时前"
+} else if (minC >= 1 && minC <= 59) {  
+        result = " " + parseInt(minC) + " 分钟前"
+} else if (diffValue >= 0 && diffValue <= minute) {
+        result = "刚刚"
+} else {
+    var datetime = new Date(); 
+    datetime.setTime(dateTimeStamp);
+    var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
+    var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate(); 
+    result = Nmonth + "-" + Ndate
+}
+return result;
+}
+
+function getData(page = 0) { 
+     query.descending('createdAt').skip(page * 10).limit(10).find().then(function (results) {
+         if (results.length == 0) {
+              alert('之前没发表过说说')
+         } else {
+             let resC = results;
+             reqData = false;
+             resC.forEach((i) => {
+                let dateTmp = new Date(i.createdAt);
+                i.attributes.time = timeago(dateTmp);
+                i.attributes.content = urlToLink(i.attributes.content);
+                app.contents.push(i);
+             })
+        }
+
+    }, function (error) { });
+}
+
+getData(0);
+
+query.count().then(function (count) {
+    app.count = count;
+}, function (error) { });
+
+
+
+</script>
+<% if (theme.mathjax.enable && page.mathjax) { %>
+<script src="<%- theme.mathjax.cdn %>"></script>
+<script>
+   MathJax.Hub.Config({
+       tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] }
+   });
+</script>
+
+<style>
+div.timenode {
+    position: relative;
+  }
+  div.timenode:before,
+  div.timenode:after {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    background: rgba(68,215,182,0.5);
+    width: 2px;
+    left: 7px;
+  }
+  div.timenode:before {
+    top: 0px;
+    height: 6px;
+  }
+  div.timenode:after {
+    top: 26px;
+    height: calc(100% - 26px);
+  }
+  div.timenode:last-child:after {
+    height: calc(100% - 26px - 16px);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  div.timenode .meta,
+  div.timenode .body {
+    max-width: calc(100% - 24px);
+  }
+  div.timenode .meta {
+    position: relative;
+    color: var(--color-meta);
+    font-size: 0.875rem;
+    line-height: 32px;
+    height: 32px;
+  }
+  div.timenode .meta:before,
+  div.timenode .meta:after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    z-index: 2;
+  }
+  div.timenode .meta:before {
+    background: rgba(68,215,182,0.5);
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+  }
+  div.timenode .meta:after {
+    background: #44d7b6;
+    margin-left: 2px;
+    margin-top: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    transform: scale(0.5);
+    transition: all 0.28s ease;
+    -moz-transition: all 0.28s ease;
+    -webkit-transition: all 0.28s ease;
+    -o-transition: all 0.28s ease;
+  }
+  div.timenode .meta p {
+    font-weight: bold;
+    margin: 0 0 0 24px;
+  }
+  div.timenode .body {
+    margin: 4px 0 16px 24px;
+    padding: 16px;
+    border-radius: 8px;
+    background: var(--color-block);
+    display: inline-block;
+  }
+  div.timenode .body:empty {
+    display: none;
+  }
+  div.timenode .body >*:first-child {
+    margin-top: 0.25em;
+  }
+  div.timenode .body >*:last-child {
+    margin-bottom: 0.25em;
+  }
+  div.timenode .body .highlight {
+    border: 1px solid #e4e4e4;
+  }
+  div.timenode:hover .meta {
+    color: var(--color-text);
+  }
+  div.timenode:hover .meta:before {
+    background: rgba(255,87,34,0.5);
+  }
+  div.timenode:hover .meta:after {
+    background: #ff5722;
+    transform: scale(1);
+  }
+  div.timenode .body {
+    margin: 0 0 0 24px;
+    padding: 16px;
+    border-radius: 8px;
+    background: #f6f6f6;
+    display: inline-block;
+}
+div.timenode time{
+    margin-left: 20px;
+}
+</style>
+<% } %>
+<% } %>

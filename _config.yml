@@ -268,6 +268,18 @@ myGallery:
 # 设置在归档页面中是否显示'文章日历'控件
 postCalendar: true
 
+# 不建议使用gittalk,gitment这样权限过高的oauth app,因为它们能够 读写 授权者 所有的公共仓库 ，也就是说拿到你的授权 Token 的人，可以将你的 GitHub 公共仓库删空（这是github权限分的不够细的锅），如果恶意攻击者想获取使用者的 AccessToken，只需要在代码中加上一个 ajax 请求即可。原贴地址:https://www.v2ex.com/t/535608。建议大家看完。（我没有在用gittalk/gitment的网站上评论过，但根据v2ex网友的提示，如果网站自行修改了 gitalk.js 脚本 或者反代了 github api，就很容易拿到你的 Token ）
+
+# https://github.com/utterance/utterances 是个 GitHub App，它的权限仅限于某个仓库。像 hugo hexo 这种静态页面类型的博客，clientID/clientSecret 泄露是不可避免的。我认为较好的解决方式是像 utteras 这种 GitHubApp，只有一个仓库的读写权限，将破坏降到最小。
+
+# valine和minivaline都是使用的免费的leancloud开发版资源，即使数据丢了leancloud也不用负任何的责任。此外valine的src目录已在1.4.0后停止更新。。。薛定谔的开源。
+
+# 当初多说国内最大都倒了，livere不一定靠谱。
+
+# disqus被墙了。
+
+# 畅言需要备案。
+
 # the Gitalk config，default disabled
 # Gitalk 评论模块的配置，默认为不激活
 gitalk:
@@ -599,3 +611,23 @@ artitalk:
   enable: false
   appId: xxxxx
   appKey: xxxxxx
+
+## 哔哔功能配置
+## 登陆leancloud创建应用。进入应用后，点击创建 Class，将「 Class 名称」命名为 content 
+## 点击刚刚创建的content Class，点击添加列并创建名称为content的列，类型为String，注意列注释也要填写（随意填）
+## 记录appid，masterkey，api域名
+## 输入:hexo new page bb
+## hexo就在source文件夹下创建了bb/index.md。
+修改index.md的frontmater下的layout为bb：
+---
+title: 黑石说
+layout: bb
+---
+## 里面的文字可以自己随意加，会显示在哔哔的上方。
+## 关注公众号 "黑石哔哔"，发送: //bindCurrentUser:你的APPID,你的MASTERKEY,你的RESTAPI 
+## 可用leancloud国际版，国际版api为 https://appid前八位.api.lncldglobal.com 
+bbtime:
+ enable: false
+ appId: 你的appId
+ appKey: 你的appKey
+ serverURLs: https://你的api
