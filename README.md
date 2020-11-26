@@ -1,6 +1,6 @@
 # hexo-theme-matery
 
-[![HitCount](http://hits.dwyl.io/blinkfox/hexo-theme-matery.svg)](http://hits.dwyl.io/blinkfox/hexo-theme-matery) [![Gitter](https://img.shields.io/gitter/room/blinkfox/hexo-theme-matery.svg)](https://gitter.im/hexo-theme-matery/Lobby?utm_source=badge) [![GitHub issues](https://img.shields.io/github/issues/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/issues) [![GitHub license](https://img.shields.io/github/license/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/blob/master/LICENSE) [![Download](https://img.shields.io/badge/downloads-master-green.svg)](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master) [![Hexo Version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io) [![GitHub forks](https://img.shields.io/github/forks/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/network) [![GitHub stars](https://img.shields.io/github/stars/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/stargazers)
+[![HitCount](http://hits.dwyl.io/blinkfox/hexo-theme-matery.svg)](http://hits.dwyl.io/blinkfox/hexo-theme-matery) [![Gitter](https://img.shields.io/gitter/room/blinkfox/hexo-theme-matery.svg)](https://gitter.im/hexo-theme-matery/Lobby?utm_source=badge) [![GitHub issues](https://img.shields.io/github/issues/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/issues) [![GitHub license](https://img.shields.io/github/license/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/blob/master/LICENSE) [![Download](https://img.shields.io/badge/downloads-master-green.svg)](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master) [![Hexo Version](https://img.shields.io/badge/hexo-%3E%3D%205.0.0-blue.svg)](http://hexo.io) [![GitHub forks](https://img.shields.io/github/forks/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/network) [![GitHub stars](https://img.shields.io/github/stars/blinkfox/hexo-theme-matery.svg)](https://github.com/blinkfox/hexo-theme-matery/stargazers)
 
 [🇨🇳中文说明](README_CN.md) | [国内访问示例(http://blinkfox.com)](http://blinkfox.com) | [Github Deploy Demo(https://blinkfox.github.io)](https://blinkfox.github.io)
 
@@ -39,11 +39,12 @@ Thanks to these contributors, without whom, hexo-theme-matery won't be this perf
 
 ## Download
 
-You should have a [Hexo](https://hexo.io/zh-cn/) blog when you see it here. If not, try to use the hexo and [Markdown](https://www.appinn.com/markdown/) to write your blog and post.
+hexo-theme-matery **recommend you to use Hexo 5.0.0 and above**. If you already have your own [Hexo](https://hexo.io/zh-cn/) blog, I suggest you upgrade Hexo to the latest stable version.
+
 Click [here](https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master) to download master branch of the last stable version of the code.After decompressing, copy the `hexo-theme-matery` folder
 to your `themes` folder of your Hexo blog project.
 
- Of course, you can use `git clone` to download in your `themes` folder.
+Of course, you can use `git clone` to download in your `themes` folder.
 
 ```bash
 git clone https://github.com/blinkfox/hexo-theme-matery.git
@@ -276,26 +277,30 @@ menu:
         icon: fas fa-image
 ```
 
-### Code highlight
+### Code Highlight
 
-Matery uses the Hexo plugin [hexo-prism-plugin](https://github.com/ele828/hexo-prism-plugin) to show the code highlight instead of the hexo default. The Installation command is as follows:
+Starting from Hexo 5.0.0 version, it comes with support for `prismjs` code syntax highlighting, and hexo-theme-matery has been modified to support it.
 
-```bash
-npm i -S hexo-prism-plugin
-```
+If the plugin of `hexo-prism-plugin` has been installed in your blog, then you need to execute `npm uninstall hexo-prism-plugin` to uninstall it, otherwise there will be `&#123;`, `&#125;` escape characters in the code block of the post.
 
-Then, modify the value of `highlight.enable` to `false` in `_config.yml` at the root your hexo project, and add the configuration of `prism` plugin as follows:
+Then, modify the value of `highlight.enable` to `false` in `_config.yml` at the root your hexo project, and set the value of `prismjs.enable` to `true`, the main configuration is as follows:
 
 ```yaml
 highlight:
   enable: false
-
-prism_plugin:
-  mode: 'preprocess'    # realtime/preprocess
-  theme: 'tomorrow'
-  line_number: false    # default false
-  custom_css:
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  enable: true
+  preprocess: true
+  line_number: true
+  tab_replace: ''
 ```
+
+The default `prismjs` theme in the hexo-theme-matery is `Tomorrow Night`, if you want to customize your own theme, you can go to [prismjs download page](https://prismjs.com/download.html) to download yourself favorite theme `css` file, then name this css theme file `prism.css`, replace the `source/libs/prism/prism.css` file in the theme folder of `hexo-theme-matery`.
 
 ### Search
 
@@ -606,79 +611,4 @@ There are 24 featured pictures in `/source/medias/featureimages`, you can add or
 
 ## Changelog
 
-- v1.3.2
-  - Added support for traditional characters;
-  - Added 404 page;
-  - Fixed other minor issues；
-- v1.3.1
-  - Added `kbd` style;
-  - Fixed an issue with incorrect links in the word cloud when deploying sub directories;
-  - Removed vertical lines in TOC;
-  - Fixed the problem that the `tooltip` in the home icon is not displayed;
-  - Fixed the issue that switching banners every day does not take effect when generating static files;
-  - Updated some configurations in `miniValine`;
-- v1.3.0
-  - new supporting sub directory deployment（e.g.: `Gitee`）；
-  - new `MiniValine` comment system；
-  - new `jsdelivr` supported；
-  - Fixed many bugs；
-- v1.2.2
-  - Add the function of customizing post `keywords`;
-  - Add the function and configuration of static ribbon click switch;
-  - Set the word count, ribbon and site running time as `false` by default;
-  - Modify the meta attribute of the post's `description` to read the post's `summary` attribute first;
-  - Modified HTML tag of article title from `div` to` h1` title;
-  - Fixed the problem of incorrect footer `year` display;
-  - Removed redundant `setTimeout` js code from site runtime;
-- v1.2.1
-  - Added TOC's expand directory level settings and scroll bar function to prevent directory overflow when there are many directories;
-  - Modified the display mode of the homepage to the previous mode;
-  - Fixed the problem that the home button has no border;
-  - Fixed an issue where the homepage card was still generated when the music and bottom suction modes, videos, recommended articles, etc. were not activated;
-  - Fixed the problem that wordCount plugin is not installed, and modified some configurations;
-  - Fixed the issue that the page does not display music when there are single quotes in the JSON configuration of the music;
-  - Fixed the problem of tag cloud link failure under Hexo4.0;
-- v1.2.0
-  - Added online chat function of [DaoVoice](http://www.daovoice.io/) and [Tidio](https://www.tidio.com/);
-  - Added the ability to have two levels of menus;
-  - Added a subtitle for typing effects;
-  - Added the ability to preload web content;
-  - Added the configuration function of the home banner whether to switch daily;
-  - Added the ability to display ICP filing information, which is not enabled by default;
-  - Added configuration for Baidu analysis;
-  - Added language display, one-click copy, display line number and other functions of the code block;
-  - Added the ability to customize the configuration of the home page car map and recommended articles;
-  - Added article page to display update date;
-  - Added an icon for the reload rule;
-  - Modified the layout and display of the sharing;
-  - Upgraded and updated versions of some dependent libraries;
-  - other details to modify and optimize;
-- v1.1.0
-  - Added support for `emoji`;
-  - Added site run time statistics and configuration;
-  - Added the function of message board, it is not enabled by default;
-  - Added `Twitter`, `Facebook`, and `zhihu` social links;
-  - Updated the version of `Valine` to the latest version;
-  - modification of other minor details;
-- v1.0.4
-  - Added the ability to customize the reprint rules for each post;
-  - Fix the problem that the custom summary of the previous page and the next page does not display;
-  - Fixed the problem that the link of the friends link was misplaced and changed to the layout of the waterfall stream;
-  - Other minor bugs fixes;
-- v1.0.3
-  - Added `TOC` expansion, shrink button and related configuration, this button is displayed by default;
-- v1.0.2
-  - Upgraded the [Materialize](https://materializecss.com/) framework version to `1.0.0`, refactoring and modifying some files or problems during the upgrade process;
-  - Added a full-screen carousel effect on the front cover of the home page to set more important posts to the home page carousel;
-  - Fix the first button on the front page is Chinese;
-  - Fixed an issue where clicking search input on the iPhone to get focus;
-  - Fixed an issue where the page was enlarged after the input box on the iPhone got focus;
-  - Fix some posts or UI display issues;
-- v1.0.1
-  - Adjust the file request path of `css` and `js` in the `_config.yml` of the theme, so that you can quickly configure their own CDN;
-  - Whether the new code is configurable or not, the default is a line break;
-  - The `TOC` function is activated by default, and the `Front-matter` configuration option for `TOC` is turned off for a post;
-  - Fixed an issue where the highlighted directory option was inaccurate when scrolling through the post;
-  - Remove the search box under `IOS` to automatically get the focus attribute, preventing the view from moving up after automatically getting the focus;
-- v1.0.0
-  - Added all the basic features;
+See [CHANGELOG.md](https://github.com/blinkfox/hexo-theme-matery/blob/master/README.md)

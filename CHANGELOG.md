@@ -1,0 +1,161 @@
+# 变更记录 (CHANGELOG)
+
+## 中文版
+
+- v1.3.2
+  - 新增了繁体字的支持；
+  - 新增了 404 页面；
+  - 其他小问题修改；
+- v1.3.1
+  - 新增了 `kbd` 样式；
+  - 修复了子目录部署时词云中链接有误的问题；
+  - 移除了 TOC 中的竖线；
+  - 修复了首页 icon 图标中的 tooltip 不显示的问题；
+  - 修复生成静态文件时，每天切换 banner 不生效的问题；
+  - 更新了 `miniValine` 中的一些配置；
+- v1.3.0
+  - 新增了支持子目录部署的功能（如：`Gitee`）；
+  - 新增了 `MiniValine` 评论系统；
+  - 新增了 `jsdelivr` 的支持；
+  - 修复了诸多发现的 bug；
+- v1.2.2
+  - 新增了自定义文章 `keywords` 的功能；
+  - 新增静态彩带点击切换的功能和配置；
+  - 将文章字数统计、彩带和站点运行时间等功能默认设置为 `false`；
+  - 修改了文章的 `description` 的 meta 属性优先读取文章的 `summary` 属性；
+  - 修改了文章标题的 HTML 标签，从 `div` 改成了 `h1` 标题；
+  - 修改了页脚年份显示不正确的问题；
+  - 去掉了站点运行时间中多余的 `setTimeout` 代码；
+- v1.2.1
+  - 新增了 TOC 的展开目录层级设置和滚动条功能，防止目录较多的时候目录溢出；
+  - 修改了首页的展示方式为以前的模式；
+  - 修复首页按钮没有边框的问题；
+  - 修复了音乐及吸底模式、视频、推荐文章等不激活时仍然生成首页卡片的问题；
+  - 修复 wordCount 插件未安装的问题，修改了部分配置；
+  - 修复音乐的 JSON 配置中有单引号的情况页面不显示的音乐的问题
+  - 修复标签云在Hexo4.0下链接失效的问题；
+- v1.2.0
+  - 新增了 [DaoVoice](http://www.daovoice.io/)、[Tidio](https://www.tidio.com/) 的在线聊天功能；
+  - 新增了两级菜单的功能；
+  - 新增了打字效果的副标题；
+  - 新增了网页内容预加载的功能；
+  - 新增了首页 banner 是否每日切换的配置功能；
+  - 新增了显示 ICP 备案信息的功能，默认未开启；
+  - 新增了百度分析的配置；
+  - 新增了代码块的语言显示、一键复制、显示行号等功能；
+  - 新增了首页轮播图和推荐文章可自定义配置的功能；
+  - 新增了文章页面显示更新日期；
+  - 新增了转载规则的图标；
+  - 修改了分享的布局和显示方式；
+  - 升级更新了部分依赖库的版本；
+  - 其他细节修改和优化；
+- v1.1.0
+  - 新增了 `emoji` 的支持；
+  - 新增了站点运行时间统计及配置；
+  - 新增了留言板的功能,默认未开启；
+  - 新增了 `Twitter`、`Facebook`、知乎的社交链接；
+  - 更新了 `Valine` 的版本为最新版；
+  - 其他小细节的修改；
+- v1.0.4
+  - 新增了能为每篇文章都自定义转载规则的功能；
+  - 修复上一页、下一页的自定义 `summary` 不显示的问题；
+  - 修复了友情链接显示错位的问题，改为了瀑布流的布局方式；
+  - 其他小细节 bug 的修改；
+- v1.0.3
+  - 新增了`TOC`展开、收缩的按钮和相关配置，默认显示此按钮；
+- v1.0.2
+  - 升级了 [Materialize](https://materializecss.com/) 框架版本为`1.0.0`，重构和修改了升级过程中的部分文件或问题；
+  - 新增了首页封面的全屏轮播特效，可以将更重要的文章设置到首页轮播中；
+  - 修复首页第一个按钮是中文的问题
+  - 修复了 iPhone 上点击搜索输入获取焦点的问题；
+  - 修复了 iPhone 上输入框获取焦点后页面放大的问题；
+  - 修复一些文章或 UI 显示问题；
+- v1.0.1
+  - 调整 `css`、`js` 的文件请求路径在主题的`_config.yml`中配置，便于你更快捷的配置自己的 CDN；
+  - 新增代码是否折行为可配置，默认为折行；
+  - 默认激活 `TOC` 功能，并新增为某篇文章关闭 `TOC` 的 `Front-matter` 配置选项；
+  - 修复文章滚动时，高亮的目录选项不准确的问题；
+  - `IOS`下移除搜索框自动获得焦点属性，防止自动获得焦点后导致视图上移；
+- v1.0.0
+  - 新增了所有基础功能；
+
+---
+
+## 英文版
+
+- v1.3.2
+  - Added support for traditional characters;
+  - Added 404 page;
+  - Fixed other minor issues；
+- v1.3.1
+  - Added `kbd` style;
+  - Fixed an issue with incorrect links in the word cloud when deploying sub directories;
+  - Removed vertical lines in TOC;
+  - Fixed the problem that the `tooltip` in the home icon is not displayed;
+  - Fixed the issue that switching banners every day does not take effect when generating static files;
+  - Updated some configurations in `miniValine`;
+- v1.3.0
+  - new supporting sub directory deployment（e.g.: `Gitee`）；
+  - new `MiniValine` comment system；
+  - new `jsdelivr` supported；
+  - Fixed many bugs；
+- v1.2.2
+  - Add the function of customizing post `keywords`;
+  - Add the function and configuration of static ribbon click switch;
+  - Set the word count, ribbon and site running time as `false` by default;
+  - Modify the meta attribute of the post's `description` to read the post's `summary` attribute first;
+  - Modified HTML tag of article title from `div` to` h1` title;
+  - Fixed the problem of incorrect footer `year` display;
+  - Removed redundant `setTimeout` js code from site runtime;
+- v1.2.1
+  - Added TOC's expand directory level settings and scroll bar function to prevent directory overflow when there are many directories;
+  - Modified the display mode of the homepage to the previous mode;
+  - Fixed the problem that the home button has no border;
+  - Fixed an issue where the homepage card was still generated when the music and bottom suction modes, videos, recommended articles, etc. were not activated;
+  - Fixed the problem that wordCount plugin is not installed, and modified some configurations;
+  - Fixed the issue that the page does not display music when there are single quotes in the JSON configuration of the music;
+  - Fixed the problem of tag cloud link failure under Hexo4.0;
+- v1.2.0
+  - Added online chat function of [DaoVoice](http://www.daovoice.io/) and [Tidio](https://www.tidio.com/);
+  - Added the ability to have two levels of menus;
+  - Added a subtitle for typing effects;
+  - Added the ability to preload web content;
+  - Added the configuration function of the home banner whether to switch daily;
+  - Added the ability to display ICP filing information, which is not enabled by default;
+  - Added configuration for Baidu analysis;
+  - Added language display, one-click copy, display line number and other functions of the code block;
+  - Added the ability to customize the configuration of the home page car map and recommended articles;
+  - Added article page to display update date;
+  - Added an icon for the reload rule;
+  - Modified the layout and display of the sharing;
+  - Upgraded and updated versions of some dependent libraries;
+  - other details to modify and optimize;
+- v1.1.0
+  - Added support for `emoji`;
+  - Added site run time statistics and configuration;
+  - Added the function of message board, it is not enabled by default;
+  - Added `Twitter`, `Facebook`, and `zhihu` social links;
+  - Updated the version of `Valine` to the latest version;
+  - modification of other minor details;
+- v1.0.4
+  - Added the ability to customize the reprint rules for each post;
+  - Fix the problem that the custom summary of the previous page and the next page does not display;
+  - Fixed the problem that the link of the friends link was misplaced and changed to the layout of the waterfall stream;
+  - Other minor bugs fixes;
+- v1.0.3
+  - Added `TOC` expansion, shrink button and related configuration, this button is displayed by default;
+- v1.0.2
+  - Upgraded the [Materialize](https://materializecss.com/) framework version to `1.0.0`, refactoring and modifying some files or problems during the upgrade process;
+  - Added a full-screen carousel effect on the front cover of the home page to set more important posts to the home page carousel;
+  - Fix the first button on the front page is Chinese;
+  - Fixed an issue where clicking search input on the iPhone to get focus;
+  - Fixed an issue where the page was enlarged after the input box on the iPhone got focus;
+  - Fix some posts or UI display issues;
+- v1.0.1
+  - Adjust the file request path of `css` and `js` in the `_config.yml` of the theme, so that you can quickly configure their own CDN;
+  - Whether the new code is configurable or not, the default is a line break;
+  - The `TOC` function is activated by default, and the `Front-matter` configuration option for `TOC` is turned off for a post;
+  - Fixed an issue where the highlighted directory option was inaccurate when scrolling through the post;
+  - Remove the search box under `IOS` to automatically get the focus attribute, preventing the view from moving up after automatically getting the focus;
+- v1.0.0
+  - Added all the basic features;
