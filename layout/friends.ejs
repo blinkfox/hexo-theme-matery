@@ -226,11 +226,15 @@
                 </article>
             </div>
         </div>
-        <div class="card">
-            <div class="card-content">
-                <%- page.content %>
+
+        <% if (page.content && page.content.length > 0) { %>
+            <div class="card">
+                <div class="card-content">
+                    <%- page.content %>
+                </div>
             </div>
-        </div>
+        <% } %>
+
         <div class="card">
 
             <% if (theme.gitalk && theme.gitalk.enable) { %>
