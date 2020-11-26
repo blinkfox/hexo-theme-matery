@@ -38,10 +38,10 @@ $(function () {
                     // perform local searching
                     datas.forEach(function (data) {
                         var isMatch = true;
-                        var content_index = [];
                         var data_title = data.title.trim().toLowerCase();
                         var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
                         var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
                         var index_title = -1;
                         var index_content = -1;
                         var first_occur = -1;
