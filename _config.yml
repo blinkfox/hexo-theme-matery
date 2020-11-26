@@ -609,8 +609,8 @@ background:
 # 说说 https://artitalk.js.org/
 artitalk:
   enable: false
-  appId: xxxxx
-  appKey: xxxxxx
+  appId: # xxxxx
+  appKey: # xxxxxx
 
 # 哔哔功能配置
 # 登陆leancloud创建应用。进入应用后，点击创建 Class，将「 Class 名称」命名为 content
