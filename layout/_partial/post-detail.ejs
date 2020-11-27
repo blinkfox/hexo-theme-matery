@@ -71,12 +71,16 @@
         </div>
         <hr class="clearfix">
 
+        <% if (config.prismjs.enable) { %>
+        <!-- 是否加载使用自带的 prismjs. -->
         <link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.prism) %>">
-        <!-- 代码块折行 -->
+        <% } %>
+
         <% if (theme.code.break) { %>
-            <style type="text/css">
-                code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
-            </style>
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
         <% } %>
 
         <div class="card-content article-card-content">
