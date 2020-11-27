@@ -71,7 +71,7 @@
         </div>
         <hr class="clearfix">
 
-        <% if (config.prismjs.enable) { %>
+        <% if (config.prismjs && config.prismjs.enable) { %>
         <!-- 是否加载使用自带的 prismjs. -->
         <link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.prism) %>">
         <% } %>
