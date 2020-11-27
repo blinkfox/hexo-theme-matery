@@ -2,6 +2,14 @@
 
 ## 中文版
 
+- v2.0.0
+  - 新增了对 Hexo 5.0.0 的支持，并推荐升级使用 Hexo 5.0.0，去除了对 `hexo-prism-plugin` 插件的依赖，可直接使用自带的 `prismjs` 插件；
+  - 新增了背景图功能；
+  - 新增了畅言、腾讯兔小巢、哔哔、 `Artitalk` 等评论或说说功能；
+  - 开始阅读部分行为修改；
+  - 修改了 TOC 目录高度为自适应；
+  - 修复了搜索的相关问题；
+  - 其他小问题修改；
 - v1.3.2
   - 新增了繁体字的支持；
   - 新增了 404 页面；
@@ -83,6 +91,14 @@
 
 ## 英文版
 
+- v2.0.0
+  - Added support for Hexo 5.0.0, and it is recommended to upgrade to Hexo 5.0.0, remove the dependency on the `hexo-prism-plugin`, you can directly use the built-in `prismjs`;
+  - Added background image;
+  - Added comment or talk support such as 畅言、腾讯兔小巢、哔哔、 `Artitalk`;
+  - Modifications to "Start Reading";
+  - Modified TOC directory height to be adaptive;
+  - Fixed search related bugs；
+  - Fixed Other minor bugs；
 - v1.3.2
   - Added support for traditional characters;
   - Added 404 page;
