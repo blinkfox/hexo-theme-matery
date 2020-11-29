@@ -39,6 +39,10 @@
                 <%- partial('_partial/changyan') %>
             <% } %>
 
+            <% if (theme.utterances && theme.utterances.enable) { %>
+                <%- partial('_partial/utterances.ejs') %>
+            <% } %>
+
         </div>
     </div>
 </main>

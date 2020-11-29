@@ -268,20 +268,12 @@ myGallery:
 # 设置在归档页面中是否显示'文章日历'控件
 postCalendar: true
 
-# 不建议使用gittalk,gitment这样权限过高的oauth app,因为它们能够 读写 授权者 所有的公共仓库 ，也就是说拿到你的授权 Token 的人，可以将你的 GitHub 公共仓库删空（这是github权限分的不够细的锅），如果恶意攻击者想获取使用者的 AccessToken，只需要在代码中加上一个 ajax 请求即可。原贴地址:https://www.v2ex.com/t/535608。建议大家看完。（我没有在用gittalk/gitment的网站上评论过，但根据v2ex网友的提示，如果网站自行修改了 gitalk.js 脚本 或者反代了 github api，就很容易拿到你的 Token ）
+# （以下注释内容均为txmu编写）不建议使用gittalk,gitment这样权限过高的oauth app,因为它们能够读写授权者（评论者，如果博主回复过评论，那么博主也算） 所有的公共仓库 ，也就是说拿到你的授权 Token 的人，可以将你的 GitHub 公共仓库删空（这是github权限分的不够细的锅），如果恶意攻击者想获取使用者的 AccessToken，只需要在https://github.com/gitalk/gitalk/blob/master/src/gitalk.jsx#L156的代码中加上一个 ajax 请求即可。（我没有在用gittalk/gitment的网站上评论过，但如果网站自行修改了 gitalk.js 脚本 或者反代了 github api，就很容易拿到你的 Token，所以我专门把utterances适配了一下，本地博客实测正常。utterances教程:https://blog.njilc.com/post/self-hosted-utterances-tutorial）
 
-# https://github.com/utterance/utterances 是个 GitHub App，它的权限仅限于某个仓库。像 hugo hexo 这种静态页面类型的博客，clientID/clientSecret 泄露是不可避免的。我认为较好的解决方式是像 utteras 这种 GitHubApp，只有一个仓库的读写权限，将破坏降到最小。
-
-# valine和minivaline都是使用的免费的leancloud开发版资源，即使数据丢了leancloud也不用负任何的责任。此外valine的src目录已在1.4.0后停止更新。。。薛定谔的开源。
-
-# 当初多说国内最大都倒了，livere不一定靠谱。
-
-# disqus被墙了。
-
-# 畅言需要备案。
+# 我(txmu)用过的部分评论系统速度排序:minivaline（最快）=utterances（最快）＞livere＞畅言（我测试的时候是刷新一次后显示）
 
 # the Gitalk config，default disabled
-# Gitalk 评论模块的配置，默认为不激活
+# Gitalk 评论模块的配置，默认为不激活。目前不建议使用。
 gitalk:
   enable: false
   owner:
@@ -292,7 +284,7 @@ gitalk:
   admin:
 
 # the Gitment config，default disabled
-# Gitment 评论模块的配置，默认为不激活
+# Gitment 评论模块的配置，默认为不激活。目前不建议使用。
 gitment:
   enable: false
   owner:
@@ -302,7 +294,7 @@ gitment:
     clientSecret:
 
 # disqus config, default disabled
-# Disqus评论模块的配置，默认为不激活
+# Disqus评论模块的配置，默认为不激活。被墙。可以看看DisqusJS。
 disqus:
   enable: false
   shortname:
@@ -376,6 +368,14 @@ changyan:
   enable: false
   appId:
   conf:
+
+utterances:
+ enable: true
+ repo: txmu/utterances
+ issue-term: pathname # 不能更改，除非你修改了utterances.ejs
+ theme: github-light
+ crossorigin: anonymous
+
 # Whether to display fork me on github icon and link, default true, You can change it to your repo address
 # 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
 githubLink:
