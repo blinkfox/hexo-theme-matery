@@ -43,6 +43,10 @@
                 <%- partial('_partial/utterances.ejs') %>
             <% } %>
 
+           <% if (theme.vssue && theme.vssue.enable) { %>
+                <%- partial('_partial/vssue.ejs') %>
+            <% } %>
+
         </div>
     </div>
 </main>
