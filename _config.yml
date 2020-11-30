@@ -270,7 +270,7 @@ postCalendar: true
 
 # （以下注释内容均为txmu编写）不建议使用gittalk,gitment这样权限过高的oauth app,因为它们能够读写授权者（评论者，如果博主回复过评论，那么博主也算） 所有的公共仓库 ，也就是说拿到你的授权 Token 的人，可以将你的 GitHub 公共仓库删空（这是github权限分的不够细的锅），如果恶意攻击者想获取使用者的 AccessToken，只需要在https://github.com/gitalk/gitalk/blob/master/src/gitalk.jsx#L156的代码中加上一个 ajax 请求即可。（我没有在用gittalk/gitment的网站上评论过，但如果网站自行修改了 gitalk.js 脚本 或者反代了 github api，就很容易拿到你的 Token，所以我专门把utterances适配了一下，本地博客实测正常。utterances教程:https://blog.njilc.com/post/self-hosted-utterances-tutorial）
 
-# 我(txmu)用过的部分评论系统速度排序:minivaline（最快）=utterances（最快）＞livere＞畅言（我测试的时候是刷新一次后显示）
+# 我(txmu)用过的部分评论系统速度排序:minivaline（最快）=utterances（最快）＞Disqus（墙外）＞livere＞畅言
 
 # the Gitalk config，default disabled
 # Gitalk 评论模块的配置，默认为不激活。目前不建议使用。
