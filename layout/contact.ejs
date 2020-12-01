@@ -47,6 +47,10 @@
                 <%- partial('_partial/vssue.ejs') %>
             <% } %>
 
+           <% if (theme.disqusjs && theme.disqusjs.enable) { %>
+                <%- partial('_partial/disqusjs/disqusjs.js') %>
+            <% } %>
+
         </div>
     </div>
 </main>
