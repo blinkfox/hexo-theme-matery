@@ -1,0 +1,18 @@
+{%- if page.comments %}
+<link rel="stylesheet" href="{{ theme.vendors.disqusjs_css }}">
+
+<script>
+NexT.utils.loadComments('#disqus_thread', () => {
+  NexT.utils.getScript('{{ theme.vendors.disqusjs_js }}', () => {
+    window.dsqjs = new DisqusJS({
+      api       : '{{ theme.disqusjs.api }}' || 'https://disqus.com/api/',
+      apikey    : '{{ theme.disqusjs.apikey }}',
+      shortname : '{{ theme.disqusjs.shortname }}',
+      url       : {{ page.permalink | safedump }},
+      identifier: {{ page.path | safedump }},
+      title     : {{ page.title | safedump }},
+    });
+  }, window.DisqusJS);
+});
+</script>
+{%- endif %}

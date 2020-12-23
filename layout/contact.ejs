@@ -39,6 +39,18 @@
                 <%- partial('_partial/changyan') %>
             <% } %>
 
+            <% if (theme.utterances && theme.utterances.enable) { %>
+                <%- partial('_partial/utterances.ejs') %>
+            <% } %>
+
+           <% if (theme.vssue && theme.vssue.enable) { %>
+                <%- partial('_partial/vssue.ejs') %>
+            <% } %>
+
+           <% if (theme.disqusjs && theme.disqusjs.enable) { %>
+                <%- partial('_partial/disqusjs/disqusjs.js') %>
+            <% } %>
+
         </div>
     </div>
 </main>

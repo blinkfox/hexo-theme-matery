@@ -1,0 +1,11 @@
+<% if (theme.utterances.enable) { %>
+<div>
+ <script src="https://utteranc.es/client.js"
+              repo="<%- theme.utterances.repo %>"
+              issue-term="pathname"
+              theme="<%- theme.utterances.theme %>"
+              crossorigin="<%- theme.utterances.crossorigin%>"
+              async>
+ </script>
+</div>
+<% } %>
