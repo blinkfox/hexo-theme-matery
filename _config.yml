@@ -272,7 +272,7 @@ postCalendar: true
 
 # https://github.com/utterance/utterances 是个 GitHub App，它的权限仅限于某个仓库。像 hugo hexo 这种静态页面类型的博客，clientID/clientSecret 泄露是不可避免的。我认为较好的解决方式是像 utteras 这种 GitHubApp，只有一个仓库的读写权限，将破坏降到最小。
 
-# valine和minivaline都是使用的免费的leancloud开发版资源，即使数据丢了leancloud也不用负任何的责任。此外valine的src目录已在1.4.0后停止更新。。。薛定谔的开源。
+# valine是使用的免费的leancloud开发版资源，即使数据丢了leancloud也不用负任何的责任。此外valine的src目录已在1.4.0后停止更新。。。薛定谔的开源。
 
 # 当初多说国内最大都倒了，livere不一定靠谱。
 
@@ -334,43 +334,13 @@ valine:
 # See: https://github.com/MiniValine/MiniValine
 minivaline:
   enable: false
-  appId: zhM0AOiqle17oPoE84CoYw1e-gzGzoHsz # Your leancloud application appid
-  appKey: itmzT1JbXfAjVwMqDhGPzU45 # Your leancloud application appkey
-  mode: DesertsP # DesertsP or xCss
-  placeholder: Write a Comment # Comment box placeholder
-  math: true # Support MathJax.
-  md: true # Support Markdown.
-  enableQQ: false # Enable QQ avatar API.
-  NoRecordIP: false # Do not record commenter IP.
-  visitor: true # Article reading statistics.
-  maxNest: 6 # Sub-comment maximum nesting depth.
-  pageSize: 6 # Pagination size.
-  adminEmailMd5: de8a7aa53d07e6b6bceb45c64027763d # The MD5 of Admin Email to show Admin Flag.[Just Only DesertsP Style mode]
-  tagMeta: # The String Array of Words to show Flag.[Just Only xCss Style mode]
-    - 管理员
-    - 小伙伴
-    - 访客
-  master: # The MD5 String Array of master Email to show master Flag.[Just Only xCss Style mode]
-    - de8a7aa53d07e6b6bceb45c64027763d
-  friends: # The MD5 String Array of friends Email to show friends Flag.[Just Only xCss Style mode]
-    - b5bd5d836c7a0091aa8473e79ed4c25e
-    - adb7d1cd192658a55c0ad22a3309cecf
-    - 3ce1e6c77b4910f1871106cb30dc62b0
-    - cfce8dc43725cc14ffcd9fb4892d5bfc
-  # MiniValine's display language depends on user's browser or system environment
-  # If you want everyone visiting your site to see a uniform language, you can set a force language value
-  # Available values: en  | zh-CN | (and many more)
-  # More i18n info: https://github.com/MiniValine/minivaline-i18n
-  lang:
-  # Expression Url.
-  # https://github.com/MiniValine/MiniValine/blob/master/.github/FAQ.md#how-to-customize-emoticons
-  emoticonUrl:
-    - https://cdn.jsdelivr.net/npm/alus@latest
-    - https://cdn.jsdelivr.net/gh/MiniValine/qq@latest
-    - https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest
-    - https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest
-    - https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest
-    - https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest
+  md: true
+  # 更多选项 https://minivaline.js.org/docs/cn/#/Options 按照yml格式继续填写即可 （除了 [el] 选项）  
+  # emoticonUrl 等列表选项 可参考 https://github.com/MiniValine/hexo-next-minivaline
+  # 下面是一个例子：
+  backend: waline
+  serverURL: https://waline.vercel.app
+
 
 changyan:
   enable: false
@@ -451,7 +421,7 @@ libs:
     echarts: /libs/echarts/echarts.min.js
     gitalk: /libs/gitalk/gitalk.min.js
     valine: /libs/valine/Valine.min.js # 若想保持最新版，请替换为 https://unpkg.com/valine/dist/Valine.min.js  默认为 /libs/valine/Valine.min.js
-    minivaline: /libs/minivaline/MiniValine.js
+    minivaline: /libs/minivaline/MiniValine.js # V5.0.0
     jqcloud: /libs/jqcloud/jqcloud-1.0.4.min.js
     tocbot: /libs/tocbot/tocbot.min.js
     canvas_nest: /libs/background/canvas-nest.js
