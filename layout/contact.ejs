@@ -30,9 +30,13 @@
             <% if (theme.valine && theme.valine.enable) { %>
             <%- partial('_partial/valine') %>
             <% } %>
-			
-			<% if (theme.minivaline && theme.minivaline.enable) { %>
+
+            <% if (theme.minivaline && theme.minivaline.enable) { %>
             <%- partial('_partial/minivaline') %>
+            <% } %>
+
+            <% if (theme.twikoo && theme.twikoo.enable) { %>
+            <%- partial('_partial/twikoo') %>
             <% } %>
 
             <% if (theme.changyan && theme.changyan.enable) { %>

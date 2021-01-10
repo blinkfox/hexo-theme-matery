@@ -190,6 +190,10 @@
         <%- partial('_partial/changyan') %>
     <% } %>
 
+    <% if (theme.twikoo && theme.twikoo.enable) { %>
+        <%- partial('_partial/twikoo') %>
+    <% } %>
+
     <%- partial('_partial/prev-next') %>
 </div>
 
