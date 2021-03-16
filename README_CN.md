@@ -615,4 +615,4 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 ## 版本变更记录
 
-参见 [CHANGELOG.md](https://github.com/blinkfox/hexo-theme-matery/blob/master/README.md)
+参见 [CHANGELOG.md](https://github.com/blinkfox/hexo-theme-matery/blob/master/CHANGELOG.md)

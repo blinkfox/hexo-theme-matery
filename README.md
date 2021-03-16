@@ -611,4 +611,4 @@ There are 24 featured pictures in `/source/medias/featureimages`, you can add or
 
 ## Changelog
 
-See [CHANGELOG.md](https://github.com/blinkfox/hexo-theme-matery/blob/master/README.md)
+See [CHANGELOG.md](https://github.com/blinkfox/hexo-theme-matery/blob/master/CHANGELOG.md)
