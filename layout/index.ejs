@@ -21,7 +21,7 @@
                         <%- partial('_widget/music') %>
                         <% } %>
 
-                    <% if (theme.video.enable) { %>
+                    <% if (theme.video.enable && ( theme.video.url || theme.video.iframeUrl ) ) { %>
                         <%- partial('_widget/video') %>
                     <% } %>
 
