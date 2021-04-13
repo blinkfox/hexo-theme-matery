@@ -96,7 +96,8 @@ video:
   enable: false
   showTitle: true
   title: 精彩视频
-  url: # 必填
+  url: # url和iframeUrl其中一个必填
+  iframeUrl: #在bilibili或者爱奇艺分享时选择iframe，然后填那个url来这里，sample: //player.bilibili.com/player.html?aid=669520137&bvid=BV1oa4y1L7mw&cid=234543483&page=1
   pic:
   thumbnails:
   height: # 如：400
