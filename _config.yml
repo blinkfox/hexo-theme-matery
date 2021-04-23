@@ -331,16 +331,15 @@ valine:
   coolpushkey: 
 
 # The configuration of the MiniValine comment module is not activated by default.
-# To use it, activate the configuration item and set appId and appKey.
-# MiniValine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
+# To use it, activate the configuration item.
+# MiniValine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项
 # See: https://github.com/MiniValine/MiniValine
 minivaline:
   enable: false
   # 更多选项 https://minivaline.js.org/docs/cn/#/Options 按照yml格式继续填写即可 （除了 [el] 选项）  
   # emoticonUrl 等列表选项 可参考 https://github.com/MiniValine/hexo-next-minivaline
   # 下面是一个例子：
-  backend: waline
-  serverURL: https://waline.vercel.app
+  serverURL: https://minivaline.your-domain.top
 
 changyan:
   enable: false
