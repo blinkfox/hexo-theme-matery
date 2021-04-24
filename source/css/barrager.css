@@ -1,0 +1,81 @@
+.barrage {
+    position: fixed;
+    bottom: 70px;
+    right: -500px;
+    display: inline-block;
+    width: 500px;
+    z-index: 99999
+}
+
+.barrage_box {
+    background-color: rgba(0, 0, 0, .5);
+    padding-right: 8px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 25px;
+    transition: all .3s;
+}
+
+.barrage_box .portrait {
+    display: inline-block;
+    margin-top: 4px;
+    margin-left: 4px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.barrage_box .portrait img {
+    width: 100%;
+    height: 100%;
+}
+
+.barrage_box div.p a {
+    margin-right: 2px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 40px;
+    margin-left: 18px;
+}
+
+.barrage_box div.p a:hover {
+    text-decoration: underline;
+}
+
+.barrage_box .close {
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .1);
+    margin-top: 8px;
+    background-image: url(/medias/barrager/close.png);
+}
+
+.barrage_box:hover .close {
+    visibility: visible;
+    opacity: 1;
+}
+
+.barrage_box .close a {
+    display: block;
+}
+
+.barrage_box .close .icon-close {
+    font-size: 14px;
+    color: rgba(255, 255, 255, .5);
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.barrage .z {
+    float: left !important;
+}
+
+.barrage a {
+    text-decoration: none;
+}
