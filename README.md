@@ -490,6 +490,7 @@ Everything in the Front-matter option is **not required**. But I still recommend
 | author     | `author` in root `_config.yml` | Post author                                    |
 | img        | a value in `featureImages`  | Post feature image，For example: `http://xxx.com/xxx.jpg` |
 | top        | `true`                      | Recommended post (whether the post is topped), if the `top` value is `true`, it will be recommended as a homepage post. |
+| hide        | `false`                      | Whether show this post in homepage, if the `hide` value is `true`, it will not be showed in homepage. |
 | cover      | `false`                     | The `v1.0.2` version is added to indicate whether the post needs to be added to the homepage carousel cover. |
 | coverImg   | null                        | The new version of `v1.0.2` indicates that the post needs to display the image path on the cover of the homepage. If not, the default image of the post is used by default. |
 | password   | null                        | The post read the password. If you want to set the reading verification password for the article, you can set the value of `password`, which must be encrypted with `SHA256` to prevent others from seeing it. The premise is that the `verifyPassword` option is activated in the theme's `config.yml` |
@@ -527,6 +528,7 @@ date: 2018-09-07 09:25:00
 author: Qi Zhao
 img: /source/images/xxx.jpg
 top: true
+hide: false
 cover: true
 coverImg: /images/1.jpg
 password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
