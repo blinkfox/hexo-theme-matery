@@ -499,6 +499,7 @@ music:
 | author     | 根 `_config.yml` 中的 `author` | 文章作者                                                     |
 | img        | `featureImages` 中的某个值   | 文章特征图，推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如: `http://xxx.com/xxx.jpg` |
 | top        | `true`                      | 推荐文章（文章是否置顶），如果 `top` 值为 `true`，则会作为首页推荐文章 |
+| hide        | `false`                    | 隐藏文章，如果`hide`值为`true`，则文章不会在首页显示 |
 | cover      | `false`                     | `v1.0.2`版本新增，表示该文章是否需要加入到首页轮播封面中 |
 | coverImg   | 无                          | `v1.0.2`版本新增，表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片 |
 | password   | 无                          | 文章阅读密码，如果要对文章设置阅读验证密码的话，就可以设置 `password` 的值，该值必须是用 `SHA256` 加密后的密码，防止被他人识破。前提是在主题的 `config.yml` 中激活了 `verifyPassword` 选项 |
@@ -536,6 +537,7 @@ date: 2018-09-07 09:25:00
 author: 赵奇
 img: /source/images/xxx.jpg
 top: true
+hide: false
 cover: true
 coverImg: /images/1.jpg
 password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
