@@ -22,6 +22,7 @@ var searchFunc = function (path, search_id, content_id) {
                     return;
                 }
                 // perform local searching
+                var cnt = 1;
                 datas.forEach(function (data) {
                     var isMatch = true;
                     var content_index = [];
@@ -50,22 +51,17 @@ var searchFunc = function (path, search_id, content_id) {
                     }
                     // show search results
                     if (isMatch) {
-                        str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                        str += "<li><a href='" + data_url + "' class='search-result-title'>" + String(cnt) + ". " + data_title + "</a>";
+                        cnt += 1;
+
                         var content = data.content.trim().replace(/<[^>]+>/g, "");
                         if (first_occur >= 0) {
                             // cut out 100 characters
                             var start = first_occur - 20;
-                            var end = first_occur + 80;
                             if (start < 0) {
                                 start = 0;
                             }
-                            if (start == 0) {
-                                end = 100;
-                            }
-                            if (end > content.length) {
-                                end = content.length;
-                            }
-                            var match_content = content.substr(start, end);
+                            var match_content = content.substr(start, 100);
                             // highlight all keywords
                             keywords.forEach(function (keyword) {
                                 var regS = new RegExp(keyword, "gi");
@@ -78,6 +74,7 @@ var searchFunc = function (path, search_id, content_id) {
                     }
                 });
                 str += "</ul>";
+                str = "<p class=\"search-result-summary\">共找到" + String(cnt-1) + "条结果</p>"  + str;
                 $resultContent.innerHTML = str;
             });
         }
