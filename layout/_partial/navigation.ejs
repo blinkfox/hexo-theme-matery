@@ -1,13 +1,4 @@
 <%
-    var menuMap = new Map();
-    menuMap.set("Index", "首页");
-    menuMap.set("Tags", "标签");
-    menuMap.set("Categories", "分类");
-    menuMap.set("Archives", "归档");
-    menuMap.set("About", "关于");
-    menuMap.set("Contact", "留言板");
-    menuMap.set("Friends", "友情链接");
-
     var configRoot = config.root
     configRoot = (configRoot === null || configRoot === undefined || configRoot === '/') ? '' : configRoot;
 %>
@@ -21,7 +12,7 @@
       <% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
       <i class="<%- theme.menu[key].icon %>" style="zoom: 0.6;"></i>
       <% } %>
-      <span><%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %></span>
+      <span><%- __(key) %></span>
     </a>
     <% } else { %>
     <a href="<%- theme.menu[key].url %>" class="waves-effect waves-light">
@@ -29,7 +20,7 @@
       <% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
       <i class="<%- theme.menu[key].icon %>" style="zoom: 0.6;"></i>
       <% } %>
-      <span><%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %></span>
+      <span><%- __(key) %></span>
       <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
     <ul class="sub-nav menus_item_child ">
