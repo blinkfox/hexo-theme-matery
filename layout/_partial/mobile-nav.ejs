@@ -18,17 +18,6 @@ configRoot = (configRoot === null || configRoot === undefined || configRoot === 
         </div>
     </div>
 
-    <%
-        var menuMap = new Map();
-        menuMap.set("Index", "首页");
-        menuMap.set("Tags", "标签");
-        menuMap.set("Categories", "分类");
-        menuMap.set("Archives", "归档");
-        menuMap.set("About", "关于");
-        menuMap.set("Contact", "留言板");
-        menuMap.set("Friends", "友情链接");
-    %>
-
     <ul class="menu-list mobile-menu-list">
         <% Object.keys(theme.menu).forEach(function(key) { %>
         <li class="m-nav-item">
@@ -39,7 +28,7 @@ configRoot = (configRoot === null || configRoot === undefined || configRoot === 
 			<% } else { %>
 				<i class="fas fa-fw fa-link"></i>
 			<% } %>
-			<%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %>
+			<%- __(key) %>
 		</a>
           <% } else { %>
 		<a href="javascript:;">
@@ -48,7 +37,7 @@ configRoot = (configRoot === null || configRoot === undefined || configRoot === 
 			<% } else { %>
 				<i class="fas fa-fw fa-link"></i>
 			<% } %>
-			<%- (config.language === 'zh-CN' && menuMap.has(key)) ? menuMap.get(key) : key %>
+			<%- __(key) %>
 			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
             <ul <%if(theme.navMenu&&theme.navMenu.bgColor){%> style="background: <%-theme.navMenu.bgColor%>;"<%}%> >
