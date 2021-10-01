@@ -549,6 +549,27 @@ subtitle:
   sub:
     - 从来没有真正的绝境, 只有心灵的迷途
     - Never really desperate, only the lost of the soul
+  api:
+      enable: true
+
+      # 请求地址
+      # Request url
+      url: "https://cdn.jsdelivr.net/gh/czqu/czqu.github.io@main/json/quote.json" 
+
+      # 请求方法
+      # Request method
+      # Available: GET | POST | PUT
+      method: "GET"
+
+      # 请求头
+      # Request headers
+      headers: {}
+
+      # 从请求结果获取字符串的取值字段，最终必须是一个字符串，例如返回结果为 {"data": {"author": "fluid", "content": "An elegant theme"}}, 则取值字段为 ['data', 'content']；如果返回是列表则自动选择第一项
+      # The value field of the string obtained from the response. For example, the response content is {"data": {"author": "fluid", "content": "An elegant theme"}}, the expected `keys: ['data','content']`; if the return is a list, the first item is automatically selected
+      keys: 
+        - ['data','translation']
+        - ['data','content']    
 
 # 手机二级菜单.
 navMenu:
