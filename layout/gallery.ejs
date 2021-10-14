@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="/css/gallery.css">
+<link type="text/css" href="/libs/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link type="text/css" href="/libs/justifiedGallery/justifiedGallery.min.css" rel="stylesheet">
+
+<%- partial('_partial/post-cover') %>
+<%
+let galleries = [];
+if (site.data && site.data.galleries) {
+    galleries = site.data.galleries;
+}
+var pageTitle = page.title;
+function getCurrentGallery(galleries, pageTitle) {
+    for (let i = 0; i < galleries.length; i++) {
+        if (galleries[i]['name'] == pageTitle) {
+            return galleries[i];
+        }
+    }
+}
+var currentGallery = getCurrentGallery(galleries, pageTitle)
+
+var photos = currentGallery.photos;
+var galleryImageStr = theme.jsDelivr.url ? theme.jsDelivr.url : '';
+
+let imageStr = ''
+
+for (var i = 0, len = photos.length; i < len; i++) {
+    var photo = photos[i];
+
+    imageStr += "<a href=\"" + galleryImageStr + photo + "\"" +
+            "     class=\"photo-item\" rel=\"example_group\"" +
+            "     data-fancybox=\"images\">" +
+            "      <img src=\"" + galleryImageStr + photo + "\"" +
+            "       alt=" + photo + ">\n" +
+            "    </a>"
+
+}
+%>  
+
+<div class="container">
+    <div class="photo-wrapper">
+        <% if (page.password ) { %>
+
+            <script src="/js/crypto-js.js"></script>
+            <script src="/js/gallery-encrypt.js"></script>
+            <div id="hbe-security">
+                <div class="hbe-input-container">
+                    <input type="password" class="hbe-form-control" id="pass"  placeholder="请输入密码查看内容"/>
+                    <a href="javascript:;" class="btn-decrypt" id="btn_decrypt">解密</a>
+                </div>
+            </div>
+            <div  id="mygallery">
+                <div class="waterfall" id="encrypt-blog" style="display:none">
+                    <%- aes(imageStr, page.password) %>
+                </div>
+            </div>
+        <% } else { %>
+            <div class="waterfall" id="encrypt-blog">
+                <%- imageStr %>
+            </div>
+        <% } %>
+    </div>
+</div>
+
+<script src="/libs/fancybox/fancybox.js"></script>
+<script src="/libs/justifiedGallery/justifiedGallery.min.js"></script>
+<script>
+
+  $("a[rel=example_group]").fancybox();
+  $("#encrypt-blog").justifiedGallery({margins: 5, rowHeight: 150});
+
+</script>
