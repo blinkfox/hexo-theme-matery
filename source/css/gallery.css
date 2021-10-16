@@ -1,0 +1,86 @@
+.gallery-wrapper{
+    padding-top: 30px;
+  }
+  .gallery-wrapper .gallery-box{
+    padding: 5px !important;
+  }
+  
+  .gallery-wrapper .gallery-item {
+    display: block;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 5px;
+    padding-bottom: 0;
+    position: relative;
+    -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.22);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.22);
+  }
+  
+  .gallery-cover-box{
+    width: 100%;
+    padding-top: 60%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    background: center center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  
+  .gallery-cover-box .gallery-cover-img {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .gallery-item .gallery-name{
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #666;
+    margin: 0;
+  }
+  
+  .waterfall {
+    column-count: 3;
+    column-gap: 1em;
+  }
+  .photo-wrapper{
+    padding-top: 20px;
+  }
+  .photo-item {
+    display: block;
+    padding: 10px;
+    padding-bottom: 0;
+    margin-bottom: 14px;
+    font-size: 0;
+    -moz-page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+    background: white;
+    -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.22);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.22);
+  }
+  .photo-item img {
+    width: 100%;
+  }
+  .photo-item .photo-name{
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top: 1px solid #dddddd;
+  }
+  
+  /*适配移动端布局*/
+  @media only screen and (max-width: 601px) {
+    .waterfall {
+      column-count: 2;
+      column-gap: 1em;
+    }
+  }

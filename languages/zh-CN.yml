@@ -5,6 +5,7 @@ tag: 标签
 tags: 标签
 archives: 归档
 about: 关于
+galleries: 相册
 contact: 留言板
 friends: 友情链接
 startRead: 开始阅读
@@ -72,3 +73,10 @@ checkPolicy: 查看
 siteTotalWords: 站点总字数
 siteTotalVisits: 总访问量
 siteTotalVisitors: 总访问人数
+Index: 首页
+Tags: 标签
+Categories: 分类
+Archives: 归档
+About: 关于
+Contact: 留言板
+Friends: 友情链接
