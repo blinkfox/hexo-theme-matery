@@ -1,0 +1,15 @@
+<% if(theme.cover.video.enable){ %>
+<%
+var videos=theme.cover.video.src
+%>
+<style>
+    #index-video { z-index: -1; position: absolute; top: 0; left: 0; height: 100vh; width: 100%; object-fit: cover;}
+    @media only screen and (max-width: 760px) { #index-video { display: none;}}
+    @media only screen and (min-width: 760px) { .bg-cover { background-image: none!important;}}
+</style>
+<video id="index-video" autoplay loop muted>
+<% for (var i = 0; i < videos.length; i++) { %>
+    <source src="<%=videos[i] %>">
+<% } %>
+</video>
+<% } %>
