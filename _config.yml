@@ -208,6 +208,10 @@ postInfo:
 clicklove:
   enable: true
 
+# 是否激活页面樱花效果, 只在桌面版网页启用特效
+sakura:
+  enable: false
+
 # profile in about page, including avatars, career, and personal introductions.
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
 profile:
@@ -430,6 +434,7 @@ libs:
     scrollProgress: /libs/scrollprogress/scrollProgress.min.js
     lightgallery: /libs/lightGallery/js/lightgallery-all.min.js # V1.6.11
     clicklove: /libs/others/clicklove.js
+    sakura: /libs/others/sakura.js
     busuanzi: /libs/others/busuanzi.pure.mini.js
     aplayer: /libs/aplayer/APlayer.min.js
     dplayer: /libs/dplayer/DPlayer.min.js

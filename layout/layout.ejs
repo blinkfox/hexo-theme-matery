@@ -22,6 +22,18 @@
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.lightgallery) %>"></script>
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.matery) %>"></script>
 
+    <% if (theme.sakura.enable) { %>
+        
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.sakura) %>"><\/script>');
+            }
+        </script>
+
+    <% } %>
+
     <%- partial('_partial/baidu-analytics') %>
     <%- partial('_partial/baidu-push') %>
     <% if (theme.clicklove.enable) { %>
