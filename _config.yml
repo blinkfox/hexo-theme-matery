@@ -208,6 +208,16 @@ postInfo:
 clicklove:
   enable: true
 
+# | 文件名             | 说明                   |
+# | :----------------- | :--------------------- |
+# | sakura-small.js    | 少量樱花               |
+# | sakura-half.js     | 樱花相对原效果数量减半 |
+# | sakura-reduce.js   | 樱花相对原效果减少1/4  |
+# | sakura.js          | 樱花数量不变（原效果） |
+# 默认事sakura.js，如需修改，请到下面地址修改
+# libs
+#   js:
+#     sakura: /libs/others/sakura-reduce.js
 # 是否激活页面樱花效果, 只在桌面版网页启用特效
 sakura:
   enable: false
