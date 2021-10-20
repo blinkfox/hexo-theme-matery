@@ -31,7 +31,30 @@
                 document.write('<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.sakura) %>"><\/script>');
             }
         </script>
+    <% } %>
 
+    <!-- 雪花特效 -->
+    <% if (theme.snowdown.enable) { %> 
+        <script type="text/javascript" src="<%- theme.libs.js.snow %>"></script>
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.snow) %>"><\/script>');
+            }
+        </script>
+    <% } %>
+
+    <!-- 鼠标星星特效 -->
+    <% if (theme.mouseStar.enable) { %> 
+        <script type="text/javascript" src="<%- theme.libs.js.star %>"></script>
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.star) %>"><\/script>');
+            }
+        </script>
     <% } %>
 
     <%- partial('_partial/baidu-analytics') %>
