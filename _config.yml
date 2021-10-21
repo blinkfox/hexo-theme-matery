@@ -61,7 +61,7 @@ cover:
   useConfig: false # 是否使用配置文件, 在 _data/covers.json 下配置推荐文章, false则使用主题在文章中的配置 cover coverImg
   # useConfig 使用方式: 将主题 hexo-theme-matery/source/_data/covers.json 移动到 my-blog/source/_data/下修改配置即可
   video:
-    enable: true
+    enable: false
     src: 
       - https://txmov2.a.yximgs.com/upic/2021/04/09/22/BMjAyMTA0MDkyMjMwMDhfMTg1ODk2MDg4N180NzUyOTMyMjA4Nl8xXzM=_b_B8e080d7ede19e6674d48a9f12545007b.mp4?pkey=AAVAfNhi5_f-HGkIPXrY5w6nyf4JibwOY-WwdHgSJ2aSoi-2WQLpiYDunLbRZQuESz875eMdsepRlVFtXg9nuQY58uRc-7AsF0kEMNR6QYBj56g9JFFMSGdsoKK2-SV27u8&tag=1-1617978682-xpcwebprofile-0-lcvipceuti-9e40072f87531f1a&clientCacheKey=3xbbtbrfxqpccp4_b.mp4
       - https://txmov2.a.yximgs.com/upic/2021/04/09/21/BMjAyMTA0MDkyMTQyNDRfMTg1ODk2MDg4N180NzUyNjAyMzA0N18xXzM=_b_B83b004b85aba8eca3ded270637616575.mp4
@@ -219,7 +219,16 @@ clicklove:
 #   js:
 #     sakura: /libs/others/sakura-reduce.js
 # 是否激活页面樱花效果, 只在桌面版网页启用特效
+# 下面三种特效建议选择一种就够了，
 sakura:
+  enable: false
+
+# 是否激活页面鼠标星星跟随效果, 只在桌面版网页启用特效
+mouseStar:
+  enable: false
+
+  # 是否激活页面飘雪效果, 只在桌面版网页启用特效
+snowdown:
   enable: false
 
 # profile in about page, including avatars, career, and personal introductions.
