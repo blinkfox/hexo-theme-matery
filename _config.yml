@@ -643,3 +643,34 @@ bbtime:
  appId: # 你的appId
  appKey: # 你的appKey
  serverURLs: # https://你的api
+
+
+# 图表绘制插件
+# 建议更换更换hexo-renderer-markdown-it引擎。参考下面链接
+# https://github.com/hexojs/hexo-renderer-markdown-it
+# https://github.com/hexojs/hexo-renderer-markdown-it/wiki/Advanced-Configuration
+# 安装配置方法
+# yarn remove hexo-renderer-marked
+# yarn add hexo-renderer-markdown-it hexo-tag-mermaid
+# 注意：hexo-renderer-markdown-it 比默认引擎更快，可选择插件较多，请认真看上面两个链接教程。
+# mermaid语法教程 https://mermaid-js.github.io/mermaid/#/
+# 使用方法：
+# 在post文章中填写mermaid语句，需要使用{% mermaid %} 包裹
+# {% mermaid %}
+# [mermaid 语句正文]
+# {% endmermaid %}
+# 样例如下所示：
+# {% mermaid %}
+# graph TD
+#     A[Christmas] -->|Get money| B(Go shopping)
+#     B --> C{Let me think}
+#     C -->|One| D[Laptop]
+#     C -->|Two| E[iPhone]
+#     C -->|Three| F[Car]
+# {% endmermaid %}
+# mermaid chart。 依赖hexo-tag-mermaid
+mermaid: ## mermaid url https://github.com/knsv/mermaid
+  enable: false  # default false
+  version: "latest" # default v7.1.2
+  options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
+    #startOnload: true  // default true
