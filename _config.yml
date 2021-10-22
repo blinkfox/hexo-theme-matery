@@ -433,7 +433,7 @@ libs:
   css:
     matery: /css/matery.css
     mycss: /css/my.css
-    fontAwesome: /libs/awesome/css/all.css # V5.11.1
+    fontAwesome: /libs/awesome/css/all.min.css # V5.15.4
     materialize: /libs/materialize/materialize.min.css # 1.0.0
     aos: /libs/aos/aos.css
     animate: /libs/animate/animate.min.css # V3.5.1
