@@ -22,6 +22,15 @@
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.lightgallery) %>"></script>
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.matery) %>"></script>
 
+    <% if (theme.mermaid.enable) { %>
+        <script src='https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js'></script>
+        <script>
+          if (window.mermaid) {
+            mermaid.initialize({theme: 'forest'});
+          }
+        </script>
+    <% } %>
+
     <% if (theme.sakura.enable) { %>
         
         <script type="text/javascript">
@@ -35,7 +44,6 @@
 
     <!-- 雪花特效 -->
     <% if (theme.snowdown.enable) { %> 
-        <script type="text/javascript" src="<%- theme.libs.js.snow %>"></script>
         <script type="text/javascript">
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
@@ -47,7 +55,6 @@
 
     <!-- 鼠标星星特效 -->
     <% if (theme.mouseStar.enable) { %> 
-        <script type="text/javascript" src="<%- theme.libs.js.star %>"></script>
         <script type="text/javascript">
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
