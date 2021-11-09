@@ -23,7 +23,8 @@
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.matery) %>"></script>
 
     <% if (theme.mermaid.enable) { %>
-        <script src='https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js'></script>
+        <!-- <script src='https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js'></script> -->
+        <script src='<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.mermaid) %>'></script>
         <script>
           if (window.mermaid) {
             mermaid.initialize({theme: 'forest'});

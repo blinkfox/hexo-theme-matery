@@ -444,6 +444,7 @@ libs:
     jqcloud: /libs/jqcloud/jqcloud.css
     tocbot: /libs/tocbot/tocbot.css
     prism: /libs/prism/prism.css
+    mermaid: /libs/mermaid/mermaid.min.css
   js:
     matery: /js/matery.js
     jquery: /libs/jquery/jquery.min.js
@@ -470,6 +471,7 @@ libs:
     ribbonRefresh: /libs/background/ribbon-refresh.min.js
     ribbon_dynamic: /libs/background/ribbon-dynamic.js
     instantpage: /libs/instantpage/instantpage.js
+    mermaid: /libs/mermaid/mermaid.min.js
 
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
@@ -639,10 +641,10 @@ artitalk:
 # 关注公众号 "黑石哔哔"，发送: //bindCurrentUser:你的APPID,你的MASTERKEY,你的RESTAPI
 # 可用leancloud国际版，国际版api为 https://appid前八位.api.lncldglobal.com
 bbtime:
- enable: false
- appId: # 你的appId
- appKey: # 你的appKey
- serverURLs: # https://你的api
+  enable: false
+  appId: # 你的appId
+  appKey: # 你的appKey
+  serverURLs: # https://你的api
 
 
 # 图表绘制插件
