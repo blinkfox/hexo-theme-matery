@@ -456,6 +456,7 @@ libs:
     sakura: /libs/others/sakura.js
     busuanzi: /libs/others/busuanzi.pure.mini.js
     aplayer: /libs/aplayer/APlayer.min.js
+    meting: /libs/aplayer/Meting.min.js
     dplayer: /libs/dplayer/DPlayer.min.js
     crypto: /libs/cryptojs/crypto-js.min.js
     echarts: /libs/echarts/echarts.min.js
@@ -639,7 +640,7 @@ artitalk:
 # 关注公众号 "黑石哔哔"，发送: //bindCurrentUser:你的APPID,你的MASTERKEY,你的RESTAPI
 # 可用leancloud国际版，国际版api为 https://appid前八位.api.lncldglobal.com
 bbtime:
- enable: false
- appId: # 你的appId
- appKey: # 你的appKey
- serverURLs: # https://你的api
+  enable: false
+  appId: # 你的appId
+  appKey: # 你的appKey
+  serverURLs: # https://你的api
