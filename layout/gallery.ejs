@@ -1,6 +1,7 @@
-<link rel="stylesheet" href="/css/gallery.css">
-<link type="text/css" href="/libs/fancybox/jquery.fancybox.css" rel="stylesheet">
-<link type="text/css" href="/libs/justifiedGallery/justifiedGallery.min.css" rel="stylesheet">
+<link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.gallery) %>">
+
+<link type="text/css" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.fancybox) %>" rel="stylesheet">
+<link type="text/css" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.justifiedGallery) %>" rel="stylesheet">
 
 <%- partial('_partial/post-cover') %>
 <%
@@ -61,11 +62,11 @@ for (var i = 0, len = photos.length; i < len; i++) {
     </div>
 </div>
 
-<script src="/libs/fancybox/fancybox.js"></script>
-<script src="/libs/justifiedGallery/justifiedGallery.min.js"></script>
+<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.fancybox) %>"></script>
+<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.justifiedGallery) %>"></script>
 <script>
 
-  $("a[rel=example_group]").fancybox();
-  $("#encrypt-blog").justifiedGallery({margins: 5, rowHeight: 150});
+    $("a[rel=example_group]").fancybox();
+    $("#encrypt-blog").justifiedGallery({margins: 5, rowHeight: 150});
 
 </script>

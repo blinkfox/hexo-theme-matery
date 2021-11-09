@@ -433,6 +433,7 @@ libs:
   css:
     matery: /css/matery.css
     mycss: /css/my.css
+    gallery: /css/gallery.css
     fontAwesome: /libs/awesome/css/all.min.css # V5.15.4
     materialize: /libs/materialize/materialize.min.css # 1.0.0
     aos: /libs/aos/aos.css
@@ -445,6 +446,8 @@ libs:
     tocbot: /libs/tocbot/tocbot.css
     prism: /libs/prism/prism.css
     mermaid: /libs/mermaid/mermaid.min.css
+    fancybox: /libs/fancybox/jquery.fancybox.css
+    justifiedGallery: /libs/justifiedGallery/justifiedGallery.min.css
   js:
     matery: /js/matery.js
     jquery: /libs/jquery/jquery.min.js
@@ -472,6 +475,8 @@ libs:
     ribbon_dynamic: /libs/background/ribbon-dynamic.js
     instantpage: /libs/instantpage/instantpage.js
     mermaid: /libs/mermaid/mermaid.min.js
+    fancybox: /libs/fancybox/fancybox.js
+    justifiedGallery: /libs/justifiedGallery/justifiedGallery.min.js
 
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
