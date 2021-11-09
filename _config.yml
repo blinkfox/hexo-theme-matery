@@ -434,8 +434,8 @@ libs:
     matery: /css/matery.css
     mycss: /css/my.css
     gallery: /css/gallery.css
-    fontAwesome: /libs/awesome/css/all.min.css # V5.15.4
-    materialize: /libs/materialize/materialize.min.css # 1.0.0
+    fontAwesome: /libs/awesome/css/all.min.css # V5.15.4 20211109
+    materialize: /libs/materialize/materialize.min.css # 1.0.0 20211109
     aos: /libs/aos/aos.css
     animate: /libs/animate/animate.min.css # V3.5.1
     lightgallery: /libs/lightGallery/css/lightgallery.min.css # V1.6.11
@@ -450,7 +450,7 @@ libs:
     justifiedGallery: /libs/justifiedGallery/justifiedGallery.min.css
   js:
     matery: /js/matery.js
-    jquery: /libs/jquery/jquery.min.js
+    jquery: /libs/jquery/jquery-3.6.0.min.js  #3.6.0 20211109
     materialize: /libs/materialize/materialize.min.js # 1.0.0
     masonry: /libs/masonry/masonry.pkgd.min.js # v4.0.0
     aos: /libs/aos/aos.js
