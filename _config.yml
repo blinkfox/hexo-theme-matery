@@ -488,6 +488,10 @@ libs:
     mermaid: /libs/mermaid/mermaid.min.js
     fancybox: /libs/fancybox/fancybox.js
     justifiedGallery: /libs/justifiedGallery/justifiedGallery.min.js
+    codeblock: /libs/codeBlock/codeBlockFuction.js
+    codelang: /libs/codeBlock/codeLang.js
+    codecopy: /libs/codeBlock/codeCopy.js
+    codeshrink: /libs/codeBlock/codeShrink.js
 
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
