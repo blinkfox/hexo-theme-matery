@@ -344,6 +344,14 @@ livere:
   enable: false
   uid:
 
+# 腾讯人机验证
+# 注意：目前只适配和测试了valine，其它评论系统未调试验证！
+# 介绍: https://cloud.tencent.com/document/product/1110/36841
+# 管理验证码: https://console.cloud.tencent.com/captcha/graphical
+tcaptcha:
+  enable: true
+  appid: xxxxxxxxxx # 你的appid
+
 # The configuration of the Valine comment module is not activated by default.
 # To use it, activate the configuration item and set appId and appKey.
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
@@ -458,6 +466,9 @@ libs:
     lightgallery: /libs/lightGallery/js/lightgallery-all.min.js # V1.6.11
     clicklove: /libs/others/clicklove.js
     sakura: /libs/others/sakura.js
+    star: /libs/others/star.js
+    snow: /libs/others/snow.js
+    tcaptcha: /libs/others/TencentCaptcha.js
     busuanzi: /libs/others/busuanzi.pure.mini.js
     aplayer: /libs/aplayer/APlayer.min.js
     dplayer: /libs/dplayer/DPlayer.min.js
