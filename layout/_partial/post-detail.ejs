@@ -241,15 +241,15 @@
 
 <!-- 代码语言 -->
 <% if (theme.code.lang) { %>
-<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.codeLang) %>"></script>
+<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.codelang) %>"></script>
 <% } %>
 
 <!-- 代码块复制 -->
 <% if (theme.code.copy) { %>
-<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.codeCopy) %>"></script>
+<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.codecopy) %>"></script>
 <% } %>
 
 <!-- 代码块收缩 -->
 <% if (theme.code.shrink) { %>
-<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.codeShrink) %>"></script>
+<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.codeshrink) %>"></script>
 <% } %>
