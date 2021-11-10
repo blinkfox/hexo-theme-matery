@@ -434,11 +434,11 @@ libs:
     matery: /css/matery.css
     mycss: /css/my.css
     gallery: /css/gallery.css
-    fontAwesome: /libs/awesome/css/all.min.css # V5.15.4
-    materialize: /libs/materialize/materialize.min.css # 1.0.0
+    fontAwesome: /libs/awesome/css/all.min.css # V5.15.4 20211109
+    materialize: /libs/materialize/materialize.min.css # 1.0.0 20211109
     aos: /libs/aos/aos.css
     animate: /libs/animate/animate.min.css # V3.5.1
-    lightgallery: /libs/lightGallery/css/lightgallery.min.css # V1.6.11
+    lightgallery: /libs/lightGallery/css/lightgallery.min.css # V1.10.0
     aplayer: /libs/aplayer/APlayer.min.css
     dplayer: /libs/dplayer/DPlayer.min.css
     gitalk: /libs/gitalk/gitalk.css
@@ -455,7 +455,7 @@ libs:
     masonry: /libs/masonry/masonry.pkgd.min.js # v4.0.0
     aos: /libs/aos/aos.js
     scrollProgress: /libs/scrollprogress/scrollProgress.min.js
-    lightgallery: /libs/lightGallery/js/lightgallery-all.min.js # V1.6.11
+    lightgallery: /libs/lightGallery/js/lightgallery-all.min.js # V1.10.0
     clicklove: /libs/others/clicklove.js
     sakura: /libs/others/sakura.js
     busuanzi: /libs/others/busuanzi.pure.mini.js
