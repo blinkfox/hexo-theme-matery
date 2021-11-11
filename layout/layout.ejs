@@ -65,6 +65,12 @@
         </script>
     <% } %>
 
+    <% if (theme.tcaptcha.enable) { %> 
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.tcaptcha) %>"></script>
+        <button id="TencentCaptcha" data-appid="<%- theme.tcaptcha.appid %>" data-cbfn="callback" type="button" hidden></button>
+    <% } %>
+
     <%- partial('_partial/baidu-analytics') %>
     <%- partial('_partial/baidu-push') %>
     <% if (theme.clicklove.enable) { %>
