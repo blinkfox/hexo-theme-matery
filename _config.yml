@@ -379,6 +379,17 @@ minivaline:
   # 下面是一个例子：
   serverURL: https://minivaline.your-domain.top
 
+# The configuration of the Waline comment module is not activated by default.
+# To use it, activate the configuration item.
+# Waline 评论模块的配置，默认为不激活，如要使用，就请激活该配置项
+# See: https://waline.js.org/
+waline:
+  enable: false
+  # Waline 服务端部署参考 https://waline.js.org/guide/server/intro.html 客户端和服务端版本需一致
+  # 下面是一个例子，请替换成自己的服务端
+  serverURL: https://waline.your-domain.com
+  avatar: 'mp' # Gravatar style : ''/mp/identicon/monsterid/wavatar/retro/hide
+
 changyan:
   enable: false
   appId:
@@ -478,6 +489,7 @@ libs:
     gitalk: /libs/gitalk/gitalk.min.js
     valine: /libs/valine/Valine.min.js # 若想保持最新版，请替换为 https://unpkg.com/valine/dist/Valine.min.js  默认为 /libs/valine/Valine.min.js
     minivaline: /libs/minivaline/MiniValine.js # latest
+    waline: /libs/waline/Waline.min.js # 若想保持最新版，请替换为 https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js 默认为(1.5.2版本) /libs/valine/Valine.min.js
     twikoo: /libs/twikoo/twikoo.all.min.js # 若想保持最新版，请替换为 https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js  默认为 /libs/twikoo/twikoo.all.min.js
     jqcloud: /libs/jqcloud/jqcloud-1.0.4.min.js
     tocbot: /libs/tocbot/tocbot.min.js
