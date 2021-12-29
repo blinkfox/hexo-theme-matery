@@ -186,6 +186,10 @@
         <%- partial('_partial/minivaline') %>
     <% } %>
 
+    <% if (theme.waline && theme.waline.enable) { %>
+        <%- partial('_partial/waline') %>
+    <% } %>
+
     <% if (theme.changyan && theme.changyan.enable) { %>
         <%- partial('_partial/changyan') %>
     <% } %>
