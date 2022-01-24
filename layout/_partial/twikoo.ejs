@@ -254,19 +254,20 @@
     </div>
 </div>
 
-<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.twikoo) %>"></script>
 <script>
-    twikoo.init({
-        envId: '<%- theme.twikoo.envId %>',
-        el: '#tcomments',
-        region: '<%- theme.twikoo.region %>',
-        path: '<%- theme.twikoo.path %>'
-    }).then(function () {
-        var tkInputs = document.querySelector('#twikoo').getElementsByTagName('input');
-        for (var tkInputsIndex = 0; tkInputsIndex < tkInputs.length; tkInputsIndex++) {
-            if (tkInputs[tkInputsIndex]) {
-                tkInputs[tkInputsIndex].classList.add('browser-default');
+    $.getScript("<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.twikoo) %>",function () {
+        twikoo.init({
+            envId: '<%- theme.twikoo.envId %>',
+            el: '#tcomments',
+            region: '<%- theme.twikoo.region %>',
+            path: '<%- theme.twikoo.path %>'
+        }).then(function () {
+            var tkInputs = document.querySelector('#twikoo').getElementsByTagName('input');
+            for (var tkInputsIndex = 0; tkInputsIndex < tkInputs.length; tkInputsIndex++) {
+                if (tkInputs[tkInputsIndex]) {
+                    tkInputs[tkInputsIndex].classList.add('browser-default');
+                }
             }
-        }
-    });
+        });
+    })
 </script>

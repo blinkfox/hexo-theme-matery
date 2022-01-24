@@ -74,7 +74,7 @@
     #floating-toc-btn {
         position: fixed;
         right: 15px;
-        bottom: 76px;
+        bottom: 137px;
         padding-top: 15px;
         margin-bottom: 0;
         z-index: 998;
@@ -95,7 +95,7 @@
         <%- partial('_partial/post-detail.ejs') %>
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
+        <div class="toc-widget card">
             <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;<%- __('toc') %></div>
             <div id="toc-content"></div>
         </div>
@@ -111,9 +111,9 @@
 </div>
 <% } %>
 
-<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.tocbot) %>"></script>
+<script src=""></script>
 <script>
-    $(function () {
+    $.getScript("<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.tocbot) %>",function () {
         tocbot.init({
             tocSelector: '#toc-content',
             contentSelector: '#articleContent',
@@ -184,5 +184,5 @@
             fixPostCardWidth('artDetail', 'prenext-posts');
         });
         <% } %>
-    });
+    })
 </script>

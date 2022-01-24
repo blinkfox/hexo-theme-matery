@@ -11,11 +11,11 @@
     </div>
 </div>
 
-<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.echarts) %>"></script>
 <script type="text/javascript">
-    let radarChart = echarts.init(document.getElementById('category-radar'));
+    $.getScript("<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.echarts) %>",function (){
+        let radarChart = echarts.init(document.getElementById('category-radar'));
 
-    <%
+        <%
         var categories = site.categories;
 
         // Find the maximum and average values of the post categories.
@@ -34,41 +34,42 @@
 
         var indicatorData = JSON.stringify(indicatorArr);
         var radarValueData = JSON.stringify(radarValueArr);
-    %>
+        %>
 
-    let option = {
-        title: {
-            left: 'center',
-            text: '<%= __("categoryRadarTitle")  %>',
-            textStyle: {
-                fontWeight: 500,
-                fontSize: 22
-            }
-        },
-        tooltip: {},
-        radar: {
-            name: {
+        let option = {
+            title: {
+                left: 'center',
+                text: '<%= __("categoryRadarTitle")  %>',
                 textStyle: {
-                    color: '#3C4858'
+                    fontWeight: 500,
+                    fontSize: 22
                 }
             },
-            indicator: <%- indicatorData %>,
-            nameGap: 5,
-            center: ['50%','55%'],
-            radius: '66%'
-        },
-        series: [{
-            type: 'radar',
-            color: ['#3ecf8e'],
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-            data : [
-                {
-                    value : <%- radarValueData %>,
-                    name : '<%= __("categoryNumber") %>'
-                }
-            ]
-        }]
-    };
+            tooltip: {},
+            radar: {
+                name: {
+                    textStyle: {
+                        color: '#3C4858'
+                    }
+                },
+                indicator: <%- indicatorData %>,
+                nameGap: 5,
+                center: ['50%','55%'],
+                radius: '66%'
+            },
+            series: [{
+                type: 'radar',
+                color: ['#3ecf8e'],
+                itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                data : [
+                    {
+                        value : <%- radarValueData %>,
+                        name : '<%= __("categoryNumber") %>'
+                    }
+                ]
+            }]
+        };
 
-    radarChart.setOption(option);
+        radarChart.setOption(option);
+    })
 </script>

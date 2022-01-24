@@ -1,23 +1,21 @@
-<link rel="stylesheet" type="text/css" href="/css/style.css" />
 <link rel="stylesheet" type="text/css" href="/css/barrager.css">
-<script src="/libs/valine/av-min.js"></script>
-<script src="/libs/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="/js/jquery.barrager.js"></script>
 
 <%- partial('_partial/bg-cover') %>
 
 <style>
-    #send{
+    #send {
         margin-bottom: 10px;
         width: 49%;
         background-color: #0ba360;
     }
-    #clear{
+
+    #clear {
         margin-bottom: 10px;
         width: 49%;
         background-color: #e7c65c;
     }
-    p{
+
+    p {
         text-align: center;
     }
 </style>
@@ -47,17 +45,20 @@
                             <div class="col-md-5">
                                 <form class="form-inline">
                                     <div class="form-group">
-                                        文字：<input class="form-control" name="info" type="text" placeholder="hello, world"/>
+                                        文字：<input class="form-control" name="info" type="text"
+                                                  placeholder="hello, world"/>
                                     </div>
                                     <div class="form-group">
-                                        链接：<input class="form-control" name="href" type="text" placeholder="https://github.com/blinkfox/hexo-theme-matery"/>
+                                        链接：<input class="form-control" name="href" type="text"
+                                                  placeholder="https://github.com/blinkfox/hexo-theme-matery"/>
                                     </div>
                                     <div class="form-group">
-                                        速度：<input  class="form-control"  name="speed" type="text" placeholder="5~20" value="16" />
+                                        速度：<input class="form-control" name="speed" type="text" placeholder="5~20"
+                                                  value="16"/>
                                     </div>
                                 </form>
                                 <div class="form-group">
-                                    <button id="send"  class="btn" onclick="run()">留言</button>
+                                    <button id="send" class="btn" onclick="run()">留言</button>
                                     <button id="clear" class="btn " onclick="clear_barrage()"> 清除</button>
                                 </div>
                             </div>
@@ -66,14 +67,14 @@
                 </div>
 
                 <script type="text/javascript">
-                    AV.init({
-                        appId: '<%- theme.valine.appId %>',
-                        appKey: '<%- theme.valine.appKey %>'
-                    });
+                    $.getScript("/libs/valine/av-min.js", function () {
+                        AV.init({
+                            appId: '<%- theme.valine.appId %>',
+                            appKey: '<%- theme.valine.appKey %>'
+                        });
+                    })
 
-                    $(function() {
-                        do_barrager();
-                        async function do_barrager() {
+                    $.getScript("/js/jquery.barrager.js", async function () {
                             let lists = [];
                             //查询弹幕
                             const query = new AV.Query('barrager');
@@ -98,17 +99,16 @@
                                     index++;
                                 }
                             }, 500)
-                        }
-                    });
+                        })
 
                     //发送弹幕
-                    function  run(){
+                    function run() {
                         let info = $('input[name=info]').val();
-                        (info === '' ) ?  info='hello world' : info=info;
+                        (info === '') ? info = 'hello world' : info = info;
                         let href = $('input[name=href]').val();
-                        (href === '' ) ?  href='https://github.com/blinkfox/hexo-theme-matery' : href=href;
+                        (href === '') ? href = 'https://github.com/blinkfox/hexo-theme-matery' : href = href;
                         let speed = parseInt($('input[name=speed]').val());
-                        if(speed > 20 || speed < 5)
+                        if (speed > 20 || speed < 5)
                             speed = Math.floor(Math.random() * 10) + 5;
                         const Barrager = AV.Object.extend('barrager');
                         const barrager = new Barrager();
@@ -121,12 +121,9 @@
                             $(" input[ name='speed' ] ").val("")
                         });
                     }
-
-                    function  clear_barrage()
-                    {
+                    function clear_barrage() {
                         $.fn.barrager.removeAll();
                     }
-
                 </script>
             <% } %>
         </div>
@@ -151,10 +148,6 @@
 
             <% if (theme.minivaline && theme.minivaline.enable) { %>
                 <%- partial('_partial/minivaline') %>
-            <% } %>
-
-            <% if (theme.waline && theme.waline.enable) { %>
-                <%- partial('_partial/waline') %>
             <% } %>
 
             <% if (theme.twikoo && theme.twikoo.enable) { %>

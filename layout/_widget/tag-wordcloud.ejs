@@ -12,18 +12,19 @@
     </div>
 </div>
 
-<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.jqcloud) %>"></script>
 <script type="text/javascript">
-    <%
-    let tagWordArr = [];
-    site.tags.map(function(tag) {
-        tagWordArr.push({'text': tag.name, 'weight': tag.length, 'link': decodeURI(url_for(tag.path))});
-    });
+    $.getScript("<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.jqcloud) %>",function () {
+        <%
+        let tagWordArr = [];
+        site.tags.map(function(tag) {
+            tagWordArr.push({'text': tag.name, 'weight': tag.length, 'link': decodeURI(url_for(tag.path))});
+        });
 
-    let tagWords = JSON.stringify(tagWordArr);
-    %>
+        let tagWords = JSON.stringify(tagWordArr);
+        %>
 
-    $('#tag-wordcloud').jQCloud(<%- tagWords %>, {
-        autoResize: true
-    });
+        $('#tag-wordcloud').jQCloud(<%- tagWords %>, {
+            autoResize: true
+        });
+    })
 </script>

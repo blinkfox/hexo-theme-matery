@@ -3,114 +3,116 @@
 <%- partial('_partial/head') %>
 
 <% if (theme.background.enable) { %>
-   <%- partial('_partial/background') %>
+    <%- partial('_partial/background') %>
 <% } %>
 
 <body>
-    <%- partial('_partial/header') %>
+<%- partial('_partial/header') %>
+
+<main id="main_wrap">
     <%- body %>
+</main>
 
-    <%- partial('_partial/footer') %>
+<%- partial('_partial/footer') %>
+<%- partial('_partial/search') %>
+<%- partial('_partial/all_btn') %>
+<%- partial('_widget/pjax') %>
 
-    <%- partial('_partial/search') %>
-    <%- partial('_partial/back-top') %>
+<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.materialize) %>"></script>
+<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.masonry) %>"></script>
+<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.aos) %>"></script>
+<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.scrollProgress) %>"></script>
+<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.lightgallery) %>"></script>
+<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.matery) %>"></script>
 
-    <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.materialize) %>"></script>
-    <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.masonry) %>"></script>
-    <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.aos) %>"></script>
-    <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.scrollProgress) %>"></script>
-    <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.lightgallery) %>"></script>
-    <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.matery) %>"></script>
-
-    <% if (theme.mermaid.enable) { %>
-        <!-- <script src='https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js'></script> -->
-        <script src='<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.mermaid) %>'></script>
-        <script>
-          if (window.mermaid) {
+<% if (theme.mermaid.enable) { %>
+    <!-- <script src='https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js'></script> -->
+    <script src='<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.mermaid) %>'></script>
+    <script>
+        if (window.mermaid) {
             mermaid.initialize({theme: 'forest'});
-          }
-        </script>
-    <% } %>
+        }
+    </script>
+<% } %>
 
-    <% if (theme.sakura.enable) { %>
-        
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.sakura) %>"><\/script>');
-            }
-        </script>
-    <% } %>
+<% if (theme.sakura.enable) { %>
+    <script type="text/javascript">
+        // 只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        if (windowWidth > 768) {
+            document.write('<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.sakura) %>"><\/script>');
+        }
+    </script>
+<% } %>
 
-    <!-- 雪花特效 -->
-    <% if (theme.snowdown.enable) { %> 
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.snow) %>"><\/script>');
-            }
-        </script>
-    <% } %>
+<!-- 雪花特效 -->
+<% if (theme.snowdown.enable) { %>
+    <script type="text/javascript">
+        // 只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        if (windowWidth > 768) {
+            document.write('<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.snow) %>"><\/script>');
+        }
+    </script>
+<% } %>
 
-    <!-- 鼠标星星特效 -->
-    <% if (theme.mouseStar.enable) { %> 
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.star) %>"><\/script>');
-            }
-        </script>
-    <% } %>
+<!-- 鼠标星星特效 -->
+<% if (theme.mouseStar.enable) { %>
+    <script type="text/javascript">
+        // 只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        if (windowWidth > 768) {
+            document.write('<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.star) %>"><\/script>');
+        }
+    </script>
+<% } %>
 
-    <% if (theme.tcaptcha.enable) { %> 
-        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-        <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.tcaptcha) %>"></script>
-        <button id="TencentCaptcha" data-appid="<%- theme.tcaptcha.appid %>" data-cbfn="callback" type="button" hidden></button>
-    <% } %>
+<% if (theme.tcaptcha.enable) { %>
+    <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+    <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.tcaptcha) %>"></script>
+    <button id="TencentCaptcha" data-appid="<%- theme.tcaptcha.appid %>" data-cbfn="callback" type="button"
+            hidden></button>
+<% } %>
 
-    <%- partial('_partial/baidu-analytics') %>
-    <%- partial('_partial/baidu-push') %>
-    <% if (theme.clicklove.enable) { %>
+<%- partial('_partial/baidu-analytics') %>
+<%- partial('_partial/baidu-push') %>
+<% if (theme.clicklove.enable) { %>
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.clicklove) %>" async="async"></script>
-    <% } %>
-    <% if (theme.busuanziStatistics && theme.busuanziStatistics.enable) { %>
+<% } %>
+<% if (theme.busuanziStatistics && theme.busuanziStatistics.enable) { %>
     <script async src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.busuanzi) %>"></script>
-    <% } %>
+<% } %>
 
-    <% if (theme.tidio.enable) { %>
-        <script src="//code.tidio.co/<%- theme.tidio.public_key %>.js"></script>
-        <script>
-            $(document).ready(function () {
-                setInterval(change_Tidio, 50);
-                function change_Tidio() {
-                    var tidio=$("#tidio-chat iframe");
-                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"<%if(theme.toc.showToggleBtn){%>85px<%}else{%>20px<%}%>":"20px";
-                        document.getElementById("tidio-chat-iframe").style.right="-15px";
-                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
-                    }
-                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
-                        document.getElementById("tidio-chat-iframe").style.right="-15px";
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
-                    }
-                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
-                    }
-                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
-                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
-                    }
+<% if (theme.tidio.enable) { %>
+    <script src="//code.tidio.co/<%- theme.tidio.public_key %>.js"></script>
+    <script>
+        $(document).ready(function () {
+            setInterval(change_Tidio, 50);
+
+            function change_Tidio() {
+                var tidio = $("#tidio-chat iframe");
+                if (tidio.css("display") == "block" && $(window).width() > 977) {
+                    document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll").css("display") == "none" && $(window).width() > 977) > 0 ? "-40px" : ($("div.toc-title").length && $(window).width() > 977) > 0 ? "<% if(theme.toc.showToggleBtn){ %>85px<% }else{ %>20px<% } %>" : "20px";
+                    document.getElementById("tidio-chat-iframe").style.right = "-15px";
+                    document.getElementById("tidio-chat-iframe").style.height = parseInt(tidio.css("height")) >= 520 ? "520px" : tidio.css("height");
+                    document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+                } else if (tidio.css("display") == "block" && $(window).width() > 601 && $(window).width() < 992) {
+                    document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll").css("display") == "none" && 601 < $(window).width() < 992) > 0 ? "-40px" : "20px";
+                    document.getElementById("tidio-chat-iframe").style.right = "-15px";
+                    document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+                } else if (tidio.css("display") == "block" && $(window).width() < 601 && parseInt(tidio.css("height")) < 230) {
+                    document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll").css("display") == "none" && $(window).width() < 601) > 0 ? "-10px" : "45px";
+                    document.getElementById("tidio-chat-iframe").style.zIndex = "997";
                 }
-            });
-        </script>
-    <% } %>
+                if (tidio.css("display") == "block" && $(window).width() < 601 && parseInt(tidio.css("height")) >= 230) {
+                    document.getElementById("tidio-chat-iframe").style.zIndex = "998";
+                }
+            }
+        });
+    </script>
+<% } %>
 
-    <% if (theme.daovoice.enable) { %>
+<% if (theme.daovoice.enable) { %>
     <script>
         (function (i, s, o, g, r, a, m) {
             i["DaoVoiceObject"] = r;
@@ -129,34 +131,37 @@
         });
         daovoice('update');
     </script>
-    <% } %>
+<% } %>
 
-    <!--腾讯兔小巢-->
-    <% if (theme.tuxiaochao.enable) { %>
-        <div style="position:fixed;bottom:125px;right:16px;cursor: pointer;">
-            <a title="兔小巢" href="https://support.qq.com/products/<%- theme.tuxiaochao.productId %>"><i class="fa fa-comments fa-3x"  aria-hidden="true"></i></a>
-        </div>
-    <%}%>
-    <% if (theme.canvas_nest.enable) { %>
+<!--腾讯兔小巢-->
+<% if (theme.tuxiaochao.enable) { %>
+    <div style="position:fixed;bottom:125px;right:16px;cursor: pointer;">
+        <a title="兔小巢" href="https://support.qq.com/products/<%- theme.tuxiaochao.productId %>"><i
+                    class="fa fa-comments fa-3x" aria-hidden="true"></i></a>
+    </div>
+<% } %>
+<% if (theme.canvas_nest.enable) { %>
     <script type="text/javascript" color="<%- theme.canvas_nest.color %>"
-        pointColor="<%- theme.canvas_nest.pointColor %>" opacity='<%- theme.canvas_nest.opacity %>'
-        zIndex="<%- theme.canvas_nest.zIndex %>" count="<%- theme.canvas_nest.count %>"
-        src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.canvas_nest) %>"></script>
-    <% } %>
+            pointColor="<%- theme.canvas_nest.pointColor %>" opacity='<%- theme.canvas_nest.opacity %>'
+            zIndex="<%- theme.canvas_nest.zIndex %>" count="<%- theme.canvas_nest.count %>"
+            src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.canvas_nest) %>"></script>
+<% } %>
 
-    <% if (theme.ribbon.enable) { %>
+<% if (theme.ribbon.enable) { %>
     <% var ribbonSrc = theme.ribbon.clickChange ? theme.libs.js.ribbon : theme.libs.js.ribbonRefresh; %>
     <script type="text/javascript" size="<%- theme.ribbon.size %>" alpha='<%- theme.ribbon.alpha %>'
-        zIndex="<%- theme.ribbon.zIndex %>" src="<%- theme.jsDelivr.url %><%- url_for(ribbonSrc) %>" async="async"></script>
-    <% } %>
+            zIndex="<%- theme.ribbon.zIndex %>" src="<%- theme.jsDelivr.url %><%- url_for(ribbonSrc) %>"
+            async="async"></script>
+<% } %>
 
-    <% if (theme.ribbon_dynamic.enable) { %>
-    <script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.ribbon_dynamic) %>" async="async"></script>
-    <% } %>
+<% if (theme.ribbon_dynamic.enable) { %>
+    <script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.ribbon_dynamic) %>"
+            async="async"></script>
+<% } %>
 
-    <% if (theme.instantpage.enable) { %>
+<% if (theme.instantpage.enable) { %>
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.instantpage) %>" type="module"></script>
-    <% } %>
+<% } %>
 
 </body>
 

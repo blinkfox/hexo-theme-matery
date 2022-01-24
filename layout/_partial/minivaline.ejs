@@ -17,9 +17,10 @@
     </div>
 </div>
 
-<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.minivaline) %>"></script>
 <script>
-    new MiniValine(Object.assign(<%- JSON.stringify(theme.minivaline) %>, {
-	  el: '#mvcomments',
-    }));
+    $.getScript("<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.minivaline) %>",function () {
+        new MiniValine(Object.assign(<%- JSON.stringify(theme.minivaline) %>, {
+            el: '#mvcomments',
+        }));
+    })
 </script>

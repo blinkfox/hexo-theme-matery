@@ -25,10 +25,9 @@
     .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
         left: 0px !important;
     }
-
     <%}%>
 </style>
-<div class="<% if(!theme.music.fixed) { %>music-player<% } %>">
+<div <% if(!theme.music.fixed) { %>class="music-player"<% } %>>
     <% if (!theme.music.fixed && theme.music.title.enable) { %>
         <div class="title center-align">
             <i class="fas fa-music"></i>&nbsp;&nbsp;<%- theme.music.title.show %>

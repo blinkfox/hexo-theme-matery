@@ -1,13 +1,14 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <% if (theme.googleAnalytics.enable) { %>
-<script async src="https://www.googletagmanager.com/gtag/js?id=<%- theme.googleAnalytics.id %>"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
+<script async>
+    $.getScript("https://www.googletagmanager.com/gtag/js?id=<%- theme.googleAnalytics.id %>",function () {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-    gtag('js', new Date());
-    gtag('config', '<%- theme.googleAnalytics.id %>');
+        gtag('js', new Date());
+        gtag('config', '<%- theme.googleAnalytics.id %>');
+    })
 </script>
 <% } %>

@@ -42,12 +42,12 @@ menu:
 # Website start time.
 # 站点运行开始时间.
 time:
-  enable: false
-  year: 2019 # 年份
-  month: 06 # 月份
-  date: 28 # 日期
-  hour: 00 # 小时
-  minute: 00 # 分钟
+  enable: true
+  year: 2022 # 年份
+  month: 01 # 月份
+  date: 01 # 日期
+  hour: 13 # 小时
+  minute: 14 # 分钟
   second: 00 # 秒
 
 # Index cover carousel configuration.
@@ -66,8 +66,11 @@ cover:
       - https://txmov2.a.yximgs.com/upic/2021/04/09/22/BMjAyMTA0MDkyMjMwMDhfMTg1ODk2MDg4N180NzUyOTMyMjA4Nl8xXzM=_b_B8e080d7ede19e6674d48a9f12545007b.mp4?pkey=AAVAfNhi5_f-HGkIPXrY5w6nyf4JibwOY-WwdHgSJ2aSoi-2WQLpiYDunLbRZQuESz875eMdsepRlVFtXg9nuQY58uRc-7AsF0kEMNR6QYBj56g9JFFMSGdsoKK2-SV27u8&tag=1-1617978682-xpcwebprofile-0-lcvipceuti-9e40072f87531f1a&clientCacheKey=3xbbtbrfxqpccp4_b.mp4
       - https://txmov2.a.yximgs.com/upic/2021/04/09/21/BMjAyMTA0MDkyMTQyNDRfMTg1ODk2MDg4N180NzUyNjAyMzA0N18xXzM=_b_B83b004b85aba8eca3ded270637616575.mp4
       - https://txmov2.a.yximgs.com/upic/2021/04/09/21/BMjAyMTA0MDkyMTU4MDNfMTg1ODk2MDg4N180NzUyNzE0MzkyNV8xXzM=_b_Bf94cee6bd181efeaca64049bd2e4e276.mp4
-# index page dream text,
 
+# pjax
+pjax: true
+
+# index page dream text,
 # index page dream text,
 # 配置首页显示"梦想"的语句.
 dream:
@@ -80,22 +83,18 @@ dream:
 # 是否在首页显示音乐.
 music:
   enable: true
-  title: #非吸底模式有效
-    enable: true
-    show: 听听音乐
-  autoHide: true    # hide automaticaly
-  server: netease   #require	music platform: netease, tencent, kugou, xiami, baidu
+  autoHide: false   # hide automaticaly
+  server: tencent #require	music platform: netease, tencent, kugou, xiami, baidu
   type: playlist    #require song, playlist, album, search, artist
-  id: 503838841     #require	song id / playlist id / album id / search keyword
-  fixed: true       # 开启吸底模式
+  id: 7865349211 #require	song id / playlist id / album id / search keyword
+  fixed: true      # 开启吸底模式
   autoplay: false   # 是否自动播放
   theme: '#42b983'
   loop: 'all'       # 音频循环播放, 可选值: 'all', 'one', 'none'
   order: 'random'   # 音频循环顺序, 可选值: 'list', 'random'
   preload: 'auto'   # 预加载，可选值: 'none', 'metadata', 'auto'
-  volume: 0.7       # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
-  listFolded: true  # 列表默认折叠
-  hideLrc: true     # 隐藏歌词
+  volume: 1         # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+  listFolded: false  # 列表默认折叠
 
 # Whether to display the videos.
 # 是否在首页显示视频.
@@ -379,17 +378,6 @@ minivaline:
   # 下面是一个例子：
   serverURL: https://minivaline.your-domain.top
 
-# The configuration of the Waline comment module is not activated by default.
-# To use it, activate the configuration item.
-# Waline 评论模块的配置，默认为不激活，如要使用，就请激活该配置项
-# See: https://waline.js.org/
-waline:
-  enable: false
-  # Waline 服务端部署参考 https://waline.js.org/guide/server/intro.html 客户端和服务端版本需一致
-  # 下面是一个例子，请替换成自己的服务端
-  serverURL: https://waline.your-domain.com
-  avatar: 'mp' # Gravatar style : ''/mp/identicon/monsterid/wavatar/retro/hide
-
 changyan:
   enable: false
   appId:
@@ -473,6 +461,7 @@ libs:
     materialize: /libs/materialize/materialize.min.js # 1.0.0
     masonry: /libs/masonry/masonry.pkgd.min.js # v4.0.0
     aos: /libs/aos/aos.js
+    typed: /libs/typed/typed.min.js
     scrollProgress: /libs/scrollprogress/scrollProgress.min.js
     lightgallery: /libs/lightGallery/js/lightgallery-all.min.js # V1.10.0
     clicklove: /libs/others/clicklove.js
@@ -489,7 +478,6 @@ libs:
     gitalk: /libs/gitalk/gitalk.min.js
     valine: /libs/valine/Valine.min.js # 若想保持最新版，请替换为 https://unpkg.com/valine/dist/Valine.min.js  默认为 /libs/valine/Valine.min.js
     minivaline: /libs/minivaline/MiniValine.js # latest
-    waline: /libs/waline/Waline.min.js # 若想保持最新版，请替换为 https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js 默认为(1.5.2版本) /libs/valine/Valine.min.js
     twikoo: /libs/twikoo/twikoo.all.min.js # 若想保持最新版，请替换为 https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js  默认为 /libs/twikoo/twikoo.all.min.js
     jqcloud: /libs/jqcloud/jqcloud-1.0.4.min.js
     tocbot: /libs/tocbot/tocbot.min.js
@@ -647,7 +635,8 @@ icp:
 # 注：jsdelivr可以自动帮你生成.min版的js和css，所以你在上面设置js及css路径中可以直接写.min.xxx
 jsDelivr:
   url: # https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io
-  
+
+bannerColor: true
 # 网站背景图
 background:
   enable: false
@@ -678,7 +667,6 @@ bbtime:
   appId: # 你的appId
   appKey: # 你的appKey
   serverURLs: # https://你的api
-
 
 # 图表绘制插件
 # 建议更换更换hexo-renderer-markdown-it引擎。参考下面链接

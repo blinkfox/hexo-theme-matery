@@ -9,17 +9,18 @@
     <div id="gitalk-container" class="card-content"></div>
 </div>
 
-<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.gitalk) %>"></script>
 <script>
-    let gitalk = new Gitalk({
-        clientID: '<%- theme.gitalk.oauth.clientId %>',
-        clientSecret: '<%- theme.gitalk.oauth.clientSecret %>',
-        repo: '<%- theme.gitalk.repo %>',
-        owner: '<%- theme.gitalk.owner %>',
-        admin: <%- JSON.stringify(theme.gitalk.admin) %>,
-        id: '<%- date(page.date, 'YYYY-MM-DDTHH-mm-ss') %>',
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
+    $.getScript("<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.gitalk) %>",function () {
+        let gitalk = new Gitalk({
+            clientID: '<%- theme.gitalk.oauth.clientId %>',
+            clientSecret: '<%- theme.gitalk.oauth.clientSecret %>',
+            repo: '<%- theme.gitalk.repo %>',
+            owner: '<%- theme.gitalk.owner %>',
+            admin: <%- JSON.stringify(theme.gitalk.admin) %>,
+            id: '<%- date(page.date, 'YYYY-MM-DDTHH-mm-ss') %>',
+            distractionFreeMode: false  // Facebook-like distraction free mode
+        });
 
-    gitalk.render('gitalk-container');
+        gitalk.render('gitalk-container');
+    })
 </script>

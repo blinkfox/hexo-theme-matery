@@ -1,8 +1,7 @@
 <% if (theme.bbtime.enable) { %>
     <% if (theme.verifyPassword.enable) { %>
-        <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.crypto) %>"></script>
         <script>
-            (function () {
+            $.getScript("<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.crypto) %>",function () {
                 let pwd = '<%- page.password %>';
                 if (pwd && pwd.length > 0) {
                     if (pwd !== CryptoJS.SHA256(prompt('<%- theme.verifyPassword.promptMessage %>')).toString(CryptoJS.enc.Hex)) {
@@ -10,7 +9,7 @@
                         location.href = '<%- url_for("/") %>';
                     }
                 }
-            })();
+            })
         </script>
     <% } %>
 

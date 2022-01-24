@@ -1,0 +1,34 @@
+<%if(theme.pjax){%>
+<script type="text/javascript">
+    $.getScript("https://cdn.jsdelivr.net/npm/pjax/pjax.min.js",loadPjax)
+    function loadPjax(){
+        var pjax = new Pjax({
+            //需要加载的容器
+            selectors: [
+                "head title",
+                'head meta[name="keywords"]',
+                'head meta[name="description"]',
+                "main#main_wrap"
+            ],
+            cache: true,
+            cacheBust: false
+        });
+    }
+
+    // 开始 PJAX 执行的函数
+    document.addEventListener('pjax:send', function () {
+
+    });
+    // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+    document.addEventListener('pjax:complete', function () {
+
+    });
+
+    // Pjax请求错误时，跳转到404页面
+    document.addEventListener('pjax:error', (err) => {
+        if (err.request.status === 404) {
+            pjax.loadUrl('/404.html')
+        }
+    })
+</script>
+<%}%>

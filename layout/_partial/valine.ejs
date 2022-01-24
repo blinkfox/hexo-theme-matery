@@ -235,7 +235,8 @@
 </style>
 
 <div class="card valine-card" data-aos="fade-up">
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+    <div class="comment_headling"
+         style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
         <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
         <span>评论</span>
     </div>
@@ -243,63 +244,65 @@
     </div>
 </div>
 
-<script src="<%- theme.jsDelivr.url %><%- url_for('/libs/valine/av-min.js') %>"></script>
-<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.valine) %>"></script>
 <script>
-    new Valine({
-        el: '#vcomments',
-        appId: '<%- theme.valine.appId %>',
-        appKey: '<%- theme.valine.appKey %>',
-        notify: '<%- theme.valine.notify %>' === 'true',
-        verify: '<%- theme.valine.verify %>' === 'true',
-        visitor: '<%- theme.valine.visitor %>' === 'true',
-        avatar: '<%- theme.valine.avatar %>',
-        pageSize: '<%- theme.valine.pageSize %>',
-        lang: '<% if (config.language == "zh-CN") {  %>zh-cn<% } else { %>en<% } %>',
-        placeholder: '<%= theme.valine.placeholder %>'
-    });
+    $.getScript("<%- theme.jsDelivr.url %><%- url_for('/libs/valine/av-min.js') %>", function () {
+        $.getScript("<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.valine) %>", function () {
+            new Valine({
+                el: '#vcomments',
+                appId: '<%- theme.valine.appId %>',
+                appKey: '<%- theme.valine.appKey %>',
+                notify: '<%- theme.valine.notify %>' === 'true',
+                verify: '<%- theme.valine.verify %>' === 'true',
+                visitor: '<%- theme.valine.visitor %>' === 'true',
+                avatar: '<%- theme.valine.avatar %>',
+                pageSize: '<%- theme.valine.pageSize %>',
+                lang: '<% if (config.language == "zh-CN") { %>zh-cn<% } else { %>en<% } %>',
+                placeholder: '<%= theme.valine.placeholder %>'
+            });
+        })
+    })
 </script>
 
 <!--酷Q推送-->
 <% if (theme.valine.coolpushkey && theme.valine.coolpushkey > 1) { %>
-<script>
-    var pushLink ="https://push.xuthus.cc/send/<%- theme.valine.coolpushkey %>";
-    var siteName = "<%- config.title %>'s Blog";
-    var valineButton=document.getElementsByClassName("vsubmit vbtn")[0];
-    var title = siteName + "上又有新评论啦~!\n";
-  
-    function send_valine() {
-      //获取元素信息
-      var pagename = document.title;
-      var pageurl = document.URL;
-      var pushtime = new Date();
-      var vnick = document.getElementsByClassName("vnick vinput")[0].value;
-      var vmail = document.getElementsByClassName("vmail vinput")[0].value;
-      var vlink = document.getElementsByClassName("vlink vinput")[0].value;
-      var veditor = document.getElementsByClassName("veditor vinput")[0].value;
-      content =
-        title +
-        "昵称：" + vnick +
-        "\n邮箱：" + vmail +
-        "\n网站地址：" + vlink +
-        "\n文章标题：" + pagename +
-        "\n评论内容：" + veditor +
-        "\n文章链接：" + pageurl +
-        "\n评论时间" + pushtime.toLocaleString() + "\n";
-      var httpRequest = new XMLHttpRequest(); //第一步：创建需要的对象
-      httpRequest.open("POST", pushLink, true); //第二步：打开连接
-      httpRequest.setRequestHeader(
-        "Content-type",
-        "application/json"
-      ); //设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
-      httpRequest.send(content); //发送请求 
-    }
-  
-    document.body.addEventListener('click', function(e) {
-    if(e.target.className.indexOf('vsubmit') === -1) {
-      return;
-    }
-    send_valine();
-  })
-</script>
+    <script>
+        var pushLink = "https://push.xuthus.cc/send/<%- theme.valine.coolpushkey %>";
+        var siteName = "<%- config.title %>'s Blog";
+        var valineButton = document.getElementsByClassName("vsubmit vbtn")[0];
+        var title = siteName + "上又有新评论啦~!\n";
+
+        function send_valine() {
+            //获取元素信息
+            var pagename = document.title;
+            var pageurl = document.URL;
+            var pushtime = new Date();
+            var vnick = document.getElementsByClassName("vnick vinput")[0].value;
+            var vmail = document.getElementsByClassName("vmail vinput")[0].value;
+            var vlink = document.getElementsByClassName("vlink vinput")[0].value;
+            var veditor = document.getElementsByClassName("veditor vinput")[0].value;
+            content =
+                title +
+                "昵称：" + vnick +
+                "\n邮箱：" + vmail +
+                "\n网站地址：" + vlink +
+                "\n文章标题：" + pagename +
+                "\n评论内容：" + veditor +
+                "\n文章链接：" + pageurl +
+                "\n评论时间" + pushtime.toLocaleString() + "\n";
+            var httpRequest = new XMLHttpRequest(); //第一步：创建需要的对象
+            httpRequest.open("POST", pushLink, true); //第二步：打开连接
+            httpRequest.setRequestHeader(
+                "Content-type",
+                "application/json"
+            ); //设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+            httpRequest.send(content); //发送请求
+        }
+
+        document.body.addEventListener('click', function (e) {
+            if (e.target.className.indexOf('vsubmit') === -1) {
+                return;
+            }
+            send_valine();
+        })
+    </script>
 <% } %>

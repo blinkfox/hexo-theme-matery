@@ -1,36 +1,36 @@
 <%
-    // get all top posts.
-    var topPosts = [];
-    if (theme.recommend.useConfig) {
-        topPosts = site.data.recommends;
-    } else {
-        site.posts.forEach(function (post) {
-            if (post.top) {
-                topPosts.push(post);
-            }
-        });
-    }
-    var topPostsCount = topPosts.length;
+// get all top posts.
+var topPosts = [];
+if (theme.recommend.useConfig) {
+    topPosts = site.data.recommends;
+} else {
+    site.posts.forEach(function (post) {
+        if (post.top) {
+            topPosts.push(post);
+        }
+    });
+}
+var topPostsCount = topPosts.length;
 %>
 
 <% if (topPostsCount > 0) { %>
-<%
-    var hashCode = function (str) {
-        if (!str && str.length === 0) {
-            return 0;
-        }
+    <%
+        var hashCode = function (str) {
+            if (!str && str.length === 0) {
+                return 0;
+            }
 
-        var hash = 0;
-        for (var i = 0, len = str.length; i < len; i++) {
-            hash = ((hash << 5) - hash) + str.charCodeAt(i);
-            hash |= 0;
-        }
-        return hash;
-    };
+            var hash = 0;
+            for (var i = 0, len = str.length; i < len; i++) {
+                hash = ((hash << 5) - hash) + str.charCodeAt(i);
+                hash |= 0;
+            }
+            return hash;
+        };
 
-    var featureImages = theme.featureImages;
-    var imgCount = featureImages.length;
-    var bgColorArr = [
+        var featureImages = theme.featureImages;
+        var imgCount = featureImages.length;
+        var bgColorArr = [
             'linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)',
             'linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)',
             'linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)',
@@ -38,94 +38,106 @@
             'linear-gradient(to right, #4cbf30 0%, #0f9d58 100%)',
             'linear-gradient(to right, #C644FC 0%, #5856D6 100%)',
             'linear-gradient(to right, #55EFCB 0%, #5BCAFF 100%)'];
-    var colorCount = bgColorArr.length;
-%>
-
-<% if (theme.recommend.showTitle) { %>
-<div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;<%- __('recommendedPosts') %></div>
-<% } %>
-<div class="row">
-<% if (topPostsCount % 2 === 0) { %>
-    <% for (var i = 0; i < topPostsCount; i++) { %>
-    <%
-        var post = topPosts[i];
-        var featureImg = post.img ? url_for(post.img) : url_for(featureImages[Math.abs(hashCode(post.title) % imgCount)]);
-        var bgColor = bgColorArr[i % colorCount];
+        var colorCount = bgColorArr.length;
     %>
-    <div class="col s12 m6" <% if (i > 1) { %>data-aos="zoom-in-up"<% } %>>
-        <% if (post.img) {%>
-             <div class="post-card" style="background-image: url('<%- featureImg %>')">
-        <%}else{%>
-            <div class="post-card" style="background-image: url('<%- theme.jsDelivr.url %><%- featureImg %>')">
-            <% } %>
-            <div class="post-body">
-                <div class="post-categories">
-                    <% if (theme.recommend.useConfig) { %>
-                        <a href="<%- url_for(post.categoryPath) %>" class="category"><%= post.categoryName %></a>
-                    <% } else { %>
-                        <% post.categories.forEach(category => { %>
-                            <a href="<%- url_for(category.path) %>" class="category"><%= category.name %></a>
-                        <% }); %>
+
+    <% if (theme.recommend.showTitle) { %>
+        <div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;<%- __('recommendedPosts') %></div>
+    <% } %>
+    <div class="row">
+        <% if (topPostsCount % 2 === 0) { %>
+            <% for (var i = 0; i < topPostsCount; i++) { %>
+                <%
+                    var post = topPosts[i];
+                    var featureImg = post.img ? url_for(post.img) : url_for(featureImages[Math.abs(hashCode(post.title) % imgCount)]);
+                    var bgColor = bgColorArr[i % colorCount];
+                %>
+        <div class="col s12 m6" <% if (i > 1) { %>data-aos="zoom-in-up"
+                <% } %>
+        >
+            <% if (post.img) { %>
+            <div class="post-card" style="background-image: url('<%- featureImg %>')">
+                <% }else{ %>
+                <div class="post-card" style="background-image: url('<%- theme.jsDelivr.url %><%- featureImg %>')">
                     <% } %>
+                    <div class="post-body">
+                        <div class="post-categories">
+                            <% if (theme.recommend.useConfig) { %>
+                                <a href="<%- url_for(post.categoryPath) %>"
+                                   class="category"><%= post.categoryName %></a>
+                            <% } else { %>
+                                <% post.categories.forEach(category => { %>
+                                    <a href="<%- url_for(category.path) %>" class="category"><%= category.name %></a>
+                                <% }); %>
+                            <% } %>
+                        </div>
+                        <a href="<%- url_for(post.path) %>">
+                            <h3 class="post-title"><%= post.title %></h3>
+                        </a>
+                        <p class="post-description">
+                            <% if (post.summary && post.summary.length > 0) { %>
+                                <%- post.summary %>
+                            <% } else { %>
+                                <%- strip_html(post.content).substring(0, 70) %>
+                            <% } %>
+                        </p>
+                        <a href="<%- url_for(post.path) %>" class="read-more btn waves-effect waves-light"
+                           style="background: <%- bgColor %>" target="_blank">
+                            <i class="icon far fa-eye fa-fw"></i><%- __('readMore') %>
+                        </a>
+                    </div>
                 </div>
-                <a href="<%- url_for(post.path) %>">
-                    <h3 class="post-title"><%= post.title %></h3>
-                </a>
-                <p class="post-description">
-                    <% if (post.summary && post.summary.length > 0) { %>
-                        <%- post.summary %>
-                    <% } else { %>
-                        <%- strip_html(post.content).substring(0, 70) %>
-                    <% } %>
-                </p>
-                <a href="<%- url_for(post.path) %>" class="read-more btn waves-effect waves-light" style="background: <%- bgColor %>" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i><%- __('readMore') %>
-                </a>
             </div>
+            <% } %>
+            <% } else { %>
+                <% for (var i = 0; i < topPostsCount; i++) { %>
+                    <%
+                        var post = topPosts[i];
+                        var grid = (i % 3 === 0) ? 's12' : 's12 m6';
+                        var description = (i % 3 === 0) ? strip_html(post.content).substring(0, 85)
+                                : strip_html(post.content).substring(0, 70);
+                        if (post.summary && post.summary.length > 0) {
+                            description = post.summary;
+                        }
+
+                        var featureImg = post.img ? url_for(post.img) : url_for(featureImages[Math.abs(hashCode(post.title) % imgCount)]);
+                        var bgColor = bgColorArr[i % colorCount];
+                    %>
+                    <div class="col <%- grid %>" <% if (i > 0) { %>data-aos="zoom-in-up"
+                            <% } %>
+                    >
+                        <% if (post.img) { %>
+                        <div class="post-card" style="background-image: url('<%- featureImg %>')">
+                            <% }else{ %>
+                            <div class="post-card"
+                                 style="background-image: url('<%- theme.jsDelivr.url %><%- featureImg %>')">
+                                <% } %>
+                                <div class="post-body">
+                                    <div class="post-categories">
+                                        <% if (theme.recommend.useConfig) { %>
+                                            <a href="<%- url_for(post.categoryPath) %>"
+                                               class="category"><%= post.categoryName %></a>
+                                        <% } else { %>
+                                            <% post.categories.forEach(category => { %>
+                                                <a href="<%- url_for(category.path) %>"
+                                                   class="category"><%= category.name %></a>
+                                            <% }); %>
+                                        <% } %>
+                                    </div>
+                                    <a href="<%- url_for(post.path) %>">
+                                        <h3 class="post-title"><%= post.title %></h3>
+                                    </a>
+                                    <p class="post-description"><%= description %></p>
+                                    <a href="<%- url_for(post.path) %>" class="read-more btn waves-effect waves-light"
+                                       style="background: <%- bgColor %>" target="_blank">
+                                        <i class="icon far fa-eye fa-fw"></i><%- __('readMore') %>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            <% } %>
         </div>
     </div>
-    <% } %>
-<% } else { %>
-    <% for (var i = 0; i < topPostsCount; i++) { %>
-    <%
-        var post = topPosts[i];
-        var grid = (i % 3 === 0) ? 's12' : 's12 m6';
-        var description = (i % 3 === 0) ? strip_html(post.content).substring(0, 85)
-                : strip_html(post.content).substring(0, 70);
-        if (post.summary && post.summary.length > 0) {
-            description = post.summary;
-        }
-
-        var featureImg = post.img ? url_for(post.img) : url_for(featureImages[Math.abs(hashCode(post.title) % imgCount)]);
-        var bgColor = bgColorArr[i % colorCount];
-    %>
-    <div class="col <%- grid %>" <% if (i > 0) { %>data-aos="zoom-in-up"<% } %>>
-        <% if (post.img) {%>
-             <div class="post-card" style="background-image: url('<%- featureImg %>')">
-        <%}else{%>
-            <div class="post-card" style="background-image: url('<%- theme.jsDelivr.url %><%- featureImg %>')">
-            <% } %>
-            <div class="post-body">
-                <div class="post-categories">
-                    <% if (theme.recommend.useConfig) { %>
-                        <a href="<%- url_for(post.categoryPath) %>" class="category"><%= post.categoryName %></a>
-                    <% } else { %>
-                        <% post.categories.forEach(category => { %>
-                            <a href="<%- url_for(category.path) %>" class="category"><%= category.name %></a>
-                        <% }); %>
-                    <% } %>
-                </div>
-                <a href="<%- url_for(post.path) %>">
-                    <h3 class="post-title"><%= post.title %></h3>
-                </a>
-                <p class="post-description"><%= description %></p>
-                <a href="<%- url_for(post.path) %>" class="read-more btn waves-effect waves-light" style="background: <%- bgColor %>" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i><%- __('readMore') %>
-                </a>
-            </div>
-        </div>
-    </div>
-    <% } %>
-<% } %>
-</div>
 <% } %>
