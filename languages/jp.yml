@@ -1,0 +1,82 @@
+posts: 文章
+category: 分類
+categories: 分類
+tag: タグ
+tags: タグ
+archives: アーカイブ
+about: 自己紹介
+galleries: 写真
+contact: 問合せ
+friends: 友達
+startRead: 読み始める
+recommendedPosts: お勧め
+publishDate: 初回発表日
+updateDate: 更新日
+readCount: 閲覧回数
+wordCount: 文章文字数
+readTimes: 閲覧所要時間
+Minutes: 分
+readMore: さらに読む
+toc: 目次
+curr: 本ページ
+prev: 前へ
+next: 次へ
+search: 検索
+searchTip: キーワードを入力してください。
+postTagTitle: 文章タグ
+postCategoryTitle: 文章分類
+categoryRadarTitle: 文章分類
+categoryNumber: 文章分類数量
+categoryEmptyTip: まだ分類されてなさそうです。
+postCharts: 文章統計データ
+postPublishChart: 文章発表統計データ
+categoriesChart: 文章分類統計データ
+top10TagsChart: TOP10 タグ統計データ
+postsNumberName: 文章の数
+maximum: 最大値
+minimum: 最小値
+average: 平均値
+myProjects: 私のプロジェクト
+mySkills: 私のスキル
+otherSkills: そのスキル
+gallery: アルバム
+notag: タグ無
+from: 著作権
+reprint: CopyRight宣言
+author: WriteBy
+link: 文章リンク
+use: 本サイトに掲載された内容は下記に従う
+licensed: 著作権。
+cc_by_url: https://creativecommons.org/licenses/by/4.0/deed.zh
+cc_by_name: CC BY 4.0
+cc_by_nd_url: https://creativecommons.org/licenses/by-nd/4.0/deed.zh
+cc_by_nd_name: CC BY-ND 4.0
+cc_by_sa_url: https://creativecommons.org/licenses/by-sa/4.0/deed.zh
+cc_by_sa_name: CC BY-SA 4.0
+cc_by_nc_url: https://creativecommons.org/licenses/by-nc/4.0/deed.zh
+cc_by_nc_name: CC BY-NC 4.0
+cc_by_nc_nd_url: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh
+cc_by_nc_nd_name: CC BY-NC-ND 4.0
+cc_by_nc_sa_url: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh
+cc_by_nc_sa_name: CC BY-NC-SA 4.0
+cc_0_url: https://creativecommons.org/publicdomain/zero/1.0/deed.zh
+toTheExtentPossibleUnderLaw: 法律禁止されない限り
+hasWaivedAllCopyrightAndRelatedOrNeighboringRightsTo: 一切の権利を放棄すること
+workPublishedFrom: 。発表：
+cc_0_country: 日本。
+cc_0_content: JP
+noreprint: 転載禁止
+paycontact: 著者を連絡
+payreprint: 有料転載
+pleaseFollowReprintPolicy: コピー成功
+checkPolicy: 査読
+siteTotalWords: トータル文字数
+siteTotalVisits: アクセス回数
+siteTotalVisitors: アクセス人数
+Index: ホーム
+Tags: タグ
+Categories: 分類
+Archives: アーカイブ
+About: 自己紹介
+Contact: 問合せ
+Friends: 友達
