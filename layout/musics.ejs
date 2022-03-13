@@ -1,0 +1,77 @@
+<style type="text/css">
+    /* don't remove. */
+    .about-cover {
+        height: 75vh;
+    }
+</style>
+
+<%- partial('_partial/bg-cover') %>
+
+<main class="content">
+    <div id="aboutme" class="container about-container">
+        <div class="card">
+            <div class="card-content">
+                <div class="music-player">
+                    <% if (theme.musics && theme.musics.enable) { %>
+                        <%- partial('_widget/musics') %>
+
+
+                        <style>
+                        .bubbles > .particle {
+                            /*初始透明度为0*/
+                            opacity: 0;
+                            position: absolute;
+                            /*初始颜色为荧光色，透明度为0.7*/
+                            background-color: rgba(128,255,0,0.7);
+                            /*使用bubbles动画，持续时间18秒，缓慢进入，无限循环*/
+                            animation: bubbles 18s ease-in infinite;
+                            border-radius: 100%;
+                        }
+                        /*css keyframes 动画*/
+                        @keyframes bubbles {
+                            0% {
+                                opacity: 0;
+                            }
+                            5% {
+                                opacity: 1;
+                                transform: translate(0, -20%);
+                            }
+                            /*这里-8000%表示是气泡的8000%*/
+                            100% {
+                                opacity: 0;
+                                transform: translate(0, -8000%);
+                            }
+                        }
+                        </style>
+                        <!-- 这里让元素宽度100%（和页面等宽） -->
+                        <div style="width: 100%; height: 100%; position: relative; bottom: 0px;" class="particletext bubbles">
+
+
+
+                        </div>
+                        <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+                        <script>
+                          function bubbles() {
+                             $.each($(".particletext.bubbles"), function(){
+                                var bubblecount = ($(this).width()/50)*10;
+                                for(var i = 0; i <= bubblecount; i++) {
+                                   var size = ($.rnd(40,80)/10);
+                                   //这里的animation-delay很重要，关系到你的特效是否看上去是连续无断层的，上一步中css是18秒，所以这一步中延迟时间就设置成$.rnd(0,180)/10)
+                                   $(this).append('<span class="particle" style="top:' + $.rnd(20,80) + '%; left:' + $.rnd(0,95) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ($.rnd(0,180)/10) + 's;"></span>');
+                                }
+                             });
+                          }
+                          jQuery.rnd = function(m,n) {
+                              m = parseInt(m);
+                              n = parseInt(n);
+                              return Math.floor( Math.random() * (n - m + 1) ) + m;
+                          }
+                          bubbles();
+                        </script>
+                        
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
