@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="<%- theme.libs.css.aplayer %>">
+<style>
+    .aplayer .aplayer-lrc p {
+        <%if(theme.musics.hideLrc){%>
+        display: none;
+        <%}%>
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        <%if(theme.musics.hideLrc){%>
+        display: none;
+        <%}%>
+        font-size: 15px;
+        color: <%- theme.musics.theme %>;
+    }
+
+    <%if(theme.musics.autoHide){%>
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    <%}%>
+</style>
+<div class="<% if(!theme.musics.fixed) { %>music-player<% } %>">
+    <% if (!theme.musics.fixed && theme.musics.title.enable) { %>
+        <div class="title center-align">
+            <i class="fa fa-music"></i>&nbsp;&nbsp;<%- theme.musics.title.show %>
+        </div>
+    <% } %>
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="<%- theme.musics.server %>"
+                   type="<%- theme.musics.type %>"
+                   id="<%- theme.musics.id %>"
+                   fixed='<%- theme.musics.fixed ? 'true' : 'false' %>'
+                   autoplay='<%- theme.musics.autoplay === true %>'
+                   theme='<%- theme.musics.theme %>'
+                   loop='<%- theme.musics.loop %>'
+                   order='<%- theme.musics.order %>'
+                   preload='<%- theme.musics.preload %>'
+                   volume='<%- Number(theme.musics.volume) %>'
+                   listMaxHeight='<%- theme.musics.listMaxHeight %>'
+                   list-folded='<%- theme.musics.listFolded ? 'true' : 'false' %>'
+        >
+        </meting-js>
+    </div>
+</div>
+
+
+<script src="<%- theme.libs.js.aplayer %>"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
