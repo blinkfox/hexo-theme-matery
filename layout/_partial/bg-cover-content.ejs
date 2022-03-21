@@ -15,7 +15,7 @@
                 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
                 <script>
                     var typed = new Typed("#subtitle", {
-                        strings: [ 
+                        strings: [
                             <% theme.subtitle.sub.forEach(function(item){%>
                                 "<%= item %>",
                             <% }) %>
@@ -38,7 +38,23 @@
 <% if (theme.banner.enable) { %>
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "<%- theme.jsDelivr.url %><%- url_for('/medias/banner/') %>" + new Date().getDay() + '.jpg';
+    // 2021-8-17
+    var banner = JSON.parse('<%- JSON.stringify(theme.banner) %>');
+    var size = banner.imgs.length
+    var imgName;
+    var img = banner.img;
+    console.log(img)
+    console.log(size)
+    if(banner.random){
+        imgName = banner.imgs[parseInt(Math.random()*size)];
+    }else if (img) {
+        if (img.indexOf('.') !== -1) imgName = img;
+        else imgName = banner.imgs[parseInt(img)];
+    } else {
+        var index = (new Date().getDate() % size)
+        imgName = banner.imgs[index];
+    }
+    var bannerUrl = "<%- theme.jsDelivr.url %><%- url_for('/medias/banner/') %>" + imgName;
     $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 <% } else { %>

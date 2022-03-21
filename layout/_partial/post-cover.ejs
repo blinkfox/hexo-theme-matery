@@ -36,3 +36,19 @@ if (page.img) {
         </div>
     </div>
 </div>
+<!-- 2021-12-18-->
+<style>
+<% if (page["background-image"]) { %>
+    body{
+        background-image: url(<%= page["background-image"] %>);
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-attachment:fixed;
+    }
+<% } %>
+<% if (page["background-color"]) { %>
+    .card{
+        background-color: <%= page["background-color"] %>
+    }
+<% } %>
+</style>
