@@ -15,6 +15,9 @@
     <%- partial('_partial/search') %>
     <%- partial('_partial/back-top') %>
 
+    <!-- from  https://github.com/ialoe/hexo-themes-matery-pro  -->
+    <%- partial('_partial/dark-mode') %>
+
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.materialize) %>"></script>
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.masonry) %>"></script>
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.aos) %>"></script>
@@ -33,7 +36,7 @@
     <% } %>
 
     <% if (theme.sakura.enable) { %>
-        
+
         <script type="text/javascript">
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
@@ -44,7 +47,7 @@
     <% } %>
 
     <!-- 雪花特效 -->
-    <% if (theme.snowdown.enable) { %> 
+    <% if (theme.snowdown.enable) { %>
         <script type="text/javascript">
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
@@ -55,7 +58,7 @@
     <% } %>
 
     <!-- 鼠标星星特效 -->
-    <% if (theme.mouseStar.enable) { %> 
+    <% if (theme.mouseStar.enable) { %>
         <script type="text/javascript">
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
@@ -65,7 +68,7 @@
         </script>
     <% } %>
 
-    <% if (theme.tcaptcha.enable) { %> 
+    <% if (theme.tcaptcha.enable) { %>
         <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
         <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.tcaptcha) %>"></script>
         <button id="TencentCaptcha" data-appid="<%- theme.tcaptcha.appid %>" data-cbfn="callback" type="button" hidden></button>

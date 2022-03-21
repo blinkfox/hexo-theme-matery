@@ -1,0 +1,82 @@
+<!-- 深色模式按钮 -->
+<script>
+    /* 深色模式按钮设置 */
+    if (localStorage.getItem("dark") === "1") {
+        document.body.classList.add("dark");
+    } else {
+        /*定时开启暗色模式<默认晚22点至早6点默认开启>*/
+        if (new Date().getHours() >= 22 || new Date().getHours() < 6) {
+            document.body.classList.add("dark");
+            $("#nightMode").removeClass("fa-moon-o").addClass("fa-lightbulb");
+        } else {
+            if (matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.body.classList.add("dark");
+            }
+        }
+    }
+
+    /*提醒开启功能*/
+    setTimeout(function () {
+        if (
+            (new Date().getHours() >= 19 || new Date().getHours() < 7) &&
+            !$("body").hasClass("DarkMode")
+        ) {
+            let toastHTML =
+                '<span style="color:#97b8b2;border-radius: 10px;>' +
+                '<i class="fa fa-bell" aria-hidden="true"></i>晚上使用深色模式阅读更好哦。(ﾟ▽ﾟ)/</span>';
+            M.toast({ html: toastHTML });
+        }
+    }, 2200);
+
+    /* 深色模式设置*/
+    function switchNightMode() {
+        var body = document.body;
+        if (body.classList.contains("dark")) {
+            document.body.classList.remove("dark");
+            localStorage.setItem("dark", "0");
+            $("#nightMode").removeClass("fa-lightbulb").addClass("fa-moon");
+            return;
+        } else {
+            document.body.classList.add("dark");
+            localStorage.setItem("dark", "1");
+            $("#nightMode").removeClass("fa-moon").addClass("fa-lightbulb");
+            return;
+        }
+    }
+</script>
+<style>
+    /* 深色模式按钮设置 */
+    #sma {
+        background: #000;
+        width: 48px;
+        height: 48px;
+        text-align: center;
+        display: block;
+        position: fixed;
+        border-radius: 50%;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 14px;
+        margin-bottom: 0;
+        z-index: 998;
+        cursor: pointer;
+    }
+
+    #sma .fa-moon {
+        font-size: 1.58rem !important;
+    }
+    #sma .fa-lightbulb {
+        font-size: 1.5rem !important;
+    }
+
+    .fa-moon:before {
+        content: "\f186";
+    }
+    .fa-comments:before {
+        content: "\f086";
+    }
+</style>
+<!-- 深色模式按钮 -->
+<a onclick="switchNightMode()" id="sma" title="模式切换">
+    <i class="fa fa-moon" id="nightMode" aria-hidden="false"></i>
+</a>

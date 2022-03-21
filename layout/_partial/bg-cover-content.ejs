@@ -54,7 +54,7 @@
         var index = (new Date().getDate() % size)
         imgName = banner.imgs[index];
     }
-    var bannerUrl = "<%- theme.jsDelivr.url %><%- url_for('/medias/banner/') %>" + imgName;
+    var bannerUrl = "<%- theme.jsDelivr.url %><%- url_for('/images/banner/') %>" + imgName;
     $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 <% } else { %>
