@@ -16,3 +16,4 @@ git init .
 git remote add origin git@github.com:SuCicada/hexo-theme-matery.git
 
 ```
+s
