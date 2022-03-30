@@ -1,8 +1,10 @@
-<style>
-    body{
-       background-image: url(<%- theme.background.url %>);
-       background-repeat:no-repeat;
-       background-size: 100% 100%;
-       background-attachment:fixed;
-    }
-</style>
+<% if (theme.background.enable) { %>
+    <style>
+        body{
+            background-image: url(<%- theme.background.url %>);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-attachment:fixed;
+        }
+    </style>
+<% } %>
