@@ -674,3 +674,12 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 ## 版本变更记录
 
 参见 [CHANGELOG.md](https://github.com/blinkfox/hexo-theme-matery/blob/master/CHANGELOG.md)
+
+## 更多部署方式
+
+> Jsdelivr 已经被封了，这两个可以加速访问快一点
+
+### [vercel 部署](https://blog.17lai.site/posts/5311b619/#vercel-%E9%83%A8%E7%BD%B2)
+
+### [cloudflare Pages 部署](https://blog.17lai.site/posts/5311b619/#cloudflare-Pages-%E9%83%A8%E7%BD%B2)
+
