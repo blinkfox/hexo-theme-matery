@@ -475,6 +475,60 @@ music:
 >For example to get the `id`:open NetEase cloud music in the browser , click the playlist of my love , there will a string of  
 >numbers  in the browser\`s address bar  ,  the `playlist`\`s `id` just is the string of numbers.
 
+### add note
+
+> [demonstration](https://blog.17lai.site/posts/cf0f47fd/#tag-note)
+
+#### Usage
+
+```
+{% note [class] [no-icon] [summary] %}
+Any content (support inline tags too).
+{% endnote %}
+```
+
+- `[class]` : *Optional parameter.* Supported values: default | primary | success | info | warning | danger.
+- `[no-icon]` : *Optional parameter.* Disable icon in note.
+- `[summary]` : *Optional parameter.* Optional summary of the note.
+
+All parameters are optional.
+
+#### example
+
+```
+{% note %}
+#### Header
+(without define class style)
+{% endnote %}
+```
+
+### add button
+
+> [demonstration](https://blog.17lai.site/posts/cf0f47fd/#tag-button)
+
+#### Usage
+
+```
+{% button url, text, icon [class], [title] %}
+```
+
+or
+
+```
+{% btn url, text, icon [class], [title] %}
+```
+
+- `url` : Absolute or relative path to URL.
+- `text` : Button text. Required if no icon specified.
+- `icon` : Font Awesome icon name. Required if no text specified.
+- `[class]` : *Optional parameter.* Font Awesome class(es): `fa-fw` | `fa-lg` | `fa-2x` | `fa-3x` | `fa-4x` | `fa-5x`
+- `[title]` : *Optional parameter.* Tooltip at mouseover.
+
+#### Examples
+
+```
+{% button #, Text %}
+```
 
 
 ## Post Front-matter
