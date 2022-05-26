@@ -704,6 +704,7 @@ bbtime:
 # 建议更换更换hexo-renderer-markdown-it引擎。参考下面链接
 # https://github.com/hexojs/hexo-renderer-markdown-it
 # https://github.com/hexojs/hexo-renderer-markdown-it/wiki/Advanced-Configuration
+# 使用教程： https://blog.17lai.site/posts/cf0f47fd/#Mermaid
 # 安装配置方法
 # yarn remove hexo-renderer-marked
 # yarn add hexo-renderer-markdown-it hexo-tag-mermaid
