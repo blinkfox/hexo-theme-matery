@@ -1,0 +1,22 @@
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.codeblock) %>"></script>
+
+<% if (config.prismjs && config.prismjs.enable) { %>
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.prism) %>"></script>
+<% } %>
+
+<!-- 代码语言 -->
+<% if (theme.code.lang) { %>
+<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.codelang) %>"></script>
+<% } %>
+
+<!-- 代码块复制 -->
+<% if (theme.code.copy) { %>
+<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.codecopy) %>"></script>
+<% } %>
+
+<!-- 代码块收缩 -->
+<% if (theme.code.shrink) { %>
+<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.codeshrink) %>"></script>
+<% } %>

@@ -483,7 +483,7 @@ libs:
     gitalk: /libs/gitalk/gitalk.css
     jqcloud: /libs/jqcloud/jqcloud.css
     tocbot: /libs/tocbot/tocbot.css
-    prism: /libs/prism/prism.css
+    prism: /libs/prism/prism.min.css
     mermaid: /libs/mermaid/mermaid.min.css
     fancybox: /libs/fancybox/jquery.fancybox.css
     justifiedGallery: /libs/justifiedGallery/justifiedGallery.min.css
@@ -521,6 +521,7 @@ libs:
     mermaid: /libs/mermaid/mermaid.min.js
     fancybox: /libs/fancybox/fancybox.js
     justifiedGallery: /libs/justifiedGallery/justifiedGallery.min.js
+    prism: /libs/prism/prism.min.js
     codeblock: /libs/codeBlock/codeBlockFuction.js
     codelang: /libs/codeBlock/codeLang.js
     codecopy: /libs/codeBlock/codeCopy.js
