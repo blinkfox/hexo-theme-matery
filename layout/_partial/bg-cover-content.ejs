@@ -3,7 +3,7 @@
         <div class="brand">
             <div class="title center-align">
                 <% if (config.subtitle && config.subtitle.length > 0) { %>
-                <%= config.subtitle %>
+                    <%= config.subtitle %>
                 <% } else { %>
                     subtitle
                 <% } %>
@@ -11,22 +11,74 @@
 
             <div class="description center-align">
                 <% if (theme.subtitle.enable) { %>
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            <% theme.subtitle.sub.forEach(function(item){%>
+                    <span id="subtitle"></span>
+                    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                    <script>
+                        <% if ( theme.subtitle.api.enable && theme.subtitle.enable) { %>
+                        textArr=new Array();
+                        $.ajax({
+                            type: '<%= theme.subtitle.api.method %>',
+                            url: '<%= theme.subtitle.api.url %>',
+                            headers: <%- JSON.stringify(theme.subtitle.api.headers || {}) %>,
+                            dataType: 'json',
+                            success: function (result) {
+                                var text;
+                                if (result) {
+                                    var keys =  [
+                                        <% theme.subtitle.api.keys.forEach(function(item){%>
+                                        "<%= item %>",
+                                        <% }) %>
+                                    ];
+                                    var temp = result;
+                                    for (item of keys)
+                                    {
+                                        key=item.split(',');
+                                        if (result instanceof Array) {
+                                            result = result[0]
+                                        }
+                                        for (const k of key) {
+                                            var value = result[k]
+                                            if (typeof value === 'string') {
+                                                text = value
+                                                break
+                                            } else if (value instanceof Object) {
+                                                result = value
+                                            }
+                                        }
+                                        if (text!=null)
+                                        {
+                                            textArr.push (text);
+                                        }
+                                    }
+                                    result = temp;
+
+                                }
+                                var typed = new Typed("#subtitle", {
+                                    strings: textArr,
+                                    startDelay: <%= theme.subtitle.startDelay %>,
+                                    typeSpeed: <%= theme.subtitle.typeSpeed %>,
+                                    loop: <%= theme.subtitle.loop %>,
+                                    backSpeed: <%= theme.subtitle.backSpeed %>,
+                                    showCursor: <%= theme.subtitle.showCursor %>
+                                });
+
+                            }
+                        })
+                        <% } else { %>
+                        var typed = new Typed("#subtitle", {
+                            strings: [
+                                <% theme.subtitle.sub.forEach(function(item){%>
                                 "<%= item %>",
-                            <% }) %>
-                        ],
-                        startDelay: <%= theme.subtitle.startDelay %>,
-                        typeSpeed: <%= theme.subtitle.typeSpeed %>,
-                        loop: <%= theme.subtitle.loop %>,
-                        backSpeed: <%= theme.subtitle.backSpeed %>,
-                        showCursor: <%= theme.subtitle.showCursor %>
-                    });
-                </script>
+                                <% }) %>
+                            ],
+                            startDelay: <%= theme.subtitle.startDelay %>,
+                            typeSpeed: <%= theme.subtitle.typeSpeed %>,
+                            loop: <%= theme.subtitle.loop %>,
+                            backSpeed: <%= theme.subtitle.backSpeed %>,
+                            showCursor: <%= theme.subtitle.showCursor %>
+                        });
+                        <% } %>
+                    </script>
                 <% } else { %>
                     <%= config.description %>
                 <% } %>
@@ -36,13 +88,13 @@
 </div>
 
 <% if (theme.banner.enable) { %>
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "<%- theme.jsDelivr.url %><%- url_for('/medias/banner/') %>" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
+    <script>
+        // 每天切换 banner 图.  Switch banner image every day.
+        var bannerUrl = "<%- theme.jsDelivr.url %><%- url_for('/medias/banner/') %>" + new Date().getDay() + '.jpg';
+        $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    </script>
 <% } else { %>
-<script>
-    $('.bg-cover').css('background-image', 'url(<%- theme.jsDelivr.url %><%- url_for('/medias/banner/0.jpg') %>)');
-</script>
+    <script>
+        $('.bg-cover').css('background-image', 'url(<%- theme.jsDelivr.url %><%- url_for('/medias/banner/0.jpg') %>)');
+    </script>
 <% } %>
