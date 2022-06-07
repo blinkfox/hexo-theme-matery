@@ -496,6 +496,7 @@ libs:
     aos: /libs/aos/aos.js
     scrollProgress: /libs/scrollprogress/scrollProgress.min.js
     lightgallery: /libs/lightGallery/js/lightgallery-all.min.js # V1.10.0
+    typed: /libs/typed/typed.js
     clicklove: /libs/others/clicklove.js
     sakura: /libs/others/sakura.js
     star: /libs/others/star.js
