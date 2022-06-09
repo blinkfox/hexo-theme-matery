@@ -12,7 +12,7 @@
             <div class="description center-align">
                 <% if (theme.subtitle.enable) { %>
                 <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.typed) %>"></script>
                 <script>
                     var typed = new Typed("#subtitle", {
                         strings: [ 
