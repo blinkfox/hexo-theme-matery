@@ -1,0 +1,90 @@
+#reward {
+    margin: 40px 0;
+    text-align: center;
+}
+
+#reward .reward-link {
+    font-size: 1.4rem;
+    line-height: 38px;
+}
+
+#reward .btn-floating:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#rewardModal {
+    width: 320px;
+    height: 350px;
+}
+
+#rewardModal .reward-title {
+    margin: 15px auto;
+    padding-bottom: 5px;
+}
+
+#rewardModal .modal-content {
+    padding: 10px;
+}
+
+#rewardModal .close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.3rem;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+#rewardModal .close:hover {
+    color: #ef5350;
+    transform: scale(1.3);
+    -moz-transform:scale(1.3);
+    -webkit-transform:scale(1.3);
+    -o-transform:scale(1.3);
+}
+
+#rewardModal .reward-tabs {
+    margin: 0 auto;
+    width: 210px;
+}
+
+.reward-tabs .tabs {
+    height: 38px;
+    margin: 10px auto;
+    padding-left: 0;
+}
+
+.reward-content ul {
+    padding-left: 0 !important;
+}
+
+.reward-tabs .tabs .tab {
+    height: 38px;
+    line-height: 38px;
+}
+
+.reward-tabs .tab a {
+    color: #fff;
+    background-color: #ccc;
+}
+
+.reward-tabs .tab a:hover {
+    background-color: #ccc;
+    color: #fff;
+}
+
+.reward-tabs .wechat-tab .active {
+    color: #fff !important;
+    background-color: #22AB38 !important;
+}
+
+.reward-tabs .alipay-tab .active {
+    color: #fff !important;
+    background-color: #019FE8 !important;
+}
+
+.reward-tabs .reward-img {
+    width: 210px;
+    height: 210px;
+}

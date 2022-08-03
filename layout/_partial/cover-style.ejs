@@ -1,0 +1,46 @@
+<% if (is_home() && page.current === 1) { %>
+    <!-- index cover -->
+    <!-- <link rel="stylesheet preload" type="text/css" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.indexcover) %>"> -->
+    <style>
+        .carousel-control {
+            width: 45px;
+            height: 45px;
+            line-height: 55px;
+            border-radius: 45px;
+            background: transparent;
+            cursor: pointer;
+            z-index: 100;
+        }
+        
+        #prev-cover {
+            position: absolute;
+            top: 48%;
+            left: 8px;
+        }
+        
+        #next-cover {
+            position: absolute;
+            top: 48%;
+            right: 8px;;
+        }
+        
+        #prev-cover i {
+            margin-right: 3px;
+        }
+        
+        #next-cover i {
+            margin-left: 3px;
+        }
+        
+        .carousel-control:hover {
+            background-color: rgba(0, 0, 0, .4);
+        }
+        
+        .carousel-control i {
+            color: #fff;
+            font-size: 2.4rem;
+        }
+    </style>
+<% } else { %>
+    <!-- bg-cover style     -->
+<% } %>

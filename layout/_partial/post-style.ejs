@@ -1,0 +1,11 @@
+<%
+    var isTocEnable = theme.toc.enable && String(page.toc) !== 'false';
+%>
+
+<% if (isTocEnable) { %>
+    <link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.tocbot) %>">
+    <link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.post) %>">
+
+<% } else { %>
+    <link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.post) %>">
+<% } %>
