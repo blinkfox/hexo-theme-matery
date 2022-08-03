@@ -145,6 +145,11 @@ body.DarkMode .tabs .tab {
     color: rgba(255, 255, 255, 0.6);
 }
 
+/*首页文章滑动卡片文字*/
+body.DarkMode #thisTime,
+body.DarkMode .card-image-V .box-content .title {
+    color: #8a2be2;
+}
 body.DarkMode header .menus_item_child:before {
     border-color: transparent transparent rgba(45, 42, 52, 0.8);
 }
@@ -278,9 +283,34 @@ body.DarkMode .skillbar .skill-bar-percent {
     color: #000;
 }
 
+/*一些细节背景*/
+body.DarkMode .block-with-text:after,
+body.DarkMode .card,
+body.DarkMode .collapsible-header,
+body.DarkMode .wxgzh,
+body.DarkMode table tr:nth-child(2n),
+body.DarkMode thead {
+    background-color: #282c34;
+}
+body.DarkMode #fMessageBoard, body.DarkMode .fArticleMessage, body.DarkMode #fcircleMoreBtn, .DarkMode #switchspring {
+    background-color:#fbfbfb50 !important;
+}
+/*about页面细节*/
+body.DarkMode .profile .author .title {
+    color: #faebd7;
+}
+body.DarkMode .my-projects .info .info-title a {
+    color: tomato;
+}
+
 /*外挂标签*/
 .swbk .label {
     color: currentColor;
+}
+
+/*给暗黑模式下的.test添加字体颜色变红样式*/
+body.DarkMode .test {
+    color: red;
 }
 
 body.DarkMode img, body.DarkMode strong {
