@@ -475,6 +475,7 @@ libs:
     mycss: /css/my.css
     post: /css/post.css
     reward: /css/reward.css
+    dark: /css/dark.css
     indexcover: /css/indexcover.css
     gallery: /css/gallery.css
     fontAwesome: /libs/awesome/css/all.min.css # V6 20220313
