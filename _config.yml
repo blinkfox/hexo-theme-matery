@@ -473,6 +473,9 @@ libs:
   css:
     matery: /css/matery.css
     mycss: /css/my.css
+    post: /css/post.css
+    reward: /css/reward.css
+    indexcover: /css/indexcover.css
     gallery: /css/gallery.css
     fontAwesome: /libs/awesome/css/all.min.css # V6 20220313
     materialize: /libs/materialize/materialize.min.css # 1.0.0 20211109

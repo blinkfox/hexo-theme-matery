@@ -1,0 +1,5 @@
+<% if (!is_home()) { %>
+    <% if (theme.reward.enable) { %>
+        <link rel="stylesheet" type="text/css" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.reward) %>">
+    <% } %>
+<% } %>
