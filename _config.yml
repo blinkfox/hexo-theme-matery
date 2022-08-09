@@ -478,7 +478,7 @@ libs:
     dark: /css/dark.css
     indexcover: /css/indexcover.css
     gallery: /css/gallery.css
-    fontAwesome: /libs/awesome/css/all.min.css # V6 20220313
+    fontAwesome: /libs/awesome/css/all.min.css # V6.1.2 20220809
     materialize: /libs/materialize/materialize.min.css # 1.0.0 20211109
     aos: /libs/aos/aos.css
     animate: /libs/animate/animate.min.css # V3.5.1
