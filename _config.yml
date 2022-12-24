@@ -650,7 +650,7 @@ banner:
 # 中文繁简转换开关
 # 显示在底部 footer 栏
 translate:
-  enable: true
+  enable: false
 
 #ICP备案信息尾部显示
 icp:
