@@ -423,7 +423,8 @@ feed:
 
 在主题的 `_config.yml` 文件中，开启 translate 为 enable。
 
-> 开启中文繁简转换如下修改。默认不开启。
+> 开启中文繁简转换如下修改。默认不开启。 
+> 实例演示： [繁简转换](https://blog.17lai.site) 底下 footer 栏
 
 ```yaml
 translate:
