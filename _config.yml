@@ -483,6 +483,7 @@ libs:
     justifiedGallery: /libs/justifiedGallery/justifiedGallery.min.css
   js:
     matery: /js/matery.js
+    sc2tc: /js/tw_cn.js
     jquery: /libs/jquery/jquery-3.6.0.min.js  #3.6.0 20211109
     materialize: /libs/materialize/materialize.min.js # 1.0.0
     masonry: /libs/masonry/masonry.pkgd.min.js # v4.0.0
@@ -645,6 +646,11 @@ instantpage:
 # 若为 false, 则 banner 默认为 /medias/banner/0.jpg
 banner:
   enable: true
+
+# 中文繁简转换开关
+# 显示在底部 footer 栏
+translate:
+  enable: false
 
 #ICP备案信息尾部显示
 icp:
