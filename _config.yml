@@ -468,7 +468,7 @@ libs:
     indexcover: /css/indexcover.css
     gallery: /css/gallery.css
     fontAwesome: /libs/awesome/css/all.min.css # V6.1.2 20220809
-    materialize: /libs/materialize/materialize.min.css # 1.0.0 20211109
+    materialize: /libs/materialize/materialize.min.css # 1.2.1 20230106
     aos: /libs/aos/aos.css
     animate: /libs/animate/animate.min.css # V3.5.1
     lightgallery: /libs/lightGallery/css/lightgallery.min.css # V1.10.0
@@ -485,7 +485,7 @@ libs:
     matery: /js/matery.js
     sc2tc: /js/tw_cn.js
     jquery: /libs/jquery/jquery-3.6.0.min.js  #3.6.0 20211109
-    materialize: /libs/materialize/materialize.min.js # 1.0.0
+    materialize: /libs/materialize/materialize.min.js # 1.2.1 20230106
     masonry: /libs/masonry/masonry.pkgd.min.js # v4.0.0
     aos: /libs/aos/aos.js
     scrollProgress: /libs/scrollprogress/scrollProgress.min.js
