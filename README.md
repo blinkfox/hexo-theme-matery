@@ -184,13 +184,7 @@ Also, create a new `_data` directory in your blog's `source` directory and a new
 ```
 ### new 404 page
 
-If the `source` directory of your blog doesn't have `404.md` file, you need create a new one using:
-
-```bash
-hexo new page 404
-```
-
-when editing your new page file `/source/404/index.md`, you need something as follows:
+If the `source` directory of your blog doesn't have `404.md` file, you need create a new one. In `/source/404.md`, you need something as follows:
 
 ```yaml
 ---
