@@ -41,6 +41,16 @@
     var bannerUrl = "<%- theme.jsDelivr.url %><%- url_for('/medias/banner/') %>" + new Date().getDay() + '.jpg';
     $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
+<script>
+    <% if (theme.banner.enable && theme.banner.random) { %>
+      var bannerUrl = "<%- theme.cdn.url %><%- url_for('/medias/featureimages/') %>" + Math.floor(Math.random() * <%- theme.featureImages.length %>) + '.jpg';
+    <% } else { %>
+      // 每天切换 banner 图.  Switch banner image every day.
+      var bannerUrl = "<%- theme.cdn.url %><%- url_for('/medias/banner/') %>" + new Date().getDay() + '.jpg';
+    <% } %>
+    $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
+
+</script>
 <% } else { %>
 <script>
     $('.bg-cover').css('background-image', 'url(<%- theme.jsDelivr.url %><%- url_for('/medias/banner/0.jpg') %>)');

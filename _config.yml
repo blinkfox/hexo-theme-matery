@@ -646,6 +646,8 @@ instantpage:
 # 若为 false, 则 banner 默认为 /medias/banner/0.jpg
 banner:
   enable: true
+  # 开启随机 featureimages 图片
+  random: true
 
 # 中文繁简转换开关
 # 显示在底部 footer 栏
