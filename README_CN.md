@@ -678,10 +678,6 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 在 `/source/medias/featureimages` 文件夹中默认有 24 张特色图片，你可以再增加或者减少，并需要在 `_config.yml` 做同步修改。
 
-## 版本变更记录
-
-参见 [CHANGELOG.md](https://github.com/blinkfox/hexo-theme-matery/blob/master/CHANGELOG.md)
-
 ## 更多部署方式
 
 > Jsdelivr 已经被封了，这两个可以加速访问快一点
@@ -690,3 +686,6 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 ### [cloudflare Pages 部署](https://blog.17lai.site/posts/5311b619/#cloudflare-Pages-%E9%83%A8%E7%BD%B2)
 
+## 版本变更记录
+
+参见 [CHANGELOG.md](https://github.com/blinkfox/hexo-theme-matery/blob/master/CHANGELOG.md)

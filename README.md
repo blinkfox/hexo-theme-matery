@@ -659,6 +659,14 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 There are 24 featured pictures in `/source/medias/featureimages`, you can add or delete some, and modify corresponding settings in the theme's `_config.yml`.
 
+## More Deployment Options
+
+> Jsdelivr has been blocked. The following alternatives can speed up access.
+
+### [Vercel Deployment](https://blog.17lai.site/posts/5311b619/#vercel-deployment)
+
+### [Cloudflare Pages Deployment](https://blog.17lai.site/posts/5311b619/#cloudflare-pages-deployment)
+
 ## Changelog
 
 See [CHANGELOG.md](https://github.com/blinkfox/hexo-theme-matery/blob/master/CHANGELOG.md)
