@@ -678,10 +678,6 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 在 `/source/medias/featureimages` 文件夹中默认有 24 张特色图片，你可以再增加或者减少，并需要在 `_config.yml` 做同步修改。
 
-## 版本变更记录
-
-参见 [CHANGELOG.md](https://github.com/blinkfox/hexo-theme-matery/blob/master/CHANGELOG.md)
-
 ## 更多部署方式
 
 > Jsdelivr 已经被封了，这两个可以加速访问快一点
@@ -690,3 +686,26 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 ### [cloudflare Pages 部署](https://blog.17lai.site/posts/5311b619/#cloudflare-Pages-%E9%83%A8%E7%BD%B2)
 
+## 升级 Hexo 到 Version 7.0
+
+> 只需两部分修改，这里可以看到[7.0版本发布说明](https://hexo.io/news/2023/11/03/hexo-7-0-0-released/)
+
+### 不再使用gist, youtube, jsfiddle, and vimeo 这几个tag
+
+一些内置标签已被删除（gist、youtube、jsfiddle 和 vimeo）。如果您在现有的博客文章中使用了这些标签，您可以安装 hexo-tag-embed 以在 Hexo v7.0.0 中继续使用它们。
+
+```bash
+$ npm i hexo-tag-embed
+```
+
+### 代码高亮配置方式修改
+
+语法高亮已进行重构，并由以下设置控制。有关详细信息，请参阅语法高亮。
+
+```yaml
+syntax_highlighter: highlight.js # highlight.js | prismjs | <empty>
+```
+
+## 版本变更记录
+
+参见 [CHANGELOG.md](https://github.com/blinkfox/hexo-theme-matery/blob/master/CHANGELOG.md)

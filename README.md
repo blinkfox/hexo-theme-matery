@@ -659,6 +659,34 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 There are 24 featured pictures in `/source/medias/featureimages`, you can add or delete some, and modify corresponding settings in the theme's `_config.yml`.
 
+## More Deployment Options
+
+> Jsdelivr has been blocked. The following alternatives can speed up access.
+
+### [Vercel Deployment](https://blog.17lai.site/posts/5311b619/#vercel-deployment)
+
+### [Cloudflare Pages Deployment](https://blog.17lai.site/posts/5311b619/#cloudflare-pages-deployment)
+
+## Upgrade Hexo Version to Version 7.0
+
+> Only two modifications are needed, you can see the [release notes for version 7.0](https://hexo.io/news/2023/11/03/hexo-7-0-0-released/) here.
+
+### No Longer Use gist, youtube, jsfiddle, and vimeo Tags
+
+Some built-in tags have been removed (gist, youtube, jsfiddle, and vimeo). If you use these tags in your existing blog posts, you can install hexo-tag-embed to continue using them with Hexo v7.0.0.
+
+```bash
+$ npm i hexo-tag-embed
+```
+
+### Changes in Code Highlighting Configuration
+
+Syntax highlighting is refactored and controlled by the following settings. See Syntax Highlighting for more details.
+
+```yaml
+syntax_highlighter: highlight.js # highlight.js | prismjs | <empty>
+```
+
 ## Changelog
 
 See [CHANGELOG.md](https://github.com/blinkfox/hexo-theme-matery/blob/master/CHANGELOG.md)
